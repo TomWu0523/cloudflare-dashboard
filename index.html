@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getinge SW China Installed Base Dashboard</title>
+    <link rel="stylesheet" href="css/style.css?v=product-switcher" />
+  </head>
+  <body class="auth-locked">
+    <section class="login-screen" id="loginScreen" aria-labelledby="loginTitle">
+      <div class="login-art" aria-hidden="true"></div>
+      <div class="login-overlay"></div>
+      <main class="login-panel">
+        <div class="login-brand" aria-label="Getinge SW China">
+          <img src="assets/getinge-logo-white.png" alt="Getinge 洁定" />
+          <span>SW China</span>
+        </div>
+        <div class="login-copy">
+          <p>Installed Base Command Center</p>
+          <h1 id="loginTitle">登录装机看板</h1>
+        </div>
+        <form class="login-form" id="loginForm">
+          <label>
+            <span>用户名</span>
+            <input id="loginUsername" name="username" type="text" autocomplete="username" required />
+          </label>
+          <label>
+            <span>密码</span>
+            <input id="loginPassword" name="password" type="password" autocomplete="current-password" required />
+          </label>
+          <button class="login-button" type="submit">登录</button>
+          <p class="login-message" id="loginMessage" role="status" aria-live="polite"></p>
+        </form>
+        <div class="login-import">
+          <label class="excel-import-button">
+            <span>导入 Excel 用户</span>
+            <input id="userExcelInput" type="file" accept=".xlsx,.xls,.csv" />
+          </label>
+          <small id="userImportStatus">正在加载授权用户...</small>
+        </div>
+      </main>
+    </section>
+
+    <button class="project-entry-button" id="openProjectModal" type="button" aria-haspopup="dialog" onclick="showProjectModal()">
+      <span>+</span>
+      项目录入
+    </button>
+
+    <main class="dashboard-shell">
+      <header class="topbar">
+        <div class="brand-lockup" aria-label="Getinge SW China">
+          <span class="logo-plate">
+            <img src="assets/getinge-logo-white.png" alt="Getinge 洁定" class="brand-logo" />
+          </span>
+          <span class="brand-divider"></span>
+          <span class="brand-unit">SW China</span>
+        </div>
+        <div class="title-group">
+          <p class="eyebrow">Installed Base Command Center</p>
+          <h1 id="dashboardTitle">1180 Magnus OR Table 装机看板</h1>
+        </div>
+        <figure class="product-visual" id="productVisual" aria-label="1180 Magnus OR table">
+          <img src="assets/1180-magnus-hybrid-column.png" alt="1180 Magnus operating table system" />
+        </figure>
+        <div class="report-meta">
+          <div class="user-profile" id="userProfile" aria-label="当前登录用户">
+            <span id="userDisplayName">--</span>
+            <small id="userPosition">--</small>
+          </div>
+          <button class="logout-button" id="logoutButton" type="button">退出登录</button>
+          <label class="product-switcher">
+            <span>产品看板</span>
+            <select id="productSwitcher" aria-label="切换产品看板">
+              <option value="magnus1180">1180 Magnus OR Table</option>
+              <option value="tegris">Tegris Dashboard</option>
+              <option value="icMic">IC MIC Dashboard</option>
+            </select>
+          </label>
+          <label class="product-switcher product-line-switcher" id="productLineControl" hidden>
+            <span>产品线</span>
+            <select id="productLineSwitcher" aria-label="切换 IC MIC 产品线"></select>
+          </label>
+          <button class="data-import-button" id="dashboardExcelButton" type="button" title="导入 Excel 并同步到 Baserow">导入装机数据</button>
+          <input id="dashboardExcelInput" type="file" accept=".xlsx,.xls" hidden />
+          <span>最新更新</span>
+          <strong id="currentDate">2026-04-24</strong>
+        </div>
+      </header>
+
+      <section class="kpi-strip" aria-label="核心指标">
+        <article class="kpi">
+          <span>总装机量</span>
+          <strong id="totalUnits">--</strong>
+          <small id="totalUnitsLabel">台 1180 Magnus</small>
+        </article>
+        <article class="kpi">
+          <span>覆盖省份</span>
+          <strong id="coveredProvinces">--</strong>
+          <small>省级区域</small>
+        </article>
+        <article class="kpi">
+          <span>本季度新增</span>
+          <strong id="quarterUnits">--</strong>
+          <small>装机 / 签约</small>
+        </article>
+        <article class="kpi">
+          <span>重点合作伙伴</span>
+          <strong id="partnerCount">--</strong>
+          <small>活跃渠道</small>
+        </article>
+      </section>
+
+      <section class="main-grid">
+        <aside class="panel ranking-panel">
+          <div class="panel-heading">
+            <div>
+              <p>Hospital Ranking</p>
+              <h2 id="userRankingTitle">1180 Magnus 用户排名</h2>
+            </div>
+            <span class="metric-chip">按装机量</span>
+          </div>
+          <div class="ranking-list" id="userRanking"></div>
+        </aside>
+
+        <section class="map-stage" aria-label="中国装机地图">
+          <div class="map-heading">
+            <div>
+              <p>China Installed Base</p>
+              <h2>省份装机与最新装机场地</h2>
+            </div>
+            <div class="legend">
+              <span><i class="legend-dot latest"></i>最新装机 / 签约</span>
+              <span><i class="legend-dot base"></i>总装机规模</span>
+            </div>
+          </div>
+          <div id="chinaMap" class="china-map"></div>
+        </section>
+
+        <aside class="side-column">
+          <section class="panel trend-panel">
+            <div class="panel-heading">
+              <div>
+                <p>12-Month Trend</p>
+                <h2>近 12 个月装机趋势</h2>
+              </div>
+              <span class="metric-chip">月度 / 趋势</span>
+            </div>
+            <div id="installTrend" class="trend-chart"></div>
+          </section>
+
+          <section class="panel year-panel">
+            <div class="panel-heading">
+              <div>
+                <p>5-Year Trend</p>
+                <h2>近五年装机趋势</h2>
+              </div>
+              <span class="metric-chip">年度 / 趋势</span>
+            </div>
+            <div id="yearInstallTrend" class="year-chart"></div>
+          </section>
+
+          <section class="panel partner-panel">
+            <div class="panel-heading">
+              <div>
+                <p>Partner Ranking</p>
+                <h2>合作伙伴销售排名</h2>
+              </div>
+              <span class="metric-chip">按销量</span>
+            </div>
+            <div class="ranking-list" id="partnerRanking"></div>
+          </section>
+        </aside>
+      </section>
+
+      <footer class="ticker-panel" aria-label="最新动态">
+        <div class="ticker-label">
+          <span>Live Updates</span>
+          <strong>最新装机 / 签约信息</strong>
+        </div>
+        <div class="ticker-window">
+          <div class="ticker-track" id="newsTicker"></div>
+        </div>
+      </footer>
+    </main>
+
+    <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" hidden>
+      <div class="project-modal__backdrop" data-close-project-modal></div>
+      <section class="project-modal__panel">
+        <header class="project-modal__header">
+          <div>
+            <p>Project Registry</p>
+            <h2 id="projectModalTitle">1180 手术床项目录入与更新</h2>
+          </div>
+          <button class="icon-button" id="closeProjectModal" type="button" aria-label="关闭项目录入窗口" onclick="hideProjectModal()">×</button>
+        </header>
+
+        <div class="project-modal__body">
+          <form class="project-form" id="projectForm">
+            <input type="hidden" id="projectId" />
+            <div class="form-status" id="formStatus">新建项目</div>
+
+            <label>
+              <span>设备详细 PN</span>
+              <input id="partNumber" name="partNumber" type="text" autocomplete="off" placeholder="如 118001A..." required />
+            </label>
+            <label>
+              <span>产品型号</span>
+              <select id="productModel" name="productModel" required></select>
+            </label>
+            <label>
+              <span>序列号 SN</span>
+              <input id="serialNumber" name="serialNumber" type="text" autocomplete="off" placeholder="唯一序列号" required />
+            </label>
+            <label>
+              <span>装机省份</span>
+              <select id="installProvince" name="installProvince" required></select>
+            </label>
+            <label class="form-span-2">
+              <span>客户（医院）名称</span>
+              <input id="hospitalName" name="hospitalName" type="text" autocomplete="off" required />
+            </label>
+            <label>
+              <span>代理商 / 渠道</span>
+              <input id="channelName" name="channelName" type="text" autocomplete="off" required />
+            </label>
+            <label>
+              <span>Getinge 销售</span>
+              <input id="salesName" name="salesName" type="text" autocomplete="off" required />
+            </label>
+            <label>
+              <span>下单时间</span>
+              <input id="orderDate" name="orderDate" type="date" />
+            </label>
+            <label>
+              <span>交付 / 安装时间</span>
+              <input id="installDate" name="installDate" type="date" />
+            </label>
+            <label>
+              <span>验收时间</span>
+              <input id="acceptanceDate" name="acceptanceDate" type="date" />
+            </label>
+            <label>
+              <span>保修过期时间</span>
+              <input id="warrantyExpireDate" name="warrantyExpireDate" type="date" />
+            </label>
+
+            <div class="project-form__actions">
+              <button class="secondary-button" id="newProjectButton" type="button">新建空白</button>
+              <button class="primary-button" type="submit">保存项目</button>
+            </div>
+          </form>
+
+          <aside class="project-search">
+            <label class="search-field">
+              <span>搜索已录入项目</span>
+              <input id="projectSearchInput" type="search" placeholder="输入 SN、医院、PN、渠道、销售或省份" />
+            </label>
+            <div class="project-summary" id="projectSummary">已录入 0 个项目</div>
+            <div class="project-results" id="projectResults"></div>
+          </aside>
+        </div>
+      </section>
+    </div>
+
+    <script src="assets/echarts.min.js"></script>
+    <script src="assets/xlsx.full.min.js"></script>
+    <script src="js/app.js?v=product-switcher"></script>
+  </body>
+</html>

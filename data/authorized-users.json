@@ -1,0 +1,50 @@
+[
+  {
+    "username": "Maquet",
+    "password": "123win",
+    "displayName": "系统管理员",
+    "role": "系统管理员"
+  },
+  {
+    "username": "Tomwu",
+    "password": "maquet",
+    "displayName": "Tom Wu",
+    "role": "Sr.Manager"
+  },
+  {
+    "username": "Evanwang",
+    "password": "maquet",
+    "displayName": "Evan Wang",
+    "role": "Head of marketing"
+  },
+  {
+    "username": "Jayding",
+    "password": "maquet",
+    "displayName": "Jay Ding",
+    "role": "Sr.Director SW"
+  },
+  {
+    "username": "ChrisZhang",
+    "password": "maquet",
+    "displayName": "Chris Zhang",
+    "role": "Marketing Director"
+  },
+  {
+    "username": "Leoyu",
+    "password": "maquet",
+    "displayName": "Leo Yu",
+    "role": "Head of marketing"
+  },
+  {
+    "username": "Violajin",
+    "password": "maquet",
+    "displayName": "Viola Jin",
+    "role": "Head of marketing"
+  },
+  {
+    "username": "Xiangzhu",
+    "password": "maquet",
+    "displayName": "Xiang Zhu",
+    "role": "Project manager"
+  }
+]
