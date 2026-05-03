@@ -245,6 +245,28 @@ button {
   line-height: 1.5;
 }
 
+.admin-user-tools[hidden] {
+  display: none;
+}
+
+.admin-user-tools {
+  justify-self: end;
+  display: grid;
+  justify-items: end;
+  gap: 6px;
+}
+
+.admin-user-tools .excel-import-button {
+  min-width: 142px;
+}
+
+.admin-user-tools small {
+  max-width: 220px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
 .dashboard-shell {
   min-height: 100vh;
   padding: 24px;
@@ -903,11 +925,13 @@ h2 {
   }
 }
 
-.project-modal[hidden] {
+.project-modal[hidden],
+.password-modal[hidden] {
   display: none;
 }
 
-.project-modal {
+.project-modal,
+.password-modal {
   position: fixed;
   inset: 0;
   z-index: 50;
@@ -916,7 +940,8 @@ h2 {
   padding: 24px;
 }
 
-.project-modal__backdrop {
+.project-modal__backdrop,
+.password-modal__backdrop {
   position: absolute;
   inset: 0;
   background: rgba(7, 16, 34, 0.58);
@@ -958,6 +983,90 @@ h2 {
 
 .project-modal__header h2 {
   color: var(--white);
+}
+
+.password-modal__panel {
+  position: relative;
+  width: min(430px, 100%);
+  display: grid;
+  gap: 16px;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.64);
+  border-radius: 8px;
+  box-shadow: 0 32px 90px rgba(7, 16, 34, 0.34);
+}
+
+.password-modal__header {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 22px;
+  color: var(--white);
+  background: linear-gradient(120deg, var(--getinge-navy), var(--getinge-midnight));
+}
+
+.password-modal__header p {
+  margin: 0 0 6px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  font-weight: 760;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.password-modal__header h2 {
+  color: var(--white);
+}
+
+.password-modal__panel label {
+  display: grid;
+  gap: 7px;
+  padding: 0 22px;
+}
+
+.password-modal__panel label span {
+  color: var(--getinge-bluegray);
+  font-size: 12px;
+  font-weight: 760;
+}
+
+.password-modal__panel input {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 11px;
+  color: var(--getinge-ink);
+  background: var(--white);
+  border: 1px solid var(--getinge-line);
+  border-radius: 6px;
+  outline: none;
+}
+
+.password-modal__panel input:focus {
+  border-color: var(--getinge-cyan);
+  box-shadow: 0 0 0 3px rgba(75, 163, 199, 0.16);
+}
+
+.password-message {
+  min-height: 20px;
+  margin: 0;
+  padding: 0 22px;
+  color: #b23b4a;
+  font-size: 13px;
+  font-weight: 760;
+}
+
+.password-message.success {
+  color: var(--getinge-green);
+}
+
+.password-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 0 22px 22px;
 }
 
 .icon-button {

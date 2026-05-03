@@ -378,6 +378,25 @@ async function saveUsers(users) {
   }
 }
 
+async function updateUserPassword(username, password) {
+  const normalizedUsername = normalizedText(username).toLowerCase();
+  if (!normalizedUsername || !normalizedText(password)) {
+    throw new Error("用户名和新密码不能为空");
+  }
+
+  const users = await readUsers();
+  const userIndex = users.findIndex((user) => normalizedText(user.username).toLowerCase() === normalizedUsername);
+  if (userIndex < 0) {
+    throw new Error("未找到当前用户");
+  }
+
+  const nextUsers = users.map((user, index) => (
+    index === userIndex ? { ...user, password: normalizedText(password) } : user
+  ));
+  await saveUsers(nextUsers);
+  return nextUsers;
+}
+
 async function readDashboardData() {
   if (hasBaserow && baserow.installBaseTableId) {
     try {
@@ -719,6 +738,24 @@ async function handleUsersApi(request, response) {
     const incomingUsers = Array.isArray(body.users) ? body.users : [];
     const nextUsers = incomingUsers.map(sanitizeUser).filter(Boolean);
     await saveUsers(nextUsers);
+    sendJson(response, 200, { users: nextUsers });
+    return;
+  }
+
+  if (request.method === "PATCH") {
+    const body = JSON.parse(await readRequestBody(request) || "{}");
+    if (!normalizedText(body.username) || !normalizedText(body.password)) {
+      sendJson(response, 400, { error: "用户名和新密码不能为空" });
+      return;
+    }
+
+    const users = await readUsers();
+    if (!users.some((user) => normalizedText(user.username).toLowerCase() === normalizedText(body.username).toLowerCase())) {
+      sendJson(response, 404, { error: "未找到当前用户" });
+      return;
+    }
+
+    const nextUsers = await updateUserPassword(body.username, body.password);
     sendJson(response, 200, { users: nextUsers });
     return;
   }

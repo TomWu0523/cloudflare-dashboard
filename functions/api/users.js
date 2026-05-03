@@ -86,11 +86,69 @@ function userFromBaserowRow(row) {
   });
 }
 
+function usernameMatches(row, username) {
+  const user = userFromBaserowRow(row);
+  return user?.username?.toLowerCase() === String(username || "").trim().toLowerCase();
+}
+
+function passwordUpdatePayload(row, password) {
+  let notes = {};
+  try {
+    notes = row.Notes ? JSON.parse(row.Notes) : {};
+  } catch (error) {
+    notes = {};
+  }
+
+  notes.password = password;
+  const payload = {
+    Notes: JSON.stringify(notes)
+  };
+
+  if (Object.prototype.hasOwnProperty.call(row, "Password")) {
+    payload.Password = password;
+  }
+
+  return payload;
+}
+
 export async function onRequestGet({ env }) {
   try {
     const rows = await baserowRows(env);
     const users = rows
       .filter((row) => row.Active !== false)
+      .map(userFromBaserowRow)
+      .filter(Boolean);
+
+    return jsonResponse({ users });
+  } catch (error) {
+    return jsonResponse({ users: [], error: error.message }, 500);
+  }
+}
+
+export async function onRequestPatch({ request, env }) {
+  try {
+    const { tableId } = baserowConfig(env);
+    const body = await request.json();
+    const username = String(body.username || "").trim();
+    const password = String(body.password || "").trim();
+
+    if (!username || !password) {
+      return jsonResponse({ users: [], error: "用户名和新密码不能为空" }, 400);
+    }
+
+    const rows = await baserowRows(env);
+    const row = rows.find((item) => usernameMatches(item, username));
+    if (!row) {
+      return jsonResponse({ users: [], error: "未找到当前用户" }, 404);
+    }
+
+    await baserowRequest(env, `/api/database/rows/table/${tableId}/${row.id}/?user_field_names=true`, {
+      method: "PATCH",
+      body: JSON.stringify(passwordUpdatePayload(row, password))
+    });
+
+    const users = (await baserowRows(env))
+      .filter((item) => item.Active !== false)
       .map(userFromBaserowRow)
       .filter(Boolean);
 

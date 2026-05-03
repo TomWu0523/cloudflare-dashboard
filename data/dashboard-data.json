@@ -54,336 +54,197 @@
         "ratio": 0.16
       }
     ],
-    "provinceData": [
-      {
-        "name": "上海市",
-        "value": 18,
-        "latestSite": "瑞金医院北部院区",
-        "latestDate": "2026-04-18",
-        "coord": [
-          121.47,
-          31.23
-        ]
+    "provinceData": [],
+    "users": [],
+    "partners": [],
+    "updates": [],
+    "monthlyTrend": [],
+    "yearlyTrend": [],
+    "totalUnits": 0,
+    "quarterUnits": 0,
+    "sourceRecords": [],
+    "productLineData": {
+      "b0": {
+        "title": "1180 Magnus OR Table 装机看板",
+        "rankingTitle": "1180 Magnus 用户排名",
+        "modalTitle": "1180 手术床项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "B0",
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
       },
-      {
-        "name": "浙江省",
-        "value": 16,
-        "latestSite": "浙江大学医学院附属邵逸夫医院",
-        "latestDate": "2026-04-10",
-        "coord": [
-          120.15,
-          30.28
-        ]
+      "b1": {
+        "title": "1180 Magnus OR Table 装机看板",
+        "rankingTitle": "1180 Magnus 用户排名",
+        "modalTitle": "1180 手术床项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "B0",
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
       },
-      {
-        "name": "江苏省",
-        "value": 15,
-        "latestSite": "南京鼓楼医院江北院区",
-        "latestDate": "2026-03-29",
-        "coord": [
-          118.76,
-          32.06
-        ]
+      "b2": {
+        "title": "1180 Magnus OR Table 装机看板",
+        "rankingTitle": "1180 Magnus 用户排名",
+        "modalTitle": "1180 手术床项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "B0",
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
       },
-      {
-        "name": "广东省",
-        "value": 14,
-        "latestSite": "中山大学附属第一医院南沙院区",
-        "latestDate": "2026-04-05",
-        "coord": [
-          113.27,
-          23.13
-        ]
+      "b3": {
+        "title": "1180 Magnus OR Table 装机看板",
+        "rankingTitle": "1180 Magnus 用户排名",
+        "modalTitle": "1180 手术床项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "B0",
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
       },
-      {
-        "name": "四川省",
-        "value": 12,
-        "latestSite": "四川大学华西医院天府院区",
-        "latestDate": "2026-03-22",
-        "coord": [
-          104.06,
-          30.67
-        ]
+      "b4": {
+        "title": "1180 Magnus OR Table 装机看板",
+        "rankingTitle": "1180 Magnus 用户排名",
+        "modalTitle": "1180 手术床项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "B0",
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
       },
-      {
-        "name": "湖北省",
-        "value": 10,
-        "latestSite": "武汉协和医院车谷院区",
-        "latestDate": "2026-04-01",
-        "coord": [
-          114.3,
-          30.59
-        ]
-      },
-      {
-        "name": "湖南省",
-        "value": 9,
-        "latestSite": "湘雅三医院",
-        "latestDate": "2026-02-28",
-        "coord": [
-          112.98,
-          28.19
-        ]
-      },
-      {
-        "name": "重庆市",
-        "value": 8,
-        "latestSite": "重庆医科大学附属第一医院",
-        "latestDate": "2026-03-17",
-        "coord": [
-          106.55,
-          29.56
-        ]
-      },
-      {
-        "name": "福建省",
-        "value": 7,
-        "latestSite": "福建医科大学附属协和医院",
-        "latestDate": "2026-02-18",
-        "coord": [
-          119.3,
-          26.08
-        ]
-      },
-      {
-        "name": "安徽省",
-        "value": 6,
-        "latestSite": "中国科大附一院",
-        "latestDate": "2026-01-25",
-        "coord": [
-          117.28,
-          31.86
-        ]
-      },
-      {
-        "name": "广西壮族自治区",
-        "value": 5,
-        "latestSite": "广西医科大学第一附属医院",
-        "latestDate": "2026-01-18",
-        "coord": [
-          108.32,
-          22.82
-        ]
-      },
-      {
-        "name": "云南省",
-        "value": 4,
-        "latestSite": "昆明医科大学第一附属医院",
-        "latestDate": "2025-12-19",
-        "coord": [
-          102.71,
-          25.04
-        ]
-      },
-      {
-        "name": "贵州省",
-        "value": 3,
-        "latestSite": "贵州省人民医院",
-        "latestDate": "2025-12-05",
-        "coord": [
-          106.71,
-          26.58
-        ]
-      },
-      {
-        "name": "江西省",
-        "value": 3,
-        "latestSite": "南昌大学第一附属医院",
-        "latestDate": "2025-11-22",
-        "coord": [
-          115.86,
-          28.68
-        ]
-      },
-      {
-        "name": "海南省",
-        "value": 2,
-        "latestSite": "海南省人民医院",
-        "latestDate": "2025-11-08",
-        "coord": [
-          110.35,
-          20.02
-        ]
+      "b5": {
+        "title": "1180 Magnus OR Table 装机看板",
+        "rankingTitle": "1180 Magnus 用户排名",
+        "modalTitle": "1180 手术床项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "B0",
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
       }
-    ],
-    "users": [
-      {
-        "name": "上海交通大学医学院附属瑞金医院",
-        "province": "上海",
-        "value": 6
-      },
-      {
-        "name": "四川大学华西医院",
-        "province": "四川",
-        "value": 5
-      },
-      {
-        "name": "浙江大学医学院附属邵逸夫医院",
-        "province": "浙江",
-        "value": 5
-      },
-      {
-        "name": "南京鼓楼医院",
-        "province": "江苏",
-        "value": 4
-      },
-      {
-        "name": "中山大学附属第一医院",
-        "province": "广东",
-        "value": 4
-      },
-      {
-        "name": "华中科技大学同济医学院附属协和医院",
-        "province": "湖北",
-        "value": 3
-      },
-      {
-        "name": "中南大学湘雅医院",
-        "province": "湖南",
-        "value": 3
-      },
-      {
-        "name": "重庆医科大学附属第一医院",
-        "province": "重庆",
-        "value": 2
-      }
-    ],
-    "partners": [
-      {
-        "name": "华东洁定医疗系统服务商",
-        "province": "沪苏浙",
-        "value": 21
-      },
-      {
-        "name": "南区手术室解决方案伙伴",
-        "province": "粤桂琼",
-        "value": 17
-      },
-      {
-        "name": "西南医院项目联盟",
-        "province": "川渝云贵",
-        "value": 14
-      },
-      {
-        "name": "华中临床工程渠道",
-        "province": "鄂湘赣",
-        "value": 12
-      },
-      {
-        "name": "福建精密设备有限公司",
-        "province": "福建",
-        "value": 7
-      },
-      {
-        "name": "安徽智慧手术室伙伴",
-        "province": "安徽",
-        "value": 6
-      }
-    ],
-    "updates": [
-      {
-        "date": "04-18",
-        "status": "装机",
-        "text": "上海瑞金医院北部院区完成 1180 Magnus 交付 2 台"
-      },
-      {
-        "date": "04-10",
-        "status": "签约",
-        "text": "浙江大学医学院附属邵逸夫医院新增复合手术室项目"
-      },
-      {
-        "date": "04-05",
-        "status": "装机",
-        "text": "中山大学附属第一医院南沙院区完成验收"
-      },
-      {
-        "date": "04-01",
-        "status": "签约",
-        "text": "武汉协和医院车谷院区确认 1180 Magnus 配置方案"
-      },
-      {
-        "date": "03-29",
-        "status": "装机",
-        "text": "南京鼓楼医院江北院区新增 1 台"
-      },
-      {
-        "date": "03-22",
-        "status": "装机",
-        "text": "四川大学华西医院天府院区完成首间 OR table 安装"
-      }
-    ],
-    "monthlyTrend": [
-      {
-        "month": "2025-05",
-        "installed": 6
-      },
-      {
-        "month": "2025-06",
-        "installed": 7
-      },
-      {
-        "month": "2025-07",
-        "installed": 5
-      },
-      {
-        "month": "2025-08",
-        "installed": 8
-      },
-      {
-        "month": "2025-09",
-        "installed": 6
-      },
-      {
-        "month": "2025-10",
-        "installed": 9
-      },
-      {
-        "month": "2025-11",
-        "installed": 8
-      },
-      {
-        "month": "2025-12",
-        "installed": 10
-      },
-      {
-        "month": "2026-01",
-        "installed": 7
-      },
-      {
-        "month": "2026-02",
-        "installed": 8
-      },
-      {
-        "month": "2026-03",
-        "installed": 11
-      },
-      {
-        "month": "2026-04",
-        "installed": 10
-      }
-    ],
-    "yearlyTrend": [
-      {
-        "year": "2022",
-        "installed": 18
-      },
-      {
-        "year": "2023",
-        "installed": 25
-      },
-      {
-        "year": "2024",
-        "installed": 31
-      },
-      {
-        "year": "2025",
-        "installed": 38
-      },
-      {
-        "year": "2026",
-        "installed": 20
-      }
-    ]
+    }
   },
   "tegris": {
     "title": "Tegris Dashboard 装机看板",
@@ -7570,335 +7431,68 @@
         "label": "Novito"
       }
     ],
-    "provinceData": [
-      {
-        "name": "上海市",
-        "value": 24,
-        "latestSite": "上海交通大学医学院附属仁济医院",
-        "latestDate": "2026-04-20",
-        "coord": [
-          121.47,
-          31.23
-        ]
+    "provinceData": [],
+    "users": [],
+    "partners": [],
+    "updates": [],
+    "monthlyTrend": [],
+    "yearlyTrend": [],
+    "totalUnits": 0,
+    "quarterUnits": 0,
+    "sourceRecords": [],
+    "productLineData": {
+      "s600": {
+        "title": "IC MIC Dashboard 装机看板",
+        "rankingTitle": "IC MIC 用户排名",
+        "modalTitle": "IC MIC 项目录入与更新",
+        "totalUnitsLabel": "台 IC MIC 设备",
+        "visual": {
+          "type": "image",
+          "src": "assets/ic-mic-dashboard.jpg",
+          "alt": "Getinge IC MIC washer disinfector"
+        },
+        "productModels": [
+          "S600",
+          "Novito"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 设备",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
       },
-      {
-        "name": "浙江省",
-        "value": 21,
-        "latestSite": "浙江省人民医院朝晖院区",
-        "latestDate": "2026-04-14",
-        "coord": [
-          120.15,
-          30.28
-        ]
-      },
-      {
-        "name": "江苏省",
-        "value": 19,
-        "latestSite": "江苏省人民医院浦口分院",
-        "latestDate": "2026-04-06",
-        "coord": [
-          118.76,
-          32.06
-        ]
-      },
-      {
-        "name": "广东省",
-        "value": 17,
-        "latestSite": "南方医科大学南方医院",
-        "latestDate": "2026-03-30",
-        "coord": [
-          113.27,
-          23.13
-        ]
-      },
-      {
-        "name": "四川省",
-        "value": 14,
-        "latestSite": "成都市第三人民医院",
-        "latestDate": "2026-03-24",
-        "coord": [
-          104.06,
-          30.67
-        ]
-      },
-      {
-        "name": "湖北省",
-        "value": 12,
-        "latestSite": "湖北省妇幼保健院光谷院区",
-        "latestDate": "2026-03-13",
-        "coord": [
-          114.3,
-          30.59
-        ]
-      },
-      {
-        "name": "湖南省",
-        "value": 11,
-        "latestSite": "湖南省肿瘤医院",
-        "latestDate": "2026-03-02",
-        "coord": [
-          112.98,
-          28.19
-        ]
-      },
-      {
-        "name": "重庆市",
-        "value": 10,
-        "latestSite": "重庆大学附属肿瘤医院",
-        "latestDate": "2026-02-22",
-        "coord": [
-          106.55,
-          29.56
-        ]
-      },
-      {
-        "name": "福建省",
-        "value": 8,
-        "latestSite": "福建省立医院金山院区",
-        "latestDate": "2026-02-08",
-        "coord": [
-          119.3,
-          26.08
-        ]
-      },
-      {
-        "name": "安徽省",
-        "value": 7,
-        "latestSite": "安徽省立医院南区",
-        "latestDate": "2026-01-29",
-        "coord": [
-          117.28,
-          31.86
-        ]
-      },
-      {
-        "name": "广西壮族自治区",
-        "value": 6,
-        "latestSite": "柳州市人民医院",
-        "latestDate": "2026-01-16",
-        "coord": [
-          108.32,
-          22.82
-        ]
-      },
-      {
-        "name": "云南省",
-        "value": 5,
-        "latestSite": "昆明市延安医院",
-        "latestDate": "2025-12-27",
-        "coord": [
-          102.71,
-          25.04
-        ]
-      },
-      {
-        "name": "贵州省",
-        "value": 4,
-        "latestSite": "贵阳市第一人民医院",
-        "latestDate": "2025-12-15",
-        "coord": [
-          106.71,
-          26.58
-        ]
-      },
-      {
-        "name": "江西省",
-        "value": 4,
-        "latestSite": "南昌市第一医院",
-        "latestDate": "2025-11-29",
-        "coord": [
-          115.86,
-          28.68
-        ]
-      },
-      {
-        "name": "海南省",
-        "value": 3,
-        "latestSite": "三亚中心医院",
-        "latestDate": "2025-11-10",
-        "coord": [
-          110.35,
-          20.02
-        ]
+      "novito": {
+        "title": "IC MIC Dashboard 装机看板",
+        "rankingTitle": "IC MIC 用户排名",
+        "modalTitle": "IC MIC 项目录入与更新",
+        "totalUnitsLabel": "台 IC MIC 设备",
+        "visual": {
+          "type": "image",
+          "src": "assets/ic-mic-dashboard.jpg",
+          "alt": "Getinge IC MIC washer disinfector"
+        },
+        "productModels": [
+          "S600",
+          "Novito"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 设备",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
       }
-    ],
-    "users": [
-      {
-        "name": "上海交通大学医学院附属仁济医院",
-        "province": "上海",
-        "value": 8
-      },
-      {
-        "name": "浙江省人民医院",
-        "province": "浙江",
-        "value": 7
-      },
-      {
-        "name": "江苏省人民医院",
-        "province": "江苏",
-        "value": 6
-      },
-      {
-        "name": "南方医科大学南方医院",
-        "province": "广东",
-        "value": 6
-      },
-      {
-        "name": "成都市第三人民医院",
-        "province": "四川",
-        "value": 5
-      },
-      {
-        "name": "湖北省妇幼保健院",
-        "province": "湖北",
-        "value": 4
-      },
-      {
-        "name": "湖南省肿瘤医院",
-        "province": "湖南",
-        "value": 4
-      },
-      {
-        "name": "重庆大学附属肿瘤医院",
-        "province": "重庆",
-        "value": 3
-      }
-    ],
-    "partners": [
-      {
-        "name": "华东 CSSD 设备服务商",
-        "province": "沪苏浙",
-        "value": 33
-      },
-      {
-        "name": "南区感染控制解决方案伙伴",
-        "province": "粤桂琼",
-        "value": 26
-      },
-      {
-        "name": "西南消毒供应中心联盟",
-        "province": "川渝云贵",
-        "value": 23
-      },
-      {
-        "name": "华中院感工程渠道",
-        "province": "鄂湘赣",
-        "value": 21
-      },
-      {
-        "name": "福建消供设备有限公司",
-        "province": "福建",
-        "value": 8
-      },
-      {
-        "name": "安徽洁净供应室伙伴",
-        "province": "安徽",
-        "value": 7
-      }
-    ],
-    "updates": [
-      {
-        "date": "04-20",
-        "status": "装机",
-        "text": "上海仁济医院新增 IC MIC 清洗消毒设备 3 台"
-      },
-      {
-        "date": "04-14",
-        "status": "签约",
-        "text": "浙江省人民医院确认 CSSD 扩容项目"
-      },
-      {
-        "date": "04-06",
-        "status": "装机",
-        "text": "江苏省人民医院浦口分院完成 MIC 设备验收"
-      },
-      {
-        "date": "03-30",
-        "status": "装机",
-        "text": "南方医科大学南方医院完成 IC 产线联调"
-      },
-      {
-        "date": "03-24",
-        "status": "签约",
-        "text": "成都市第三人民医院新增清洗消毒中心配置"
-      },
-      {
-        "date": "03-13",
-        "status": "装机",
-        "text": "湖北省妇幼保健院光谷院区完成交付"
-      }
-    ],
-    "monthlyTrend": [
-      {
-        "month": "2025-05",
-        "installed": 8
-      },
-      {
-        "month": "2025-06",
-        "installed": 9
-      },
-      {
-        "month": "2025-07",
-        "installed": 8
-      },
-      {
-        "month": "2025-08",
-        "installed": 11
-      },
-      {
-        "month": "2025-09",
-        "installed": 9
-      },
-      {
-        "month": "2025-10",
-        "installed": 12
-      },
-      {
-        "month": "2025-11",
-        "installed": 10
-      },
-      {
-        "month": "2025-12",
-        "installed": 13
-      },
-      {
-        "month": "2026-01",
-        "installed": 10
-      },
-      {
-        "month": "2026-02",
-        "installed": 11
-      },
-      {
-        "month": "2026-03",
-        "installed": 15
-      },
-      {
-        "month": "2026-04",
-        "installed": 13
-      }
-    ],
-    "yearlyTrend": [
-      {
-        "year": "2022",
-        "installed": 24
-      },
-      {
-        "year": "2023",
-        "installed": 32
-      },
-      {
-        "year": "2024",
-        "installed": 39
-      },
-      {
-        "year": "2025",
-        "installed": 45
-      },
-      {
-        "year": "2026",
-        "installed": 25
-      }
-    ]
+    }
   }
 }

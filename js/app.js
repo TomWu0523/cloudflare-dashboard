@@ -1,1392 +1,7501 @@
 let dashboards = {
-  magnus1180: {
-    title: "1180 Magnus OR Table 装机看板",
-    rankingTitle: "1180 Magnus 用户排名",
-    modalTitle: "1180 手术床项目录入与更新",
-    totalUnitsLabel: "台 1180 Magnus",
-    visual: {
-      type: "image",
-      src: "assets/1180-magnus-hybrid-column.png",
-      alt: "1180 Magnus operating table system"
+  "magnus1180": {
+    "title": "1180 Magnus OR Table 装机看板",
+    "rankingTitle": "1180 Magnus 用户排名",
+    "modalTitle": "1180 手术床项目录入与更新",
+    "totalUnitsLabel": "台 1180 Magnus",
+    "visual": {
+      "type": "image",
+      "src": "assets/1180-magnus-hybrid-column.png",
+      "alt": "1180 Magnus operating table system"
     },
-    productModels: ["B0", "B1", "B2", "B3", "B4", "B5"],
-    lineTotalUnitsLabelTemplate: "台 {line} 手术床",
-    productLineOptions: [
-      { value: "all", label: "全部" },
-      { value: "b0", label: "B0", ratio: 0.12 },
-      { value: "b1", label: "B1", ratio: 0.16 },
-      { value: "b2", label: "B2", ratio: 0.18 },
-      { value: "b3", label: "B3", ratio: 0.2 },
-      { value: "b4", label: "B4", ratio: 0.18 },
-      { value: "b5", label: "B5", ratio: 0.16 }
+    "productModels": [
+      "B0",
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5"
     ],
-    provinceData: [
-      { name: "上海市", value: 18, latestSite: "瑞金医院北部院区", latestDate: "2026-04-18", coord: [121.47, 31.23] },
-      { name: "浙江省", value: 16, latestSite: "浙江大学医学院附属邵逸夫医院", latestDate: "2026-04-10", coord: [120.15, 30.28] },
-      { name: "江苏省", value: 15, latestSite: "南京鼓楼医院江北院区", latestDate: "2026-03-29", coord: [118.76, 32.06] },
-      { name: "广东省", value: 14, latestSite: "中山大学附属第一医院南沙院区", latestDate: "2026-04-05", coord: [113.27, 23.13] },
-      { name: "四川省", value: 12, latestSite: "四川大学华西医院天府院区", latestDate: "2026-03-22", coord: [104.06, 30.67] },
-      { name: "湖北省", value: 10, latestSite: "武汉协和医院车谷院区", latestDate: "2026-04-01", coord: [114.3, 30.59] },
-      { name: "湖南省", value: 9, latestSite: "湘雅三医院", latestDate: "2026-02-28", coord: [112.98, 28.19] },
-      { name: "重庆市", value: 8, latestSite: "重庆医科大学附属第一医院", latestDate: "2026-03-17", coord: [106.55, 29.56] },
-      { name: "福建省", value: 7, latestSite: "福建医科大学附属协和医院", latestDate: "2026-02-18", coord: [119.3, 26.08] },
-      { name: "安徽省", value: 6, latestSite: "中国科大附一院", latestDate: "2026-01-25", coord: [117.28, 31.86] },
-      { name: "广西壮族自治区", value: 5, latestSite: "广西医科大学第一附属医院", latestDate: "2026-01-18", coord: [108.32, 22.82] },
-      { name: "云南省", value: 4, latestSite: "昆明医科大学第一附属医院", latestDate: "2025-12-19", coord: [102.71, 25.04] },
-      { name: "贵州省", value: 3, latestSite: "贵州省人民医院", latestDate: "2025-12-05", coord: [106.71, 26.58] },
-      { name: "江西省", value: 3, latestSite: "南昌大学第一附属医院", latestDate: "2025-11-22", coord: [115.86, 28.68] },
-      { name: "海南省", value: 2, latestSite: "海南省人民医院", latestDate: "2025-11-08", coord: [110.35, 20.02] }
-    ],
-    users: [
-      { name: "上海交通大学医学院附属瑞金医院", province: "上海", value: 6 },
-      { name: "四川大学华西医院", province: "四川", value: 5 },
-      { name: "浙江大学医学院附属邵逸夫医院", province: "浙江", value: 5 },
-      { name: "南京鼓楼医院", province: "江苏", value: 4 },
-      { name: "中山大学附属第一医院", province: "广东", value: 4 },
-      { name: "华中科技大学同济医学院附属协和医院", province: "湖北", value: 3 },
-      { name: "中南大学湘雅医院", province: "湖南", value: 3 },
-      { name: "重庆医科大学附属第一医院", province: "重庆", value: 2 }
-    ],
-    partners: [
-      { name: "华东洁定医疗系统服务商", province: "沪苏浙", value: 21 },
-      { name: "南区手术室解决方案伙伴", province: "粤桂琼", value: 17 },
-      { name: "西南医院项目联盟", province: "川渝云贵", value: 14 },
-      { name: "华中临床工程渠道", province: "鄂湘赣", value: 12 },
-      { name: "福建精密设备有限公司", province: "福建", value: 7 },
-      { name: "安徽智慧手术室伙伴", province: "安徽", value: 6 }
-    ],
-    updates: [
-      { date: "04-18", status: "装机", text: "上海瑞金医院北部院区完成 1180 Magnus 交付 2 台" },
-      { date: "04-10", status: "签约", text: "浙江大学医学院附属邵逸夫医院新增复合手术室项目" },
-      { date: "04-05", status: "装机", text: "中山大学附属第一医院南沙院区完成验收" },
-      { date: "04-01", status: "签约", text: "武汉协和医院车谷院区确认 1180 Magnus 配置方案" },
-      { date: "03-29", status: "装机", text: "南京鼓楼医院江北院区新增 1 台" },
-      { date: "03-22", status: "装机", text: "四川大学华西医院天府院区完成首间 OR table 安装" }
-    ],
-    monthlyTrend: [
-      { month: "2025-05", installed: 6 },
-      { month: "2025-06", installed: 7 },
-      { month: "2025-07", installed: 5 },
-      { month: "2025-08", installed: 8 },
-      { month: "2025-09", installed: 6 },
-      { month: "2025-10", installed: 9 },
-      { month: "2025-11", installed: 8 },
-      { month: "2025-12", installed: 10 },
-      { month: "2026-01", installed: 7 },
-      { month: "2026-02", installed: 8 },
-      { month: "2026-03", installed: 11 },
-      { month: "2026-04", installed: 10 }
-    ],
-    yearlyTrend: [
-      { year: "2022", installed: 18 },
-      { year: "2023", installed: 25 },
-      { year: "2024", installed: 31 },
-      { year: "2025", installed: 38 },
-      { year: "2026", installed: 20 }
-    ]
-  },
-  tegris: {
-    title: "Tegris Dashboard 装机看板",
-    rankingTitle: "Tegris 用户排名",
-    modalTitle: "Tegris 一体化手术室项目录入与更新",
-    totalUnitsLabel: "套 Tegris 系统",
-    visual: {
-      type: "image",
-      src: "assets/tegris-int-or-1.png",
-      alt: "Tegris integrated operating room system",
-      tags: ["Tegris VOIP", "Tegris Classic", "TIGERS"]
-    },
-    productModels: ["VOIP", "Classic", "TIGERS"],
-    lineTotalUnitsLabelTemplate: "套 {line} 系统",
-    productLineOptions: [
-      { value: "all", label: "全部 Tegris" },
-      { value: "voip", label: "VOIP" },
-      { value: "classic", label: "Classic" },
-      { value: "tigers", label: "TIGERS" }
-    ],
-    totalUnits: 232,
-    quarterUnits: 0,
-    provinceData: [
+    "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
+    "productLineOptions": [
       {
+        "value": "all",
+        "label": "全部"
+      },
+      {
+        "value": "b0",
+        "label": "B0",
+        "ratio": 0.12
+      },
+      {
+        "value": "b1",
+        "label": "B1",
+        "ratio": 0.16
+      },
+      {
+        "value": "b2",
+        "label": "B2",
+        "ratio": 0.18
+      },
+      {
+        "value": "b3",
+        "label": "B3",
+        "ratio": 0.2
+      },
+      {
+        "value": "b4",
+        "label": "B4",
+        "ratio": 0.18
+      },
+      {
+        "value": "b5",
+        "label": "B5",
+        "ratio": 0.16
+      }
+    ],
+    "provinceData": [],
+    "users": [],
+    "partners": [],
+    "updates": [],
+    "monthlyTrend": [],
+    "yearlyTrend": [],
+    "totalUnits": 0,
+    "quarterUnits": 0,
+    "sourceRecords": [],
+    "productLineData": {
+      "b0": {
+        "title": "1180 Magnus OR Table 装机看板",
+        "rankingTitle": "1180 Magnus 用户排名",
+        "modalTitle": "1180 手术床项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "B0",
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
+      },
+      "b1": {
+        "title": "1180 Magnus OR Table 装机看板",
+        "rankingTitle": "1180 Magnus 用户排名",
+        "modalTitle": "1180 手术床项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "B0",
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
+      },
+      "b2": {
+        "title": "1180 Magnus OR Table 装机看板",
+        "rankingTitle": "1180 Magnus 用户排名",
+        "modalTitle": "1180 手术床项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "B0",
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
+      },
+      "b3": {
+        "title": "1180 Magnus OR Table 装机看板",
+        "rankingTitle": "1180 Magnus 用户排名",
+        "modalTitle": "1180 手术床项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "B0",
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
+      },
+      "b4": {
+        "title": "1180 Magnus OR Table 装机看板",
+        "rankingTitle": "1180 Magnus 用户排名",
+        "modalTitle": "1180 手术床项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "B0",
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
+      },
+      "b5": {
+        "title": "1180 Magnus OR Table 装机看板",
+        "rankingTitle": "1180 Magnus 用户排名",
+        "modalTitle": "1180 手术床项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "B0",
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
+      }
+    }
+  },
+  "tegris": {
+    "title": "Tegris Dashboard 装机看板",
+    "rankingTitle": "Tegris 用户排名",
+    "modalTitle": "Tegris 一体化手术室项目录入与更新",
+    "totalUnitsLabel": "套 Tegris 系统",
+    "visual": {
+      "type": "image",
+      "src": "assets/tegris-int-or-1.png",
+      "alt": "Tegris integrated operating room system",
+      "tags": [
+        "Tegris VOIP",
+        "Tegris Classic",
+        "TIGERS"
+      ]
+    },
+    "productModels": [
+      "VOIP",
+      "Classic",
+      "TIGERS"
+    ],
+    "lineTotalUnitsLabelTemplate": "套 {line} 系统",
+    "productLineOptions": [
+      {
+        "value": "all",
+        "label": "全部 Tegris"
+      },
+      {
+        "value": "voip",
+        "label": "VOIP"
+      },
+      {
+        "value": "classic",
+        "label": "Classic"
+      },
+      {
+        "value": "tigers",
+        "label": "TIGERS"
+      }
+    ],
+    "totalUnits": 225,
+    "quarterUnits": 0,
+    "provinceData": [
+      {
+        "name": "广东省",
+        "value": 51,
+        "latestSite": "广州富力医院",
+        "latestDate": "2024-06-28",
+        "coord": [
+          113.27,
+          23.13
+        ]
+      },
+      {
+        "name": "浙江省",
+        "value": 37,
+        "latestSite": "杭州星灿生物技术有限公司",
+        "latestDate": "2025-12-08",
+        "coord": [
+          120.15,
+          30.28
+        ]
+      },
+      {
+        "name": "上海市",
+        "value": 23,
+        "latestSite": "未填写终端用户",
+        "latestDate": "2026-03-10",
+        "coord": [
+          121.47,
+          31.23
+        ]
+      },
+      {
+        "name": "四川省",
+        "value": 20,
+        "latestSite": "绵阳市中医医院",
+        "latestDate": "2023-11-16",
+        "coord": [
+          104.06,
+          30.67
+        ]
+      },
+      {
+        "name": "北京市",
+        "value": 16,
+        "latestSite": "北京凯隆荣锐医疗设备有限公司",
+        "latestDate": "2025-12-08",
+        "coord": [
+          116.41,
+          39.9
+        ]
+      },
+      {
+        "name": "江苏省",
+        "value": 14,
+        "latestSite": "江南大学附属医院",
+        "latestDate": "2025-08-06",
+        "coord": [
+          118.76,
+          32.06
+        ]
+      },
+      {
+        "name": "山东省",
+        "value": 11,
+        "latestSite": "山东省公共卫生临床中心",
+        "latestDate": "2023-01-23",
+        "coord": [
+          117,
+          36.65
+        ]
+      },
+      {
+        "name": "湖北省",
+        "value": 9,
+        "latestSite": "武汉市青山区华润武钢总医院",
+        "latestDate": "2022-12-29",
+        "coord": [
+          114.3,
+          30.59
+        ]
+      },
+      {
+        "name": "云南省",
+        "value": 8,
+        "latestSite": "昆明医科大学第一附属医院",
+        "latestDate": "2015-11-05",
+        "coord": [
+          102.71,
+          25.04
+        ]
+      },
+      {
+        "name": "甘肃省",
+        "value": 5,
+        "latestSite": "甘肃省中医院",
+        "latestDate": "2023-09-05",
+        "coord": [
+          103.82,
+          36.06
+        ]
+      },
+      {
+        "name": "贵州省",
+        "value": 5,
+        "latestSite": "上海交通大学医学院附属上海儿童医学中心贵州医院",
+        "latestDate": "2024-09-10",
+        "coord": [
+          106.71,
+          26.58
+        ]
+      },
+      {
+        "name": "福建省",
+        "value": 5,
+        "latestSite": "福建医科大学附属协和医院旗山院区",
+        "latestDate": "2021-06-10",
+        "coord": [
+          119.3,
+          26.08
+        ]
+      },
+      {
+        "name": "江西省",
+        "value": 5,
+        "latestSite": "九江学院第二附属医院",
+        "latestDate": "2022-10-12",
+        "coord": [
+          115.86,
+          28.68
+        ]
+      },
+      {
+        "name": "山西省",
+        "value": 4,
+        "latestSite": "山西省心血管病医院",
+        "latestDate": "2021-02-26",
+        "coord": [
+          112.53,
+          37.87
+        ]
+      },
+      {
+        "name": "湖南省",
+        "value": 4,
+        "latestSite": "中南大学湘雅二医院",
+        "latestDate": "2023-06-14",
+        "coord": [
+          112.98,
+          28.19
+        ]
+      },
+      {
+        "name": "重庆市",
+        "value": 2,
+        "latestSite": "重庆大学附属肿瘤医院",
+        "latestDate": "2019-08-27",
+        "coord": [
+          106.55,
+          29.56
+        ]
+      },
+      {
+        "name": "天津市",
+        "value": 2,
+        "latestSite": "天津医科大学第二医院",
+        "latestDate": "2022-12-29",
+        "coord": [
+          117.2,
+          39.12
+        ]
+      },
+      {
+        "name": "宁夏回族自治区",
+        "value": 1,
+        "latestSite": "固原市人民医院",
+        "latestDate": "2015-09-30",
+        "coord": [
+          106.27,
+          38.47
+        ]
+      },
+      {
+        "name": "辽宁省",
+        "value": 1,
+        "latestSite": "大连维特奥康复咨询有限公司",
+        "latestDate": "2016-11-10",
+        "coord": [
+          123.43,
+          41.8
+        ]
+      },
+      {
+        "name": "河北省",
+        "value": 1,
+        "latestSite": "唐山南湖医院",
+        "latestDate": "2017-12-28",
+        "coord": [
+          114.48,
+          38.03
+        ]
+      },
+      {
+        "name": "海南省",
+        "value": 1,
+        "latestSite": "海南省人民医院",
+        "latestDate": "2020-04-09",
+        "coord": [
+          110.35,
+          20.02
+        ]
+      }
+    ],
+    "users": [
+      {
+        "name": "昆明医科大学第一附属医院",
+        "province": "云南省",
+        "value": 8
+      },
+      {
+        "name": "广州市合众汇达医疗科技有限公司",
+        "province": "广东省",
+        "value": 8
+      },
+      {
+        "name": "珠海市人民医院医疗集团",
+        "province": "广东省",
+        "value": 7
+      },
+      {
+        "name": "深圳前海泰康医院",
+        "province": "广东省",
+        "value": 7
+      },
+      {
+        "name": "四川思芃商贸有限公司",
+        "province": "四川省",
+        "value": 6
+      },
+      {
+        "name": "四川泰康医院",
+        "province": "四川省",
+        "value": 5
+      },
+      {
+        "name": "广州富力医院",
+        "province": "广东省",
+        "value": 4
+      },
+      {
+        "name": "首都医科大学宣武医院",
+        "province": "北京市",
+        "value": 4
+      }
+    ],
+    "partners": [
+      {
+        "name": "广州市合众汇达医疗科技有限公司",
+        "province": "海南省",
+        "value": 26
+      },
+      {
+        "name": "杭州首术科技有限公司",
+        "province": "浙江省",
+        "value": 9
+      },
+      {
+        "name": "昆明医科大学第一附属医院",
+        "province": "云南省",
+        "value": 8
+      },
+      {
+        "name": "杭州大沨医疗器械有限公司",
+        "province": "浙江省",
+        "value": 8
+      },
+      {
+        "name": "深圳前海泰康医院",
+        "province": "广东省",
+        "value": 7
+      },
+      {
+        "name": "四川思芃商贸有限公司",
+        "province": "四川省",
+        "value": 6
+      },
+      {
+        "name": "上海理雄医疗器械有限公司",
+        "province": "上海市",
+        "value": 5
+      },
+      {
+        "name": "逸佰医疗科技发展（上海）有限公司",
+        "province": "上海市",
+        "value": 5
+      }
+    ],
+    "updates": [
+      {
+        "date": "03-10",
+        "status": "装机",
+        "text": "未填写终端用户 完成 TEGRIS 1 台"
+      },
+      {
+        "date": "12-08",
+        "status": "装机",
+        "text": "北京凯隆荣锐医疗设备有限公司 完成 VOIP 1 台"
+      },
+      {
+        "date": "12-08",
+        "status": "装机",
+        "text": "北京凯隆荣锐医疗设备有限公司 完成 VOIP 1 台"
+      },
+      {
+        "date": "12-08",
+        "status": "装机",
+        "text": "杭州星灿生物技术有限公司 完成 VOIP 1 台"
+      },
+      {
+        "date": "09-11",
+        "status": "装机",
+        "text": "杭州星灿生物技术有限公司 完成 VOIP 1 台"
+      },
+      {
+        "date": "09-11",
+        "status": "装机",
+        "text": "杭州星灿生物技术有限公司 完成 VOIP 1 台"
+      }
+    ],
+    "monthlyTrend": [
+      {
+        "month": "2025-04",
+        "installed": 0
+      },
+      {
+        "month": "2025-05",
+        "installed": 2
+      },
+      {
+        "month": "2025-06",
+        "installed": 0
+      },
+      {
+        "month": "2025-07",
+        "installed": 2
+      },
+      {
+        "month": "2025-08",
+        "installed": 2
+      },
+      {
+        "month": "2025-09",
+        "installed": 3
+      },
+      {
+        "month": "2025-10",
+        "installed": 0
+      },
+      {
+        "month": "2025-11",
+        "installed": 0
+      },
+      {
+        "month": "2025-12",
+        "installed": 3
+      },
+      {
+        "month": "2026-01",
+        "installed": 0
+      },
+      {
+        "month": "2026-02",
+        "installed": 0
+      },
+      {
+        "month": "2026-03",
+        "installed": 1
+      }
+    ],
+    "yearlyTrend": [
+      {
+        "year": "2022",
+        "installed": 34
+      },
+      {
+        "year": "2023",
+        "installed": 27
+      },
+      {
+        "year": "2024",
+        "installed": 29
+      },
+      {
+        "year": "2025",
+        "installed": 12
+      },
+      {
+        "year": "2026",
+        "installed": 1
+      }
+    ],
+    "sourceRecords": [
+      {
+        "serialNo": "SW-2026-0001",
+        "productKey": "tegris",
+        "productModel": "TEGRIS",
+        "quantity": 1,
+        "configDescription": "Hybrid OR integration + video routing",
+        "installProvince": "上海市",
+        "terminalUser": "未填写终端用户",
+        "channelName": "未填写渠道",
+        "salesName": "未填写销售",
+        "salesDate": "2026-01-15",
+        "installDate": "2026-03-10",
+        "warrantyExpireDate": "2027-03-25"
+      },
+      {
+        "serialNo": "TEGRIS-27797090",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "浙江省",
+        "terminalUser": "浙江大学医学院附属第一医院",
+        "channelName": "浙江大学医学院附属第一医院",
+        "salesName": "EAST-ACT",
+        "salesDate": "2021-05-27",
+        "installDate": "2021-05-27",
+        "warrantyExpireDate": ""
+      },
+      {
+        "serialNo": "TEGRIS-28925030",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "上海市",
+        "terminalUser": "上海市浦东新区公利医院",
+        "channelName": "上海市浦东新区公利医院",
+        "salesName": "EAST-SW",
+        "salesDate": "2022-04-21",
+        "installDate": "2022-04-21",
+        "warrantyExpireDate": "2023-03-02"
+      },
+      {
+        "serialNo": "TEGRIS-29512551",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "杭州市余杭区第一人民医院",
+        "channelName": "杭州市余杭区第一人民医院",
+        "salesName": "EAST-SW",
+        "salesDate": "2022-10-13",
+        "installDate": "2022-10-13",
+        "warrantyExpireDate": "2023-12-04"
+      },
+      {
+        "serialNo": "TEGRIS-33283952",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "广州富力医院",
+        "channelName": "广州富力医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2024-06-28",
+        "installDate": "2024-06-28",
+        "warrantyExpireDate": "2025-10-14"
+      },
+      {
+        "serialNo": "TEGRIS-33283953",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "广州富力医院",
+        "channelName": "广州富力医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2024-06-28",
+        "installDate": "2024-06-28",
+        "warrantyExpireDate": "2025-10-14"
+      },
+      {
+        "serialNo": "TEGRIS-33283954",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "广州富力医院",
+        "channelName": "广州富力医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2024-06-28",
+        "installDate": "2024-06-28",
+        "warrantyExpireDate": "2025-10-14"
+      },
+      {
+        "serialNo": "TEGRIS-33740213",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "丽水市人民医院",
+        "channelName": "丽水市人民医院",
+        "salesName": "EAST-SW",
+        "salesDate": "2024-11-26",
+        "installDate": "2024-11-26",
+        "warrantyExpireDate": ""
+      },
+      {
+        "serialNo": "TEGRIS-21914985",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "宁夏回族自治区",
+        "terminalUser": "固原市人民医院",
+        "channelName": "成都裕康医疗设备有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2015-09-10",
+        "installDate": "2015-09-30",
+        "warrantyExpireDate": "2017-09-29"
+      },
+      {
+        "serialNo": "TEGRIS-21922057",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "北京市",
+        "terminalUser": "首都医科大学宣武医院",
+        "channelName": "首都医科大学宣武医院",
+        "salesName": "NORTH-SW",
+        "salesDate": "2015-09-14",
+        "installDate": "2015-10-06",
+        "warrantyExpireDate": "2019-12-19"
+      },
+      {
+        "serialNo": "TEGRIS-21922058",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "北京市",
+        "terminalUser": "首都医科大学宣武医院",
+        "channelName": "首都医科大学宣武医院",
+        "salesName": "NORTH-SW",
+        "salesDate": "2015-09-14",
+        "installDate": "2015-10-06",
+        "warrantyExpireDate": "2019-12-19"
+      },
+      {
+        "serialNo": "TEGRIS-21922059",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "北京市",
+        "terminalUser": "首都医科大学宣武医院",
+        "channelName": "首都医科大学宣武医院",
+        "salesName": "NORTH-SW",
+        "salesDate": "2015-09-14",
+        "installDate": "2015-10-06",
+        "warrantyExpireDate": "2019-12-19"
+      },
+      {
+        "serialNo": "TEGRIS-21922060",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "北京市",
+        "terminalUser": "首都医科大学宣武医院",
+        "channelName": "首都医科大学宣武医院",
+        "salesName": "NORTH-SW",
+        "salesDate": "2015-09-14",
+        "installDate": "2015-10-06",
+        "warrantyExpireDate": "2019-12-19"
+      },
+      {
+        "serialNo": "TEGRIS-22001290",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "浙江省",
+        "terminalUser": "浙江大学医学院附属第二医院",
+        "channelName": "杭州首术科技有限公司",
+        "salesName": "SOUTH-AC",
+        "salesDate": "2015-10-13",
+        "installDate": "2015-10-22",
+        "warrantyExpireDate": "2017-10-21"
+      },
+      {
+        "serialNo": "TEGRIS-22002919",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "云南省",
+        "terminalUser": "昆明医科大学第一附属医院",
+        "channelName": "昆明医科大学第一附属医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2015-10-14",
+        "installDate": "2015-11-05",
+        "warrantyExpireDate": "2019-01-18"
+      },
+      {
+        "serialNo": "TEGRIS-22002920",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "云南省",
+        "terminalUser": "昆明医科大学第一附属医院",
+        "channelName": "昆明医科大学第一附属医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2015-10-14",
+        "installDate": "2015-11-05",
+        "warrantyExpireDate": "2019-01-18"
+      },
+      {
+        "serialNo": "TEGRIS-22002921",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "云南省",
+        "terminalUser": "昆明医科大学第一附属医院",
+        "channelName": "昆明医科大学第一附属医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2015-10-14",
+        "installDate": "2015-11-05",
+        "warrantyExpireDate": "2019-01-18"
+      },
+      {
+        "serialNo": "TEGRIS-22002922",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "云南省",
+        "terminalUser": "昆明医科大学第一附属医院",
+        "channelName": "昆明医科大学第一附属医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2015-10-14",
+        "installDate": "2015-11-05",
+        "warrantyExpireDate": "2019-01-18"
+      },
+      {
+        "serialNo": "TEGRIS-22002923",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "云南省",
+        "terminalUser": "昆明医科大学第一附属医院",
+        "channelName": "昆明医科大学第一附属医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2015-10-14",
+        "installDate": "2015-11-05",
+        "warrantyExpireDate": "2019-01-18"
+      },
+      {
+        "serialNo": "TEGRIS-22002924",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "云南省",
+        "terminalUser": "昆明医科大学第一附属医院",
+        "channelName": "昆明医科大学第一附属医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2015-10-14",
+        "installDate": "2015-11-05",
+        "warrantyExpireDate": "2019-01-18"
+      },
+      {
+        "serialNo": "TEGRIS-22002925",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "云南省",
+        "terminalUser": "昆明医科大学第一附属医院",
+        "channelName": "昆明医科大学第一附属医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2015-10-14",
+        "installDate": "2015-11-05",
+        "warrantyExpireDate": "2019-01-18"
+      },
+      {
+        "serialNo": "TEGRIS-22002926",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "云南省",
+        "terminalUser": "昆明医科大学第一附属医院",
+        "channelName": "昆明医科大学第一附属医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2015-10-14",
+        "installDate": "2015-11-05",
+        "warrantyExpireDate": "2019-01-18"
+      },
+      {
+        "serialNo": "TEGRIS-22007135",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "山东省",
+        "terminalUser": "山东省千佛山医院",
+        "channelName": "山东省千佛山医院",
+        "salesName": "NORTH-SW",
+        "salesDate": "2015-10-15",
+        "installDate": "2015-11-12",
+        "warrantyExpireDate": "2019-01-03"
+      },
+      {
+        "serialNo": "TEGRIS-22007136",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "山东省",
+        "terminalUser": "山东省千佛山医院",
+        "channelName": "山东省千佛山医院",
+        "salesName": "NORTH-SW",
+        "salesDate": "2015-10-15",
+        "installDate": "2015-11-12",
+        "warrantyExpireDate": "2019-01-03"
+      },
+      {
+        "serialNo": "TEGRIS-21747966",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "中山大学附属第三医院",
+        "channelName": "中山大学附属第三医院",
+        "salesName": "SOUTH-IC",
+        "salesDate": "2015-05-30",
+        "installDate": "2015-11-17",
+        "warrantyExpireDate": "2018-06-18"
+      },
+      {
+        "serialNo": "TEGRIS-22023347",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海百蔚医疗器械有限公司",
+        "channelName": "上海百蔚医疗器械有限公司",
+        "salesName": "EAST1",
+        "salesDate": "2015-10-22",
+        "installDate": "2015-11-19",
+        "warrantyExpireDate": "2017-11-18"
+      },
+      {
+        "serialNo": "TEGRIS-22071635",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "华中科技大学协和深圳医院",
+        "channelName": "华中科技大学协和深圳医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2015-11-17",
+        "installDate": "2015-12-03",
+        "warrantyExpireDate": "2018-09-04"
+      },
+      {
+        "serialNo": "TEGRIS-22097752",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "江门市中心医院",
+        "channelName": "江门市中心医院",
+        "salesName": "SOUTH",
+        "salesDate": "2015-11-27",
+        "installDate": "2015-12-10",
+        "warrantyExpireDate": "2018-07-23"
+      },
+      {
+        "serialNo": "TEGRIS-22098767",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "江门市中心医院",
+        "channelName": "江门市中心医院",
+        "salesName": "SOUTH",
+        "salesDate": "2015-11-30",
+        "installDate": "2015-12-10",
+        "warrantyExpireDate": "2018-07-23"
+      },
+      {
+        "serialNo": "TEGRIS-22072476",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海市杨浦区海军军医大学第三附属医院",
+        "channelName": "上海市杨浦区海军军医大学第三附属医院",
+        "salesName": "EAST-SW",
+        "salesDate": "2015-11-17",
+        "installDate": "2016-03-29",
+        "warrantyExpireDate": "2017-05-12"
+      },
+      {
+        "serialNo": "TEGRIS-22377862",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "江苏省",
+        "terminalUser": "南京市第一医院",
+        "channelName": "广州浦天医疗设备有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2016-05-12",
+        "installDate": "2016-05-31",
+        "warrantyExpireDate": "2022-08-30"
+      },
+      {
+        "serialNo": "TEGRIS-22407119",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "甘肃省",
+        "terminalUser": "解放军联勤保障部队940医院",
+        "channelName": "解放军联勤保障部队940医院",
+        "salesName": "NORTH-SW",
+        "salesDate": "2016-05-31",
+        "installDate": "2016-06-14",
+        "warrantyExpireDate": "2018-01-22"
+      },
+      {
+        "serialNo": "TEGRIS-22407120",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "甘肃省",
+        "terminalUser": "解放军联勤保障部队940医院",
+        "channelName": "解放军联勤保障部队940医院",
+        "salesName": "NORTH-SW",
+        "salesDate": "2016-05-31",
+        "installDate": "2016-06-14",
+        "warrantyExpireDate": "2018-01-22"
+      },
+      {
+        "serialNo": "TEGRIS-22407121",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "阳江市人民医院",
+        "channelName": "阳江市人民医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2016-05-31",
+        "installDate": "2016-06-14",
+        "warrantyExpireDate": "2020-04-11"
+      },
+      {
+        "serialNo": "TEGRIS-21747965",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "北京市",
+        "terminalUser": "北京欧意蓝德科技发展有限公司",
+        "channelName": "北京欧意蓝德科技发展有限公司",
+        "salesName": "NORTH",
+        "salesDate": "2015-05-30",
+        "installDate": "2016-06-30",
+        "warrantyExpireDate": "2017-12-29"
+      },
+      {
+        "serialNo": "TEGRIS-22438726",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "山东省",
+        "terminalUser": "山东省千佛山医院",
+        "channelName": "山东省千佛山医院",
+        "salesName": "NORTH",
+        "salesDate": "2016-06-14",
+        "installDate": "2016-07-07",
+        "warrantyExpireDate": "2018-07-06"
+      },
+      {
+        "serialNo": "TEGRIS-22438727",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "山东省",
+        "terminalUser": "山东省千佛山医院",
+        "channelName": "山东省千佛山医院",
+        "salesName": "NORTH",
+        "salesDate": "2016-06-14",
+        "installDate": "2016-07-07",
+        "warrantyExpireDate": "2018-07-06"
+      },
+      {
+        "serialNo": "TEGRIS-22947050",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海市静安区华东医院",
+        "channelName": "上海市静安区华东医院",
+        "salesName": "EAST1",
+        "salesDate": "2016-08-23",
+        "installDate": "2016-09-15",
+        "warrantyExpireDate": "2018-11-23"
+      },
+      {
+        "serialNo": "TEGRIS-23037032",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "Final Customer China",
+        "channelName": "Shanghai Dongsong Healthcare &",
+        "salesName": "1G5",
+        "salesDate": "2016-09-15",
+        "installDate": "2016-09-30",
+        "warrantyExpireDate": "2017-09-29"
+      },
+      {
+        "serialNo": "TEGRIS-23483809",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "辽宁省",
+        "terminalUser": "大连维特奥康复咨询有限公司",
+        "channelName": "大连维特奥康复咨询有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2016-10-21",
+        "installDate": "2016-11-10",
+        "warrantyExpireDate": "2018-11-09"
+      },
+      {
+        "serialNo": "TEGRIS-23489318",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "北京市",
+        "terminalUser": "中国人民解放军总医院第七医学中心",
+        "channelName": "中国人民解放军总医院第七医学中心",
+        "salesName": "NORTH-SW",
+        "salesDate": "2016-10-25",
+        "installDate": "2016-11-10",
+        "warrantyExpireDate": "2020-05-05"
+      },
+      {
+        "serialNo": "TEGRIS-23489319",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "北京市",
+        "terminalUser": "中国人民解放军总医院第七医学中心",
+        "channelName": "中国人民解放军总医院第七医学中心",
+        "salesName": "NORTH-SW",
+        "salesDate": "2016-10-25",
+        "installDate": "2016-11-10",
+        "warrantyExpireDate": "2020-05-05"
+      },
+      {
+        "serialNo": "TEGRIS-23489329",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "深圳市第三人民医院",
+        "channelName": "深圳市第三人民医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2016-10-25",
+        "installDate": "2016-11-10",
+        "warrantyExpireDate": "2020-08-13"
+      },
+      {
+        "serialNo": "TEGRIS-23489330",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "南方科技大学医院",
+        "channelName": "南方科技大学医院",
+        "salesName": "SOUTH",
+        "salesDate": "2016-10-25",
+        "installDate": "2016-11-10",
+        "warrantyExpireDate": "2018-11-09"
+      },
+      {
+        "serialNo": "TEGRIS-23516312",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "浙江省",
+        "terminalUser": "杭州首术科技有限公司",
+        "channelName": "杭州首术科技有限公司",
+        "salesName": "EAST2",
+        "salesDate": "2016-11-07",
+        "installDate": "2016-11-30",
+        "warrantyExpireDate": "2018-11-29"
+      },
+      {
+        "serialNo": "TEGRIS-23516313",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "浙江省",
+        "terminalUser": "杭州首术科技有限公司",
+        "channelName": "杭州首术科技有限公司",
+        "salesName": "EAST2",
+        "salesDate": "2016-11-07",
+        "installDate": "2016-11-30",
+        "warrantyExpireDate": "2018-11-29"
+      },
+      {
+        "serialNo": "TEGRIS-23544085",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "贵州省",
+        "terminalUser": "盘州市人民医院",
+        "channelName": "盘州市人民医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2016-11-17",
+        "installDate": "2016-11-30",
+        "warrantyExpireDate": "2020-09-04"
+      },
+      {
+        "serialNo": "TEGRIS-23544086",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海交通大学医学院附属第九人民医院第三执业点",
+        "channelName": "上海交通大学医学院附属第九人民医院第三执业点",
+        "salesName": "EAST-SW",
+        "salesDate": "2016-11-17",
+        "installDate": "2016-11-30",
+        "warrantyExpireDate": "2018-11-29"
+      },
+      {
+        "serialNo": "TEGRIS-23565860",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "山东省",
+        "terminalUser": "临沂金锣医院",
+        "channelName": "Suzhou MAQUET",
+        "salesName": "GDUMMY",
+        "salesDate": "2016-11-28",
+        "installDate": "2016-12-06",
+        "warrantyExpireDate": "2021-06-09"
+      },
+      {
+        "serialNo": "TEGRIS-23859343",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "珠海市人民医院医疗集团",
+        "channelName": "珠海市人民医院医疗集团",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2017-03-07",
+        "installDate": "2017-04-06",
+        "warrantyExpireDate": "2019-09-14"
+      },
+      {
+        "serialNo": "TEGRIS-23956371",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "四川省",
+        "terminalUser": "成都市核工业四一六医院",
+        "channelName": "成都市核工业四一六医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2017-04-20",
+        "installDate": "2017-04-28",
+        "warrantyExpireDate": "2019-08-01"
+      },
+      {
+        "serialNo": "TEGRIS-24454195",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "山东省",
+        "terminalUser": "青岛市市立医院",
+        "channelName": "青岛市市立医院",
+        "salesName": "NORTH-SW",
+        "salesDate": "2017-10-27",
+        "installDate": "2017-11-16",
+        "warrantyExpireDate": "2019-07-25"
+      },
+      {
+        "serialNo": "TEGRIS-24454196",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "山东省",
+        "terminalUser": "青岛市市立医院",
+        "channelName": "青岛市市立医院",
+        "salesName": "NORTH-SW",
+        "salesDate": "2017-10-27",
+        "installDate": "2017-11-16",
+        "warrantyExpireDate": "2019-07-25"
+      },
+      {
+        "serialNo": "TEGRIS-24469097",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海市东方医院",
+        "channelName": "上海市东方医院",
+        "salesName": "EAST-SW",
+        "salesDate": "2017-11-02",
+        "installDate": "2017-11-16",
+        "warrantyExpireDate": "2019-08-06"
+      },
+      {
+        "serialNo": "TEGRIS-24476524",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海市东方医院",
+        "channelName": "上海市东方医院",
+        "salesName": "EAST-SW",
+        "salesDate": "2017-11-06",
+        "installDate": "2017-11-16",
+        "warrantyExpireDate": "2019-08-06"
+      },
+      {
+        "serialNo": "TEGRIS-24486453",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海市东方医院",
+        "channelName": "上海市东方医院",
+        "salesName": "EAST-SW",
+        "salesDate": "2017-11-08",
+        "installDate": "2017-11-16",
+        "warrantyExpireDate": "2019-08-06"
+      },
+      {
+        "serialNo": "TEGRIS-24509830",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "河北省",
+        "terminalUser": "唐山南湖医院",
+        "channelName": "唐山南湖医院",
+        "salesName": "NORTH-SW",
+        "salesDate": "2017-11-15",
+        "installDate": "2017-12-28",
+        "warrantyExpireDate": "2019-01-22"
+      },
+      {
+        "serialNo": "TEGRIS-24594199",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "浙江省",
+        "terminalUser": "杭州市丁桥医院",
+        "channelName": "杭州市丁桥医院",
+        "salesName": "EAST-SW",
+        "salesDate": "2017-12-13",
+        "installDate": "2018-01-25",
+        "warrantyExpireDate": "2020-08-08"
+      },
+      {
+        "serialNo": "TEGRIS-24693227",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "浙江省",
+        "terminalUser": "衢州市人民医院",
+        "channelName": "衢州市人民医院",
+        "salesName": "EAST-SW",
+        "salesDate": "2018-02-02",
+        "installDate": "2018-02-22",
+        "warrantyExpireDate": "2021-07-31"
+      },
+      {
+        "serialNo": "TEGRIS-24693228",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "浙江省",
+        "terminalUser": "衢州市人民医院",
+        "channelName": "衢州市人民医院",
+        "salesName": "EAST-SW",
+        "salesDate": "2018-02-02",
+        "installDate": "2018-02-22",
+        "warrantyExpireDate": "2021-07-31"
+      },
+      {
+        "serialNo": "TEGRIS-24693229",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "北京市",
+        "terminalUser": "北京市朝阳区妇幼保健院",
+        "channelName": "上海又诺贸易中心",
+        "salesName": "NORTH-SW",
+        "salesDate": "2018-02-02",
+        "installDate": "2018-02-22",
+        "warrantyExpireDate": "2021-06-02"
+      },
+      {
+        "serialNo": "TEGRIS-24693230",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "北京市",
+        "terminalUser": "北京市朝阳区妇幼保健院",
+        "channelName": "上海又诺贸易中心",
+        "salesName": "NORTH-SW",
+        "salesDate": "2018-02-02",
+        "installDate": "2018-02-22",
+        "warrantyExpireDate": "2021-06-02"
+      },
+      {
+        "serialNo": "TEGRIS-24833281",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "中国医学科学院阜外医院深圳医院",
+        "channelName": "广州圣佑贸易有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2018-04-04",
+        "installDate": "2018-04-27",
+        "warrantyExpireDate": "2021-09-20"
+      },
+      {
+        "serialNo": "TEGRIS-25078035",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "湖北省",
+        "terminalUser": "华中科技大学同济医学院附属协和医院",
+        "channelName": "华中科技大学同济医学院附属协和医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2018-07-26",
+        "installDate": "2018-08-23",
+        "warrantyExpireDate": "2019-11-19"
+      },
+      {
+        "serialNo": "TEGRIS-25078036",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "湖北省",
+        "terminalUser": "华中科技大学同济医学院附属协和医院",
+        "channelName": "华中科技大学同济医学院附属协和医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2018-07-26",
+        "installDate": "2018-08-23",
+        "warrantyExpireDate": "2019-11-19"
+      },
+      {
+        "serialNo": "TEGRIS-25105312",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "福建省",
+        "terminalUser": "福建医科大学附属第二医院（东海院区）",
+        "channelName": "福建医科大学附属第二医院（东海院区）",
+        "salesName": "EAST-SW",
+        "salesDate": "2018-08-14",
+        "installDate": "2018-08-30",
+        "warrantyExpireDate": "2020-07-08"
+      },
+      {
+        "serialNo": "TEGRIS-24957944",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "四川省",
+        "terminalUser": "成都鹰阁医院",
+        "channelName": "成都鹰阁医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2018-05-24",
+        "installDate": "2018-10-31",
+        "warrantyExpireDate": "2020-11-20"
+      },
+      {
+        "serialNo": "TEGRIS-24957945",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "四川省",
+        "terminalUser": "成都鹰阁医院",
+        "channelName": "成都鹰阁医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2018-05-24",
+        "installDate": "2018-10-31",
+        "warrantyExpireDate": "2020-11-20"
+      },
+      {
+        "serialNo": "TEGRIS-25320310",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "贵州省",
+        "terminalUser": "盘州市人民医院",
+        "channelName": "盘州市人民医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2018-11-15",
+        "installDate": "2018-12-04",
+        "warrantyExpireDate": "2020-09-04"
+      },
+      {
+        "serialNo": "TEGRIS-25429063",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海理雄医疗器械有限公司",
+        "channelName": "上海理雄医疗器械有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2019-01-15",
+        "installDate": "2019-02-12",
+        "warrantyExpireDate": "2021-03-28"
+      },
+      {
+        "serialNo": "TEGRIS-25589127",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "山东省",
+        "terminalUser": "威海市中心医院",
+        "channelName": "上海薇奋医疗设备有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2019-04-03",
+        "installDate": "2019-04-18",
+        "warrantyExpireDate": "2021-05-12"
+      },
+      {
+        "serialNo": "TEGRIS-25589128",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "山东省",
+        "terminalUser": "威海市中心医院",
+        "channelName": "上海薇奋医疗设备有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2019-04-03",
+        "installDate": "2019-04-30",
+        "warrantyExpireDate": "2021-05-12"
+      },
+      {
+        "serialNo": "TEGRIS-25602889",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "广州圣佑贸易有限公司",
+        "channelName": "广州圣佑贸易有限公司",
+        "salesName": "SOUTH",
+        "salesDate": "2019-04-10",
+        "installDate": "2019-04-30",
+        "warrantyExpireDate": "2020-11-15"
+      },
+      {
+        "serialNo": "TEGRIS-25808012",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "重庆市",
+        "terminalUser": "重庆大学附属肿瘤医院",
+        "channelName": "重庆大学附属肿瘤医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2019-07-30",
+        "installDate": "2019-08-27",
+        "warrantyExpireDate": "2022-10-17"
+      },
+      {
+        "serialNo": "TEGRIS-25808013",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "重庆市",
+        "terminalUser": "重庆大学附属肿瘤医院",
+        "channelName": "重庆大学附属肿瘤医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2019-07-30",
+        "installDate": "2019-08-27",
+        "warrantyExpireDate": "2022-10-17"
+      },
+      {
+        "serialNo": "TEGRIS-25824117",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "山西省",
+        "terminalUser": "太原市妇幼保健院",
+        "channelName": "山西精准互联科技发展有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2019-08-08",
+        "installDate": "2019-09-05",
+        "warrantyExpireDate": "2022-05-09"
+      },
+      {
+        "serialNo": "TEGRIS-25881972",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "湖北省",
+        "terminalUser": "荆州市智慧城市科技股份有限公司",
+        "channelName": "荆州市智慧城市科技股份有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2019-09-11",
+        "installDate": "2019-09-24",
+        "warrantyExpireDate": "2021-05-28"
+      },
+      {
+        "serialNo": "TEGRIS-25881973",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "湖北省",
+        "terminalUser": "荆州市智慧城市科技股份有限公司",
+        "channelName": "荆州市智慧城市科技股份有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2019-09-11",
+        "installDate": "2019-09-24",
+        "warrantyExpireDate": "2021-05-28"
+      },
+      {
+        "serialNo": "TEGRIS-25881974",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "湖北省",
+        "terminalUser": "荆州市智慧城市科技股份有限公司",
+        "channelName": "荆州市智慧城市科技股份有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2019-09-11",
+        "installDate": "2019-09-24",
+        "warrantyExpireDate": "2021-05-28"
+      },
+      {
+        "serialNo": "TEGRIS-25882112",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "江苏省",
+        "terminalUser": "常州市中医医院",
+        "channelName": "上海鸿煊医药科技有限公司",
+        "salesName": "EAST1",
+        "salesDate": "2019-09-11",
+        "installDate": "2019-10-10",
+        "warrantyExpireDate": "2021-05-11"
+      },
+      {
+        "serialNo": "TEGRIS-25920029",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "四川省",
+        "terminalUser": "广元市中心医院",
+        "channelName": "上饶市欧诺医疗设备有限公司",
+        "salesName": "WEST-SW",
+        "salesDate": "2019-09-27",
+        "installDate": "2019-10-24",
+        "warrantyExpireDate": "2021-03-05"
+      },
+      {
+        "serialNo": "TEGRIS-25925643",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "浙江省",
+        "terminalUser": "杭州市儿童医院",
+        "channelName": "杭州首术科技有限公司",
+        "salesName": "EAST2",
+        "salesDate": "2019-10-01",
+        "installDate": "2019-10-29",
+        "warrantyExpireDate": "2021-11-09"
+      },
+      {
+        "serialNo": "TEGRIS-25952068",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "北京市",
+        "terminalUser": "中国医学科学院北京协和医院",
+        "channelName": "上海祥琪瑞医疗器械设备中心",
+        "salesName": "NORTH-SW",
+        "salesDate": "2019-10-11",
+        "installDate": "2019-11-07",
+        "warrantyExpireDate": "2024-10-20"
+      },
+      {
+        "serialNo": "TEGRIS-25968173",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "浙江省",
+        "terminalUser": "金华市人民医院",
+        "channelName": "杭州首术科技有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2019-10-18",
+        "installDate": "2019-11-07",
+        "warrantyExpireDate": "2023-03-06"
+      },
+      {
+        "serialNo": "TEGRIS-25974372",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海理雄医疗器械有限公司",
+        "channelName": "上海理雄医疗器械有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2019-10-22",
+        "installDate": "2019-11-12",
+        "warrantyExpireDate": "2021-05-28"
+      },
+      {
+        "serialNo": "TEGRIS-25952060",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海祥琪瑞医疗器械设备中心",
+        "channelName": "上海祥琪瑞医疗器械设备中心",
+        "salesName": "GDUMMY",
+        "salesDate": "2019-10-11",
+        "installDate": "2019-11-14",
+        "warrantyExpireDate": "2021-06-22"
+      },
+      {
+        "serialNo": "TEGRIS-26012008",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "湖北省",
+        "terminalUser": "国药集团湖北省医疗器械有限公司",
+        "channelName": "国药集团湖北省医疗器械有限公司",
+        "salesName": "EAST2",
+        "salesDate": "2019-11-05",
+        "installDate": "2019-11-21",
+        "warrantyExpireDate": "2021-11-20"
+      },
+      {
+        "serialNo": "TEGRIS-25974371",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海理雄医疗器械有限公司",
+        "channelName": "上海理雄医疗器械有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2019-10-22",
+        "installDate": "2019-11-29",
+        "warrantyExpireDate": "2021-05-28"
+      },
+      {
+        "serialNo": "TEGRIS-26074088",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海瑶革医疗设备有限公司",
+        "channelName": "上海瑶革医疗设备有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2019-11-28",
+        "installDate": "2019-12-27",
+        "warrantyExpireDate": "2021-12-17"
+      },
+      {
+        "serialNo": "TEGRIS-26074089",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海瑶革医疗设备有限公司",
+        "channelName": "上海瑶革医疗设备有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2019-11-28",
+        "installDate": "2019-12-27",
+        "warrantyExpireDate": "2021-12-17"
+      },
+      {
+        "serialNo": "TEGRIS-25929175",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "江西省",
+        "terminalUser": "南昌大学第一附属医院象湖院区",
+        "channelName": "江西利恒医药有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2019-10-02",
+        "installDate": "2020-01-28",
+        "warrantyExpireDate": "2022-11-21"
+      },
+      {
+        "serialNo": "TEGRIS-25929176",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "江西省",
+        "terminalUser": "南昌大学第一附属医院象湖院区",
+        "channelName": "江西利恒医药有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2019-10-02",
+        "installDate": "2020-01-28",
+        "warrantyExpireDate": "2022-11-21"
+      },
+      {
+        "serialNo": "TEGRIS-26135810",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "浙江省",
+        "terminalUser": "湖州市中心医院",
+        "channelName": "杭州首术科技有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2020-01-08",
+        "installDate": "2020-01-30",
+        "warrantyExpireDate": "2021-11-08"
+      },
+      {
+        "serialNo": "TEGRIS-26135811",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "浙江省",
+        "terminalUser": "温州市瓯江口新区医院",
+        "channelName": "杭州首术科技有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2020-01-08",
+        "installDate": "2020-01-30",
+        "warrantyExpireDate": "2021-11-17"
+      },
+      {
+        "serialNo": "TEGRIS-26151851",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "湖北省",
+        "terminalUser": "泰康同济（武汉）医院",
+        "channelName": "成都裕康医疗设备有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2020-01-17",
+        "installDate": "2020-02-18",
+        "warrantyExpireDate": "2021-10-20"
+      },
+      {
+        "serialNo": "TEGRIS-26151856",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "深圳市人民医院",
+        "channelName": "广州圣佑贸易有限公司",
+        "salesName": "SOUTH",
+        "salesDate": "2020-01-17",
+        "installDate": "2020-02-18",
+        "warrantyExpireDate": "2022-08-15"
+      },
+      {
+        "serialNo": "TEGRIS-26259085",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "江苏省",
+        "terminalUser": "江南大学附属医院",
+        "channelName": "上海加越医疗科技有限公司",
+        "salesName": "EAST1",
+        "salesDate": "2020-03-12",
+        "installDate": "2020-04-09",
+        "warrantyExpireDate": "2021-10-29"
+      },
+      {
+        "serialNo": "TEGRIS-26265673",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "海南省",
+        "terminalUser": "海南省人民医院",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2020-03-16",
+        "installDate": "2020-04-09",
+        "warrantyExpireDate": "2025-12-25"
+      },
+      {
+        "serialNo": "TEGRIS-26574700",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "山西省",
+        "terminalUser": "山西省人民医院",
+        "channelName": "山西省人民医院",
+        "salesName": "NORTH",
+        "salesDate": "2020-07-07",
+        "installDate": "2020-07-30",
+        "warrantyExpireDate": "2022-01-31"
+      },
+      {
+        "serialNo": "TEGRIS-26574701",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "山西省",
+        "terminalUser": "山西省人民医院",
+        "channelName": "山西精准互联科技发展有限公司",
+        "salesName": "NORTH",
+        "salesDate": "2020-07-07",
+        "installDate": "2020-07-30",
+        "warrantyExpireDate": "2022-01-31"
+      },
+      {
+        "serialNo": "TEGRIS-26593348",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "广州市合众汇达医疗科技有限公司",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2020-07-10",
+        "installDate": "2020-08-14",
+        "warrantyExpireDate": "2022-02-27"
+      },
+      {
+        "serialNo": "TEGRIS-25702974",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "江西省",
+        "terminalUser": "南昌大学第一附属医院象湖院区",
+        "channelName": "江西利恒医药有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2019-06-05",
+        "installDate": "2020-08-27",
+        "warrantyExpireDate": "2021-11-15"
+      },
+      {
+        "serialNo": "TEGRIS-27060062",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "四川省",
+        "terminalUser": "成都市温江区人民医院",
+        "channelName": "江西萨康生物科技有限公司",
+        "salesName": "WEST-SW",
+        "salesDate": "2020-10-16",
+        "installDate": "2020-10-30",
+        "warrantyExpireDate": "2022-09-17"
+      },
+      {
+        "serialNo": "TEGRIS-27180048",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "浙江省",
+        "terminalUser": "浙江省人民医院",
+        "channelName": "杭州大沨医疗器械有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2020-11-20",
+        "installDate": "2020-12-03",
+        "warrantyExpireDate": "2023-12-30"
+      },
+      {
+        "serialNo": "TEGRIS-27180049",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "浙江省",
+        "terminalUser": "浙江省人民医院",
+        "channelName": "杭州大沨医疗器械有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2020-11-20",
+        "installDate": "2020-12-03",
+        "warrantyExpireDate": "2023-12-30"
+      },
+      {
+        "serialNo": "TEGRIS-27140248",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "浙江省",
+        "terminalUser": "温州医科大学附属第二医院龙湾院区",
+        "channelName": "杭州首术科技有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2020-11-06",
+        "installDate": "2020-12-11",
+        "warrantyExpireDate": "2022-03-23"
+      },
+      {
+        "serialNo": "TEGRIS-27189733",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "四川省",
+        "terminalUser": "成都京东方医院",
+        "channelName": "江西腾步科技有限公司",
+        "salesName": "WEST-ACT",
+        "salesDate": "2020-11-24",
+        "installDate": "2020-12-22",
+        "warrantyExpireDate": "2022-05-30"
+      },
+      {
+        "serialNo": "TEGRIS-27189734",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "四川省",
+        "terminalUser": "成都京东方医院",
+        "channelName": "江西腾步科技有限公司",
+        "salesName": "WEST-ACT",
+        "salesDate": "2020-11-24",
+        "installDate": "2020-12-22",
+        "warrantyExpireDate": "2022-05-30"
+      },
+      {
+        "serialNo": "TEGRIS-25702975",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "江苏省",
+        "terminalUser": "南京市浦口医院",
+        "channelName": "厦门建发高科有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2019-06-05",
+        "installDate": "2021-01-13",
+        "warrantyExpireDate": "2023-11-10"
+      },
+      {
+        "serialNo": "TEGRIS-27274143",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "浙江省",
+        "terminalUser": "浙江中医药大学附属第三医院",
+        "channelName": "杭州首术科技有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2021-01-11",
+        "installDate": "2021-01-29",
+        "warrantyExpireDate": "2022-12-28"
+      },
+      {
+        "serialNo": "TEGRIS-27347598",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "山西省",
+        "terminalUser": "山西省心血管病医院",
+        "channelName": "山西精准互联科技发展有限公司",
+        "salesName": "NORTH-SW",
+        "salesDate": "2021-02-02",
+        "installDate": "2021-02-26",
+        "warrantyExpireDate": "2023-05-19"
+      },
+      {
+        "serialNo": "TEGRIS-27470142",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海交通大学医学院附属上海儿童医学中心",
+        "channelName": "逸佰医疗科技发展（上海）有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2021-03-02",
+        "installDate": "2021-03-26",
+        "warrantyExpireDate": "2023-07-13"
+      },
+      {
+        "serialNo": "TEGRIS-27559952",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "广州泰和肿瘤医院",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2021-03-23",
+        "installDate": "2021-04-08",
+        "warrantyExpireDate": "2023-12-09"
+      },
+      {
+        "serialNo": "TEGRIS-27559953",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "广州泰和肿瘤医院",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2021-03-23",
+        "installDate": "2021-04-08",
+        "warrantyExpireDate": "2023-12-09"
+      },
+      {
+        "serialNo": "TEGRIS-27559954",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "广州泰和肿瘤医院",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2021-03-23",
+        "installDate": "2021-04-08",
+        "warrantyExpireDate": "2023-12-09"
+      },
+      {
+        "serialNo": "TEGRIS-27559955",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "广州泰和肿瘤医院",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2021-03-23",
+        "installDate": "2021-04-08",
+        "warrantyExpireDate": "2023-12-09"
+      },
+      {
+        "serialNo": "TEGRIS-27579663",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "福建省",
+        "terminalUser": "晋江市医院",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2021-03-26",
+        "installDate": "2021-04-19",
+        "warrantyExpireDate": "2023-12-26"
+      },
+      {
+        "serialNo": "TEGRIS-27579664",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "福建省",
+        "terminalUser": "晋江市医院",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2021-03-26",
+        "installDate": "2021-04-19",
+        "warrantyExpireDate": "2023-12-26"
+      },
+      {
+        "serialNo": "TEGRIS-27702745",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "福建省",
+        "terminalUser": "福建医科大学附属协和医院旗山院区",
+        "channelName": "厦门象屿速传供应链发展股份有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2021-04-28",
+        "installDate": "2021-06-10",
+        "warrantyExpireDate": "2026-03-11"
+      },
+      {
+        "serialNo": "TEGRIS-27702746",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "福建省",
+        "terminalUser": "福建医科大学附属协和医院旗山院区",
+        "channelName": "厦门象屿速传供应链发展股份有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2021-04-28",
+        "installDate": "2021-06-10",
+        "warrantyExpireDate": "2026-03-11"
+      },
+      {
+        "serialNo": "TEGRIS-27717160",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "江西省",
+        "terminalUser": "萍乡市人民医院",
+        "channelName": "厦门象屿速传供应链发展股份有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2021-05-03",
+        "installDate": "2021-06-21",
+        "warrantyExpireDate": "2023-10-19"
+      },
+      {
+        "serialNo": "TEGRIS-27915703",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+        "installProvince": "四川省",
+        "terminalUser": "邻水县人民医院",
+        "channelName": "成都裕康医疗设备有限公司",
+        "salesName": "WEST-SW",
+        "salesDate": "2021-06-25",
+        "installDate": "2021-07-23",
+        "warrantyExpireDate": "2026-10-07"
+      },
+      {
+        "serialNo": "TEGRIS-27997264",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "北京市",
+        "terminalUser": "北京福鼎奕隆医疗设备有限公司",
+        "channelName": "北京福鼎奕隆医疗设备有限公司",
+        "salesName": "1G5",
+        "salesDate": "2021-07-16",
+        "installDate": "2021-08-03",
+        "warrantyExpireDate": "2023-02-17"
+      },
+      {
+        "serialNo": "TEGRIS-27967824",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "江苏省",
+        "terminalUser": "昆山市第一人民医院",
+        "channelName": "逸佰医疗科技发展（上海）有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2021-07-08",
+        "installDate": "2021-08-04",
+        "warrantyExpireDate": "2025-08-29"
+      },
+      {
+        "serialNo": "TEGRIS-28059784",
+        "productKey": "tegris",
+        "productModel": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
+        "installProvince": "江苏省",
+        "terminalUser": "昆山市中医医院",
+        "channelName": "厦门建发高科有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2021-08-17",
+        "installDate": "2021-09-10",
+        "warrantyExpireDate": "2023-12-06"
+      },
+      {
+        "serialNo": "TEGRIS-28251447",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "山东省",
+        "terminalUser": "青岛国林国际贸易有限公司",
+        "channelName": "青岛国林国际贸易有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2021-10-08",
+        "installDate": "2021-11-26",
+        "warrantyExpireDate": "2023-05-25"
+      },
+      {
+        "serialNo": "TEGRIS-28380151",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "北京市",
+        "terminalUser": "北京智诚恒创科技发展有限公司",
+        "channelName": "北京智诚恒创科技发展有限公司",
+        "salesName": "NORTH",
+        "salesDate": "2021-11-12",
+        "installDate": "2021-12-01",
+        "warrantyExpireDate": "2023-06-22"
+      },
+      {
+        "serialNo": "TEGRIS-28444966",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "中山大学附属第七医院（深圳）",
+        "channelName": "广东三鸿医药有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2021-11-30",
+        "installDate": "2021-12-15",
+        "warrantyExpireDate": "2024-02-15"
+      },
+      {
+        "serialNo": "TEGRIS-28429058",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海瑶革医疗设备有限公司",
+        "channelName": "上海瑶革医疗设备有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2021-11-25",
+        "installDate": "2021-12-17",
+        "warrantyExpireDate": "2023-09-28"
+      },
+      {
+        "serialNo": "TEGRIS-29240761",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海福吉科贸有限公司",
+        "channelName": "上海福吉科贸有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2022-07-18",
+        "installDate": "2022-09-29",
+        "warrantyExpireDate": "2024-04-23"
+      },
+      {
+        "serialNo": "TEGRIS-29240762",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "北京市",
+        "terminalUser": "北京映熹科技有限公司",
+        "channelName": "北京映熹科技有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2022-07-18",
+        "installDate": "2022-09-29",
+        "warrantyExpireDate": "2024-10-18"
+      },
+      {
+        "serialNo": "TEGRIS-29240763",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "天津市",
+        "terminalUser": "天津康汇医院",
+        "channelName": "天津世纪瀛海科技有限公司",
+        "salesName": "NORTH-SW",
+        "salesDate": "2022-07-18",
+        "installDate": "2022-09-29",
+        "warrantyExpireDate": "2026-10-20"
+      },
+      {
+        "serialNo": "TEGRIS-29240764",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "中建投（广东）国际贸易有限公司",
+        "channelName": "中建投（广东）国际贸易有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2022-07-18",
+        "installDate": "2022-09-29",
+        "warrantyExpireDate": "2026-12-02"
+      },
+      {
+        "serialNo": "TEGRIS-29240765",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "湖北省",
+        "terminalUser": "华中科技大学同济医学院附属梨园医院",
+        "channelName": "中建投（广东）国际贸易有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2022-07-18",
+        "installDate": "2022-09-29",
+        "warrantyExpireDate": "2027-01-04"
+      },
+      {
+        "serialNo": "TEGRIS-29372108",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "江苏省",
+        "terminalUser": "宜兴市人民医院",
+        "channelName": "宜兴市人民医院",
+        "salesName": "EAST-SW",
+        "salesDate": "2022-09-06",
+        "installDate": "2022-09-29",
+        "warrantyExpireDate": "2025-09-03"
+      },
+      {
+        "serialNo": "TEGRIS-29334178",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "江西省",
+        "terminalUser": "九江学院第二附属医院",
+        "channelName": "九江学院第二附属医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2022-08-26",
+        "installDate": "2022-10-12",
+        "warrantyExpireDate": "2024-10-11"
+      },
+      {
+        "serialNo": "TEGRIS-29311491",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "广州市胸科医院",
+        "channelName": "广州市胸科医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2022-08-19",
+        "installDate": "2022-12-13",
+        "warrantyExpireDate": "2025-08-14"
+      },
+      {
+        "serialNo": "TEGRIS-29311492",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "广州市胸科医院",
+        "channelName": "广州市胸科医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2022-08-19",
+        "installDate": "2022-12-13",
+        "warrantyExpireDate": "2025-08-14"
+      },
+      {
+        "serialNo": "TEGRIS-29240897",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "四川省",
+        "terminalUser": "四川思芃商贸有限公司",
+        "channelName": "四川思芃商贸有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2022-07-18",
+        "installDate": "2022-12-15",
+        "warrantyExpireDate": "2027-06-26"
+      },
+      {
+        "serialNo": "TEGRIS-29240898",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "广州市合众汇达医疗科技有限公司",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2022-07-18",
+        "installDate": "2022-12-15",
+        "warrantyExpireDate": "2027-06-29"
+      },
+      {
+        "serialNo": "TEGRIS-29262006",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "四川省",
+        "terminalUser": "四川思芃商贸有限公司",
+        "channelName": "四川思芃商贸有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2022-07-22",
+        "installDate": "2022-12-15",
+        "warrantyExpireDate": "2027-06-26"
+      },
+      {
+        "serialNo": "TEGRIS-29262007",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "四川省",
+        "terminalUser": "四川思芃商贸有限公司",
+        "channelName": "四川思芃商贸有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2022-07-22",
+        "installDate": "2022-12-15",
+        "warrantyExpireDate": "2027-06-26"
+      },
+      {
+        "serialNo": "TEGRIS-29262008",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "四川省",
+        "terminalUser": "四川思芃商贸有限公司",
+        "channelName": "四川思芃商贸有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2022-07-22",
+        "installDate": "2022-12-15",
+        "warrantyExpireDate": "2027-06-26"
+      },
+      {
+        "serialNo": "TEGRIS-29262009",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "四川省",
+        "terminalUser": "四川思芃商贸有限公司",
+        "channelName": "四川思芃商贸有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2022-07-22",
+        "installDate": "2022-12-15",
+        "warrantyExpireDate": "2027-06-26"
+      },
+      {
+        "serialNo": "TEGRIS-29262010",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "四川省",
+        "terminalUser": "四川思芃商贸有限公司",
+        "channelName": "四川思芃商贸有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2022-07-22",
+        "installDate": "2022-12-15",
+        "warrantyExpireDate": "2027-06-26"
+      },
+      {
+        "serialNo": "TEGRIS-29488473",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "四川省",
+        "terminalUser": "四川泰康医院",
+        "channelName": "四川泰康医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2022-10-07",
+        "installDate": "2022-12-19",
+        "warrantyExpireDate": "2025-09-22"
+      },
+      {
+        "serialNo": "TEGRIS-29488474",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "四川省",
+        "terminalUser": "四川泰康医院",
+        "channelName": "四川泰康医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2022-10-07",
+        "installDate": "2022-12-19",
+        "warrantyExpireDate": "2025-09-22"
+      },
+      {
+        "serialNo": "TEGRIS-29488475",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "四川省",
+        "terminalUser": "四川泰康医院",
+        "channelName": "四川泰康医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2022-10-07",
+        "installDate": "2022-12-19",
+        "warrantyExpireDate": "2025-09-22"
+      },
+      {
+        "serialNo": "TEGRIS-29488476",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "四川省",
+        "terminalUser": "四川泰康医院",
+        "channelName": "四川泰康医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2022-10-07",
+        "installDate": "2022-12-19",
+        "warrantyExpireDate": "2025-09-22"
+      },
+      {
+        "serialNo": "TEGRIS-29488477",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "四川省",
+        "terminalUser": "四川泰康医院",
+        "channelName": "四川泰康医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2022-10-07",
+        "installDate": "2022-12-19",
+        "warrantyExpireDate": "2025-09-22"
+      },
+      {
+        "serialNo": "TEGRIS-29520305",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "宁波市医疗中心李惠利医院",
+        "channelName": "宁波市医疗中心李惠利医院",
+        "salesName": "EAST-SW",
+        "salesDate": "2022-10-14",
+        "installDate": "2022-12-19",
+        "warrantyExpireDate": "2024-08-24"
+      },
+      {
+        "serialNo": "TEGRIS-29520306",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "宁波市医疗中心李惠利医院",
+        "channelName": "宁波市医疗中心李惠利医院",
+        "salesName": "EAST-SW",
+        "salesDate": "2022-10-14",
+        "installDate": "2022-12-19",
+        "warrantyExpireDate": "2028-08-24"
+      },
+      {
+        "serialNo": "TEGRIS-29520307",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "宁波市医疗中心李惠利医院",
+        "channelName": "宁波市医疗中心李惠利医院",
+        "salesName": "EAST-SW",
+        "salesDate": "2022-10-14",
+        "installDate": "2022-12-19",
+        "warrantyExpireDate": "2028-08-24"
+      },
+      {
+        "serialNo": "TEGRIS-29520308",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "宁波市医疗中心李惠利东部医院",
+        "channelName": "宁波市医疗中心李惠利东部医院",
+        "salesName": "EAST-SW",
+        "salesDate": "2022-10-14",
+        "installDate": "2022-12-19",
+        "warrantyExpireDate": "2028-11-30"
+      },
+      {
+        "serialNo": "TEGRIS-29520309",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "宁波市医疗中心李惠利东部医院",
+        "channelName": "宁波市医疗中心李惠利东部医院",
+        "salesName": "WEST-SW",
+        "salesDate": "2022-10-14",
+        "installDate": "2022-12-19",
+        "warrantyExpireDate": "2028-11-30"
+      },
+      {
+        "serialNo": "TEGRIS-29649642",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "华中科技大学协和深圳医院",
+        "channelName": "广东三鸿医药有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2022-11-21",
+        "installDate": "2022-12-29",
+        "warrantyExpireDate": "2025-12-15"
+      },
+      {
+        "serialNo": "TEGRIS-29649643",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "华中科技大学协和深圳医院",
+        "channelName": "广东三鸿医药有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2022-11-21",
+        "installDate": "2022-12-29",
+        "warrantyExpireDate": "2025-12-15"
+      },
+      {
+        "serialNo": "TEGRIS-29649644",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "广东省",
+        "terminalUser": "华中科技大学协和深圳医院",
+        "channelName": "广东三鸿医药有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2022-11-21",
+        "installDate": "2022-12-29",
+        "warrantyExpireDate": "2025-12-15"
+      },
+      {
+        "serialNo": "TEGRIS-29649645",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "天津市",
+        "terminalUser": "天津医科大学第二医院",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "NORTH-SW",
+        "salesDate": "2022-11-21",
+        "installDate": "2022-12-29",
+        "warrantyExpireDate": "2026-04-12"
+      },
+      {
+        "serialNo": "TEGRIS-29649646",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "上海市",
+        "terminalUser": "上海市静安区华东医院",
+        "channelName": "上海理雄医疗器械有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2022-11-21",
+        "installDate": "2022-12-29",
+        "warrantyExpireDate": "2026-03-11"
+      },
+      {
+        "serialNo": "TEGRIS-29649647",
+        "productKey": "tegris",
+        "productModel": "Classic",
+        "quantity": 1,
+        "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+        "installProvince": "湖北省",
+        "terminalUser": "武汉市青山区华润武钢总医院",
+        "channelName": "中建投（广东）国际贸易有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2022-11-21",
+        "installDate": "2022-12-29",
+        "warrantyExpireDate": "2026-12-24"
+      },
+      {
+        "serialNo": "TEGRIS-29765725",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "山东省",
+        "terminalUser": "山东省公共卫生临床中心",
+        "channelName": "山东省公共卫生临床中心",
+        "salesName": "NORTH-SW",
+        "salesDate": "2022-12-20",
+        "installDate": "2023-01-23",
+        "warrantyExpireDate": "2024-03-07"
+      },
+      {
+        "serialNo": "TEGRIS-30168353",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "江苏省",
+        "terminalUser": "江苏省中西医结合医院",
+        "channelName": "上海万淇生物科技有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2023-04-12",
+        "installDate": "2023-04-28",
+        "warrantyExpireDate": "2026-10-10"
+      },
+      {
+        "serialNo": "TEGRIS-30168354",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "江苏省",
+        "terminalUser": "江苏省中西医结合医院",
+        "channelName": "上海万淇生物科技有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2023-04-12",
+        "installDate": "2023-04-28",
+        "warrantyExpireDate": "2026-10-10"
+      },
+      {
+        "serialNo": "TEGRIS-30168355",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "江苏省",
+        "terminalUser": "江苏省中西医结合医院",
+        "channelName": "上海万淇生物科技有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2023-04-12",
+        "installDate": "2023-04-28",
+        "warrantyExpireDate": "2026-10-10"
+      },
+      {
+        "serialNo": "TEGRIS-30168356",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "江苏省",
+        "terminalUser": "江苏省中西医结合医院",
+        "channelName": "上海万淇生物科技有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2023-04-12",
+        "installDate": "2023-04-28",
+        "warrantyExpireDate": "2026-10-10"
+      },
+      {
+        "serialNo": "TEGRIS-30345741",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "湖南省",
+        "terminalUser": "中南大学湘雅二医院",
+        "channelName": "中南大学湘雅二医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2023-05-31",
+        "installDate": "2023-06-14",
+        "warrantyExpireDate": "2025-08-18"
+      },
+      {
+        "serialNo": "TEGRIS-30345742",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "湖南省",
+        "terminalUser": "中南大学湘雅二医院",
+        "channelName": "中南大学湘雅二医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2023-05-31",
+        "installDate": "2023-06-14",
+        "warrantyExpireDate": "2025-08-18"
+      },
+      {
+        "serialNo": "TEGRIS-30345743",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "湖南省",
+        "terminalUser": "中南大学湘雅二医院",
+        "channelName": "中南大学湘雅二医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2023-05-31",
+        "installDate": "2023-06-14",
+        "warrantyExpireDate": "2025-08-18"
+      },
+      {
+        "serialNo": "TEGRIS-30352522",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "湖南省",
+        "terminalUser": "中南大学湘雅二医院",
+        "channelName": "中南大学湘雅二医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2023-06-01",
+        "installDate": "2023-06-14",
+        "warrantyExpireDate": "2025-08-18"
+      },
+      {
+        "serialNo": "TEGRIS-30428344",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "广州富力医院",
+        "channelName": "广州富力医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2023-06-23",
+        "installDate": "2023-07-11",
+        "warrantyExpireDate": "2025-10-14"
+      },
+      {
+        "serialNo": "TEGRIS-30442870",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "宁波泰康脑科医院",
+        "channelName": "宁波泰甬置业有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2023-06-28",
+        "installDate": "2023-07-31",
+        "warrantyExpireDate": "2026-06-09"
+      },
+      {
+        "serialNo": "TEGRIS-30442871",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "宁波泰康脑科医院",
+        "channelName": "宁波泰甬置业有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2023-06-28",
+        "installDate": "2023-07-31",
+        "warrantyExpireDate": "2026-06-09"
+      },
+      {
+        "serialNo": "TEGRIS-30442872",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "宁波泰康脑科医院",
+        "channelName": "宁波泰甬置业有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2023-06-28",
+        "installDate": "2023-07-31",
+        "warrantyExpireDate": "2026-06-09"
+      },
+      {
+        "serialNo": "TEGRIS-30578939",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "甘肃省",
+        "terminalUser": "甘肃省中医院",
+        "channelName": "西安宏亚安正科技有限公司",
+        "salesName": "WEST-SW",
+        "salesDate": "2023-08-18",
+        "installDate": "2023-09-05",
+        "warrantyExpireDate": "2026-03-14"
+      },
+      {
+        "serialNo": "TEGRIS-30578940",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "甘肃省",
+        "terminalUser": "甘肃省中医院",
+        "channelName": "西安宏亚安正科技有限公司",
+        "salesName": "WEST-SW",
+        "salesDate": "2023-08-18",
+        "installDate": "2023-09-05",
+        "warrantyExpireDate": "2026-03-14"
+      },
+      {
+        "serialNo": "TEGRIS-30578941",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "甘肃省",
+        "terminalUser": "甘肃省中医院",
+        "channelName": "西安宏亚安正科技有限公司",
+        "salesName": "WEST-SW",
+        "salesDate": "2023-08-18",
+        "installDate": "2023-09-05",
+        "warrantyExpireDate": "2026-03-14"
+      },
+      {
+        "serialNo": "TEGRIS-31541534",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "江苏省",
+        "terminalUser": "无锡市人民医院",
+        "channelName": "北京世纪凯盈科学仪器有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2023-09-27",
+        "installDate": "2023-10-25",
+        "warrantyExpireDate": "2026-05-09"
+      },
+      {
+        "serialNo": "TEGRIS-31541535",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "江苏省",
+        "terminalUser": "无锡市人民医院",
+        "channelName": "北京世纪凯盈科学仪器有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2023-09-27",
+        "installDate": "2023-10-25",
+        "warrantyExpireDate": "2026-05-09"
+      },
+      {
+        "serialNo": "TEGRIS-32390908",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "深圳前海泰康医院",
+        "channelName": "深圳前海泰康医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2023-10-11",
+        "installDate": "2023-11-16",
+        "warrantyExpireDate": "2026-07-09"
+      },
+      {
+        "serialNo": "TEGRIS-32390909",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "深圳前海泰康医院",
+        "channelName": "深圳前海泰康医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2023-10-11",
+        "installDate": "2023-11-16",
+        "warrantyExpireDate": "2026-07-09"
+      },
+      {
+        "serialNo": "TEGRIS-32390911",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "深圳前海泰康医院",
+        "channelName": "深圳前海泰康医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2023-10-11",
+        "installDate": "2023-11-16",
+        "warrantyExpireDate": "2026-07-09"
+      },
+      {
+        "serialNo": "TEGRIS-32394893",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "深圳前海泰康医院",
+        "channelName": "深圳前海泰康医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2023-10-12",
+        "installDate": "2023-11-16",
+        "warrantyExpireDate": "2026-07-09"
+      },
+      {
+        "serialNo": "TEGRIS-32444997",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "四川省",
+        "terminalUser": "绵阳市中医医院",
+        "channelName": "成都裕康医疗设备有限公司",
+        "salesName": "WEST-SW",
+        "salesDate": "2023-10-26",
+        "installDate": "2023-11-16",
+        "warrantyExpireDate": "2026-10-17"
+      },
+      {
+        "serialNo": "TEGRIS-32456858",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "深圳前海泰康医院",
+        "channelName": "深圳前海泰康医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2023-10-30",
+        "installDate": "2023-11-16",
+        "warrantyExpireDate": "2026-07-09"
+      },
+      {
+        "serialNo": "TEGRIS-32456859",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "深圳前海泰康医院",
+        "channelName": "深圳前海泰康医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2023-10-30",
+        "installDate": "2023-11-16",
+        "warrantyExpireDate": "2026-07-09"
+      },
+      {
+        "serialNo": "TEGRIS-32456860",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "深圳前海泰康医院",
+        "channelName": "深圳前海泰康医院",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2023-10-30",
+        "installDate": "2023-11-16",
+        "warrantyExpireDate": "2026-07-09"
+      },
+      {
+        "serialNo": "TEGRIS-32467892",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "浙江大学国际健康医学研究院",
+        "channelName": "杭州星灿生物技术有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2023-11-02",
+        "installDate": "2023-11-29",
+        "warrantyExpireDate": "2025-06-29"
+      },
+      {
+        "serialNo": "TEGRIS-32750263",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "杭州市临安区第一人民医院",
+        "channelName": "杭州大沨医疗器械有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2024-01-24",
+        "installDate": "2024-02-08",
+        "warrantyExpireDate": "2026-02-24"
+      },
+      {
+        "serialNo": "TEGRIS-32698997",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "珠海市人民医院医疗集团",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2024-01-12",
+        "installDate": "2024-03-07",
+        "warrantyExpireDate": "2027-01-08"
+      },
+      {
+        "serialNo": "TEGRIS-32698998",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "珠海市人民医院医疗集团",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2024-01-12",
+        "installDate": "2024-03-07",
+        "warrantyExpireDate": "2027-01-08"
+      },
+      {
+        "serialNo": "TEGRIS-32698999",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "珠海市人民医院医疗集团",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2024-01-12",
+        "installDate": "2024-03-07",
+        "warrantyExpireDate": "2027-01-08"
+      },
+      {
+        "serialNo": "TEGRIS-32699000",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "珠海市人民医院医疗集团",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2024-01-12",
+        "installDate": "2024-03-07",
+        "warrantyExpireDate": "2027-01-08"
+      },
+      {
+        "serialNo": "TEGRIS-32699001",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "珠海市人民医院医疗集团",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2024-01-12",
+        "installDate": "2024-03-07",
+        "warrantyExpireDate": "2027-01-08"
+      },
+      {
+        "serialNo": "TEGRIS-32699002",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "珠海市人民医院医疗集团",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2024-01-12",
+        "installDate": "2024-03-07",
+        "warrantyExpireDate": "2027-01-08"
+      },
+      {
+        "serialNo": "TEGRIS-32869159",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "东莞市人民医院",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2024-02-26",
+        "installDate": "2024-03-14",
+        "warrantyExpireDate": "2026-08-31"
+      },
+      {
+        "serialNo": "TEGRIS-32869160",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "东莞市人民医院",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2024-02-26",
+        "installDate": "2024-03-14",
+        "warrantyExpireDate": "2026-08-31"
+      },
+      {
+        "serialNo": "TEGRIS-32869161",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "广东省人民医院南海医院",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2024-02-26",
+        "installDate": "2024-03-19",
+        "warrantyExpireDate": "2026-05-11"
+      },
+      {
+        "serialNo": "TEGRIS-32869162",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "广东省人民医院南海医院",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "SOUTH-SW",
+        "salesDate": "2024-02-26",
+        "installDate": "2024-03-19",
+        "warrantyExpireDate": "2026-05-11"
+      },
+      {
+        "serialNo": "TEGRIS-32885897",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "广州市合众汇达医疗科技有限公司",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2024-03-01",
+        "installDate": "2024-03-20",
+        "warrantyExpireDate": "2027-03-23"
+      },
+      {
+        "serialNo": "TEGRIS-32885898",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "广州市合众汇达医疗科技有限公司",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2024-03-01",
+        "installDate": "2024-03-20",
+        "warrantyExpireDate": "2027-03-23"
+      },
+      {
+        "serialNo": "TEGRIS-32885899",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "广州市合众汇达医疗科技有限公司",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2024-03-01",
+        "installDate": "2024-03-20",
+        "warrantyExpireDate": "2027-03-23"
+      },
+      {
+        "serialNo": "TEGRIS-32885900",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "广州市合众汇达医疗科技有限公司",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2024-03-01",
+        "installDate": "2024-03-20",
+        "warrantyExpireDate": "2027-03-23"
+      },
+      {
+        "serialNo": "TEGRIS-32885901",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "广州市合众汇达医疗科技有限公司",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2024-03-01",
+        "installDate": "2024-03-20",
+        "warrantyExpireDate": "2027-03-23"
+      },
+      {
+        "serialNo": "TEGRIS-32885902",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "广东省",
+        "terminalUser": "广州市合众汇达医疗科技有限公司",
+        "channelName": "广州市合众汇达医疗科技有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2024-03-01",
+        "installDate": "2024-03-20",
+        "warrantyExpireDate": "2027-03-23"
+      },
+      {
+        "serialNo": "TEGRIS-33112964",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "杭州大沨医疗器械有限公司",
+        "channelName": "杭州大沨医疗器械有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2024-05-07",
+        "installDate": "2024-06-17",
+        "warrantyExpireDate": "2026-12-30"
+      },
+      {
+        "serialNo": "TEGRIS-33112965",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "杭州大沨医疗器械有限公司",
+        "channelName": "杭州大沨医疗器械有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2024-05-07",
+        "installDate": "2024-06-17",
+        "warrantyExpireDate": "2026-12-30"
+      },
+      {
+        "serialNo": "TEGRIS-33112966",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "杭州大沨医疗器械有限公司",
+        "channelName": "杭州大沨医疗器械有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2024-05-07",
+        "installDate": "2024-06-17",
+        "warrantyExpireDate": "2026-12-30"
+      },
+      {
+        "serialNo": "TEGRIS-33338959",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "贵州省",
+        "terminalUser": "上海交通大学医学院附属上海儿童医学中心贵州医院",
+        "channelName": "逸佰医疗科技发展（上海）有限公司",
+        "salesName": "WEST-ACT",
+        "salesDate": "2024-07-16",
+        "installDate": "2024-09-10",
+        "warrantyExpireDate": "2027-02-17"
+      },
+      {
+        "serialNo": "TEGRIS-33338960",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "贵州省",
+        "terminalUser": "上海交通大学医学院附属上海儿童医学中心贵州医院",
+        "channelName": "逸佰医疗科技发展（上海）有限公司",
+        "salesName": "WEST-ACT",
+        "salesDate": "2024-07-16",
+        "installDate": "2024-09-10",
+        "warrantyExpireDate": "2027-02-17"
+      },
+      {
+        "serialNo": "TEGRIS-33338961",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "贵州省",
+        "terminalUser": "上海交通大学医学院附属上海儿童医学中心贵州医院",
+        "channelName": "逸佰医疗科技发展（上海）有限公司",
+        "salesName": "WEST-ACT",
+        "salesDate": "2024-07-16",
+        "installDate": "2024-09-10",
+        "warrantyExpireDate": "2027-02-17"
+      },
+      {
+        "serialNo": "TEGRIS-33383726",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "上海市",
+        "terminalUser": "Maquet (Shanghai) Medical Equipment Co",
+        "channelName": "Maquet (Shanghai) Medical Equipment Co",
+        "salesName": "未填写销售",
+        "salesDate": "2024-08-01",
+        "installDate": "2024-09-10",
+        "warrantyExpireDate": "2026-09-09"
+      },
+      {
+        "serialNo": "TEGRIS-33383727",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "上海市",
+        "terminalUser": "Maquet (Shanghai) Medical Equipment Co",
+        "channelName": "Maquet (Shanghai) Medical Equipment Co",
+        "salesName": "未填写销售",
+        "salesDate": "2024-08-01",
+        "installDate": "2024-09-10",
+        "warrantyExpireDate": "2026-09-09"
+      },
+      {
+        "serialNo": "TEGRIS-34082739",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "新昌县人民医院",
+        "channelName": "MAQUET (SHANGHAI)",
+        "salesName": "EAST-SW",
+        "salesDate": "2025-03-19",
+        "installDate": "2025-05-28",
+        "warrantyExpireDate": "2026-11-30"
+      },
+      {
+        "serialNo": "TEGRIS-34082740",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "新昌县人民医院",
+        "channelName": "MAQUET (SHANGHAI)",
+        "salesName": "EAST-SW",
+        "salesDate": "2025-03-19",
+        "installDate": "2025-05-28",
+        "warrantyExpireDate": "2026-11-30"
+      },
+      {
+        "serialNo": "TEGRIS-34706989",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "温州市人民医院娄桥院区",
+        "channelName": "杭州大沨医疗器械有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2025-06-24",
+        "installDate": "2025-07-17",
+        "warrantyExpireDate": "2026-10-09"
+      },
+      {
+        "serialNo": "TEGRIS-34706990",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "温州市人民医院娄桥院区",
+        "channelName": "杭州大沨医疗器械有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2025-06-24",
+        "installDate": "2025-07-17",
+        "warrantyExpireDate": "2026-10-09"
+      },
+      {
+        "serialNo": "TEGRIS-34648412",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "江苏省",
+        "terminalUser": "江南大学附属医院",
+        "channelName": "上药医疗器械（上海）有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2025-06-05",
+        "installDate": "2025-08-06",
+        "warrantyExpireDate": "2027-12-01"
+      },
+      {
+        "serialNo": "TEGRIS-34648548",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "北京市",
+        "terminalUser": "北京凯隆荣锐医疗设备有限公司",
+        "channelName": "北京凯隆荣锐医疗设备有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2025-06-05",
+        "installDate": "2025-08-06",
+        "warrantyExpireDate": "2027-05-23"
+      },
+      {
+        "serialNo": "TEGRIS-34810285",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "上海市",
+        "terminalUser": "上海市闵行区中心医院",
+        "channelName": "上海理雄医疗器械有限公司",
+        "salesName": "EAST-SW",
+        "salesDate": "2025-07-30",
+        "installDate": "2025-09-04",
+        "warrantyExpireDate": "2027-11-23"
+      },
+      {
+        "serialNo": "TEGRIS-34828725",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "杭州星灿生物技术有限公司",
+        "channelName": "杭州星灿生物技术有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2025-08-08",
+        "installDate": "2025-09-11",
+        "warrantyExpireDate": "2027-03-25"
+      },
+      {
+        "serialNo": "TEGRIS-34828726",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "杭州星灿生物技术有限公司",
+        "channelName": "杭州星灿生物技术有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2025-08-08",
+        "installDate": "2025-09-11",
+        "warrantyExpireDate": "2027-03-25"
+      },
+      {
+        "serialNo": "TEGRIS-35104331",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "北京市",
+        "terminalUser": "北京凯隆荣锐医疗设备有限公司",
+        "channelName": "北京凯隆荣锐医疗设备有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2025-11-20",
+        "installDate": "2025-12-08",
+        "warrantyExpireDate": "2027-06-17"
+      },
+      {
+        "serialNo": "TEGRIS-35104332",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "北京市",
+        "terminalUser": "北京凯隆荣锐医疗设备有限公司",
+        "channelName": "北京凯隆荣锐医疗设备有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2025-11-20",
+        "installDate": "2025-12-08",
+        "warrantyExpireDate": "2027-06-17"
+      },
+      {
+        "serialNo": "TEGRIS-35104333",
+        "productKey": "tegris",
+        "productModel": "VOIP",
+        "quantity": 1,
+        "configDescription": "TEGRIS BASE PC (HW2)",
+        "installProvince": "浙江省",
+        "terminalUser": "杭州星灿生物技术有限公司",
+        "channelName": "杭州星灿生物技术有限公司",
+        "salesName": "GDUMMY",
+        "salesDate": "2025-11-20",
+        "installDate": "2025-12-08",
+        "warrantyExpireDate": "2027-06-25"
+      }
+    ],
+    "productLineData": {
+      "voip": {
+        "title": "Tegris Dashboard 装机看板",
+        "rankingTitle": "Tegris 用户排名",
+        "modalTitle": "Tegris 一体化手术室项目录入与更新",
+        "totalUnitsLabel": "套 Tegris 系统",
+        "visual": {
+          "type": "image",
+          "src": "assets/tegris-int-or-1.png",
+          "alt": "Tegris integrated operating room system",
+          "tags": [
+            "Tegris VOIP",
+            "Tegris Classic",
+            "TIGERS"
+          ]
+        },
+        "productModels": [
+          "VOIP",
+          "Classic",
+          "TIGERS"
+        ],
+        "lineTotalUnitsLabelTemplate": "套 {line} 系统",
+        "productLineOptions": [],
+        "totalUnits": 84,
+        "quarterUnits": 0,
+        "provinceData": [
+          {
             "name": "广东省",
-            "value": 51,
+            "value": 29,
             "latestSite": "广州富力医院",
             "latestDate": "2024-06-28",
             "coord": [
-                  113.27,
-                  23.13
+              113.27,
+              23.13
             ]
-      },
-      {
+          },
+          {
             "name": "浙江省",
-            "value": 37,
-            "latestSite": "杭州星灿生物技术有限公司",
-            "latestDate": "2025-11-20",
-            "coord": [
-                  120.15,
-                  30.28
-            ]
-      },
-      {
-            "name": "上海市",
             "value": 22,
-            "latestSite": "上海市闵行区中心医院",
-            "latestDate": "2025-07-30",
+            "latestSite": "杭州星灿生物技术有限公司",
+            "latestDate": "2025-12-08",
             "coord": [
-                  121.47,
-                  31.23
+              120.15,
+              30.28
             ]
-      },
-      {
-            "name": "四川省",
-            "value": 20,
-            "latestSite": "绵阳市中医医院",
-            "latestDate": "2023-10-26",
-            "coord": [
-                  104.06,
-                  30.67
-            ]
-      },
-      {
-            "name": "北京市",
-            "value": 16,
-            "latestSite": "北京凯隆荣锐医疗设备有限公司",
-            "latestDate": "2025-11-20",
-            "coord": [
-                  116.41,
-                  39.9
-            ]
-      },
-      {
+          },
+          {
             "name": "江苏省",
-            "value": 14,
-            "latestSite": "江南大学附属医院",
-            "latestDate": "2025-06-05",
-            "coord": [
-                  118.76,
-                  32.06
-            ]
-      },
-      {
-            "name": "山东省",
-            "value": 11,
-            "latestSite": "山东省公共卫生临床中心",
-            "latestDate": "2022-12-20",
-            "coord": [
-                  117.0,
-                  36.65
-            ]
-      },
-      {
-            "name": "湖北省",
-            "value": 9,
-            "latestSite": "武汉市青山区华润武钢总医院",
-            "latestDate": "2022-11-21",
-            "coord": [
-                  114.3,
-                  30.59
-            ]
-      },
-      {
-            "name": "云南省",
             "value": 8,
-            "latestSite": "昆明医科大学第一附属医院",
-            "latestDate": "2015-10-14",
+            "latestSite": "江南大学附属医院",
+            "latestDate": "2025-08-06",
             "coord": [
-                  102.71,
-                  25.04
+              118.76,
+              32.06
             ]
-      },
-      {
-            "name": "江西省",
-            "value": 5,
-            "latestSite": "九江学院第二附属医院",
-            "latestDate": "2022-08-26",
+          },
+          {
+            "name": "四川省",
+            "value": 6,
+            "latestSite": "绵阳市中医医院",
+            "latestDate": "2023-11-16",
             "coord": [
-                  115.86,
-                  28.68
+              104.06,
+              30.67
             ]
-      },
-      {
-            "name": "福建省",
-            "value": 5,
-            "latestSite": "福建医科大学附属协和医院旗山院区",
-            "latestDate": "2021-04-28",
-            "coord": [
-                  119.3,
-                  26.08
-            ]
-      },
-      {
-            "name": "贵州省",
-            "value": 5,
-            "latestSite": "上海交通大学医学院附属上海儿童医学中心贵州医院",
-            "latestDate": "2024-07-16",
-            "coord": [
-                  106.71,
-                  26.58
-            ]
-      },
-      {
-            "name": "甘肃省",
-            "value": 5,
-            "latestSite": "甘肃省中医院",
-            "latestDate": "2023-08-18",
-            "coord": [
-                  103.82,
-                  36.06
-            ]
-      },
-      {
-            "name": "山西省",
+          },
+          {
+            "name": "上海市",
             "value": 4,
-            "latestSite": "山西省心血管病医院",
-            "latestDate": "2021-02-02",
+            "latestSite": "上海市闵行区中心医院",
+            "latestDate": "2025-09-04",
             "coord": [
-                  112.53,
-                  37.87
+              121.47,
+              31.23
             ]
-      },
-      {
+          },
+          {
             "name": "湖南省",
             "value": 4,
             "latestSite": "中南大学湘雅二医院",
-            "latestDate": "2023-06-01",
+            "latestDate": "2023-06-14",
             "coord": [
-                  112.98,
-                  28.19
+              112.98,
+              28.19
             ]
+          },
+          {
+            "name": "甘肃省",
+            "value": 3,
+            "latestSite": "甘肃省中医院",
+            "latestDate": "2023-09-05",
+            "coord": [
+              103.82,
+              36.06
+            ]
+          },
+          {
+            "name": "贵州省",
+            "value": 3,
+            "latestSite": "上海交通大学医学院附属上海儿童医学中心贵州医院",
+            "latestDate": "2024-09-10",
+            "coord": [
+              106.71,
+              26.58
+            ]
+          },
+          {
+            "name": "北京市",
+            "value": 3,
+            "latestSite": "北京凯隆荣锐医疗设备有限公司",
+            "latestDate": "2025-12-08",
+            "coord": [
+              116.41,
+              39.9
+            ]
+          },
+          {
+            "name": "江西省",
+            "value": 1,
+            "latestSite": "九江学院第二附属医院",
+            "latestDate": "2022-10-12",
+            "coord": [
+              115.86,
+              28.68
+            ]
+          },
+          {
+            "name": "山东省",
+            "value": 1,
+            "latestSite": "山东省公共卫生临床中心",
+            "latestDate": "2023-01-23",
+            "coord": [
+              117,
+              36.65
+            ]
+          }
+        ],
+        "users": [
+          {
+            "name": "深圳前海泰康医院",
+            "province": "广东省",
+            "value": 7
+          },
+          {
+            "name": "珠海市人民医院医疗集团",
+            "province": "广东省",
+            "value": 6
+          },
+          {
+            "name": "广州市合众汇达医疗科技有限公司",
+            "province": "广东省",
+            "value": 6
+          },
+          {
+            "name": "四川泰康医院",
+            "province": "四川省",
+            "value": 5
+          },
+          {
+            "name": "广州富力医院",
+            "province": "广东省",
+            "value": 4
+          },
+          {
+            "name": "江苏省中西医结合医院",
+            "province": "江苏省",
+            "value": 4
+          },
+          {
+            "name": "中南大学湘雅二医院",
+            "province": "湖南省",
+            "value": 4
+          },
+          {
+            "name": "宁波市医疗中心李惠利医院",
+            "province": "浙江省",
+            "value": 3
+          }
+        ],
+        "partners": [
+          {
+            "name": "广州市合众汇达医疗科技有限公司",
+            "province": "广东省",
+            "value": 16
+          },
+          {
+            "name": "深圳前海泰康医院",
+            "province": "广东省",
+            "value": 7
+          },
+          {
+            "name": "杭州大沨医疗器械有限公司",
+            "province": "浙江省",
+            "value": 6
+          },
+          {
+            "name": "四川泰康医院",
+            "province": "四川省",
+            "value": 5
+          },
+          {
+            "name": "广州富力医院",
+            "province": "广东省",
+            "value": 4
+          },
+          {
+            "name": "上海万淇生物科技有限公司",
+            "province": "江苏省",
+            "value": 4
+          },
+          {
+            "name": "中南大学湘雅二医院",
+            "province": "湖南省",
+            "value": 4
+          },
+          {
+            "name": "杭州星灿生物技术有限公司",
+            "province": "浙江省",
+            "value": 4
+          }
+        ],
+        "updates": [
+          {
+            "date": "12-08",
+            "status": "装机",
+            "text": "北京凯隆荣锐医疗设备有限公司 完成 VOIP 1 台"
+          },
+          {
+            "date": "12-08",
+            "status": "装机",
+            "text": "北京凯隆荣锐医疗设备有限公司 完成 VOIP 1 台"
+          },
+          {
+            "date": "12-08",
+            "status": "装机",
+            "text": "杭州星灿生物技术有限公司 完成 VOIP 1 台"
+          },
+          {
+            "date": "09-11",
+            "status": "装机",
+            "text": "杭州星灿生物技术有限公司 完成 VOIP 1 台"
+          },
+          {
+            "date": "09-11",
+            "status": "装机",
+            "text": "杭州星灿生物技术有限公司 完成 VOIP 1 台"
+          },
+          {
+            "date": "09-04",
+            "status": "装机",
+            "text": "上海市闵行区中心医院 完成 VOIP 1 台"
+          }
+        ],
+        "monthlyTrend": [
+          {
+            "month": "2025-01",
+            "installed": 0
+          },
+          {
+            "month": "2025-02",
+            "installed": 0
+          },
+          {
+            "month": "2025-03",
+            "installed": 0
+          },
+          {
+            "month": "2025-04",
+            "installed": 0
+          },
+          {
+            "month": "2025-05",
+            "installed": 2
+          },
+          {
+            "month": "2025-06",
+            "installed": 0
+          },
+          {
+            "month": "2025-07",
+            "installed": 2
+          },
+          {
+            "month": "2025-08",
+            "installed": 2
+          },
+          {
+            "month": "2025-09",
+            "installed": 3
+          },
+          {
+            "month": "2025-10",
+            "installed": 0
+          },
+          {
+            "month": "2025-11",
+            "installed": 0
+          },
+          {
+            "month": "2025-12",
+            "installed": 3
+          }
+        ],
+        "yearlyTrend": [
+          {
+            "year": "2021",
+            "installed": 0
+          },
+          {
+            "year": "2022",
+            "installed": 16
+          },
+          {
+            "year": "2023",
+            "installed": 27
+          },
+          {
+            "year": "2024",
+            "installed": 29
+          },
+          {
+            "year": "2025",
+            "installed": 12
+          }
+        ],
+        "sourceRecords": [
+          {
+            "serialNo": "TEGRIS-28925030",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "上海市",
+            "terminalUser": "上海市浦东新区公利医院",
+            "channelName": "上海市浦东新区公利医院",
+            "salesName": "EAST-SW",
+            "salesDate": "2022-04-21",
+            "installDate": "2022-04-21",
+            "warrantyExpireDate": "2023-03-02"
+          },
+          {
+            "serialNo": "TEGRIS-29512551",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "杭州市余杭区第一人民医院",
+            "channelName": "杭州市余杭区第一人民医院",
+            "salesName": "EAST-SW",
+            "salesDate": "2022-10-13",
+            "installDate": "2022-10-13",
+            "warrantyExpireDate": "2023-12-04"
+          },
+          {
+            "serialNo": "TEGRIS-33283952",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "广州富力医院",
+            "channelName": "广州富力医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2024-06-28",
+            "installDate": "2024-06-28",
+            "warrantyExpireDate": "2025-10-14"
+          },
+          {
+            "serialNo": "TEGRIS-33283953",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "广州富力医院",
+            "channelName": "广州富力医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2024-06-28",
+            "installDate": "2024-06-28",
+            "warrantyExpireDate": "2025-10-14"
+          },
+          {
+            "serialNo": "TEGRIS-33283954",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "广州富力医院",
+            "channelName": "广州富力医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2024-06-28",
+            "installDate": "2024-06-28",
+            "warrantyExpireDate": "2025-10-14"
+          },
+          {
+            "serialNo": "TEGRIS-33740213",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "丽水市人民医院",
+            "channelName": "丽水市人民医院",
+            "salesName": "EAST-SW",
+            "salesDate": "2024-11-26",
+            "installDate": "2024-11-26",
+            "warrantyExpireDate": ""
+          },
+          {
+            "serialNo": "TEGRIS-29372108",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "江苏省",
+            "terminalUser": "宜兴市人民医院",
+            "channelName": "宜兴市人民医院",
+            "salesName": "EAST-SW",
+            "salesDate": "2022-09-06",
+            "installDate": "2022-09-29",
+            "warrantyExpireDate": "2025-09-03"
+          },
+          {
+            "serialNo": "TEGRIS-29334178",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "江西省",
+            "terminalUser": "九江学院第二附属医院",
+            "channelName": "九江学院第二附属医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2022-08-26",
+            "installDate": "2022-10-12",
+            "warrantyExpireDate": "2024-10-11"
+          },
+          {
+            "serialNo": "TEGRIS-29311491",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "广州市胸科医院",
+            "channelName": "广州市胸科医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2022-08-19",
+            "installDate": "2022-12-13",
+            "warrantyExpireDate": "2025-08-14"
+          },
+          {
+            "serialNo": "TEGRIS-29311492",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "广州市胸科医院",
+            "channelName": "广州市胸科医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2022-08-19",
+            "installDate": "2022-12-13",
+            "warrantyExpireDate": "2025-08-14"
+          },
+          {
+            "serialNo": "TEGRIS-29488473",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "四川省",
+            "terminalUser": "四川泰康医院",
+            "channelName": "四川泰康医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2022-10-07",
+            "installDate": "2022-12-19",
+            "warrantyExpireDate": "2025-09-22"
+          },
+          {
+            "serialNo": "TEGRIS-29488474",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "四川省",
+            "terminalUser": "四川泰康医院",
+            "channelName": "四川泰康医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2022-10-07",
+            "installDate": "2022-12-19",
+            "warrantyExpireDate": "2025-09-22"
+          },
+          {
+            "serialNo": "TEGRIS-29488475",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "四川省",
+            "terminalUser": "四川泰康医院",
+            "channelName": "四川泰康医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2022-10-07",
+            "installDate": "2022-12-19",
+            "warrantyExpireDate": "2025-09-22"
+          },
+          {
+            "serialNo": "TEGRIS-29488476",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "四川省",
+            "terminalUser": "四川泰康医院",
+            "channelName": "四川泰康医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2022-10-07",
+            "installDate": "2022-12-19",
+            "warrantyExpireDate": "2025-09-22"
+          },
+          {
+            "serialNo": "TEGRIS-29488477",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "四川省",
+            "terminalUser": "四川泰康医院",
+            "channelName": "四川泰康医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2022-10-07",
+            "installDate": "2022-12-19",
+            "warrantyExpireDate": "2025-09-22"
+          },
+          {
+            "serialNo": "TEGRIS-29520305",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "宁波市医疗中心李惠利医院",
+            "channelName": "宁波市医疗中心李惠利医院",
+            "salesName": "EAST-SW",
+            "salesDate": "2022-10-14",
+            "installDate": "2022-12-19",
+            "warrantyExpireDate": "2024-08-24"
+          },
+          {
+            "serialNo": "TEGRIS-29520306",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "宁波市医疗中心李惠利医院",
+            "channelName": "宁波市医疗中心李惠利医院",
+            "salesName": "EAST-SW",
+            "salesDate": "2022-10-14",
+            "installDate": "2022-12-19",
+            "warrantyExpireDate": "2028-08-24"
+          },
+          {
+            "serialNo": "TEGRIS-29520307",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "宁波市医疗中心李惠利医院",
+            "channelName": "宁波市医疗中心李惠利医院",
+            "salesName": "EAST-SW",
+            "salesDate": "2022-10-14",
+            "installDate": "2022-12-19",
+            "warrantyExpireDate": "2028-08-24"
+          },
+          {
+            "serialNo": "TEGRIS-29520308",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "宁波市医疗中心李惠利东部医院",
+            "channelName": "宁波市医疗中心李惠利东部医院",
+            "salesName": "EAST-SW",
+            "salesDate": "2022-10-14",
+            "installDate": "2022-12-19",
+            "warrantyExpireDate": "2028-11-30"
+          },
+          {
+            "serialNo": "TEGRIS-29520309",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "宁波市医疗中心李惠利东部医院",
+            "channelName": "宁波市医疗中心李惠利东部医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2022-10-14",
+            "installDate": "2022-12-19",
+            "warrantyExpireDate": "2028-11-30"
+          },
+          {
+            "serialNo": "TEGRIS-29765725",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "山东省",
+            "terminalUser": "山东省公共卫生临床中心",
+            "channelName": "山东省公共卫生临床中心",
+            "salesName": "NORTH-SW",
+            "salesDate": "2022-12-20",
+            "installDate": "2023-01-23",
+            "warrantyExpireDate": "2024-03-07"
+          },
+          {
+            "serialNo": "TEGRIS-30168353",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "江苏省",
+            "terminalUser": "江苏省中西医结合医院",
+            "channelName": "上海万淇生物科技有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2023-04-12",
+            "installDate": "2023-04-28",
+            "warrantyExpireDate": "2026-10-10"
+          },
+          {
+            "serialNo": "TEGRIS-30168354",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "江苏省",
+            "terminalUser": "江苏省中西医结合医院",
+            "channelName": "上海万淇生物科技有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2023-04-12",
+            "installDate": "2023-04-28",
+            "warrantyExpireDate": "2026-10-10"
+          },
+          {
+            "serialNo": "TEGRIS-30168355",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "江苏省",
+            "terminalUser": "江苏省中西医结合医院",
+            "channelName": "上海万淇生物科技有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2023-04-12",
+            "installDate": "2023-04-28",
+            "warrantyExpireDate": "2026-10-10"
+          },
+          {
+            "serialNo": "TEGRIS-30168356",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "江苏省",
+            "terminalUser": "江苏省中西医结合医院",
+            "channelName": "上海万淇生物科技有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2023-04-12",
+            "installDate": "2023-04-28",
+            "warrantyExpireDate": "2026-10-10"
+          },
+          {
+            "serialNo": "TEGRIS-30345741",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "湖南省",
+            "terminalUser": "中南大学湘雅二医院",
+            "channelName": "中南大学湘雅二医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2023-05-31",
+            "installDate": "2023-06-14",
+            "warrantyExpireDate": "2025-08-18"
+          },
+          {
+            "serialNo": "TEGRIS-30345742",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "湖南省",
+            "terminalUser": "中南大学湘雅二医院",
+            "channelName": "中南大学湘雅二医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2023-05-31",
+            "installDate": "2023-06-14",
+            "warrantyExpireDate": "2025-08-18"
+          },
+          {
+            "serialNo": "TEGRIS-30345743",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "湖南省",
+            "terminalUser": "中南大学湘雅二医院",
+            "channelName": "中南大学湘雅二医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2023-05-31",
+            "installDate": "2023-06-14",
+            "warrantyExpireDate": "2025-08-18"
+          },
+          {
+            "serialNo": "TEGRIS-30352522",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "湖南省",
+            "terminalUser": "中南大学湘雅二医院",
+            "channelName": "中南大学湘雅二医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2023-06-01",
+            "installDate": "2023-06-14",
+            "warrantyExpireDate": "2025-08-18"
+          },
+          {
+            "serialNo": "TEGRIS-30428344",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "广州富力医院",
+            "channelName": "广州富力医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2023-06-23",
+            "installDate": "2023-07-11",
+            "warrantyExpireDate": "2025-10-14"
+          },
+          {
+            "serialNo": "TEGRIS-30442870",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "宁波泰康脑科医院",
+            "channelName": "宁波泰甬置业有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2023-06-28",
+            "installDate": "2023-07-31",
+            "warrantyExpireDate": "2026-06-09"
+          },
+          {
+            "serialNo": "TEGRIS-30442871",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "宁波泰康脑科医院",
+            "channelName": "宁波泰甬置业有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2023-06-28",
+            "installDate": "2023-07-31",
+            "warrantyExpireDate": "2026-06-09"
+          },
+          {
+            "serialNo": "TEGRIS-30442872",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "宁波泰康脑科医院",
+            "channelName": "宁波泰甬置业有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2023-06-28",
+            "installDate": "2023-07-31",
+            "warrantyExpireDate": "2026-06-09"
+          },
+          {
+            "serialNo": "TEGRIS-30578939",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "甘肃省",
+            "terminalUser": "甘肃省中医院",
+            "channelName": "西安宏亚安正科技有限公司",
+            "salesName": "WEST-SW",
+            "salesDate": "2023-08-18",
+            "installDate": "2023-09-05",
+            "warrantyExpireDate": "2026-03-14"
+          },
+          {
+            "serialNo": "TEGRIS-30578940",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "甘肃省",
+            "terminalUser": "甘肃省中医院",
+            "channelName": "西安宏亚安正科技有限公司",
+            "salesName": "WEST-SW",
+            "salesDate": "2023-08-18",
+            "installDate": "2023-09-05",
+            "warrantyExpireDate": "2026-03-14"
+          },
+          {
+            "serialNo": "TEGRIS-30578941",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "甘肃省",
+            "terminalUser": "甘肃省中医院",
+            "channelName": "西安宏亚安正科技有限公司",
+            "salesName": "WEST-SW",
+            "salesDate": "2023-08-18",
+            "installDate": "2023-09-05",
+            "warrantyExpireDate": "2026-03-14"
+          },
+          {
+            "serialNo": "TEGRIS-31541534",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "江苏省",
+            "terminalUser": "无锡市人民医院",
+            "channelName": "北京世纪凯盈科学仪器有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2023-09-27",
+            "installDate": "2023-10-25",
+            "warrantyExpireDate": "2026-05-09"
+          },
+          {
+            "serialNo": "TEGRIS-31541535",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "江苏省",
+            "terminalUser": "无锡市人民医院",
+            "channelName": "北京世纪凯盈科学仪器有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2023-09-27",
+            "installDate": "2023-10-25",
+            "warrantyExpireDate": "2026-05-09"
+          },
+          {
+            "serialNo": "TEGRIS-32390908",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "深圳前海泰康医院",
+            "channelName": "深圳前海泰康医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2023-10-11",
+            "installDate": "2023-11-16",
+            "warrantyExpireDate": "2026-07-09"
+          },
+          {
+            "serialNo": "TEGRIS-32390909",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "深圳前海泰康医院",
+            "channelName": "深圳前海泰康医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2023-10-11",
+            "installDate": "2023-11-16",
+            "warrantyExpireDate": "2026-07-09"
+          },
+          {
+            "serialNo": "TEGRIS-32390911",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "深圳前海泰康医院",
+            "channelName": "深圳前海泰康医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2023-10-11",
+            "installDate": "2023-11-16",
+            "warrantyExpireDate": "2026-07-09"
+          },
+          {
+            "serialNo": "TEGRIS-32394893",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "深圳前海泰康医院",
+            "channelName": "深圳前海泰康医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2023-10-12",
+            "installDate": "2023-11-16",
+            "warrantyExpireDate": "2026-07-09"
+          },
+          {
+            "serialNo": "TEGRIS-32444997",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "四川省",
+            "terminalUser": "绵阳市中医医院",
+            "channelName": "成都裕康医疗设备有限公司",
+            "salesName": "WEST-SW",
+            "salesDate": "2023-10-26",
+            "installDate": "2023-11-16",
+            "warrantyExpireDate": "2026-10-17"
+          },
+          {
+            "serialNo": "TEGRIS-32456858",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "深圳前海泰康医院",
+            "channelName": "深圳前海泰康医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2023-10-30",
+            "installDate": "2023-11-16",
+            "warrantyExpireDate": "2026-07-09"
+          },
+          {
+            "serialNo": "TEGRIS-32456859",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "深圳前海泰康医院",
+            "channelName": "深圳前海泰康医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2023-10-30",
+            "installDate": "2023-11-16",
+            "warrantyExpireDate": "2026-07-09"
+          },
+          {
+            "serialNo": "TEGRIS-32456860",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "深圳前海泰康医院",
+            "channelName": "深圳前海泰康医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2023-10-30",
+            "installDate": "2023-11-16",
+            "warrantyExpireDate": "2026-07-09"
+          },
+          {
+            "serialNo": "TEGRIS-32467892",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "浙江大学国际健康医学研究院",
+            "channelName": "杭州星灿生物技术有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2023-11-02",
+            "installDate": "2023-11-29",
+            "warrantyExpireDate": "2025-06-29"
+          },
+          {
+            "serialNo": "TEGRIS-32750263",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "杭州市临安区第一人民医院",
+            "channelName": "杭州大沨医疗器械有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2024-01-24",
+            "installDate": "2024-02-08",
+            "warrantyExpireDate": "2026-02-24"
+          },
+          {
+            "serialNo": "TEGRIS-32698997",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "珠海市人民医院医疗集团",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2024-01-12",
+            "installDate": "2024-03-07",
+            "warrantyExpireDate": "2027-01-08"
+          },
+          {
+            "serialNo": "TEGRIS-32698998",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "珠海市人民医院医疗集团",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2024-01-12",
+            "installDate": "2024-03-07",
+            "warrantyExpireDate": "2027-01-08"
+          },
+          {
+            "serialNo": "TEGRIS-32698999",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "珠海市人民医院医疗集团",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2024-01-12",
+            "installDate": "2024-03-07",
+            "warrantyExpireDate": "2027-01-08"
+          },
+          {
+            "serialNo": "TEGRIS-32699000",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "珠海市人民医院医疗集团",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2024-01-12",
+            "installDate": "2024-03-07",
+            "warrantyExpireDate": "2027-01-08"
+          },
+          {
+            "serialNo": "TEGRIS-32699001",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "珠海市人民医院医疗集团",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2024-01-12",
+            "installDate": "2024-03-07",
+            "warrantyExpireDate": "2027-01-08"
+          },
+          {
+            "serialNo": "TEGRIS-32699002",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "珠海市人民医院医疗集团",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2024-01-12",
+            "installDate": "2024-03-07",
+            "warrantyExpireDate": "2027-01-08"
+          },
+          {
+            "serialNo": "TEGRIS-32869159",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "东莞市人民医院",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2024-02-26",
+            "installDate": "2024-03-14",
+            "warrantyExpireDate": "2026-08-31"
+          },
+          {
+            "serialNo": "TEGRIS-32869160",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "东莞市人民医院",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2024-02-26",
+            "installDate": "2024-03-14",
+            "warrantyExpireDate": "2026-08-31"
+          },
+          {
+            "serialNo": "TEGRIS-32869161",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "广东省人民医院南海医院",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2024-02-26",
+            "installDate": "2024-03-19",
+            "warrantyExpireDate": "2026-05-11"
+          },
+          {
+            "serialNo": "TEGRIS-32869162",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "广东省人民医院南海医院",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2024-02-26",
+            "installDate": "2024-03-19",
+            "warrantyExpireDate": "2026-05-11"
+          },
+          {
+            "serialNo": "TEGRIS-32885897",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "广州市合众汇达医疗科技有限公司",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2024-03-01",
+            "installDate": "2024-03-20",
+            "warrantyExpireDate": "2027-03-23"
+          },
+          {
+            "serialNo": "TEGRIS-32885898",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "广州市合众汇达医疗科技有限公司",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2024-03-01",
+            "installDate": "2024-03-20",
+            "warrantyExpireDate": "2027-03-23"
+          },
+          {
+            "serialNo": "TEGRIS-32885899",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "广州市合众汇达医疗科技有限公司",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2024-03-01",
+            "installDate": "2024-03-20",
+            "warrantyExpireDate": "2027-03-23"
+          },
+          {
+            "serialNo": "TEGRIS-32885900",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "广州市合众汇达医疗科技有限公司",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2024-03-01",
+            "installDate": "2024-03-20",
+            "warrantyExpireDate": "2027-03-23"
+          },
+          {
+            "serialNo": "TEGRIS-32885901",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "广州市合众汇达医疗科技有限公司",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2024-03-01",
+            "installDate": "2024-03-20",
+            "warrantyExpireDate": "2027-03-23"
+          },
+          {
+            "serialNo": "TEGRIS-32885902",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "广东省",
+            "terminalUser": "广州市合众汇达医疗科技有限公司",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2024-03-01",
+            "installDate": "2024-03-20",
+            "warrantyExpireDate": "2027-03-23"
+          },
+          {
+            "serialNo": "TEGRIS-33112964",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "杭州大沨医疗器械有限公司",
+            "channelName": "杭州大沨医疗器械有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2024-05-07",
+            "installDate": "2024-06-17",
+            "warrantyExpireDate": "2026-12-30"
+          },
+          {
+            "serialNo": "TEGRIS-33112965",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "杭州大沨医疗器械有限公司",
+            "channelName": "杭州大沨医疗器械有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2024-05-07",
+            "installDate": "2024-06-17",
+            "warrantyExpireDate": "2026-12-30"
+          },
+          {
+            "serialNo": "TEGRIS-33112966",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "杭州大沨医疗器械有限公司",
+            "channelName": "杭州大沨医疗器械有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2024-05-07",
+            "installDate": "2024-06-17",
+            "warrantyExpireDate": "2026-12-30"
+          },
+          {
+            "serialNo": "TEGRIS-33338959",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "贵州省",
+            "terminalUser": "上海交通大学医学院附属上海儿童医学中心贵州医院",
+            "channelName": "逸佰医疗科技发展（上海）有限公司",
+            "salesName": "WEST-ACT",
+            "salesDate": "2024-07-16",
+            "installDate": "2024-09-10",
+            "warrantyExpireDate": "2027-02-17"
+          },
+          {
+            "serialNo": "TEGRIS-33338960",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "贵州省",
+            "terminalUser": "上海交通大学医学院附属上海儿童医学中心贵州医院",
+            "channelName": "逸佰医疗科技发展（上海）有限公司",
+            "salesName": "WEST-ACT",
+            "salesDate": "2024-07-16",
+            "installDate": "2024-09-10",
+            "warrantyExpireDate": "2027-02-17"
+          },
+          {
+            "serialNo": "TEGRIS-33338961",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "贵州省",
+            "terminalUser": "上海交通大学医学院附属上海儿童医学中心贵州医院",
+            "channelName": "逸佰医疗科技发展（上海）有限公司",
+            "salesName": "WEST-ACT",
+            "salesDate": "2024-07-16",
+            "installDate": "2024-09-10",
+            "warrantyExpireDate": "2027-02-17"
+          },
+          {
+            "serialNo": "TEGRIS-33383726",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "上海市",
+            "terminalUser": "Maquet (Shanghai) Medical Equipment Co",
+            "channelName": "Maquet (Shanghai) Medical Equipment Co",
+            "salesName": "未填写销售",
+            "salesDate": "2024-08-01",
+            "installDate": "2024-09-10",
+            "warrantyExpireDate": "2026-09-09"
+          },
+          {
+            "serialNo": "TEGRIS-33383727",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "上海市",
+            "terminalUser": "Maquet (Shanghai) Medical Equipment Co",
+            "channelName": "Maquet (Shanghai) Medical Equipment Co",
+            "salesName": "未填写销售",
+            "salesDate": "2024-08-01",
+            "installDate": "2024-09-10",
+            "warrantyExpireDate": "2026-09-09"
+          },
+          {
+            "serialNo": "TEGRIS-34082739",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "新昌县人民医院",
+            "channelName": "MAQUET (SHANGHAI)",
+            "salesName": "EAST-SW",
+            "salesDate": "2025-03-19",
+            "installDate": "2025-05-28",
+            "warrantyExpireDate": "2026-11-30"
+          },
+          {
+            "serialNo": "TEGRIS-34082740",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "新昌县人民医院",
+            "channelName": "MAQUET (SHANGHAI)",
+            "salesName": "EAST-SW",
+            "salesDate": "2025-03-19",
+            "installDate": "2025-05-28",
+            "warrantyExpireDate": "2026-11-30"
+          },
+          {
+            "serialNo": "TEGRIS-34706989",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "温州市人民医院娄桥院区",
+            "channelName": "杭州大沨医疗器械有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2025-06-24",
+            "installDate": "2025-07-17",
+            "warrantyExpireDate": "2026-10-09"
+          },
+          {
+            "serialNo": "TEGRIS-34706990",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "温州市人民医院娄桥院区",
+            "channelName": "杭州大沨医疗器械有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2025-06-24",
+            "installDate": "2025-07-17",
+            "warrantyExpireDate": "2026-10-09"
+          },
+          {
+            "serialNo": "TEGRIS-34648412",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "江苏省",
+            "terminalUser": "江南大学附属医院",
+            "channelName": "上药医疗器械（上海）有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2025-06-05",
+            "installDate": "2025-08-06",
+            "warrantyExpireDate": "2027-12-01"
+          },
+          {
+            "serialNo": "TEGRIS-34648548",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "北京市",
+            "terminalUser": "北京凯隆荣锐医疗设备有限公司",
+            "channelName": "北京凯隆荣锐医疗设备有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2025-06-05",
+            "installDate": "2025-08-06",
+            "warrantyExpireDate": "2027-05-23"
+          },
+          {
+            "serialNo": "TEGRIS-34810285",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "上海市",
+            "terminalUser": "上海市闵行区中心医院",
+            "channelName": "上海理雄医疗器械有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2025-07-30",
+            "installDate": "2025-09-04",
+            "warrantyExpireDate": "2027-11-23"
+          },
+          {
+            "serialNo": "TEGRIS-34828725",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "杭州星灿生物技术有限公司",
+            "channelName": "杭州星灿生物技术有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2025-08-08",
+            "installDate": "2025-09-11",
+            "warrantyExpireDate": "2027-03-25"
+          },
+          {
+            "serialNo": "TEGRIS-34828726",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "杭州星灿生物技术有限公司",
+            "channelName": "杭州星灿生物技术有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2025-08-08",
+            "installDate": "2025-09-11",
+            "warrantyExpireDate": "2027-03-25"
+          },
+          {
+            "serialNo": "TEGRIS-35104331",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "北京市",
+            "terminalUser": "北京凯隆荣锐医疗设备有限公司",
+            "channelName": "北京凯隆荣锐医疗设备有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2025-11-20",
+            "installDate": "2025-12-08",
+            "warrantyExpireDate": "2027-06-17"
+          },
+          {
+            "serialNo": "TEGRIS-35104332",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "北京市",
+            "terminalUser": "北京凯隆荣锐医疗设备有限公司",
+            "channelName": "北京凯隆荣锐医疗设备有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2025-11-20",
+            "installDate": "2025-12-08",
+            "warrantyExpireDate": "2027-06-17"
+          },
+          {
+            "serialNo": "TEGRIS-35104333",
+            "productKey": "tegris",
+            "productModel": "VOIP",
+            "quantity": 1,
+            "configDescription": "TEGRIS BASE PC (HW2)",
+            "installProvince": "浙江省",
+            "terminalUser": "杭州星灿生物技术有限公司",
+            "channelName": "杭州星灿生物技术有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2025-11-20",
+            "installDate": "2025-12-08",
+            "warrantyExpireDate": "2027-06-25"
+          }
+        ]
       },
-      {
-            "name": "重庆市",
+      "classic": {
+        "title": "Tegris Dashboard 装机看板",
+        "rankingTitle": "Tegris 用户排名",
+        "modalTitle": "Tegris 一体化手术室项目录入与更新",
+        "totalUnitsLabel": "套 Tegris 系统",
+        "visual": {
+          "type": "image",
+          "src": "assets/tegris-int-or-1.png",
+          "alt": "Tegris integrated operating room system",
+          "tags": [
+            "Tegris VOIP",
+            "Tegris Classic",
+            "TIGERS"
+          ]
+        },
+        "productModels": [
+          "VOIP",
+          "Classic",
+          "TIGERS"
+        ],
+        "lineTotalUnitsLabelTemplate": "套 {line} 系统",
+        "productLineOptions": [],
+        "totalUnits": 112,
+        "quarterUnits": 0,
+        "provinceData": [
+          {
+            "name": "广东省",
+            "value": 20,
+            "latestSite": "华中科技大学协和深圳医院",
+            "latestDate": "2022-12-29",
+            "coord": [
+              113.27,
+              23.13
+            ]
+          },
+          {
+            "name": "上海市",
+            "value": 15,
+            "latestSite": "上海市静安区华东医院",
+            "latestDate": "2022-12-29",
+            "coord": [
+              121.47,
+              31.23
+            ]
+          },
+          {
+            "name": "四川省",
+            "value": 12,
+            "latestSite": "四川思芃商贸有限公司",
+            "latestDate": "2022-12-15",
+            "coord": [
+              104.06,
+              30.67
+            ]
+          },
+          {
+            "name": "山东省",
+            "value": 10,
+            "latestSite": "青岛国林国际贸易有限公司",
+            "latestDate": "2021-11-26",
+            "coord": [
+              117,
+              36.65
+            ]
+          },
+          {
+            "name": "云南省",
+            "value": 8,
+            "latestSite": "昆明医科大学第一附属医院",
+            "latestDate": "2015-11-05",
+            "coord": [
+              102.71,
+              25.04
+            ]
+          },
+          {
+            "name": "北京市",
+            "value": 8,
+            "latestSite": "北京映熹科技有限公司",
+            "latestDate": "2022-09-29",
+            "coord": [
+              116.41,
+              39.9
+            ]
+          },
+          {
+            "name": "浙江省",
+            "value": 7,
+            "latestSite": "浙江大学医学院附属第一医院",
+            "latestDate": "2021-05-27",
+            "coord": [
+              120.15,
+              30.28
+            ]
+          },
+          {
+            "name": "湖北省",
+            "value": 7,
+            "latestSite": "武汉市青山区华润武钢总医院",
+            "latestDate": "2022-12-29",
+            "coord": [
+              114.3,
+              30.59
+            ]
+          },
+          {
+            "name": "福建省",
+            "value": 5,
+            "latestSite": "福建医科大学附属协和医院旗山院区",
+            "latestDate": "2021-06-10",
+            "coord": [
+              119.3,
+              26.08
+            ]
+          },
+          {
+            "name": "江苏省",
+            "value": 4,
+            "latestSite": "南京市浦口医院",
+            "latestDate": "2021-01-13",
+            "coord": [
+              118.76,
+              32.06
+            ]
+          },
+          {
+            "name": "山西省",
+            "value": 4,
+            "latestSite": "山西省心血管病医院",
+            "latestDate": "2021-02-26",
+            "coord": [
+              112.53,
+              37.87
+            ]
+          },
+          {
+            "name": "江西省",
+            "value": 4,
+            "latestSite": "萍乡市人民医院",
+            "latestDate": "2021-06-21",
+            "coord": [
+              115.86,
+              28.68
+            ]
+          },
+          {
+            "name": "甘肃省",
             "value": 2,
-            "latestSite": "重庆大学附属肿瘤医院",
-            "latestDate": "2019-07-30",
+            "latestSite": "解放军联勤保障部队940医院",
+            "latestDate": "2016-06-14",
             "coord": [
-                  106.55,
-                  29.56
+              103.82,
+              36.06
             ]
-      },
-      {
+          },
+          {
+            "name": "贵州省",
+            "value": 2,
+            "latestSite": "盘州市人民医院",
+            "latestDate": "2018-12-04",
+            "coord": [
+              106.71,
+              26.58
+            ]
+          },
+          {
             "name": "天津市",
             "value": 2,
             "latestSite": "天津医科大学第二医院",
-            "latestDate": "2022-11-21",
+            "latestDate": "2022-12-29",
             "coord": [
-                  117.2,
-                  39.12
+              117.2,
+              39.12
             ]
-      },
-      {
-            "name": "河北省",
-            "value": 1,
-            "latestSite": "唐山南湖医院",
-            "latestDate": "2017-11-15",
-            "coord": [
-                  114.48,
-                  38.03
-            ]
-      },
-      {
-            "name": "辽宁省",
-            "value": 1,
-            "latestSite": "大连维特奥康复咨询有限公司",
-            "latestDate": "2016-10-21",
-            "coord": [
-                  123.43,
-                  41.8
-            ]
-      },
-      {
+          },
+          {
             "name": "宁夏回族自治区",
             "value": 1,
             "latestSite": "固原市人民医院",
-            "latestDate": "2015-09-10",
+            "latestDate": "2015-09-30",
             "coord": [
-                  106.27,
-                  38.47
+              106.27,
+              38.47
             ]
-      },
-      {
+          },
+          {
             "name": "海南省",
             "value": 1,
             "latestSite": "海南省人民医院",
-            "latestDate": "2020-03-16",
+            "latestDate": "2020-04-09",
             "coord": [
-                  110.35,
-                  20.02
+              110.35,
+              20.02
             ]
-      }
-],
-    users: [
-      {
+          }
+        ],
+        "users": [
+          {
             "name": "昆明医科大学第一附属医院",
-            "province": "云南",
+            "province": "云南省",
             "value": 8
-      },
-      {
-            "name": "广州市合众汇达医疗科技有限公司",
-            "province": "广东",
-            "value": 8
-      },
-      {
-            "name": "珠海市人民医院医疗集团",
-            "province": "广东",
-            "value": 7
-      },
-      {
-            "name": "深圳前海泰康医院",
-            "province": "广东",
-            "value": 7
-      },
-      {
+          },
+          {
             "name": "四川思芃商贸有限公司",
-            "province": "四川",
+            "province": "四川省",
             "value": 6
-      },
-      {
-            "name": "四川泰康医院",
-            "province": "四川",
-            "value": 5
-      },
-      {
+          },
+          {
             "name": "山东省千佛山医院",
-            "province": "山东",
+            "province": "山东省",
             "value": 4
-      },
-      {
-            "name": "华中科技大学协和深圳医院",
-            "province": "广东",
+          },
+          {
+            "name": "广州泰和肿瘤医院",
+            "province": "广东省",
             "value": 4
-      }
-],
-    partners: [
-      {
-            "name": "广州市合众汇达医疗科技有限公司",
-            "province": "广东",
-            "value": 18
-      },
-      {
-            "name": "杭州首术科技有限公司",
-            "province": "浙江",
-            "value": 7
-      },
-      {
-            "name": "杭州大沨医疗器械有限公司",
-            "province": "浙江",
-            "value": 5
-      },
-      {
-            "name": "逸佰医疗科技发展（上海）有限公司",
-            "province": "贵州",
-            "value": 5
-      },
-      {
-            "name": "上海万淇生物科技有限公司",
-            "province": "江苏",
-            "value": 4
-      },
-      {
-            "name": "广东三鸿医药有限公司",
-            "province": "广东",
-            "value": 4
-      },
-      {
-            "name": "成都裕康医疗设备有限公司",
-            "province": "四川",
-            "value": 4
-      },
-      {
-            "name": "江西利恒医药有限公司",
-            "province": "江西",
+          },
+          {
+            "name": "上海理雄医疗器械有限公司",
+            "province": "上海市",
             "value": 3
-      }
-],
-    updates: [
-      {
-            "date": "11-20",
+          },
+          {
+            "name": "荆州市智慧城市科技股份有限公司",
+            "province": "湖北省",
+            "value": 3
+          },
+          {
+            "name": "上海瑶革医疗设备有限公司",
+            "province": "上海市",
+            "value": 3
+          },
+          {
+            "name": "南昌大学第一附属医院象湖院区",
+            "province": "江西省",
+            "value": 3
+          }
+        ],
+        "partners": [
+          {
+            "name": "广州市合众汇达医疗科技有限公司",
+            "province": "海南省",
+            "value": 10
+          },
+          {
+            "name": "昆明医科大学第一附属医院",
+            "province": "云南省",
+            "value": 8
+          },
+          {
+            "name": "四川思芃商贸有限公司",
+            "province": "四川省",
+            "value": 6
+          },
+          {
+            "name": "山东省千佛山医院",
+            "province": "山东省",
+            "value": 4
+          },
+          {
+            "name": "上海理雄医疗器械有限公司",
+            "province": "上海市",
+            "value": 4
+          },
+          {
+            "name": "广东三鸿医药有限公司",
+            "province": "广东省",
+            "value": 4
+          },
+          {
+            "name": "成都裕康医疗设备有限公司",
+            "province": "宁夏回族自治区",
+            "value": 3
+          },
+          {
+            "name": "广州圣佑贸易有限公司",
+            "province": "广东省",
+            "value": 3
+          }
+        ],
+        "updates": [
+          {
+            "date": "12-29",
             "status": "装机",
-            "text": "杭州星灿生物技术有限公司 完成 Tegris VOIP 装机"
-      },
-      {
-            "date": "11-20",
+            "text": "华中科技大学协和深圳医院 完成 Classic 1 台"
+          },
+          {
+            "date": "12-29",
             "status": "装机",
-            "text": "北京凯隆荣锐医疗设备有限公司 完成 Tegris VOIP 装机"
-      },
-      {
-            "date": "11-20",
+            "text": "华中科技大学协和深圳医院 完成 Classic 1 台"
+          },
+          {
+            "date": "12-29",
             "status": "装机",
-            "text": "北京凯隆荣锐医疗设备有限公司 完成 Tegris VOIP 装机"
-      },
-      {
-            "date": "08-08",
+            "text": "华中科技大学协和深圳医院 完成 Classic 1 台"
+          },
+          {
+            "date": "12-29",
             "status": "装机",
-            "text": "杭州星灿生物技术有限公司 完成 Tegris VOIP 装机"
-      },
-      {
-            "date": "08-08",
+            "text": "天津医科大学第二医院 完成 Classic 1 台"
+          },
+          {
+            "date": "12-29",
             "status": "装机",
-            "text": "杭州星灿生物技术有限公司 完成 Tegris VOIP 装机"
-      },
-      {
-            "date": "07-30",
+            "text": "上海市静安区华东医院 完成 Classic 1 台"
+          },
+          {
+            "date": "12-29",
             "status": "装机",
-            "text": "上海市闵行区中心医院 完成 Tegris VOIP 装机"
-      }
-],
-    monthlyTrend: [
-      {
-            "month": "2025-05",
+            "text": "武汉市青山区华润武钢总医院 完成 Classic 1 台"
+          }
+        ],
+        "monthlyTrend": [
+          {
+            "month": "2022-01",
             "installed": 0
+          },
+          {
+            "month": "2022-02",
+            "installed": 0
+          },
+          {
+            "month": "2022-03",
+            "installed": 0
+          },
+          {
+            "month": "2022-04",
+            "installed": 0
+          },
+          {
+            "month": "2022-05",
+            "installed": 0
+          },
+          {
+            "month": "2022-06",
+            "installed": 0
+          },
+          {
+            "month": "2022-07",
+            "installed": 0
+          },
+          {
+            "month": "2022-08",
+            "installed": 0
+          },
+          {
+            "month": "2022-09",
+            "installed": 5
+          },
+          {
+            "month": "2022-10",
+            "installed": 0
+          },
+          {
+            "month": "2022-11",
+            "installed": 0
+          },
+          {
+            "month": "2022-12",
+            "installed": 13
+          }
+        ],
+        "yearlyTrend": [
+          {
+            "year": "2018",
+            "installed": 10
+          },
+          {
+            "year": "2019",
+            "installed": 15
+          },
+          {
+            "year": "2020",
+            "installed": 13
+          },
+          {
+            "year": "2021",
+            "installed": 20
+          },
+          {
+            "year": "2022",
+            "installed": 18
+          }
+        ],
+        "sourceRecords": [
+          {
+            "serialNo": "TEGRIS-27797090",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "浙江省",
+            "terminalUser": "浙江大学医学院附属第一医院",
+            "channelName": "浙江大学医学院附属第一医院",
+            "salesName": "EAST-ACT",
+            "salesDate": "2021-05-27",
+            "installDate": "2021-05-27",
+            "warrantyExpireDate": ""
+          },
+          {
+            "serialNo": "TEGRIS-21914985",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "宁夏回族自治区",
+            "terminalUser": "固原市人民医院",
+            "channelName": "成都裕康医疗设备有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2015-09-10",
+            "installDate": "2015-09-30",
+            "warrantyExpireDate": "2017-09-29"
+          },
+          {
+            "serialNo": "TEGRIS-22002919",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "云南省",
+            "terminalUser": "昆明医科大学第一附属医院",
+            "channelName": "昆明医科大学第一附属医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2015-10-14",
+            "installDate": "2015-11-05",
+            "warrantyExpireDate": "2019-01-18"
+          },
+          {
+            "serialNo": "TEGRIS-22002920",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "云南省",
+            "terminalUser": "昆明医科大学第一附属医院",
+            "channelName": "昆明医科大学第一附属医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2015-10-14",
+            "installDate": "2015-11-05",
+            "warrantyExpireDate": "2019-01-18"
+          },
+          {
+            "serialNo": "TEGRIS-22002921",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "云南省",
+            "terminalUser": "昆明医科大学第一附属医院",
+            "channelName": "昆明医科大学第一附属医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2015-10-14",
+            "installDate": "2015-11-05",
+            "warrantyExpireDate": "2019-01-18"
+          },
+          {
+            "serialNo": "TEGRIS-22002922",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "云南省",
+            "terminalUser": "昆明医科大学第一附属医院",
+            "channelName": "昆明医科大学第一附属医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2015-10-14",
+            "installDate": "2015-11-05",
+            "warrantyExpireDate": "2019-01-18"
+          },
+          {
+            "serialNo": "TEGRIS-22002923",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "云南省",
+            "terminalUser": "昆明医科大学第一附属医院",
+            "channelName": "昆明医科大学第一附属医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2015-10-14",
+            "installDate": "2015-11-05",
+            "warrantyExpireDate": "2019-01-18"
+          },
+          {
+            "serialNo": "TEGRIS-22002924",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "云南省",
+            "terminalUser": "昆明医科大学第一附属医院",
+            "channelName": "昆明医科大学第一附属医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2015-10-14",
+            "installDate": "2015-11-05",
+            "warrantyExpireDate": "2019-01-18"
+          },
+          {
+            "serialNo": "TEGRIS-22002925",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "云南省",
+            "terminalUser": "昆明医科大学第一附属医院",
+            "channelName": "昆明医科大学第一附属医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2015-10-14",
+            "installDate": "2015-11-05",
+            "warrantyExpireDate": "2019-01-18"
+          },
+          {
+            "serialNo": "TEGRIS-22002926",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "云南省",
+            "terminalUser": "昆明医科大学第一附属医院",
+            "channelName": "昆明医科大学第一附属医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2015-10-14",
+            "installDate": "2015-11-05",
+            "warrantyExpireDate": "2019-01-18"
+          },
+          {
+            "serialNo": "TEGRIS-22007135",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "山东省",
+            "terminalUser": "山东省千佛山医院",
+            "channelName": "山东省千佛山医院",
+            "salesName": "NORTH-SW",
+            "salesDate": "2015-10-15",
+            "installDate": "2015-11-12",
+            "warrantyExpireDate": "2019-01-03"
+          },
+          {
+            "serialNo": "TEGRIS-22007136",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "山东省",
+            "terminalUser": "山东省千佛山医院",
+            "channelName": "山东省千佛山医院",
+            "salesName": "NORTH-SW",
+            "salesDate": "2015-10-15",
+            "installDate": "2015-11-12",
+            "warrantyExpireDate": "2019-01-03"
+          },
+          {
+            "serialNo": "TEGRIS-22023347",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "上海市",
+            "terminalUser": "上海百蔚医疗器械有限公司",
+            "channelName": "上海百蔚医疗器械有限公司",
+            "salesName": "EAST1",
+            "salesDate": "2015-10-22",
+            "installDate": "2015-11-19",
+            "warrantyExpireDate": "2017-11-18"
+          },
+          {
+            "serialNo": "TEGRIS-22097752",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "江门市中心医院",
+            "channelName": "江门市中心医院",
+            "salesName": "SOUTH",
+            "salesDate": "2015-11-27",
+            "installDate": "2015-12-10",
+            "warrantyExpireDate": "2018-07-23"
+          },
+          {
+            "serialNo": "TEGRIS-22098767",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "江门市中心医院",
+            "channelName": "江门市中心医院",
+            "salesName": "SOUTH",
+            "salesDate": "2015-11-30",
+            "installDate": "2015-12-10",
+            "warrantyExpireDate": "2018-07-23"
+          },
+          {
+            "serialNo": "TEGRIS-22377862",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "江苏省",
+            "terminalUser": "南京市第一医院",
+            "channelName": "广州浦天医疗设备有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2016-05-12",
+            "installDate": "2016-05-31",
+            "warrantyExpireDate": "2022-08-30"
+          },
+          {
+            "serialNo": "TEGRIS-22407119",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "甘肃省",
+            "terminalUser": "解放军联勤保障部队940医院",
+            "channelName": "解放军联勤保障部队940医院",
+            "salesName": "NORTH-SW",
+            "salesDate": "2016-05-31",
+            "installDate": "2016-06-14",
+            "warrantyExpireDate": "2018-01-22"
+          },
+          {
+            "serialNo": "TEGRIS-22407120",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "甘肃省",
+            "terminalUser": "解放军联勤保障部队940医院",
+            "channelName": "解放军联勤保障部队940医院",
+            "salesName": "NORTH-SW",
+            "salesDate": "2016-05-31",
+            "installDate": "2016-06-14",
+            "warrantyExpireDate": "2018-01-22"
+          },
+          {
+            "serialNo": "TEGRIS-22407121",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "阳江市人民医院",
+            "channelName": "阳江市人民医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2016-05-31",
+            "installDate": "2016-06-14",
+            "warrantyExpireDate": "2020-04-11"
+          },
+          {
+            "serialNo": "TEGRIS-21747965",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "北京市",
+            "terminalUser": "北京欧意蓝德科技发展有限公司",
+            "channelName": "北京欧意蓝德科技发展有限公司",
+            "salesName": "NORTH",
+            "salesDate": "2015-05-30",
+            "installDate": "2016-06-30",
+            "warrantyExpireDate": "2017-12-29"
+          },
+          {
+            "serialNo": "TEGRIS-22438726",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "山东省",
+            "terminalUser": "山东省千佛山医院",
+            "channelName": "山东省千佛山医院",
+            "salesName": "NORTH",
+            "salesDate": "2016-06-14",
+            "installDate": "2016-07-07",
+            "warrantyExpireDate": "2018-07-06"
+          },
+          {
+            "serialNo": "TEGRIS-22438727",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "山东省",
+            "terminalUser": "山东省千佛山医院",
+            "channelName": "山东省千佛山医院",
+            "salesName": "NORTH",
+            "salesDate": "2016-06-14",
+            "installDate": "2016-07-07",
+            "warrantyExpireDate": "2018-07-06"
+          },
+          {
+            "serialNo": "TEGRIS-22947050",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "上海市",
+            "terminalUser": "上海市静安区华东医院",
+            "channelName": "上海市静安区华东医院",
+            "salesName": "EAST1",
+            "salesDate": "2016-08-23",
+            "installDate": "2016-09-15",
+            "warrantyExpireDate": "2018-11-23"
+          },
+          {
+            "serialNo": "TEGRIS-23037032",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "上海市",
+            "terminalUser": "Final Customer China",
+            "channelName": "Shanghai Dongsong Healthcare &",
+            "salesName": "1G5",
+            "salesDate": "2016-09-15",
+            "installDate": "2016-09-30",
+            "warrantyExpireDate": "2017-09-29"
+          },
+          {
+            "serialNo": "TEGRIS-23489318",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "北京市",
+            "terminalUser": "中国人民解放军总医院第七医学中心",
+            "channelName": "中国人民解放军总医院第七医学中心",
+            "salesName": "NORTH-SW",
+            "salesDate": "2016-10-25",
+            "installDate": "2016-11-10",
+            "warrantyExpireDate": "2020-05-05"
+          },
+          {
+            "serialNo": "TEGRIS-23489319",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "北京市",
+            "terminalUser": "中国人民解放军总医院第七医学中心",
+            "channelName": "中国人民解放军总医院第七医学中心",
+            "salesName": "NORTH-SW",
+            "salesDate": "2016-10-25",
+            "installDate": "2016-11-10",
+            "warrantyExpireDate": "2020-05-05"
+          },
+          {
+            "serialNo": "TEGRIS-23489329",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "深圳市第三人民医院",
+            "channelName": "深圳市第三人民医院",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2016-10-25",
+            "installDate": "2016-11-10",
+            "warrantyExpireDate": "2020-08-13"
+          },
+          {
+            "serialNo": "TEGRIS-23489330",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "南方科技大学医院",
+            "channelName": "南方科技大学医院",
+            "salesName": "SOUTH",
+            "salesDate": "2016-10-25",
+            "installDate": "2016-11-10",
+            "warrantyExpireDate": "2018-11-09"
+          },
+          {
+            "serialNo": "TEGRIS-23544085",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "贵州省",
+            "terminalUser": "盘州市人民医院",
+            "channelName": "盘州市人民医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2016-11-17",
+            "installDate": "2016-11-30",
+            "warrantyExpireDate": "2020-09-04"
+          },
+          {
+            "serialNo": "TEGRIS-23544086",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "上海市",
+            "terminalUser": "上海交通大学医学院附属第九人民医院第三执业点",
+            "channelName": "上海交通大学医学院附属第九人民医院第三执业点",
+            "salesName": "EAST-SW",
+            "salesDate": "2016-11-17",
+            "installDate": "2016-11-30",
+            "warrantyExpireDate": "2018-11-29"
+          },
+          {
+            "serialNo": "TEGRIS-23565860",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "山东省",
+            "terminalUser": "临沂金锣医院",
+            "channelName": "Suzhou MAQUET",
+            "salesName": "GDUMMY",
+            "salesDate": "2016-11-28",
+            "installDate": "2016-12-06",
+            "warrantyExpireDate": "2021-06-09"
+          },
+          {
+            "serialNo": "TEGRIS-23859343",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "珠海市人民医院医疗集团",
+            "channelName": "珠海市人民医院医疗集团",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2017-03-07",
+            "installDate": "2017-04-06",
+            "warrantyExpireDate": "2019-09-14"
+          },
+          {
+            "serialNo": "TEGRIS-23956371",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "四川省",
+            "terminalUser": "成都市核工业四一六医院",
+            "channelName": "成都市核工业四一六医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2017-04-20",
+            "installDate": "2017-04-28",
+            "warrantyExpireDate": "2019-08-01"
+          },
+          {
+            "serialNo": "TEGRIS-24454195",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "山东省",
+            "terminalUser": "青岛市市立医院",
+            "channelName": "青岛市市立医院",
+            "salesName": "NORTH-SW",
+            "salesDate": "2017-10-27",
+            "installDate": "2017-11-16",
+            "warrantyExpireDate": "2019-07-25"
+          },
+          {
+            "serialNo": "TEGRIS-24454196",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "山东省",
+            "terminalUser": "青岛市市立医院",
+            "channelName": "青岛市市立医院",
+            "salesName": "NORTH-SW",
+            "salesDate": "2017-10-27",
+            "installDate": "2017-11-16",
+            "warrantyExpireDate": "2019-07-25"
+          },
+          {
+            "serialNo": "TEGRIS-24469097",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "上海市",
+            "terminalUser": "上海市东方医院",
+            "channelName": "上海市东方医院",
+            "salesName": "EAST-SW",
+            "salesDate": "2017-11-02",
+            "installDate": "2017-11-16",
+            "warrantyExpireDate": "2019-08-06"
+          },
+          {
+            "serialNo": "TEGRIS-24476524",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "上海市",
+            "terminalUser": "上海市东方医院",
+            "channelName": "上海市东方医院",
+            "salesName": "EAST-SW",
+            "salesDate": "2017-11-06",
+            "installDate": "2017-11-16",
+            "warrantyExpireDate": "2019-08-06"
+          },
+          {
+            "serialNo": "TEGRIS-24594199",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "浙江省",
+            "terminalUser": "杭州市丁桥医院",
+            "channelName": "杭州市丁桥医院",
+            "salesName": "EAST-SW",
+            "salesDate": "2017-12-13",
+            "installDate": "2018-01-25",
+            "warrantyExpireDate": "2020-08-08"
+          },
+          {
+            "serialNo": "TEGRIS-24693227",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "浙江省",
+            "terminalUser": "衢州市人民医院",
+            "channelName": "衢州市人民医院",
+            "salesName": "EAST-SW",
+            "salesDate": "2018-02-02",
+            "installDate": "2018-02-22",
+            "warrantyExpireDate": "2021-07-31"
+          },
+          {
+            "serialNo": "TEGRIS-24693228",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "浙江省",
+            "terminalUser": "衢州市人民医院",
+            "channelName": "衢州市人民医院",
+            "salesName": "EAST-SW",
+            "salesDate": "2018-02-02",
+            "installDate": "2018-02-22",
+            "warrantyExpireDate": "2021-07-31"
+          },
+          {
+            "serialNo": "TEGRIS-24693229",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "北京市",
+            "terminalUser": "北京市朝阳区妇幼保健院",
+            "channelName": "上海又诺贸易中心",
+            "salesName": "NORTH-SW",
+            "salesDate": "2018-02-02",
+            "installDate": "2018-02-22",
+            "warrantyExpireDate": "2021-06-02"
+          },
+          {
+            "serialNo": "TEGRIS-24693230",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "北京市",
+            "terminalUser": "北京市朝阳区妇幼保健院",
+            "channelName": "上海又诺贸易中心",
+            "salesName": "NORTH-SW",
+            "salesDate": "2018-02-02",
+            "installDate": "2018-02-22",
+            "warrantyExpireDate": "2021-06-02"
+          },
+          {
+            "serialNo": "TEGRIS-24833281",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "中国医学科学院阜外医院深圳医院",
+            "channelName": "广州圣佑贸易有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2018-04-04",
+            "installDate": "2018-04-27",
+            "warrantyExpireDate": "2021-09-20"
+          },
+          {
+            "serialNo": "TEGRIS-25105312",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "福建省",
+            "terminalUser": "福建医科大学附属第二医院（东海院区）",
+            "channelName": "福建医科大学附属第二医院（东海院区）",
+            "salesName": "EAST-SW",
+            "salesDate": "2018-08-14",
+            "installDate": "2018-08-30",
+            "warrantyExpireDate": "2020-07-08"
+          },
+          {
+            "serialNo": "TEGRIS-24957944",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "四川省",
+            "terminalUser": "成都鹰阁医院",
+            "channelName": "成都鹰阁医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2018-05-24",
+            "installDate": "2018-10-31",
+            "warrantyExpireDate": "2020-11-20"
+          },
+          {
+            "serialNo": "TEGRIS-24957945",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "四川省",
+            "terminalUser": "成都鹰阁医院",
+            "channelName": "成都鹰阁医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2018-05-24",
+            "installDate": "2018-10-31",
+            "warrantyExpireDate": "2020-11-20"
+          },
+          {
+            "serialNo": "TEGRIS-25320310",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "贵州省",
+            "terminalUser": "盘州市人民医院",
+            "channelName": "盘州市人民医院",
+            "salesName": "WEST-SW",
+            "salesDate": "2018-11-15",
+            "installDate": "2018-12-04",
+            "warrantyExpireDate": "2020-09-04"
+          },
+          {
+            "serialNo": "TEGRIS-25429063",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "上海市",
+            "terminalUser": "上海理雄医疗器械有限公司",
+            "channelName": "上海理雄医疗器械有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2019-01-15",
+            "installDate": "2019-02-12",
+            "warrantyExpireDate": "2021-03-28"
+          },
+          {
+            "serialNo": "TEGRIS-25589127",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "山东省",
+            "terminalUser": "威海市中心医院",
+            "channelName": "上海薇奋医疗设备有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2019-04-03",
+            "installDate": "2019-04-18",
+            "warrantyExpireDate": "2021-05-12"
+          },
+          {
+            "serialNo": "TEGRIS-25589128",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "山东省",
+            "terminalUser": "威海市中心医院",
+            "channelName": "上海薇奋医疗设备有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2019-04-03",
+            "installDate": "2019-04-30",
+            "warrantyExpireDate": "2021-05-12"
+          },
+          {
+            "serialNo": "TEGRIS-25602889",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "广州圣佑贸易有限公司",
+            "channelName": "广州圣佑贸易有限公司",
+            "salesName": "SOUTH",
+            "salesDate": "2019-04-10",
+            "installDate": "2019-04-30",
+            "warrantyExpireDate": "2020-11-15"
+          },
+          {
+            "serialNo": "TEGRIS-25824117",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "山西省",
+            "terminalUser": "太原市妇幼保健院",
+            "channelName": "山西精准互联科技发展有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2019-08-08",
+            "installDate": "2019-09-05",
+            "warrantyExpireDate": "2022-05-09"
+          },
+          {
+            "serialNo": "TEGRIS-25881972",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "湖北省",
+            "terminalUser": "荆州市智慧城市科技股份有限公司",
+            "channelName": "荆州市智慧城市科技股份有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2019-09-11",
+            "installDate": "2019-09-24",
+            "warrantyExpireDate": "2021-05-28"
+          },
+          {
+            "serialNo": "TEGRIS-25881973",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "湖北省",
+            "terminalUser": "荆州市智慧城市科技股份有限公司",
+            "channelName": "荆州市智慧城市科技股份有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2019-09-11",
+            "installDate": "2019-09-24",
+            "warrantyExpireDate": "2021-05-28"
+          },
+          {
+            "serialNo": "TEGRIS-25881974",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "湖北省",
+            "terminalUser": "荆州市智慧城市科技股份有限公司",
+            "channelName": "荆州市智慧城市科技股份有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2019-09-11",
+            "installDate": "2019-09-24",
+            "warrantyExpireDate": "2021-05-28"
+          },
+          {
+            "serialNo": "TEGRIS-25882112",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "江苏省",
+            "terminalUser": "常州市中医医院",
+            "channelName": "上海鸿煊医药科技有限公司",
+            "salesName": "EAST1",
+            "salesDate": "2019-09-11",
+            "installDate": "2019-10-10",
+            "warrantyExpireDate": "2021-05-11"
+          },
+          {
+            "serialNo": "TEGRIS-25925643",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "浙江省",
+            "terminalUser": "杭州市儿童医院",
+            "channelName": "杭州首术科技有限公司",
+            "salesName": "EAST2",
+            "salesDate": "2019-10-01",
+            "installDate": "2019-10-29",
+            "warrantyExpireDate": "2021-11-09"
+          },
+          {
+            "serialNo": "TEGRIS-25974372",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "上海市",
+            "terminalUser": "上海理雄医疗器械有限公司",
+            "channelName": "上海理雄医疗器械有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2019-10-22",
+            "installDate": "2019-11-12",
+            "warrantyExpireDate": "2021-05-28"
+          },
+          {
+            "serialNo": "TEGRIS-26012008",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "湖北省",
+            "terminalUser": "国药集团湖北省医疗器械有限公司",
+            "channelName": "国药集团湖北省医疗器械有限公司",
+            "salesName": "EAST2",
+            "salesDate": "2019-11-05",
+            "installDate": "2019-11-21",
+            "warrantyExpireDate": "2021-11-20"
+          },
+          {
+            "serialNo": "TEGRIS-25974371",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "上海市",
+            "terminalUser": "上海理雄医疗器械有限公司",
+            "channelName": "上海理雄医疗器械有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2019-10-22",
+            "installDate": "2019-11-29",
+            "warrantyExpireDate": "2021-05-28"
+          },
+          {
+            "serialNo": "TEGRIS-26074088",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "上海市",
+            "terminalUser": "上海瑶革医疗设备有限公司",
+            "channelName": "上海瑶革医疗设备有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2019-11-28",
+            "installDate": "2019-12-27",
+            "warrantyExpireDate": "2021-12-17"
+          },
+          {
+            "serialNo": "TEGRIS-26074089",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "上海市",
+            "terminalUser": "上海瑶革医疗设备有限公司",
+            "channelName": "上海瑶革医疗设备有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2019-11-28",
+            "installDate": "2019-12-27",
+            "warrantyExpireDate": "2021-12-17"
+          },
+          {
+            "serialNo": "TEGRIS-25929175",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "江西省",
+            "terminalUser": "南昌大学第一附属医院象湖院区",
+            "channelName": "江西利恒医药有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2019-10-02",
+            "installDate": "2020-01-28",
+            "warrantyExpireDate": "2022-11-21"
+          },
+          {
+            "serialNo": "TEGRIS-25929176",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "江西省",
+            "terminalUser": "南昌大学第一附属医院象湖院区",
+            "channelName": "江西利恒医药有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2019-10-02",
+            "installDate": "2020-01-28",
+            "warrantyExpireDate": "2022-11-21"
+          },
+          {
+            "serialNo": "TEGRIS-26151851",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "湖北省",
+            "terminalUser": "泰康同济（武汉）医院",
+            "channelName": "成都裕康医疗设备有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2020-01-17",
+            "installDate": "2020-02-18",
+            "warrantyExpireDate": "2021-10-20"
+          },
+          {
+            "serialNo": "TEGRIS-26151856",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "深圳市人民医院",
+            "channelName": "广州圣佑贸易有限公司",
+            "salesName": "SOUTH",
+            "salesDate": "2020-01-17",
+            "installDate": "2020-02-18",
+            "warrantyExpireDate": "2022-08-15"
+          },
+          {
+            "serialNo": "TEGRIS-26259085",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "江苏省",
+            "terminalUser": "江南大学附属医院",
+            "channelName": "上海加越医疗科技有限公司",
+            "salesName": "EAST1",
+            "salesDate": "2020-03-12",
+            "installDate": "2020-04-09",
+            "warrantyExpireDate": "2021-10-29"
+          },
+          {
+            "serialNo": "TEGRIS-26265673",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "海南省",
+            "terminalUser": "海南省人民医院",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2020-03-16",
+            "installDate": "2020-04-09",
+            "warrantyExpireDate": "2025-12-25"
+          },
+          {
+            "serialNo": "TEGRIS-26574700",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "山西省",
+            "terminalUser": "山西省人民医院",
+            "channelName": "山西省人民医院",
+            "salesName": "NORTH",
+            "salesDate": "2020-07-07",
+            "installDate": "2020-07-30",
+            "warrantyExpireDate": "2022-01-31"
+          },
+          {
+            "serialNo": "TEGRIS-26574701",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "山西省",
+            "terminalUser": "山西省人民医院",
+            "channelName": "山西精准互联科技发展有限公司",
+            "salesName": "NORTH",
+            "salesDate": "2020-07-07",
+            "installDate": "2020-07-30",
+            "warrantyExpireDate": "2022-01-31"
+          },
+          {
+            "serialNo": "TEGRIS-26593348",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "广州市合众汇达医疗科技有限公司",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2020-07-10",
+            "installDate": "2020-08-14",
+            "warrantyExpireDate": "2022-02-27"
+          },
+          {
+            "serialNo": "TEGRIS-25702974",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "江西省",
+            "terminalUser": "南昌大学第一附属医院象湖院区",
+            "channelName": "江西利恒医药有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2019-06-05",
+            "installDate": "2020-08-27",
+            "warrantyExpireDate": "2021-11-15"
+          },
+          {
+            "serialNo": "TEGRIS-27180049",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "浙江省",
+            "terminalUser": "浙江省人民医院",
+            "channelName": "杭州大沨医疗器械有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2020-11-20",
+            "installDate": "2020-12-03",
+            "warrantyExpireDate": "2023-12-30"
+          },
+          {
+            "serialNo": "TEGRIS-27189733",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "四川省",
+            "terminalUser": "成都京东方医院",
+            "channelName": "江西腾步科技有限公司",
+            "salesName": "WEST-ACT",
+            "salesDate": "2020-11-24",
+            "installDate": "2020-12-22",
+            "warrantyExpireDate": "2022-05-30"
+          },
+          {
+            "serialNo": "TEGRIS-27189734",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "四川省",
+            "terminalUser": "成都京东方医院",
+            "channelName": "江西腾步科技有限公司",
+            "salesName": "WEST-ACT",
+            "salesDate": "2020-11-24",
+            "installDate": "2020-12-22",
+            "warrantyExpireDate": "2022-05-30"
+          },
+          {
+            "serialNo": "TEGRIS-25702975",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "江苏省",
+            "terminalUser": "南京市浦口医院",
+            "channelName": "厦门建发高科有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2019-06-05",
+            "installDate": "2021-01-13",
+            "warrantyExpireDate": "2023-11-10"
+          },
+          {
+            "serialNo": "TEGRIS-27274143",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "浙江省",
+            "terminalUser": "浙江中医药大学附属第三医院",
+            "channelName": "杭州首术科技有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2021-01-11",
+            "installDate": "2021-01-29",
+            "warrantyExpireDate": "2022-12-28"
+          },
+          {
+            "serialNo": "TEGRIS-27347598",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "山西省",
+            "terminalUser": "山西省心血管病医院",
+            "channelName": "山西精准互联科技发展有限公司",
+            "salesName": "NORTH-SW",
+            "salesDate": "2021-02-02",
+            "installDate": "2021-02-26",
+            "warrantyExpireDate": "2023-05-19"
+          },
+          {
+            "serialNo": "TEGRIS-27470142",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "上海市",
+            "terminalUser": "上海交通大学医学院附属上海儿童医学中心",
+            "channelName": "逸佰医疗科技发展（上海）有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2021-03-02",
+            "installDate": "2021-03-26",
+            "warrantyExpireDate": "2023-07-13"
+          },
+          {
+            "serialNo": "TEGRIS-27559952",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "广州泰和肿瘤医院",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2021-03-23",
+            "installDate": "2021-04-08",
+            "warrantyExpireDate": "2023-12-09"
+          },
+          {
+            "serialNo": "TEGRIS-27559953",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "广州泰和肿瘤医院",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2021-03-23",
+            "installDate": "2021-04-08",
+            "warrantyExpireDate": "2023-12-09"
+          },
+          {
+            "serialNo": "TEGRIS-27559954",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "广州泰和肿瘤医院",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2021-03-23",
+            "installDate": "2021-04-08",
+            "warrantyExpireDate": "2023-12-09"
+          },
+          {
+            "serialNo": "TEGRIS-27559955",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "广州泰和肿瘤医院",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2021-03-23",
+            "installDate": "2021-04-08",
+            "warrantyExpireDate": "2023-12-09"
+          },
+          {
+            "serialNo": "TEGRIS-27579663",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "福建省",
+            "terminalUser": "晋江市医院",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2021-03-26",
+            "installDate": "2021-04-19",
+            "warrantyExpireDate": "2023-12-26"
+          },
+          {
+            "serialNo": "TEGRIS-27579664",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "福建省",
+            "terminalUser": "晋江市医院",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2021-03-26",
+            "installDate": "2021-04-19",
+            "warrantyExpireDate": "2023-12-26"
+          },
+          {
+            "serialNo": "TEGRIS-27702745",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "福建省",
+            "terminalUser": "福建医科大学附属协和医院旗山院区",
+            "channelName": "厦门象屿速传供应链发展股份有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2021-04-28",
+            "installDate": "2021-06-10",
+            "warrantyExpireDate": "2026-03-11"
+          },
+          {
+            "serialNo": "TEGRIS-27702746",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "福建省",
+            "terminalUser": "福建医科大学附属协和医院旗山院区",
+            "channelName": "厦门象屿速传供应链发展股份有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2021-04-28",
+            "installDate": "2021-06-10",
+            "warrantyExpireDate": "2026-03-11"
+          },
+          {
+            "serialNo": "TEGRIS-27717160",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "江西省",
+            "terminalUser": "萍乡市人民医院",
+            "channelName": "厦门象屿速传供应链发展股份有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2021-05-03",
+            "installDate": "2021-06-21",
+            "warrantyExpireDate": "2023-10-19"
+          },
+          {
+            "serialNo": "TEGRIS-27915703",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
+            "installProvince": "四川省",
+            "terminalUser": "邻水县人民医院",
+            "channelName": "成都裕康医疗设备有限公司",
+            "salesName": "WEST-SW",
+            "salesDate": "2021-06-25",
+            "installDate": "2021-07-23",
+            "warrantyExpireDate": "2026-10-07"
+          },
+          {
+            "serialNo": "TEGRIS-27997264",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "北京市",
+            "terminalUser": "北京福鼎奕隆医疗设备有限公司",
+            "channelName": "北京福鼎奕隆医疗设备有限公司",
+            "salesName": "1G5",
+            "salesDate": "2021-07-16",
+            "installDate": "2021-08-03",
+            "warrantyExpireDate": "2023-02-17"
+          },
+          {
+            "serialNo": "TEGRIS-28251447",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "山东省",
+            "terminalUser": "青岛国林国际贸易有限公司",
+            "channelName": "青岛国林国际贸易有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2021-10-08",
+            "installDate": "2021-11-26",
+            "warrantyExpireDate": "2023-05-25"
+          },
+          {
+            "serialNo": "TEGRIS-28380151",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "北京市",
+            "terminalUser": "北京智诚恒创科技发展有限公司",
+            "channelName": "北京智诚恒创科技发展有限公司",
+            "salesName": "NORTH",
+            "salesDate": "2021-11-12",
+            "installDate": "2021-12-01",
+            "warrantyExpireDate": "2023-06-22"
+          },
+          {
+            "serialNo": "TEGRIS-28444966",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "中山大学附属第七医院（深圳）",
+            "channelName": "广东三鸿医药有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2021-11-30",
+            "installDate": "2021-12-15",
+            "warrantyExpireDate": "2024-02-15"
+          },
+          {
+            "serialNo": "TEGRIS-28429058",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "上海市",
+            "terminalUser": "上海瑶革医疗设备有限公司",
+            "channelName": "上海瑶革医疗设备有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2021-11-25",
+            "installDate": "2021-12-17",
+            "warrantyExpireDate": "2023-09-28"
+          },
+          {
+            "serialNo": "TEGRIS-29240761",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "上海市",
+            "terminalUser": "上海福吉科贸有限公司",
+            "channelName": "上海福吉科贸有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2022-07-18",
+            "installDate": "2022-09-29",
+            "warrantyExpireDate": "2024-04-23"
+          },
+          {
+            "serialNo": "TEGRIS-29240762",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "北京市",
+            "terminalUser": "北京映熹科技有限公司",
+            "channelName": "北京映熹科技有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2022-07-18",
+            "installDate": "2022-09-29",
+            "warrantyExpireDate": "2024-10-18"
+          },
+          {
+            "serialNo": "TEGRIS-29240763",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "天津市",
+            "terminalUser": "天津康汇医院",
+            "channelName": "天津世纪瀛海科技有限公司",
+            "salesName": "NORTH-SW",
+            "salesDate": "2022-07-18",
+            "installDate": "2022-09-29",
+            "warrantyExpireDate": "2026-10-20"
+          },
+          {
+            "serialNo": "TEGRIS-29240764",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "中建投（广东）国际贸易有限公司",
+            "channelName": "中建投（广东）国际贸易有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2022-07-18",
+            "installDate": "2022-09-29",
+            "warrantyExpireDate": "2026-12-02"
+          },
+          {
+            "serialNo": "TEGRIS-29240765",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "湖北省",
+            "terminalUser": "华中科技大学同济医学院附属梨园医院",
+            "channelName": "中建投（广东）国际贸易有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2022-07-18",
+            "installDate": "2022-09-29",
+            "warrantyExpireDate": "2027-01-04"
+          },
+          {
+            "serialNo": "TEGRIS-29240897",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "四川省",
+            "terminalUser": "四川思芃商贸有限公司",
+            "channelName": "四川思芃商贸有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2022-07-18",
+            "installDate": "2022-12-15",
+            "warrantyExpireDate": "2027-06-26"
+          },
+          {
+            "serialNo": "TEGRIS-29240898",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "广州市合众汇达医疗科技有限公司",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2022-07-18",
+            "installDate": "2022-12-15",
+            "warrantyExpireDate": "2027-06-29"
+          },
+          {
+            "serialNo": "TEGRIS-29262006",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "四川省",
+            "terminalUser": "四川思芃商贸有限公司",
+            "channelName": "四川思芃商贸有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2022-07-22",
+            "installDate": "2022-12-15",
+            "warrantyExpireDate": "2027-06-26"
+          },
+          {
+            "serialNo": "TEGRIS-29262007",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "四川省",
+            "terminalUser": "四川思芃商贸有限公司",
+            "channelName": "四川思芃商贸有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2022-07-22",
+            "installDate": "2022-12-15",
+            "warrantyExpireDate": "2027-06-26"
+          },
+          {
+            "serialNo": "TEGRIS-29262008",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "四川省",
+            "terminalUser": "四川思芃商贸有限公司",
+            "channelName": "四川思芃商贸有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2022-07-22",
+            "installDate": "2022-12-15",
+            "warrantyExpireDate": "2027-06-26"
+          },
+          {
+            "serialNo": "TEGRIS-29262009",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "四川省",
+            "terminalUser": "四川思芃商贸有限公司",
+            "channelName": "四川思芃商贸有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2022-07-22",
+            "installDate": "2022-12-15",
+            "warrantyExpireDate": "2027-06-26"
+          },
+          {
+            "serialNo": "TEGRIS-29262010",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "四川省",
+            "terminalUser": "四川思芃商贸有限公司",
+            "channelName": "四川思芃商贸有限公司",
+            "salesName": "GDUMMY",
+            "salesDate": "2022-07-22",
+            "installDate": "2022-12-15",
+            "warrantyExpireDate": "2027-06-26"
+          },
+          {
+            "serialNo": "TEGRIS-29649642",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "华中科技大学协和深圳医院",
+            "channelName": "广东三鸿医药有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2022-11-21",
+            "installDate": "2022-12-29",
+            "warrantyExpireDate": "2025-12-15"
+          },
+          {
+            "serialNo": "TEGRIS-29649643",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "华中科技大学协和深圳医院",
+            "channelName": "广东三鸿医药有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2022-11-21",
+            "installDate": "2022-12-29",
+            "warrantyExpireDate": "2025-12-15"
+          },
+          {
+            "serialNo": "TEGRIS-29649644",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "广东省",
+            "terminalUser": "华中科技大学协和深圳医院",
+            "channelName": "广东三鸿医药有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2022-11-21",
+            "installDate": "2022-12-29",
+            "warrantyExpireDate": "2025-12-15"
+          },
+          {
+            "serialNo": "TEGRIS-29649645",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "天津市",
+            "terminalUser": "天津医科大学第二医院",
+            "channelName": "广州市合众汇达医疗科技有限公司",
+            "salesName": "NORTH-SW",
+            "salesDate": "2022-11-21",
+            "installDate": "2022-12-29",
+            "warrantyExpireDate": "2026-04-12"
+          },
+          {
+            "serialNo": "TEGRIS-29649646",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "上海市",
+            "terminalUser": "上海市静安区华东医院",
+            "channelName": "上海理雄医疗器械有限公司",
+            "salesName": "EAST-SW",
+            "salesDate": "2022-11-21",
+            "installDate": "2022-12-29",
+            "warrantyExpireDate": "2026-03-11"
+          },
+          {
+            "serialNo": "TEGRIS-29649647",
+            "productKey": "tegris",
+            "productModel": "Classic",
+            "quantity": 1,
+            "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
+            "installProvince": "湖北省",
+            "terminalUser": "武汉市青山区华润武钢总医院",
+            "channelName": "中建投（广东）国际贸易有限公司",
+            "salesName": "SOUTH-SW",
+            "salesDate": "2022-11-21",
+            "installDate": "2022-12-29",
+            "warrantyExpireDate": "2026-12-24"
+          }
+        ]
       },
-      {
+      "tigers": {
+        "title": "Tegris Dashboard 装机看板",
+        "rankingTitle": "Tegris 用户排名",
+        "modalTitle": "Tegris 一体化手术室项目录入与更新",
+        "totalUnitsLabel": "套 Tegris 系统",
+        "visual": {
+          "type": "image",
+          "src": "assets/tegris-int-or-1.png",
+          "alt": "Tegris integrated operating room system",
+          "tags": [
+            "Tegris VOIP",
+            "Tegris Classic",
+            "TIGERS"
+          ]
+        },
+        "productModels": [
+          "VOIP",
+          "Classic",
+          "TIGERS"
+        ],
+        "lineTotalUnitsLabelTemplate": "套 {line} 系统",
+        "productLineOptions": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [
+          {
             "month": "2025-06",
-            "installed": 4
-      },
-      {
+            "installed": 0
+          },
+          {
             "month": "2025-07",
-            "installed": 1
-      },
-      {
+            "installed": 0
+          },
+          {
             "month": "2025-08",
-            "installed": 2
-      },
-      {
+            "installed": 0
+          },
+          {
             "month": "2025-09",
             "installed": 0
-      },
-      {
+          },
+          {
             "month": "2025-10",
             "installed": 0
-      },
-      {
+          },
+          {
             "month": "2025-11",
-            "installed": 3
-      },
-      {
+            "installed": 0
+          },
+          {
             "month": "2025-12",
             "installed": 0
-      },
-      {
+          },
+          {
             "month": "2026-01",
             "installed": 0
-      },
-      {
+          },
+          {
             "month": "2026-02",
             "installed": 0
-      },
-      {
+          },
+          {
             "month": "2026-03",
             "installed": 0
-      },
-      {
+          },
+          {
             "month": "2026-04",
             "installed": 0
-      }
-],
-    yearlyTrend: [
-      {
+          },
+          {
+            "month": "2026-05",
+            "installed": 0
+          }
+        ],
+        "yearlyTrend": [
+          {
             "year": "2022",
-            "installed": 39
-      },
-      {
+            "installed": 0
+          },
+          {
             "year": "2023",
-            "installed": 26
-      },
-      {
+            "installed": 0
+          },
+          {
             "year": "2024",
-            "installed": 29
-      },
-      {
+            "installed": 0
+          },
+          {
             "year": "2025",
-            "installed": 16
-      },
-      {
+            "installed": 0
+          },
+          {
             "year": "2026",
             "installed": 0
+          }
+        ],
+        "sourceRecords": []
       }
-],
-    productLineData: {
-      voip: {
-      "totalUnits": 117,
-      "quarterUnits": 0,
-      "provinceData": [
-            {
-                  "name": "广东省",
-                  "value": 31,
-                  "latestSite": "广州富力医院",
-                  "latestDate": "2024-06-28",
-                  "coord": [
-                        113.27,
-                        23.13
-                  ]
-            },
-            {
-                  "name": "浙江省",
-                  "value": 30,
-                  "latestSite": "杭州星灿生物技术有限公司",
-                  "latestDate": "2025-11-20",
-                  "coord": [
-                        120.15,
-                        30.28
-                  ]
-            },
-            {
-                  "name": "江苏省",
-                  "value": 10,
-                  "latestSite": "江南大学附属医院",
-                  "latestDate": "2025-06-05",
-                  "coord": [
-                        118.76,
-                        32.06
-                  ]
-            },
-            {
-                  "name": "北京市",
-                  "value": 8,
-                  "latestSite": "北京凯隆荣锐医疗设备有限公司",
-                  "latestDate": "2025-11-20",
-                  "coord": [
-                        116.41,
-                        39.9
-                  ]
-            },
-            {
-                  "name": "四川省",
-                  "value": 8,
-                  "latestSite": "绵阳市中医医院",
-                  "latestDate": "2023-10-26",
-                  "coord": [
-                        104.06,
-                        30.67
-                  ]
-            },
-            {
-                  "name": "上海市",
-                  "value": 7,
-                  "latestSite": "上海市闵行区中心医院",
-                  "latestDate": "2025-07-30",
-                  "coord": [
-                        121.47,
-                        31.23
-                  ]
-            },
-            {
-                  "name": "湖南省",
-                  "value": 4,
-                  "latestSite": "中南大学湘雅二医院",
-                  "latestDate": "2023-06-01",
-                  "coord": [
-                        112.98,
-                        28.19
-                  ]
-            },
-            {
-                  "name": "甘肃省",
-                  "value": 3,
-                  "latestSite": "甘肃省中医院",
-                  "latestDate": "2023-08-18",
-                  "coord": [
-                        103.82,
-                        36.06
-                  ]
-            },
-            {
-                  "name": "贵州省",
-                  "value": 3,
-                  "latestSite": "上海交通大学医学院附属上海儿童医学中心贵州医院",
-                  "latestDate": "2024-07-16",
-                  "coord": [
-                        106.71,
-                        26.58
-                  ]
-            },
-            {
-                  "name": "湖北省",
-                  "value": 2,
-                  "latestSite": "华中科技大学同济医学院附属协和医院",
-                  "latestDate": "2018-07-26",
-                  "coord": [
-                        114.3,
-                        30.59
-                  ]
-            },
-            {
-                  "name": "重庆市",
-                  "value": 2,
-                  "latestSite": "重庆大学附属肿瘤医院",
-                  "latestDate": "2019-07-30",
-                  "coord": [
-                        106.55,
-                        29.56
-                  ]
-            },
-            {
-                  "name": "辽宁省",
-                  "value": 1,
-                  "latestSite": "大连维特奥康复咨询有限公司",
-                  "latestDate": "2016-10-21",
-                  "coord": [
-                        123.43,
-                        41.8
-                  ]
-            },
-            {
-                  "name": "河北省",
-                  "value": 1,
-                  "latestSite": "唐山南湖医院",
-                  "latestDate": "2017-11-15",
-                  "coord": [
-                        114.48,
-                        38.03
-                  ]
-            },
-            {
-                  "name": "江西省",
-                  "value": 1,
-                  "latestSite": "九江学院第二附属医院",
-                  "latestDate": "2022-08-26",
-                  "coord": [
-                        115.86,
-                        28.68
-                  ]
-            },
-            {
-                  "name": "山东省",
-                  "value": 1,
-                  "latestSite": "山东省公共卫生临床中心",
-                  "latestDate": "2022-12-20",
-                  "coord": [
-                        117.0,
-                        36.65
-                  ]
-            }
-      ],
-      "users": [
-            {
-                  "name": "深圳前海泰康医院",
-                  "province": "广东",
-                  "value": 7
-            },
-            {
-                  "name": "广州市合众汇达医疗科技有限公司",
-                  "province": "广东",
-                  "value": 6
-            },
-            {
-                  "name": "珠海市人民医院医疗集团",
-                  "province": "广东",
-                  "value": 6
-            },
-            {
-                  "name": "四川泰康医院",
-                  "province": "四川",
-                  "value": 5
-            },
-            {
-                  "name": "中南大学湘雅二医院",
-                  "province": "湖南",
-                  "value": 4
-            },
-            {
-                  "name": "江苏省中西医结合医院",
-                  "province": "江苏",
-                  "value": 4
-            },
-            {
-                  "name": "首都医科大学宣武医院",
-                  "province": "北京",
-                  "value": 4
-            },
-            {
-                  "name": "广州富力医院",
-                  "province": "广东",
-                  "value": 4
-            }
-      ],
-      "partners": [
-            {
-                  "name": "广州市合众汇达医疗科技有限公司",
-                  "province": "广东",
-                  "value": 10
-            },
-            {
-                  "name": "杭州首术科技有限公司",
-                  "province": "浙江",
-                  "value": 5
-            },
-            {
-                  "name": "上海万淇生物科技有限公司",
-                  "province": "江苏",
-                  "value": 4
-            },
-            {
-                  "name": "杭州大沨医疗器械有限公司",
-                  "province": "浙江",
-                  "value": 4
-            },
-            {
-                  "name": "逸佰医疗科技发展（上海）有限公司",
-                  "province": "贵州",
-                  "value": 4
-            },
-            {
-                  "name": "西安宏亚安正科技有限公司",
-                  "province": "甘肃",
-                  "value": 3
-            },
-            {
-                  "name": "宁波泰甬置业有限公司",
-                  "province": "浙江",
-                  "value": 3
-            },
-            {
-                  "name": "北京世纪凯盈科学仪器有限公司",
-                  "province": "江苏",
-                  "value": 2
-            }
-      ],
-      "updates": [
-            {
-                  "date": "11-20",
-                  "status": "装机",
-                  "text": "杭州星灿生物技术有限公司 完成 Tegris VOIP 装机"
-            },
-            {
-                  "date": "11-20",
-                  "status": "装机",
-                  "text": "北京凯隆荣锐医疗设备有限公司 完成 Tegris VOIP 装机"
-            },
-            {
-                  "date": "11-20",
-                  "status": "装机",
-                  "text": "北京凯隆荣锐医疗设备有限公司 完成 Tegris VOIP 装机"
-            },
-            {
-                  "date": "08-08",
-                  "status": "装机",
-                  "text": "杭州星灿生物技术有限公司 完成 Tegris VOIP 装机"
-            },
-            {
-                  "date": "08-08",
-                  "status": "装机",
-                  "text": "杭州星灿生物技术有限公司 完成 Tegris VOIP 装机"
-            },
-            {
-                  "date": "07-30",
-                  "status": "装机",
-                  "text": "上海市闵行区中心医院 完成 Tegris VOIP 装机"
-            }
-      ],
-      "monthlyTrend": [
-            {
-                  "month": "2025-05",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-06",
-                  "installed": 4
-            },
-            {
-                  "month": "2025-07",
-                  "installed": 1
-            },
-            {
-                  "month": "2025-08",
-                  "installed": 2
-            },
-            {
-                  "month": "2025-09",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-10",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-11",
-                  "installed": 3
-            },
-            {
-                  "month": "2025-12",
-                  "installed": 0
-            },
-            {
-                  "month": "2026-01",
-                  "installed": 0
-            },
-            {
-                  "month": "2026-02",
-                  "installed": 0
-            },
-            {
-                  "month": "2026-03",
-                  "installed": 0
-            },
-            {
-                  "month": "2026-04",
-                  "installed": 0
-            }
-      ],
-      "yearlyTrend": [
-            {
-                  "year": "2022",
-                  "installed": 18
-            },
-            {
-                  "year": "2023",
-                  "installed": 26
-            },
-            {
-                  "year": "2024",
-                  "installed": 29
-            },
-            {
-                  "year": "2025",
-                  "installed": 16
-            },
-            {
-                  "year": "2026",
-                  "installed": 0
-            }
-      ]
-},
-      classic: {
-      "totalUnits": 115,
-      "quarterUnits": 0,
-      "provinceData": [
-            {
-                  "name": "广东省",
-                  "value": 20,
-                  "latestSite": "华中科技大学协和深圳医院",
-                  "latestDate": "2022-11-21",
-                  "coord": [
-                        113.27,
-                        23.13
-                  ]
-            },
-            {
-                  "name": "上海市",
-                  "value": 15,
-                  "latestSite": "上海市静安区华东医院",
-                  "latestDate": "2022-11-21",
-                  "coord": [
-                        121.47,
-                        31.23
-                  ]
-            },
-            {
-                  "name": "四川省",
-                  "value": 12,
-                  "latestSite": "四川思芃商贸有限公司",
-                  "latestDate": "2022-07-22",
-                  "coord": [
-                        104.06,
-                        30.67
-                  ]
-            },
-            {
-                  "name": "山东省",
-                  "value": 10,
-                  "latestSite": "青岛国林国际贸易有限公司",
-                  "latestDate": "2021-10-08",
-                  "coord": [
-                        117.0,
-                        36.65
-                  ]
-            },
-            {
-                  "name": "北京市",
-                  "value": 8,
-                  "latestSite": "北京映熹科技有限公司",
-                  "latestDate": "2022-07-18",
-                  "coord": [
-                        116.41,
-                        39.9
-                  ]
-            },
-            {
-                  "name": "云南省",
-                  "value": 8,
-                  "latestSite": "昆明医科大学第一附属医院",
-                  "latestDate": "2015-10-14",
-                  "coord": [
-                        102.71,
-                        25.04
-                  ]
-            },
-            {
-                  "name": "湖北省",
-                  "value": 7,
-                  "latestSite": "武汉市青山区华润武钢总医院",
-                  "latestDate": "2022-11-21",
-                  "coord": [
-                        114.3,
-                        30.59
-                  ]
-            },
-            {
-                  "name": "浙江省",
-                  "value": 7,
-                  "latestSite": "浙江大学医学院附属第一医院",
-                  "latestDate": "2021-05-27",
-                  "coord": [
-                        120.15,
-                        30.28
-                  ]
-            },
-            {
-                  "name": "福建省",
-                  "value": 5,
-                  "latestSite": "福建医科大学附属协和医院旗山院区",
-                  "latestDate": "2021-04-28",
-                  "coord": [
-                        119.3,
-                        26.08
-                  ]
-            },
-            {
-                  "name": "山西省",
-                  "value": 4,
-                  "latestSite": "山西省心血管病医院",
-                  "latestDate": "2021-02-02",
-                  "coord": [
-                        112.53,
-                        37.87
-                  ]
-            },
-            {
-                  "name": "江苏省",
-                  "value": 4,
-                  "latestSite": "江南大学附属医院",
-                  "latestDate": "2020-03-12",
-                  "coord": [
-                        118.76,
-                        32.06
-                  ]
-            },
-            {
-                  "name": "江西省",
-                  "value": 4,
-                  "latestSite": "萍乡市人民医院",
-                  "latestDate": "2021-05-03",
-                  "coord": [
-                        115.86,
-                        28.68
-                  ]
-            },
-            {
-                  "name": "贵州省",
-                  "value": 2,
-                  "latestSite": "盘州市人民医院",
-                  "latestDate": "2018-11-15",
-                  "coord": [
-                        106.71,
-                        26.58
-                  ]
-            },
-            {
-                  "name": "甘肃省",
-                  "value": 2,
-                  "latestSite": "解放军联勤保障部队940医院",
-                  "latestDate": "2016-05-31",
-                  "coord": [
-                        103.82,
-                        36.06
-                  ]
-            },
-            {
-                  "name": "天津市",
-                  "value": 2,
-                  "latestSite": "天津医科大学第二医院",
-                  "latestDate": "2022-11-21",
-                  "coord": [
-                        117.2,
-                        39.12
-                  ]
-            },
-            {
-                  "name": "宁夏回族自治区",
-                  "value": 1,
-                  "latestSite": "固原市人民医院",
-                  "latestDate": "2015-09-10",
-                  "coord": [
-                        106.27,
-                        38.47
-                  ]
-            },
-            {
-                  "name": "海南省",
-                  "value": 1,
-                  "latestSite": "海南省人民医院",
-                  "latestDate": "2020-03-16",
-                  "coord": [
-                        110.35,
-                        20.02
-                  ]
-            }
-      ],
-      "users": [
-            {
-                  "name": "昆明医科大学第一附属医院",
-                  "province": "云南",
-                  "value": 8
-            },
-            {
-                  "name": "四川思芃商贸有限公司",
-                  "province": "四川",
-                  "value": 6
-            },
-            {
-                  "name": "广州泰和肿瘤医院",
-                  "province": "广东",
-                  "value": 4
-            },
-            {
-                  "name": "山东省千佛山医院",
-                  "province": "山东",
-                  "value": 4
-            },
-            {
-                  "name": "南昌大学第一附属医院象湖院区",
-                  "province": "江西",
-                  "value": 3
-            },
-            {
-                  "name": "华中科技大学协和深圳医院",
-                  "province": "广东",
-                  "value": 3
-            },
-            {
-                  "name": "上海瑶革医疗设备有限公司",
-                  "province": "上海",
-                  "value": 3
-            },
-            {
-                  "name": "荆州市智慧城市科技股份有限公司",
-                  "province": "湖北",
-                  "value": 3
-            }
-      ],
-      "partners": [
-            {
-                  "name": "广州市合众汇达医疗科技有限公司",
-                  "province": "广东",
-                  "value": 8
-            },
-            {
-                  "name": "广东三鸿医药有限公司",
-                  "province": "广东",
-                  "value": 4
-            },
-            {
-                  "name": "成都裕康医疗设备有限公司",
-                  "province": "四川",
-                  "value": 3
-            },
-            {
-                  "name": "山西精准互联科技发展有限公司",
-                  "province": "山西",
-                  "value": 3
-            },
-            {
-                  "name": "江西利恒医药有限公司",
-                  "province": "江西",
-                  "value": 3
-            },
-            {
-                  "name": "厦门象屿速传供应链发展股份有限公司",
-                  "province": "福建",
-                  "value": 3
-            },
-            {
-                  "name": "中建投（广东）国际贸易有限公司",
-                  "province": "湖北",
-                  "value": 2
-            },
-            {
-                  "name": "上海又诺贸易中心",
-                  "province": "北京",
-                  "value": 2
-            }
-      ],
-      "updates": [
-            {
-                  "date": "11-21",
-                  "status": "装机",
-                  "text": "武汉市青山区华润武钢总医院 完成 Tegris Classic 装机"
-            },
-            {
-                  "date": "11-21",
-                  "status": "装机",
-                  "text": "上海市静安区华东医院 完成 Tegris Classic 装机"
-            },
-            {
-                  "date": "11-21",
-                  "status": "装机",
-                  "text": "天津医科大学第二医院 完成 Tegris Classic 装机"
-            },
-            {
-                  "date": "11-21",
-                  "status": "装机",
-                  "text": "华中科技大学协和深圳医院 完成 Tegris Classic 装机"
-            },
-            {
-                  "date": "11-21",
-                  "status": "装机",
-                  "text": "华中科技大学协和深圳医院 完成 Tegris Classic 装机"
-            },
-            {
-                  "date": "11-21",
-                  "status": "装机",
-                  "text": "华中科技大学协和深圳医院 完成 Tegris Classic 装机"
-            }
-      ],
-      "monthlyTrend": [
-            {
-                  "month": "2025-05",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-06",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-07",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-08",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-09",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-10",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-11",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-12",
-                  "installed": 0
-            },
-            {
-                  "month": "2026-01",
-                  "installed": 0
-            },
-            {
-                  "month": "2026-02",
-                  "installed": 0
-            },
-            {
-                  "month": "2026-03",
-                  "installed": 0
-            },
-            {
-                  "month": "2026-04",
-                  "installed": 0
-            }
-      ],
-      "yearlyTrend": [
-            {
-                  "year": "2022",
-                  "installed": 21
-            },
-            {
-                  "year": "2023",
-                  "installed": 0
-            },
-            {
-                  "year": "2024",
-                  "installed": 0
-            },
-            {
-                  "year": "2025",
-                  "installed": 0
-            },
-            {
-                  "year": "2026",
-                  "installed": 0
-            }
-      ]
-},
-      tigers: {
-      "totalUnits": 0,
-      "quarterUnits": 0,
-      "provinceData": [],
-      "users": [],
-      "partners": [],
-      "updates": [],
-      "monthlyTrend": [
-            {
-                  "month": "2025-05",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-06",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-07",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-08",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-09",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-10",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-11",
-                  "installed": 0
-            },
-            {
-                  "month": "2025-12",
-                  "installed": 0
-            },
-            {
-                  "month": "2026-01",
-                  "installed": 0
-            },
-            {
-                  "month": "2026-02",
-                  "installed": 0
-            },
-            {
-                  "month": "2026-03",
-                  "installed": 0
-            },
-            {
-                  "month": "2026-04",
-                  "installed": 0
-            }
-      ],
-      "yearlyTrend": [
-            {
-                  "year": "2022",
-                  "installed": 0
-            },
-            {
-                  "year": "2023",
-                  "installed": 0
-            },
-            {
-                  "year": "2024",
-                  "installed": 0
-            },
-            {
-                  "year": "2025",
-                  "installed": 0
-            },
-            {
-                  "year": "2026",
-                  "installed": 0
-            }
-      ]
-}
     }
   },
-  icMic: {
-    title: "IC MIC Dashboard 装机看板",
-    rankingTitle: "IC MIC 用户排名",
-    modalTitle: "IC MIC 项目录入与更新",
-    totalUnitsLabel: "台 IC MIC 设备",
-    visual: {
-      type: "image",
-      src: "assets/ic-mic-dashboard.jpg",
-      alt: "Getinge IC MIC washer disinfector"
+  "icMic": {
+    "title": "IC MIC Dashboard 装机看板",
+    "rankingTitle": "IC MIC 用户排名",
+    "modalTitle": "IC MIC 项目录入与更新",
+    "totalUnitsLabel": "台 IC MIC 设备",
+    "visual": {
+      "type": "image",
+      "src": "assets/ic-mic-dashboard.jpg",
+      "alt": "Getinge IC MIC washer disinfector"
     },
-    productModels: ["S600", "Novito"],
-    lineTotalUnitsLabelTemplate: "台 {line} 设备",
-    productLineOptions: [
-      { value: "all", label: "全部 IC MIC" },
-      { value: "s600", label: "S600" },
-      { value: "novito", label: "Novito" }
+    "productModels": [
+      "S600",
+      "Novito"
     ],
-    provinceData: [
-      { name: "上海市", value: 24, latestSite: "上海交通大学医学院附属仁济医院", latestDate: "2026-04-20", coord: [121.47, 31.23] },
-      { name: "浙江省", value: 21, latestSite: "浙江省人民医院朝晖院区", latestDate: "2026-04-14", coord: [120.15, 30.28] },
-      { name: "江苏省", value: 19, latestSite: "江苏省人民医院浦口分院", latestDate: "2026-04-06", coord: [118.76, 32.06] },
-      { name: "广东省", value: 17, latestSite: "南方医科大学南方医院", latestDate: "2026-03-30", coord: [113.27, 23.13] },
-      { name: "四川省", value: 14, latestSite: "成都市第三人民医院", latestDate: "2026-03-24", coord: [104.06, 30.67] },
-      { name: "湖北省", value: 12, latestSite: "湖北省妇幼保健院光谷院区", latestDate: "2026-03-13", coord: [114.3, 30.59] },
-      { name: "湖南省", value: 11, latestSite: "湖南省肿瘤医院", latestDate: "2026-03-02", coord: [112.98, 28.19] },
-      { name: "重庆市", value: 10, latestSite: "重庆大学附属肿瘤医院", latestDate: "2026-02-22", coord: [106.55, 29.56] },
-      { name: "福建省", value: 8, latestSite: "福建省立医院金山院区", latestDate: "2026-02-08", coord: [119.3, 26.08] },
-      { name: "安徽省", value: 7, latestSite: "安徽省立医院南区", latestDate: "2026-01-29", coord: [117.28, 31.86] },
-      { name: "广西壮族自治区", value: 6, latestSite: "柳州市人民医院", latestDate: "2026-01-16", coord: [108.32, 22.82] },
-      { name: "云南省", value: 5, latestSite: "昆明市延安医院", latestDate: "2025-12-27", coord: [102.71, 25.04] },
-      { name: "贵州省", value: 4, latestSite: "贵阳市第一人民医院", latestDate: "2025-12-15", coord: [106.71, 26.58] },
-      { name: "江西省", value: 4, latestSite: "南昌市第一医院", latestDate: "2025-11-29", coord: [115.86, 28.68] },
-      { name: "海南省", value: 3, latestSite: "三亚中心医院", latestDate: "2025-11-10", coord: [110.35, 20.02] }
+    "lineTotalUnitsLabelTemplate": "台 {line} 设备",
+    "productLineOptions": [
+      {
+        "value": "all",
+        "label": "全部 IC MIC"
+      },
+      {
+        "value": "s600",
+        "label": "S600"
+      },
+      {
+        "value": "novito",
+        "label": "Novito"
+      }
     ],
-    users: [
-      { name: "上海交通大学医学院附属仁济医院", province: "上海", value: 8 },
-      { name: "浙江省人民医院", province: "浙江", value: 7 },
-      { name: "江苏省人民医院", province: "江苏", value: 6 },
-      { name: "南方医科大学南方医院", province: "广东", value: 6 },
-      { name: "成都市第三人民医院", province: "四川", value: 5 },
-      { name: "湖北省妇幼保健院", province: "湖北", value: 4 },
-      { name: "湖南省肿瘤医院", province: "湖南", value: 4 },
-      { name: "重庆大学附属肿瘤医院", province: "重庆", value: 3 }
-    ],
-    partners: [
-      { name: "华东 CSSD 设备服务商", province: "沪苏浙", value: 33 },
-      { name: "南区感染控制解决方案伙伴", province: "粤桂琼", value: 26 },
-      { name: "西南消毒供应中心联盟", province: "川渝云贵", value: 23 },
-      { name: "华中院感工程渠道", province: "鄂湘赣", value: 21 },
-      { name: "福建消供设备有限公司", province: "福建", value: 8 },
-      { name: "安徽洁净供应室伙伴", province: "安徽", value: 7 }
-    ],
-    updates: [
-      { date: "04-20", status: "装机", text: "上海仁济医院新增 IC MIC 清洗消毒设备 3 台" },
-      { date: "04-14", status: "签约", text: "浙江省人民医院确认 CSSD 扩容项目" },
-      { date: "04-06", status: "装机", text: "江苏省人民医院浦口分院完成 MIC 设备验收" },
-      { date: "03-30", status: "装机", text: "南方医科大学南方医院完成 IC 产线联调" },
-      { date: "03-24", status: "签约", text: "成都市第三人民医院新增清洗消毒中心配置" },
-      { date: "03-13", status: "装机", text: "湖北省妇幼保健院光谷院区完成交付" }
-    ],
-    monthlyTrend: [
-      { month: "2025-05", installed: 8 },
-      { month: "2025-06", installed: 9 },
-      { month: "2025-07", installed: 8 },
-      { month: "2025-08", installed: 11 },
-      { month: "2025-09", installed: 9 },
-      { month: "2025-10", installed: 12 },
-      { month: "2025-11", installed: 10 },
-      { month: "2025-12", installed: 13 },
-      { month: "2026-01", installed: 10 },
-      { month: "2026-02", installed: 11 },
-      { month: "2026-03", installed: 15 },
-      { month: "2026-04", installed: 13 }
-    ],
-    yearlyTrend: [
-      { year: "2022", installed: 24 },
-      { year: "2023", installed: 32 },
-      { year: "2024", installed: 39 },
-      { year: "2025", installed: 45 },
-      { year: "2026", installed: 25 }
-    ]
+    "provinceData": [],
+    "users": [],
+    "partners": [],
+    "updates": [],
+    "monthlyTrend": [],
+    "yearlyTrend": [],
+    "totalUnits": 0,
+    "quarterUnits": 0,
+    "sourceRecords": [],
+    "productLineData": {
+      "s600": {
+        "title": "IC MIC Dashboard 装机看板",
+        "rankingTitle": "IC MIC 用户排名",
+        "modalTitle": "IC MIC 项目录入与更新",
+        "totalUnitsLabel": "台 IC MIC 设备",
+        "visual": {
+          "type": "image",
+          "src": "assets/ic-mic-dashboard.jpg",
+          "alt": "Getinge IC MIC washer disinfector"
+        },
+        "productModels": [
+          "S600",
+          "Novito"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 设备",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
+      },
+      "novito": {
+        "title": "IC MIC Dashboard 装机看板",
+        "rankingTitle": "IC MIC 用户排名",
+        "modalTitle": "IC MIC 项目录入与更新",
+        "totalUnitsLabel": "台 IC MIC 设备",
+        "visual": {
+          "type": "image",
+          "src": "assets/ic-mic-dashboard.jpg",
+          "alt": "Getinge IC MIC washer disinfector"
+        },
+        "productModels": [
+          "S600",
+          "Novito"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 设备",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": []
+      }
+    }
   }
 };
-
-const provinceNames = [
-  "上海市", "浙江省", "江苏省", "广东省", "四川省", "湖北省", "湖南省", "重庆市", "福建省", "安徽省",
-  "广西壮族自治区", "云南省", "贵州省", "江西省", "海南省", "北京市", "天津市", "河北省", "山西省",
-  "内蒙古自治区", "辽宁省", "吉林省", "黑龙江省", "山东省", "河南省", "西藏自治区", "陕西省", "甘肃省",
-  "青海省", "宁夏回族自治区", "新疆维吾尔自治区"
-];
 
 const provinceCoordinates = {
   "上海市": [121.47, 31.23],
@@ -1421,6 +7530,8 @@ const provinceCoordinates = {
   "宁夏回族自治区": [106.27, 38.47],
   "新疆维吾尔自治区": [87.62, 43.82]
 };
+
+const provinceNames = Object.keys(provinceCoordinates);
 
 let currentDashboardKey = "magnus1180";
 let currentProductLineKey = "all";
@@ -1664,7 +7775,14 @@ async function saveDashboardData(nextDashboards) {
 }
 
 function allLoginUsers() {
-  return [...defaultUsers, ...getImportedUsers()];
+  const usersByName = new Map();
+  [...defaultUsers, ...getImportedUsers()].forEach((user) => {
+    const key = normalizeCredential(user.username).toLowerCase();
+    if (key) {
+      usersByName.set(key, user);
+    }
+  });
+  return [...usersByName.values()];
 }
 
 function getAuthenticatedUser() {
@@ -1682,6 +7800,25 @@ function setAuthClasses(isAuthenticated) {
 
 function setLoginMessage(message, type = "error") {
   const target = document.querySelector("#loginMessage");
+  target.textContent = message;
+  target.classList.toggle("success", type === "success");
+}
+
+function isAdminUser(user) {
+  const text = `${user?.username || ""} ${user?.displayName || ""} ${user?.role || ""} ${user?.position || ""}`.toLowerCase();
+  return normalizeCredential(user?.username).toLowerCase() === "maquet"
+    || text.includes("系统管理员")
+    || text.includes("admin");
+}
+
+function renderAdminTools() {
+  const tools = document.querySelector("#adminUserTools");
+  if (!tools) return;
+  tools.hidden = !isAdminUser(getAuthenticatedUser());
+}
+
+function setPasswordMessage(message, type = "error") {
+  const target = document.querySelector("#passwordMessage");
   target.textContent = message;
   target.classList.toggle("success", type === "success");
 }
@@ -1705,6 +7842,7 @@ function setAuthenticatedUser(user) {
   }));
   setAuthClasses(true);
   renderUserProfile();
+  renderAdminTools();
   initializeDashboardApp();
 }
 
@@ -1712,6 +7850,7 @@ function clearAuthenticatedUser() {
   sessionStorage.removeItem(authSessionStorageKey);
   setAuthClasses(false);
   renderUserProfile();
+  renderAdminTools();
   document.querySelector("#loginPassword").value = "";
   setLoginMessage("已退出登录，请重新输入账号密码。");
   setTimeout(() => document.querySelector("#loginUsername").focus(), 0);
@@ -1731,6 +7870,61 @@ function renderUserProfile() {
 
   displayNameTarget.textContent = importedUser?.displayName || user?.displayName || user?.username || "--";
   positionTarget.textContent = importedUser?.role || user?.role || "授权用户";
+}
+
+function showPasswordModal() {
+  document.querySelector("#passwordForm").reset();
+  setPasswordMessage("");
+  document.querySelector("#passwordModal").hidden = false;
+  setTimeout(() => document.querySelector("#newPassword").focus(), 0);
+}
+
+function hidePasswordModal() {
+  document.querySelector("#passwordModal").hidden = true;
+}
+
+async function updateCurrentUserPassword(password) {
+  const sessionUser = getAuthenticatedUser();
+  if (!sessionUser?.username) {
+    throw new Error("请先登录后再修改密码。");
+  }
+
+  const response = await fetch(authUsersApiEndpoint, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      username: sessionUser.username,
+      password
+    })
+  });
+
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    throw new Error(payload.error || "密码更新失败。");
+  }
+
+  const updatedUsers = Array.isArray(payload.users) ? payload.users : [];
+  if (updatedUsers.length) {
+    importedUsersCache = updatedUsers;
+    setLocalImportedUsers(updatedUsers);
+    authUsersBackendAvailable = true;
+  } else {
+    const nextUsers = allLoginUsers().map((user) => (
+      normalizeCredential(user.username).toLowerCase() === normalizeCredential(sessionUser.username).toLowerCase()
+        ? { ...user, password }
+        : user
+    ));
+    await setImportedUsers(nextUsers);
+  }
+
+  const updatedUser = allLoginUsers().find((user) => (
+    normalizeCredential(user.username).toLowerCase() === normalizeCredential(sessionUser.username).toLowerCase()
+  ));
+  if (updatedUser) {
+    setAuthenticatedUser(updatedUser);
+  }
 }
 
 function importedUserFromRow(row) {
@@ -2184,9 +8378,10 @@ async function initializeAuth() {
   await loadDashboardData();
 
   const loadedUsers = getImportedUsers().length;
-  document.querySelector("#userImportStatus").textContent = loadedUsers
+  const userImportStatus = document.querySelector("#userImportStatus");
+  userImportStatus.textContent = loadedUsers
     ? `已加载 ${loadedUsers} 位${authUsersBackendAvailable ? "后台" : "本机"}授权用户。`
-    : "请导入授权用户 Excel 后登录。";
+    : "仅管理员可导入授权用户 Excel。";
 
   document.querySelector("#loginForm").addEventListener("submit", (event) => {
     event.preventDefault();
@@ -2229,14 +8424,52 @@ async function initializeAuth() {
   });
 
   document.querySelector("#logoutButton").addEventListener("click", clearAuthenticatedUser);
+  document.querySelector("#changePasswordButton").addEventListener("click", showPasswordModal);
+  document.querySelector("#closePasswordModal").addEventListener("click", hidePasswordModal);
+  document.querySelector("#cancelPasswordChange").addEventListener("click", hidePasswordModal);
+  document.querySelector("[data-close-password-modal]").addEventListener("click", hidePasswordModal);
+  document.querySelector("#passwordForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+    const nextPassword = normalizeCredential(document.querySelector("#newPassword").value);
+    const confirmPassword = normalizeCredential(document.querySelector("#confirmNewPassword").value);
+
+    if (nextPassword.length < 4) {
+      setPasswordMessage("新密码至少需要 4 个字符。");
+      return;
+    }
+
+    if (nextPassword !== confirmPassword) {
+      setPasswordMessage("两次输入的新密码不一致。");
+      return;
+    }
+
+    const submitButton = event.submitter;
+    submitButton.disabled = true;
+    submitButton.textContent = "正在保存...";
+    updateCurrentUserPassword(nextPassword)
+      .then(() => {
+        setPasswordMessage("密码已更新到后台。", "success");
+        setTimeout(hidePasswordModal, 900);
+      })
+      .catch((error) => {
+        setPasswordMessage(error.message || "密码更新失败。");
+      })
+      .finally(() => {
+        submitButton.disabled = false;
+        submitButton.textContent = "保存新密码";
+        document.querySelector("#passwordForm").reset();
+      });
+  });
 
   if (sessionStorage.getItem(authSessionStorageKey)) {
     setAuthClasses(true);
     renderUserProfile();
+    renderAdminTools();
     initializeDashboardApp();
   } else {
     setAuthClasses(false);
     renderUserProfile();
+    renderAdminTools();
     setTimeout(() => document.querySelector("#loginUsername").focus(), 0);
   }
 }
@@ -2273,6 +8506,17 @@ function dashboardLinePrefix(dashboard) {
 
 function productLineTotalUnitsLabel(dashboard, lineLabel) {
   return (dashboard.lineTotalUnitsLabelTemplate || "台 {line} 设备").replace("{line}", lineLabel);
+}
+
+function hasDashboardData(dashboard) {
+  return Boolean(
+    (Number(dashboard.totalUnits) || 0) > 0 ||
+    (dashboard.sourceRecords || []).length ||
+    (dashboard.provinceData || []).length ||
+    (dashboard.users || []).length ||
+    (dashboard.partners || []).length ||
+    (dashboard.updates || []).length
+  );
 }
 
 function currentDashboardData() {
@@ -2438,10 +8682,11 @@ function renderTicker() {
 }
 
 function renderTrendChart() {
-  const monthlyTrend = currentDashboardData().monthlyTrend;
+  const monthlyTrend = currentDashboardData().monthlyTrend || [];
+  const chartTrend = monthlyTrend.length ? monthlyTrend : [{ month: "暂无", installed: 0 }];
   const target = document.querySelector("#installTrend");
   trendChart = trendChart || echarts.init(target);
-  const trendLine = monthlyTrend.map((item, index, source) => {
+  const trendLine = chartTrend.map((item, index, source) => {
     const windowItems = source.slice(Math.max(0, index - 2), index + 1);
     const average = windowItems.reduce((sum, current) => sum + current.installed, 0) / windowItems.length;
     return Number(average.toFixed(1));
@@ -2478,7 +8723,7 @@ function renderTrendChart() {
     },
     xAxis: {
       type: "category",
-      data: monthlyTrend.map((item) => item.month.slice(5)),
+      data: chartTrend.map((item) => item.month === "暂无" ? "暂无" : item.month.slice(5)),
       axisTick: { show: false },
       axisLine: { lineStyle: { color: brandColors.oat } },
       axisLabel: {
@@ -2501,7 +8746,7 @@ function renderTrendChart() {
         name: "月度新增",
         type: "bar",
         barWidth: 12,
-        data: monthlyTrend.map((item) => item.installed),
+        data: chartTrend.map((item) => item.installed),
         itemStyle: {
           color: brandColors.ocean,
           borderRadius: [4, 4, 0, 0]
@@ -2543,9 +8788,10 @@ function renderTrendChart() {
 
 function renderYearTrendChart() {
   const yearlyTrend = currentDashboardData().yearlyTrend || [];
+  const chartTrend = yearlyTrend.length ? yearlyTrend : [{ year: "暂无", installed: 0 }];
   const target = document.querySelector("#yearInstallTrend");
   yearTrendChart = yearTrendChart || echarts.init(target);
-  const maxValue = Math.max(1, ...yearlyTrend.map((item) => item.installed));
+  const maxValue = Math.max(1, ...chartTrend.map((item) => item.installed));
 
   yearTrendChart.setOption({
     grid: {
@@ -2567,7 +8813,7 @@ function renderYearTrendChart() {
     },
     xAxis: {
       type: "category",
-      data: yearlyTrend.map((item) => item.year),
+      data: chartTrend.map((item) => item.year),
       axisTick: { show: false },
       axisLine: { lineStyle: { color: brandColors.oat } },
       axisLabel: {
@@ -2590,7 +8836,7 @@ function renderYearTrendChart() {
         name: "年度新增",
         type: "bar",
         barWidth: 22,
-        data: yearlyTrend.map((item) => item.installed),
+        data: chartTrend.map((item) => item.installed),
         itemStyle: {
           borderRadius: [5, 5, 0, 0],
           color(params) {
@@ -2730,16 +8976,19 @@ function populateProductModelOptions() {
 function renderProductLineSwitcher() {
   const control = document.querySelector("#productLineControl");
   const switcher = document.querySelector("#productLineSwitcher");
-  const options = currentDashboard().productLineOptions || [];
+  const dashboard = currentDashboard();
+  const options = dashboard.productLineOptions || [];
 
-  if (!options.length) {
+  if (!options.length || !hasDashboardData(dashboard)) {
     control.hidden = true;
+    control.style.display = "none";
     currentProductLineKey = "all";
     switcher.innerHTML = "";
     return;
   }
 
   control.hidden = false;
+  control.style.display = "";
   if (!options.some((option) => option.value === currentProductLineKey)) {
     currentProductLineKey = options[0].value;
   }

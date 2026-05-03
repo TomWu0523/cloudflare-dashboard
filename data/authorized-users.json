@@ -46,5 +46,11 @@
     "password": "maquet",
     "displayName": "Xiang Zhu",
     "role": "Project manager"
+  },
+  {
+    "username": "Leahzheng",
+    "password": "maquet",
+    "displayName": "Leah Zheng",
+    "role": "Sr.Product manager"
   }
 ]
