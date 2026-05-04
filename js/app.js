@@ -7570,64 +7570,17 @@ const brandColors = {
   white: "#ffffff"
 };
 
-const defaultUsers = [
-  {
-    username: "Maquet",
-    password: "123win",
-    displayName: "系统管理员",
-    role: "系统管理员"
-  },
-  {
-    username: "Tomwu",
-    password: "maquet",
-    displayName: "Tom Wu",
-    role: "Sr.Manager"
-  },
-  {
-    username: "Jayding",
-    password: "maquet",
-    displayName: "Jay Ding",
-    role: "Sr.Director SW"
-  },
-  {
-    username: "Evanwang",
-    password: "maquet",
-    displayName: "Evan Wang",
-    role: "Head of marketing"
-  },
-  {
-    username: "Violajin",
-    password: "maquet",
-    displayName: "Viola Jin",
-    role: "Head of marketing"
-  },
-  {
-    username: "Leoyu",
-    password: "maquet",
-    displayName: "Leo Yu",
-    role: "Head of marketing"
-  },
-  {
-    username: "ChrisZhang",
-    password: "maquet",
-    displayName: "Chris Zhang",
-    role: "Marketing Director"
-  },
-  {
-    username: "Xiangzhu",
-    password: "maquet",
-    displayName: "Xiang Zhu",
-    role: "Project manager"
-  }
-];
 const importedUsersStorageKey = "getinge-dashboard-imported-users-v1";
-const authSessionStorageKey = "getinge-dashboard-authenticated-user-v1";
 const authUsersApiEndpoint = "/api/users";
 const dashboardDataApiEndpoint = "/api/dashboard-data";
+const sessionApiEndpoint = "/api/session";
+const sessionPasswordApiEndpoint = "/api/session/password";
+const isHttpMode = window.location.protocol.startsWith("http");
 let importedUsersCache = [];
 let authUsersBackendAvailable = false;
 let dashboardDataBackendAvailable = false;
 let dashboardInitialized = false;
+let currentSessionUser = null;
 
 function normalizeCredential(value) {
   return String(value ?? "").trim();
@@ -7635,6 +7588,10 @@ function normalizeCredential(value) {
 
 function getImportedUsers() {
   return importedUsersCache;
+}
+
+function getAuthenticatedUser() {
+  return currentSessionUser;
 }
 
 function getLocalImportedUsers() {
@@ -7649,29 +7606,59 @@ function setLocalImportedUsers(users) {
   localStorage.setItem(importedUsersStorageKey, JSON.stringify(users));
 }
 
+async function readJson(response) {
+  return response.json().catch(() => ({}));
+}
+
+async function fetchJson(url, options = {}) {
+  if (!isHttpMode) {
+    throw new Error("请通过 http://localhost:8080 打开页面，file:// 方式无法连接登录服务。");
+  }
+
+  const response = await fetch(url, {
+    credentials: "same-origin",
+    cache: "no-store",
+    ...options
+  });
+  const payload = await readJson(response);
+  if (!response.ok) {
+    const error = new Error(payload.error || "请求失败。");
+    error.status = response.status;
+    throw error;
+  }
+  return payload;
+}
+
+function setUserImportStatus(message) {
+  const target = document.querySelector("#userImportStatus");
+  if (target) {
+    target.textContent = message;
+  }
+}
+
+async function loadCurrentSession() {
+  try {
+    const payload = await fetchJson(sessionApiEndpoint);
+    currentSessionUser = payload.user || null;
+    return currentSessionUser;
+  } catch (error) {
+    currentSessionUser = null;
+    return null;
+  }
+}
+
 async function loadImportedUsers() {
   const localUsers = getLocalImportedUsers();
   importedUsersCache = localUsers;
 
-  if (!window.location.protocol.startsWith("http")) {
+  if (!isAdminUser(getAuthenticatedUser())) {
+    authUsersBackendAvailable = false;
     return false;
   }
 
   try {
-    const response = await fetch(authUsersApiEndpoint, { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error("Unable to load backend users");
-    }
-
-    const payload = await response.json();
-    const backendUsers = Array.isArray(payload.users) ? payload.users : [];
-    if (!backendUsers.length && localUsers.length) {
-      authUsersBackendAvailable = true;
-      await setImportedUsers(localUsers);
-      return true;
-    }
-
-    importedUsersCache = backendUsers;
+    const payload = await fetchJson(authUsersApiEndpoint);
+    importedUsersCache = Array.isArray(payload.users) ? payload.users : [];
     setLocalImportedUsers(importedUsersCache);
     authUsersBackendAvailable = true;
     return true;
@@ -7683,28 +7670,15 @@ async function loadImportedUsers() {
 }
 
 async function setImportedUsers(users) {
-  importedUsersCache = users;
-  setLocalImportedUsers(users);
-
-  if (!window.location.protocol.startsWith("http")) {
-    return users;
-  }
-
   try {
-    const response = await fetch(authUsersApiEndpoint, {
+    const payload = await fetchJson(authUsersApiEndpoint, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({ users })
     });
-
-    if (!response.ok) {
-      throw new Error("Unable to save backend users");
-    }
-
-    const payload = await response.json();
-    importedUsersCache = Array.isArray(payload.users) ? payload.users : users;
+    importedUsersCache = Array.isArray(payload.users) ? payload.users : [];
     setLocalImportedUsers(importedUsersCache);
     authUsersBackendAvailable = true;
     return importedUsersCache;
@@ -7719,17 +7693,8 @@ function cloneDashboardData(source) {
 }
 
 async function loadDashboardData() {
-  if (!window.location.protocol.startsWith("http")) {
-    return false;
-  }
-
   try {
-    const response = await fetch(dashboardDataApiEndpoint, { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error("Unable to load dashboard data");
-    }
-
-    const payload = await response.json();
+    const payload = await fetchJson(dashboardDataApiEndpoint);
     if (payload.dashboards && typeof payload.dashboards === "object") {
       dashboards = payload.dashboards;
       dashboardDataBackendAvailable = true;
@@ -7745,24 +7710,14 @@ async function loadDashboardData() {
 async function saveDashboardData(nextDashboards) {
   dashboards = nextDashboards;
 
-  if (!window.location.protocol.startsWith("http")) {
-    return dashboards;
-  }
-
   try {
-    const response = await fetch(dashboardDataApiEndpoint, {
+    const payload = await fetchJson(dashboardDataApiEndpoint, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({ dashboards })
     });
-
-    if (!response.ok) {
-      throw new Error("Unable to save dashboard data");
-    }
-
-    const payload = await response.json();
     if (payload.dashboards && typeof payload.dashboards === "object") {
       dashboards = payload.dashboards;
     }
@@ -7772,25 +7727,6 @@ async function saveDashboardData(nextDashboards) {
   }
 
   return dashboards;
-}
-
-function allLoginUsers() {
-  const usersByName = new Map();
-  [...defaultUsers, ...getImportedUsers()].forEach((user) => {
-    const key = normalizeCredential(user.username).toLowerCase();
-    if (key) {
-      usersByName.set(key, user);
-    }
-  });
-  return [...usersByName.values()];
-}
-
-function getAuthenticatedUser() {
-  try {
-    return JSON.parse(sessionStorage.getItem(authSessionStorageKey));
-  } catch (error) {
-    return null;
-  }
 }
 
 function setAuthClasses(isAuthenticated) {
@@ -7823,34 +7759,29 @@ function setPasswordMessage(message, type = "error") {
   target.classList.toggle("success", type === "success");
 }
 
-function findLoginUser(username, password) {
-  const normalizedUsername = normalizeCredential(username).toLowerCase();
-  const normalizedPassword = normalizeCredential(password);
-
-  return allLoginUsers().find((user) => (
-    normalizeCredential(user.username).toLowerCase() === normalizedUsername
-    && normalizeCredential(user.password) === normalizedPassword
-  ));
-}
-
 function setAuthenticatedUser(user) {
-  sessionStorage.setItem(authSessionStorageKey, JSON.stringify({
+  currentSessionUser = {
     username: user.username,
     displayName: user.displayName || user.username,
-    role: user.role || user.position || "授权用户",
-    loggedInAt: new Date().toISOString()
-  }));
+    role: user.role || user.position || "授权用户"
+  };
   setAuthClasses(true);
   renderUserProfile();
   renderAdminTools();
   initializeDashboardApp();
 }
 
-function clearAuthenticatedUser() {
-  sessionStorage.removeItem(authSessionStorageKey);
+async function clearAuthenticatedUser() {
+  currentSessionUser = null;
+  try {
+    await fetchJson(sessionApiEndpoint, { method: "DELETE" });
+  } catch (error) {
+    // Ignore logout cleanup failures and clear the UI state anyway.
+  }
   setAuthClasses(false);
   renderUserProfile();
   renderAdminTools();
+  importedUsersCache = [];
   document.querySelector("#loginPassword").value = "";
   setLoginMessage("已退出登录，请重新输入账号密码。");
   setTimeout(() => document.querySelector("#loginUsername").focus(), 0);
@@ -7858,9 +7789,6 @@ function clearAuthenticatedUser() {
 
 function renderUserProfile() {
   const user = getAuthenticatedUser();
-  const importedUser = user?.username
-    ? allLoginUsers().find((item) => normalizeCredential(item.username).toLowerCase() === normalizeCredential(user.username).toLowerCase())
-    : null;
   const displayNameTarget = document.querySelector("#userDisplayName");
   const positionTarget = document.querySelector("#userPosition");
 
@@ -7868,8 +7796,8 @@ function renderUserProfile() {
     return;
   }
 
-  displayNameTarget.textContent = importedUser?.displayName || user?.displayName || user?.username || "--";
-  positionTarget.textContent = importedUser?.role || user?.role || "授权用户";
+  displayNameTarget.textContent = user?.displayName || user?.username || "--";
+  positionTarget.textContent = user?.role || "授权用户";
 }
 
 function showPasswordModal() {
@@ -7889,42 +7817,15 @@ async function updateCurrentUserPassword(password) {
     throw new Error("请先登录后再修改密码。");
   }
 
-  const response = await fetch(authUsersApiEndpoint, {
+  await fetchJson(sessionPasswordApiEndpoint, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      username: sessionUser.username,
       password
     })
   });
-
-  const payload = await response.json().catch(() => ({}));
-  if (!response.ok) {
-    throw new Error(payload.error || "密码更新失败。");
-  }
-
-  const updatedUsers = Array.isArray(payload.users) ? payload.users : [];
-  if (updatedUsers.length) {
-    importedUsersCache = updatedUsers;
-    setLocalImportedUsers(updatedUsers);
-    authUsersBackendAvailable = true;
-  } else {
-    const nextUsers = allLoginUsers().map((user) => (
-      normalizeCredential(user.username).toLowerCase() === normalizeCredential(sessionUser.username).toLowerCase()
-        ? { ...user, password }
-        : user
-    ));
-    await setImportedUsers(nextUsers);
-  }
-
-  const updatedUser = allLoginUsers().find((user) => (
-    normalizeCredential(user.username).toLowerCase() === normalizeCredential(sessionUser.username).toLowerCase()
-  ));
-  if (updatedUser) {
-    setAuthenticatedUser(updatedUser);
-  }
 }
 
 function importedUserFromRow(row) {
@@ -8374,29 +8275,52 @@ async function importDashboardDataFromExcel(file) {
 }
 
 async function initializeAuth() {
-  await loadImportedUsers();
-  await loadDashboardData();
+  document.querySelector("#currentDate").textContent = new Date().toISOString().slice(0, 10);
+  if (!isHttpMode) {
+    setAuthClasses(false);
+    renderUserProfile();
+    renderAdminTools();
+    setLoginMessage("请先运行 node server.mjs，并通过 http://localhost:8080 打开页面。");
+    return;
+  }
 
-  const loadedUsers = getImportedUsers().length;
-  const userImportStatus = document.querySelector("#userImportStatus");
-  userImportStatus.textContent = loadedUsers
-    ? `已加载 ${loadedUsers} 位${authUsersBackendAvailable ? "后台" : "本机"}授权用户。`
-    : "仅管理员可导入授权用户 Excel。";
-
-  document.querySelector("#loginForm").addEventListener("submit", (event) => {
+  document.querySelector("#loginForm").addEventListener("submit", async (event) => {
     event.preventDefault();
-    const user = findLoginUser(
-      document.querySelector("#loginUsername").value,
-      document.querySelector("#loginPassword").value
-    );
-
-    if (!user) {
-      setLoginMessage("用户名或密码不正确。");
-      return;
+    const submitButton = event.submitter;
+    submitButton.disabled = true;
+    submitButton.textContent = "登录中...";
+    try {
+      const payload = await fetchJson(sessionApiEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          username: document.querySelector("#loginUsername").value,
+          password: document.querySelector("#loginPassword").value
+        })
+      });
+      setLoginMessage("登录成功，正在进入看板。", "success");
+      setAuthenticatedUser(payload.user || {});
+      await loadDashboardData();
+      if (isAdminUser(getAuthenticatedUser())) {
+        await loadImportedUsers();
+        setUserImportStatus(
+          getImportedUsers().length
+            ? `已加载 ${getImportedUsers().length} 位后台授权用户。`
+            : "当前没有已导入的授权用户。"
+        );
+      } else {
+        setUserImportStatus("仅管理员可导入授权用户 Excel。");
+      }
+      renderAdminTools();
+      renderDashboard();
+    } catch (error) {
+      setLoginMessage(error.message || "用户名或密码不正确。");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = "登录";
     }
-
-    setLoginMessage("登录成功，正在进入看板。", "success");
-    setAuthenticatedUser(user);
   });
 
   document.querySelector("#userExcelInput").addEventListener("change", (event) => {
@@ -8461,12 +8385,25 @@ async function initializeAuth() {
       });
   });
 
-  if (sessionStorage.getItem(authSessionStorageKey)) {
+  const currentUser = await loadCurrentSession();
+  if (currentUser) {
+    await loadDashboardData();
+    if (isAdminUser(currentUser)) {
+      await loadImportedUsers();
+      setUserImportStatus(
+        getImportedUsers().length
+          ? `已加载 ${getImportedUsers().length} 位后台授权用户。`
+          : "当前没有已导入的授权用户。"
+      );
+    } else {
+      setUserImportStatus("仅管理员可导入授权用户 Excel。");
+    }
     setAuthClasses(true);
     renderUserProfile();
     renderAdminTools();
     initializeDashboardApp();
   } else {
+    setUserImportStatus("仅管理员可导入授权用户 Excel。");
     setAuthClasses(false);
     renderUserProfile();
     renderAdminTools();

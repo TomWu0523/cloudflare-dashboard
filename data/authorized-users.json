@@ -1,56 +1,56 @@
 [
   {
     "username": "Maquet",
-    "password": "123win",
+    "passwordHash": "pbkdf2$18a06566086e70d57f8020b953c39608$36e50df6cc931760e9f3709a52fe265dcdaf9bcd6c312975374416064e64f6ca0a1135bb080149415fb5ec8af9643231d23166a59298303ed69b7b52ec24244a",
     "displayName": "系统管理员",
     "role": "系统管理员"
   },
   {
     "username": "Tomwu",
-    "password": "maquet",
+    "passwordHash": "pbkdf2$232c102fff5fe64c3c6566414c171a62$46ca383d8b25a84bc89702012b9eb6a5321c9fd3d4b73c3f0699d5f3be71037408203693b35edeb6ed93672aa7d693f01c8db765951df5fa3f24f7c8fe002813",
     "displayName": "Tom Wu",
     "role": "Sr.Manager"
   },
   {
-    "username": "Evanwang",
-    "password": "maquet",
-    "displayName": "Evan Wang",
-    "role": "Head of marketing"
-  },
-  {
     "username": "Jayding",
-    "password": "maquet",
+    "passwordHash": "pbkdf2$0980cfbb0963b2ae9f76d74f10bd8145$31e34df0109c007d74ddc567d4abdc4de014d48c317c5f6d8c07996af0e72a8ae4a0af96b9da75af3a7feda924540f5731426a31d98c62a04d1346278371d913",
     "displayName": "Jay Ding",
     "role": "Sr.Director SW"
   },
   {
+    "username": "Evanwang",
+    "passwordHash": "pbkdf2$c523660dadf62c6f70554e10811835c2$0c669bdba29c28f08dd30df40c2d52a39e354dd7f63eaccb614b8ad06b061b9f5180b64ed880f113d393783e5a4b1e339b54aff0ee9ac769b2c6a1c4a0fc9fc1",
+    "displayName": "Evan Wang",
+    "role": "Head of marketing"
+  },
+  {
+    "username": "Xiangzhu",
+    "passwordHash": "pbkdf2$3c7e0b239cee8935f0cb15880f327b79$d4f298d9f8336472f2ff25d2edd1a5fa10fd532fde6ab98dded8ff016515d5b945b68537520bb4aacad6c46e8e375f0f5c746bc2df233cf709af44ac2f3c7477",
+    "displayName": "Xiang Zhu",
+    "role": "Project manager"
+  },
+  {
+    "username": "Violajin",
+    "passwordHash": "pbkdf2$8d61c2a9bb6189670020c429d79e184b$041c0a073b9fd02f226355334f13c01be5b8d494f247b2d0926929ceb5078f8563b5b08e2ce0c493d6205ed33244c7c3946235b0e7ef76bd32edd30070665275",
+    "displayName": "Viola Jin",
+    "role": "Head of marketing"
+  },
+  {
+    "username": "Leahzheng",
+    "passwordHash": "pbkdf2$ecbf9b51ec2db931f429f460c9fe9048$8de061f1529b7f71ee7bf84a7d2d593c03350624aaf68f334bcbb1bd0d55c7b4e662fb1f81002425762c620758f505b06b2d48bfd542f9ccec77006ac63fef25",
+    "displayName": "Leah Zheng",
+    "role": "Sr.Product manager"
+  },
+  {
     "username": "ChrisZhang",
-    "password": "maquet",
+    "passwordHash": "pbkdf2$05cde13ed2e7941bddd01d87efd73540$b4dd8bf7f2c81447fdf2b3c0f917b37606dc7f21dd3e26ba8d3e5962b445afcc8f28fca882ab4774cd343145ff1e138d932f6cd7926c01cb556a3ae5267301a6",
     "displayName": "Chris Zhang",
     "role": "Marketing Director"
   },
   {
     "username": "Leoyu",
-    "password": "maquet",
+    "passwordHash": "pbkdf2$e5721f1e15e740b913d629349deba1b1$c27a5b8c26816ee2528862f99d6243f8b7ed9ebe0fcd2fdc00ce16e008895c406f2edb68e9b17c3ca9dc2f82c2b8d50a5e5a3645564a15a0ac5e883b3ed702fc",
     "displayName": "Leo Yu",
     "role": "Head of marketing"
-  },
-  {
-    "username": "Violajin",
-    "password": "maquet",
-    "displayName": "Viola Jin",
-    "role": "Head of marketing"
-  },
-  {
-    "username": "Xiangzhu",
-    "password": "maquet",
-    "displayName": "Xiang Zhu",
-    "role": "Project manager"
-  },
-  {
-    "username": "Leahzheng",
-    "password": "maquet",
-    "displayName": "Leah Zheng",
-    "role": "Sr.Product manager"
   }
 ]

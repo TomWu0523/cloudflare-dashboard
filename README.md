@@ -90,7 +90,14 @@ http://localhost:8080
 
 ### Cloudflare Pages 配置
 
-如果部署在 Cloudflare Pages，不能只上传静态文件；需要同时部署 `functions/api/users.js` 和 `functions/api/dashboard-data.js`。这样线上用户 Excel 和装机 Excel 导入才会写入 Baserow，而不是只保存在当前浏览器 `localStorage`。
+如果部署在 Cloudflare Pages，不能只上传静态文件；需要同时部署整个 `functions/api/` 目录。当前登录、改密、用户导入和装机数据同步分别依赖：
+
+- `functions/api/session.js`
+- `functions/api/session/password.js`
+- `functions/api/users.js`
+- `functions/api/dashboard-data.js`
+
+这样线上登录、修改密码、用户 Excel 导入和装机 Excel 导入才会走 Cloudflare Pages Functions，而不是只停留在当前浏览器。
 
 在 Cloudflare Pages 的 Settings -> Environment variables 中配置：
 
@@ -102,6 +109,7 @@ BASEROW_INSTALL_BASE_TABLE_ID=951860
 BASEROW_PRODUCT_TABLE_ID=951856
 BASEROW_CUSTOMER_TABLE_ID=951857
 BASEROW_SALES_PARTNER_TABLE_ID=951858
+SESSION_SECRET=一段随机且足够长的会话签名密钥
 ```
 
 配置后重新部署。线上页面访问 `/api/users` 和 `/api/dashboard-data` 都返回 200 时，用户列表和装机数据导入才会跨设备同步。
@@ -111,13 +119,15 @@ Cloudflare Pages 推荐步骤：
 1. 新建 GitHub 仓库，把本目录里除 `.env` 以外的文件推送上去。
 2. Cloudflare Dashboard -> Workers & Pages -> Create application -> Pages -> Connect to Git。
 3. 选择仓库，Framework preset 选 `None`，Build command 留空，Build output directory 填 `/`。
-4. 部署后进入项目 Settings -> Environment variables，添加上面 6 个变量。`BASEROW_TOKEN` 选择 Secret。
+4. 部署后进入项目 Settings -> Variables and Secrets，添加上面 7 个变量。`BASEROW_TOKEN` 和 `SESSION_SECRET` 都选择 Secret。
 5. 回到 Deployments，点击 Retry deployment 或重新触发一次部署。
 6. 打开线上地址测试：
 
 ```text
+https://你的域名/api/session
 https://你的域名/api/users
 https://你的域名/api/dashboard-data
 ```
 
-7. 两个接口都正常后，同事就可以在 Cloudflare 页面右上角导入装机 Excel；数据会增量写入 Baserow，其他设备刷新即可读取最新 dashboard。
+7. 其中 `/api/session` 未登录时应返回 401，登录后再访问应返回当前用户；`/api/users` 需要管理员登录后访问；`/api/dashboard-data` 需要登录后访问。
+8. 这三个接口都正常后，同事就可以在 Cloudflare 页面右上角导入装机 Excel；数据会增量写入 Baserow，其他设备刷新即可读取最新 dashboard。

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Getinge SW China Installed Base Dashboard</title>
-    <link rel="stylesheet" href="css/style.css?v=admin-password-tools" />
+    <link rel="stylesheet" href="css/style.css?v=secure-session-auth-v2" />
   </head>
   <body class="auth-locked">
     <section class="login-screen" id="loginScreen" aria-labelledby="loginTitle">
@@ -34,7 +34,7 @@
       </main>
     </section>
 
-    <button class="project-entry-button" id="openProjectModal" type="button" aria-haspopup="dialog" onclick="showProjectModal()">
+    <button class="project-entry-button" id="openProjectModal" type="button" aria-haspopup="dialog">
       <span>+</span>
       项目录入
     </button>
@@ -84,7 +84,7 @@
           <button class="data-import-button" id="dashboardExcelButton" type="button" title="导入 Excel 并同步到 Baserow">导入装机数据</button>
           <input id="dashboardExcelInput" type="file" accept=".xlsx,.xls" hidden />
           <span>最新更新</span>
-          <strong id="currentDate">2026-04-24</strong>
+          <strong id="currentDate">--</strong>
         </div>
       </header>
 
@@ -192,7 +192,7 @@
             <p>Project Registry</p>
             <h2 id="projectModalTitle">1180 手术床项目录入与更新</h2>
           </div>
-          <button class="icon-button" id="closeProjectModal" type="button" aria-label="关闭项目录入窗口" onclick="hideProjectModal()">×</button>
+          <button class="icon-button" id="closeProjectModal" type="button" aria-label="关闭项目录入窗口">×</button>
         </header>
 
         <div class="project-modal__body">
@@ -291,6 +291,6 @@
 
     <script src="assets/echarts.min.js"></script>
     <script src="assets/xlsx.full.min.js"></script>
-    <script src="js/app.js?v=admin-password-tools"></script>
+    <script src="js/app.js?v=secure-session-auth-v2"></script>
   </body>
 </html>

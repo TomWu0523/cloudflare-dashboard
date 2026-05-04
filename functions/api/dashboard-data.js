@@ -1,7 +1,4 @@
-const jsonHeaders = {
-  "Content-Type": "application/json; charset=utf-8",
-  "Cache-Control": "no-store"
-};
+import { clearSessionCookie, jsonResponse, readSessionUser } from "./_auth.js";
 
 const dashboardImportSource = "Dashboard Excel Import";
 
@@ -72,13 +69,6 @@ const provinceCoordinates = {
   "宁夏回族自治区": [106.27, 38.47],
   "新疆维吾尔自治区": [87.62, 43.82]
 };
-
-function jsonResponse(payload, status = 200) {
-  return new Response(JSON.stringify(payload), {
-    status,
-    headers: jsonHeaders
-  });
-}
 
 function baserowConfig(env) {
   return {
@@ -502,6 +492,11 @@ async function syncDashboardsToBaserow(env, dashboards) {
 }
 
 export async function onRequestGet({ request, env }) {
+  const sessionUser = await readSessionUser(request, env);
+  if (!sessionUser) {
+    return jsonResponse({ error: "请先登录。" }, 401, { "Set-Cookie": clearSessionCookie() });
+  }
+
   try {
     return jsonResponse({ dashboards: await dashboardsFromBaserow(request, env) });
   } catch (error) {
@@ -510,6 +505,11 @@ export async function onRequestGet({ request, env }) {
 }
 
 export async function onRequestPost({ request, env }) {
+  const sessionUser = await readSessionUser(request, env);
+  if (!sessionUser) {
+    return jsonResponse({ error: "请先登录。" }, 401, { "Set-Cookie": clearSessionCookie() });
+  }
+
   try {
     const body = await request.json();
     const dashboards = body.dashboards && typeof body.dashboards === "object" && !Array.isArray(body.dashboards)

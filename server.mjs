@@ -1,4 +1,5 @@
 import { createServer } from "node:http";
+import { pbkdf2Sync, randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 import { networkInterfaces } from "node:os";
@@ -25,6 +26,19 @@ const baserow = {
 
 const hasBaserow = Boolean(baserow.apiUrl && baserow.token);
 const dashboardImportSource = "Dashboard Excel Import";
+const sessionCookieName = "getinge_dashboard_session";
+const sessionTtlMs = 1000 * 60 * 60 * 12;
+const sessions = new Map();
+const bootstrapUsers = [
+  { username: "Maquet", password: "123win", displayName: "系统管理员", role: "系统管理员" },
+  { username: "Tomwu", password: "maquet", displayName: "Tom Wu", role: "Sr.Manager" },
+  { username: "Jayding", password: "maquet", displayName: "Jay Ding", role: "Sr.Director SW" },
+  { username: "Evanwang", password: "maquet", displayName: "Evan Wang", role: "Head of marketing" },
+  { username: "Violajin", password: "maquet", displayName: "Viola Jin", role: "Head of marketing" },
+  { username: "Leoyu", password: "maquet", displayName: "Leo Yu", role: "Head of marketing" },
+  { username: "ChrisZhang", password: "maquet", displayName: "Chris Zhang", role: "Marketing Director" },
+  { username: "Xiangzhu", password: "maquet", displayName: "Xiang Zhu", role: "Project manager" }
+];
 
 const provinceNameMap = {
   Shanghai: "上海市",
@@ -130,12 +144,129 @@ async function loadEnvFile(path) {
   }
 }
 
-function sendJson(response, statusCode, payload) {
+function sendJson(response, statusCode, payload, headers = {}) {
   response.writeHead(statusCode, {
     "Content-Type": "application/json; charset=utf-8",
-    "Cache-Control": "no-store"
+    "Cache-Control": "no-store",
+    ...headers
   });
   response.end(JSON.stringify(payload));
+}
+
+function hashPassword(password, salt = randomBytes(16).toString("hex")) {
+  const digest = pbkdf2Sync(password, salt, 210000, 64, "sha256").toString("hex");
+  return `pbkdf2$${salt}$${digest}`;
+}
+
+function isPasswordHash(value) {
+  return /^(pbkdf2|scrypt)\$/.test(String(value || ""));
+}
+
+function verifyPassword(password, storedValue) {
+  if (!storedValue) {
+    return false;
+  }
+
+  if (!isPasswordHash(storedValue)) {
+    return normalizedText(password) === normalizedText(storedValue);
+  }
+
+  const [algorithm, salt, digest] = String(storedValue).split("$");
+  if (!salt || !digest) {
+    return false;
+  }
+
+  const candidate = algorithm === "pbkdf2"
+    ? pbkdf2Sync(password, salt, 210000, 64, "sha256")
+    : scryptSync(password, salt, 64);
+  const expected = Buffer.from(digest, "hex");
+  return candidate.length === expected.length && timingSafeEqual(candidate, expected);
+}
+
+function sanitizeUserProfile(user) {
+  return {
+    username: user.username,
+    displayName: user.displayName || user.username,
+    role: user.role || "授权用户"
+  };
+}
+
+function normalizeStoredUser(user) {
+  const username = String(user?.username ?? "").trim();
+  const passwordHash = String(user?.passwordHash ?? user?.password ?? "").trim();
+
+  if (!username || !passwordHash) {
+    return null;
+  }
+
+  return {
+    username,
+    passwordHash: isPasswordHash(passwordHash) ? passwordHash : hashPassword(passwordHash),
+    displayName: String(user?.displayName || user?.name || username).trim(),
+    role: String(user?.role || user?.position || "授权用户").trim()
+  };
+}
+
+function parseCookies(request) {
+  return String(request.headers.cookie || "")
+    .split(";")
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .reduce((cookies, part) => {
+      const separator = part.indexOf("=");
+      if (separator === -1) {
+        return cookies;
+      }
+      cookies[part.slice(0, separator)] = decodeURIComponent(part.slice(separator + 1));
+      return cookies;
+    }, {});
+}
+
+function sessionCookie(token, expiresAt = Date.now() + sessionTtlMs) {
+  return `${sessionCookieName}=${encodeURIComponent(token)}; Path=/; HttpOnly; SameSite=Lax; Expires=${new Date(expiresAt).toUTCString()}`;
+}
+
+function clearSessionCookie() {
+  return `${sessionCookieName}=; Path=/; HttpOnly; SameSite=Lax; Expires=${new Date(0).toUTCString()}`;
+}
+
+function createSession(user) {
+  const token = randomBytes(24).toString("hex");
+  const expiresAt = Date.now() + sessionTtlMs;
+  const session = {
+    token,
+    user: sanitizeUserProfile(user),
+    expiresAt
+  };
+  sessions.set(token, session);
+  return session;
+}
+
+function getSession(request) {
+  const token = parseCookies(request)[sessionCookieName];
+  if (!token) {
+    return null;
+  }
+
+  const session = sessions.get(token);
+  if (!session) {
+    return null;
+  }
+
+  if (session.expiresAt <= Date.now()) {
+    sessions.delete(token);
+    return null;
+  }
+
+  session.expiresAt = Date.now() + sessionTtlMs;
+  return session;
+}
+
+function destroySession(request) {
+  const token = parseCookies(request)[sessionCookieName];
+  if (token) {
+    sessions.delete(token);
+  }
 }
 
 async function baserowRequest(path, options = {}) {
@@ -294,22 +425,6 @@ function testDataMarker(productKey) {
   return "";
 }
 
-function sanitizeUser(user) {
-  const username = String(user?.username ?? "").trim();
-  const password = String(user?.password ?? "").trim();
-
-  if (!username || !password) {
-    return null;
-  }
-
-  return {
-    username,
-    password,
-    displayName: String(user?.displayName || user?.name || username).trim(),
-    role: String(user?.role || user?.position || "授权用户").trim()
-  };
-}
-
 async function readUsers() {
   if (hasBaserow && baserow.authUsersTableId) {
     try {
@@ -322,9 +437,9 @@ async function readUsers() {
           notes = {};
         }
 
-        return sanitizeUser({
+        return normalizeStoredUser({
           username: row.Username || notes.username || row.Name,
-          password: row.Password || notes.password,
+          passwordHash: row.PasswordHash || notes.passwordHash || row.Password || notes.password,
           displayName: row.Name || notes.displayName || notes.name,
           role: row.Role || notes.role || notes.position
         });
@@ -342,10 +457,16 @@ async function readUsers() {
   try {
     const raw = await readFile(usersFile, "utf8");
     const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed.map(sanitizeUser).filter(Boolean) : [];
+    const users = Array.isArray(parsed) ? parsed.map(normalizeStoredUser).filter(Boolean) : [];
+    if (users.length) {
+      await saveLocalUsers(users);
+    }
+    return users;
   } catch (error) {
     if (error.code === "ENOENT") {
-      return [];
+      const users = bootstrapUsers.map(normalizeStoredUser).filter(Boolean);
+      await saveLocalUsers(users);
+      return users;
     }
     throw error;
   }
@@ -357,17 +478,18 @@ async function saveLocalUsers(users) {
 }
 
 async function saveUsers(users) {
-  await saveLocalUsers(users);
+  const normalizedUsers = users.map(normalizeStoredUser).filter(Boolean);
+  await saveLocalUsers(normalizedUsers);
 
   if (hasBaserow && baserow.authUsersTableId) {
     try {
       const rows = await baserowRows(baserow.authUsersTableId);
       await Promise.all(rows.map((row) => baserowDeleteRow(baserow.authUsersTableId, row.id)));
-      await Promise.all(users.map((user) => baserowCreateRow(baserow.authUsersTableId, {
+      await Promise.all(normalizedUsers.map((user) => baserowCreateRow(baserow.authUsersTableId, {
         Name: user.displayName || user.username,
         Notes: JSON.stringify({
           username: user.username,
-          password: user.password,
+          passwordHash: user.passwordHash,
           role: user.role || "授权用户"
         }),
         Active: true
@@ -391,7 +513,7 @@ async function updateUserPassword(username, password) {
   }
 
   const nextUsers = users.map((user, index) => (
-    index === userIndex ? { ...user, password: normalizedText(password) } : user
+    index === userIndex ? { ...user, passwordHash: hashPassword(normalizedText(password)) } : user
   ));
   await saveUsers(nextUsers);
   return nextUsers;
@@ -727,36 +849,118 @@ async function readRequestBody(request) {
   return Buffer.concat(chunks).toString("utf8");
 }
 
-async function handleUsersApi(request, response) {
+function isAdminUser(user) {
+  const text = `${user?.username || ""} ${user?.displayName || ""} ${user?.role || ""}`.toLowerCase();
+  return normalizedText(user?.username).toLowerCase() === "maquet"
+    || text.includes("系统管理员")
+    || text.includes("admin");
+}
+
+async function requireSession(request, response) {
+  const session = getSession(request);
+  if (!session) {
+    sendJson(response, 401, { error: "请先登录。" }, { "Set-Cookie": clearSessionCookie() });
+    return null;
+  }
+  return session;
+}
+
+async function requireAdminSession(request, response) {
+  const session = await requireSession(request, response);
+  if (!session) {
+    return null;
+  }
+  if (!isAdminUser(session.user)) {
+    sendJson(response, 403, { error: "仅管理员可执行此操作。" });
+    return null;
+  }
+  return session;
+}
+
+async function authenticateUser(username, password) {
+  const normalizedUsername = normalizedText(username).toLowerCase();
+  const normalizedPassword = normalizedText(password);
+  if (!normalizedUsername || !normalizedPassword) {
+    return null;
+  }
+
+  const users = await readUsers();
+  const matchedUser = users.find((user) => normalizedText(user.username).toLowerCase() === normalizedUsername);
+  if (!matchedUser || !verifyPassword(normalizedPassword, matchedUser.passwordHash)) {
+    return null;
+  }
+
+  return matchedUser;
+}
+
+async function handleSessionApi(request, response) {
   if (request.method === "GET") {
-    sendJson(response, 200, { users: await readUsers() });
+    const session = getSession(request);
+    if (!session) {
+      sendJson(response, 401, { error: "未登录。" }, { "Set-Cookie": clearSessionCookie() });
+      return;
+    }
+    sendJson(response, 200, { user: session.user });
+    return;
+  }
+
+  if (request.method === "POST") {
+    const body = JSON.parse(await readRequestBody(request) || "{}");
+    const user = await authenticateUser(body.username, body.password);
+    if (!user) {
+      sendJson(response, 401, { error: "用户名或密码不正确。" });
+      return;
+    }
+
+    const session = createSession(user);
+    sendJson(response, 200, { user: session.user }, { "Set-Cookie": sessionCookie(session.token, session.expiresAt) });
+    return;
+  }
+
+  if (request.method === "DELETE") {
+    destroySession(request);
+    sendJson(response, 200, { ok: true }, { "Set-Cookie": clearSessionCookie() });
+    return;
+  }
+
+  if (request.method === "PATCH" && request.url?.startsWith("/api/session/password")) {
+    const session = await requireSession(request, response);
+    if (!session) {
+      return;
+    }
+
+    const body = JSON.parse(await readRequestBody(request) || "{}");
+    const nextPassword = normalizedText(body.password);
+    if (nextPassword.length < 4) {
+      sendJson(response, 400, { error: "新密码至少需要 4 个字符。" });
+      return;
+    }
+
+    await updateUserPassword(session.user.username, nextPassword);
+    sendJson(response, 200, { user: session.user });
+    return;
+  }
+
+  sendJson(response, 405, { error: "Method not allowed" });
+}
+
+async function handleUsersApi(request, response) {
+  const session = request.method === "GET" ? await requireAdminSession(request, response) : await requireAdminSession(request, response);
+  if (!session) {
+    return;
+  }
+
+  if (request.method === "GET") {
+    sendJson(response, 200, { users: (await readUsers()).map(sanitizeUserProfile) });
     return;
   }
 
   if (request.method === "POST") {
     const body = JSON.parse(await readRequestBody(request) || "{}");
     const incomingUsers = Array.isArray(body.users) ? body.users : [];
-    const nextUsers = incomingUsers.map(sanitizeUser).filter(Boolean);
+    const nextUsers = incomingUsers.map(normalizeStoredUser).filter(Boolean);
     await saveUsers(nextUsers);
-    sendJson(response, 200, { users: nextUsers });
-    return;
-  }
-
-  if (request.method === "PATCH") {
-    const body = JSON.parse(await readRequestBody(request) || "{}");
-    if (!normalizedText(body.username) || !normalizedText(body.password)) {
-      sendJson(response, 400, { error: "用户名和新密码不能为空" });
-      return;
-    }
-
-    const users = await readUsers();
-    if (!users.some((user) => normalizedText(user.username).toLowerCase() === normalizedText(body.username).toLowerCase())) {
-      sendJson(response, 404, { error: "未找到当前用户" });
-      return;
-    }
-
-    const nextUsers = await updateUserPassword(body.username, body.password);
-    sendJson(response, 200, { users: nextUsers });
+    sendJson(response, 200, { users: nextUsers.map(sanitizeUserProfile) });
     return;
   }
 
@@ -764,6 +968,11 @@ async function handleUsersApi(request, response) {
 }
 
 async function handleDashboardDataApi(request, response) {
+  const session = await requireSession(request, response);
+  if (!session) {
+    return;
+  }
+
   if (request.method === "GET") {
     sendJson(response, 200, { dashboards: await readDashboardData() });
     return;
@@ -810,6 +1019,16 @@ async function serveStatic(request, response) {
 
 const server = createServer(async (request, response) => {
   try {
+    if (request.url?.startsWith("/api/session/password")) {
+      await handleSessionApi(request, response);
+      return;
+    }
+
+    if (request.url?.startsWith("/api/session")) {
+      await handleSessionApi(request, response);
+      return;
+    }
+
     if (request.url?.startsWith("/api/users")) {
       await handleUsersApi(request, response);
       return;
