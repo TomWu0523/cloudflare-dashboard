@@ -155,7 +155,7 @@ function sendJson(response, statusCode, payload, headers = {}) {
 }
 
 function hashPassword(password, salt = randomBytes(16).toString("hex")) {
-  const digest = pbkdf2Sync(password, salt, passwordHashIterations, 64, "sha256").toString("hex");
+  const digest = pbkdf2Sync(password, Buffer.from(salt, "hex"), passwordHashIterations, 64, "sha256").toString("hex");
   return `pbkdf2$${salt}$${digest}`;
 }
 
@@ -178,7 +178,7 @@ function verifyPassword(password, storedValue) {
   }
 
   const candidate = algorithm === "pbkdf2"
-    ? pbkdf2Sync(password, salt, passwordHashIterations, 64, "sha256")
+    ? pbkdf2Sync(password, Buffer.from(salt, "hex"), passwordHashIterations, 64, "sha256")
     : scryptSync(password, salt, 64);
   const expected = Buffer.from(digest, "hex");
   return candidate.length === expected.length && timingSafeEqual(candidate, expected);

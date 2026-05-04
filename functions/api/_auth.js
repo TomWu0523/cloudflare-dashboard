@@ -34,13 +34,20 @@ function bytesFromHex(hex) {
 }
 
 function base64UrlEncode(text) {
-  const encoded = btoa(text);
+  const bytes = new TextEncoder().encode(text);
+  let binary = "";
+  bytes.forEach((value) => {
+    binary += String.fromCharCode(value);
+  });
+  const encoded = btoa(binary);
   return encoded.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
 }
 
 function base64UrlDecode(text) {
   const padded = text.replace(/-/g, "+").replace(/_/g, "/").padEnd(Math.ceil(text.length / 4) * 4, "=");
-  return atob(padded);
+  const binary = atob(padded);
+  const bytes = Uint8Array.from(binary, (char) => char.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
 }
 
 async function pbkdf2Digest(password, saltHex) {
