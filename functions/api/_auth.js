@@ -5,6 +5,7 @@ const jsonHeaders = {
 
 const sessionCookieName = "getinge_dashboard_session";
 const sessionTtlMs = 1000 * 60 * 60 * 12;
+const passwordHashIterations = 100000;
 
 export function jsonResponse(payload, status = 200, headers = {}) {
   return new Response(JSON.stringify(payload), {
@@ -47,7 +48,7 @@ async function pbkdf2Digest(password, saltHex) {
   const bits = await crypto.subtle.deriveBits({
     name: "PBKDF2",
     salt: bytesFromHex(saltHex),
-    iterations: 210000,
+    iterations: passwordHashIterations,
     hash: "SHA-256"
   }, key, 512);
   return hexFromBytes(new Uint8Array(bits));
