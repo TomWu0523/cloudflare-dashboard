@@ -993,7 +993,7 @@ h2 {
 .footprint-header h2 {
   margin-top: 6px;
   color: #f4feff;
-  font-size: clamp(32px, 5.4vw, 76px);
+  font-size: clamp(30px, 5vw, 72px);
   line-height: 0.95;
   font-weight: 780;
   text-shadow: 0 0 24px rgba(49, 183, 188, 0.32);
@@ -1013,17 +1013,61 @@ h2 {
 
 .footprint-map-shell {
   position: absolute;
-  inset: 9vh 2vw 3vh;
+  inset: 10vh 0.8vw 1vh;
   display: grid;
   place-items: center;
-  transform: perspective(1300px) rotateX(50deg) rotateZ(-7deg) translateY(5vh);
-  transform-origin: center 58%;
+  transform: translateY(5.6vh) scale(1.1);
+  transform-origin: center 60%;
 }
 
 .footprint-map {
-  width: min(1180px, 96vw);
-  height: min(720px, 76vh);
+  width: min(1480px, 98vw);
+  height: min(860px, 84vh);
   filter: drop-shadow(0 34px 38px rgba(0, 0, 0, 0.42));
+}
+
+.footprint-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.footprint-label {
+  position: absolute;
+  min-width: 54px;
+  color: rgba(240, 252, 255, 0.96);
+  font-size: 11px;
+  line-height: 1.25;
+  text-align: left;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.42);
+  transform: translate(-50%, -100%);
+}
+
+.footprint-label::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -28px;
+  width: 1px;
+  height: 24px;
+  background: linear-gradient(180deg, rgba(231, 248, 255, 0.92), rgba(231, 248, 255, 0));
+}
+
+.footprint-label__name {
+  display: inline-block;
+  padding: 0 0 3px;
+  font-weight: 760;
+  white-space: nowrap;
+}
+
+.footprint-label__value {
+  display: inline-block;
+  padding: 1px 5px 2px;
+  color: rgba(255, 249, 227, 0.98);
+  background: rgba(5, 13, 29, 0.38);
+  border-radius: 999px;
+  font-weight: 720;
+  white-space: nowrap;
 }
 
 body.footprint-open {
@@ -1605,8 +1649,8 @@ body.footprint-open {
   }
 
   .footprint-map-shell {
-    inset: 16vh 0 6vh;
-    transform: perspective(1100px) rotateX(48deg) rotateZ(-7deg) translateY(4vh);
+    inset: 13vh -5vw 2vh;
+    transform: perspective(1120px) rotateX(48deg) rotateZ(-7deg) translateY(4.4vh) scale(1.18);
   }
 
   .project-entry-button {

@@ -7540,6 +7540,14 @@ let yearTrendChart;
 let mapChart;
 let footprintChart;
 let chinaGeoJson;
+let chinaFeatureMap;
+let chinaLngLatBounds;
+let footprintRenderer;
+let footprintScene;
+let footprintCamera;
+let footprintRoot;
+let footprintLabelEntries = [];
+let footprintAnimationHandle = 0;
 
 const projectFields = [
   "partNumber",
@@ -9034,6 +9042,31 @@ async function ensureChinaMap() {
   if (!chinaGeoJson) {
     chinaGeoJson = await fetch("assets/china.json").then((response) => response.json());
     echarts.registerMap("china", chinaGeoJson);
+    chinaFeatureMap = new Map((chinaGeoJson.features || []).map((feature) => [
+      feature.properties?.name,
+      feature
+    ]));
+    chinaLngLatBounds = (chinaGeoJson.features || []).reduce((bounds, feature) => {
+      const polygons = feature.geometry?.type === "MultiPolygon"
+        ? feature.geometry.coordinates
+        : [feature.geometry?.coordinates || []];
+      polygons.forEach((polygon) => {
+        polygon.forEach((ring) => {
+          ring.forEach(([lng, lat]) => {
+            bounds.minLng = Math.min(bounds.minLng, lng);
+            bounds.maxLng = Math.max(bounds.maxLng, lng);
+            bounds.minLat = Math.min(bounds.minLat, lat);
+            bounds.maxLat = Math.max(bounds.maxLat, lat);
+          });
+        });
+      });
+      return bounds;
+    }, {
+      minLng: Infinity,
+      maxLng: -Infinity,
+      minLat: Infinity,
+      maxLat: -Infinity
+    });
   }
 }
 
@@ -9053,6 +9086,7 @@ function footprintTitle() {
 
 function footprintConeData() {
   const provinceData = currentDashboardData().provinceData || [];
+  const provinceValueMap = new Map(provinceData.map((item) => [item.name, item]));
   const maxValue = Math.max(1, ...provinceData.map((item) => item.value || 0));
   const topProvince = provinceData.reduce((winner, item) => {
     if (!winner || (item.value || 0) > (winner.value || 0)) {
@@ -9062,15 +9096,26 @@ function footprintConeData() {
     return winner;
   }, null);
 
-  return provinceData
-    .filter((item) => item.coord && item.value > 0)
-    .map((item) => ({
-      name: item.name,
-      latestSite: item.latestSite,
-      latestDate: item.latestDate,
-      isPeak: topProvince?.name === item.name,
-      value: [...item.coord, item.value, maxValue]
-    }));
+  return (chinaGeoJson?.features || [])
+    .map((feature) => {
+      const name = feature.properties?.name;
+      const sourceItem = provinceValueMap.get(name);
+      const coord = sourceItem?.coord
+        || feature.properties?.centroid
+        || feature.properties?.center
+        || [104.2, 35.8];
+      const value = sourceItem?.value || 0;
+      return {
+        name,
+        coord,
+        latestSite: sourceItem?.latestSite || "",
+        latestDate: sourceItem?.latestDate || "",
+        isPeak: topProvince?.name === name,
+        rings: provinceOuterRings(feature.geometry),
+        value: [...coord, value, maxValue]
+      };
+    })
+    .filter((item) => item.name && item.rings.length);
 }
 
 function footprintCylinderPalette(ratio, isPeak) {
@@ -9141,152 +9186,802 @@ function footprintCylinderPalette(ratio, isPeak) {
   };
 }
 
-function renderFootprintCone(params, api) {
+function provinceOuterRings(geometry) {
+  if (!geometry) {
+    return [];
+  }
+
+  if (geometry.type === "Polygon") {
+    return geometry.coordinates
+      .slice(0, 1)
+      .map((ring) => ring.map(([lng, lat]) => [lng, lat]))
+      .filter((ring) => ring.length >= 3);
+  }
+
+  if (geometry.type === "MultiPolygon") {
+    return geometry.coordinates
+      .map((polygon) => polygon[0]?.map(([lng, lat]) => [lng, lat]))
+      .filter((ring) => ring.length >= 3);
+  }
+
+  return [];
+}
+
+function shiftScaleRings(rings, center, scale, shiftY) {
+  return rings.map((ring) => ring.map(([x, y]) => [
+    center[0] + (x - center[0]) * scale,
+    center[1] + (y - center[1]) * scale + shiftY
+  ]));
+}
+
+function ringsToPath(rings) {
+  return rings
+    .map((ring) => {
+      if (!ring.length) {
+        return "";
+      }
+
+      const [firstPoint, ...restPoints] = ring;
+      return [
+        `M ${firstPoint[0]} ${firstPoint[1]}`,
+        ...restPoints.map((point) => `L ${point[0]} ${point[1]}`),
+        "Z"
+      ].join(" ");
+    })
+    .filter(Boolean)
+    .join(" ");
+}
+
+function terrainLayerColor(palette, t) {
+  if (t > 0.86) return palette.topMid;
+  if (t > 0.62) return palette.sideLight;
+  if (t > 0.34) return palette.sideMid;
+  return palette.sideDark;
+}
+
+function renderFootprintCone(terrainData) {
+  return function renderFootprintTerrainItem(params, api) {
+  const item = terrainData[params.dataIndex];
+  if (!item) {
+    return;
+  }
+
   const coord = api.coord([api.value(0), api.value(1)]);
   const value = api.value(2);
   const maxValue = Math.max(1, api.value(3));
   const ratio = Math.sqrt(value / maxValue);
-  const height = 32 + ratio * 124;
-  const radiusX = 7 + ratio * 15;
-  const radiusY = 3.5 + ratio * 5.8;
-  const baseY = coord[1] + 8;
-  const topY = baseY - height;
-  const topX = coord[0];
-  const bottomX = coord[0];
+  const projectedRings = (item.rings || [])
+    .map((ring) => ring.map((point) => api.coord(point)))
+    .filter((ring) => ring.length >= 3);
+
+  if (!projectedRings.length) {
+    return;
+  }
+
+  const height = 26 + ratio * 112;
+  const layerCount = Math.max(10, Math.round(12 + ratio * 8));
+  const minScale = Math.max(0.14, 0.6 - ratio * 0.14);
   const isPeak = Boolean(params.data?.isPeak);
   const palette = footprintCylinderPalette(ratio, isPeak);
-  const bodyPath = [
-    `M ${topX - radiusX} ${topY}`,
-    `C ${topX - radiusX * 1.04} ${topY + height * 0.34} ${bottomX - radiusX * 1.02} ${baseY - height * 0.28} ${bottomX - radiusX} ${baseY}`,
-    `Q ${bottomX} ${baseY + radiusY * 1.18} ${bottomX + radiusX} ${baseY}`,
-    `C ${bottomX + radiusX * 1.02} ${baseY - height * 0.28} ${topX + radiusX * 1.04} ${topY + height * 0.34} ${topX + radiusX} ${topY}`,
-    `Q ${topX} ${topY + radiusY * 1.22} ${topX - radiusX} ${topY}`,
-    "Z"
-  ].join(" ");
-  const highlightPath = [
-    `M ${topX - radiusX * 0.34} ${topY + radiusY * 0.35}`,
-    `C ${topX - radiusX * 0.28} ${topY + height * 0.28} ${bottomX - radiusX * 0.26} ${baseY - height * 0.18} ${bottomX - radiusX * 0.22} ${baseY - radiusY * 0.42}`,
-    `L ${bottomX + radiusX * 0.12} ${baseY - radiusY * 0.28}`,
-    `C ${bottomX + radiusX * 0.04} ${baseY - height * 0.2} ${topX + radiusX * 0.16} ${topY + height * 0.28} ${topX + radiusX * 0.24} ${topY + radiusY * 0.34}`,
-    "Z"
-  ].join(" ");
-  const labelX = topX + radiusX * 0.74;
-  const labelY = topY - 10 - ratio * 5;
+  const labelX = coord[0] + 10 + ratio * 8;
+  const labelY = coord[1] - height - 12;
 
   const children = [
     {
-      type: "ellipse",
+      type: "path",
       shape: {
-        cx: bottomX,
-        cy: baseY + radiusY * 0.2,
-        rx: radiusX * 1.28,
-        ry: radiusY * 1.02
+        pathData: ringsToPath(projectedRings)
       },
       style: {
-        fill: palette.baseFill,
-        stroke: palette.baseStroke,
+        fill: "rgba(10, 30, 57, 0.58)",
+        stroke: "rgba(103, 225, 237, 0.36)",
         lineWidth: 1,
-        shadowBlur: isPeak ? 36 : 22,
-        shadowColor: palette.shadow
+        shadowBlur: 26,
+        shadowColor: "rgba(49, 183, 188, 0.2)"
       }
-    },
-    {
+    }
+  ];
+
+  for (let layerIndex = 0; layerIndex < layerCount; layerIndex += 1) {
+    const t = layerCount === 1 ? 1 : layerIndex / (layerCount - 1);
+    const scale = 1 - (1 - minScale) * t;
+    const shiftY = -height * t;
+    const layerRings = shiftScaleRings(projectedRings, coord, scale, shiftY);
+    children.push({
       type: "path",
       shape: {
-        pathData: bodyPath
+        pathData: ringsToPath(layerRings)
       },
       style: {
-        fill: new echarts.graphic.LinearGradient(0, 1, 0, 0, [
-          { offset: 0, color: palette.sideDark },
-          { offset: 0.42, color: palette.sideMid },
-          { offset: 0.78, color: palette.sideLight },
-          { offset: 1, color: palette.topMid }
-        ]),
-        opacity: isPeak ? 0.98 : 0.9,
-        stroke: palette.stroke,
-        lineWidth: isPeak ? 1.6 : 1.1,
-        shadowBlur: isPeak ? 24 : 18,
-        shadowColor: palette.shadow
-      }
-    },
+        fill: terrainLayerColor(palette, t),
+        opacity: 0.06 + t * 0.06,
+        stroke: t > 0.72 ? palette.stroke : "rgba(0, 0, 0, 0)",
+        lineWidth: t > 0.72 ? 0.55 : 0,
+        shadowBlur: layerIndex === layerCount - 1 ? 26 : 0,
+        shadowColor: layerIndex === layerCount - 1 ? palette.shadow : "transparent"
+      },
+      z2: 2 + layerIndex
+    });
+  }
+
+  const summitRadius = 11 + ratio * 18;
+  children.push(
     {
-      type: "path",
+      type: "circle",
       shape: {
-        pathData: highlightPath
+        cx: coord[0],
+        cy: coord[1] - height * 0.92,
+        r: summitRadius
       },
       style: {
-        fill: new echarts.graphic.LinearGradient(0, 1, 0, 0, [
-          { offset: 0, color: "rgba(255, 255, 255, 0.05)" },
-          { offset: 0.62, color: "rgba(255, 255, 255, 0.28)" },
-          { offset: 1, color: "rgba(255, 255, 255, 0.68)" }
-        ]),
-        opacity: isPeak ? 0.54 : 0.4
-      }
-    },
-    {
-      type: "ellipse",
-      shape: {
-        cx: topX,
-        cy: topY,
-        rx: radiusX,
-        ry: radiusY
-      },
-      style: {
-        fill: new echarts.graphic.RadialGradient(0.38, 0.28, 0.82, [
+        fill: new echarts.graphic.RadialGradient(0.45, 0.35, 0.95, [
           { offset: 0, color: palette.topCore },
-          { offset: 0.48, color: palette.topMid },
-          { offset: 1, color: palette.topEdge }
+          { offset: 0.28, color: palette.topMid },
+          { offset: 1, color: "rgba(0, 0, 0, 0)" }
         ]),
-        stroke: palette.stroke,
-        lineWidth: isPeak ? 1.8 : 1.2,
-        shadowBlur: isPeak ? 22 : 16,
+        opacity: 0.95,
+        shadowBlur: 38,
         shadowColor: palette.shadow
-      }
+      },
+      z2: 50
+    },
+    {
+      type: "path",
+      shape: {
+        pathData: ringsToPath(shiftScaleRings(projectedRings, coord, minScale * 0.94, -height * 0.9))
+      },
+      style: {
+        fill: "rgba(255, 255, 255, 0.02)",
+        stroke: "rgba(255, 255, 255, 0.22)",
+        lineWidth: 0.8
+      },
+      z2: 50
+    },
+    {
+      type: "path",
+      shape: {
+        pathData: ringsToPath(shiftScaleRings(projectedRings, coord, minScale * 0.86, -height * 0.98))
+      },
+      style: {
+        fill: "rgba(255, 255, 255, 0.04)",
+        stroke: "rgba(255, 255, 255, 0.42)",
+        lineWidth: 0.9,
+        shadowBlur: 18,
+        shadowColor: palette.shadow
+      },
+      z2: 51
+    },
+    {
+      type: "path",
+      shape: {
+        pathData: ringsToPath(shiftScaleRings(projectedRings, coord, minScale * 0.76, -height * 1.05))
+      },
+      style: {
+        fill: "rgba(255, 255, 255, 0.01)",
+        stroke: "rgba(255, 255, 255, 0.14)",
+        lineWidth: 0.7
+      },
+      z2: 52
     },
     {
       type: "text",
       style: {
         x: labelX,
         y: labelY,
-        text: `${formatNumber.format(value)} 台`,
+        text: `${item.name.replace(/省|市|壮族自治区|回族自治区|维吾尔自治区|自治区/g, "")}\n${formatNumber.format(value)} 台`,
         fill: palette.label,
-        font: `${isPeak ? 800 : 700} 10px Arial, sans-serif`,
-        backgroundColor: "rgba(5, 13, 29, 0.68)",
-        borderColor: palette.labelBorder,
-        borderWidth: 1,
-        borderRadius: 5,
-        padding: [3, 5],
-        shadowBlur: isPeak ? 16 : 10,
-        shadowColor: palette.shadow
+        font: `${isPeak ? 800 : 700} 11px Arial, sans-serif`,
+        lineHeight: 15,
+        backgroundColor: "rgba(5, 13, 29, 0.46)",
+        borderColor: "rgba(255, 255, 255, 0.08)",
+        borderWidth: 0,
+        borderRadius: 4,
+        padding: [2, 4]
       },
-      z2: 6
+      z2: 60
+    },
+    {
+      type: "line",
+      shape: {
+        x1: coord[0],
+        y1: coord[1] - height * 0.74,
+        x2: labelX - 5,
+        y2: labelY + 6
+      },
+      style: {
+        stroke: "rgba(206, 245, 255, 0.48)",
+        lineWidth: 0.8,
+        opacity: 0.9
+      },
+      z2: 59
     }
-  ];
+  );
 
   if (isPeak) {
-    children.push(
-      {
-        type: "circle",
-        shape: { cx: topX, cy: topY, r: 4.5 },
-        style: {
-          fill: "#fff4c9",
-          stroke: "#f39200",
-          lineWidth: 2,
-          shadowBlur: 18,
-          shadowColor: "rgba(243, 146, 0, 0.85)"
-        }
-      }
-    );
+    children.push({
+      type: "circle",
+      shape: { cx: coord[0], cy: coord[1] - height * 0.92, r: 3.2 },
+      style: {
+        fill: "#fff4c9",
+        stroke: "#f39200",
+        lineWidth: 1.5,
+        shadowBlur: 18,
+        shadowColor: "rgba(243, 146, 0, 0.85)"
+      },
+      z2: 62
+    });
   }
 
   return {
     type: "group",
     children
   };
+  };
+}
+
+function footprintShortName(name) {
+  return name.replace(/省|市|壮族自治区|回族自治区|维吾尔自治区|自治区/g, "");
+}
+
+function footprintHash(value) {
+  let hash = 2166136261;
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return (hash >>> 0) / 4294967295;
+}
+
+function footprintNoise2D(x, y, seed) {
+  const value = Math.sin(x * 12.9898 + y * 78.233 + seed * 157.31) * 43758.5453;
+  return value - Math.floor(value);
+}
+
+function footprintFbm(x, y, seed) {
+  let amplitude = 0.55;
+  let frequency = 0.028;
+  let total = 0;
+  let weight = 0;
+
+  for (let octave = 0; octave < 4; octave += 1) {
+    total += amplitude * footprintNoise2D(x * frequency, y * frequency, seed + octave * 0.17);
+    weight += amplitude;
+    amplitude *= 0.52;
+    frequency *= 2.08;
+  }
+
+  return weight ? total / weight : 0;
+}
+
+function footprintRingArea(ring) {
+  let area = 0;
+  for (let index = 0; index < ring.length; index += 1) {
+    const [x1, y1] = ring[index];
+    const [x2, y2] = ring[(index + 1) % ring.length];
+    area += x1 * y2 - x2 * y1;
+  }
+  return Math.abs(area / 2);
+}
+
+function footprintRingCentroid(ring) {
+  let area = 0;
+  let x = 0;
+  let y = 0;
+
+  for (let index = 0; index < ring.length; index += 1) {
+    const [x1, y1] = ring[index];
+    const [x2, y2] = ring[(index + 1) % ring.length];
+    const cross = x1 * y2 - x2 * y1;
+    area += cross;
+    x += (x1 + x2) * cross;
+    y += (y1 + y2) * cross;
+  }
+
+  const normalizedArea = area / 2;
+  if (!normalizedArea) {
+    return ring[0] || [0, 0];
+  }
+
+  return [x / (6 * normalizedArea), y / (6 * normalizedArea)];
+}
+
+function footprintPointInPolygon(point, ring) {
+  let inside = false;
+  const [px, py] = point;
+
+  for (let index = 0, previousIndex = ring.length - 1; index < ring.length; previousIndex = index, index += 1) {
+    const [x1, y1] = ring[index];
+    const [x2, y2] = ring[previousIndex];
+    const intersects = ((y1 > py) !== (y2 > py))
+      && (px < ((x2 - x1) * (py - y1)) / ((y2 - y1) || 1e-6) + x1);
+    if (intersects) {
+      inside = !inside;
+    }
+  }
+
+  return inside;
+}
+
+function footprintProjectLngLat([lng, lat]) {
+  const centerLng = (chinaLngLatBounds.minLng + chinaLngLatBounds.maxLng) / 2;
+  const centerLat = (chinaLngLatBounds.minLat + chinaLngLatBounds.maxLat) / 2;
+  return [
+    (lng - centerLng) * 18.6,
+    (lat - centerLat) * -24.2
+  ];
+}
+
+function footprintDensifyRing(ring) {
+  const cleaned = ring.slice(0, -1);
+  const points = [];
+
+  for (let index = 0; index < cleaned.length; index += 1) {
+    const current = cleaned[index];
+    const next = cleaned[(index + 1) % cleaned.length];
+    const dx = next[0] - current[0];
+    const dy = next[1] - current[1];
+    const distance = Math.hypot(dx, dy);
+    const steps = Math.max(1, Math.ceil(distance / 3.4));
+
+    for (let step = 0; step < steps; step += 1) {
+      const t = step / steps;
+      points.push([
+        current[0] + dx * t,
+        current[1] + dy * t
+      ]);
+    }
+  }
+
+  return points;
+}
+
+function footprintThreePalette(ratio, isPeak) {
+  if (isPeak || ratio >= 0.82) {
+    return {
+      dark: "#5b2f08",
+      mid: "#ff8b12",
+      light: "#ffd46d",
+      crest: "#fff5d0",
+      emissive: "#ff8b12",
+      contour: "#ffe39a",
+      label: "#fff4d4"
+    };
+  }
+
+  if (ratio >= 0.52) {
+    return {
+      dark: "#295238",
+      mid: "#88cb55",
+      light: "#d3f16f",
+      crest: "#f4ffd8",
+      emissive: "#9ee860",
+      contour: "#def5a1",
+      label: "#f4ffd6"
+    };
+  }
+
+  if (ratio >= 0.24) {
+    return {
+      dark: "#0f5875",
+      mid: "#3dc5d2",
+      light: "#8af4ee",
+      crest: "#e3ffff",
+      emissive: "#45d6de",
+      contour: "#b8ffff",
+      label: "#e2ffff"
+    };
+  }
+
+  return {
+    dark: "#13386d",
+    mid: "#2f73d8",
+    light: "#89b8ff",
+    crest: "#eef7ff",
+    emissive: "#3f85ff",
+    contour: "#b7d7ff",
+    label: "#edf6ff"
+  };
+}
+
+function footprintInterpolateColor(colorA, colorB, factor) {
+  const next = colorA.clone();
+  return next.lerp(colorB, factor);
+}
+
+function footprintTerrainHeight(point, center, radius, seed, level) {
+  const dx = point[0] - center[0];
+  const dy = point[1] - center[1];
+  const safeRadius = Math.max(radius, 1);
+  const warpX = (footprintFbm(point[0] + 17.3, point[1] - 11.8, seed + 0.09) - 0.5) * 0.44;
+  const warpY = (footprintFbm(point[0] - 13.6, point[1] + 19.4, seed + 0.23) - 0.5) * 0.44;
+  const nx = dx / safeRadius + warpX;
+  const ny = dy / safeRadius + warpY;
+  const radial = Math.hypot(nx, ny);
+  const edgeFade = Math.pow(Math.max(0, 1 - radial), 0.94);
+  const massif = Math.exp(-(radial * radial) * 2.4) * 0.48;
+
+  const ridgeAngleA = footprintHash(`${seed}-ridge-a`) * Math.PI * 2;
+  const ridgeAngleB = ridgeAngleA + Math.PI * (0.28 + footprintHash(`${seed}-ridge-b`) * 0.24);
+  const ridgeAngleC = ridgeAngleA - Math.PI * (0.18 + footprintHash(`${seed}-ridge-c`) * 0.18);
+  const axes = [ridgeAngleA, ridgeAngleB, ridgeAngleC];
+
+  const ridgeValue = axes.reduce((sum, angle, index) => {
+    const along = nx * Math.cos(angle) + ny * Math.sin(angle);
+    const across = -nx * Math.sin(angle) + ny * Math.cos(angle);
+    const spine = Math.exp(-(across * across) * (18 + index * 5) - (along * along) * (2.8 + index * 0.65));
+    const crest = Math.exp(-((along - 0.06 * (index - 1)) ** 2) * 9.5 - (across * across) * 34);
+    return sum + spine * (0.56 - index * 0.07) + crest * (0.34 - index * 0.05);
+  }, 0);
+
+  const spurSeed = footprintHash(`${seed}-spur`);
+  const spurAngle = ridgeAngleA + (spurSeed - 0.5) * 1.4;
+  const spurAlong = nx * Math.cos(spurAngle) + ny * Math.sin(spurAngle);
+  const spurAcross = -nx * Math.sin(spurAngle) + ny * Math.cos(spurAngle);
+  const spur = Math.exp(-(spurAcross * spurAcross) * 30 - ((spurAlong + 0.22) ** 2) * 8.5) * 0.48;
+
+  const cellNoise = footprintFbm(point[0] * 1.8, point[1] * 1.8, seed + 0.37);
+  const ridgeNoise = footprintFbm(point[0] * 3.4, point[1] * 3.4, seed + 0.61);
+  const crag = Math.max(0, cellNoise - 0.47) * (0.16 + level * 0.34);
+  const microRidge = Math.pow(Math.max(0, 1 - Math.abs(2 * ridgeNoise - 1)), 1.9) * 0.22;
+
+  return edgeFade * (massif + ridgeValue + spur + crag + microRidge);
+}
+
+function ensureFootprintScene() {
+  if (!window.THREE) {
+    return false;
+  }
+
+  const container = document.querySelector("#footprintMap");
+  if (!footprintRenderer) {
+    footprintRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    footprintRenderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    container.innerHTML = "";
+    container.appendChild(footprintRenderer.domElement);
+
+    footprintScene = new THREE.Scene();
+    footprintCamera = new THREE.PerspectiveCamera(34, 1, 1, 3000);
+    footprintRoot = new THREE.Group();
+    footprintScene.add(footprintRoot);
+
+    const ambientLight = new THREE.AmbientLight(0xb8ecff, 1.15);
+    const keyLight = new THREE.DirectionalLight(0xdaf7ff, 1.25);
+    keyLight.position.set(180, -220, 320);
+    const fillLight = new THREE.DirectionalLight(0x52d8ff, 0.55);
+    fillLight.position.set(-240, 180, 140);
+    footprintScene.add(ambientLight, keyLight, fillLight);
+  }
+
+  const width = container.clientWidth || 1200;
+  const height = container.clientHeight || 760;
+  footprintRenderer.setSize(width, height, false);
+  footprintCamera.aspect = width / height;
+  footprintCamera.updateProjectionMatrix();
+  return true;
+}
+
+function clearFootprintScene() {
+  if (!footprintRoot) {
+    return;
+  }
+
+  footprintRoot.traverse((node) => {
+    if (node.geometry) {
+      node.geometry.dispose?.();
+    }
+    if (node.material) {
+      if (Array.isArray(node.material)) {
+        node.material.forEach((material) => material.dispose?.());
+      } else {
+        node.material.dispose?.();
+      }
+    }
+  });
+  footprintRoot.clear();
+  document.querySelector("#footprintLabels").innerHTML = "";
+  footprintLabelEntries = [];
+}
+
+function buildTerrainMeshForRing(ring, peakCenter, item) {
+  const denseRing = footprintDensifyRing(ring);
+  if (denseRing.length < 3) {
+    return null;
+  }
+
+  const ratio = item.value[2] > 0 ? Math.sqrt(item.value[2] / Math.max(item.value[3], 1)) : 0;
+  const palette = footprintThreePalette(ratio, item.isPeak);
+  const ringCenter = footprintPointInPolygon(peakCenter, denseRing) ? peakCenter : footprintRingCentroid(denseRing);
+  const averageRadius = denseRing.reduce((sum, point) => sum + Math.hypot(point[0] - ringCenter[0], point[1] - ringCenter[1]), 0) / denseRing.length;
+  const baseHeight = 6.2;
+  const terrainHeight = 10 + ratio * 92;
+  const levels = Math.max(26, Math.round(26 + ratio * 12));
+  const minScale = Math.max(0.04, 0.16 - ratio * 0.05);
+  const seed = footprintHash(item.name);
+  const vertices = [];
+  const colors = [];
+  const indices = [];
+  const pointsPerLevel = denseRing.length;
+  const colorDark = new THREE.Color(palette.dark);
+  const colorMid = new THREE.Color(palette.mid);
+  const colorLight = new THREE.Color(palette.light);
+  const colorCrest = new THREE.Color(palette.crest);
+
+  denseRing.forEach(([x, y]) => {
+    vertices.push(x, y, 0);
+    colors.push(colorDark.r, colorDark.g, colorDark.b);
+  });
+
+  denseRing.forEach(([x, y]) => {
+    vertices.push(x, y, baseHeight);
+    const cliffColor = footprintInterpolateColor(colorDark, colorMid, 0.2);
+    colors.push(cliffColor.r, cliffColor.g, cliffColor.b);
+  });
+
+  for (let index = 0; index < pointsPerLevel; index += 1) {
+    const nextIndex = (index + 1) % pointsPerLevel;
+    const bottomA = index;
+    const bottomB = nextIndex;
+    const topA = pointsPerLevel + index;
+    const topB = pointsPerLevel + nextIndex;
+    indices.push(bottomA, topA, bottomB, bottomB, topA, topB);
+  }
+
+  const layerPoints = [];
+  layerPoints.push(denseRing.map(([x, y]) => ({ x, y, z: baseHeight })));
+
+  for (let level = 1; level <= levels; level += 1) {
+    const t = level / levels;
+    const scale = 1 - (1 - minScale) * t;
+    const ringPoints = denseRing.map(([x, y]) => {
+      const vx = x - ringCenter[0];
+      const vy = y - ringCenter[1];
+      const length = Math.hypot(vx, vy) || 1;
+      const normalX = vx / length;
+      const normalY = vy / length;
+      const tangentX = -normalY;
+      const tangentY = normalX;
+      const layerPoint = [
+        ringCenter[0] + vx * scale,
+        ringCenter[1] + vy * scale
+      ];
+      const lowNoise = footprintFbm(layerPoint[0], layerPoint[1], seed + 0.14) - 0.5;
+      const highNoise = footprintFbm(layerPoint[0] * 2.3, layerPoint[1] * 2.3, seed + 0.41) - 0.5;
+      const radialJitter = lowNoise * averageRadius * (1 - t) * 0.12;
+      const tangentialJitter = highNoise * averageRadius * (1 - t) * 0.18;
+      layerPoint[0] += normalX * radialJitter + tangentX * tangentialJitter;
+      layerPoint[1] += normalY * radialJitter + tangentY * tangentialJitter;
+      const heightFactor = footprintTerrainHeight(layerPoint, peakCenter, averageRadius, seed, t);
+      return {
+        x: layerPoint[0],
+        y: layerPoint[1],
+        z: baseHeight + terrainHeight * Math.min(1.22, Math.pow(t, 1.24) * 0.18 + heightFactor * (0.78 + t * 0.34))
+      };
+    });
+    layerPoints.push(ringPoints);
+  }
+
+  for (let level = 0; level < layerPoints.length; level += 1) {
+    const t = level / Math.max(layerPoints.length - 1, 1);
+    const bandColor = t > 0.82
+      ? footprintInterpolateColor(colorLight, colorCrest, (t - 0.82) / 0.18)
+      : t > 0.48
+        ? footprintInterpolateColor(colorMid, colorLight, (t - 0.48) / 0.34)
+        : footprintInterpolateColor(colorDark, colorMid, t / 0.48);
+
+    layerPoints[level].forEach((point) => {
+      vertices.push(point.x, point.y, point.z);
+      colors.push(bandColor.r, bandColor.g, bandColor.b);
+    });
+  }
+
+  const levelOffset = pointsPerLevel * 2;
+  for (let level = 0; level < layerPoints.length - 1; level += 1) {
+    const currentOffset = levelOffset + level * pointsPerLevel;
+    const nextOffset = currentOffset + pointsPerLevel;
+    for (let index = 0; index < pointsPerLevel; index += 1) {
+      const nextIndex = (index + 1) % pointsPerLevel;
+      const a = currentOffset + index;
+      const b = currentOffset + nextIndex;
+      const c = nextOffset + index;
+      const d = nextOffset + nextIndex;
+      indices.push(a, c, b, b, c, d);
+    }
+  }
+
+  const topRingOffset = levelOffset + (layerPoints.length - 1) * pointsPerLevel;
+  const peakHeight = baseHeight + terrainHeight * 1.22;
+  vertices.push(peakCenter[0], peakCenter[1], peakHeight);
+  colors.push(colorCrest.r, colorCrest.g, colorCrest.b);
+  const peakIndex = vertices.length / 3 - 1;
+
+  for (let index = 0; index < pointsPerLevel; index += 1) {
+    const nextIndex = (index + 1) % pointsPerLevel;
+    indices.push(topRingOffset + index, peakIndex, topRingOffset + nextIndex);
+  }
+
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute("position", new THREE.Float32BufferAttribute(vertices, 3));
+  geometry.setAttribute("color", new THREE.Float32BufferAttribute(colors, 3));
+  geometry.setIndex(indices);
+  geometry.computeVertexNormals();
+
+  const material = new THREE.MeshStandardMaterial({
+    vertexColors: true,
+    transparent: true,
+    opacity: 0.98,
+    roughness: 0.48,
+    metalness: 0.08,
+    emissive: new THREE.Color(palette.emissive),
+    emissiveIntensity: 0.16,
+    side: THREE.DoubleSide
+  });
+
+  const group = new THREE.Group();
+  group.add(new THREE.Mesh(geometry, material));
+
+  [0.18, 0.34, 0.5, 0.66, 0.8, 0.9].forEach((t, index) => {
+    const levelIndex = Math.min(layerPoints.length - 1, Math.max(1, Math.round(t * levels)));
+    const points = layerPoints[levelIndex].map((point) => new THREE.Vector3(point.x, point.y, point.z + index * 0.4));
+    const contourGeometry = new THREE.BufferGeometry().setFromPoints(points);
+    const contour = new THREE.LineLoop(
+      contourGeometry,
+      new THREE.LineBasicMaterial({
+        color: new THREE.Color(palette.contour),
+        transparent: true,
+        opacity: 0.22 + t * 0.22
+      })
+    );
+    group.add(contour);
+  });
+
+  return {
+    group,
+    peak: new THREE.Vector3(peakCenter[0], peakCenter[1], peakHeight),
+    palette
+  };
+}
+
+function buildFootprintTerrainSceneItems(terrainData) {
+  return terrainData
+    .map((item) => {
+      const peakCenter = footprintProjectLngLat(item.coord);
+      const ringCandidates = (item.rings || [])
+        .map((ring) => ring.map(footprintProjectLngLat))
+        .filter((ring) => ring.length >= 3)
+        .sort((a, b) => footprintRingArea(b) - footprintRingArea(a));
+
+      if (!ringCandidates.length) {
+        return null;
+      }
+
+      const largestRingArea = footprintRingArea(ringCandidates[0]);
+      const majorRings = ringCandidates
+        .filter((ring, index) => index < 4 && footprintRingArea(ring) >= largestRingArea * 0.025);
+
+      const provinceGroup = new THREE.Group();
+      let mainPeak = null;
+      let palette = null;
+
+      majorRings.forEach((ring, ringIndex) => {
+        const mesh = buildTerrainMeshForRing(ring, peakCenter, item);
+        if (!mesh) {
+          return;
+        }
+
+        provinceGroup.add(mesh.group);
+        if (ringIndex === 0) {
+          mainPeak = mesh.peak;
+          palette = mesh.palette;
+        }
+      });
+
+      if (!mainPeak || !palette) {
+        return null;
+      }
+
+      return {
+        group: provinceGroup,
+        labelText: item.value[2] > 0 ? `${footprintShortName(item.name)}\n${formatNumber.format(item.value[2])} 台` : "",
+        labelColor: palette.label,
+        peak: mainPeak
+      };
+    })
+    .filter(Boolean);
+}
+
+function createFootprintLabel(text, color) {
+  const label = document.createElement("div");
+  label.className = "footprint-label";
+  label.innerHTML = `
+    <span class="footprint-label__name">${text.split("\n")[0]}</span><br/>
+    <span class="footprint-label__value">${text.split("\n")[1]}</span>
+  `;
+  label.style.color = color;
+  label.querySelector(".footprint-label__value").style.color = color;
+  return label;
+}
+
+function updateFootprintLabels() {
+  if (!footprintCamera || !footprintRenderer) {
+    return;
+  }
+
+  const rect = footprintRenderer.domElement.getBoundingClientRect();
+  footprintLabelEntries.forEach((entry) => {
+    const projected = entry.position.clone().project(footprintCamera);
+    const visible = projected.z < 1 && projected.z > -1;
+    entry.element.style.display = visible ? "" : "none";
+    if (!visible) {
+      return;
+    }
+
+    const x = (projected.x * 0.5 + 0.5) * rect.width;
+    const y = (-projected.y * 0.5 + 0.5) * rect.height;
+    entry.element.style.left = `${x}px`;
+    entry.element.style.top = `${y}px`;
+  });
+}
+
+function renderFootprintTerrainScene() {
+  if (!ensureFootprintScene()) {
+    return false;
+  }
+
+  clearFootprintScene();
+
+  const terrainData = footprintConeData();
+  if (!terrainData.length) {
+    footprintRenderer.render(footprintScene, footprintCamera);
+    return true;
+  }
+
+  const terrainItems = buildFootprintTerrainSceneItems(terrainData);
+  const terrainGroup = new THREE.Group();
+  terrainItems.forEach((item) => terrainGroup.add(item.group));
+  terrainGroup.rotation.z = -0.18;
+  footprintRoot.add(terrainGroup);
+
+  const bounds = new THREE.Box3().setFromObject(terrainGroup);
+  const center = bounds.getCenter(new THREE.Vector3());
+  terrainGroup.position.set(-center.x, -center.y, -4);
+
+  const fittedBounds = new THREE.Box3().setFromObject(terrainGroup);
+  const size = fittedBounds.getSize(new THREE.Vector3());
+  const fittedCenter = fittedBounds.getCenter(new THREE.Vector3());
+  const verticalFov = (footprintCamera.fov * Math.PI) / 180;
+  const horizontalFov = 2 * Math.atan(Math.tan(verticalFov / 2) * footprintCamera.aspect);
+  const fitHeightDistance = size.y / (2 * Math.tan(verticalFov / 2));
+  const fitWidthDistance = size.x / (2 * Math.tan(horizontalFov / 2));
+  const distance = Math.max(fitHeightDistance, fitWidthDistance) * 0.94;
+  terrainGroup.position.x += size.x * 0.08;
+  terrainGroup.position.y += size.y * 0.17;
+  footprintCamera.position.set(size.x * 0.04, -distance * 0.82, distance * 0.62 + size.z * 1.02);
+  footprintCamera.lookAt(fittedCenter.x + size.x * 0.02, fittedCenter.y + size.y * 0.1, size.z * 0.3);
+  footprintRoot.updateMatrixWorld(true);
+
+  const labelsContainer = document.querySelector("#footprintLabels");
+  labelsContainer.innerHTML = "";
+  footprintLabelEntries = terrainItems.filter((item) => item.labelText).map((item) => {
+    const element = createFootprintLabel(item.labelText, item.labelColor);
+    labelsContainer.appendChild(element);
+    return {
+      element,
+      position: item.peak.clone().applyMatrix4(item.group.matrixWorld)
+    };
+  });
+
+  footprintRenderer.render(footprintScene, footprintCamera);
+  updateFootprintLabels();
+  return true;
 }
 
 async function renderFootprintMap() {
   await ensureChinaMap();
+  if (window.THREE && renderFootprintTerrainScene()) {
+    document.querySelector("#footprintTitle").textContent = footprintTitle();
+    return;
+  }
+
   const target = document.querySelector("#footprintMap");
   const dashboard = currentDashboardData();
   const cones = footprintConeData();
@@ -9341,9 +10036,9 @@ async function renderFootprintMap() {
     geo: {
       map: "china",
       roam: false,
-      zoom: window.innerWidth < 760 ? 1.02 : 1.16,
-      top: window.innerWidth < 760 ? 82 : 52,
-      bottom: window.innerWidth < 760 ? 96 : 64,
+      zoom: window.innerWidth < 760 ? 1.2 : 1.38,
+      top: window.innerWidth < 760 ? 56 : 20,
+      bottom: window.innerWidth < 760 ? 56 : 22,
       silent: true,
       itemStyle: {
         areaColor: "rgba(17, 45, 75, 0.72)",
@@ -9373,7 +10068,7 @@ async function renderFootprintMap() {
         name: "装机高度",
         type: "custom",
         coordinateSystem: "geo",
-        renderItem: renderFootprintCone,
+        renderItem: renderFootprintCone(cones),
         encode: {
           tooltip: [2]
         },
