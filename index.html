@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Getinge SW China Installed Base Dashboard</title>
-    <link rel="stylesheet" href="css/style.css?v=secure-session-auth-v2" />
+    <link rel="stylesheet" href="css/style.css?v=footprint-cylinder-vertical-v1" />
   </head>
   <body class="auth-locked">
     <section class="login-screen" id="loginScreen" aria-labelledby="loginTitle">
@@ -129,9 +129,14 @@
               <p>China Installed Base</p>
               <h2>省份装机与最新装机场地</h2>
             </div>
-            <div class="legend">
-              <span><i class="legend-dot latest"></i>最新装机 / 签约</span>
-              <span><i class="legend-dot base"></i>总装机规模</span>
+            <div class="map-actions">
+              <button class="footprint-button" id="openFootprintMap" type="button" aria-haspopup="dialog">
+                全屏 Footprint
+              </button>
+              <div class="legend">
+                <span><i class="legend-dot latest"></i>最新装机 / 签约</span>
+                <span><i class="legend-dot base"></i>总装机规模</span>
+              </div>
             </div>
           </div>
           <div id="chinaMap" class="china-map"></div>
@@ -289,8 +294,24 @@
       </form>
     </div>
 
+    <section class="footprint-overlay" id="footprintOverlay" role="dialog" aria-modal="true" aria-labelledby="footprintTitle" hidden>
+      <div class="footprint-orbit" aria-hidden="true"></div>
+      <div class="footprint-particles" aria-hidden="true"></div>
+      <div class="footprint-scan" aria-hidden="true"></div>
+      <header class="footprint-header">
+        <div>
+          <p>China Installed Base</p>
+          <h2 id="footprintTitle">Magnus China Footprint</h2>
+        </div>
+        <span>点击任意位置返回</span>
+      </header>
+      <div class="footprint-map-shell">
+        <div id="footprintMap" class="footprint-map"></div>
+      </div>
+    </section>
+
     <script src="assets/echarts.min.js"></script>
     <script src="assets/xlsx.full.min.js"></script>
-    <script src="js/app.js?v=secure-session-auth-v2"></script>
+    <script src="js/app.js?v=footprint-cylinder-vertical-v1"></script>
   </body>
 </html>

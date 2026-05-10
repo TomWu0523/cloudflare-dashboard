@@ -706,6 +706,36 @@ h2 {
   border-bottom: 1px solid var(--getinge-line);
 }
 
+.map-actions {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footprint-button {
+  min-height: 34px;
+  padding: 7px 12px;
+  color: var(--getinge-navy);
+  background:
+    linear-gradient(135deg, rgba(49, 183, 188, 0.2), rgba(148, 182, 84, 0.2)),
+    rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(49, 183, 188, 0.42);
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(49, 183, 188, 0.14);
+  font-size: 12px;
+  font-weight: 760;
+  cursor: pointer;
+}
+
+.footprint-button:hover,
+.footprint-button:focus-visible {
+  outline: 0;
+  border-color: var(--getinge-cyan);
+  box-shadow: 0 12px 28px rgba(49, 183, 188, 0.24);
+  transform: translateY(-1px);
+}
+
 .panel-heading p,
 .map-heading p {
   color: var(--getinge-bluegray);
@@ -848,6 +878,187 @@ h2 {
   width: 100%;
   height: 100%;
   min-height: 420px;
+}
+
+.footprint-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  overflow: hidden;
+  color: #e9fbff;
+  background:
+    radial-gradient(circle at 50% 62%, rgba(49, 183, 188, 0.23), transparent 34%),
+    radial-gradient(circle at 74% 20%, rgba(243, 146, 0, 0.13), transparent 27%),
+    linear-gradient(150deg, #050b18 0%, #09152a 46%, #02050c 100%);
+  cursor: pointer;
+}
+
+.footprint-overlay[hidden] {
+  display: none;
+}
+
+.footprint-overlay::before,
+.footprint-overlay::after {
+  content: "";
+  position: absolute;
+  inset: -16%;
+  pointer-events: none;
+}
+
+.footprint-overlay::before {
+  background:
+    linear-gradient(rgba(49, 183, 188, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(49, 183, 188, 0.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(circle at center, black 0%, transparent 68%);
+  animation: footprint-grid-drift 18s linear infinite;
+}
+
+.footprint-overlay::after {
+  background:
+    linear-gradient(115deg, transparent 0%, transparent 42%, rgba(255, 255, 255, 0.12) 48%, transparent 55%, transparent 100%);
+  animation: footprint-light-sweep 5.8s ease-in-out infinite;
+}
+
+.footprint-orbit {
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  width: min(86vw, 1180px);
+  aspect-ratio: 1.9;
+  border: 1px solid rgba(49, 183, 188, 0.22);
+  border-radius: 50%;
+  box-shadow:
+    0 0 46px rgba(49, 183, 188, 0.16),
+    inset 0 0 52px rgba(49, 183, 188, 0.09);
+  transform: translate(-50%, -50%) rotateX(66deg) rotateZ(-10deg);
+  animation: footprint-orbit-pulse 4.6s ease-in-out infinite;
+}
+
+.footprint-orbit::before {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  border-radius: inherit;
+  background: conic-gradient(from 20deg, transparent 0deg, rgba(49, 183, 188, 0.28) 32deg, transparent 82deg, transparent 360deg);
+  filter: blur(4px);
+  animation: footprint-radar-spin 9s linear infinite;
+}
+
+.footprint-particles {
+  position: absolute;
+  inset: 0;
+  opacity: 0.72;
+  background:
+    radial-gradient(circle at 18% 26%, rgba(177, 239, 243, 0.7) 0 1px, transparent 2px),
+    radial-gradient(circle at 32% 72%, rgba(49, 183, 188, 0.55) 0 1px, transparent 2px),
+    radial-gradient(circle at 54% 18%, rgba(255, 225, 161, 0.62) 0 1px, transparent 2px),
+    radial-gradient(circle at 68% 64%, rgba(177, 239, 243, 0.56) 0 1px, transparent 2px),
+    radial-gradient(circle at 82% 34%, rgba(49, 183, 188, 0.6) 0 1px, transparent 2px);
+  background-size: 420px 360px, 360px 300px, 520px 420px, 460px 390px, 390px 340px;
+  animation: footprint-particle-drift 16s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.footprint-scan {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, rgba(49, 183, 188, 0.1), transparent);
+  height: 22vh;
+  opacity: 0.72;
+  animation: footprint-scan 4.2s linear infinite;
+}
+
+.footprint-header {
+  position: absolute;
+  top: clamp(18px, 3.4vw, 42px);
+  left: clamp(18px, 4.5vw, 64px);
+  right: clamp(18px, 4.5vw, 64px);
+  z-index: 3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  pointer-events: none;
+}
+
+.footprint-header p {
+  color: rgba(177, 239, 243, 0.72);
+  font-size: 12px;
+  font-weight: 780;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.footprint-header h2 {
+  margin-top: 6px;
+  color: #f4feff;
+  font-size: clamp(32px, 5.4vw, 76px);
+  line-height: 0.95;
+  font-weight: 780;
+  text-shadow: 0 0 24px rgba(49, 183, 188, 0.32);
+}
+
+.footprint-header span {
+  margin-top: 8px;
+  padding: 8px 11px;
+  color: rgba(233, 251, 255, 0.78);
+  background: rgba(8, 20, 40, 0.66);
+  border: 1px solid rgba(49, 183, 188, 0.26);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 720;
+  white-space: nowrap;
+}
+
+.footprint-map-shell {
+  position: absolute;
+  inset: 9vh 2vw 3vh;
+  display: grid;
+  place-items: center;
+  transform: perspective(1300px) rotateX(50deg) rotateZ(-7deg) translateY(5vh);
+  transform-origin: center 58%;
+}
+
+.footprint-map {
+  width: min(1180px, 96vw);
+  height: min(720px, 76vh);
+  filter: drop-shadow(0 34px 38px rgba(0, 0, 0, 0.42));
+}
+
+body.footprint-open {
+  overflow: hidden;
+}
+
+@keyframes footprint-grid-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(42px, 42px, 0); }
+}
+
+@keyframes footprint-light-sweep {
+  0%, 26% { transform: translateX(-56%); opacity: 0; }
+  42% { opacity: 0.8; }
+  72%, 100% { transform: translateX(56%); opacity: 0; }
+}
+
+@keyframes footprint-orbit-pulse {
+  0%, 100% { opacity: 0.44; }
+  50% { opacity: 0.78; }
+}
+
+@keyframes footprint-radar-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes footprint-particle-drift {
+  from { transform: translate3d(-10px, -8px, 0); filter: brightness(0.84); }
+  to { transform: translate3d(18px, 16px, 0); filter: brightness(1.2); }
+}
+
+@keyframes footprint-scan {
+  from { transform: translateY(-24vh); }
+  to { transform: translateY(104vh); }
 }
 
 .ticker-panel {
@@ -1382,6 +1593,20 @@ h2 {
 
   .map-stage {
     min-height: 520px;
+  }
+
+  .map-actions {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .footprint-header {
+    flex-direction: column;
+  }
+
+  .footprint-map-shell {
+    inset: 16vh 0 6vh;
+    transform: perspective(1100px) rotateX(48deg) rotateZ(-7deg) translateY(4vh);
   }
 
   .project-entry-button {

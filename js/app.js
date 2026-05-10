@@ -7538,6 +7538,7 @@ let currentProductLineKey = "all";
 let trendChart;
 let yearTrendChart;
 let mapChart;
+let footprintChart;
 let chinaGeoJson;
 
 const projectFields = [
@@ -9022,6 +9023,10 @@ function initializeProjectRegistry() {
     if (event.key === "Escape" && !document.querySelector("#projectModal").hidden) {
       hideProjectModal();
     }
+
+    if (event.key === "Escape") {
+      closeFootprintMap();
+    }
   });
 }
 
@@ -9030,6 +9035,376 @@ async function ensureChinaMap() {
     chinaGeoJson = await fetch("assets/china.json").then((response) => response.json());
     echarts.registerMap("china", chinaGeoJson);
   }
+}
+
+function footprintTitle() {
+  const title = currentDashboardData().title;
+
+  if (title.includes("Tegris")) {
+    return "Tegris China Footprint";
+  }
+
+  if (title.includes("IC MIC")) {
+    return "IC MIC China Footprint";
+  }
+
+  return "Magnus China Footprint";
+}
+
+function footprintConeData() {
+  const provinceData = currentDashboardData().provinceData || [];
+  const maxValue = Math.max(1, ...provinceData.map((item) => item.value || 0));
+  const topProvince = provinceData.reduce((winner, item) => {
+    if (!winner || (item.value || 0) > (winner.value || 0)) {
+      return item;
+    }
+
+    return winner;
+  }, null);
+
+  return provinceData
+    .filter((item) => item.coord && item.value > 0)
+    .map((item) => ({
+      name: item.name,
+      latestSite: item.latestSite,
+      latestDate: item.latestDate,
+      isPeak: topProvince?.name === item.name,
+      value: [...item.coord, item.value, maxValue]
+    }));
+}
+
+function footprintCylinderPalette(ratio, isPeak) {
+  if (isPeak || ratio >= 0.82) {
+    return {
+      shadow: "rgba(243, 146, 0, 0.84)",
+      stroke: "rgba(255, 235, 164, 0.94)",
+      baseFill: "rgba(243, 146, 0, 0.3)",
+      baseStroke: "rgba(255, 225, 161, 0.52)",
+      sideDark: "rgba(92, 46, 6, 0.64)",
+      sideMid: "rgba(243, 146, 0, 0.96)",
+      sideLight: "rgba(255, 205, 93, 0.92)",
+      topCore: "rgba(255, 249, 210, 0.98)",
+      topMid: "rgba(255, 204, 82, 0.94)",
+      topEdge: "rgba(185, 96, 10, 0.9)",
+      label: "#fff3c6",
+      labelBorder: "rgba(255, 225, 161, 0.56)"
+    };
+  }
+
+  if (ratio >= 0.52) {
+    return {
+      shadow: "rgba(148, 182, 84, 0.72)",
+      stroke: "rgba(223, 255, 178, 0.82)",
+      baseFill: "rgba(148, 182, 84, 0.22)",
+      baseStroke: "rgba(223, 255, 178, 0.42)",
+      sideDark: "rgba(39, 85, 58, 0.64)",
+      sideMid: "rgba(116, 198, 116, 0.86)",
+      sideLight: "rgba(199, 244, 129, 0.9)",
+      topCore: "rgba(248, 255, 215, 0.96)",
+      topMid: "rgba(178, 224, 99, 0.9)",
+      topEdge: "rgba(77, 142, 79, 0.88)",
+      label: "#f4ffd5",
+      labelBorder: "rgba(223, 255, 178, 0.46)"
+    };
+  }
+
+  if (ratio >= 0.24) {
+    return {
+      shadow: "rgba(49, 183, 188, 0.64)",
+      stroke: "rgba(215, 253, 255, 0.84)",
+      baseFill: "rgba(49, 183, 188, 0.18)",
+      baseStroke: "rgba(177, 239, 243, 0.38)",
+      sideDark: "rgba(12, 54, 86, 0.66)",
+      sideMid: "rgba(35, 172, 188, 0.86)",
+      sideLight: "rgba(98, 233, 226, 0.88)",
+      topCore: "rgba(230, 255, 255, 0.96)",
+      topMid: "rgba(112, 242, 232, 0.88)",
+      topEdge: "rgba(21, 124, 154, 0.88)",
+      label: "#dffcff",
+      labelBorder: "rgba(177, 239, 243, 0.36)"
+    };
+  }
+
+  return {
+    shadow: "rgba(78, 142, 206, 0.54)",
+    stroke: "rgba(184, 221, 255, 0.76)",
+    baseFill: "rgba(78, 142, 206, 0.16)",
+    baseStroke: "rgba(184, 221, 255, 0.3)",
+    sideDark: "rgba(18, 45, 96, 0.66)",
+    sideMid: "rgba(72, 128, 214, 0.76)",
+    sideLight: "rgba(143, 194, 255, 0.82)",
+    topCore: "rgba(229, 244, 255, 0.92)",
+    topMid: "rgba(139, 193, 255, 0.82)",
+    topEdge: "rgba(45, 88, 166, 0.82)",
+    label: "#e7f4ff",
+    labelBorder: "rgba(184, 221, 255, 0.3)"
+  };
+}
+
+function renderFootprintCone(params, api) {
+  const coord = api.coord([api.value(0), api.value(1)]);
+  const value = api.value(2);
+  const maxValue = Math.max(1, api.value(3));
+  const ratio = Math.sqrt(value / maxValue);
+  const height = 32 + ratio * 124;
+  const radiusX = 7 + ratio * 15;
+  const radiusY = 3.5 + ratio * 5.8;
+  const baseY = coord[1] + 8;
+  const topY = baseY - height;
+  const topX = coord[0];
+  const bottomX = coord[0];
+  const isPeak = Boolean(params.data?.isPeak);
+  const palette = footprintCylinderPalette(ratio, isPeak);
+  const bodyPath = [
+    `M ${topX - radiusX} ${topY}`,
+    `C ${topX - radiusX * 1.04} ${topY + height * 0.34} ${bottomX - radiusX * 1.02} ${baseY - height * 0.28} ${bottomX - radiusX} ${baseY}`,
+    `Q ${bottomX} ${baseY + radiusY * 1.18} ${bottomX + radiusX} ${baseY}`,
+    `C ${bottomX + radiusX * 1.02} ${baseY - height * 0.28} ${topX + radiusX * 1.04} ${topY + height * 0.34} ${topX + radiusX} ${topY}`,
+    `Q ${topX} ${topY + radiusY * 1.22} ${topX - radiusX} ${topY}`,
+    "Z"
+  ].join(" ");
+  const highlightPath = [
+    `M ${topX - radiusX * 0.34} ${topY + radiusY * 0.35}`,
+    `C ${topX - radiusX * 0.28} ${topY + height * 0.28} ${bottomX - radiusX * 0.26} ${baseY - height * 0.18} ${bottomX - radiusX * 0.22} ${baseY - radiusY * 0.42}`,
+    `L ${bottomX + radiusX * 0.12} ${baseY - radiusY * 0.28}`,
+    `C ${bottomX + radiusX * 0.04} ${baseY - height * 0.2} ${topX + radiusX * 0.16} ${topY + height * 0.28} ${topX + radiusX * 0.24} ${topY + radiusY * 0.34}`,
+    "Z"
+  ].join(" ");
+  const labelX = topX + radiusX * 0.74;
+  const labelY = topY - 10 - ratio * 5;
+
+  const children = [
+    {
+      type: "ellipse",
+      shape: {
+        cx: bottomX,
+        cy: baseY + radiusY * 0.2,
+        rx: radiusX * 1.28,
+        ry: radiusY * 1.02
+      },
+      style: {
+        fill: palette.baseFill,
+        stroke: palette.baseStroke,
+        lineWidth: 1,
+        shadowBlur: isPeak ? 36 : 22,
+        shadowColor: palette.shadow
+      }
+    },
+    {
+      type: "path",
+      shape: {
+        pathData: bodyPath
+      },
+      style: {
+        fill: new echarts.graphic.LinearGradient(0, 1, 0, 0, [
+          { offset: 0, color: palette.sideDark },
+          { offset: 0.42, color: palette.sideMid },
+          { offset: 0.78, color: palette.sideLight },
+          { offset: 1, color: palette.topMid }
+        ]),
+        opacity: isPeak ? 0.98 : 0.9,
+        stroke: palette.stroke,
+        lineWidth: isPeak ? 1.6 : 1.1,
+        shadowBlur: isPeak ? 24 : 18,
+        shadowColor: palette.shadow
+      }
+    },
+    {
+      type: "path",
+      shape: {
+        pathData: highlightPath
+      },
+      style: {
+        fill: new echarts.graphic.LinearGradient(0, 1, 0, 0, [
+          { offset: 0, color: "rgba(255, 255, 255, 0.05)" },
+          { offset: 0.62, color: "rgba(255, 255, 255, 0.28)" },
+          { offset: 1, color: "rgba(255, 255, 255, 0.68)" }
+        ]),
+        opacity: isPeak ? 0.54 : 0.4
+      }
+    },
+    {
+      type: "ellipse",
+      shape: {
+        cx: topX,
+        cy: topY,
+        rx: radiusX,
+        ry: radiusY
+      },
+      style: {
+        fill: new echarts.graphic.RadialGradient(0.38, 0.28, 0.82, [
+          { offset: 0, color: palette.topCore },
+          { offset: 0.48, color: palette.topMid },
+          { offset: 1, color: palette.topEdge }
+        ]),
+        stroke: palette.stroke,
+        lineWidth: isPeak ? 1.8 : 1.2,
+        shadowBlur: isPeak ? 22 : 16,
+        shadowColor: palette.shadow
+      }
+    },
+    {
+      type: "text",
+      style: {
+        x: labelX,
+        y: labelY,
+        text: `${formatNumber.format(value)} 台`,
+        fill: palette.label,
+        font: `${isPeak ? 800 : 700} 10px Arial, sans-serif`,
+        backgroundColor: "rgba(5, 13, 29, 0.68)",
+        borderColor: palette.labelBorder,
+        borderWidth: 1,
+        borderRadius: 5,
+        padding: [3, 5],
+        shadowBlur: isPeak ? 16 : 10,
+        shadowColor: palette.shadow
+      },
+      z2: 6
+    }
+  ];
+
+  if (isPeak) {
+    children.push(
+      {
+        type: "circle",
+        shape: { cx: topX, cy: topY, r: 4.5 },
+        style: {
+          fill: "#fff4c9",
+          stroke: "#f39200",
+          lineWidth: 2,
+          shadowBlur: 18,
+          shadowColor: "rgba(243, 146, 0, 0.85)"
+        }
+      }
+    );
+  }
+
+  return {
+    type: "group",
+    children
+  };
+}
+
+async function renderFootprintMap() {
+  await ensureChinaMap();
+  const target = document.querySelector("#footprintMap");
+  const dashboard = currentDashboardData();
+  const cones = footprintConeData();
+  const maxValue = Math.max(1, ...cones.map((item) => item.value[2]));
+  footprintChart = footprintChart || echarts.init(target);
+
+  footprintChart.setOption({
+    animationDuration: 1100,
+    animationEasing: "cubicOut",
+    backgroundColor: "transparent",
+    color: ["#1d677e", "#31b7bc", "#94b654", "#f39200"],
+    tooltip: {
+      trigger: "item",
+      borderWidth: 0,
+      backgroundColor: "rgba(5, 13, 29, 0.92)",
+      textStyle: { color: "#e9fbff" },
+      formatter(params) {
+        if (params.seriesType === "custom") {
+          return `
+            <strong>${params.name}</strong><br/>
+            装机量：${params.value[2]} 台<br/>
+            最新场地：${params.data.latestSite}<br/>
+            最新日期：${params.data.latestDate}
+          `;
+        }
+
+        const province = dashboard.provinceData.find((item) => item.name === params.name);
+        return province ? `${params.name}<br/>总装机量：${province.value} 台` : `${params.name}<br/>暂无装机记录`;
+      }
+    },
+    visualMap: {
+      min: 0,
+      max: maxValue,
+      show: false,
+      dimension: 2,
+      inRange: {
+        color: ["#1a566f", "#25a7b7", "#72d1ba", "#f39200"]
+      }
+    },
+    graphic: cones.length ? [] : [
+      {
+        type: "text",
+        left: "center",
+        top: "middle",
+        style: {
+          text: "暂无省级装机数据",
+          fill: "rgba(233, 251, 255, 0.72)",
+          font: "700 18px Arial, sans-serif"
+        }
+      }
+    ],
+    geo: {
+      map: "china",
+      roam: false,
+      zoom: window.innerWidth < 760 ? 1.02 : 1.16,
+      top: window.innerWidth < 760 ? 82 : 52,
+      bottom: window.innerWidth < 760 ? 96 : 64,
+      silent: true,
+      itemStyle: {
+        areaColor: "rgba(17, 45, 75, 0.72)",
+        borderColor: "rgba(138, 238, 244, 0.36)",
+        borderWidth: 1.1,
+        shadowBlur: 18,
+        shadowColor: "rgba(49, 183, 188, 0.22)"
+      },
+      emphasis: {
+        disabled: true
+      }
+    },
+    series: [
+      {
+        name: "省级装机底图",
+        type: "map",
+        map: "china",
+        geoIndex: 0,
+        silent: true,
+        data: dashboard.provinceData.map(({ name, value }) => ({ name, value })),
+        itemStyle: {
+          areaColor: "rgba(17, 45, 75, 0.68)",
+          borderColor: "rgba(138, 238, 244, 0.34)"
+        }
+      },
+      {
+        name: "装机高度",
+        type: "custom",
+        coordinateSystem: "geo",
+        renderItem: renderFootprintCone,
+        encode: {
+          tooltip: [2]
+        },
+        z: 10,
+        data: cones
+      }
+    ]
+  }, true);
+
+  document.querySelector("#footprintTitle").textContent = footprintTitle();
+}
+
+function openFootprintMap(event) {
+  event?.stopPropagation();
+  const overlay = document.querySelector("#footprintOverlay");
+  overlay.hidden = false;
+  document.body.classList.add("footprint-open");
+  setTimeout(() => {
+    footprintChart?.resize();
+    renderFootprintMap();
+  }, 0);
+}
+
+function closeFootprintMap() {
+  const overlay = document.querySelector("#footprintOverlay");
+  if (overlay.hidden) {
+    return;
+  }
+
+  overlay.hidden = true;
+  document.body.classList.remove("footprint-open");
 }
 
 async function renderMap() {
@@ -9191,13 +9566,20 @@ function initializeProductSwitcher() {
     currentProductLineKey = event.target.value;
     renderDashboard();
   });
+
+  document.querySelector("#openFootprintMap").addEventListener("click", openFootprintMap);
+  document.querySelector("#footprintOverlay").addEventListener("click", closeFootprintMap);
 }
 
 window.addEventListener("resize", () => {
   trendChart?.resize();
   yearTrendChart?.resize();
   mapChart?.resize();
+  footprintChart?.resize();
   renderMap();
+  if (!document.querySelector("#footprintOverlay").hidden) {
+    renderFootprintMap();
+  }
 });
 
 function initializeDashboardApp() {
