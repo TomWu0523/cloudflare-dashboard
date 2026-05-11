@@ -10263,6 +10263,11 @@ async function renderFootprintMap() {
 function customerCloudEntries() {
   const dashboard = currentDashboardData();
   const entries = new Map();
+  const provinceLeaders = new Set(
+    (dashboard.provinceData || [])
+      .map((province) => String(province.latestSite || "").trim())
+      .filter(Boolean)
+  );
   const importantNames = new Set(
     (dashboard.users || [])
       .filter((user, index) => index < 10 || (user.value || 0) >= 4)
@@ -10272,9 +10277,10 @@ function customerCloudEntries() {
   const addName = (name, value = 0) => {
     const normalized = String(name || "").trim();
     if (!normalized || normalized === "未填写终端用户") return;
-    const current = entries.get(normalized) || { name: normalized, value: 0, important: false };
+    const current = entries.get(normalized) || { name: normalized, value: 0, important: false, regionalPeak: false };
     current.value = Math.max(current.value, value || 0);
     current.important = current.important || importantNames.has(normalized);
+    current.regionalPeak = current.regionalPeak || provinceLeaders.has(normalized);
     entries.set(normalized, current);
   };
   (dashboard.sourceRecords || []).forEach((record) => {
@@ -10300,7 +10306,7 @@ function renderFootprintCustomerCloud() {
   const stepSeconds = cycleSeconds / entries.length;
   entries.forEach((entry, index) => {
     const item = document.createElement("span");
-    item.className = `footprint-customer${entry.important ? " is-important" : ""}`;
+    item.className = `footprint-customer${entry.important ? " is-important" : ""}${entry.regionalPeak ? " is-regional-peak" : ""}`;
     item.textContent = entry.name;
     const hashSeed = Array.from(entry.name).reduce((total, char) => total + char.charCodeAt(0), index * 47);
     const sideBias = index % 4;
@@ -10321,8 +10327,8 @@ function renderFootprintCustomerCloud() {
     item.style.setProperty("--y", `${Math.min(92, Math.max(10, y))}%`);
     item.style.setProperty("--delay", `${-(index * stepSeconds)}s`);
     item.style.setProperty("--duration", `${cycleSeconds}s`);
-    item.style.setProperty("--scale", `${entry.important ? 1.08 : 0.78 + (hashSeed % 28) / 100}`);
-    item.style.setProperty("--peak-opacity", `${entry.important ? 0.58 : 0.14 + (hashSeed % 16) / 100}`);
+    item.style.setProperty("--scale", `${entry.important || entry.regionalPeak ? 1.08 : 0.82 + (hashSeed % 28) / 100}`);
+    item.style.setProperty("--peak-opacity", `${entry.important || entry.regionalPeak ? 0.68 : 0.22 + (hashSeed % 16) / 100}`);
     cloud.appendChild(item);
   });
 }

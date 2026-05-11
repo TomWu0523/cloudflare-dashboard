@@ -973,14 +973,14 @@ h2 {
   left: var(--x);
   top: var(--y);
   max-width: 260px;
-  color: rgba(205, 249, 255, 0.72);
+  color: rgba(210, 252, 255, 0.86);
   font-size: clamp(10px, 0.86vw, 13px);
   font-weight: 680;
   letter-spacing: 0.02em;
   white-space: nowrap;
   text-shadow:
-    0 0 12px rgba(49, 183, 188, 0.38),
-    0 0 26px rgba(49, 183, 188, 0.2);
+    0 0 12px rgba(49, 183, 188, 0.5),
+    0 0 28px rgba(49, 183, 188, 0.28);
   opacity: 0;
   transform: translate(-50%, -50%) perspective(480px) translateZ(-220px) scale(0.62);
   animation: footprint-customer-float var(--duration) ease-in-out var(--delay) infinite;
@@ -989,13 +989,28 @@ h2 {
 .footprint-customer::before {
   content: "";
   position: absolute;
-  left: -12px;
+  left: -14px;
   top: 50%;
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   border-radius: 999px;
   background: currentColor;
-  box-shadow: 0 0 14px currentColor;
+  box-shadow:
+    0 0 12px currentColor,
+    -18px 0 20px rgba(49, 183, 188, 0.18);
+  transform: translateY(-50%);
+}
+
+.footprint-customer::after {
+  content: "";
+  position: absolute;
+  left: -58px;
+  top: 50%;
+  width: 42px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, currentColor);
+  opacity: 0.34;
+  box-shadow: 0 0 10px currentColor;
   transform: translateY(-50%);
 }
 
@@ -1006,6 +1021,18 @@ h2 {
     0 0 12px rgba(255, 186, 67, 0.62),
     0 0 30px rgba(243, 146, 0, 0.36),
     0 0 48px rgba(49, 183, 188, 0.16);
+}
+
+.footprint-customer.is-regional-peak {
+  color: rgba(129, 247, 255, 0.96);
+  text-shadow:
+    0 0 14px rgba(98, 237, 255, 0.72),
+    0 0 34px rgba(49, 183, 188, 0.46),
+    0 0 52px rgba(255, 215, 128, 0.14);
+}
+
+.footprint-customer.is-important.is-regional-peak {
+  color: rgba(255, 226, 142, 0.98);
 }
 
 .footprint-map-message {
@@ -1177,23 +1204,23 @@ body.footprint-open {
 
 @keyframes footprint-customer-float {
   0%,
-  48%,
-  52%,
+  46%,
+  54%,
   100% {
     opacity: 0;
     filter: blur(1.6px);
     transform: translate(-50%, -50%) perspective(480px) translateZ(-240px) scale(0.58);
   }
-  49% {
-    opacity: 0.12;
+  48% {
+    opacity: 0.16;
   }
   50% {
     opacity: var(--peak-opacity);
     filter: blur(0);
     transform: translate(-50%, -50%) perspective(480px) translateZ(34px) scale(var(--scale));
   }
-  51% {
-    opacity: 0.12;
+  52% {
+    opacity: 0.16;
   }
 }
 
