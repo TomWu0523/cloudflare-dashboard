@@ -16,6 +16,8 @@ node server.mjs
 http://localhost:8080
 ```
 
+注意：请不要直接用 `file://.../index.html` 打开。当前版本的登录、改密、用户导入和装机数据同步都依赖 `/api/session`、`/api/users`、`/api/dashboard-data` 这些后端接口，必须通过 `http://localhost:8080` 或线上域名访问。
+
 ## 共享给其他设备
 
 如果希望你导入用户名、密码和装机数据后，其他电脑、iPad 或手机也能直接登录和浏览，请固定使用一台电脑作为“迷你后台服务器”：
@@ -87,6 +89,185 @@ http://localhost:8080
 - 1180 与 IC MIC 的导入记录会在 `Remarks` 中自动标记 `TEST_DATA_1180` / `TEST_DATA_IC_MIC`，便于测试结束后批量删除；Tegris 不会加测试标记。
 
 `.env` 内含 token，请不要分享或提交到代码仓库。
+
+## GitHub 与 Cloudflare Pages 部署指南
+
+### 1. 本地部署前检查
+
+先在本地确认当前版本正常：
+
+```bash
+node server.mjs
+```
+
+打开：
+
+```text
+http://localhost:8080
+```
+
+至少验证下面几项：
+
+- 管理员可登录：`Maquet / 123win`
+- 普通用户可登录
+- 看板数据正常显示
+- 修改密码正常
+- 用户 Excel 导入正常
+- 装机数据 Excel 导入正常
+
+### 2. 推送到 GitHub
+
+如果当前目录还不是 Git 仓库：
+
+```bash
+git init
+git branch -M main
+```
+
+提交前先检查：
+
+```bash
+git status --short
+```
+
+以下文件不应该进入仓库：
+
+- `.env`
+- `data/authorized-users.json`
+- `.DS_Store`
+
+然后提交并推送：
+
+```bash
+git add .
+git commit -m "Deploy dashboard with secure auth"
+git remote add origin <你的 GitHub 仓库地址>
+git push -u origin main
+```
+
+### 3. 创建 Cloudflare Pages 项目
+
+在 Cloudflare Dashboard 中：
+
+1. 打开 `Workers & Pages`
+2. 选择 `Create application`
+3. 选择 `Pages`
+4. 选择 `Connect to Git`
+5. 连接 GitHub 仓库
+
+构建配置建议如下：
+
+- Framework preset: `None`
+- Root directory: 仓库根目录
+- Build command: 留空
+- 如果界面强制要求命令，可填 `exit 0`
+- Build output directory: `/`
+
+### 4. Cloudflare 必填变量
+
+进入：
+
+`Settings -> Variables and Secrets`
+
+在 **Production** 环境中配置：
+
+```text
+BASEROW_API_URL=https://api.baserow.io
+BASEROW_AUTH_USERS_TABLE_ID=955652
+BASEROW_INSTALL_BASE_TABLE_ID=951860
+BASEROW_PRODUCT_TABLE_ID=951856
+BASEROW_CUSTOMER_TABLE_ID=951857
+BASEROW_SALES_PARTNER_TABLE_ID=951858
+BASEROW_TOKEN=<你的 Baserow Token>
+SESSION_SECRET=<随机长字符串>
+```
+
+注意：
+
+- `BASEROW_TOKEN` 使用 Secret
+- `SESSION_SECRET` 使用 Secret
+- 一定要确认是配置在 **Production**，不是只配置在 Preview
+
+### 5. 当前版本依赖的 Pages Functions
+
+当前项目不能只部署静态文件，还需要同时部署整个 `functions/api/` 目录，关键接口包括：
+
+- `functions/api/session.js`
+- `functions/api/session/password.js`
+- `functions/api/users.js`
+- `functions/api/dashboard-data.js`
+
+这些接口分别负责：
+
+- 登录与登录态校验
+- 修改密码
+- 授权用户导入
+- 装机数据读取与写入
+
+### 6. 首次部署后的验证
+
+先检查接口，再检查页面。
+
+未登录访问：
+
+```text
+https://你的域名/api/session
+```
+
+预期：返回 `401`
+
+然后打开首页：
+
+```text
+https://你的域名
+```
+
+用管理员账号登录：
+
+```text
+Maquet / 123win
+```
+
+登录后建议依次验证：
+
+- `/api/session` 返回当前用户
+- 修改密码正常
+- 用户 Excel 导入正常
+- 装机数据导入正常
+- 普通用户可登录并浏览 dashboard
+
+### 7. 日常更新流程
+
+以后更新页面只需要：
+
+```bash
+git add .
+git commit -m "Update dashboard"
+git push
+```
+
+Cloudflare Pages 会自动重新部署，部署完成后直接在线验证。
+
+### 8. 常见问题排查
+
+`Failed to fetch`
+: 通常是使用了 `file://` 打开页面。请改用 `http://localhost:8080` 或线上域名。
+
+`用户名或密码不正确`
+: 先检查 Cloudflare Production 的 `BASEROW_API_URL`、`BASEROW_AUTH_USERS_TABLE_ID`、`BASEROW_TOKEN` 是否与本地一致。
+
+`error 1101`
+: 通常是 Cloudflare Pages Function 运行时异常。请查看 Functions 日志或最近代码变更。
+
+改密码接口 404
+: 说明缺少 `functions/api/session/password.js`，当前版本已经包含该文件。
+
+### 9. 安全建议
+
+- 不要提交 `.env`
+- 不要提交 `data/authorized-users.json`
+- 如果曾经暴露过 `BASEROW_TOKEN`，请尽快在 Baserow 中轮换
+- `SESSION_SECRET` 应使用随机长字符串，并妥善保存
 
 ### Cloudflare Pages 配置
 

@@ -999,6 +999,33 @@ h2 {
   transform: translateY(-50%);
 }
 
+.footprint-customer.is-important {
+  color: rgba(255, 224, 142, 0.92);
+  font-weight: 780;
+  text-shadow:
+    0 0 12px rgba(255, 186, 67, 0.62),
+    0 0 30px rgba(243, 146, 0, 0.36),
+    0 0 48px rgba(49, 183, 188, 0.16);
+}
+
+.footprint-map-message {
+  position: absolute;
+  left: 50%;
+  top: 56%;
+  width: min(540px, 82vw);
+  padding: 18px 20px;
+  color: rgba(233, 251, 255, 0.86);
+  background: rgba(5, 13, 29, 0.72);
+  border: 1px solid rgba(49, 183, 188, 0.34);
+  border-radius: 8px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.36);
+  font-size: 14px;
+  font-weight: 720;
+  line-height: 1.6;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
 .footprint-scan {
   position: absolute;
   inset: 0;
@@ -1150,20 +1177,22 @@ body.footprint-open {
 
 @keyframes footprint-customer-float {
   0%,
+  48%,
+  52%,
   100% {
     opacity: 0;
     filter: blur(1.6px);
     transform: translate(-50%, -50%) perspective(480px) translateZ(-240px) scale(0.58);
   }
-  18% {
-    opacity: 0.18;
+  49% {
+    opacity: 0.12;
   }
-  46% {
+  50% {
     opacity: var(--peak-opacity);
     filter: blur(0);
     transform: translate(-50%, -50%) perspective(480px) translateZ(34px) scale(var(--scale));
   }
-  72% {
+  51% {
     opacity: 0.12;
   }
 }

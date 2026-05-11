@@ -10152,10 +10152,14 @@ async function renderFootprintMap() {
     return;
   }
 
-  if (window.THREE && renderFootprintTerrainScene()) {
-    document.querySelector("#footprintTitle").textContent = footprintTitle();
-    return;
-  }
+  document.querySelector("#footprintTitle").textContent = footprintTitle();
+  document.querySelector("#footprintMap").innerHTML = `
+    <div class="footprint-map-message">
+      新版 3D 地图模块未加载，请同步更新 js/footprint3d.js、js/app.js、css/style.css 和 index.html。
+    </div>
+  `;
+  document.querySelector("#footprintLabels").innerHTML = "";
+  return;
 
   const target = document.querySelector("#footprintMap");
   const dashboard = currentDashboardData();
@@ -10256,42 +10260,49 @@ async function renderFootprintMap() {
   document.querySelector("#footprintTitle").textContent = footprintTitle();
 }
 
-function customerCloudNames() {
+function customerCloudEntries() {
   const dashboard = currentDashboardData();
-  const names = new Set();
+  const entries = new Map();
+  const importantNames = new Set(
+    (dashboard.users || [])
+      .filter((user, index) => index < 10 || (user.value || 0) >= 4)
+      .map((user) => String(user.name || "").trim())
+      .filter(Boolean)
+  );
+  const addName = (name, value = 0) => {
+    const normalized = String(name || "").trim();
+    if (!normalized || normalized === "未填写终端用户") return;
+    const current = entries.get(normalized) || { name: normalized, value: 0, important: false };
+    current.value = Math.max(current.value, value || 0);
+    current.important = current.important || importantNames.has(normalized);
+    entries.set(normalized, current);
+  };
   (dashboard.sourceRecords || []).forEach((record) => {
-    const name = String(record.terminalUser || "").trim();
-    if (name && name !== "未填写终端用户") {
-      names.add(name);
-    }
+    addName(record.terminalUser, Number(record.quantity) || 1);
   });
   (dashboard.users || []).forEach((user) => {
-    const name = String(user.name || "").trim();
-    if (name) {
-      names.add(name);
-    }
+    addName(user.name, user.value || 0);
   });
   (dashboard.provinceData || []).forEach((province) => {
-    const name = String(province.latestSite || "").trim();
-    if (name) {
-      names.add(name);
-    }
+    addName(province.latestSite, 0);
   });
-  return [...names];
+  return [...entries.values()];
 }
 
 function renderFootprintCustomerCloud() {
   const cloud = document.querySelector("#footprintCustomerCloud");
   if (!cloud) return;
-  const names = customerCloudNames();
+  const entries = customerCloudEntries();
   cloud.innerHTML = "";
-  if (!names.length) return;
+  if (!entries.length) return;
 
-  names.forEach((name, index) => {
+  const cycleSeconds = 480;
+  const stepSeconds = cycleSeconds / entries.length;
+  entries.forEach((entry, index) => {
     const item = document.createElement("span");
-    item.className = "footprint-customer";
-    item.textContent = name;
-    const hashSeed = Array.from(name).reduce((total, char) => total + char.charCodeAt(0), index * 47);
+    item.className = `footprint-customer${entry.important ? " is-important" : ""}`;
+    item.textContent = entry.name;
+    const hashSeed = Array.from(entry.name).reduce((total, char) => total + char.charCodeAt(0), index * 47);
     const sideBias = index % 4;
     const x = sideBias === 0
       ? 8 + (hashSeed % 26)
@@ -10308,10 +10319,10 @@ function renderFootprintCustomerCloud() {
     }
     item.style.setProperty("--x", `${Math.min(94, Math.max(5, x))}%`);
     item.style.setProperty("--y", `${Math.min(92, Math.max(10, y))}%`);
-    item.style.setProperty("--delay", `${-(index * 1.65) % 38}s`);
-    item.style.setProperty("--duration", `${18 + (hashSeed % 18)}s`);
-    item.style.setProperty("--scale", `${0.82 + (hashSeed % 38) / 100}`);
-    item.style.setProperty("--peak-opacity", `${0.16 + (hashSeed % 24) / 100}`);
+    item.style.setProperty("--delay", `${-(index * stepSeconds)}s`);
+    item.style.setProperty("--duration", `${cycleSeconds}s`);
+    item.style.setProperty("--scale", `${entry.important ? 1.08 : 0.78 + (hashSeed % 28) / 100}`);
+    item.style.setProperty("--peak-opacity", `${entry.important ? 0.58 : 0.14 + (hashSeed % 16) / 100}`);
     cloud.appendChild(item);
   });
 }
