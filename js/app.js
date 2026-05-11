@@ -8598,6 +8598,49 @@ function renderRanking(targetId, items) {
     .join("");
 }
 
+function renderCustomerScrollWall(targetId) {
+  const target = document.querySelector(targetId);
+  const customers = customerCloudEntries()
+    .sort((a, b) => (b.value || 0) - (a.value || 0) || a.name.localeCompare(b.name, "zh-Hans-CN"))
+    .map((item, index) => ({ ...item, rank: index + 1 }));
+
+  if (!customers.length) {
+    target.className = "ranking-list";
+    target.innerHTML = `<div class="project-result__meta">暂无客户数据</div>`;
+    return;
+  }
+
+  const maxValue = Math.max(1, ...customers.map((item) => item.value || 0));
+  const rows = customers.map((item) => {
+    const intensity = Math.max(10, Math.round(((item.value || 0) / maxValue) * 100));
+    const flags = [
+      item.important ? "TOP" : "",
+      item.regionalPeak ? "区域峰值" : ""
+    ].filter(Boolean).join(" · ");
+    return `
+      <article class="customer-scroll-item${item.important ? " is-important" : ""}${item.regionalPeak ? " is-regional-peak" : ""}">
+        <span class="customer-scroll-rank">${String(item.rank).padStart(2, "0")}</span>
+        <span class="customer-scroll-body">
+          <strong title="${item.name}">${item.name}</strong>
+          <small>${flags || "客户装机记录"}</small>
+          <i style="--customer-width: ${intensity}%"></i>
+        </span>
+        <b>${item.value || 1}</b>
+      </article>
+    `;
+  }).join("");
+
+  target.className = "customer-scroll-list";
+  target.innerHTML = `
+    <div class="customer-scroll-window">
+      <div class="customer-scroll-track">
+        ${rows}
+        ${rows}
+      </div>
+    </div>
+  `;
+}
+
 function renderTicker() {
   const track = document.querySelector("#newsTicker");
   const updates = currentDashboardData().updates;
@@ -10491,7 +10534,7 @@ function renderDashboard() {
   renderDashboardChrome();
   renderKpis();
   renderRanking("#userRanking", dashboard.users);
-  renderRanking("#partnerRanking", dashboard.partners);
+  renderCustomerScrollWall("#partnerRanking");
   renderTrendChart();
   renderYearTrendChart();
   renderTicker();

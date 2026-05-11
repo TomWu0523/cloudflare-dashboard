@@ -1,56 +1,56 @@
 [
   {
     "username": "Maquet",
-    "passwordHash": "pbkdf2$3ac784065b2b328449b90ccdc8d3a0ed$834c342d33c3e486c1111985e5a75cec6e6ab612a4ae5c0435396f80bfc6eb9f4dd0b883f44a83f8aae935b16fdbd93de7af443cbfc73ee5deb655ddd2863fed",
+    "passwordHash": "pbkdf2$50a14f9412d5826a39df6424931f22b6$f269370238cca467ab0bdacde792d65a4a6ac3144c4007e3ab9545a257edce623bb326f32bd36e403bc187e72635073dd7595e2c651d4418e531f03b95aa121c",
     "displayName": "系统管理员",
     "role": "系统管理员"
   },
   {
     "username": "Tomwu",
-    "passwordHash": "pbkdf2$062df51bf33101e77c8377dbf21a67ea$5e2c7281f19291ec28060f62d65cc2ce4276eb109504992044b237adc120639e5fb93b26829e889a822e56494c15372696f671f643d639cd46572920794604a0",
+    "passwordHash": "pbkdf2$f8f436bf9fc83b56bd0d1f485d21e4d4$d4c1fd3a42adf726b2bd0de7559ed4bd307848b4bbb9b62e2ad739f5431579993ee0a978eb5f071db2b4ba480fafe4a105466cd4d28c11c17919ff5b41a2f19c",
     "displayName": "Tom Wu",
     "role": "Sr.Manager"
   },
   {
     "username": "Jayding",
-    "passwordHash": "pbkdf2$1c1cfc0005cc275dbacb8f97256c956d$c543ff0991bf55d675ea5a69dac6db060a2bfd0f220f10401eff4204a9cd7264b121babd35ddfa8d508533c03de877b021cef1c4276b4f6153b94499c6644b1a",
+    "passwordHash": "pbkdf2$5a0795c3c0ad17f0d116ee2d7687b744$7b74aa70ebbf921a4b0da043185e9e3f3628799c218c23dd7dbb44932a543729f4132f3e4101455f6cb13f29a7dcd799b03fd92256c2a98b331bd149c6b885db",
     "displayName": "Jay Ding",
     "role": "Sr.Director SW"
   },
   {
     "username": "Evanwang",
-    "passwordHash": "pbkdf2$ac677ec3084db3afcbdd9dee93de5fe0$a26e2db8b499ec2096d5ec3523d6556ebc5f1c37c93e82f8de7951d338ab0eed422b287db8838b19f7cce383f6606a03376d55e3e20c5adafea7e9e6c07af741",
+    "passwordHash": "pbkdf2$72179d8fe4eaec6b045cd32f0033d71f$9e1cef571817d2c0197f7dee7b6b9dc5dbaf205bd679d1fefe6b733ab47ad550e6dffa762593e09a48351cd9b267e32e1191e8fe6cc40b1e6c7aefe0743f2068",
     "displayName": "Evan Wang",
     "role": "Head of marketing"
   },
   {
-    "username": "Xiangzhu",
-    "passwordHash": "pbkdf2$6f0aac1e9cf02d7b8095d1b6353848f1$fc0edc43a7a72fcabcf876f88c08afc888f971608644f0f925e0a9f11774d995655547f8e594257f3aa6f331c45cd62ef0bd2e05c717e4555bf96bec6b566746",
-    "displayName": "Xiang Zhu",
-    "role": "Project manager"
-  },
-  {
     "username": "Violajin",
-    "passwordHash": "pbkdf2$08988d4ebb6dc163692369987c95aa33$d0b4f4b953b27a1a5e6e52eb6f95f0b2cbd3eb32f6afc40545966236bea847527560d110a721714bacd95ba1fb68ddf66385e1cec3c5ab803abafcdf1e4c80bf",
+    "passwordHash": "pbkdf2$0abda48e212045112669c766fed706b6$4715d0e24d2252fe18d55fdd0d90ee054c5c1a7ebeeb439a076a256678365429bf7aea14cc3a7837917957571c2725e0e67a8319af2b8f2010208dfafcbbb1de",
     "displayName": "Viola Jin",
     "role": "Head of marketing"
   },
   {
-    "username": "Leahzheng",
-    "passwordHash": "pbkdf2$0935e6b5d47a72e5ee10d480b8eeb288$ee42a5cf2aafb3bbef540a128e9200403e94931406011bc0de86fcd10bef15386ec7c6c3bb7fb00113ed62dee7d27dff31bd1509147a68dfefb3f19294a26131",
-    "displayName": "Leah Zheng",
-    "role": "Sr.Product manager"
+    "username": "Leoyu",
+    "passwordHash": "pbkdf2$9075debd1573ee63c35dbc7291455b80$d19631bb8f8c30932c7f855b5965107d442f898b71ab6c4822ace57234ce5cf1241c668c0adf5933f10a6808c8fcfa8dbf5fe30a6018b8b6c9a207e96b8a9cdf",
+    "displayName": "Leo Yu",
+    "role": "Head of marketing"
   },
   {
     "username": "ChrisZhang",
-    "passwordHash": "pbkdf2$ffa3b1705ed3683ea99063423eb2cf33$0f5880655514218c833bc726421a691377c6bc5d0ef5c7787aba75df9ffc933ff9cce034c1e12426ad49c65a18fb20ddfe10e58aa3af36fcedba8ca36a8b1386",
+    "passwordHash": "pbkdf2$72f6b4c4ba42bb6a2f56976f5808699e$ea73a139420c4f93c72b915b12dde31a203b26bcb0fac05ef6c4aa9eeafe79e52737e574507573dced3a5062de6778829f7ba85d2cb7d5541a6274d6c09ef0ad",
     "displayName": "Chris Zhang",
     "role": "Marketing Director"
   },
   {
-    "username": "Leoyu",
-    "passwordHash": "pbkdf2$943a5075e2d52ed3ed81db594c46ce2d$b9b3b145488d86b5ff293cd2dac0437d5e054f9f89c2f9c5ea17f40ac7aafb3c04800ed20e84357408620e26c524cf6c30b0c9bd7600dab0d3606c4f6e838e3d",
-    "displayName": "Leo Yu",
-    "role": "Head of marketing"
+    "username": "Leahzheng",
+    "passwordHash": "pbkdf2$a29cf13c6cdac47bc834765430272d88$c770333985f7dbc4cee8f90486c0df2c5f2ef3244354997521501bacb3e8a15a05177df26b2bd72b82563309a8d1a441d6d848c6872337e6164dbdfa3d49bd40",
+    "displayName": "Leah Zheng",
+    "role": "Sr.Product manager"
+  },
+  {
+    "username": "Xiangzhu",
+    "passwordHash": "pbkdf2$f104de97bc61f1c5707b95747c36e3c3$7864c19e32250f5302c637709487ee41416a4537cf79c31c1b3e1da11cb609c7ae41031977d89018b8c3f06246ca31c32b05fa6be78c26bd7bffaaa87a20d959",
+    "displayName": "Xiang Zhu",
+    "role": "Project manager"
   }
 ]
