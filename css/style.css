@@ -923,8 +923,8 @@ h2 {
 .footprint-orbit {
   position: absolute;
   left: 50%;
-  top: 54%;
-  width: min(86vw, 1180px);
+  top: 61%;
+  width: min(1500px, 92vw);
   aspect-ratio: 1.9;
   border: 1px solid rgba(49, 183, 188, 0.22);
   border-radius: 50%;
@@ -1136,39 +1136,69 @@ h2 {
 
 .footprint-label {
   position: absolute;
-  min-width: 54px;
+  min-width: 74px;
   color: rgba(240, 252, 255, 0.96);
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.25;
   text-align: left;
-  text-shadow: 0 0 12px rgba(0, 0, 0, 0.42);
-  transform: translate(-50%, -100%);
+  text-shadow: 0 0 14px rgba(49, 183, 188, 0.34);
+  transform: translate(calc(-50% + var(--label-x, 0px)), calc(-100% + var(--label-y, -22px)));
 }
 
 .footprint-label::before {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -28px;
+  bottom: -36px;
   width: 1px;
-  height: 24px;
-  background: linear-gradient(180deg, rgba(231, 248, 255, 0.92), rgba(231, 248, 255, 0));
+  height: 34px;
+  background: linear-gradient(180deg, rgba(124, 245, 255, 0.88), rgba(124, 245, 255, 0));
+  box-shadow: 0 0 10px rgba(124, 245, 255, 0.5);
+}
+
+.footprint-label::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -43px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: rgba(240, 252, 255, 0.75);
+  box-shadow:
+    0 0 10px currentColor,
+    0 0 22px rgba(124, 245, 255, 0.42);
+  transform: translateX(-50%);
 }
 
 .footprint-label__name {
   display: inline-block;
-  padding: 0 0 3px;
-  font-weight: 760;
+  padding: 5px 8px 2px;
+  color: rgba(232, 253, 255, 0.96);
+  background:
+    linear-gradient(90deg, rgba(8, 20, 40, 0.8), rgba(8, 20, 40, 0.48)),
+    linear-gradient(135deg, rgba(49, 183, 188, 0.28), transparent 58%);
+  border-top: 1px solid rgba(124, 245, 255, 0.46);
+  border-left: 1px solid rgba(124, 245, 255, 0.36);
+  border-right: 1px solid rgba(124, 245, 255, 0.16);
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 0 22px rgba(49, 183, 188, 0.16);
+  font-weight: 800;
   white-space: nowrap;
 }
 
 .footprint-label__value {
   display: inline-block;
-  padding: 1px 5px 2px;
+  padding: 2px 8px 5px;
   color: rgba(255, 249, 227, 0.98);
-  background: rgba(5, 13, 29, 0.38);
-  border-radius: 999px;
-  font-weight: 720;
+  background: rgba(4, 13, 28, 0.72);
+  border-right: 1px solid rgba(124, 245, 255, 0.18);
+  border-bottom: 1px solid rgba(124, 245, 255, 0.34);
+  border-left: 1px solid rgba(124, 245, 255, 0.34);
+  border-radius: 0 0 4px 4px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  font-weight: 760;
   white-space: nowrap;
 }
 

@@ -567,6 +567,15 @@
     return label;
   }
 
+  function labelOffset(index, total) {
+    const angle = (index / Math.max(total, 1)) * Math.PI * 2;
+    const radius = index % 2 ? 18 : 30;
+    return {
+      x: Math.round(Math.cos(angle) * radius),
+      y: Math.round(-18 - Math.abs(Math.sin(angle)) * 18)
+    };
+  }
+
   function updateLabels() {
     if (!state.renderer || !state.camera) return;
     const rect = state.renderer.domElement.getBoundingClientRect();
@@ -639,8 +648,11 @@
     state.camera.lookAt(fittedCenter.x, fittedCenter.y - size.y * 0.02, size.z * 0.24);
     state.root.updateMatrixWorld(true);
 
-    state.labelEntries = items.map((item) => {
+    state.labelEntries = items.map((item, index) => {
       const element = createLabel(`${shortName(item.name)}\n${formatNumber.format(item.value)} 台`, item.labelColor);
+      const offset = labelOffset(index, items.length);
+      element.style.setProperty("--label-x", `${offset.x}px`);
+      element.style.setProperty("--label-y", `${offset.y}px`);
       labelsContainer.appendChild(element);
       return { element, position: item.anchor.clone().applyMatrix4(mapGroup.matrixWorld) };
     });
