@@ -4,7 +4,8 @@
     scene: null,
     camera: null,
     root: null,
-    labelEntries: []
+    labelEntries: [],
+    textureCache: new Map()
   };
 
   const omittedRegions = new Set(["台湾省", "香港特别行政区", "澳门特别行政区"]);
@@ -183,8 +184,67 @@
     return { base: "#092544", mid: "#235ea9", light: "#65a7ec", crest: "#a9d4ff", line: "#9fc7f0", label: "#e7f3ff" };
   }
 
+  function terrainPalette(ratio, isPeak) {
+    if (isPeak || ratio >= 0.82) {
+      return { base: "#4a2308", mid: "#b46017", light: "#d9992d", crest: "#f1b75c", line: "#e9a348", label: "#fff1cd" };
+    }
+    if (ratio >= 0.52) {
+      return { base: "#173821", mid: "#4d9250", light: "#86bc65", crest: "#b5d989", line: "#9edb87", label: "#f0ffd2" };
+    }
+    if (ratio >= 0.24) {
+      return { base: "#083148", mid: "#217f91", light: "#53b8be", crest: "#91d7d5", line: "#84e2e7", label: "#dbffff" };
+    }
+    return { base: "#092742", mid: "#2f659b", light: "#6fa7d0", crest: "#a1c6de", line: "#9fc7f0", label: "#e7f3ff" };
+  }
+
   function lerpColor(a, b, t) {
     return a.clone().lerp(b, t);
+  }
+
+  function terrainTexture(colors, seed) {
+    const key = `${colors.base}-${colors.mid}-${colors.light}-${Math.round(seed * 1000)}`;
+    if (state.textureCache.has(key)) return state.textureCache.get(key);
+
+    const size = 256;
+    const canvas = document.createElement("canvas");
+    canvas.width = size;
+    canvas.height = size;
+    const context = canvas.getContext("2d");
+    const image = context.createImageData(size, size);
+    const base = new THREE.Color(colors.base);
+    const mid = new THREE.Color(colors.mid);
+    const light = new THREE.Color(colors.light);
+
+    for (let y = 0; y < size; y += 1) {
+      for (let x = 0; x < size; x += 1) {
+        const dx = x / size - 0.5;
+        const dy = y / size - 0.5;
+        const radius = Math.hypot(dx, dy);
+        const angle = Math.atan2(dy, dx);
+        const ridge = fbm(x * 1.8 + Math.cos(angle) * 32, y * 5.2 + Math.sin(angle) * 32, seed + 3.1);
+        const strata = Math.sin((radius * 34 + ridge * 2.8 + seed * 8) * Math.PI);
+        const scratch = fbm(x * 9.5, y * 1.7 + Math.sin(x * 0.07) * 12, seed + 4.4);
+        const tone = Math.max(0, Math.min(1, 0.34 + ridge * 0.36 + Math.max(0, strata) * 0.16 + scratch * 0.12));
+        const color = tone < 0.58
+          ? lerpColor(base, mid, tone / 0.58)
+          : lerpColor(mid, light, (tone - 0.58) / 0.42);
+        const shade = 0.78 + Math.max(0, strata) * 0.18 + (scratch - 0.5) * 0.1;
+        const offset = (y * size + x) * 4;
+        image.data[offset] = Math.max(0, Math.min(255, color.r * 255 * shade));
+        image.data[offset + 1] = Math.max(0, Math.min(255, color.g * 255 * shade));
+        image.data[offset + 2] = Math.max(0, Math.min(255, color.b * 255 * shade));
+        image.data[offset + 3] = 255;
+      }
+    }
+    context.putImageData(image, 0, 0);
+
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.wrapS = THREE.RepeatWrapping;
+    texture.wrapT = THREE.RepeatWrapping;
+    texture.repeat.set(1.9, 2.7);
+    texture.anisotropy = 4;
+    state.textureCache.set(key, texture);
+    return texture;
   }
 
   function createShapeMesh(ring, color, opacity, z) {
@@ -258,14 +318,16 @@
 
   function buildMountain(ring, item, maxValue) {
     const value = item.value || 0;
-    const ratio = value > 0 ? Math.sqrt(value / Math.max(maxValue, 1)) : 0;
-    const colors = palette(ratio, item.isPeak);
+    const valueRatio = value > 0 ? value / Math.max(maxValue, 1) : 0;
+    const ratio = value > 0 ? Math.pow(valueRatio, 0.72) : 0;
+    const colors = value > 0 ? terrainPalette(ratio, item.isPeak) : palette(0, false);
     const denseRing = densify(ring);
-    const center = pointInPolygon(item.coord, denseRing) ? item.coord : centroid(denseRing);
+    const geometricCenter = centroid(denseRing);
+    const center = pointInPolygon(geometricCenter, denseRing) ? geometricCenter : (pointInPolygon(item.coord, denseRing) ? item.coord : denseRing[0]);
     const group = new THREE.Group();
     const baseHeight = 5.5;
 
-    group.add(createShapeMesh(denseRing, colors.mid, value > 0 ? 0.16 : 0.12, baseHeight));
+    group.add(createShapeMesh(denseRing, colors.mid, value > 0 ? 0.28 : 0.1, baseHeight));
     const outline = denseRing.map(([x, y]) => new THREE.Vector3(x, y, baseHeight + 0.45));
     group.add(new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(outline), new THREE.LineBasicMaterial({
       color: 0x020202,
@@ -285,13 +347,14 @@
     const seed = hash(item.name);
     const radialSegments = 112;
     const levels = 34;
-    const maxHeight = 22 + ratio * 92;
+    const maxHeight = 16 + ratio * 122;
     const baseColor = new THREE.Color(colors.base);
     const midColor = new THREE.Color(colors.mid);
     const lightColor = new THREE.Color(colors.light);
     const crestColor = new THREE.Color(colors.crest);
     const vertices = [];
     const vertexColors = [];
+    const uvs = [];
     const indices = [];
     const edgeDistances = [];
     let peakPosition = new THREE.Vector3(center[0], center[1], baseHeight);
@@ -313,7 +376,7 @@
         const angle = (segment / radialSegments) * Math.PI * 2;
         const edgeDistance = edgeDistances[segment];
         const edgeHold = smoothstep(0.86, 1, t);
-        const wobble = 1 + (fbm(Math.cos(angle) * 90, Math.sin(angle) * 90, seed + level * 0.03) - 0.5) * 0.04 * Math.sin(Math.PI * t) * (1 - edgeHold);
+        const wobble = 1 + (fbm(Math.cos(angle) * 90, Math.sin(angle) * 90, seed + level * 0.03) - 0.5) * 0.022 * Math.sin(Math.PI * t) * (1 - edgeHold);
         const radius = edgeDistance * ridgeT * wobble;
         const x = center[0] + Math.cos(angle) * radius;
         const y = center[1] + Math.sin(angle) * radius;
@@ -333,12 +396,14 @@
         const peakBlend = peakOffsets.reduce((sum, peak) => {
           const dx = nx - peak[0];
           const dy = ny - peak[1];
-          return sum + Math.exp(-(dx * dx + dy * dy) * 8.5) * peak[2];
+          return sum + Math.exp(-(dx * dx + dy * dy) * 10) * peak[2];
         }, 0);
-        const ridgeNetwork = (mainRidge * 0.2 + secondRidge * 0.12) * radialFalloff;
+        const ridgeNetwork = (mainRidge * 0.22 + secondRidge * 0.12) * radialFalloff;
+        const verticalCore = Math.exp(-(nx * nx + ny * ny) * 5.8) * radialFalloff * 0.34;
         const heightRatio = Math.min(1.08, (
-          radialFalloff * 0.34
-          + peakBlend * radialFalloff * 0.26
+          radialFalloff * 0.22
+          + verticalCore
+          + peakBlend * radialFalloff * 0.16
           + ridgeNetwork
           + Math.max(0, rock - 0.5) * radialFalloff * 0.1
           + (smallRock - 0.5) * radialFalloff * 0.035
@@ -348,10 +413,13 @@
           peakPosition = new THREE.Vector3(x, y, height + 3.5);
         }
         vertices.push(x, y, height);
+        uvs.push(0.5 + nx * 0.5, 0.5 + ny * 0.5);
 
-        const veinNoise = fbm(x * 7.2 + Math.sin(y * 0.05) * 18, y * 1.9 + rock * 15, seed + 0.9);
-        const vein = Math.pow(Math.max(0, 1 - Math.abs(veinNoise * 2 - 1) * 11.5), 4.6) * 0.12;
-        const shade = Math.max(0, 0.62 - rock) * 0.24;
+        const veinNoise = fbm(x * 8.6 + Math.sin(y * 0.08) * 22, y * 2.8 + rock * 18, seed + 0.9);
+        const contourNoise = fbm(x * 1.1, y * 1.1, seed + 2.2);
+        const contour = Math.pow(Math.max(0, 1 - Math.abs(((heightRatio * 28 + contourNoise * 1.6) % 1) - 0.5) * 7.2), 2.7) * 0.18;
+        const vein = Math.pow(Math.max(0, 1 - Math.abs(veinNoise * 2 - 1) * 9.6), 3.8) * 0.18;
+        const shade = Math.max(0, 0.66 - rock) * 0.31;
         const elevationTone = Math.max(0, Math.min(1, heightRatio));
         const valueTint = Math.max(0.16, ratio);
         const slopeColor = elevationTone < 0.18
@@ -360,8 +428,8 @@
             ? lerpColor(midColor, baseColor, (elevationTone - 0.18) / 0.64)
             : lerpColor(baseColor, crestColor, (elevationTone - 0.82) / 0.18);
         slopeColor.lerp(midColor, 0.08 + valueTint * 0.08);
-        const finalColor = vein > 0.012
-          ? lerpColor(slopeColor, crestColor, vein)
+        const finalColor = vein + contour > 0.012
+          ? lerpColor(slopeColor, crestColor, Math.min(0.28, vein + contour))
           : lerpColor(slopeColor, baseColor, shade);
         vertexColors.push(finalColor.r, finalColor.g, finalColor.b);
       }
@@ -382,20 +450,35 @@
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute("position", new THREE.Float32BufferAttribute(vertices, 3));
     geometry.setAttribute("color", new THREE.Float32BufferAttribute(vertexColors, 3));
+    geometry.setAttribute("uv", new THREE.Float32BufferAttribute(uvs, 2));
     geometry.setIndex(indices);
     geometry.computeVertexNormals();
-    group.add(new THREE.Mesh(geometry, new THREE.MeshStandardMaterial({
+    const texture = terrainTexture(colors, seed);
+    const terrainMesh = new THREE.Mesh(geometry, new THREE.MeshStandardMaterial({
+      map: texture,
+      bumpMap: texture,
+      bumpScale: 2.2 + ratio * 1.8,
       vertexColors: true,
       transparent: true,
-      opacity: 0.63,
-      roughness: 0.48,
-      metalness: 0.02,
+      opacity: 0.94,
+      roughness: 0.82,
+      metalness: 0.01,
       emissive: new THREE.Color(colors.line),
-      emissiveIntensity: 0.055,
+      emissiveIntensity: 0.018,
+      side: THREE.DoubleSide
+    }));
+    group.add(terrainMesh);
+
+    group.add(new THREE.Mesh(geometry.clone(), new THREE.MeshBasicMaterial({
+      color: new THREE.Color(colors.line),
+      transparent: true,
+      opacity: 0.045,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
       side: THREE.DoubleSide
     })));
 
-    [0.28, 0.48, 0.68, 0.84].forEach((t) => {
+    [0.2, 0.34, 0.48, 0.62, 0.76, 0.88].forEach((t) => {
       const points = [];
       const level = Math.round(t * levels);
       for (let segment = 0; segment < radialSegments; segment += 1) {
@@ -405,9 +488,24 @@
       group.add(new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(points), new THREE.LineBasicMaterial({
         color: new THREE.Color(colors.line),
         transparent: true,
-        opacity: 0.1
+        opacity: 0.13
       })));
     });
+
+    for (let ray = 0; ray < 16; ray += 1) {
+      const angle = ((ray / 16) * Math.PI * 2) + seed * 1.7;
+      const segment = Math.round(((angle % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2)) / (Math.PI * 2) * radialSegments) % radialSegments;
+      const points = [];
+      for (let level = Math.round(levels * 0.12); level < Math.round(levels * 0.88); level += 2) {
+        const offset = (level * radialSegments + segment) * 3;
+        points.push(new THREE.Vector3(vertices[offset], vertices[offset + 1], vertices[offset + 2] + 0.45));
+      }
+      group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), new THREE.LineBasicMaterial({
+        color: new THREE.Color(colors.crest),
+        transparent: true,
+        opacity: 0.09
+      })));
+    }
 
     return {
       group,
@@ -427,12 +525,14 @@
       state.camera = new THREE.PerspectiveCamera(32, 1, 1, 3200);
       state.root = new THREE.Group();
       state.scene.add(state.root);
-      const ambient = new THREE.AmbientLight(0x9fefff, 1.08);
-      const key = new THREE.DirectionalLight(0xffffff, 1.05);
+      const ambient = new THREE.AmbientLight(0x8bdce7, 0.72);
+      const key = new THREE.DirectionalLight(0xfff0cf, 1.28);
       key.position.set(180, -240, 320);
-      const rim = new THREE.DirectionalLight(0x48d8ff, 0.72);
+      const rim = new THREE.DirectionalLight(0x48d8ff, 0.56);
       rim.position.set(-260, 160, 160);
-      state.scene.add(ambient, key, rim);
+      const fill = new THREE.DirectionalLight(0x2456a8, 0.32);
+      fill.position.set(0, 280, 110);
+      state.scene.add(ambient, key, rim, fill);
     }
     const width = container.clientWidth || 1200;
     const height = container.clientHeight || 760;
