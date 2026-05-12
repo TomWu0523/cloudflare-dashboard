@@ -9131,7 +9131,7 @@ function footprintConeData() {
   const provinceData = currentDashboardData().provinceData || [];
   const provinceValueMap = new Map(provinceData.map((item) => [item.name, item]));
   const maxValue = Math.max(1, ...provinceData.map((item) => item.value || 0));
-  const omittedRegions = new Set(["台湾省", "香港特别行政区", "澳门特别行政区"]);
+  const omittedRegions = new Set(["香港特别行政区", "澳门特别行政区"]);
   const topProvince = provinceData.reduce((winner, item) => {
     if (!winner || (item.value || 0) > (winner.value || 0)) {
       return item;
@@ -10395,6 +10395,7 @@ function closeFootprintMap() {
 
   overlay.hidden = true;
   document.body.classList.remove("footprint-open");
+  window.Footprint3D?.stop?.();
 }
 
 async function renderMap() {

@@ -5,10 +5,14 @@
     camera: null,
     root: null,
     labelEntries: [],
-    textureCache: new Map()
+    textureCache: new Map(),
+    mapGroup: null,
+    animationFrame: null,
+    baseRotation: -0.18,
+    startTime: 0
   };
 
-  const omittedRegions = new Set(["台湾省", "香港特别行政区", "澳门特别行政区"]);
+  const omittedRegions = new Set(["香港特别行政区", "澳门特别行政区"]);
   const shortName = (name) => name.replace(/省|市|壮族自治区|回族自治区|维吾尔自治区|自治区/g, "");
   const formatNumber = new Intl.NumberFormat("zh-CN");
 
@@ -580,7 +584,10 @@
     if (!state.renderer || !state.camera) return;
     const rect = state.renderer.domElement.getBoundingClientRect();
     state.labelEntries.forEach((entry) => {
-      const projected = entry.position.clone().project(state.camera);
+      const worldPosition = entry.localPosition
+        ? entry.localPosition.clone().applyMatrix4(state.mapGroup.matrixWorld)
+        : entry.position.clone();
+      const projected = worldPosition.project(state.camera);
       const visible = projected.z > -1 && projected.z < 1;
       entry.element.style.display = visible ? "" : "none";
       if (!visible) return;
@@ -589,9 +596,28 @@
     });
   }
 
+  function stop() {
+    if (state.animationFrame) {
+      cancelAnimationFrame(state.animationFrame);
+      state.animationFrame = null;
+    }
+  }
+
+  function animate(time) {
+    if (!state.renderer || !state.scene || !state.camera || !state.mapGroup) return;
+    if (!state.startTime) state.startTime = time;
+    const elapsed = time - state.startTime;
+    state.mapGroup.rotation.z = state.baseRotation + Math.sin((elapsed / 36000) * Math.PI * 2) * 0.035;
+    state.mapGroup.updateMatrixWorld(true);
+    state.renderer.render(state.scene, state.camera);
+    updateLabels();
+    state.animationFrame = requestAnimationFrame(animate);
+  }
+
   function render(options) {
     const { container, labelsContainer, geoJson, provinceData } = options;
     if (!container || !geoJson || !ensureScene(container)) return false;
+    stop();
     clear(labelsContainer);
     const bounds = boundsOfGeoJson(geoJson);
     const project = projector(bounds);
@@ -629,7 +655,10 @@
 
     mapGroup.add(createNationalOutline(provinceRings, 9.4));
 
-    mapGroup.rotation.z = -0.18;
+    state.baseRotation = -0.18;
+    state.startTime = 0;
+    state.mapGroup = mapGroup;
+    mapGroup.rotation.z = state.baseRotation;
     state.root.add(mapGroup);
     const fitItems = mapGroup.children.filter((child) => child.userData?.name !== "海南省");
     const boundsBox = new THREE.Box3().setFromObject(mapGroup);
@@ -654,12 +683,13 @@
       element.style.setProperty("--label-x", `${offset.x}px`);
       element.style.setProperty("--label-y", `${offset.y}px`);
       labelsContainer.appendChild(element);
-      return { element, position: item.anchor.clone().applyMatrix4(mapGroup.matrixWorld) };
+      return { element, localPosition: item.anchor.clone() };
     });
     state.renderer.render(state.scene, state.camera);
     updateLabels();
+    state.animationFrame = requestAnimationFrame(animate);
     return true;
   }
 
-  window.Footprint3D = { render };
+  window.Footprint3D = { render, stop };
 })();
