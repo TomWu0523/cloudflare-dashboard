@@ -54,15 +54,6518 @@ let dashboards = {
         "ratio": 0.16
       }
     ],
-    "provinceData": [],
-    "users": [],
-    "partners": [],
-    "updates": [],
-    "monthlyTrend": [],
-    "yearlyTrend": [],
-    "totalUnits": 0,
+    "provinceData": [
+      {
+        "name": "广东省",
+        "value": 44,
+        "latestSite": "珠海市中西医结合医院",
+        "latestDate": "2025-12-31",
+        "coord": [
+          113.27,
+          23.13
+        ]
+      },
+      {
+        "name": "上海市",
+        "value": 44,
+        "latestSite": "上海交通大学医学院附属新华医院奉贤院区",
+        "latestDate": "2025-12-31",
+        "coord": [
+          121.47,
+          31.23
+        ]
+      },
+      {
+        "name": "北京市",
+        "value": 43,
+        "latestSite": "北京清华长庚医院",
+        "latestDate": "2025-12-31",
+        "coord": [
+          116.41,
+          39.9
+        ]
+      },
+      {
+        "name": "山东省",
+        "value": 41,
+        "latestSite": "山东泰山医学院附属医院",
+        "latestDate": "2025-12-31",
+        "coord": [
+          117,
+          36.65
+        ]
+      },
+      {
+        "name": "江苏省",
+        "value": 28,
+        "latestSite": "南京市鼓楼医院",
+        "latestDate": "2025-12-31",
+        "coord": [
+          118.76,
+          32.06
+        ]
+      },
+      {
+        "name": "浙江省",
+        "value": 28,
+        "latestSite": "台州市第一人民医院",
+        "latestDate": "2025-12-31",
+        "coord": [
+          120.15,
+          30.28
+        ]
+      },
+      {
+        "name": "福建省",
+        "value": 23,
+        "latestSite": "晋江市医院",
+        "latestDate": "2025-12-31",
+        "coord": [
+          119.3,
+          26.08
+        ]
+      },
+      {
+        "name": "四川省",
+        "value": 19,
+        "latestSite": "四川省肿瘤医院",
+        "latestDate": "2025-12-31",
+        "coord": [
+          104.06,
+          30.67
+        ]
+      },
+      {
+        "name": "湖北省",
+        "value": 18,
+        "latestSite": "华中科技大学同济医学院附属同济医院",
+        "latestDate": "2025-12-31",
+        "coord": [
+          114.3,
+          30.59
+        ]
+      },
+      {
+        "name": "陕西省",
+        "value": 14,
+        "latestSite": "陕西省人民医院",
+        "latestDate": "2023-12-31",
+        "coord": [
+          108.94,
+          34.34
+        ]
+      },
+      {
+        "name": "河北省",
+        "value": 13,
+        "latestSite": "河北省秦皇岛第二人民医院",
+        "latestDate": "2024-12-31",
+        "coord": [
+          114.48,
+          38.03
+        ]
+      },
+      {
+        "name": "江西省",
+        "value": 11,
+        "latestSite": "江西省人民医院",
+        "latestDate": "2025-12-31",
+        "coord": [
+          115.86,
+          28.68
+        ]
+      },
+      {
+        "name": "山西省",
+        "value": 9,
+        "latestSite": "山西省肿瘤医院",
+        "latestDate": "2024-12-31",
+        "coord": [
+          112.53,
+          37.87
+        ]
+      },
+      {
+        "name": "海南省",
+        "value": 7,
+        "latestSite": "海南省人民医院",
+        "latestDate": "2025-12-31",
+        "coord": [
+          110.35,
+          20.02
+        ]
+      },
+      {
+        "name": "河南省",
+        "value": 7,
+        "latestSite": "郑州市第七人民医院滨河院区",
+        "latestDate": "2025-12-31",
+        "coord": [
+          113.62,
+          34.75
+        ]
+      },
+      {
+        "name": "云南省",
+        "value": 7,
+        "latestSite": "曲靖市第一人民医院",
+        "latestDate": "2023-12-31",
+        "coord": [
+          102.71,
+          25.04
+        ]
+      },
+      {
+        "name": "甘肃省",
+        "value": 6,
+        "latestSite": "甘肃省人民医院",
+        "latestDate": "2023-12-31",
+        "coord": [
+          103.82,
+          36.06
+        ]
+      },
+      {
+        "name": "重庆市",
+        "value": 6,
+        "latestSite": "陆军军医大学第一附属医院",
+        "latestDate": "2024-12-31",
+        "coord": [
+          106.55,
+          29.56
+        ]
+      },
+      {
+        "name": "吉林省",
+        "value": 5,
+        "latestSite": "长春市中心医院",
+        "latestDate": "2025-12-31",
+        "coord": [
+          125.32,
+          43.9
+        ]
+      },
+      {
+        "name": "新疆维吾尔自治区",
+        "value": 5,
+        "latestSite": "新疆维吾尔自治区中医医院",
+        "latestDate": "2021-12-31",
+        "coord": [
+          87.62,
+          43.82
+        ]
+      },
+      {
+        "name": "安徽省",
+        "value": 4,
+        "latestSite": "淮南市东方医院集团总院",
+        "latestDate": "2023-12-31",
+        "coord": [
+          117.28,
+          31.86
+        ]
+      },
+      {
+        "name": "天津市",
+        "value": 4,
+        "latestSite": "天津医科大学第二医院",
+        "latestDate": "2023-12-31",
+        "coord": [
+          117.2,
+          39.12
+        ]
+      },
+      {
+        "name": "广西壮族自治区",
+        "value": 3,
+        "latestSite": "桂林市人民医院",
+        "latestDate": "2024-12-31",
+        "coord": [
+          108.32,
+          22.82
+        ]
+      },
+      {
+        "name": "宁夏回族自治区",
+        "value": 3,
+        "latestSite": "宁夏回族自治区人民医院",
+        "latestDate": "2023-12-31",
+        "coord": [
+          106.27,
+          38.47
+        ]
+      },
+      {
+        "name": "贵州省",
+        "value": 2,
+        "latestSite": "贵州省人民医院",
+        "latestDate": "2024-12-31",
+        "coord": [
+          106.71,
+          26.58
+        ]
+      },
+      {
+        "name": "黑龙江省",
+        "value": 2,
+        "latestSite": "哈尔滨医科大学附属第一医院",
+        "latestDate": "2021-12-31",
+        "coord": [
+          126.63,
+          45.75
+        ]
+      },
+      {
+        "name": "湖南省",
+        "value": 1,
+        "latestSite": "中南大学湘雅二医院",
+        "latestDate": "2022-12-31",
+        "coord": [
+          112.98,
+          28.19
+        ]
+      }
+    ],
+    "users": [
+      {
+        "name": "北京协和医院",
+        "province": "北京市",
+        "value": 15
+      },
+      {
+        "name": "华中科技大学同济医学院附属同济医院",
+        "province": "湖北省",
+        "value": 6
+      },
+      {
+        "name": "福建医科大学附属第一医院",
+        "province": "福建省",
+        "value": 4
+      },
+      {
+        "name": "山东大学齐鲁医院青岛院区",
+        "province": "山东省",
+        "value": 4
+      },
+      {
+        "name": "空军军医大学西京医院",
+        "province": "陕西省",
+        "value": 4
+      },
+      {
+        "name": "陕西省人民医院",
+        "province": "陕西省",
+        "value": 4
+      },
+      {
+        "name": "上海市第六人民医院",
+        "province": "上海市",
+        "value": 4
+      },
+      {
+        "name": "首都医科大学附属北京天坛医院",
+        "province": "北京市",
+        "value": 3
+      }
+    ],
+    "partners": [
+      {
+        "name": "尹武军",
+        "province": "广东省",
+        "value": 54
+      },
+      {
+        "name": "纪震夜",
+        "province": "北京市",
+        "value": 50
+      },
+      {
+        "name": "刘燕",
+        "province": "安徽省",
+        "value": 48
+      },
+      {
+        "name": "吴海燕",
+        "province": "山东省",
+        "value": 41
+      },
+      {
+        "name": "欧兆辉",
+        "province": "福建省",
+        "value": 34
+      },
+      {
+        "name": "袁英才",
+        "province": "甘肃省",
+        "value": 28
+      },
+      {
+        "name": "徐璐璐",
+        "province": "江苏省",
+        "value": 28
+      },
+      {
+        "name": "侯志勇",
+        "province": "浙江省",
+        "value": 28
+      }
+    ],
+    "updates": [
+      {
+        "date": "12-31",
+        "status": "装机",
+        "text": "北京大学第一医院（大兴院区） 完成 B4 1 台"
+      },
+      {
+        "date": "12-31",
+        "status": "装机",
+        "text": "北京大学第三医院 完成 B2 1 台"
+      },
+      {
+        "date": "12-31",
+        "status": "装机",
+        "text": "北京大学第三医院秦皇岛院区 完成 B2 1 台"
+      },
+      {
+        "date": "12-31",
+        "status": "装机",
+        "text": "北京清华长庚医院 完成 B2 1 台"
+      },
+      {
+        "date": "12-31",
+        "status": "装机",
+        "text": "晋江市医院 完成 B2 1 台"
+      },
+      {
+        "date": "12-31",
+        "status": "装机",
+        "text": "珠海市中西医结合医院 完成 B2 1 台"
+      }
+    ],
+    "monthlyTrend": [
+      {
+        "month": "2025-01",
+        "installed": 0
+      },
+      {
+        "month": "2025-02",
+        "installed": 0
+      },
+      {
+        "month": "2025-03",
+        "installed": 0
+      },
+      {
+        "month": "2025-04",
+        "installed": 0
+      },
+      {
+        "month": "2025-05",
+        "installed": 0
+      },
+      {
+        "month": "2025-06",
+        "installed": 0
+      },
+      {
+        "month": "2025-07",
+        "installed": 0
+      },
+      {
+        "month": "2025-08",
+        "installed": 0
+      },
+      {
+        "month": "2025-09",
+        "installed": 0
+      },
+      {
+        "month": "2025-10",
+        "installed": 0
+      },
+      {
+        "month": "2025-11",
+        "installed": 0
+      },
+      {
+        "month": "2025-12",
+        "installed": 25
+      }
+    ],
+    "yearlyTrend": [
+      {
+        "year": "2021",
+        "installed": 58
+      },
+      {
+        "year": "2022",
+        "installed": 52
+      },
+      {
+        "year": "2023",
+        "installed": 50
+      },
+      {
+        "year": "2024",
+        "installed": 50
+      },
+      {
+        "year": "2025",
+        "installed": 25
+      }
+    ],
+    "totalUnits": 397,
     "quarterUnits": 0,
-    "sourceRecords": [],
+    "sourceRecords": [
+      {
+        "serialNo": "1180-0401-ROW005",
+        "productKey": "magnus1180",
+        "productModel": "B0",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "安徽省",
+        "installCity": "合肥",
+        "salesRegion": "",
+        "terminalUser": "安徽省立医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2017-12-31",
+        "installDate": "2017-12-31",
+        "warrantyExpireDate": "2019-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW006",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "安徽省",
+        "installCity": "合肥",
+        "salesRegion": "",
+        "terminalUser": "合肥京东方医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW007",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "安徽省",
+        "installCity": "合肥",
+        "salesRegion": "",
+        "terminalUser": "安徽省胸科医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW008",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "安徽省",
+        "installCity": "淮南",
+        "salesRegion": "",
+        "terminalUser": "淮南市东方医院集团总院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW009",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "首都医科大学附属北京世纪坛医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2015-12-31",
+        "installDate": "2015-12-31",
+        "warrantyExpireDate": "2017-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW010",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "首都医科大学附属北京天坛医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2015-12-31",
+        "installDate": "2015-12-31",
+        "warrantyExpireDate": "2017-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW011",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "首都医科大学附属北京天坛医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2015-12-31",
+        "installDate": "2015-12-31",
+        "warrantyExpireDate": "2017-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW012",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "首都医科大学附属北京天坛医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2015-12-31",
+        "installDate": "2015-12-31",
+        "warrantyExpireDate": "2017-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW013",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京同仁医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW014",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京市垂杨柳医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW015",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 7,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京协和医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2011-12-31",
+        "installDate": "2011-12-31",
+        "warrantyExpireDate": "2013-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW016",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 6,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京协和医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2011-12-31",
+        "installDate": "2011-12-31",
+        "warrantyExpireDate": "2013-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW017",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京协和医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW018",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京协和医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW019",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京中日友好医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2014-12-31",
+        "installDate": "2014-12-31",
+        "warrantyExpireDate": "2016-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW020",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW021",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京和睦家",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW022",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "首都医科大学附属北京潞河医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW023",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 3,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "中国人民解放军北京军区总医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2016-12-31",
+        "installDate": "2016-12-31",
+        "warrantyExpireDate": "2018-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW024",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京市昌平区中西医结合医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW025",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "首都医科大学宣武医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW026",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京世纪坛医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW027",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京世纪坛医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW028",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "中国人民解放军总医院第一医学中心",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW029",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京朝阳医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW030",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "首都医科大学附属北京安贞医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW031",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "首都医科大学附属北京安贞医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW032",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京积水潭医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW033",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "首都医科大学北京地坛医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW034",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京大学第一医院（大兴院区）",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW035",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京大学第三医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW036",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京大学第三医院秦皇岛院区",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW037",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
+        "terminalUser": "北京清华长庚医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW038",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "福州",
+        "salesRegion": "",
+        "terminalUser": "福建省立医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2013-12-31",
+        "installDate": "2013-12-31",
+        "warrantyExpireDate": "2015-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW039",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "福州",
+        "salesRegion": "",
+        "terminalUser": "福建省人民医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW040",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "福州",
+        "salesRegion": "",
+        "terminalUser": "福建省儿童医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW041",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "福州",
+        "salesRegion": "",
+        "terminalUser": "福建省儿童医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW042",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "福州",
+        "salesRegion": "",
+        "terminalUser": "福建省妇幼保健院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW043",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "福州",
+        "salesRegion": "",
+        "terminalUser": "福建医科大学附属协和医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW044",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "厦门",
+        "salesRegion": "",
+        "terminalUser": "厦门弘爱医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW045",
+        "productKey": "magnus1180",
+        "productModel": "B0",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "厦门",
+        "salesRegion": "",
+        "terminalUser": "厦门弘爱医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW046",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "漳州",
+        "salesRegion": "",
+        "terminalUser": "漳州市医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2016-12-31",
+        "installDate": "2016-12-31",
+        "warrantyExpireDate": "2018-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW047",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "漳州",
+        "salesRegion": "",
+        "terminalUser": "中国人民解放军第175医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2011-12-31",
+        "installDate": "2011-12-31",
+        "warrantyExpireDate": "2013-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW048",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "福州",
+        "salesRegion": "",
+        "terminalUser": "福建医科大学附属第一医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW049",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "福州",
+        "salesRegion": "",
+        "terminalUser": "福建医科大学附属第一医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW050",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "福州",
+        "salesRegion": "",
+        "terminalUser": "福建医科大学附属第一医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW051",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "福州",
+        "salesRegion": "",
+        "terminalUser": "福建医科大学附属第一医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW052",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "厦门",
+        "salesRegion": "",
+        "terminalUser": "厦门中医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW053",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "泉州",
+        "salesRegion": "",
+        "terminalUser": "安溪县医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW054",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "漳州",
+        "salesRegion": "",
+        "terminalUser": "漳州市立医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW055",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "泉州",
+        "salesRegion": "",
+        "terminalUser": "南安市医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW056",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "厦门",
+        "salesRegion": "",
+        "terminalUser": "厦门大学附属心血管病医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW057",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "福建省",
+        "installCity": "晋江",
+        "salesRegion": "",
+        "terminalUser": "晋江市医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW058",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "甘肃省",
+        "installCity": "兰州",
+        "salesRegion": "",
+        "terminalUser": "兰州大学第二医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW059",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "甘肃省",
+        "installCity": "兰州",
+        "salesRegion": "",
+        "terminalUser": "兰州大学第一医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW060",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "甘肃省",
+        "installCity": "兰州",
+        "salesRegion": "",
+        "terminalUser": "兰州大学第一医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW061",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "甘肃省",
+        "installCity": "兰州",
+        "salesRegion": "",
+        "terminalUser": "甘肃省中医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW062",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "甘肃省",
+        "installCity": "兰州",
+        "salesRegion": "",
+        "terminalUser": "甘肃省人民医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW063",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "广州",
+        "salesRegion": "",
+        "terminalUser": "广东省人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2014-12-31",
+        "installDate": "2014-12-31",
+        "warrantyExpireDate": "2016-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW064",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "广州",
+        "salesRegion": "",
+        "terminalUser": "广州和睦家医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW065",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
+        "terminalUser": "深圳市南山区人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2015-12-31",
+        "installDate": "2015-12-31",
+        "warrantyExpireDate": "2017-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW066",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
+        "terminalUser": "深圳市南山区人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW067",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
+        "terminalUser": "深圳市第三人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW068",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
+        "terminalUser": "深圳市儿童医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW069",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
+        "terminalUser": "深圳市孙逸仙心血管医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW070",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "汕头",
+        "salesRegion": "",
+        "terminalUser": "汕头市中心医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW071",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "广州",
+        "salesRegion": "",
+        "terminalUser": "中山大学附属第三医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2014-12-31",
+        "installDate": "2014-12-31",
+        "warrantyExpireDate": "2016-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW072",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "肇庆",
+        "salesRegion": "",
+        "terminalUser": "中山大学附属第三医院肇庆医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW073",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "广州",
+        "salesRegion": "",
+        "terminalUser": "广东省中医院大学城医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2010-12-31",
+        "installDate": "2010-12-31",
+        "warrantyExpireDate": "2012-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW074",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "珠海",
+        "salesRegion": "",
+        "terminalUser": "珠海市人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2016-12-31",
+        "installDate": "2016-12-31",
+        "warrantyExpireDate": "2018-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW075",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
+        "terminalUser": "深圳市人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW076",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
+        "terminalUser": "深圳市萨米国际医疗中心",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW077",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
+        "terminalUser": "深圳二院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW078",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "清远",
+        "salesRegion": "",
+        "terminalUser": "清远市人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW079",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "清远",
+        "salesRegion": "",
+        "terminalUser": "清远市人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW080",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "广州",
+        "salesRegion": "",
+        "terminalUser": "中山大学孙逸仙纪念医院（中山大学附属第二医院）",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW081",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "珠海",
+        "salesRegion": "",
+        "terminalUser": "中山大学附属第五医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW082",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "珠海",
+        "salesRegion": "",
+        "terminalUser": "中山大学附属第五医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW083",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
+        "terminalUser": "深圳新风和睦家医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW084",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "广州",
+        "salesRegion": "",
+        "terminalUser": "前海人寿（广州）",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW085",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "河源",
+        "salesRegion": "",
+        "terminalUser": "暨南大学附属第五医院（河源市深河人民医院）",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW086",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "广州",
+        "salesRegion": "",
+        "terminalUser": "南方医科大学南方医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW087",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "高州",
+        "salesRegion": "",
+        "terminalUser": "广东省高州市人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW088",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "广州",
+        "salesRegion": "",
+        "terminalUser": "广东省人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW089",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
+        "terminalUser": "深圳市南山区蛇口人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW090",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "高州",
+        "salesRegion": "",
+        "terminalUser": "广东省高州市人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW091",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "湛江",
+        "salesRegion": "",
+        "terminalUser": "广东医科大学附属医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW092",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "广州",
+        "salesRegion": "",
+        "terminalUser": "南方医科大学南方医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW093",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
+        "terminalUser": "华中科技大学协和深圳医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW094",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
+        "terminalUser": "华中科技大学协和深圳医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW095",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
+        "terminalUser": "华中科技大学协和深圳医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW096",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
+        "terminalUser": "深圳前海泰康国际医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW097",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "江门",
+        "salesRegion": "",
+        "terminalUser": "广东省江门市中心医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW098",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "广州",
+        "salesRegion": "",
+        "terminalUser": "中山大学附属第一医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW099",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "东莞",
+        "salesRegion": "",
+        "terminalUser": "东莞市人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW100",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "佛山",
+        "salesRegion": "",
+        "terminalUser": "佛山市南海区人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW101",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
+        "terminalUser": "深圳市第二人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW102",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广东省",
+        "installCity": "珠海",
+        "salesRegion": "",
+        "terminalUser": "珠海市中西医结合医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW103",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广西壮族自治区",
+        "installCity": "南宁",
+        "salesRegion": "",
+        "terminalUser": "广西妇幼保健院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW104",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广西壮族自治区",
+        "installCity": "南宁",
+        "salesRegion": "",
+        "terminalUser": "前海人寿南宁医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW105",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "广西壮族自治区",
+        "installCity": "桂林",
+        "salesRegion": "",
+        "terminalUser": "桂林市人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW106",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "贵州省",
+        "installCity": "贵阳",
+        "salesRegion": "",
+        "terminalUser": "贵黔国际总医院",
+        "channelName": "李刚",
+        "salesName": "李刚",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW107",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "贵州省",
+        "installCity": "贵阳",
+        "salesRegion": "",
+        "terminalUser": "贵州省人民医院",
+        "channelName": "李刚",
+        "salesName": "李刚",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW108",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "海南省",
+        "installCity": "海口",
+        "salesRegion": "",
+        "terminalUser": "海南省人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW109",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "海南省",
+        "installCity": "东方",
+        "salesRegion": "",
+        "terminalUser": "东方市东方医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW110",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "海南省",
+        "installCity": "三亚",
+        "salesRegion": "",
+        "terminalUser": "三亚中心医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW111",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "海南省",
+        "installCity": "海口",
+        "salesRegion": "",
+        "terminalUser": "海南省人民医院（博鳌）",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW112",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "海南省",
+        "installCity": "琼海",
+        "salesRegion": "",
+        "terminalUser": "四川大学华西乐城医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW113",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "海南省",
+        "installCity": "海口",
+        "salesRegion": "",
+        "terminalUser": "海南省人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW114",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "海南省",
+        "installCity": "海口",
+        "salesRegion": "",
+        "terminalUser": "海南省人民医院",
+        "channelName": "尹武军",
+        "salesName": "尹武军",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW115",
+        "productKey": "magnus1180",
+        "productModel": "B0",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "河北省",
+        "installCity": "唐山",
+        "salesRegion": "",
+        "terminalUser": "唐山市中心医院",
+        "channelName": "王静森",
+        "salesName": "王静森",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW116",
+        "productKey": "magnus1180",
+        "productModel": "B0",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河北省",
+        "installCity": "唐山",
+        "salesRegion": "",
+        "terminalUser": "唐山南湖",
+        "channelName": "王静森",
+        "salesName": "王静森",
+        "salesDate": "2017-12-31",
+        "installDate": "2017-12-31",
+        "warrantyExpireDate": "2019-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW117",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "河北省",
+        "installCity": "张家口",
+        "salesRegion": "",
+        "terminalUser": "崇礼区人民医院（北医三院）",
+        "channelName": "王静森",
+        "salesName": "王静森",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW118",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河北省",
+        "installCity": "张家口",
+        "salesRegion": "",
+        "terminalUser": "河北北方学院第一附属医院",
+        "channelName": "王静森",
+        "salesName": "王静森",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW119",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河北省",
+        "installCity": "秦皇岛",
+        "salesRegion": "",
+        "terminalUser": "秦皇岛市第一人民医院",
+        "channelName": "王静森",
+        "salesName": "王静森",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW120",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河北省",
+        "installCity": "沧州",
+        "salesRegion": "",
+        "terminalUser": "南皮县人民医院",
+        "channelName": "王静森",
+        "salesName": "王静森",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW121",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河北省",
+        "installCity": "承德",
+        "salesRegion": "",
+        "terminalUser": "河北承德医学院附属医院",
+        "channelName": "王静森",
+        "salesName": "王静森",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW122",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河北省",
+        "installCity": "沧州",
+        "salesRegion": "",
+        "terminalUser": "沧州市中心医院",
+        "channelName": "王静森",
+        "salesName": "王静森",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW123",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河北省",
+        "installCity": "石家庄",
+        "salesRegion": "",
+        "terminalUser": "河北医科大学第一附属医院",
+        "channelName": "王静森",
+        "salesName": "王静森",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW124",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河北省",
+        "installCity": "石家庄",
+        "salesRegion": "",
+        "terminalUser": "河北医科大学第一附属医院",
+        "channelName": "王静森",
+        "salesName": "王静森",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW125",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河北省",
+        "installCity": "秦皇岛",
+        "salesRegion": "",
+        "terminalUser": "河北省秦皇岛第二人民医院",
+        "channelName": "王静森",
+        "salesName": "王静森",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW126",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河南省",
+        "installCity": "郑州",
+        "salesRegion": "",
+        "terminalUser": "河南省人民医院",
+        "channelName": "贾凯华",
+        "salesName": "贾凯华",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW127",
+        "productKey": "magnus1180",
+        "productModel": "B3",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河南省",
+        "installCity": "洛阳",
+        "salesRegion": "",
+        "terminalUser": "河南洛阳宜阳县人民医院",
+        "channelName": "贾凯华",
+        "salesName": "贾凯华",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW128",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河南省",
+        "installCity": "郑州",
+        "salesRegion": "",
+        "terminalUser": "郑州市儿童医院",
+        "channelName": "贾凯华",
+        "salesName": "贾凯华",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW129",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河南省",
+        "installCity": "郑州",
+        "salesRegion": "",
+        "terminalUser": "郑州大学第一附属医院",
+        "channelName": "贾凯华",
+        "salesName": "贾凯华",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW130",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河南省",
+        "installCity": "郑州",
+        "salesRegion": "",
+        "terminalUser": "郑州大学第一附属医院",
+        "channelName": "贾凯华",
+        "salesName": "贾凯华",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW131",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河南省",
+        "installCity": "信阳",
+        "salesRegion": "",
+        "terminalUser": "信阳市中心医院羊山分院",
+        "channelName": "贾凯华",
+        "salesName": "贾凯华",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW132",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "河南省",
+        "installCity": "郑州",
+        "salesRegion": "",
+        "terminalUser": "郑州市第七人民医院滨河院区",
+        "channelName": "贾凯华",
+        "salesName": "贾凯华",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW133",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "黑龙江省",
+        "installCity": "哈尔滨",
+        "salesRegion": "",
+        "terminalUser": "哈尔滨医科大学附属第三医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2015-12-31",
+        "installDate": "2015-12-31",
+        "warrantyExpireDate": "2017-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW134",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "黑龙江省",
+        "installCity": "哈尔滨",
+        "salesRegion": "",
+        "terminalUser": "哈尔滨医科大学附属第一医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW135",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "湖北省",
+        "installCity": "武汉",
+        "salesRegion": "",
+        "terminalUser": "中国人民解放军中部战区总医院",
+        "channelName": "夏阳",
+        "salesName": "夏阳",
+        "salesDate": "2010-12-31",
+        "installDate": "2010-12-31",
+        "warrantyExpireDate": "2012-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW136",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "湖北省",
+        "installCity": "荆州",
+        "salesRegion": "",
+        "terminalUser": "荆州市中心医院",
+        "channelName": "夏阳",
+        "salesName": "夏阳",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW137",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "湖北省",
+        "installCity": "武汉",
+        "salesRegion": "",
+        "terminalUser": "武汉大学中南医院",
+        "channelName": "夏阳",
+        "salesName": "夏阳",
+        "salesDate": "2017-12-31",
+        "installDate": "2017-12-31",
+        "warrantyExpireDate": "2019-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW138",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "湖北省",
+        "installCity": "武汉",
+        "salesRegion": "",
+        "terminalUser": "武汉大学中南医院",
+        "channelName": "夏阳",
+        "salesName": "夏阳",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW139",
+        "productKey": "magnus1180",
+        "productModel": "B0",
+        "quantity": 3,
+        "configDescription": "",
+        "installProvince": "湖北省",
+        "installCity": "武汉",
+        "salesRegion": "",
+        "terminalUser": "华中科技大学同济医学院附属同济医院",
+        "channelName": "夏阳",
+        "salesName": "夏阳",
+        "salesDate": "2015-12-31",
+        "installDate": "2015-12-31",
+        "warrantyExpireDate": "2017-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW140",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "湖北省",
+        "installCity": "武汉",
+        "salesRegion": "",
+        "terminalUser": "华中科技大学同济医学院附属协和医院",
+        "channelName": "夏阳",
+        "salesName": "夏阳",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW141",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "湖北省",
+        "installCity": "武汉",
+        "salesRegion": "",
+        "terminalUser": "湖北省人民医院（武汉大学人民医院）",
+        "channelName": "夏阳",
+        "salesName": "夏阳",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW142",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "湖北省",
+        "installCity": "武汉",
+        "salesRegion": "",
+        "terminalUser": "武汉亚洲心脏病医院",
+        "channelName": "夏阳",
+        "salesName": "夏阳",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW143",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "湖北省",
+        "installCity": "武汉",
+        "salesRegion": "",
+        "terminalUser": "武汉亚洲心脏病医院（装机于新疆）",
+        "channelName": "夏阳",
+        "salesName": "夏阳",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW144",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "湖北省",
+        "installCity": "武汉",
+        "salesRegion": "",
+        "terminalUser": "华中科技大学光谷同济医院",
+        "channelName": "夏阳",
+        "salesName": "夏阳",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW145",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "湖北省",
+        "installCity": "荆门",
+        "salesRegion": "",
+        "terminalUser": "荆门市第一人民医院",
+        "channelName": "夏阳",
+        "salesName": "夏阳",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW146",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "湖北省",
+        "installCity": "武汉",
+        "salesRegion": "",
+        "terminalUser": "华中科技大学同济医学院附属同济医院",
+        "channelName": "夏阳",
+        "salesName": "夏阳",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW147",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "湖北省",
+        "installCity": "武汉",
+        "salesRegion": "",
+        "terminalUser": "华中科技大学同济医学院附属同济医院",
+        "channelName": "夏阳",
+        "salesName": "夏阳",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW148",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "湖北省",
+        "installCity": "武汉",
+        "salesRegion": "",
+        "terminalUser": "华中科技大学同济医学院附属同济医院",
+        "channelName": "夏阳",
+        "salesName": "夏阳",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW149",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "湖南省",
+        "installCity": "长沙",
+        "salesRegion": "",
+        "terminalUser": "中南大学湘雅二医院",
+        "channelName": "夏阳",
+        "salesName": "夏阳",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW150",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "吉林省",
+        "installCity": "长春",
+        "salesRegion": "",
+        "terminalUser": "吉林大学中日联谊医院（吉林大学第三医院）",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2017-12-31",
+        "installDate": "2017-12-31",
+        "warrantyExpireDate": "2019-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW151",
+        "productKey": "magnus1180",
+        "productModel": "B0",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "吉林省",
+        "installCity": "长春",
+        "salesRegion": "",
+        "terminalUser": "吉林大学中日联谊医院（吉林大学第三医院）",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2017-12-31",
+        "installDate": "2017-12-31",
+        "warrantyExpireDate": "2019-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW152",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "吉林省",
+        "installCity": "长春",
+        "salesRegion": "",
+        "terminalUser": "吉林省长春市肿瘤医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW153",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "吉林省",
+        "installCity": "长春",
+        "salesRegion": "",
+        "terminalUser": "吉林省延边大学医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW154",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "吉林省",
+        "installCity": "长春",
+        "salesRegion": "",
+        "terminalUser": "长春市中心医院",
+        "channelName": "纪震夜",
+        "salesName": "纪震夜",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW155",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "南京",
+        "salesRegion": "",
+        "terminalUser": "南京大学医学院附属鼓楼医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW156",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "徐州",
+        "salesRegion": "",
+        "terminalUser": "徐州医学院附属医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW157",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "苏州",
+        "salesRegion": "",
+        "terminalUser": "苏州大学附属第一医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2015-12-31",
+        "installDate": "2015-12-31",
+        "warrantyExpireDate": "2017-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW158",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "无锡",
+        "salesRegion": "",
+        "terminalUser": "无锡人民医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2011-12-31",
+        "installDate": "2011-12-31",
+        "warrantyExpireDate": "2013-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW159",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "南京",
+        "salesRegion": "",
+        "terminalUser": "南京市第一医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW160",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "无锡",
+        "salesRegion": "",
+        "terminalUser": "江南大学附属医院（无锡四院）",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW161",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "苏州",
+        "salesRegion": "",
+        "terminalUser": "苏州市独墅湖医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW162",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "南京",
+        "salesRegion": "",
+        "terminalUser": "南京医科大学第二附属医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW163",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "南京",
+        "salesRegion": "",
+        "terminalUser": "南京医科大学第四附属医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW164",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "盐城",
+        "salesRegion": "",
+        "terminalUser": "盐城市第三人民医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW165",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "昆山",
+        "salesRegion": "",
+        "terminalUser": "昆山西部医疗中心",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW166",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "淮安",
+        "salesRegion": "",
+        "terminalUser": "淮安市第五人民医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW167",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "昆山",
+        "salesRegion": "",
+        "terminalUser": "昆山东部医疗中心",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW168",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "宜兴",
+        "salesRegion": "",
+        "terminalUser": "宜兴市人民医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW169",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "常州",
+        "salesRegion": "",
+        "terminalUser": "常州市第二人民医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW170",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "宿迁",
+        "salesRegion": "",
+        "terminalUser": "沭阳县中医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW171",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "南京",
+        "salesRegion": "",
+        "terminalUser": "南京鼓楼医院溧水分院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW172",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "无锡",
+        "salesRegion": "",
+        "terminalUser": "无锡市人民医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW173",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "苏州",
+        "salesRegion": "",
+        "terminalUser": "苏州市立医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW174",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "苏州",
+        "salesRegion": "",
+        "terminalUser": "苏州大学附属第一医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW175",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "太仓",
+        "salesRegion": "",
+        "terminalUser": "太仓市第一人民医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW176",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "苏州",
+        "salesRegion": "",
+        "terminalUser": "苏州市独墅湖医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW177",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "无锡",
+        "salesRegion": "",
+        "terminalUser": "江南大学附属医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW178",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江苏省",
+        "installCity": "南京",
+        "salesRegion": "",
+        "terminalUser": "南京市鼓楼医院",
+        "channelName": "徐璐璐",
+        "salesName": "徐璐璐",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW179",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "江西省",
+        "installCity": "南昌",
+        "salesRegion": "",
+        "terminalUser": "南昌大学第一附属医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW180",
+        "productKey": "magnus1180",
+        "productModel": "B3",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "江西省",
+        "installCity": "南昌",
+        "salesRegion": "",
+        "terminalUser": "南昌大学第二附属医院红角洲院区",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW181",
+        "productKey": "magnus1180",
+        "productModel": "B3",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江西省",
+        "installCity": "南昌",
+        "salesRegion": "",
+        "terminalUser": "南昌大学第二附属医院红角洲院区",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW182",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江西省",
+        "installCity": "萍乡",
+        "salesRegion": "",
+        "terminalUser": "萍乡市人民医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW183",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江西省",
+        "installCity": "赣州",
+        "salesRegion": "",
+        "terminalUser": "赣州市人民医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW184",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江西省",
+        "installCity": "九江",
+        "salesRegion": "",
+        "terminalUser": "九江学院第二附属医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW185",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江西省",
+        "installCity": "赣州",
+        "salesRegion": "",
+        "terminalUser": "赣州市人民医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW186",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江西省",
+        "installCity": "赣州",
+        "salesRegion": "",
+        "terminalUser": "赣州市人民医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW187",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "江西省",
+        "installCity": "南昌",
+        "salesRegion": "",
+        "terminalUser": "江西省人民医院",
+        "channelName": "欧兆辉",
+        "salesName": "欧兆辉",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW188",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "滨州",
+        "salesRegion": "",
+        "terminalUser": "滨州医学院附属医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW189",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "济宁",
+        "salesRegion": "",
+        "terminalUser": "济宁医学院附属医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2015-12-31",
+        "installDate": "2015-12-31",
+        "warrantyExpireDate": "2017-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW190",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "泰安",
+        "salesRegion": "",
+        "terminalUser": "中国人民解放军第88医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2014-12-31",
+        "installDate": "2014-12-31",
+        "warrantyExpireDate": "2016-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW191",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "聊城",
+        "salesRegion": "",
+        "terminalUser": "聊城市人民医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2013-12-31",
+        "installDate": "2013-12-31",
+        "warrantyExpireDate": "2015-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW192",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "临沂",
+        "salesRegion": "",
+        "terminalUser": "临沂市人民医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2016-12-31",
+        "installDate": "2016-12-31",
+        "warrantyExpireDate": "2018-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW193",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "青岛",
+        "salesRegion": "",
+        "terminalUser": "青岛大学医学院附属医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW194",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "济南",
+        "salesRegion": "",
+        "terminalUser": "山东大学齐鲁医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW195",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "济南",
+        "salesRegion": "",
+        "terminalUser": "山东省千佛山医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2016-12-31",
+        "installDate": "2016-12-31",
+        "warrantyExpireDate": "2018-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW196",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "济南",
+        "salesRegion": "",
+        "terminalUser": "山东中医药大学第二附属医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW197",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "潍坊",
+        "salesRegion": "",
+        "terminalUser": "潍坊市益都中心医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW198",
+        "productKey": "magnus1180",
+        "productModel": "B3",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "潍坊",
+        "salesRegion": "",
+        "terminalUser": "潍坊市妇幼保健院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW199",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "淄博",
+        "salesRegion": "",
+        "terminalUser": "淄博市中心医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW200",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "临沂",
+        "salesRegion": "",
+        "terminalUser": "临沂金锣医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW201",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "济南",
+        "salesRegion": "",
+        "terminalUser": "山东省立医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW202",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "泰安",
+        "salesRegion": "",
+        "terminalUser": "山东泰山医学院附属医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2015-12-31",
+        "installDate": "2015-12-31",
+        "warrantyExpireDate": "2017-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW203",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "菏泽",
+        "salesRegion": "",
+        "terminalUser": "成武县人民医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW204",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "菏泽",
+        "salesRegion": "",
+        "terminalUser": "巨野县人民医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW205",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "威海",
+        "salesRegion": "",
+        "terminalUser": "威海中心医院高区医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW206",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "青岛",
+        "salesRegion": "",
+        "terminalUser": "同济大学附属东方医院胶州医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW207",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "烟台",
+        "salesRegion": "",
+        "terminalUser": "烟台毓璜顶医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW208",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "德州",
+        "salesRegion": "",
+        "terminalUser": "齐河县人民医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW209",
+        "productKey": "magnus1180",
+        "productModel": "B3",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "济南",
+        "salesRegion": "",
+        "terminalUser": "山东省公共卫生中心临床中心",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW210",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "威海",
+        "salesRegion": "",
+        "terminalUser": "威海市立医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW211",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "济南",
+        "salesRegion": "",
+        "terminalUser": "山东省立医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW212",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "临沂",
+        "salesRegion": "",
+        "terminalUser": "兰陵县人民医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW213",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "滨州",
+        "salesRegion": "",
+        "terminalUser": "滨州市邹平县人民医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW214",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "青岛",
+        "salesRegion": "",
+        "terminalUser": "山东大学齐鲁医院青岛院区",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW215",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "青岛",
+        "salesRegion": "",
+        "terminalUser": "山东大学齐鲁医院青岛院区",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW216",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "青岛",
+        "salesRegion": "",
+        "terminalUser": "青岛大学附属医院（东院）",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW217",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "济宁",
+        "salesRegion": "",
+        "terminalUser": "济宁市第一人民医院西院区（济宁市中医院新院区）",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW218",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "济南",
+        "salesRegion": "",
+        "terminalUser": "济南市第五人民医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW219",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "济南",
+        "salesRegion": "",
+        "terminalUser": "山东省立医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW220",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "菏泽",
+        "salesRegion": "",
+        "terminalUser": "菏泽市立医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW221",
+        "productKey": "magnus1180",
+        "productModel": "B0",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山东省",
+        "installCity": "泰安",
+        "salesRegion": "",
+        "terminalUser": "山东泰山医学院附属医院",
+        "channelName": "吴海燕",
+        "salesName": "吴海燕",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW222",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "山西省",
+        "installCity": "太原",
+        "salesRegion": "",
+        "terminalUser": "山西省人民医院",
+        "channelName": "贾凯华",
+        "salesName": "贾凯华",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW223",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山西省",
+        "installCity": "太原",
+        "salesRegion": "",
+        "terminalUser": "太原市中心医院",
+        "channelName": "贾凯华",
+        "salesName": "贾凯华",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW224",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山西省",
+        "installCity": "太原",
+        "salesRegion": "",
+        "terminalUser": "山西省心血管病医院",
+        "channelName": "贾凯华",
+        "salesName": "贾凯华",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW225",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山西省",
+        "installCity": "太原",
+        "salesRegion": "",
+        "terminalUser": "山西医科大学第一医院",
+        "channelName": "贾凯华",
+        "salesName": "贾凯华",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW226",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山西省",
+        "installCity": "长治",
+        "salesRegion": "",
+        "terminalUser": "长治医学院附属和平医院",
+        "channelName": "贾凯华",
+        "salesName": "贾凯华",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW227",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山西省",
+        "installCity": "吕梁",
+        "salesRegion": "",
+        "terminalUser": "吕梁市人民医院",
+        "channelName": "贾凯华",
+        "salesName": "贾凯华",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW228",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山西省",
+        "installCity": "朔州",
+        "salesRegion": "",
+        "terminalUser": "朔州市大医院",
+        "channelName": "贾凯华",
+        "salesName": "贾凯华",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW229",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "山西省",
+        "installCity": "太原",
+        "salesRegion": "",
+        "terminalUser": "山西省肿瘤医院",
+        "channelName": "贾凯华",
+        "salesName": "贾凯华",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW230",
+        "productKey": "magnus1180",
+        "productModel": "B0",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "陕西省",
+        "installCity": "西安",
+        "salesRegion": "",
+        "terminalUser": "空军军医大学西京医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW231",
+        "productKey": "magnus1180",
+        "productModel": "B0",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "陕西省",
+        "installCity": "西安",
+        "salesRegion": "",
+        "terminalUser": "西安国际医学中心",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW232",
+        "productKey": "magnus1180",
+        "productModel": "B0",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "陕西省",
+        "installCity": "西安",
+        "salesRegion": "",
+        "terminalUser": "空军军医大学西京医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW233",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "陕西省",
+        "installCity": "西安",
+        "salesRegion": "",
+        "terminalUser": "空军军医大学西京医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW234",
+        "productKey": "magnus1180",
+        "productModel": "B3",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "陕西省",
+        "installCity": "西安",
+        "salesRegion": "",
+        "terminalUser": "陕西省人民医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW235",
+        "productKey": "magnus1180",
+        "productModel": "B3",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "陕西省",
+        "installCity": "西安",
+        "salesRegion": "",
+        "terminalUser": "陕西省人民医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW236",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "陕西省",
+        "installCity": "榆林",
+        "salesRegion": "",
+        "terminalUser": "榆林市第二医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW237",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "陕西省",
+        "installCity": "延安",
+        "salesRegion": "",
+        "terminalUser": "延安大学附属医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW238",
+        "productKey": "magnus1180",
+        "productModel": "B3",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "陕西省",
+        "installCity": "西安",
+        "salesRegion": "",
+        "terminalUser": "陕西省人民医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW239",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "陕西省",
+        "installCity": "西安",
+        "salesRegion": "",
+        "terminalUser": "西安市第一医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW240",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "陕西省",
+        "installCity": "西安",
+        "salesRegion": "",
+        "terminalUser": "西安市第三医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW241",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "陕西省",
+        "installCity": "西安",
+        "salesRegion": "",
+        "terminalUser": "陕西省人民医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW242",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "宁夏回族自治区",
+        "installCity": "银川",
+        "salesRegion": "",
+        "terminalUser": "宁夏回族自治区人民医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW243",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "宁夏回族自治区",
+        "installCity": "银川",
+        "salesRegion": "",
+        "terminalUser": "宁夏医科大学总医院心脑血管病医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW244",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "宁夏回族自治区",
+        "installCity": "银川",
+        "salesRegion": "",
+        "terminalUser": "宁夏回族自治区人民医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW245",
+        "productKey": "magnus1180",
+        "productModel": "B0",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "复旦大学附属华山医院西院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW246",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海交通大学医学院附属新华医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW247",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海市第六人民医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2014-12-31",
+        "installDate": "2014-12-31",
+        "warrantyExpireDate": "2016-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW248",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海交通大学医学院附属瑞金医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2016-12-31",
+        "installDate": "2016-12-31",
+        "warrantyExpireDate": "2018-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW249",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海蓝十字脑科医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2015-12-31",
+        "installDate": "2015-12-31",
+        "warrantyExpireDate": "2017-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW250",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海市第四人民医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW251",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海市东方医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2018-12-31",
+        "installDate": "2018-12-31",
+        "warrantyExpireDate": "2020-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW252",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海市浦东医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2012-12-31",
+        "installDate": "2012-12-31",
+        "warrantyExpireDate": "2014-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW253",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海市胸科医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW254",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海华东医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW255",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海市五官科医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW256",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "张江西门子创新中心",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW257",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海儿童医学中心",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW258",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "国际和平妇幼保健院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW259",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海市肺科医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW260",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海华东医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW261",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海华东医院（2号楼）",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW262",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海市第六人民医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW263",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海中医药大学附属岳阳中西医结合医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW264",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海中医药大学附属龙华医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW265",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "复旦大学附属中山医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW266",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海市第六人民医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW267",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海市第一人民医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW268",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海市养志康复医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW269",
+        "productKey": "magnus1180",
+        "productModel": "B3",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海协华脑科医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW270",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海协华脑科医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW271",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海交通大学医学院仁济医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW272",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海交通大学医学院仁济医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW273",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海交通大学医学院附属同仁院区",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW274",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海市第一妇婴保健院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW275",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海交通大学医学院附属上海儿童医学中心",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW276",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海市同仁医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW277",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海市徐汇区中心医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW278",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海交通大学医学院附属瑞金医院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW279",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海科技大学临床医学中心",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW280",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海交通大学医学院附属瑞金医院北院",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW281",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
+        "terminalUser": "上海交通大学医学院附属新华医院奉贤院区",
+        "channelName": "刘燕",
+        "salesName": "刘燕",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW282",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "广元",
+        "salesRegion": "",
+        "terminalUser": "广元市中心医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW283",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "广元",
+        "salesRegion": "",
+        "terminalUser": "广元市第一人民医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW284",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "泸州",
+        "salesRegion": "",
+        "terminalUser": "西南医科大学附属医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW285",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "德阳",
+        "salesRegion": "",
+        "terminalUser": "德阳市人民医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW286",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
+        "terminalUser": "成都市温江区人民医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW287",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
+        "terminalUser": "成都京东方医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW288",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "西昌",
+        "salesRegion": "",
+        "terminalUser": "西昌市人民医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW289",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "南充",
+        "salesRegion": "",
+        "terminalUser": "川北医学院附属医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW290",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
+        "terminalUser": "华西天府医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW291",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
+        "terminalUser": "成都大学附属医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW292",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
+        "terminalUser": "成都万达国际医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW293",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
+        "terminalUser": "四川蓝生脑科医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW294",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
+        "terminalUser": "四川泰康医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW295",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "南充",
+        "salesRegion": "",
+        "terminalUser": "川北医学院附属医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW296",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 3,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
+        "terminalUser": "四川大学华西医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW297",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
+        "terminalUser": "四川省肿瘤医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW298",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "天津市",
+        "installCity": "天津",
+        "salesRegion": "",
+        "terminalUser": "天津市胸科医院",
+        "channelName": "王静森",
+        "salesName": "王静森",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW299",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "天津市",
+        "installCity": "天津",
+        "salesRegion": "",
+        "terminalUser": "天津市胸科医院",
+        "channelName": "王静森",
+        "salesName": "王静森",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW300",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "天津市",
+        "installCity": "天津",
+        "salesRegion": "",
+        "terminalUser": "天津康汇医院",
+        "channelName": "王静森",
+        "salesName": "王静森",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW301",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "天津市",
+        "installCity": "天津",
+        "salesRegion": "",
+        "terminalUser": "天津医科大学第二医院",
+        "channelName": "王静森",
+        "salesName": "王静森",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW302",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "新疆维吾尔自治区",
+        "installCity": "克拉玛依",
+        "salesRegion": "",
+        "terminalUser": "克拉玛依市中心医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW303",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "新疆维吾尔自治区",
+        "installCity": "克拉玛依",
+        "salesRegion": "",
+        "terminalUser": "克拉玛依市中心医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW304",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "新疆维吾尔自治区",
+        "installCity": "乌鲁木齐",
+        "salesRegion": "",
+        "terminalUser": "新疆心脑血管病医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW305",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "新疆维吾尔自治区",
+        "installCity": "乌鲁木齐",
+        "salesRegion": "",
+        "terminalUser": "新疆维吾尔自治区中医医院",
+        "channelName": "袁英才",
+        "salesName": "袁英才",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW306",
+        "productKey": "magnus1180",
+        "productModel": "缺省",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "云南省",
+        "installCity": "昆明",
+        "salesRegion": "",
+        "terminalUser": "昆明医科大学第一附属医院",
+        "channelName": "李刚",
+        "salesName": "李刚",
+        "salesDate": "2016-12-31",
+        "installDate": "2016-12-31",
+        "warrantyExpireDate": "2018-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW307",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "云南省",
+        "installCity": "昆明",
+        "salesRegion": "",
+        "terminalUser": "云南省阜外心血管病医院",
+        "channelName": "李刚",
+        "salesName": "李刚",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW308",
+        "productKey": "magnus1180",
+        "productModel": "B3",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "云南省",
+        "installCity": "文山",
+        "salesRegion": "",
+        "terminalUser": "云南省文山壮族苗族自治州人民医院",
+        "channelName": "李刚",
+        "salesName": "李刚",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW309",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "云南省",
+        "installCity": "蒙自",
+        "salesRegion": "",
+        "terminalUser": "蒙自市人民医院",
+        "channelName": "李刚",
+        "salesName": "李刚",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW310",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "云南省",
+        "installCity": "昆明",
+        "salesRegion": "",
+        "terminalUser": "昆明医科大学第一附属医院",
+        "channelName": "李刚",
+        "salesName": "李刚",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW311",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "云南省",
+        "installCity": "曲靖",
+        "salesRegion": "",
+        "terminalUser": "曲靖市第一人民医院",
+        "channelName": "李刚",
+        "salesName": "李刚",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW312",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "金华",
+        "salesRegion": "",
+        "terminalUser": "金华市人民医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW313",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "杭州",
+        "salesRegion": "",
+        "terminalUser": "浙江大学医学院附属第二医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2016-12-31",
+        "installDate": "2016-12-31",
+        "warrantyExpireDate": "2018-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW314",
+        "productKey": "magnus1180",
+        "productModel": "B0",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "杭州",
+        "salesRegion": "",
+        "terminalUser": "浙江大学医学院附属第二医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2016-12-31",
+        "installDate": "2016-12-31",
+        "warrantyExpireDate": "2018-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW315",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "杭州",
+        "salesRegion": "",
+        "terminalUser": "浙江大学医学院附属第一医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2015-12-31",
+        "installDate": "2015-12-31",
+        "warrantyExpireDate": "2017-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW316",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "温州",
+        "salesRegion": "",
+        "terminalUser": "温州医科大学附属第二医院瑶溪院区",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW317",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "湖州",
+        "salesRegion": "",
+        "terminalUser": "湖州市中心医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW318",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "温州",
+        "salesRegion": "",
+        "terminalUser": "温州医科大学附属第二医院龙湾院区",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW319",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "杭州",
+        "salesRegion": "",
+        "terminalUser": "浙江省人民医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW320",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "衢州",
+        "salesRegion": "",
+        "terminalUser": "衢州市人民医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW321",
+        "productKey": "magnus1180",
+        "productModel": "B4",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "台州",
+        "salesRegion": "",
+        "terminalUser": "浙江省台州医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2021-12-31",
+        "installDate": "2021-12-31",
+        "warrantyExpireDate": "2023-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW322",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "丽水",
+        "salesRegion": "",
+        "terminalUser": "丽水市人民医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW323",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "东阳",
+        "salesRegion": "",
+        "terminalUser": "东阳市人民医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW324",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "杭州",
+        "salesRegion": "",
+        "terminalUser": "富阳区第一人民医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW325",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "宁波",
+        "salesRegion": "",
+        "terminalUser": "宁波市医疗中心李惠利医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2023-12-31",
+        "installDate": "2023-12-31",
+        "warrantyExpireDate": "2025-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW326",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "台州",
+        "salesRegion": "",
+        "terminalUser": "台州市立医院新院区",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW327",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "绍兴",
+        "salesRegion": "",
+        "terminalUser": "绍兴市人民医院镜湖总院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW328",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "瑞安",
+        "salesRegion": "",
+        "terminalUser": "瑞安市人民医院（瑞祥院区）",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW329",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "嘉兴",
+        "salesRegion": "",
+        "terminalUser": "浙江省嘉善县第一人民医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW330",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "温州",
+        "salesRegion": "",
+        "terminalUser": "温州市中心医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW331",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "台州",
+        "salesRegion": "",
+        "terminalUser": "台州市中心医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW332",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "建德",
+        "salesRegion": "",
+        "terminalUser": "建德市第一人民医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW333",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "杭州",
+        "salesRegion": "",
+        "terminalUser": "杭州市富阳中医骨伤医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW334",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "宁波",
+        "salesRegion": "",
+        "terminalUser": "北仑区人民医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW335",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "温州",
+        "salesRegion": "",
+        "terminalUser": "温州市人民医院娄桥院区",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW336",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "浙江省",
+        "installCity": "台州",
+        "salesRegion": "",
+        "terminalUser": "台州市第一人民医院",
+        "channelName": "侯志勇",
+        "salesName": "侯志勇",
+        "salesDate": "2025-12-31",
+        "installDate": "2025-12-31",
+        "warrantyExpireDate": "2027-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW337",
+        "productKey": "magnus1180",
+        "productModel": "B1",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "重庆市",
+        "installCity": "重庆",
+        "salesRegion": "",
+        "terminalUser": "重庆市人民医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2020-12-31",
+        "installDate": "2020-12-31",
+        "warrantyExpireDate": "2022-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW338",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "重庆市",
+        "installCity": "重庆",
+        "salesRegion": "",
+        "terminalUser": "重庆市肿瘤医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2019-12-31",
+        "installDate": "2019-12-31",
+        "warrantyExpireDate": "2021-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW339",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 1,
+        "configDescription": "",
+        "installProvince": "重庆市",
+        "installCity": "重庆",
+        "salesRegion": "",
+        "terminalUser": "重庆医科大学附属第一医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2022-12-31",
+        "installDate": "2022-12-31",
+        "warrantyExpireDate": "2024-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      },
+      {
+        "serialNo": "1180-0401-ROW340",
+        "productKey": "magnus1180",
+        "productModel": "B2",
+        "quantity": 2,
+        "configDescription": "",
+        "installProvince": "重庆市",
+        "installCity": "重庆",
+        "salesRegion": "",
+        "terminalUser": "陆军军医大学第一附属医院",
+        "channelName": "蒲东方",
+        "salesName": "蒲东方",
+        "salesDate": "2024-12-31",
+        "installDate": "2024-12-31",
+        "warrantyExpireDate": "2026-12-31",
+        "winRate": "",
+        "gforceSystemId": ""
+      }
+    ],
     "productLineData": {
       "b0": {
         "title": "1180 Magnus OR Table 装机看板",
@@ -84,15 +6587,506 @@ let dashboards = {
         ],
         "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
         "productLineOptions": [],
-        "provinceData": [],
-        "users": [],
-        "partners": [],
-        "updates": [],
-        "monthlyTrend": [],
-        "yearlyTrend": [],
-        "totalUnits": 0,
+        "provinceData": [
+          {
+            "name": "陕西省",
+            "value": 5,
+            "latestSite": "空军军医大学西京医院",
+            "latestDate": "2020-12-31",
+            "coord": [
+              108.94,
+              34.34
+            ]
+          },
+          {
+            "name": "河北省",
+            "value": 3,
+            "latestSite": "唐山市中心医院",
+            "latestDate": "2018-12-31",
+            "coord": [
+              114.48,
+              38.03
+            ]
+          },
+          {
+            "name": "湖北省",
+            "value": 3,
+            "latestSite": "华中科技大学同济医学院附属同济医院",
+            "latestDate": "2015-12-31",
+            "coord": [
+              114.3,
+              30.59
+            ]
+          },
+          {
+            "name": "上海市",
+            "value": 2,
+            "latestSite": "复旦大学附属华山医院西院",
+            "latestDate": "2018-12-31",
+            "coord": [
+              121.47,
+              31.23
+            ]
+          },
+          {
+            "name": "安徽省",
+            "value": 1,
+            "latestSite": "安徽省立医院",
+            "latestDate": "2017-12-31",
+            "coord": [
+              117.28,
+              31.86
+            ]
+          },
+          {
+            "name": "福建省",
+            "value": 1,
+            "latestSite": "厦门弘爱医院",
+            "latestDate": "2018-12-31",
+            "coord": [
+              119.3,
+              26.08
+            ]
+          },
+          {
+            "name": "吉林省",
+            "value": 1,
+            "latestSite": "吉林大学中日联谊医院（吉林大学第三医院）",
+            "latestDate": "2017-12-31",
+            "coord": [
+              125.32,
+              43.9
+            ]
+          },
+          {
+            "name": "山东省",
+            "value": 1,
+            "latestSite": "山东泰山医学院附属医院",
+            "latestDate": "2025-12-31",
+            "coord": [
+              117,
+              36.65
+            ]
+          },
+          {
+            "name": "浙江省",
+            "value": 1,
+            "latestSite": "浙江大学医学院附属第二医院",
+            "latestDate": "2016-12-31",
+            "coord": [
+              120.15,
+              30.28
+            ]
+          }
+        ],
+        "users": [
+          {
+            "name": "华中科技大学同济医学院附属同济医院",
+            "province": "湖北省",
+            "value": 3
+          },
+          {
+            "name": "空军军医大学西京医院",
+            "province": "陕西省",
+            "value": 3
+          },
+          {
+            "name": "唐山市中心医院",
+            "province": "河北省",
+            "value": 2
+          },
+          {
+            "name": "西安国际医学中心",
+            "province": "陕西省",
+            "value": 2
+          },
+          {
+            "name": "复旦大学附属华山医院西院",
+            "province": "上海市",
+            "value": 2
+          },
+          {
+            "name": "安徽省立医院",
+            "province": "安徽省",
+            "value": 1
+          },
+          {
+            "name": "厦门弘爱医院",
+            "province": "福建省",
+            "value": 1
+          },
+          {
+            "name": "唐山南湖",
+            "province": "河北省",
+            "value": 1
+          }
+        ],
+        "partners": [
+          {
+            "name": "袁英才",
+            "province": "陕西省",
+            "value": 5
+          },
+          {
+            "name": "刘燕",
+            "province": "安徽省",
+            "value": 3
+          },
+          {
+            "name": "王静森",
+            "province": "河北省",
+            "value": 3
+          },
+          {
+            "name": "夏阳",
+            "province": "湖北省",
+            "value": 3
+          },
+          {
+            "name": "欧兆辉",
+            "province": "福建省",
+            "value": 1
+          },
+          {
+            "name": "纪震夜",
+            "province": "吉林省",
+            "value": 1
+          },
+          {
+            "name": "吴海燕",
+            "province": "山东省",
+            "value": 1
+          },
+          {
+            "name": "侯志勇",
+            "province": "浙江省",
+            "value": 1
+          }
+        ],
+        "updates": [
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "山东泰山医学院附属医院 完成 B0 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "空军军医大学西京医院 完成 B0 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "西安国际医学中心 完成 B0 2 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "厦门弘爱医院 完成 B0 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "唐山市中心医院 完成 B0 2 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "空军军医大学西京医院 完成 B0 2 台"
+          }
+        ],
+        "monthlyTrend": [
+          {
+            "month": "2025-01",
+            "installed": 0
+          },
+          {
+            "month": "2025-02",
+            "installed": 0
+          },
+          {
+            "month": "2025-03",
+            "installed": 0
+          },
+          {
+            "month": "2025-04",
+            "installed": 0
+          },
+          {
+            "month": "2025-05",
+            "installed": 0
+          },
+          {
+            "month": "2025-06",
+            "installed": 0
+          },
+          {
+            "month": "2025-07",
+            "installed": 0
+          },
+          {
+            "month": "2025-08",
+            "installed": 0
+          },
+          {
+            "month": "2025-09",
+            "installed": 0
+          },
+          {
+            "month": "2025-10",
+            "installed": 0
+          },
+          {
+            "month": "2025-11",
+            "installed": 0
+          },
+          {
+            "month": "2025-12",
+            "installed": 1
+          }
+        ],
+        "yearlyTrend": [
+          {
+            "year": "2021",
+            "installed": 0
+          },
+          {
+            "year": "2022",
+            "installed": 0
+          },
+          {
+            "year": "2023",
+            "installed": 0
+          },
+          {
+            "year": "2024",
+            "installed": 0
+          },
+          {
+            "year": "2025",
+            "installed": 1
+          }
+        ],
+        "totalUnits": 18,
         "quarterUnits": 0,
-        "sourceRecords": []
+        "sourceRecords": [
+          {
+            "serialNo": "1180-0401-ROW005",
+            "productKey": "magnus1180",
+            "productModel": "B0",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "安徽省",
+            "installCity": "合肥",
+            "salesRegion": "",
+            "terminalUser": "安徽省立医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2017-12-31",
+            "installDate": "2017-12-31",
+            "warrantyExpireDate": "2019-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW045",
+            "productKey": "magnus1180",
+            "productModel": "B0",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "厦门",
+            "salesRegion": "",
+            "terminalUser": "厦门弘爱医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW115",
+            "productKey": "magnus1180",
+            "productModel": "B0",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "河北省",
+            "installCity": "唐山",
+            "salesRegion": "",
+            "terminalUser": "唐山市中心医院",
+            "channelName": "王静森",
+            "salesName": "王静森",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW116",
+            "productKey": "magnus1180",
+            "productModel": "B0",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河北省",
+            "installCity": "唐山",
+            "salesRegion": "",
+            "terminalUser": "唐山南湖",
+            "channelName": "王静森",
+            "salesName": "王静森",
+            "salesDate": "2017-12-31",
+            "installDate": "2017-12-31",
+            "warrantyExpireDate": "2019-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW139",
+            "productKey": "magnus1180",
+            "productModel": "B0",
+            "quantity": 3,
+            "configDescription": "",
+            "installProvince": "湖北省",
+            "installCity": "武汉",
+            "salesRegion": "",
+            "terminalUser": "华中科技大学同济医学院附属同济医院",
+            "channelName": "夏阳",
+            "salesName": "夏阳",
+            "salesDate": "2015-12-31",
+            "installDate": "2015-12-31",
+            "warrantyExpireDate": "2017-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW151",
+            "productKey": "magnus1180",
+            "productModel": "B0",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "吉林省",
+            "installCity": "长春",
+            "salesRegion": "",
+            "terminalUser": "吉林大学中日联谊医院（吉林大学第三医院）",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2017-12-31",
+            "installDate": "2017-12-31",
+            "warrantyExpireDate": "2019-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW221",
+            "productKey": "magnus1180",
+            "productModel": "B0",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "泰安",
+            "salesRegion": "",
+            "terminalUser": "山东泰山医学院附属医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW230",
+            "productKey": "magnus1180",
+            "productModel": "B0",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "陕西省",
+            "installCity": "西安",
+            "salesRegion": "",
+            "terminalUser": "空军军医大学西京医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW231",
+            "productKey": "magnus1180",
+            "productModel": "B0",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "陕西省",
+            "installCity": "西安",
+            "salesRegion": "",
+            "terminalUser": "西安国际医学中心",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW232",
+            "productKey": "magnus1180",
+            "productModel": "B0",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "陕西省",
+            "installCity": "西安",
+            "salesRegion": "",
+            "terminalUser": "空军军医大学西京医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW245",
+            "productKey": "magnus1180",
+            "productModel": "B0",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "复旦大学附属华山医院西院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW314",
+            "productKey": "magnus1180",
+            "productModel": "B0",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "杭州",
+            "salesRegion": "",
+            "terminalUser": "浙江大学医学院附属第二医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2016-12-31",
+            "installDate": "2016-12-31",
+            "warrantyExpireDate": "2018-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          }
+        ]
       },
       "b1": {
         "title": "1180 Magnus OR Table 装机看板",
@@ -114,15 +7108,2428 @@ let dashboards = {
         ],
         "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
         "productLineOptions": [],
-        "provinceData": [],
-        "users": [],
-        "partners": [],
-        "updates": [],
-        "monthlyTrend": [],
-        "yearlyTrend": [],
-        "totalUnits": 0,
+        "provinceData": [
+          {
+            "name": "浙江省",
+            "value": 16,
+            "latestSite": "台州市第一人民医院",
+            "latestDate": "2025-12-31",
+            "coord": [
+              120.15,
+              30.28
+            ]
+          },
+          {
+            "name": "广东省",
+            "value": 13,
+            "latestSite": "广东省江门市中心医院",
+            "latestDate": "2024-12-31",
+            "coord": [
+              113.27,
+              23.13
+            ]
+          },
+          {
+            "name": "山东省",
+            "value": 13,
+            "latestSite": "菏泽市立医院",
+            "latestDate": "2025-12-31",
+            "coord": [
+              117,
+              36.65
+            ]
+          },
+          {
+            "name": "江苏省",
+            "value": 10,
+            "latestSite": "南京市鼓楼医院",
+            "latestDate": "2025-12-31",
+            "coord": [
+              118.76,
+              32.06
+            ]
+          },
+          {
+            "name": "四川省",
+            "value": 10,
+            "latestSite": "川北医学院附属医院",
+            "latestDate": "2023-12-31",
+            "coord": [
+              104.06,
+              30.67
+            ]
+          },
+          {
+            "name": "北京市",
+            "value": 8,
+            "latestSite": "北京市昌平区中西医结合医院",
+            "latestDate": "2020-12-31",
+            "coord": [
+              116.41,
+              39.9
+            ]
+          },
+          {
+            "name": "福建省",
+            "value": 7,
+            "latestSite": "厦门大学附属心血管病医院",
+            "latestDate": "2023-12-31",
+            "coord": [
+              119.3,
+              26.08
+            ]
+          },
+          {
+            "name": "湖北省",
+            "value": 7,
+            "latestSite": "华中科技大学同济医学院附属同济医院",
+            "latestDate": "2025-12-31",
+            "coord": [
+              114.3,
+              30.59
+            ]
+          },
+          {
+            "name": "上海市",
+            "value": 6,
+            "latestSite": "上海交通大学医学院附属瑞金医院",
+            "latestDate": "2024-12-31",
+            "coord": [
+              121.47,
+              31.23
+            ]
+          },
+          {
+            "name": "河南省",
+            "value": 4,
+            "latestSite": "郑州市第七人民医院滨河院区",
+            "latestDate": "2025-12-31",
+            "coord": [
+              113.62,
+              34.75
+            ]
+          },
+          {
+            "name": "安徽省",
+            "value": 3,
+            "latestSite": "淮南市东方医院集团总院",
+            "latestDate": "2023-12-31",
+            "coord": [
+              117.28,
+              31.86
+            ]
+          },
+          {
+            "name": "甘肃省",
+            "value": 3,
+            "latestSite": "兰州大学第一医院",
+            "latestDate": "2021-12-31",
+            "coord": [
+              103.82,
+              36.06
+            ]
+          },
+          {
+            "name": "海南省",
+            "value": 3,
+            "latestSite": "海南省人民医院",
+            "latestDate": "2025-12-31",
+            "coord": [
+              110.35,
+              20.02
+            ]
+          },
+          {
+            "name": "陕西省",
+            "value": 3,
+            "latestSite": "陕西省人民医院",
+            "latestDate": "2023-12-31",
+            "coord": [
+              108.94,
+              34.34
+            ]
+          },
+          {
+            "name": "天津市",
+            "value": 3,
+            "latestSite": "天津医科大学第二医院",
+            "latestDate": "2023-12-31",
+            "coord": [
+              117.2,
+              39.12
+            ]
+          },
+          {
+            "name": "吉林省",
+            "value": 2,
+            "latestSite": "吉林省长春市肿瘤医院",
+            "latestDate": "2019-12-31",
+            "coord": [
+              125.32,
+              43.9
+            ]
+          },
+          {
+            "name": "宁夏回族自治区",
+            "value": 2,
+            "latestSite": "宁夏医科大学总医院心脑血管病医院",
+            "latestDate": "2023-12-31",
+            "coord": [
+              106.27,
+              38.47
+            ]
+          },
+          {
+            "name": "广西壮族自治区",
+            "value": 1,
+            "latestSite": "前海人寿南宁医院",
+            "latestDate": "2021-12-31",
+            "coord": [
+              108.32,
+              22.82
+            ]
+          },
+          {
+            "name": "黑龙江省",
+            "value": 1,
+            "latestSite": "哈尔滨医科大学附属第一医院",
+            "latestDate": "2021-12-31",
+            "coord": [
+              126.63,
+              45.75
+            ]
+          },
+          {
+            "name": "山西省",
+            "value": 1,
+            "latestSite": "吕梁市人民医院",
+            "latestDate": "2022-12-31",
+            "coord": [
+              112.53,
+              37.87
+            ]
+          },
+          {
+            "name": "新疆维吾尔自治区",
+            "value": 1,
+            "latestSite": "新疆心脑血管病医院",
+            "latestDate": "2021-12-31",
+            "coord": [
+              87.62,
+              43.82
+            ]
+          },
+          {
+            "name": "云南省",
+            "value": 1,
+            "latestSite": "蒙自市人民医院",
+            "latestDate": "2022-12-31",
+            "coord": [
+              102.71,
+              25.04
+            ]
+          },
+          {
+            "name": "重庆市",
+            "value": 1,
+            "latestSite": "重庆市人民医院",
+            "latestDate": "2020-12-31",
+            "coord": [
+              106.55,
+              29.56
+            ]
+          }
+        ],
+        "users": [
+          {
+            "name": "中国人民解放军北京军区总医院",
+            "province": "北京市",
+            "value": 3
+          },
+          {
+            "name": "福建医科大学附属协和医院",
+            "province": "福建省",
+            "value": 2
+          },
+          {
+            "name": "兰州大学第一医院",
+            "province": "甘肃省",
+            "value": 2
+          },
+          {
+            "name": "中山大学附属第三医院",
+            "province": "广东省",
+            "value": 2
+          },
+          {
+            "name": "深圳市萨米国际医疗中心",
+            "province": "广东省",
+            "value": 2
+          },
+          {
+            "name": "海南省人民医院",
+            "province": "海南省",
+            "value": 2
+          },
+          {
+            "name": "郑州大学第一附属医院",
+            "province": "河南省",
+            "value": 2
+          },
+          {
+            "name": "武汉大学中南医院",
+            "province": "湖北省",
+            "value": 2
+          }
+        ],
+        "partners": [
+          {
+            "name": "尹武军",
+            "province": "广东省",
+            "value": 17
+          },
+          {
+            "name": "侯志勇",
+            "province": "浙江省",
+            "value": 16
+          },
+          {
+            "name": "吴海燕",
+            "province": "山东省",
+            "value": 13
+          },
+          {
+            "name": "纪震夜",
+            "province": "北京市",
+            "value": 11
+          },
+          {
+            "name": "蒲东方",
+            "province": "四川省",
+            "value": 11
+          },
+          {
+            "name": "徐璐璐",
+            "province": "江苏省",
+            "value": 10
+          },
+          {
+            "name": "刘燕",
+            "province": "安徽省",
+            "value": 9
+          },
+          {
+            "name": "袁英才",
+            "province": "甘肃省",
+            "value": 9
+          }
+        ],
+        "updates": [
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "海南省人民医院 完成 B1 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "郑州市第七人民医院滨河院区 完成 B1 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "华中科技大学同济医学院附属同济医院 完成 B1 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "苏州市独墅湖医院 完成 B1 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "江南大学附属医院 完成 B1 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "南京市鼓楼医院 完成 B1 1 台"
+          }
+        ],
+        "monthlyTrend": [
+          {
+            "month": "2025-01",
+            "installed": 0
+          },
+          {
+            "month": "2025-02",
+            "installed": 0
+          },
+          {
+            "month": "2025-03",
+            "installed": 0
+          },
+          {
+            "month": "2025-04",
+            "installed": 0
+          },
+          {
+            "month": "2025-05",
+            "installed": 0
+          },
+          {
+            "month": "2025-06",
+            "installed": 0
+          },
+          {
+            "month": "2025-07",
+            "installed": 0
+          },
+          {
+            "month": "2025-08",
+            "installed": 0
+          },
+          {
+            "month": "2025-09",
+            "installed": 0
+          },
+          {
+            "month": "2025-10",
+            "installed": 0
+          },
+          {
+            "month": "2025-11",
+            "installed": 0
+          },
+          {
+            "month": "2025-12",
+            "installed": 9
+          }
+        ],
+        "yearlyTrend": [
+          {
+            "year": "2021",
+            "installed": 19
+          },
+          {
+            "year": "2022",
+            "installed": 14
+          },
+          {
+            "year": "2023",
+            "installed": 17
+          },
+          {
+            "year": "2024",
+            "installed": 13
+          },
+          {
+            "year": "2025",
+            "installed": 9
+          }
+        ],
+        "totalUnits": 119,
         "quarterUnits": 0,
-        "sourceRecords": []
+        "sourceRecords": [
+          {
+            "serialNo": "1180-0401-ROW006",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "安徽省",
+            "installCity": "合肥",
+            "salesRegion": "",
+            "terminalUser": "合肥京东方医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW007",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "安徽省",
+            "installCity": "合肥",
+            "salesRegion": "",
+            "terminalUser": "安徽省胸科医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW008",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "安徽省",
+            "installCity": "淮南",
+            "salesRegion": "",
+            "terminalUser": "淮南市东方医院集团总院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW010",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "首都医科大学附属北京天坛医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2015-12-31",
+            "installDate": "2015-12-31",
+            "warrantyExpireDate": "2017-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW013",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "北京同仁医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW019",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "北京中日友好医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2014-12-31",
+            "installDate": "2014-12-31",
+            "warrantyExpireDate": "2016-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW022",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "首都医科大学附属北京潞河医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW023",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 3,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "中国人民解放军北京军区总医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2016-12-31",
+            "installDate": "2016-12-31",
+            "warrantyExpireDate": "2018-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW024",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "北京市昌平区中西医结合医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW038",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "福州",
+            "salesRegion": "",
+            "terminalUser": "福建省立医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2013-12-31",
+            "installDate": "2013-12-31",
+            "warrantyExpireDate": "2015-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW040",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "福州",
+            "salesRegion": "",
+            "terminalUser": "福建省儿童医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW042",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "福州",
+            "salesRegion": "",
+            "terminalUser": "福建省妇幼保健院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW043",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "福州",
+            "salesRegion": "",
+            "terminalUser": "福建医科大学附属协和医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW044",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "厦门",
+            "salesRegion": "",
+            "terminalUser": "厦门弘爱医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW056",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "厦门",
+            "salesRegion": "",
+            "terminalUser": "厦门大学附属心血管病医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW058",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "甘肃省",
+            "installCity": "兰州",
+            "salesRegion": "",
+            "terminalUser": "兰州大学第二医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW059",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "甘肃省",
+            "installCity": "兰州",
+            "salesRegion": "",
+            "terminalUser": "兰州大学第一医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW060",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "甘肃省",
+            "installCity": "兰州",
+            "salesRegion": "",
+            "terminalUser": "兰州大学第一医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW064",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "广州",
+            "salesRegion": "",
+            "terminalUser": "广州和睦家医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW068",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
+            "terminalUser": "深圳市儿童医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW069",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
+            "terminalUser": "深圳市孙逸仙心血管医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW071",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "广州",
+            "salesRegion": "",
+            "terminalUser": "中山大学附属第三医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2014-12-31",
+            "installDate": "2014-12-31",
+            "warrantyExpireDate": "2016-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW075",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
+            "terminalUser": "深圳市人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW076",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
+            "terminalUser": "深圳市萨米国际医疗中心",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW084",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "广州",
+            "salesRegion": "",
+            "terminalUser": "前海人寿（广州）",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW088",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "广州",
+            "salesRegion": "",
+            "terminalUser": "广东省人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW089",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
+            "terminalUser": "深圳市南山区蛇口人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW092",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "广州",
+            "salesRegion": "",
+            "terminalUser": "南方医科大学南方医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW097",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "江门",
+            "salesRegion": "",
+            "terminalUser": "广东省江门市中心医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW104",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广西壮族自治区",
+            "installCity": "南宁",
+            "salesRegion": "",
+            "terminalUser": "前海人寿南宁医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW109",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "海南省",
+            "installCity": "东方",
+            "salesRegion": "",
+            "terminalUser": "东方市东方医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW113",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "海南省",
+            "installCity": "海口",
+            "salesRegion": "",
+            "terminalUser": "海南省人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW114",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "海南省",
+            "installCity": "海口",
+            "salesRegion": "",
+            "terminalUser": "海南省人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW128",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河南省",
+            "installCity": "郑州",
+            "salesRegion": "",
+            "terminalUser": "郑州市儿童医院",
+            "channelName": "贾凯华",
+            "salesName": "贾凯华",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW129",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河南省",
+            "installCity": "郑州",
+            "salesRegion": "",
+            "terminalUser": "郑州大学第一附属医院",
+            "channelName": "贾凯华",
+            "salesName": "贾凯华",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW130",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河南省",
+            "installCity": "郑州",
+            "salesRegion": "",
+            "terminalUser": "郑州大学第一附属医院",
+            "channelName": "贾凯华",
+            "salesName": "贾凯华",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW132",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河南省",
+            "installCity": "郑州",
+            "salesRegion": "",
+            "terminalUser": "郑州市第七人民医院滨河院区",
+            "channelName": "贾凯华",
+            "salesName": "贾凯华",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW134",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "黑龙江省",
+            "installCity": "哈尔滨",
+            "salesRegion": "",
+            "terminalUser": "哈尔滨医科大学附属第一医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW137",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "湖北省",
+            "installCity": "武汉",
+            "salesRegion": "",
+            "terminalUser": "武汉大学中南医院",
+            "channelName": "夏阳",
+            "salesName": "夏阳",
+            "salesDate": "2017-12-31",
+            "installDate": "2017-12-31",
+            "warrantyExpireDate": "2019-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW138",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "湖北省",
+            "installCity": "武汉",
+            "salesRegion": "",
+            "terminalUser": "武汉大学中南医院",
+            "channelName": "夏阳",
+            "salesName": "夏阳",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW141",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "湖北省",
+            "installCity": "武汉",
+            "salesRegion": "",
+            "terminalUser": "湖北省人民医院（武汉大学人民医院）",
+            "channelName": "夏阳",
+            "salesName": "夏阳",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW142",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "湖北省",
+            "installCity": "武汉",
+            "salesRegion": "",
+            "terminalUser": "武汉亚洲心脏病医院",
+            "channelName": "夏阳",
+            "salesName": "夏阳",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW143",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "湖北省",
+            "installCity": "武汉",
+            "salesRegion": "",
+            "terminalUser": "武汉亚洲心脏病医院（装机于新疆）",
+            "channelName": "夏阳",
+            "salesName": "夏阳",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW145",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "湖北省",
+            "installCity": "荆门",
+            "salesRegion": "",
+            "terminalUser": "荆门市第一人民医院",
+            "channelName": "夏阳",
+            "salesName": "夏阳",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW148",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "湖北省",
+            "installCity": "武汉",
+            "salesRegion": "",
+            "terminalUser": "华中科技大学同济医学院附属同济医院",
+            "channelName": "夏阳",
+            "salesName": "夏阳",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW150",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "吉林省",
+            "installCity": "长春",
+            "salesRegion": "",
+            "terminalUser": "吉林大学中日联谊医院（吉林大学第三医院）",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2017-12-31",
+            "installDate": "2017-12-31",
+            "warrantyExpireDate": "2019-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW152",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "吉林省",
+            "installCity": "长春",
+            "salesRegion": "",
+            "terminalUser": "吉林省长春市肿瘤医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW155",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "南京",
+            "salesRegion": "",
+            "terminalUser": "南京大学医学院附属鼓楼医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW157",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "苏州",
+            "salesRegion": "",
+            "terminalUser": "苏州大学附属第一医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2015-12-31",
+            "installDate": "2015-12-31",
+            "warrantyExpireDate": "2017-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW159",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "南京",
+            "salesRegion": "",
+            "terminalUser": "南京市第一医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW162",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "南京",
+            "salesRegion": "",
+            "terminalUser": "南京医科大学第二附属医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW163",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "南京",
+            "salesRegion": "",
+            "terminalUser": "南京医科大学第四附属医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW170",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "宿迁",
+            "salesRegion": "",
+            "terminalUser": "沭阳县中医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW171",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "南京",
+            "salesRegion": "",
+            "terminalUser": "南京鼓楼医院溧水分院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW176",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "苏州",
+            "salesRegion": "",
+            "terminalUser": "苏州市独墅湖医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW177",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "无锡",
+            "salesRegion": "",
+            "terminalUser": "江南大学附属医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW178",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "南京",
+            "salesRegion": "",
+            "terminalUser": "南京市鼓楼医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW188",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "滨州",
+            "salesRegion": "",
+            "terminalUser": "滨州医学院附属医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW190",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "泰安",
+            "salesRegion": "",
+            "terminalUser": "中国人民解放军第88医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2014-12-31",
+            "installDate": "2014-12-31",
+            "warrantyExpireDate": "2016-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW193",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "青岛",
+            "salesRegion": "",
+            "terminalUser": "青岛大学医学院附属医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW201",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "济南",
+            "salesRegion": "",
+            "terminalUser": "山东省立医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW203",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "菏泽",
+            "salesRegion": "",
+            "terminalUser": "成武县人民医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW206",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "青岛",
+            "salesRegion": "",
+            "terminalUser": "同济大学附属东方医院胶州医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW208",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "德州",
+            "salesRegion": "",
+            "terminalUser": "齐河县人民医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW210",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "威海",
+            "salesRegion": "",
+            "terminalUser": "威海市立医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW214",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "青岛",
+            "salesRegion": "",
+            "terminalUser": "山东大学齐鲁医院青岛院区",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW217",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "济宁",
+            "salesRegion": "",
+            "terminalUser": "济宁市第一人民医院西院区（济宁市中医院新院区）",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW218",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "济南",
+            "salesRegion": "",
+            "terminalUser": "济南市第五人民医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW220",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "菏泽",
+            "salesRegion": "",
+            "terminalUser": "菏泽市立医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW227",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山西省",
+            "installCity": "吕梁",
+            "salesRegion": "",
+            "terminalUser": "吕梁市人民医院",
+            "channelName": "贾凯华",
+            "salesName": "贾凯华",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW237",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "陕西省",
+            "installCity": "延安",
+            "salesRegion": "",
+            "terminalUser": "延安大学附属医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW240",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "陕西省",
+            "installCity": "西安",
+            "salesRegion": "",
+            "terminalUser": "西安市第三医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW241",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "陕西省",
+            "installCity": "西安",
+            "salesRegion": "",
+            "terminalUser": "陕西省人民医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW242",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "宁夏回族自治区",
+            "installCity": "银川",
+            "salesRegion": "",
+            "terminalUser": "宁夏回族自治区人民医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW243",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "宁夏回族自治区",
+            "installCity": "银川",
+            "salesRegion": "",
+            "terminalUser": "宁夏医科大学总医院心脑血管病医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW249",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海蓝十字脑科医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2015-12-31",
+            "installDate": "2015-12-31",
+            "warrantyExpireDate": "2017-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW250",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海市第四人民医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW252",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海市浦东医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2012-12-31",
+            "installDate": "2012-12-31",
+            "warrantyExpireDate": "2014-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW268",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海市养志康复医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW277",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海市徐汇区中心医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW278",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海交通大学医学院附属瑞金医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW282",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "广元",
+            "salesRegion": "",
+            "terminalUser": "广元市中心医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW283",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "广元",
+            "salesRegion": "",
+            "terminalUser": "广元市第一人民医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW284",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "泸州",
+            "salesRegion": "",
+            "terminalUser": "西南医科大学附属医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW285",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "德阳",
+            "salesRegion": "",
+            "terminalUser": "德阳市人民医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW287",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
+            "terminalUser": "成都京东方医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW288",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "西昌",
+            "salesRegion": "",
+            "terminalUser": "西昌市人民医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW292",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
+            "terminalUser": "成都万达国际医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW293",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
+            "terminalUser": "四川蓝生脑科医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW295",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "南充",
+            "salesRegion": "",
+            "terminalUser": "川北医学院附属医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW298",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "天津市",
+            "installCity": "天津",
+            "salesRegion": "",
+            "terminalUser": "天津市胸科医院",
+            "channelName": "王静森",
+            "salesName": "王静森",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW299",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "天津市",
+            "installCity": "天津",
+            "salesRegion": "",
+            "terminalUser": "天津市胸科医院",
+            "channelName": "王静森",
+            "salesName": "王静森",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW301",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "天津市",
+            "installCity": "天津",
+            "salesRegion": "",
+            "terminalUser": "天津医科大学第二医院",
+            "channelName": "王静森",
+            "salesName": "王静森",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW304",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "新疆维吾尔自治区",
+            "installCity": "乌鲁木齐",
+            "salesRegion": "",
+            "terminalUser": "新疆心脑血管病医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW309",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "云南省",
+            "installCity": "蒙自",
+            "salesRegion": "",
+            "terminalUser": "蒙自市人民医院",
+            "channelName": "李刚",
+            "salesName": "李刚",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW312",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "金华",
+            "salesRegion": "",
+            "terminalUser": "金华市人民医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW313",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "杭州",
+            "salesRegion": "",
+            "terminalUser": "浙江大学医学院附属第二医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2016-12-31",
+            "installDate": "2016-12-31",
+            "warrantyExpireDate": "2018-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW317",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "湖州",
+            "salesRegion": "",
+            "terminalUser": "湖州市中心医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW318",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "温州",
+            "salesRegion": "",
+            "terminalUser": "温州医科大学附属第二医院龙湾院区",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW324",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "杭州",
+            "salesRegion": "",
+            "terminalUser": "富阳区第一人民医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW325",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "宁波",
+            "salesRegion": "",
+            "terminalUser": "宁波市医疗中心李惠利医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW326",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "台州",
+            "salesRegion": "",
+            "terminalUser": "台州市立医院新院区",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW328",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "瑞安",
+            "salesRegion": "",
+            "terminalUser": "瑞安市人民医院（瑞祥院区）",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW330",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "温州",
+            "salesRegion": "",
+            "terminalUser": "温州市中心医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW331",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "台州",
+            "salesRegion": "",
+            "terminalUser": "台州市中心医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW332",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "建德",
+            "salesRegion": "",
+            "terminalUser": "建德市第一人民医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW333",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "杭州",
+            "salesRegion": "",
+            "terminalUser": "杭州市富阳中医骨伤医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW334",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "宁波",
+            "salesRegion": "",
+            "terminalUser": "北仑区人民医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW335",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "温州",
+            "salesRegion": "",
+            "terminalUser": "温州市人民医院娄桥院区",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW336",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "台州",
+            "salesRegion": "",
+            "terminalUser": "台州市第一人民医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW337",
+            "productKey": "magnus1180",
+            "productModel": "B1",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "重庆市",
+            "installCity": "重庆",
+            "salesRegion": "",
+            "terminalUser": "重庆市人民医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          }
+        ]
       },
       "b2": {
         "title": "1180 Magnus OR Table 装机看板",
@@ -144,15 +9551,2550 @@ let dashboards = {
         ],
         "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
         "productLineOptions": [],
-        "provinceData": [],
-        "users": [],
-        "partners": [],
-        "updates": [],
-        "monthlyTrend": [],
-        "yearlyTrend": [],
-        "totalUnits": 0,
+        "provinceData": [
+          {
+            "name": "上海市",
+            "value": 30,
+            "latestSite": "上海交通大学医学院附属新华医院奉贤院区",
+            "latestDate": "2025-12-31",
+            "coord": [
+              121.47,
+              31.23
+            ]
+          },
+          {
+            "name": "山东省",
+            "value": 20,
+            "latestSite": "青岛大学附属医院（东院）",
+            "latestDate": "2023-12-31",
+            "coord": [
+              117,
+              36.65
+            ]
+          },
+          {
+            "name": "广东省",
+            "value": 18,
+            "latestSite": "珠海市中西医结合医院",
+            "latestDate": "2025-12-31",
+            "coord": [
+              113.27,
+              23.13
+            ]
+          },
+          {
+            "name": "福建省",
+            "value": 12,
+            "latestSite": "晋江市医院",
+            "latestDate": "2025-12-31",
+            "coord": [
+              119.3,
+              26.08
+            ]
+          },
+          {
+            "name": "江苏省",
+            "value": 12,
+            "latestSite": "太仓市第一人民医院",
+            "latestDate": "2025-12-31",
+            "coord": [
+              118.76,
+              32.06
+            ]
+          },
+          {
+            "name": "北京市",
+            "value": 11,
+            "latestSite": "北京清华长庚医院",
+            "latestDate": "2025-12-31",
+            "coord": [
+              116.41,
+              39.9
+            ]
+          },
+          {
+            "name": "浙江省",
+            "value": 9,
+            "latestSite": "浙江省嘉善县第一人民医院",
+            "latestDate": "2024-12-31",
+            "coord": [
+              120.15,
+              30.28
+            ]
+          },
+          {
+            "name": "江西省",
+            "value": 7,
+            "latestSite": "江西省人民医院",
+            "latestDate": "2025-12-31",
+            "coord": [
+              115.86,
+              28.68
+            ]
+          },
+          {
+            "name": "河北省",
+            "value": 5,
+            "latestSite": "河北医科大学第一附属医院",
+            "latestDate": "2024-12-31",
+            "coord": [
+              114.48,
+              38.03
+            ]
+          },
+          {
+            "name": "重庆市",
+            "value": 5,
+            "latestSite": "陆军军医大学第一附属医院",
+            "latestDate": "2024-12-31",
+            "coord": [
+              106.55,
+              29.56
+            ]
+          },
+          {
+            "name": "湖北省",
+            "value": 4,
+            "latestSite": "华中科技大学同济医学院附属同济医院",
+            "latestDate": "2023-12-31",
+            "coord": [
+              114.3,
+              30.59
+            ]
+          },
+          {
+            "name": "山西省",
+            "value": 3,
+            "latestSite": "山西省肿瘤医院",
+            "latestDate": "2024-12-31",
+            "coord": [
+              112.53,
+              37.87
+            ]
+          },
+          {
+            "name": "四川省",
+            "value": 3,
+            "latestSite": "四川省肿瘤医院",
+            "latestDate": "2025-12-31",
+            "coord": [
+              104.06,
+              30.67
+            ]
+          },
+          {
+            "name": "甘肃省",
+            "value": 2,
+            "latestSite": "甘肃省中医院",
+            "latestDate": "2023-12-31",
+            "coord": [
+              103.82,
+              36.06
+            ]
+          },
+          {
+            "name": "海南省",
+            "value": 2,
+            "latestSite": "三亚中心医院",
+            "latestDate": "2022-12-31",
+            "coord": [
+              110.35,
+              20.02
+            ]
+          },
+          {
+            "name": "河南省",
+            "value": 2,
+            "latestSite": "信阳市中心医院羊山分院",
+            "latestDate": "2024-12-31",
+            "coord": [
+              113.62,
+              34.75
+            ]
+          },
+          {
+            "name": "吉林省",
+            "value": 1,
+            "latestSite": "吉林省延边大学医院",
+            "latestDate": "2025-12-31",
+            "coord": [
+              125.32,
+              43.9
+            ]
+          },
+          {
+            "name": "宁夏回族自治区",
+            "value": 1,
+            "latestSite": "宁夏回族自治区人民医院",
+            "latestDate": "2023-12-31",
+            "coord": [
+              106.27,
+              38.47
+            ]
+          },
+          {
+            "name": "天津市",
+            "value": 1,
+            "latestSite": "天津康汇医院",
+            "latestDate": "2023-12-31",
+            "coord": [
+              117.2,
+              39.12
+            ]
+          }
+        ],
+        "users": [
+          {
+            "name": "福建医科大学附属第一医院",
+            "province": "福建省",
+            "value": 4
+          },
+          {
+            "name": "上海市第六人民医院",
+            "province": "上海市",
+            "value": 4
+          },
+          {
+            "name": "华中科技大学协和深圳医院",
+            "province": "广东省",
+            "value": 3
+          },
+          {
+            "name": "首都医科大学附属北京天坛医院",
+            "province": "北京市",
+            "value": 2
+          },
+          {
+            "name": "北京世纪坛医院",
+            "province": "北京市",
+            "value": 2
+          },
+          {
+            "name": "漳州市立医院",
+            "province": "福建省",
+            "value": 2
+          },
+          {
+            "name": "甘肃省中医院",
+            "province": "甘肃省",
+            "value": 2
+          },
+          {
+            "name": "清远市人民医院",
+            "province": "广东省",
+            "value": 2
+          }
+        ],
+        "partners": [
+          {
+            "name": "刘燕",
+            "province": "上海市",
+            "value": 30
+          },
+          {
+            "name": "尹武军",
+            "province": "广东省",
+            "value": 20
+          },
+          {
+            "name": "吴海燕",
+            "province": "山东省",
+            "value": 20
+          },
+          {
+            "name": "欧兆辉",
+            "province": "福建省",
+            "value": 19
+          },
+          {
+            "name": "纪震夜",
+            "province": "北京市",
+            "value": 12
+          },
+          {
+            "name": "徐璐璐",
+            "province": "江苏省",
+            "value": 12
+          },
+          {
+            "name": "侯志勇",
+            "province": "浙江省",
+            "value": 9
+          },
+          {
+            "name": "蒲东方",
+            "province": "四川省",
+            "value": 8
+          }
+        ],
+        "updates": [
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "北京大学第三医院 完成 B2 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "北京大学第三医院秦皇岛院区 完成 B2 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "北京清华长庚医院 完成 B2 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "晋江市医院 完成 B2 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "珠海市中西医结合医院 完成 B2 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "吉林省延边大学医院 完成 B2 1 台"
+          }
+        ],
+        "monthlyTrend": [
+          {
+            "month": "2025-01",
+            "installed": 0
+          },
+          {
+            "month": "2025-02",
+            "installed": 0
+          },
+          {
+            "month": "2025-03",
+            "installed": 0
+          },
+          {
+            "month": "2025-04",
+            "installed": 0
+          },
+          {
+            "month": "2025-05",
+            "installed": 0
+          },
+          {
+            "month": "2025-06",
+            "installed": 0
+          },
+          {
+            "month": "2025-07",
+            "installed": 0
+          },
+          {
+            "month": "2025-08",
+            "installed": 0
+          },
+          {
+            "month": "2025-09",
+            "installed": 0
+          },
+          {
+            "month": "2025-10",
+            "installed": 0
+          },
+          {
+            "month": "2025-11",
+            "installed": 0
+          },
+          {
+            "month": "2025-12",
+            "installed": 12
+          }
+        ],
+        "yearlyTrend": [
+          {
+            "year": "2021",
+            "installed": 18
+          },
+          {
+            "year": "2022",
+            "installed": 17
+          },
+          {
+            "year": "2023",
+            "installed": 25
+          },
+          {
+            "year": "2024",
+            "installed": 27
+          },
+          {
+            "year": "2025",
+            "installed": 12
+          }
+        ],
+        "totalUnits": 148,
         "quarterUnits": 0,
-        "sourceRecords": []
+        "sourceRecords": [
+          {
+            "serialNo": "1180-0401-ROW011",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "首都医科大学附属北京天坛医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2015-12-31",
+            "installDate": "2015-12-31",
+            "warrantyExpireDate": "2017-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW012",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "首都医科大学附属北京天坛医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2015-12-31",
+            "installDate": "2015-12-31",
+            "warrantyExpireDate": "2017-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW014",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "北京市垂杨柳医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW026",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "北京世纪坛医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW029",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "北京朝阳医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW032",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "北京积水潭医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW033",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "首都医科大学北京地坛医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW035",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "北京大学第三医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW036",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "北京大学第三医院秦皇岛院区",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW037",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "北京清华长庚医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW041",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "福州",
+            "salesRegion": "",
+            "terminalUser": "福建省儿童医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW046",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "漳州",
+            "salesRegion": "",
+            "terminalUser": "漳州市医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2016-12-31",
+            "installDate": "2016-12-31",
+            "warrantyExpireDate": "2018-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW048",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "福州",
+            "salesRegion": "",
+            "terminalUser": "福建医科大学附属第一医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW049",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "福州",
+            "salesRegion": "",
+            "terminalUser": "福建医科大学附属第一医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW050",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "福州",
+            "salesRegion": "",
+            "terminalUser": "福建医科大学附属第一医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW051",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "福州",
+            "salesRegion": "",
+            "terminalUser": "福建医科大学附属第一医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW052",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "厦门",
+            "salesRegion": "",
+            "terminalUser": "厦门中医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW053",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "泉州",
+            "salesRegion": "",
+            "terminalUser": "安溪县医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW054",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "漳州",
+            "salesRegion": "",
+            "terminalUser": "漳州市立医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW055",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "泉州",
+            "salesRegion": "",
+            "terminalUser": "南安市医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW057",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "福建省",
+            "installCity": "晋江",
+            "salesRegion": "",
+            "terminalUser": "晋江市医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW061",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "甘肃省",
+            "installCity": "兰州",
+            "salesRegion": "",
+            "terminalUser": "甘肃省中医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW065",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
+            "terminalUser": "深圳市南山区人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2015-12-31",
+            "installDate": "2015-12-31",
+            "warrantyExpireDate": "2017-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW074",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "珠海",
+            "salesRegion": "",
+            "terminalUser": "珠海市人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2016-12-31",
+            "installDate": "2016-12-31",
+            "warrantyExpireDate": "2018-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW077",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
+            "terminalUser": "深圳二院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW078",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "清远",
+            "salesRegion": "",
+            "terminalUser": "清远市人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW079",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "清远",
+            "salesRegion": "",
+            "terminalUser": "清远市人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW080",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "广州",
+            "salesRegion": "",
+            "terminalUser": "中山大学孙逸仙纪念医院（中山大学附属第二医院）",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW081",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "珠海",
+            "salesRegion": "",
+            "terminalUser": "中山大学附属第五医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW087",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "高州",
+            "salesRegion": "",
+            "terminalUser": "广东省高州市人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW093",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
+            "terminalUser": "华中科技大学协和深圳医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW094",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
+            "terminalUser": "华中科技大学协和深圳医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW095",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
+            "terminalUser": "华中科技大学协和深圳医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW096",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
+            "terminalUser": "深圳前海泰康国际医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW098",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "广州",
+            "salesRegion": "",
+            "terminalUser": "中山大学附属第一医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW099",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "东莞",
+            "salesRegion": "",
+            "terminalUser": "东莞市人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW100",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "佛山",
+            "salesRegion": "",
+            "terminalUser": "佛山市南海区人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW101",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
+            "terminalUser": "深圳市第二人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW102",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "珠海",
+            "salesRegion": "",
+            "terminalUser": "珠海市中西医结合医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW108",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "海南省",
+            "installCity": "海口",
+            "salesRegion": "",
+            "terminalUser": "海南省人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW110",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "海南省",
+            "installCity": "三亚",
+            "salesRegion": "",
+            "terminalUser": "三亚中心医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW117",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "河北省",
+            "installCity": "张家口",
+            "salesRegion": "",
+            "terminalUser": "崇礼区人民医院（北医三院）",
+            "channelName": "王静森",
+            "salesName": "王静森",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW118",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河北省",
+            "installCity": "张家口",
+            "salesRegion": "",
+            "terminalUser": "河北北方学院第一附属医院",
+            "channelName": "王静森",
+            "salesName": "王静森",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW123",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河北省",
+            "installCity": "石家庄",
+            "salesRegion": "",
+            "terminalUser": "河北医科大学第一附属医院",
+            "channelName": "王静森",
+            "salesName": "王静森",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW124",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河北省",
+            "installCity": "石家庄",
+            "salesRegion": "",
+            "terminalUser": "河北医科大学第一附属医院",
+            "channelName": "王静森",
+            "salesName": "王静森",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW126",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河南省",
+            "installCity": "郑州",
+            "salesRegion": "",
+            "terminalUser": "河南省人民医院",
+            "channelName": "贾凯华",
+            "salesName": "贾凯华",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW131",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河南省",
+            "installCity": "信阳",
+            "salesRegion": "",
+            "terminalUser": "信阳市中心医院羊山分院",
+            "channelName": "贾凯华",
+            "salesName": "贾凯华",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW136",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "湖北省",
+            "installCity": "荆州",
+            "salesRegion": "",
+            "terminalUser": "荆州市中心医院",
+            "channelName": "夏阳",
+            "salesName": "夏阳",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW140",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "湖北省",
+            "installCity": "武汉",
+            "salesRegion": "",
+            "terminalUser": "华中科技大学同济医学院附属协和医院",
+            "channelName": "夏阳",
+            "salesName": "夏阳",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW146",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "湖北省",
+            "installCity": "武汉",
+            "salesRegion": "",
+            "terminalUser": "华中科技大学同济医学院附属同济医院",
+            "channelName": "夏阳",
+            "salesName": "夏阳",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW153",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "吉林省",
+            "installCity": "长春",
+            "salesRegion": "",
+            "terminalUser": "吉林省延边大学医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW161",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "苏州",
+            "salesRegion": "",
+            "terminalUser": "苏州市独墅湖医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW165",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "昆山",
+            "salesRegion": "",
+            "terminalUser": "昆山西部医疗中心",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW167",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "昆山",
+            "salesRegion": "",
+            "terminalUser": "昆山东部医疗中心",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW169",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "常州",
+            "salesRegion": "",
+            "terminalUser": "常州市第二人民医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW172",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "无锡",
+            "salesRegion": "",
+            "terminalUser": "无锡市人民医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW173",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "苏州",
+            "salesRegion": "",
+            "terminalUser": "苏州市立医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW174",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "苏州",
+            "salesRegion": "",
+            "terminalUser": "苏州大学附属第一医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW175",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "太仓",
+            "salesRegion": "",
+            "terminalUser": "太仓市第一人民医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW179",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "江西省",
+            "installCity": "南昌",
+            "salesRegion": "",
+            "terminalUser": "南昌大学第一附属医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW182",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江西省",
+            "installCity": "萍乡",
+            "salesRegion": "",
+            "terminalUser": "萍乡市人民医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW184",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江西省",
+            "installCity": "九江",
+            "salesRegion": "",
+            "terminalUser": "九江学院第二附属医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW185",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江西省",
+            "installCity": "赣州",
+            "salesRegion": "",
+            "terminalUser": "赣州市人民医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW186",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江西省",
+            "installCity": "赣州",
+            "salesRegion": "",
+            "terminalUser": "赣州市人民医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW187",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江西省",
+            "installCity": "南昌",
+            "salesRegion": "",
+            "terminalUser": "江西省人民医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW191",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "聊城",
+            "salesRegion": "",
+            "terminalUser": "聊城市人民医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2013-12-31",
+            "installDate": "2013-12-31",
+            "warrantyExpireDate": "2015-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW192",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "临沂",
+            "salesRegion": "",
+            "terminalUser": "临沂市人民医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2016-12-31",
+            "installDate": "2016-12-31",
+            "warrantyExpireDate": "2018-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW194",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "济南",
+            "salesRegion": "",
+            "terminalUser": "山东大学齐鲁医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW195",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "济南",
+            "salesRegion": "",
+            "terminalUser": "山东省千佛山医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2016-12-31",
+            "installDate": "2016-12-31",
+            "warrantyExpireDate": "2018-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW196",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "济南",
+            "salesRegion": "",
+            "terminalUser": "山东中医药大学第二附属医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW197",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "潍坊",
+            "salesRegion": "",
+            "terminalUser": "潍坊市益都中心医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW199",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "淄博",
+            "salesRegion": "",
+            "terminalUser": "淄博市中心医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW200",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "临沂",
+            "salesRegion": "",
+            "terminalUser": "临沂金锣医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW204",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "菏泽",
+            "salesRegion": "",
+            "terminalUser": "巨野县人民医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW207",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "烟台",
+            "salesRegion": "",
+            "terminalUser": "烟台毓璜顶医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW211",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "济南",
+            "salesRegion": "",
+            "terminalUser": "山东省立医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW212",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "临沂",
+            "salesRegion": "",
+            "terminalUser": "兰陵县人民医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW215",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "青岛",
+            "salesRegion": "",
+            "terminalUser": "山东大学齐鲁医院青岛院区",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW216",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "青岛",
+            "salesRegion": "",
+            "terminalUser": "青岛大学附属医院（东院）",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW222",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "山西省",
+            "installCity": "太原",
+            "salesRegion": "",
+            "terminalUser": "山西省人民医院",
+            "channelName": "贾凯华",
+            "salesName": "贾凯华",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW229",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山西省",
+            "installCity": "太原",
+            "salesRegion": "",
+            "terminalUser": "山西省肿瘤医院",
+            "channelName": "贾凯华",
+            "salesName": "贾凯华",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW244",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "宁夏回族自治区",
+            "installCity": "银川",
+            "salesRegion": "",
+            "terminalUser": "宁夏回族自治区人民医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW247",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海市第六人民医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2014-12-31",
+            "installDate": "2014-12-31",
+            "warrantyExpireDate": "2016-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW248",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海交通大学医学院附属瑞金医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2016-12-31",
+            "installDate": "2016-12-31",
+            "warrantyExpireDate": "2018-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW251",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海市东方医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2018-12-31",
+            "installDate": "2018-12-31",
+            "warrantyExpireDate": "2020-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW254",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海华东医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW255",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海市五官科医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW256",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "张江西门子创新中心",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW257",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海儿童医学中心",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW258",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "国际和平妇幼保健院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW259",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海市肺科医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW261",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海华东医院（2号楼）",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW262",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海市第六人民医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW263",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海中医药大学附属岳阳中西医结合医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW266",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海市第六人民医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW267",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海市第一人民医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW270",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海协华脑科医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW271",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海交通大学医学院仁济医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW272",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海交通大学医学院仁济医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW273",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海交通大学医学院附属同仁院区",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW274",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海市第一妇婴保健院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW275",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海交通大学医学院附属上海儿童医学中心",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW276",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海市同仁医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW279",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海科技大学临床医学中心",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW280",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海交通大学医学院附属瑞金医院北院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW281",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海交通大学医学院附属新华医院奉贤院区",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW289",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "南充",
+            "salesRegion": "",
+            "terminalUser": "川北医学院附属医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW294",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
+            "terminalUser": "四川泰康医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW297",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
+            "terminalUser": "四川省肿瘤医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW300",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "天津市",
+            "installCity": "天津",
+            "salesRegion": "",
+            "terminalUser": "天津康汇医院",
+            "channelName": "王静森",
+            "salesName": "王静森",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW315",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "杭州",
+            "salesRegion": "",
+            "terminalUser": "浙江大学医学院附属第一医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2015-12-31",
+            "installDate": "2015-12-31",
+            "warrantyExpireDate": "2017-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW316",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "温州",
+            "salesRegion": "",
+            "terminalUser": "温州医科大学附属第二医院瑶溪院区",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW320",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "衢州",
+            "salesRegion": "",
+            "terminalUser": "衢州市人民医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW322",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "丽水",
+            "salesRegion": "",
+            "terminalUser": "丽水市人民医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW323",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "东阳",
+            "salesRegion": "",
+            "terminalUser": "东阳市人民医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW327",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "绍兴",
+            "salesRegion": "",
+            "terminalUser": "绍兴市人民医院镜湖总院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW329",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "嘉兴",
+            "salesRegion": "",
+            "terminalUser": "浙江省嘉善县第一人民医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW338",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "重庆市",
+            "installCity": "重庆",
+            "salesRegion": "",
+            "terminalUser": "重庆市肿瘤医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW339",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "重庆市",
+            "installCity": "重庆",
+            "salesRegion": "",
+            "terminalUser": "重庆医科大学附属第一医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW340",
+            "productKey": "magnus1180",
+            "productModel": "B2",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "重庆市",
+            "installCity": "重庆",
+            "salesRegion": "",
+            "terminalUser": "陆军军医大学第一附属医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          }
+        ]
       },
       "b3": {
         "title": "1180 Magnus OR Table 装机看板",
@@ -174,15 +12116,425 @@ let dashboards = {
         ],
         "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
         "productLineOptions": [],
-        "provinceData": [],
-        "users": [],
-        "partners": [],
-        "updates": [],
-        "monthlyTrend": [],
-        "yearlyTrend": [],
-        "totalUnits": 0,
+        "provinceData": [
+          {
+            "name": "江西省",
+            "value": 3,
+            "latestSite": "南昌大学第二附属医院红角洲院区",
+            "latestDate": "2020-12-31",
+            "coord": [
+              115.86,
+              28.68
+            ]
+          },
+          {
+            "name": "陕西省",
+            "value": 3,
+            "latestSite": "陕西省人民医院",
+            "latestDate": "2022-12-31",
+            "coord": [
+              108.94,
+              34.34
+            ]
+          },
+          {
+            "name": "山东省",
+            "value": 2,
+            "latestSite": "山东省公共卫生中心临床中心",
+            "latestDate": "2022-12-31",
+            "coord": [
+              117,
+              36.65
+            ]
+          },
+          {
+            "name": "河南省",
+            "value": 1,
+            "latestSite": "河南洛阳宜阳县人民医院",
+            "latestDate": "2021-12-31",
+            "coord": [
+              113.62,
+              34.75
+            ]
+          },
+          {
+            "name": "上海市",
+            "value": 1,
+            "latestSite": "上海协华脑科医院",
+            "latestDate": "2023-12-31",
+            "coord": [
+              121.47,
+              31.23
+            ]
+          },
+          {
+            "name": "云南省",
+            "value": 1,
+            "latestSite": "云南省文山壮族苗族自治州人民医院",
+            "latestDate": "2021-12-31",
+            "coord": [
+              102.71,
+              25.04
+            ]
+          }
+        ],
+        "users": [
+          {
+            "name": "南昌大学第二附属医院红角洲院区",
+            "province": "江西省",
+            "value": 3
+          },
+          {
+            "name": "陕西省人民医院",
+            "province": "陕西省",
+            "value": 3
+          },
+          {
+            "name": "河南洛阳宜阳县人民医院",
+            "province": "河南省",
+            "value": 1
+          },
+          {
+            "name": "潍坊市妇幼保健院",
+            "province": "山东省",
+            "value": 1
+          },
+          {
+            "name": "山东省公共卫生中心临床中心",
+            "province": "山东省",
+            "value": 1
+          },
+          {
+            "name": "上海协华脑科医院",
+            "province": "上海市",
+            "value": 1
+          },
+          {
+            "name": "云南省文山壮族苗族自治州人民医院",
+            "province": "云南省",
+            "value": 1
+          }
+        ],
+        "partners": [
+          {
+            "name": "欧兆辉",
+            "province": "江西省",
+            "value": 3
+          },
+          {
+            "name": "袁英才",
+            "province": "陕西省",
+            "value": 3
+          },
+          {
+            "name": "吴海燕",
+            "province": "山东省",
+            "value": 2
+          },
+          {
+            "name": "贾凯华",
+            "province": "河南省",
+            "value": 1
+          },
+          {
+            "name": "刘燕",
+            "province": "上海市",
+            "value": 1
+          },
+          {
+            "name": "李刚",
+            "province": "云南省",
+            "value": 1
+          }
+        ],
+        "updates": [
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "上海协华脑科医院 完成 B3 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "山东省公共卫生中心临床中心 完成 B3 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "陕西省人民医院 完成 B3 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "河南洛阳宜阳县人民医院 完成 B3 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "云南省文山壮族苗族自治州人民医院 完成 B3 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "南昌大学第二附属医院红角洲院区 完成 B3 1 台"
+          }
+        ],
+        "monthlyTrend": [
+          {
+            "month": "2023-01",
+            "installed": 0
+          },
+          {
+            "month": "2023-02",
+            "installed": 0
+          },
+          {
+            "month": "2023-03",
+            "installed": 0
+          },
+          {
+            "month": "2023-04",
+            "installed": 0
+          },
+          {
+            "month": "2023-05",
+            "installed": 0
+          },
+          {
+            "month": "2023-06",
+            "installed": 0
+          },
+          {
+            "month": "2023-07",
+            "installed": 0
+          },
+          {
+            "month": "2023-08",
+            "installed": 0
+          },
+          {
+            "month": "2023-09",
+            "installed": 0
+          },
+          {
+            "month": "2023-10",
+            "installed": 0
+          },
+          {
+            "month": "2023-11",
+            "installed": 0
+          },
+          {
+            "month": "2023-12",
+            "installed": 1
+          }
+        ],
+        "yearlyTrend": [
+          {
+            "year": "2019",
+            "installed": 2
+          },
+          {
+            "year": "2020",
+            "installed": 4
+          },
+          {
+            "year": "2021",
+            "installed": 2
+          },
+          {
+            "year": "2022",
+            "installed": 2
+          },
+          {
+            "year": "2023",
+            "installed": 1
+          }
+        ],
+        "totalUnits": 11,
         "quarterUnits": 0,
-        "sourceRecords": []
+        "sourceRecords": [
+          {
+            "serialNo": "1180-0401-ROW127",
+            "productKey": "magnus1180",
+            "productModel": "B3",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河南省",
+            "installCity": "洛阳",
+            "salesRegion": "",
+            "terminalUser": "河南洛阳宜阳县人民医院",
+            "channelName": "贾凯华",
+            "salesName": "贾凯华",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW180",
+            "productKey": "magnus1180",
+            "productModel": "B3",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "江西省",
+            "installCity": "南昌",
+            "salesRegion": "",
+            "terminalUser": "南昌大学第二附属医院红角洲院区",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW181",
+            "productKey": "magnus1180",
+            "productModel": "B3",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江西省",
+            "installCity": "南昌",
+            "salesRegion": "",
+            "terminalUser": "南昌大学第二附属医院红角洲院区",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW198",
+            "productKey": "magnus1180",
+            "productModel": "B3",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "潍坊",
+            "salesRegion": "",
+            "terminalUser": "潍坊市妇幼保健院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW209",
+            "productKey": "magnus1180",
+            "productModel": "B3",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "济南",
+            "salesRegion": "",
+            "terminalUser": "山东省公共卫生中心临床中心",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW234",
+            "productKey": "magnus1180",
+            "productModel": "B3",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "陕西省",
+            "installCity": "西安",
+            "salesRegion": "",
+            "terminalUser": "陕西省人民医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW235",
+            "productKey": "magnus1180",
+            "productModel": "B3",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "陕西省",
+            "installCity": "西安",
+            "salesRegion": "",
+            "terminalUser": "陕西省人民医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW238",
+            "productKey": "magnus1180",
+            "productModel": "B3",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "陕西省",
+            "installCity": "西安",
+            "salesRegion": "",
+            "terminalUser": "陕西省人民医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW269",
+            "productKey": "magnus1180",
+            "productModel": "B3",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海协华脑科医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW308",
+            "productKey": "magnus1180",
+            "productModel": "B3",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "云南省",
+            "installCity": "文山",
+            "salesRegion": "",
+            "terminalUser": "云南省文山壮族苗族自治州人民医院",
+            "channelName": "李刚",
+            "salesName": "李刚",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          }
+        ]
       },
       "b4": {
         "title": "1180 Magnus OR Table 装机看板",
@@ -204,15 +12556,1606 @@ let dashboards = {
         ],
         "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
         "productLineOptions": [],
-        "provinceData": [],
-        "users": [],
-        "partners": [],
-        "updates": [],
-        "monthlyTrend": [],
-        "yearlyTrend": [],
-        "totalUnits": 0,
+        "provinceData": [
+          {
+            "name": "广东省",
+            "value": 11,
+            "latestSite": "广东医科大学附属医院",
+            "latestDate": "2022-12-31",
+            "coord": [
+              113.27,
+              23.13
+            ]
+          },
+          {
+            "name": "北京市",
+            "value": 9,
+            "latestSite": "北京大学第一医院（大兴院区）",
+            "latestDate": "2025-12-31",
+            "coord": [
+              116.41,
+              39.9
+            ]
+          },
+          {
+            "name": "四川省",
+            "value": 6,
+            "latestSite": "四川大学华西医院",
+            "latestDate": "2024-12-31",
+            "coord": [
+              104.06,
+              30.67
+            ]
+          },
+          {
+            "name": "河北省",
+            "value": 5,
+            "latestSite": "河北省秦皇岛第二人民医院",
+            "latestDate": "2024-12-31",
+            "coord": [
+              114.48,
+              38.03
+            ]
+          },
+          {
+            "name": "江苏省",
+            "value": 5,
+            "latestSite": "宜兴市人民医院",
+            "latestDate": "2022-12-31",
+            "coord": [
+              118.76,
+              32.06
+            ]
+          },
+          {
+            "name": "山西省",
+            "value": 5,
+            "latestSite": "朔州市大医院",
+            "latestDate": "2022-12-31",
+            "coord": [
+              112.53,
+              37.87
+            ]
+          },
+          {
+            "name": "上海市",
+            "value": 4,
+            "latestSite": "复旦大学附属中山医院",
+            "latestDate": "2023-12-31",
+            "coord": [
+              121.47,
+              31.23
+            ]
+          },
+          {
+            "name": "新疆维吾尔自治区",
+            "value": 4,
+            "latestSite": "新疆维吾尔自治区中医医院",
+            "latestDate": "2021-12-31",
+            "coord": [
+              87.62,
+              43.82
+            ]
+          },
+          {
+            "name": "湖北省",
+            "value": 3,
+            "latestSite": "华中科技大学同济医学院附属同济医院",
+            "latestDate": "2025-12-31",
+            "coord": [
+              114.3,
+              30.59
+            ]
+          },
+          {
+            "name": "山东省",
+            "value": 3,
+            "latestSite": "山东省立医院",
+            "latestDate": "2024-12-31",
+            "coord": [
+              117,
+              36.65
+            ]
+          },
+          {
+            "name": "陕西省",
+            "value": 3,
+            "latestSite": "西安市第一医院",
+            "latestDate": "2022-12-31",
+            "coord": [
+              108.94,
+              34.34
+            ]
+          },
+          {
+            "name": "云南省",
+            "value": 3,
+            "latestSite": "曲靖市第一人民医院",
+            "latestDate": "2023-12-31",
+            "coord": [
+              102.71,
+              25.04
+            ]
+          },
+          {
+            "name": "广西壮族自治区",
+            "value": 2,
+            "latestSite": "桂林市人民医院",
+            "latestDate": "2024-12-31",
+            "coord": [
+              108.32,
+              22.82
+            ]
+          },
+          {
+            "name": "海南省",
+            "value": 2,
+            "latestSite": "四川大学华西乐城医院",
+            "latestDate": "2023-12-31",
+            "coord": [
+              110.35,
+              20.02
+            ]
+          },
+          {
+            "name": "浙江省",
+            "value": 2,
+            "latestSite": "浙江省台州医院",
+            "latestDate": "2021-12-31",
+            "coord": [
+              120.15,
+              30.28
+            ]
+          },
+          {
+            "name": "甘肃省",
+            "value": 1,
+            "latestSite": "甘肃省人民医院",
+            "latestDate": "2023-12-31",
+            "coord": [
+              103.82,
+              36.06
+            ]
+          },
+          {
+            "name": "贵州省",
+            "value": 1,
+            "latestSite": "贵黔国际总医院",
+            "latestDate": "2019-12-31",
+            "coord": [
+              106.71,
+              26.58
+            ]
+          },
+          {
+            "name": "湖南省",
+            "value": 1,
+            "latestSite": "中南大学湘雅二医院",
+            "latestDate": "2022-12-31",
+            "coord": [
+              112.98,
+              28.19
+            ]
+          },
+          {
+            "name": "吉林省",
+            "value": 1,
+            "latestSite": "长春市中心医院",
+            "latestDate": "2025-12-31",
+            "coord": [
+              125.32,
+              43.9
+            ]
+          },
+          {
+            "name": "江西省",
+            "value": 1,
+            "latestSite": "赣州市人民医院",
+            "latestDate": "2022-12-31",
+            "coord": [
+              115.86,
+              28.68
+            ]
+          }
+        ],
+        "users": [
+          {
+            "name": "四川大学华西医院",
+            "province": "四川省",
+            "value": 3
+          },
+          {
+            "name": "克拉玛依市中心医院",
+            "province": "新疆维吾尔自治区",
+            "value": 3
+          },
+          {
+            "name": "北京协和医院",
+            "province": "北京市",
+            "value": 2
+          },
+          {
+            "name": "首都医科大学附属北京安贞医院",
+            "province": "北京市",
+            "value": 2
+          },
+          {
+            "name": "中山大学附属第三医院肇庆医院",
+            "province": "广东省",
+            "value": 2
+          },
+          {
+            "name": "华中科技大学光谷同济医院",
+            "province": "湖北省",
+            "value": 2
+          },
+          {
+            "name": "北京医院",
+            "province": "北京市",
+            "value": 1
+          },
+          {
+            "name": "首都医科大学宣武医院",
+            "province": "北京市",
+            "value": 1
+          }
+        ],
+        "partners": [
+          {
+            "name": "尹武军",
+            "province": "广东省",
+            "value": 15
+          },
+          {
+            "name": "纪震夜",
+            "province": "北京市",
+            "value": 10
+          },
+          {
+            "name": "袁英才",
+            "province": "甘肃省",
+            "value": 8
+          },
+          {
+            "name": "蒲东方",
+            "province": "四川省",
+            "value": 6
+          },
+          {
+            "name": "王静森",
+            "province": "河北省",
+            "value": 5
+          },
+          {
+            "name": "徐璐璐",
+            "province": "江苏省",
+            "value": 5
+          },
+          {
+            "name": "贾凯华",
+            "province": "山西省",
+            "value": 5
+          },
+          {
+            "name": "李刚",
+            "province": "贵州省",
+            "value": 4
+          }
+        ],
+        "updates": [
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "北京大学第一医院（大兴院区） 完成 B4 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "华中科技大学同济医学院附属同济医院 完成 B4 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "长春市中心医院 完成 B4 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "首都医科大学附属北京安贞医院 完成 B4 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "首都医科大学附属北京安贞医院 完成 B4 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "装机",
+            "text": "桂林市人民医院 完成 B4 1 台"
+          }
+        ],
+        "monthlyTrend": [
+          {
+            "month": "2025-01",
+            "installed": 0
+          },
+          {
+            "month": "2025-02",
+            "installed": 0
+          },
+          {
+            "month": "2025-03",
+            "installed": 0
+          },
+          {
+            "month": "2025-04",
+            "installed": 0
+          },
+          {
+            "month": "2025-05",
+            "installed": 0
+          },
+          {
+            "month": "2025-06",
+            "installed": 0
+          },
+          {
+            "month": "2025-07",
+            "installed": 0
+          },
+          {
+            "month": "2025-08",
+            "installed": 0
+          },
+          {
+            "month": "2025-09",
+            "installed": 0
+          },
+          {
+            "month": "2025-10",
+            "installed": 0
+          },
+          {
+            "month": "2025-11",
+            "installed": 0
+          },
+          {
+            "month": "2025-12",
+            "installed": 3
+          }
+        ],
+        "yearlyTrend": [
+          {
+            "year": "2021",
+            "installed": 19
+          },
+          {
+            "year": "2022",
+            "installed": 18
+          },
+          {
+            "year": "2023",
+            "installed": 7
+          },
+          {
+            "year": "2024",
+            "installed": 9
+          },
+          {
+            "year": "2025",
+            "installed": 3
+          }
+        ],
+        "totalUnits": 72,
         "quarterUnits": 0,
-        "sourceRecords": []
+        "sourceRecords": [
+          {
+            "serialNo": "1180-0401-ROW017",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "北京协和医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW018",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "北京协和医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW020",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "北京医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW025",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "首都医科大学宣武医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW027",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "北京世纪坛医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW028",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "中国人民解放军总医院第一医学中心",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW030",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "首都医科大学附属北京安贞医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW031",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "首都医科大学附属北京安贞医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW034",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "北京市",
+            "installCity": "北京",
+            "salesRegion": "",
+            "terminalUser": "北京大学第一医院（大兴院区）",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW062",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "甘肃省",
+            "installCity": "兰州",
+            "salesRegion": "",
+            "terminalUser": "甘肃省人民医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW066",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
+            "terminalUser": "深圳市南山区人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW067",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
+            "terminalUser": "深圳市第三人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW070",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "汕头",
+            "salesRegion": "",
+            "terminalUser": "汕头市中心医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW072",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "肇庆",
+            "salesRegion": "",
+            "terminalUser": "中山大学附属第三医院肇庆医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW082",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "珠海",
+            "salesRegion": "",
+            "terminalUser": "中山大学附属第五医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW083",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
+            "terminalUser": "深圳新风和睦家医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW085",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "河源",
+            "salesRegion": "",
+            "terminalUser": "暨南大学附属第五医院（河源市深河人民医院）",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW086",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "广州",
+            "salesRegion": "",
+            "terminalUser": "南方医科大学南方医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW090",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "高州",
+            "salesRegion": "",
+            "terminalUser": "广东省高州市人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW091",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广东省",
+            "installCity": "湛江",
+            "salesRegion": "",
+            "terminalUser": "广东医科大学附属医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW103",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广西壮族自治区",
+            "installCity": "南宁",
+            "salesRegion": "",
+            "terminalUser": "广西妇幼保健院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW105",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "广西壮族自治区",
+            "installCity": "桂林",
+            "salesRegion": "",
+            "terminalUser": "桂林市人民医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW106",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "贵州省",
+            "installCity": "贵阳",
+            "salesRegion": "",
+            "terminalUser": "贵黔国际总医院",
+            "channelName": "李刚",
+            "salesName": "李刚",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW111",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "海南省",
+            "installCity": "海口",
+            "salesRegion": "",
+            "terminalUser": "海南省人民医院（博鳌）",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW112",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "海南省",
+            "installCity": "琼海",
+            "salesRegion": "",
+            "terminalUser": "四川大学华西乐城医院",
+            "channelName": "尹武军",
+            "salesName": "尹武军",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW119",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河北省",
+            "installCity": "秦皇岛",
+            "salesRegion": "",
+            "terminalUser": "秦皇岛市第一人民医院",
+            "channelName": "王静森",
+            "salesName": "王静森",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW120",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河北省",
+            "installCity": "沧州",
+            "salesRegion": "",
+            "terminalUser": "南皮县人民医院",
+            "channelName": "王静森",
+            "salesName": "王静森",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW121",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河北省",
+            "installCity": "承德",
+            "salesRegion": "",
+            "terminalUser": "河北承德医学院附属医院",
+            "channelName": "王静森",
+            "salesName": "王静森",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW122",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河北省",
+            "installCity": "沧州",
+            "salesRegion": "",
+            "terminalUser": "沧州市中心医院",
+            "channelName": "王静森",
+            "salesName": "王静森",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW125",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "河北省",
+            "installCity": "秦皇岛",
+            "salesRegion": "",
+            "terminalUser": "河北省秦皇岛第二人民医院",
+            "channelName": "王静森",
+            "salesName": "王静森",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW144",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "湖北省",
+            "installCity": "武汉",
+            "salesRegion": "",
+            "terminalUser": "华中科技大学光谷同济医院",
+            "channelName": "夏阳",
+            "salesName": "夏阳",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW147",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "湖北省",
+            "installCity": "武汉",
+            "salesRegion": "",
+            "terminalUser": "华中科技大学同济医学院附属同济医院",
+            "channelName": "夏阳",
+            "salesName": "夏阳",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW149",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "湖南省",
+            "installCity": "长沙",
+            "salesRegion": "",
+            "terminalUser": "中南大学湘雅二医院",
+            "channelName": "夏阳",
+            "salesName": "夏阳",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW154",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "吉林省",
+            "installCity": "长春",
+            "salesRegion": "",
+            "terminalUser": "长春市中心医院",
+            "channelName": "纪震夜",
+            "salesName": "纪震夜",
+            "salesDate": "2025-12-31",
+            "installDate": "2025-12-31",
+            "warrantyExpireDate": "2027-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW156",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "徐州",
+            "salesRegion": "",
+            "terminalUser": "徐州医学院附属医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW160",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "无锡",
+            "salesRegion": "",
+            "terminalUser": "江南大学附属医院（无锡四院）",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW164",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "盐城",
+            "salesRegion": "",
+            "terminalUser": "盐城市第三人民医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW166",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "淮安",
+            "salesRegion": "",
+            "terminalUser": "淮安市第五人民医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW168",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江苏省",
+            "installCity": "宜兴",
+            "salesRegion": "",
+            "terminalUser": "宜兴市人民医院",
+            "channelName": "徐璐璐",
+            "salesName": "徐璐璐",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW183",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "江西省",
+            "installCity": "赣州",
+            "salesRegion": "",
+            "terminalUser": "赣州市人民医院",
+            "channelName": "欧兆辉",
+            "salesName": "欧兆辉",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW205",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "威海",
+            "salesRegion": "",
+            "terminalUser": "威海中心医院高区医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW213",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "滨州",
+            "salesRegion": "",
+            "terminalUser": "滨州市邹平县人民医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW219",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山东省",
+            "installCity": "济南",
+            "salesRegion": "",
+            "terminalUser": "山东省立医院",
+            "channelName": "吴海燕",
+            "salesName": "吴海燕",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW223",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山西省",
+            "installCity": "太原",
+            "salesRegion": "",
+            "terminalUser": "太原市中心医院",
+            "channelName": "贾凯华",
+            "salesName": "贾凯华",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW224",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山西省",
+            "installCity": "太原",
+            "salesRegion": "",
+            "terminalUser": "山西省心血管病医院",
+            "channelName": "贾凯华",
+            "salesName": "贾凯华",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW225",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山西省",
+            "installCity": "太原",
+            "salesRegion": "",
+            "terminalUser": "山西医科大学第一医院",
+            "channelName": "贾凯华",
+            "salesName": "贾凯华",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW226",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山西省",
+            "installCity": "长治",
+            "salesRegion": "",
+            "terminalUser": "长治医学院附属和平医院",
+            "channelName": "贾凯华",
+            "salesName": "贾凯华",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW228",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "山西省",
+            "installCity": "朔州",
+            "salesRegion": "",
+            "terminalUser": "朔州市大医院",
+            "channelName": "贾凯华",
+            "salesName": "贾凯华",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW233",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "陕西省",
+            "installCity": "西安",
+            "salesRegion": "",
+            "terminalUser": "空军军医大学西京医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW236",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "陕西省",
+            "installCity": "榆林",
+            "salesRegion": "",
+            "terminalUser": "榆林市第二医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW239",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "陕西省",
+            "installCity": "西安",
+            "salesRegion": "",
+            "terminalUser": "西安市第一医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW246",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海交通大学医学院附属新华医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW253",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海市胸科医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2019-12-31",
+            "installDate": "2019-12-31",
+            "warrantyExpireDate": "2021-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW264",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "上海中医药大学附属龙华医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW265",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
+            "terminalUser": "复旦大学附属中山医院",
+            "channelName": "刘燕",
+            "salesName": "刘燕",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW286",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
+            "terminalUser": "成都市温江区人民医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2020-12-31",
+            "installDate": "2020-12-31",
+            "warrantyExpireDate": "2022-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW290",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
+            "terminalUser": "华西天府医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW291",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
+            "terminalUser": "成都大学附属医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW296",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 3,
+            "configDescription": "",
+            "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
+            "terminalUser": "四川大学华西医院",
+            "channelName": "蒲东方",
+            "salesName": "蒲东方",
+            "salesDate": "2024-12-31",
+            "installDate": "2024-12-31",
+            "warrantyExpireDate": "2026-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW302",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "新疆维吾尔自治区",
+            "installCity": "克拉玛依",
+            "salesRegion": "",
+            "terminalUser": "克拉玛依市中心医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW303",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 2,
+            "configDescription": "",
+            "installProvince": "新疆维吾尔自治区",
+            "installCity": "克拉玛依",
+            "salesRegion": "",
+            "terminalUser": "克拉玛依市中心医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW305",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "新疆维吾尔自治区",
+            "installCity": "乌鲁木齐",
+            "salesRegion": "",
+            "terminalUser": "新疆维吾尔自治区中医医院",
+            "channelName": "袁英才",
+            "salesName": "袁英才",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW307",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "云南省",
+            "installCity": "昆明",
+            "salesRegion": "",
+            "terminalUser": "云南省阜外心血管病医院",
+            "channelName": "李刚",
+            "salesName": "李刚",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW310",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "云南省",
+            "installCity": "昆明",
+            "salesRegion": "",
+            "terminalUser": "昆明医科大学第一附属医院",
+            "channelName": "李刚",
+            "salesName": "李刚",
+            "salesDate": "2022-12-31",
+            "installDate": "2022-12-31",
+            "warrantyExpireDate": "2024-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW311",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "云南省",
+            "installCity": "曲靖",
+            "salesRegion": "",
+            "terminalUser": "曲靖市第一人民医院",
+            "channelName": "李刚",
+            "salesName": "李刚",
+            "salesDate": "2023-12-31",
+            "installDate": "2023-12-31",
+            "warrantyExpireDate": "2025-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW319",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "杭州",
+            "salesRegion": "",
+            "terminalUser": "浙江省人民医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "1180-0401-ROW321",
+            "productKey": "magnus1180",
+            "productModel": "B4",
+            "quantity": 1,
+            "configDescription": "",
+            "installProvince": "浙江省",
+            "installCity": "台州",
+            "salesRegion": "",
+            "terminalUser": "浙江省台州医院",
+            "channelName": "侯志勇",
+            "salesName": "侯志勇",
+            "salesDate": "2021-12-31",
+            "installDate": "2021-12-31",
+            "warrantyExpireDate": "2023-12-31",
+            "winRate": "",
+            "gforceSystemId": ""
+          }
+        ]
       },
       "b5": {
         "title": "1180 Magnus OR Table 装机看板",
@@ -238,8 +14181,78 @@ let dashboards = {
         "users": [],
         "partners": [],
         "updates": [],
-        "monthlyTrend": [],
-        "yearlyTrend": [],
+        "monthlyTrend": [
+          {
+            "month": "2025-06",
+            "installed": 0
+          },
+          {
+            "month": "2025-07",
+            "installed": 0
+          },
+          {
+            "month": "2025-08",
+            "installed": 0
+          },
+          {
+            "month": "2025-09",
+            "installed": 0
+          },
+          {
+            "month": "2025-10",
+            "installed": 0
+          },
+          {
+            "month": "2025-11",
+            "installed": 0
+          },
+          {
+            "month": "2025-12",
+            "installed": 0
+          },
+          {
+            "month": "2026-01",
+            "installed": 0
+          },
+          {
+            "month": "2026-02",
+            "installed": 0
+          },
+          {
+            "month": "2026-03",
+            "installed": 0
+          },
+          {
+            "month": "2026-04",
+            "installed": 0
+          },
+          {
+            "month": "2026-05",
+            "installed": 0
+          }
+        ],
+        "yearlyTrend": [
+          {
+            "year": "2022",
+            "installed": 0
+          },
+          {
+            "year": "2023",
+            "installed": 0
+          },
+          {
+            "year": "2024",
+            "installed": 0
+          },
+          {
+            "year": "2025",
+            "installed": 0
+          },
+          {
+            "year": "2026",
+            "installed": 0
+          }
+        ],
         "totalUnits": 0,
         "quarterUnits": 0,
         "sourceRecords": []
@@ -695,12 +14708,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "Hybrid OR integration + video routing",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "East",
         "terminalUser": "未填写终端用户",
         "channelName": "未填写渠道",
         "salesName": "未填写销售",
         "salesDate": "2026-01-15",
         "installDate": "2026-03-10",
-        "warrantyExpireDate": "2027-03-25"
+        "warrantyExpireDate": "2027-03-25",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27797090",
@@ -709,12 +14726,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "浙江省",
+        "installCity": "杭州",
+        "salesRegion": "",
         "terminalUser": "浙江大学医学院附属第一医院",
         "channelName": "浙江大学医学院附属第一医院",
         "salesName": "EAST-ACT",
         "salesDate": "2021-05-27",
         "installDate": "2021-05-27",
-        "warrantyExpireDate": ""
+        "warrantyExpireDate": "",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-28925030",
@@ -723,12 +14744,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海市浦东新区公利医院",
         "channelName": "上海市浦东新区公利医院",
         "salesName": "EAST-SW",
         "salesDate": "2022-04-21",
         "installDate": "2022-04-21",
-        "warrantyExpireDate": "2023-03-02"
+        "warrantyExpireDate": "2023-03-02",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29512551",
@@ -737,12 +14762,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "杭州市余杭区第一人民医院",
         "channelName": "杭州市余杭区第一人民医院",
         "salesName": "EAST-SW",
         "salesDate": "2022-10-13",
         "installDate": "2022-10-13",
-        "warrantyExpireDate": "2023-12-04"
+        "warrantyExpireDate": "2023-12-04",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-33283952",
@@ -751,12 +14780,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州富力医院",
         "channelName": "广州富力医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2024-06-28",
         "installDate": "2024-06-28",
-        "warrantyExpireDate": "2025-10-14"
+        "warrantyExpireDate": "2025-10-14",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-33283953",
@@ -765,12 +14798,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州富力医院",
         "channelName": "广州富力医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2024-06-28",
         "installDate": "2024-06-28",
-        "warrantyExpireDate": "2025-10-14"
+        "warrantyExpireDate": "2025-10-14",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-33283954",
@@ -779,12 +14816,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州富力医院",
         "channelName": "广州富力医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2024-06-28",
         "installDate": "2024-06-28",
-        "warrantyExpireDate": "2025-10-14"
+        "warrantyExpireDate": "2025-10-14",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-33740213",
@@ -793,12 +14834,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "丽水",
+        "salesRegion": "",
         "terminalUser": "丽水市人民医院",
         "channelName": "丽水市人民医院",
         "salesName": "EAST-SW",
         "salesDate": "2024-11-26",
         "installDate": "2024-11-26",
-        "warrantyExpireDate": ""
+        "warrantyExpireDate": "",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-21914985",
@@ -807,12 +14852,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "宁夏回族自治区",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "固原市人民医院",
         "channelName": "成都裕康医疗设备有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2015-09-10",
         "installDate": "2015-09-30",
-        "warrantyExpireDate": "2017-09-29"
+        "warrantyExpireDate": "2017-09-29",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-21922057",
@@ -821,12 +14870,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
         "terminalUser": "首都医科大学宣武医院",
         "channelName": "首都医科大学宣武医院",
         "salesName": "NORTH-SW",
         "salesDate": "2015-09-14",
         "installDate": "2015-10-06",
-        "warrantyExpireDate": "2019-12-19"
+        "warrantyExpireDate": "2019-12-19",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-21922058",
@@ -835,12 +14888,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
         "terminalUser": "首都医科大学宣武医院",
         "channelName": "首都医科大学宣武医院",
         "salesName": "NORTH-SW",
         "salesDate": "2015-09-14",
         "installDate": "2015-10-06",
-        "warrantyExpireDate": "2019-12-19"
+        "warrantyExpireDate": "2019-12-19",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-21922059",
@@ -849,12 +14906,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
         "terminalUser": "首都医科大学宣武医院",
         "channelName": "首都医科大学宣武医院",
         "salesName": "NORTH-SW",
         "salesDate": "2015-09-14",
         "installDate": "2015-10-06",
-        "warrantyExpireDate": "2019-12-19"
+        "warrantyExpireDate": "2019-12-19",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-21922060",
@@ -863,12 +14924,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "北京市",
+        "installCity": "北京",
+        "salesRegion": "",
         "terminalUser": "首都医科大学宣武医院",
         "channelName": "首都医科大学宣武医院",
         "salesName": "NORTH-SW",
         "salesDate": "2015-09-14",
         "installDate": "2015-10-06",
-        "warrantyExpireDate": "2019-12-19"
+        "warrantyExpireDate": "2019-12-19",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22001290",
@@ -877,12 +14942,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "浙江省",
+        "installCity": "杭州",
+        "salesRegion": "",
         "terminalUser": "浙江大学医学院附属第二医院",
         "channelName": "杭州首术科技有限公司",
         "salesName": "SOUTH-AC",
         "salesDate": "2015-10-13",
         "installDate": "2015-10-22",
-        "warrantyExpireDate": "2017-10-21"
+        "warrantyExpireDate": "2017-10-21",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22002919",
@@ -891,12 +14960,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "云南省",
+        "installCity": "昆明",
+        "salesRegion": "",
         "terminalUser": "昆明医科大学第一附属医院",
         "channelName": "昆明医科大学第一附属医院",
         "salesName": "WEST-SW",
         "salesDate": "2015-10-14",
         "installDate": "2015-11-05",
-        "warrantyExpireDate": "2019-01-18"
+        "warrantyExpireDate": "2019-01-18",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22002920",
@@ -905,12 +14978,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "云南省",
+        "installCity": "昆明",
+        "salesRegion": "",
         "terminalUser": "昆明医科大学第一附属医院",
         "channelName": "昆明医科大学第一附属医院",
         "salesName": "WEST-SW",
         "salesDate": "2015-10-14",
         "installDate": "2015-11-05",
-        "warrantyExpireDate": "2019-01-18"
+        "warrantyExpireDate": "2019-01-18",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22002921",
@@ -919,12 +14996,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "云南省",
+        "installCity": "昆明",
+        "salesRegion": "",
         "terminalUser": "昆明医科大学第一附属医院",
         "channelName": "昆明医科大学第一附属医院",
         "salesName": "WEST-SW",
         "salesDate": "2015-10-14",
         "installDate": "2015-11-05",
-        "warrantyExpireDate": "2019-01-18"
+        "warrantyExpireDate": "2019-01-18",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22002922",
@@ -933,12 +15014,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "云南省",
+        "installCity": "昆明",
+        "salesRegion": "",
         "terminalUser": "昆明医科大学第一附属医院",
         "channelName": "昆明医科大学第一附属医院",
         "salesName": "WEST-SW",
         "salesDate": "2015-10-14",
         "installDate": "2015-11-05",
-        "warrantyExpireDate": "2019-01-18"
+        "warrantyExpireDate": "2019-01-18",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22002923",
@@ -947,12 +15032,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "云南省",
+        "installCity": "昆明",
+        "salesRegion": "",
         "terminalUser": "昆明医科大学第一附属医院",
         "channelName": "昆明医科大学第一附属医院",
         "salesName": "WEST-SW",
         "salesDate": "2015-10-14",
         "installDate": "2015-11-05",
-        "warrantyExpireDate": "2019-01-18"
+        "warrantyExpireDate": "2019-01-18",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22002924",
@@ -961,12 +15050,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "云南省",
+        "installCity": "昆明",
+        "salesRegion": "",
         "terminalUser": "昆明医科大学第一附属医院",
         "channelName": "昆明医科大学第一附属医院",
         "salesName": "WEST-SW",
         "salesDate": "2015-10-14",
         "installDate": "2015-11-05",
-        "warrantyExpireDate": "2019-01-18"
+        "warrantyExpireDate": "2019-01-18",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22002925",
@@ -975,12 +15068,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "云南省",
+        "installCity": "昆明",
+        "salesRegion": "",
         "terminalUser": "昆明医科大学第一附属医院",
         "channelName": "昆明医科大学第一附属医院",
         "salesName": "WEST-SW",
         "salesDate": "2015-10-14",
         "installDate": "2015-11-05",
-        "warrantyExpireDate": "2019-01-18"
+        "warrantyExpireDate": "2019-01-18",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22002926",
@@ -989,12 +15086,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "云南省",
+        "installCity": "昆明",
+        "salesRegion": "",
         "terminalUser": "昆明医科大学第一附属医院",
         "channelName": "昆明医科大学第一附属医院",
         "salesName": "WEST-SW",
         "salesDate": "2015-10-14",
         "installDate": "2015-11-05",
-        "warrantyExpireDate": "2019-01-18"
+        "warrantyExpireDate": "2019-01-18",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22007135",
@@ -1003,12 +15104,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "山东省",
+        "installCity": "济南",
+        "salesRegion": "",
         "terminalUser": "山东省千佛山医院",
         "channelName": "山东省千佛山医院",
         "salesName": "NORTH-SW",
         "salesDate": "2015-10-15",
         "installDate": "2015-11-12",
-        "warrantyExpireDate": "2019-01-03"
+        "warrantyExpireDate": "2019-01-03",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22007136",
@@ -1017,12 +15122,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "山东省",
+        "installCity": "济南",
+        "salesRegion": "",
         "terminalUser": "山东省千佛山医院",
         "channelName": "山东省千佛山医院",
         "salesName": "NORTH-SW",
         "salesDate": "2015-10-15",
         "installDate": "2015-11-12",
-        "warrantyExpireDate": "2019-01-03"
+        "warrantyExpireDate": "2019-01-03",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-21747966",
@@ -1031,12 +15140,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "广州",
+        "salesRegion": "",
         "terminalUser": "中山大学附属第三医院",
         "channelName": "中山大学附属第三医院",
         "salesName": "SOUTH-IC",
         "salesDate": "2015-05-30",
         "installDate": "2015-11-17",
-        "warrantyExpireDate": "2018-06-18"
+        "warrantyExpireDate": "2018-06-18",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22023347",
@@ -1045,12 +15158,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海百蔚医疗器械有限公司",
         "channelName": "上海百蔚医疗器械有限公司",
         "salesName": "EAST1",
         "salesDate": "2015-10-22",
         "installDate": "2015-11-19",
-        "warrantyExpireDate": "2017-11-18"
+        "warrantyExpireDate": "2017-11-18",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22071635",
@@ -1059,12 +15176,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
         "terminalUser": "华中科技大学协和深圳医院",
         "channelName": "华中科技大学协和深圳医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2015-11-17",
         "installDate": "2015-12-03",
-        "warrantyExpireDate": "2018-09-04"
+        "warrantyExpireDate": "2018-09-04",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22097752",
@@ -1073,12 +15194,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "江门市中心医院",
         "channelName": "江门市中心医院",
         "salesName": "SOUTH",
         "salesDate": "2015-11-27",
         "installDate": "2015-12-10",
-        "warrantyExpireDate": "2018-07-23"
+        "warrantyExpireDate": "2018-07-23",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22098767",
@@ -1087,12 +15212,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "江门市中心医院",
         "channelName": "江门市中心医院",
         "salesName": "SOUTH",
         "salesDate": "2015-11-30",
         "installDate": "2015-12-10",
-        "warrantyExpireDate": "2018-07-23"
+        "warrantyExpireDate": "2018-07-23",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22072476",
@@ -1101,12 +15230,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海市杨浦区海军军医大学第三附属医院",
         "channelName": "上海市杨浦区海军军医大学第三附属医院",
         "salesName": "EAST-SW",
         "salesDate": "2015-11-17",
         "installDate": "2016-03-29",
-        "warrantyExpireDate": "2017-05-12"
+        "warrantyExpireDate": "2017-05-12",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22377862",
@@ -1115,12 +15248,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "江苏省",
+        "installCity": "南京",
+        "salesRegion": "",
         "terminalUser": "南京市第一医院",
         "channelName": "广州浦天医疗设备有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2016-05-12",
         "installDate": "2016-05-31",
-        "warrantyExpireDate": "2022-08-30"
+        "warrantyExpireDate": "2022-08-30",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22407119",
@@ -1129,12 +15266,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "甘肃省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "解放军联勤保障部队940医院",
         "channelName": "解放军联勤保障部队940医院",
         "salesName": "NORTH-SW",
         "salesDate": "2016-05-31",
         "installDate": "2016-06-14",
-        "warrantyExpireDate": "2018-01-22"
+        "warrantyExpireDate": "2018-01-22",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22407120",
@@ -1143,12 +15284,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "甘肃省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "解放军联勤保障部队940医院",
         "channelName": "解放军联勤保障部队940医院",
         "salesName": "NORTH-SW",
         "salesDate": "2016-05-31",
         "installDate": "2016-06-14",
-        "warrantyExpireDate": "2018-01-22"
+        "warrantyExpireDate": "2018-01-22",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22407121",
@@ -1157,12 +15302,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "阳江市人民医院",
         "channelName": "阳江市人民医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2016-05-31",
         "installDate": "2016-06-14",
-        "warrantyExpireDate": "2020-04-11"
+        "warrantyExpireDate": "2020-04-11",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-21747965",
@@ -1171,12 +15320,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "北京市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "北京欧意蓝德科技发展有限公司",
         "channelName": "北京欧意蓝德科技发展有限公司",
         "salesName": "NORTH",
         "salesDate": "2015-05-30",
         "installDate": "2016-06-30",
-        "warrantyExpireDate": "2017-12-29"
+        "warrantyExpireDate": "2017-12-29",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22438726",
@@ -1185,12 +15338,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "山东省",
+        "installCity": "济南",
+        "salesRegion": "",
         "terminalUser": "山东省千佛山医院",
         "channelName": "山东省千佛山医院",
         "salesName": "NORTH",
         "salesDate": "2016-06-14",
         "installDate": "2016-07-07",
-        "warrantyExpireDate": "2018-07-06"
+        "warrantyExpireDate": "2018-07-06",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22438727",
@@ -1199,12 +15356,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "山东省",
+        "installCity": "济南",
+        "salesRegion": "",
         "terminalUser": "山东省千佛山医院",
         "channelName": "山东省千佛山医院",
         "salesName": "NORTH",
         "salesDate": "2016-06-14",
         "installDate": "2016-07-07",
-        "warrantyExpireDate": "2018-07-06"
+        "warrantyExpireDate": "2018-07-06",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-22947050",
@@ -1213,12 +15374,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海市静安区华东医院",
         "channelName": "上海市静安区华东医院",
         "salesName": "EAST1",
         "salesDate": "2016-08-23",
         "installDate": "2016-09-15",
-        "warrantyExpireDate": "2018-11-23"
+        "warrantyExpireDate": "2018-11-23",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-23037032",
@@ -1227,12 +15392,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "Final Customer China",
         "channelName": "Shanghai Dongsong Healthcare &",
         "salesName": "1G5",
         "salesDate": "2016-09-15",
         "installDate": "2016-09-30",
-        "warrantyExpireDate": "2017-09-29"
+        "warrantyExpireDate": "2017-09-29",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-23483809",
@@ -1241,12 +15410,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "辽宁省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "大连维特奥康复咨询有限公司",
         "channelName": "大连维特奥康复咨询有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2016-10-21",
         "installDate": "2016-11-10",
-        "warrantyExpireDate": "2018-11-09"
+        "warrantyExpireDate": "2018-11-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-23489318",
@@ -1255,12 +15428,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "北京市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "中国人民解放军总医院第七医学中心",
         "channelName": "中国人民解放军总医院第七医学中心",
         "salesName": "NORTH-SW",
         "salesDate": "2016-10-25",
         "installDate": "2016-11-10",
-        "warrantyExpireDate": "2020-05-05"
+        "warrantyExpireDate": "2020-05-05",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-23489319",
@@ -1269,12 +15446,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "北京市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "中国人民解放军总医院第七医学中心",
         "channelName": "中国人民解放军总医院第七医学中心",
         "salesName": "NORTH-SW",
         "salesDate": "2016-10-25",
         "installDate": "2016-11-10",
-        "warrantyExpireDate": "2020-05-05"
+        "warrantyExpireDate": "2020-05-05",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-23489329",
@@ -1283,12 +15464,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
         "terminalUser": "深圳市第三人民医院",
         "channelName": "深圳市第三人民医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2016-10-25",
         "installDate": "2016-11-10",
-        "warrantyExpireDate": "2020-08-13"
+        "warrantyExpireDate": "2020-08-13",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-23489330",
@@ -1297,12 +15482,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "南方科技大学医院",
         "channelName": "南方科技大学医院",
         "salesName": "SOUTH",
         "salesDate": "2016-10-25",
         "installDate": "2016-11-10",
-        "warrantyExpireDate": "2018-11-09"
+        "warrantyExpireDate": "2018-11-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-23516312",
@@ -1311,12 +15500,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "杭州首术科技有限公司",
         "channelName": "杭州首术科技有限公司",
         "salesName": "EAST2",
         "salesDate": "2016-11-07",
         "installDate": "2016-11-30",
-        "warrantyExpireDate": "2018-11-29"
+        "warrantyExpireDate": "2018-11-29",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-23516313",
@@ -1325,12 +15518,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "杭州首术科技有限公司",
         "channelName": "杭州首术科技有限公司",
         "salesName": "EAST2",
         "salesDate": "2016-11-07",
         "installDate": "2016-11-30",
-        "warrantyExpireDate": "2018-11-29"
+        "warrantyExpireDate": "2018-11-29",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-23544085",
@@ -1339,12 +15536,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "贵州省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "盘州市人民医院",
         "channelName": "盘州市人民医院",
         "salesName": "WEST-SW",
         "salesDate": "2016-11-17",
         "installDate": "2016-11-30",
-        "warrantyExpireDate": "2020-09-04"
+        "warrantyExpireDate": "2020-09-04",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-23544086",
@@ -1353,12 +15554,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海交通大学医学院附属第九人民医院第三执业点",
         "channelName": "上海交通大学医学院附属第九人民医院第三执业点",
         "salesName": "EAST-SW",
         "salesDate": "2016-11-17",
         "installDate": "2016-11-30",
-        "warrantyExpireDate": "2018-11-29"
+        "warrantyExpireDate": "2018-11-29",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-23565860",
@@ -1367,12 +15572,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "山东省",
+        "installCity": "临沂",
+        "salesRegion": "",
         "terminalUser": "临沂金锣医院",
         "channelName": "Suzhou MAQUET",
         "salesName": "GDUMMY",
         "salesDate": "2016-11-28",
         "installDate": "2016-12-06",
-        "warrantyExpireDate": "2021-06-09"
+        "warrantyExpireDate": "2021-06-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-23859343",
@@ -1381,12 +15590,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "珠海市人民医院医疗集团",
         "channelName": "珠海市人民医院医疗集团",
         "salesName": "SOUTH-SW",
         "salesDate": "2017-03-07",
         "installDate": "2017-04-06",
-        "warrantyExpireDate": "2019-09-14"
+        "warrantyExpireDate": "2019-09-14",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-23956371",
@@ -1395,12 +15608,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "四川省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "成都市核工业四一六医院",
         "channelName": "成都市核工业四一六医院",
         "salesName": "WEST-SW",
         "salesDate": "2017-04-20",
         "installDate": "2017-04-28",
-        "warrantyExpireDate": "2019-08-01"
+        "warrantyExpireDate": "2019-08-01",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-24454195",
@@ -1409,12 +15626,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "山东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "青岛市市立医院",
         "channelName": "青岛市市立医院",
         "salesName": "NORTH-SW",
         "salesDate": "2017-10-27",
         "installDate": "2017-11-16",
-        "warrantyExpireDate": "2019-07-25"
+        "warrantyExpireDate": "2019-07-25",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-24454196",
@@ -1423,12 +15644,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "山东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "青岛市市立医院",
         "channelName": "青岛市市立医院",
         "salesName": "NORTH-SW",
         "salesDate": "2017-10-27",
         "installDate": "2017-11-16",
-        "warrantyExpireDate": "2019-07-25"
+        "warrantyExpireDate": "2019-07-25",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-24469097",
@@ -1437,12 +15662,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
         "terminalUser": "上海市东方医院",
         "channelName": "上海市东方医院",
         "salesName": "EAST-SW",
         "salesDate": "2017-11-02",
         "installDate": "2017-11-16",
-        "warrantyExpireDate": "2019-08-06"
+        "warrantyExpireDate": "2019-08-06",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-24476524",
@@ -1451,12 +15680,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
         "terminalUser": "上海市东方医院",
         "channelName": "上海市东方医院",
         "salesName": "EAST-SW",
         "salesDate": "2017-11-06",
         "installDate": "2017-11-16",
-        "warrantyExpireDate": "2019-08-06"
+        "warrantyExpireDate": "2019-08-06",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-24486453",
@@ -1465,12 +15698,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
         "terminalUser": "上海市东方医院",
         "channelName": "上海市东方医院",
         "salesName": "EAST-SW",
         "salesDate": "2017-11-08",
         "installDate": "2017-11-16",
-        "warrantyExpireDate": "2019-08-06"
+        "warrantyExpireDate": "2019-08-06",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-24509830",
@@ -1479,12 +15716,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "河北省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "唐山南湖医院",
         "channelName": "唐山南湖医院",
         "salesName": "NORTH-SW",
         "salesDate": "2017-11-15",
         "installDate": "2017-12-28",
-        "warrantyExpireDate": "2019-01-22"
+        "warrantyExpireDate": "2019-01-22",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-24594199",
@@ -1493,12 +15734,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "杭州市丁桥医院",
         "channelName": "杭州市丁桥医院",
         "salesName": "EAST-SW",
         "salesDate": "2017-12-13",
         "installDate": "2018-01-25",
-        "warrantyExpireDate": "2020-08-08"
+        "warrantyExpireDate": "2020-08-08",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-24693227",
@@ -1507,12 +15752,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "浙江省",
+        "installCity": "衢州",
+        "salesRegion": "",
         "terminalUser": "衢州市人民医院",
         "channelName": "衢州市人民医院",
         "salesName": "EAST-SW",
         "salesDate": "2018-02-02",
         "installDate": "2018-02-22",
-        "warrantyExpireDate": "2021-07-31"
+        "warrantyExpireDate": "2021-07-31",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-24693228",
@@ -1521,12 +15770,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "浙江省",
+        "installCity": "衢州",
+        "salesRegion": "",
         "terminalUser": "衢州市人民医院",
         "channelName": "衢州市人民医院",
         "salesName": "EAST-SW",
         "salesDate": "2018-02-02",
         "installDate": "2018-02-22",
-        "warrantyExpireDate": "2021-07-31"
+        "warrantyExpireDate": "2021-07-31",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-24693229",
@@ -1535,12 +15788,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "北京市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "北京市朝阳区妇幼保健院",
         "channelName": "上海又诺贸易中心",
         "salesName": "NORTH-SW",
         "salesDate": "2018-02-02",
         "installDate": "2018-02-22",
-        "warrantyExpireDate": "2021-06-02"
+        "warrantyExpireDate": "2021-06-02",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-24693230",
@@ -1549,12 +15806,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "北京市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "北京市朝阳区妇幼保健院",
         "channelName": "上海又诺贸易中心",
         "salesName": "NORTH-SW",
         "salesDate": "2018-02-02",
         "installDate": "2018-02-22",
-        "warrantyExpireDate": "2021-06-02"
+        "warrantyExpireDate": "2021-06-02",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-24833281",
@@ -1563,12 +15824,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "中国医学科学院阜外医院深圳医院",
         "channelName": "广州圣佑贸易有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2018-04-04",
         "installDate": "2018-04-27",
-        "warrantyExpireDate": "2021-09-20"
+        "warrantyExpireDate": "2021-09-20",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25078035",
@@ -1577,12 +15842,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "湖北省",
+        "installCity": "武汉",
+        "salesRegion": "",
         "terminalUser": "华中科技大学同济医学院附属协和医院",
         "channelName": "华中科技大学同济医学院附属协和医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2018-07-26",
         "installDate": "2018-08-23",
-        "warrantyExpireDate": "2019-11-19"
+        "warrantyExpireDate": "2019-11-19",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25078036",
@@ -1591,12 +15860,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "湖北省",
+        "installCity": "武汉",
+        "salesRegion": "",
         "terminalUser": "华中科技大学同济医学院附属协和医院",
         "channelName": "华中科技大学同济医学院附属协和医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2018-07-26",
         "installDate": "2018-08-23",
-        "warrantyExpireDate": "2019-11-19"
+        "warrantyExpireDate": "2019-11-19",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25105312",
@@ -1605,12 +15878,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "福建省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "福建医科大学附属第二医院（东海院区）",
         "channelName": "福建医科大学附属第二医院（东海院区）",
         "salesName": "EAST-SW",
         "salesDate": "2018-08-14",
         "installDate": "2018-08-30",
-        "warrantyExpireDate": "2020-07-08"
+        "warrantyExpireDate": "2020-07-08",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-24957944",
@@ -1619,12 +15896,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "四川省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "成都鹰阁医院",
         "channelName": "成都鹰阁医院",
         "salesName": "WEST-SW",
         "salesDate": "2018-05-24",
         "installDate": "2018-10-31",
-        "warrantyExpireDate": "2020-11-20"
+        "warrantyExpireDate": "2020-11-20",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-24957945",
@@ -1633,12 +15914,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "四川省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "成都鹰阁医院",
         "channelName": "成都鹰阁医院",
         "salesName": "WEST-SW",
         "salesDate": "2018-05-24",
         "installDate": "2018-10-31",
-        "warrantyExpireDate": "2020-11-20"
+        "warrantyExpireDate": "2020-11-20",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25320310",
@@ -1647,12 +15932,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "贵州省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "盘州市人民医院",
         "channelName": "盘州市人民医院",
         "salesName": "WEST-SW",
         "salesDate": "2018-11-15",
         "installDate": "2018-12-04",
-        "warrantyExpireDate": "2020-09-04"
+        "warrantyExpireDate": "2020-09-04",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25429063",
@@ -1661,12 +15950,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海理雄医疗器械有限公司",
         "channelName": "上海理雄医疗器械有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2019-01-15",
         "installDate": "2019-02-12",
-        "warrantyExpireDate": "2021-03-28"
+        "warrantyExpireDate": "2021-03-28",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25589127",
@@ -1675,12 +15968,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "山东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "威海市中心医院",
         "channelName": "上海薇奋医疗设备有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2019-04-03",
         "installDate": "2019-04-18",
-        "warrantyExpireDate": "2021-05-12"
+        "warrantyExpireDate": "2021-05-12",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25589128",
@@ -1689,12 +15986,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "山东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "威海市中心医院",
         "channelName": "上海薇奋医疗设备有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2019-04-03",
         "installDate": "2019-04-30",
-        "warrantyExpireDate": "2021-05-12"
+        "warrantyExpireDate": "2021-05-12",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25602889",
@@ -1703,12 +16004,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州圣佑贸易有限公司",
         "channelName": "广州圣佑贸易有限公司",
         "salesName": "SOUTH",
         "salesDate": "2019-04-10",
         "installDate": "2019-04-30",
-        "warrantyExpireDate": "2020-11-15"
+        "warrantyExpireDate": "2020-11-15",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25808012",
@@ -1717,12 +16022,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "重庆市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "重庆大学附属肿瘤医院",
         "channelName": "重庆大学附属肿瘤医院",
         "salesName": "WEST-SW",
         "salesDate": "2019-07-30",
         "installDate": "2019-08-27",
-        "warrantyExpireDate": "2022-10-17"
+        "warrantyExpireDate": "2022-10-17",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25808013",
@@ -1731,12 +16040,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "重庆市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "重庆大学附属肿瘤医院",
         "channelName": "重庆大学附属肿瘤医院",
         "salesName": "WEST-SW",
         "salesDate": "2019-07-30",
         "installDate": "2019-08-27",
-        "warrantyExpireDate": "2022-10-17"
+        "warrantyExpireDate": "2022-10-17",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25824117",
@@ -1745,12 +16058,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "山西省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "太原市妇幼保健院",
         "channelName": "山西精准互联科技发展有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2019-08-08",
         "installDate": "2019-09-05",
-        "warrantyExpireDate": "2022-05-09"
+        "warrantyExpireDate": "2022-05-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25881972",
@@ -1759,12 +16076,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "湖北省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "荆州市智慧城市科技股份有限公司",
         "channelName": "荆州市智慧城市科技股份有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2019-09-11",
         "installDate": "2019-09-24",
-        "warrantyExpireDate": "2021-05-28"
+        "warrantyExpireDate": "2021-05-28",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25881973",
@@ -1773,12 +16094,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "湖北省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "荆州市智慧城市科技股份有限公司",
         "channelName": "荆州市智慧城市科技股份有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2019-09-11",
         "installDate": "2019-09-24",
-        "warrantyExpireDate": "2021-05-28"
+        "warrantyExpireDate": "2021-05-28",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25881974",
@@ -1787,12 +16112,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "湖北省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "荆州市智慧城市科技股份有限公司",
         "channelName": "荆州市智慧城市科技股份有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2019-09-11",
         "installDate": "2019-09-24",
-        "warrantyExpireDate": "2021-05-28"
+        "warrantyExpireDate": "2021-05-28",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25882112",
@@ -1801,12 +16130,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "江苏省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "常州市中医医院",
         "channelName": "上海鸿煊医药科技有限公司",
         "salesName": "EAST1",
         "salesDate": "2019-09-11",
         "installDate": "2019-10-10",
-        "warrantyExpireDate": "2021-05-11"
+        "warrantyExpireDate": "2021-05-11",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25920029",
@@ -1815,12 +16148,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "四川省",
+        "installCity": "广元",
+        "salesRegion": "",
         "terminalUser": "广元市中心医院",
         "channelName": "上饶市欧诺医疗设备有限公司",
         "salesName": "WEST-SW",
         "salesDate": "2019-09-27",
         "installDate": "2019-10-24",
-        "warrantyExpireDate": "2021-03-05"
+        "warrantyExpireDate": "2021-03-05",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25925643",
@@ -1829,12 +16166,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "杭州市儿童医院",
         "channelName": "杭州首术科技有限公司",
         "salesName": "EAST2",
         "salesDate": "2019-10-01",
         "installDate": "2019-10-29",
-        "warrantyExpireDate": "2021-11-09"
+        "warrantyExpireDate": "2021-11-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25952068",
@@ -1843,12 +16184,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "北京市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "中国医学科学院北京协和医院",
         "channelName": "上海祥琪瑞医疗器械设备中心",
         "salesName": "NORTH-SW",
         "salesDate": "2019-10-11",
         "installDate": "2019-11-07",
-        "warrantyExpireDate": "2024-10-20"
+        "warrantyExpireDate": "2024-10-20",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25968173",
@@ -1857,12 +16202,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "浙江省",
+        "installCity": "金华",
+        "salesRegion": "",
         "terminalUser": "金华市人民医院",
         "channelName": "杭州首术科技有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2019-10-18",
         "installDate": "2019-11-07",
-        "warrantyExpireDate": "2023-03-06"
+        "warrantyExpireDate": "2023-03-06",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25974372",
@@ -1871,12 +16220,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海理雄医疗器械有限公司",
         "channelName": "上海理雄医疗器械有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2019-10-22",
         "installDate": "2019-11-12",
-        "warrantyExpireDate": "2021-05-28"
+        "warrantyExpireDate": "2021-05-28",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25952060",
@@ -1885,12 +16238,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海祥琪瑞医疗器械设备中心",
         "channelName": "上海祥琪瑞医疗器械设备中心",
         "salesName": "GDUMMY",
         "salesDate": "2019-10-11",
         "installDate": "2019-11-14",
-        "warrantyExpireDate": "2021-06-22"
+        "warrantyExpireDate": "2021-06-22",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-26012008",
@@ -1899,12 +16256,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "湖北省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "国药集团湖北省医疗器械有限公司",
         "channelName": "国药集团湖北省医疗器械有限公司",
         "salesName": "EAST2",
         "salesDate": "2019-11-05",
         "installDate": "2019-11-21",
-        "warrantyExpireDate": "2021-11-20"
+        "warrantyExpireDate": "2021-11-20",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25974371",
@@ -1913,12 +16274,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海理雄医疗器械有限公司",
         "channelName": "上海理雄医疗器械有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2019-10-22",
         "installDate": "2019-11-29",
-        "warrantyExpireDate": "2021-05-28"
+        "warrantyExpireDate": "2021-05-28",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-26074088",
@@ -1927,12 +16292,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海瑶革医疗设备有限公司",
         "channelName": "上海瑶革医疗设备有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2019-11-28",
         "installDate": "2019-12-27",
-        "warrantyExpireDate": "2021-12-17"
+        "warrantyExpireDate": "2021-12-17",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-26074089",
@@ -1941,12 +16310,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海瑶革医疗设备有限公司",
         "channelName": "上海瑶革医疗设备有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2019-11-28",
         "installDate": "2019-12-27",
-        "warrantyExpireDate": "2021-12-17"
+        "warrantyExpireDate": "2021-12-17",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25929175",
@@ -1955,12 +16328,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "江西省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "南昌大学第一附属医院象湖院区",
         "channelName": "江西利恒医药有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2019-10-02",
         "installDate": "2020-01-28",
-        "warrantyExpireDate": "2022-11-21"
+        "warrantyExpireDate": "2022-11-21",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25929176",
@@ -1969,12 +16346,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "江西省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "南昌大学第一附属医院象湖院区",
         "channelName": "江西利恒医药有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2019-10-02",
         "installDate": "2020-01-28",
-        "warrantyExpireDate": "2022-11-21"
+        "warrantyExpireDate": "2022-11-21",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-26135810",
@@ -1983,12 +16364,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "浙江省",
+        "installCity": "湖州",
+        "salesRegion": "",
         "terminalUser": "湖州市中心医院",
         "channelName": "杭州首术科技有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2020-01-08",
         "installDate": "2020-01-30",
-        "warrantyExpireDate": "2021-11-08"
+        "warrantyExpireDate": "2021-11-08",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-26135811",
@@ -1997,12 +16382,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "温州市瓯江口新区医院",
         "channelName": "杭州首术科技有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2020-01-08",
         "installDate": "2020-01-30",
-        "warrantyExpireDate": "2021-11-17"
+        "warrantyExpireDate": "2021-11-17",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-26151851",
@@ -2011,12 +16400,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "湖北省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "泰康同济（武汉）医院",
         "channelName": "成都裕康医疗设备有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2020-01-17",
         "installDate": "2020-02-18",
-        "warrantyExpireDate": "2021-10-20"
+        "warrantyExpireDate": "2021-10-20",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-26151856",
@@ -2025,12 +16418,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
         "terminalUser": "深圳市人民医院",
         "channelName": "广州圣佑贸易有限公司",
         "salesName": "SOUTH",
         "salesDate": "2020-01-17",
         "installDate": "2020-02-18",
-        "warrantyExpireDate": "2022-08-15"
+        "warrantyExpireDate": "2022-08-15",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-26259085",
@@ -2039,12 +16436,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "江苏省",
+        "installCity": "无锡",
+        "salesRegion": "",
         "terminalUser": "江南大学附属医院",
         "channelName": "上海加越医疗科技有限公司",
         "salesName": "EAST1",
         "salesDate": "2020-03-12",
         "installDate": "2020-04-09",
-        "warrantyExpireDate": "2021-10-29"
+        "warrantyExpireDate": "2021-10-29",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-26265673",
@@ -2053,12 +16454,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "海南省",
+        "installCity": "海口",
+        "salesRegion": "",
         "terminalUser": "海南省人民医院",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2020-03-16",
         "installDate": "2020-04-09",
-        "warrantyExpireDate": "2025-12-25"
+        "warrantyExpireDate": "2025-12-25",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-26574700",
@@ -2067,12 +16472,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "山西省",
+        "installCity": "太原",
+        "salesRegion": "",
         "terminalUser": "山西省人民医院",
         "channelName": "山西省人民医院",
         "salesName": "NORTH",
         "salesDate": "2020-07-07",
         "installDate": "2020-07-30",
-        "warrantyExpireDate": "2022-01-31"
+        "warrantyExpireDate": "2022-01-31",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-26574701",
@@ -2081,12 +16490,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "山西省",
+        "installCity": "太原",
+        "salesRegion": "",
         "terminalUser": "山西省人民医院",
         "channelName": "山西精准互联科技发展有限公司",
         "salesName": "NORTH",
         "salesDate": "2020-07-07",
         "installDate": "2020-07-30",
-        "warrantyExpireDate": "2022-01-31"
+        "warrantyExpireDate": "2022-01-31",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-26593348",
@@ -2095,12 +16508,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州市合众汇达医疗科技有限公司",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2020-07-10",
         "installDate": "2020-08-14",
-        "warrantyExpireDate": "2022-02-27"
+        "warrantyExpireDate": "2022-02-27",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25702974",
@@ -2109,12 +16526,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "江西省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "南昌大学第一附属医院象湖院区",
         "channelName": "江西利恒医药有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2019-06-05",
         "installDate": "2020-08-27",
-        "warrantyExpireDate": "2021-11-15"
+        "warrantyExpireDate": "2021-11-15",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27060062",
@@ -2123,12 +16544,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
         "terminalUser": "成都市温江区人民医院",
         "channelName": "江西萨康生物科技有限公司",
         "salesName": "WEST-SW",
         "salesDate": "2020-10-16",
         "installDate": "2020-10-30",
-        "warrantyExpireDate": "2022-09-17"
+        "warrantyExpireDate": "2022-09-17",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27180048",
@@ -2137,12 +16562,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "浙江省",
+        "installCity": "杭州",
+        "salesRegion": "",
         "terminalUser": "浙江省人民医院",
         "channelName": "杭州大沨医疗器械有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2020-11-20",
         "installDate": "2020-12-03",
-        "warrantyExpireDate": "2023-12-30"
+        "warrantyExpireDate": "2023-12-30",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27180049",
@@ -2151,12 +16580,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "浙江省",
+        "installCity": "杭州",
+        "salesRegion": "",
         "terminalUser": "浙江省人民医院",
         "channelName": "杭州大沨医疗器械有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2020-11-20",
         "installDate": "2020-12-03",
-        "warrantyExpireDate": "2023-12-30"
+        "warrantyExpireDate": "2023-12-30",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27140248",
@@ -2165,12 +16598,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "浙江省",
+        "installCity": "温州",
+        "salesRegion": "",
         "terminalUser": "温州医科大学附属第二医院龙湾院区",
         "channelName": "杭州首术科技有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2020-11-06",
         "installDate": "2020-12-11",
-        "warrantyExpireDate": "2022-03-23"
+        "warrantyExpireDate": "2022-03-23",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27189733",
@@ -2179,12 +16616,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
         "terminalUser": "成都京东方医院",
         "channelName": "江西腾步科技有限公司",
         "salesName": "WEST-ACT",
         "salesDate": "2020-11-24",
         "installDate": "2020-12-22",
-        "warrantyExpireDate": "2022-05-30"
+        "warrantyExpireDate": "2022-05-30",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27189734",
@@ -2193,12 +16634,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
         "terminalUser": "成都京东方医院",
         "channelName": "江西腾步科技有限公司",
         "salesName": "WEST-ACT",
         "salesDate": "2020-11-24",
         "installDate": "2020-12-22",
-        "warrantyExpireDate": "2022-05-30"
+        "warrantyExpireDate": "2022-05-30",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-25702975",
@@ -2207,12 +16652,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "江苏省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "南京市浦口医院",
         "channelName": "厦门建发高科有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2019-06-05",
         "installDate": "2021-01-13",
-        "warrantyExpireDate": "2023-11-10"
+        "warrantyExpireDate": "2023-11-10",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27274143",
@@ -2221,12 +16670,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "浙江中医药大学附属第三医院",
         "channelName": "杭州首术科技有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2021-01-11",
         "installDate": "2021-01-29",
-        "warrantyExpireDate": "2022-12-28"
+        "warrantyExpireDate": "2022-12-28",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27347598",
@@ -2235,12 +16688,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "山西省",
+        "installCity": "太原",
+        "salesRegion": "",
         "terminalUser": "山西省心血管病医院",
         "channelName": "山西精准互联科技发展有限公司",
         "salesName": "NORTH-SW",
         "salesDate": "2021-02-02",
         "installDate": "2021-02-26",
-        "warrantyExpireDate": "2023-05-19"
+        "warrantyExpireDate": "2023-05-19",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27470142",
@@ -2249,12 +16706,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "上海",
+        "salesRegion": "",
         "terminalUser": "上海交通大学医学院附属上海儿童医学中心",
         "channelName": "逸佰医疗科技发展（上海）有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2021-03-02",
         "installDate": "2021-03-26",
-        "warrantyExpireDate": "2023-07-13"
+        "warrantyExpireDate": "2023-07-13",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27559952",
@@ -2263,12 +16724,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州泰和肿瘤医院",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2021-03-23",
         "installDate": "2021-04-08",
-        "warrantyExpireDate": "2023-12-09"
+        "warrantyExpireDate": "2023-12-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27559953",
@@ -2277,12 +16742,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州泰和肿瘤医院",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2021-03-23",
         "installDate": "2021-04-08",
-        "warrantyExpireDate": "2023-12-09"
+        "warrantyExpireDate": "2023-12-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27559954",
@@ -2291,12 +16760,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州泰和肿瘤医院",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2021-03-23",
         "installDate": "2021-04-08",
-        "warrantyExpireDate": "2023-12-09"
+        "warrantyExpireDate": "2023-12-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27559955",
@@ -2305,12 +16778,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州泰和肿瘤医院",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2021-03-23",
         "installDate": "2021-04-08",
-        "warrantyExpireDate": "2023-12-09"
+        "warrantyExpireDate": "2023-12-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27579663",
@@ -2319,12 +16796,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "福建省",
+        "installCity": "晋江",
+        "salesRegion": "",
         "terminalUser": "晋江市医院",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2021-03-26",
         "installDate": "2021-04-19",
-        "warrantyExpireDate": "2023-12-26"
+        "warrantyExpireDate": "2023-12-26",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27579664",
@@ -2333,12 +16814,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "福建省",
+        "installCity": "晋江",
+        "salesRegion": "",
         "terminalUser": "晋江市医院",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2021-03-26",
         "installDate": "2021-04-19",
-        "warrantyExpireDate": "2023-12-26"
+        "warrantyExpireDate": "2023-12-26",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27702745",
@@ -2347,12 +16832,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "福建省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "福建医科大学附属协和医院旗山院区",
         "channelName": "厦门象屿速传供应链发展股份有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2021-04-28",
         "installDate": "2021-06-10",
-        "warrantyExpireDate": "2026-03-11"
+        "warrantyExpireDate": "2026-03-11",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27702746",
@@ -2361,12 +16850,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "福建省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "福建医科大学附属协和医院旗山院区",
         "channelName": "厦门象屿速传供应链发展股份有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2021-04-28",
         "installDate": "2021-06-10",
-        "warrantyExpireDate": "2026-03-11"
+        "warrantyExpireDate": "2026-03-11",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27717160",
@@ -2375,12 +16868,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "江西省",
+        "installCity": "萍乡",
+        "salesRegion": "",
         "terminalUser": "萍乡市人民医院",
         "channelName": "厦门象屿速传供应链发展股份有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2021-05-03",
         "installDate": "2021-06-21",
-        "warrantyExpireDate": "2023-10-19"
+        "warrantyExpireDate": "2023-10-19",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27915703",
@@ -2389,12 +16886,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
         "installProvince": "四川省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "邻水县人民医院",
         "channelName": "成都裕康医疗设备有限公司",
         "salesName": "WEST-SW",
         "salesDate": "2021-06-25",
         "installDate": "2021-07-23",
-        "warrantyExpireDate": "2026-10-07"
+        "warrantyExpireDate": "2026-10-07",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27997264",
@@ -2403,12 +16904,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "北京市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "北京福鼎奕隆医疗设备有限公司",
         "channelName": "北京福鼎奕隆医疗设备有限公司",
         "salesName": "1G5",
         "salesDate": "2021-07-16",
         "installDate": "2021-08-03",
-        "warrantyExpireDate": "2023-02-17"
+        "warrantyExpireDate": "2023-02-17",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-27967824",
@@ -2417,12 +16922,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "江苏省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "昆山市第一人民医院",
         "channelName": "逸佰医疗科技发展（上海）有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2021-07-08",
         "installDate": "2021-08-04",
-        "warrantyExpireDate": "2025-08-29"
+        "warrantyExpireDate": "2025-08-29",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-28059784",
@@ -2431,12 +16940,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 8 IN 8 OUT (HW)",
         "installProvince": "江苏省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "昆山市中医医院",
         "channelName": "厦门建发高科有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2021-08-17",
         "installDate": "2021-09-10",
-        "warrantyExpireDate": "2023-12-06"
+        "warrantyExpireDate": "2023-12-06",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-28251447",
@@ -2445,12 +16958,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "山东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "青岛国林国际贸易有限公司",
         "channelName": "青岛国林国际贸易有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2021-10-08",
         "installDate": "2021-11-26",
-        "warrantyExpireDate": "2023-05-25"
+        "warrantyExpireDate": "2023-05-25",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-28380151",
@@ -2459,12 +16976,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "北京市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "北京智诚恒创科技发展有限公司",
         "channelName": "北京智诚恒创科技发展有限公司",
         "salesName": "NORTH",
         "salesDate": "2021-11-12",
         "installDate": "2021-12-01",
-        "warrantyExpireDate": "2023-06-22"
+        "warrantyExpireDate": "2023-06-22",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-28444966",
@@ -2473,12 +16994,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "中山大学附属第七医院（深圳）",
         "channelName": "广东三鸿医药有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2021-11-30",
         "installDate": "2021-12-15",
-        "warrantyExpireDate": "2024-02-15"
+        "warrantyExpireDate": "2024-02-15",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-28429058",
@@ -2487,12 +17012,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海瑶革医疗设备有限公司",
         "channelName": "上海瑶革医疗设备有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2021-11-25",
         "installDate": "2021-12-17",
-        "warrantyExpireDate": "2023-09-28"
+        "warrantyExpireDate": "2023-09-28",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29240761",
@@ -2501,12 +17030,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海福吉科贸有限公司",
         "channelName": "上海福吉科贸有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2022-07-18",
         "installDate": "2022-09-29",
-        "warrantyExpireDate": "2024-04-23"
+        "warrantyExpireDate": "2024-04-23",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29240762",
@@ -2515,12 +17048,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "北京市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "北京映熹科技有限公司",
         "channelName": "北京映熹科技有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2022-07-18",
         "installDate": "2022-09-29",
-        "warrantyExpireDate": "2024-10-18"
+        "warrantyExpireDate": "2024-10-18",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29240763",
@@ -2529,12 +17066,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "天津市",
+        "installCity": "天津",
+        "salesRegion": "",
         "terminalUser": "天津康汇医院",
         "channelName": "天津世纪瀛海科技有限公司",
         "salesName": "NORTH-SW",
         "salesDate": "2022-07-18",
         "installDate": "2022-09-29",
-        "warrantyExpireDate": "2026-10-20"
+        "warrantyExpireDate": "2026-10-20",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29240764",
@@ -2543,12 +17084,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "中建投（广东）国际贸易有限公司",
         "channelName": "中建投（广东）国际贸易有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2022-07-18",
         "installDate": "2022-09-29",
-        "warrantyExpireDate": "2026-12-02"
+        "warrantyExpireDate": "2026-12-02",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29240765",
@@ -2557,12 +17102,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "湖北省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "华中科技大学同济医学院附属梨园医院",
         "channelName": "中建投（广东）国际贸易有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2022-07-18",
         "installDate": "2022-09-29",
-        "warrantyExpireDate": "2027-01-04"
+        "warrantyExpireDate": "2027-01-04",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29372108",
@@ -2571,12 +17120,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "江苏省",
+        "installCity": "宜兴",
+        "salesRegion": "",
         "terminalUser": "宜兴市人民医院",
         "channelName": "宜兴市人民医院",
         "salesName": "EAST-SW",
         "salesDate": "2022-09-06",
         "installDate": "2022-09-29",
-        "warrantyExpireDate": "2025-09-03"
+        "warrantyExpireDate": "2025-09-03",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29334178",
@@ -2585,12 +17138,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "江西省",
+        "installCity": "九江",
+        "salesRegion": "",
         "terminalUser": "九江学院第二附属医院",
         "channelName": "九江学院第二附属医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2022-08-26",
         "installDate": "2022-10-12",
-        "warrantyExpireDate": "2024-10-11"
+        "warrantyExpireDate": "2024-10-11",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29311491",
@@ -2599,12 +17156,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州市胸科医院",
         "channelName": "广州市胸科医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2022-08-19",
         "installDate": "2022-12-13",
-        "warrantyExpireDate": "2025-08-14"
+        "warrantyExpireDate": "2025-08-14",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29311492",
@@ -2613,12 +17174,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州市胸科医院",
         "channelName": "广州市胸科医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2022-08-19",
         "installDate": "2022-12-13",
-        "warrantyExpireDate": "2025-08-14"
+        "warrantyExpireDate": "2025-08-14",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29240897",
@@ -2627,12 +17192,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "四川省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "四川思芃商贸有限公司",
         "channelName": "四川思芃商贸有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2022-07-18",
         "installDate": "2022-12-15",
-        "warrantyExpireDate": "2027-06-26"
+        "warrantyExpireDate": "2027-06-26",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29240898",
@@ -2641,12 +17210,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州市合众汇达医疗科技有限公司",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2022-07-18",
         "installDate": "2022-12-15",
-        "warrantyExpireDate": "2027-06-29"
+        "warrantyExpireDate": "2027-06-29",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29262006",
@@ -2655,12 +17228,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "四川省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "四川思芃商贸有限公司",
         "channelName": "四川思芃商贸有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2022-07-22",
         "installDate": "2022-12-15",
-        "warrantyExpireDate": "2027-06-26"
+        "warrantyExpireDate": "2027-06-26",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29262007",
@@ -2669,12 +17246,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "四川省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "四川思芃商贸有限公司",
         "channelName": "四川思芃商贸有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2022-07-22",
         "installDate": "2022-12-15",
-        "warrantyExpireDate": "2027-06-26"
+        "warrantyExpireDate": "2027-06-26",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29262008",
@@ -2683,12 +17264,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "四川省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "四川思芃商贸有限公司",
         "channelName": "四川思芃商贸有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2022-07-22",
         "installDate": "2022-12-15",
-        "warrantyExpireDate": "2027-06-26"
+        "warrantyExpireDate": "2027-06-26",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29262009",
@@ -2697,12 +17282,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "四川省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "四川思芃商贸有限公司",
         "channelName": "四川思芃商贸有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2022-07-22",
         "installDate": "2022-12-15",
-        "warrantyExpireDate": "2027-06-26"
+        "warrantyExpireDate": "2027-06-26",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29262010",
@@ -2711,12 +17300,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "四川省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "四川思芃商贸有限公司",
         "channelName": "四川思芃商贸有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2022-07-22",
         "installDate": "2022-12-15",
-        "warrantyExpireDate": "2027-06-26"
+        "warrantyExpireDate": "2027-06-26",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29488473",
@@ -2725,12 +17318,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
         "terminalUser": "四川泰康医院",
         "channelName": "四川泰康医院",
         "salesName": "WEST-SW",
         "salesDate": "2022-10-07",
         "installDate": "2022-12-19",
-        "warrantyExpireDate": "2025-09-22"
+        "warrantyExpireDate": "2025-09-22",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29488474",
@@ -2739,12 +17336,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
         "terminalUser": "四川泰康医院",
         "channelName": "四川泰康医院",
         "salesName": "WEST-SW",
         "salesDate": "2022-10-07",
         "installDate": "2022-12-19",
-        "warrantyExpireDate": "2025-09-22"
+        "warrantyExpireDate": "2025-09-22",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29488475",
@@ -2753,12 +17354,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
         "terminalUser": "四川泰康医院",
         "channelName": "四川泰康医院",
         "salesName": "WEST-SW",
         "salesDate": "2022-10-07",
         "installDate": "2022-12-19",
-        "warrantyExpireDate": "2025-09-22"
+        "warrantyExpireDate": "2025-09-22",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29488476",
@@ -2767,12 +17372,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
         "terminalUser": "四川泰康医院",
         "channelName": "四川泰康医院",
         "salesName": "WEST-SW",
         "salesDate": "2022-10-07",
         "installDate": "2022-12-19",
-        "warrantyExpireDate": "2025-09-22"
+        "warrantyExpireDate": "2025-09-22",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29488477",
@@ -2781,12 +17390,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "四川省",
+        "installCity": "成都",
+        "salesRegion": "",
         "terminalUser": "四川泰康医院",
         "channelName": "四川泰康医院",
         "salesName": "WEST-SW",
         "salesDate": "2022-10-07",
         "installDate": "2022-12-19",
-        "warrantyExpireDate": "2025-09-22"
+        "warrantyExpireDate": "2025-09-22",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29520305",
@@ -2795,12 +17408,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "宁波",
+        "salesRegion": "",
         "terminalUser": "宁波市医疗中心李惠利医院",
         "channelName": "宁波市医疗中心李惠利医院",
         "salesName": "EAST-SW",
         "salesDate": "2022-10-14",
         "installDate": "2022-12-19",
-        "warrantyExpireDate": "2024-08-24"
+        "warrantyExpireDate": "2024-08-24",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29520306",
@@ -2809,12 +17426,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "宁波",
+        "salesRegion": "",
         "terminalUser": "宁波市医疗中心李惠利医院",
         "channelName": "宁波市医疗中心李惠利医院",
         "salesName": "EAST-SW",
         "salesDate": "2022-10-14",
         "installDate": "2022-12-19",
-        "warrantyExpireDate": "2028-08-24"
+        "warrantyExpireDate": "2028-08-24",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29520307",
@@ -2823,12 +17444,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "宁波",
+        "salesRegion": "",
         "terminalUser": "宁波市医疗中心李惠利医院",
         "channelName": "宁波市医疗中心李惠利医院",
         "salesName": "EAST-SW",
         "salesDate": "2022-10-14",
         "installDate": "2022-12-19",
-        "warrantyExpireDate": "2028-08-24"
+        "warrantyExpireDate": "2028-08-24",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29520308",
@@ -2837,12 +17462,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "宁波市医疗中心李惠利东部医院",
         "channelName": "宁波市医疗中心李惠利东部医院",
         "salesName": "EAST-SW",
         "salesDate": "2022-10-14",
         "installDate": "2022-12-19",
-        "warrantyExpireDate": "2028-11-30"
+        "warrantyExpireDate": "2028-11-30",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29520309",
@@ -2851,12 +17480,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "宁波市医疗中心李惠利东部医院",
         "channelName": "宁波市医疗中心李惠利东部医院",
         "salesName": "WEST-SW",
         "salesDate": "2022-10-14",
         "installDate": "2022-12-19",
-        "warrantyExpireDate": "2028-11-30"
+        "warrantyExpireDate": "2028-11-30",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29649642",
@@ -2865,12 +17498,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
         "terminalUser": "华中科技大学协和深圳医院",
         "channelName": "广东三鸿医药有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2022-11-21",
         "installDate": "2022-12-29",
-        "warrantyExpireDate": "2025-12-15"
+        "warrantyExpireDate": "2025-12-15",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29649643",
@@ -2879,12 +17516,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
         "terminalUser": "华中科技大学协和深圳医院",
         "channelName": "广东三鸿医药有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2022-11-21",
         "installDate": "2022-12-29",
-        "warrantyExpireDate": "2025-12-15"
+        "warrantyExpireDate": "2025-12-15",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29649644",
@@ -2893,12 +17534,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "广东省",
+        "installCity": "深圳",
+        "salesRegion": "",
         "terminalUser": "华中科技大学协和深圳医院",
         "channelName": "广东三鸿医药有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2022-11-21",
         "installDate": "2022-12-29",
-        "warrantyExpireDate": "2025-12-15"
+        "warrantyExpireDate": "2025-12-15",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29649645",
@@ -2907,12 +17552,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "天津市",
+        "installCity": "天津",
+        "salesRegion": "",
         "terminalUser": "天津医科大学第二医院",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "NORTH-SW",
         "salesDate": "2022-11-21",
         "installDate": "2022-12-29",
-        "warrantyExpireDate": "2026-04-12"
+        "warrantyExpireDate": "2026-04-12",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29649646",
@@ -2921,12 +17570,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海市静安区华东医院",
         "channelName": "上海理雄医疗器械有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2022-11-21",
         "installDate": "2022-12-29",
-        "warrantyExpireDate": "2026-03-11"
+        "warrantyExpireDate": "2026-03-11",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29649647",
@@ -2935,12 +17588,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
         "installProvince": "湖北省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "武汉市青山区华润武钢总医院",
         "channelName": "中建投（广东）国际贸易有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2022-11-21",
         "installDate": "2022-12-29",
-        "warrantyExpireDate": "2026-12-24"
+        "warrantyExpireDate": "2026-12-24",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-29765725",
@@ -2949,12 +17606,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "山东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "山东省公共卫生临床中心",
         "channelName": "山东省公共卫生临床中心",
         "salesName": "NORTH-SW",
         "salesDate": "2022-12-20",
         "installDate": "2023-01-23",
-        "warrantyExpireDate": "2024-03-07"
+        "warrantyExpireDate": "2024-03-07",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-30168353",
@@ -2963,12 +17624,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "江苏省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "江苏省中西医结合医院",
         "channelName": "上海万淇生物科技有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2023-04-12",
         "installDate": "2023-04-28",
-        "warrantyExpireDate": "2026-10-10"
+        "warrantyExpireDate": "2026-10-10",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-30168354",
@@ -2977,12 +17642,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "江苏省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "江苏省中西医结合医院",
         "channelName": "上海万淇生物科技有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2023-04-12",
         "installDate": "2023-04-28",
-        "warrantyExpireDate": "2026-10-10"
+        "warrantyExpireDate": "2026-10-10",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-30168355",
@@ -2991,12 +17660,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "江苏省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "江苏省中西医结合医院",
         "channelName": "上海万淇生物科技有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2023-04-12",
         "installDate": "2023-04-28",
-        "warrantyExpireDate": "2026-10-10"
+        "warrantyExpireDate": "2026-10-10",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-30168356",
@@ -3005,12 +17678,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "江苏省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "江苏省中西医结合医院",
         "channelName": "上海万淇生物科技有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2023-04-12",
         "installDate": "2023-04-28",
-        "warrantyExpireDate": "2026-10-10"
+        "warrantyExpireDate": "2026-10-10",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-30345741",
@@ -3019,12 +17696,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "湖南省",
+        "installCity": "长沙",
+        "salesRegion": "",
         "terminalUser": "中南大学湘雅二医院",
         "channelName": "中南大学湘雅二医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2023-05-31",
         "installDate": "2023-06-14",
-        "warrantyExpireDate": "2025-08-18"
+        "warrantyExpireDate": "2025-08-18",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-30345742",
@@ -3033,12 +17714,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "湖南省",
+        "installCity": "长沙",
+        "salesRegion": "",
         "terminalUser": "中南大学湘雅二医院",
         "channelName": "中南大学湘雅二医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2023-05-31",
         "installDate": "2023-06-14",
-        "warrantyExpireDate": "2025-08-18"
+        "warrantyExpireDate": "2025-08-18",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-30345743",
@@ -3047,12 +17732,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "湖南省",
+        "installCity": "长沙",
+        "salesRegion": "",
         "terminalUser": "中南大学湘雅二医院",
         "channelName": "中南大学湘雅二医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2023-05-31",
         "installDate": "2023-06-14",
-        "warrantyExpireDate": "2025-08-18"
+        "warrantyExpireDate": "2025-08-18",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-30352522",
@@ -3061,12 +17750,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "湖南省",
+        "installCity": "长沙",
+        "salesRegion": "",
         "terminalUser": "中南大学湘雅二医院",
         "channelName": "中南大学湘雅二医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2023-06-01",
         "installDate": "2023-06-14",
-        "warrantyExpireDate": "2025-08-18"
+        "warrantyExpireDate": "2025-08-18",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-30428344",
@@ -3075,12 +17768,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州富力医院",
         "channelName": "广州富力医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2023-06-23",
         "installDate": "2023-07-11",
-        "warrantyExpireDate": "2025-10-14"
+        "warrantyExpireDate": "2025-10-14",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-30442870",
@@ -3089,12 +17786,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "宁波泰康脑科医院",
         "channelName": "宁波泰甬置业有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2023-06-28",
         "installDate": "2023-07-31",
-        "warrantyExpireDate": "2026-06-09"
+        "warrantyExpireDate": "2026-06-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-30442871",
@@ -3103,12 +17804,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "宁波泰康脑科医院",
         "channelName": "宁波泰甬置业有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2023-06-28",
         "installDate": "2023-07-31",
-        "warrantyExpireDate": "2026-06-09"
+        "warrantyExpireDate": "2026-06-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-30442872",
@@ -3117,12 +17822,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "宁波泰康脑科医院",
         "channelName": "宁波泰甬置业有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2023-06-28",
         "installDate": "2023-07-31",
-        "warrantyExpireDate": "2026-06-09"
+        "warrantyExpireDate": "2026-06-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-30578939",
@@ -3131,12 +17840,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "甘肃省",
+        "installCity": "兰州",
+        "salesRegion": "",
         "terminalUser": "甘肃省中医院",
         "channelName": "西安宏亚安正科技有限公司",
         "salesName": "WEST-SW",
         "salesDate": "2023-08-18",
         "installDate": "2023-09-05",
-        "warrantyExpireDate": "2026-03-14"
+        "warrantyExpireDate": "2026-03-14",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-30578940",
@@ -3145,12 +17858,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "甘肃省",
+        "installCity": "兰州",
+        "salesRegion": "",
         "terminalUser": "甘肃省中医院",
         "channelName": "西安宏亚安正科技有限公司",
         "salesName": "WEST-SW",
         "salesDate": "2023-08-18",
         "installDate": "2023-09-05",
-        "warrantyExpireDate": "2026-03-14"
+        "warrantyExpireDate": "2026-03-14",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-30578941",
@@ -3159,12 +17876,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "甘肃省",
+        "installCity": "兰州",
+        "salesRegion": "",
         "terminalUser": "甘肃省中医院",
         "channelName": "西安宏亚安正科技有限公司",
         "salesName": "WEST-SW",
         "salesDate": "2023-08-18",
         "installDate": "2023-09-05",
-        "warrantyExpireDate": "2026-03-14"
+        "warrantyExpireDate": "2026-03-14",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-31541534",
@@ -3173,12 +17894,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "江苏省",
+        "installCity": "无锡",
+        "salesRegion": "",
         "terminalUser": "无锡市人民医院",
         "channelName": "北京世纪凯盈科学仪器有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2023-09-27",
         "installDate": "2023-10-25",
-        "warrantyExpireDate": "2026-05-09"
+        "warrantyExpireDate": "2026-05-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-31541535",
@@ -3187,12 +17912,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "江苏省",
+        "installCity": "无锡",
+        "salesRegion": "",
         "terminalUser": "无锡市人民医院",
         "channelName": "北京世纪凯盈科学仪器有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2023-09-27",
         "installDate": "2023-10-25",
-        "warrantyExpireDate": "2026-05-09"
+        "warrantyExpireDate": "2026-05-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32390908",
@@ -3201,12 +17930,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "深圳前海泰康医院",
         "channelName": "深圳前海泰康医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2023-10-11",
         "installDate": "2023-11-16",
-        "warrantyExpireDate": "2026-07-09"
+        "warrantyExpireDate": "2026-07-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32390909",
@@ -3215,12 +17948,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "深圳前海泰康医院",
         "channelName": "深圳前海泰康医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2023-10-11",
         "installDate": "2023-11-16",
-        "warrantyExpireDate": "2026-07-09"
+        "warrantyExpireDate": "2026-07-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32390911",
@@ -3229,12 +17966,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "深圳前海泰康医院",
         "channelName": "深圳前海泰康医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2023-10-11",
         "installDate": "2023-11-16",
-        "warrantyExpireDate": "2026-07-09"
+        "warrantyExpireDate": "2026-07-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32394893",
@@ -3243,12 +17984,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "深圳前海泰康医院",
         "channelName": "深圳前海泰康医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2023-10-12",
         "installDate": "2023-11-16",
-        "warrantyExpireDate": "2026-07-09"
+        "warrantyExpireDate": "2026-07-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32444997",
@@ -3257,12 +18002,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "四川省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "绵阳市中医医院",
         "channelName": "成都裕康医疗设备有限公司",
         "salesName": "WEST-SW",
         "salesDate": "2023-10-26",
         "installDate": "2023-11-16",
-        "warrantyExpireDate": "2026-10-17"
+        "warrantyExpireDate": "2026-10-17",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32456858",
@@ -3271,12 +18020,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "深圳前海泰康医院",
         "channelName": "深圳前海泰康医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2023-10-30",
         "installDate": "2023-11-16",
-        "warrantyExpireDate": "2026-07-09"
+        "warrantyExpireDate": "2026-07-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32456859",
@@ -3285,12 +18038,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "深圳前海泰康医院",
         "channelName": "深圳前海泰康医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2023-10-30",
         "installDate": "2023-11-16",
-        "warrantyExpireDate": "2026-07-09"
+        "warrantyExpireDate": "2026-07-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32456860",
@@ -3299,12 +18056,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "深圳前海泰康医院",
         "channelName": "深圳前海泰康医院",
         "salesName": "SOUTH-SW",
         "salesDate": "2023-10-30",
         "installDate": "2023-11-16",
-        "warrantyExpireDate": "2026-07-09"
+        "warrantyExpireDate": "2026-07-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32467892",
@@ -3313,12 +18074,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "浙江大学国际健康医学研究院",
         "channelName": "杭州星灿生物技术有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2023-11-02",
         "installDate": "2023-11-29",
-        "warrantyExpireDate": "2025-06-29"
+        "warrantyExpireDate": "2025-06-29",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32750263",
@@ -3327,12 +18092,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "杭州市临安区第一人民医院",
         "channelName": "杭州大沨医疗器械有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2024-01-24",
         "installDate": "2024-02-08",
-        "warrantyExpireDate": "2026-02-24"
+        "warrantyExpireDate": "2026-02-24",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32698997",
@@ -3341,12 +18110,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "珠海市人民医院医疗集团",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2024-01-12",
         "installDate": "2024-03-07",
-        "warrantyExpireDate": "2027-01-08"
+        "warrantyExpireDate": "2027-01-08",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32698998",
@@ -3355,12 +18128,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "珠海市人民医院医疗集团",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2024-01-12",
         "installDate": "2024-03-07",
-        "warrantyExpireDate": "2027-01-08"
+        "warrantyExpireDate": "2027-01-08",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32698999",
@@ -3369,12 +18146,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "珠海市人民医院医疗集团",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2024-01-12",
         "installDate": "2024-03-07",
-        "warrantyExpireDate": "2027-01-08"
+        "warrantyExpireDate": "2027-01-08",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32699000",
@@ -3383,12 +18164,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "珠海市人民医院医疗集团",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2024-01-12",
         "installDate": "2024-03-07",
-        "warrantyExpireDate": "2027-01-08"
+        "warrantyExpireDate": "2027-01-08",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32699001",
@@ -3397,12 +18182,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "珠海市人民医院医疗集团",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2024-01-12",
         "installDate": "2024-03-07",
-        "warrantyExpireDate": "2027-01-08"
+        "warrantyExpireDate": "2027-01-08",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32699002",
@@ -3411,12 +18200,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "珠海市人民医院医疗集团",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2024-01-12",
         "installDate": "2024-03-07",
-        "warrantyExpireDate": "2027-01-08"
+        "warrantyExpireDate": "2027-01-08",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32869159",
@@ -3425,12 +18218,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "东莞",
+        "salesRegion": "",
         "terminalUser": "东莞市人民医院",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2024-02-26",
         "installDate": "2024-03-14",
-        "warrantyExpireDate": "2026-08-31"
+        "warrantyExpireDate": "2026-08-31",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32869160",
@@ -3439,12 +18236,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "东莞",
+        "salesRegion": "",
         "terminalUser": "东莞市人民医院",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2024-02-26",
         "installDate": "2024-03-14",
-        "warrantyExpireDate": "2026-08-31"
+        "warrantyExpireDate": "2026-08-31",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32869161",
@@ -3453,12 +18254,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广东省人民医院南海医院",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2024-02-26",
         "installDate": "2024-03-19",
-        "warrantyExpireDate": "2026-05-11"
+        "warrantyExpireDate": "2026-05-11",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32869162",
@@ -3467,12 +18272,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广东省人民医院南海医院",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "SOUTH-SW",
         "salesDate": "2024-02-26",
         "installDate": "2024-03-19",
-        "warrantyExpireDate": "2026-05-11"
+        "warrantyExpireDate": "2026-05-11",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32885897",
@@ -3481,12 +18290,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州市合众汇达医疗科技有限公司",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2024-03-01",
         "installDate": "2024-03-20",
-        "warrantyExpireDate": "2027-03-23"
+        "warrantyExpireDate": "2027-03-23",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32885898",
@@ -3495,12 +18308,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州市合众汇达医疗科技有限公司",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2024-03-01",
         "installDate": "2024-03-20",
-        "warrantyExpireDate": "2027-03-23"
+        "warrantyExpireDate": "2027-03-23",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32885899",
@@ -3509,12 +18326,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州市合众汇达医疗科技有限公司",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2024-03-01",
         "installDate": "2024-03-20",
-        "warrantyExpireDate": "2027-03-23"
+        "warrantyExpireDate": "2027-03-23",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32885900",
@@ -3523,12 +18344,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州市合众汇达医疗科技有限公司",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2024-03-01",
         "installDate": "2024-03-20",
-        "warrantyExpireDate": "2027-03-23"
+        "warrantyExpireDate": "2027-03-23",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32885901",
@@ -3537,12 +18362,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州市合众汇达医疗科技有限公司",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2024-03-01",
         "installDate": "2024-03-20",
-        "warrantyExpireDate": "2027-03-23"
+        "warrantyExpireDate": "2027-03-23",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-32885902",
@@ -3551,12 +18380,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "广东省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "广州市合众汇达医疗科技有限公司",
         "channelName": "广州市合众汇达医疗科技有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2024-03-01",
         "installDate": "2024-03-20",
-        "warrantyExpireDate": "2027-03-23"
+        "warrantyExpireDate": "2027-03-23",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-33112964",
@@ -3565,12 +18398,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "杭州大沨医疗器械有限公司",
         "channelName": "杭州大沨医疗器械有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2024-05-07",
         "installDate": "2024-06-17",
-        "warrantyExpireDate": "2026-12-30"
+        "warrantyExpireDate": "2026-12-30",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-33112965",
@@ -3579,12 +18416,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "杭州大沨医疗器械有限公司",
         "channelName": "杭州大沨医疗器械有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2024-05-07",
         "installDate": "2024-06-17",
-        "warrantyExpireDate": "2026-12-30"
+        "warrantyExpireDate": "2026-12-30",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-33112966",
@@ -3593,12 +18434,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "杭州大沨医疗器械有限公司",
         "channelName": "杭州大沨医疗器械有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2024-05-07",
         "installDate": "2024-06-17",
-        "warrantyExpireDate": "2026-12-30"
+        "warrantyExpireDate": "2026-12-30",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-33338959",
@@ -3607,12 +18452,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "贵州省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海交通大学医学院附属上海儿童医学中心贵州医院",
         "channelName": "逸佰医疗科技发展（上海）有限公司",
         "salesName": "WEST-ACT",
         "salesDate": "2024-07-16",
         "installDate": "2024-09-10",
-        "warrantyExpireDate": "2027-02-17"
+        "warrantyExpireDate": "2027-02-17",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-33338960",
@@ -3621,12 +18470,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "贵州省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海交通大学医学院附属上海儿童医学中心贵州医院",
         "channelName": "逸佰医疗科技发展（上海）有限公司",
         "salesName": "WEST-ACT",
         "salesDate": "2024-07-16",
         "installDate": "2024-09-10",
-        "warrantyExpireDate": "2027-02-17"
+        "warrantyExpireDate": "2027-02-17",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-33338961",
@@ -3635,12 +18488,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "贵州省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海交通大学医学院附属上海儿童医学中心贵州医院",
         "channelName": "逸佰医疗科技发展（上海）有限公司",
         "salesName": "WEST-ACT",
         "salesDate": "2024-07-16",
         "installDate": "2024-09-10",
-        "warrantyExpireDate": "2027-02-17"
+        "warrantyExpireDate": "2027-02-17",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-33383726",
@@ -3649,12 +18506,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "Maquet (Shanghai) Medical Equipment Co",
         "channelName": "Maquet (Shanghai) Medical Equipment Co",
         "salesName": "未填写销售",
         "salesDate": "2024-08-01",
         "installDate": "2024-09-10",
-        "warrantyExpireDate": "2026-09-09"
+        "warrantyExpireDate": "2026-09-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-33383727",
@@ -3663,12 +18524,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "Maquet (Shanghai) Medical Equipment Co",
         "channelName": "Maquet (Shanghai) Medical Equipment Co",
         "salesName": "未填写销售",
         "salesDate": "2024-08-01",
         "installDate": "2024-09-10",
-        "warrantyExpireDate": "2026-09-09"
+        "warrantyExpireDate": "2026-09-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-34082739",
@@ -3677,12 +18542,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "新昌县人民医院",
         "channelName": "MAQUET (SHANGHAI)",
         "salesName": "EAST-SW",
         "salesDate": "2025-03-19",
         "installDate": "2025-05-28",
-        "warrantyExpireDate": "2026-11-30"
+        "warrantyExpireDate": "2026-11-30",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-34082740",
@@ -3691,12 +18560,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "新昌县人民医院",
         "channelName": "MAQUET (SHANGHAI)",
         "salesName": "EAST-SW",
         "salesDate": "2025-03-19",
         "installDate": "2025-05-28",
-        "warrantyExpireDate": "2026-11-30"
+        "warrantyExpireDate": "2026-11-30",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-34706989",
@@ -3705,12 +18578,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "温州",
+        "salesRegion": "",
         "terminalUser": "温州市人民医院娄桥院区",
         "channelName": "杭州大沨医疗器械有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2025-06-24",
         "installDate": "2025-07-17",
-        "warrantyExpireDate": "2026-10-09"
+        "warrantyExpireDate": "2026-10-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-34706990",
@@ -3719,12 +18596,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "温州",
+        "salesRegion": "",
         "terminalUser": "温州市人民医院娄桥院区",
         "channelName": "杭州大沨医疗器械有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2025-06-24",
         "installDate": "2025-07-17",
-        "warrantyExpireDate": "2026-10-09"
+        "warrantyExpireDate": "2026-10-09",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-34648412",
@@ -3733,12 +18614,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "江苏省",
+        "installCity": "无锡",
+        "salesRegion": "",
         "terminalUser": "江南大学附属医院",
         "channelName": "上药医疗器械（上海）有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2025-06-05",
         "installDate": "2025-08-06",
-        "warrantyExpireDate": "2027-12-01"
+        "warrantyExpireDate": "2027-12-01",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-34648548",
@@ -3747,12 +18632,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "北京市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "北京凯隆荣锐医疗设备有限公司",
         "channelName": "北京凯隆荣锐医疗设备有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2025-06-05",
         "installDate": "2025-08-06",
-        "warrantyExpireDate": "2027-05-23"
+        "warrantyExpireDate": "2027-05-23",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-34810285",
@@ -3761,12 +18650,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "上海市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "上海市闵行区中心医院",
         "channelName": "上海理雄医疗器械有限公司",
         "salesName": "EAST-SW",
         "salesDate": "2025-07-30",
         "installDate": "2025-09-04",
-        "warrantyExpireDate": "2027-11-23"
+        "warrantyExpireDate": "2027-11-23",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-34828725",
@@ -3775,12 +18668,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "杭州星灿生物技术有限公司",
         "channelName": "杭州星灿生物技术有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2025-08-08",
         "installDate": "2025-09-11",
-        "warrantyExpireDate": "2027-03-25"
+        "warrantyExpireDate": "2027-03-25",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-34828726",
@@ -3789,12 +18686,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "杭州星灿生物技术有限公司",
         "channelName": "杭州星灿生物技术有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2025-08-08",
         "installDate": "2025-09-11",
-        "warrantyExpireDate": "2027-03-25"
+        "warrantyExpireDate": "2027-03-25",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-35104331",
@@ -3803,12 +18704,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "北京市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "北京凯隆荣锐医疗设备有限公司",
         "channelName": "北京凯隆荣锐医疗设备有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2025-11-20",
         "installDate": "2025-12-08",
-        "warrantyExpireDate": "2027-06-17"
+        "warrantyExpireDate": "2027-06-17",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-35104332",
@@ -3817,12 +18722,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "北京市",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "北京凯隆荣锐医疗设备有限公司",
         "channelName": "北京凯隆荣锐医疗设备有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2025-11-20",
         "installDate": "2025-12-08",
-        "warrantyExpireDate": "2027-06-17"
+        "warrantyExpireDate": "2027-06-17",
+        "winRate": "",
+        "gforceSystemId": ""
       },
       {
         "serialNo": "TEGRIS-35104333",
@@ -3831,12 +18740,16 @@ let dashboards = {
         "quantity": 1,
         "configDescription": "TEGRIS BASE PC (HW2)",
         "installProvince": "浙江省",
+        "installCity": "",
+        "salesRegion": "",
         "terminalUser": "杭州星灿生物技术有限公司",
         "channelName": "杭州星灿生物技术有限公司",
         "salesName": "GDUMMY",
         "salesDate": "2025-11-20",
         "installDate": "2025-12-08",
-        "warrantyExpireDate": "2027-06-25"
+        "warrantyExpireDate": "2027-06-25",
+        "winRate": "",
+        "gforceSystemId": ""
       }
     ],
     "productLineData": {
@@ -4172,12 +19085,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海市浦东新区公利医院",
             "channelName": "上海市浦东新区公利医院",
             "salesName": "EAST-SW",
             "salesDate": "2022-04-21",
             "installDate": "2022-04-21",
-            "warrantyExpireDate": "2023-03-02"
+            "warrantyExpireDate": "2023-03-02",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29512551",
@@ -4186,12 +19103,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "杭州市余杭区第一人民医院",
             "channelName": "杭州市余杭区第一人民医院",
             "salesName": "EAST-SW",
             "salesDate": "2022-10-13",
             "installDate": "2022-10-13",
-            "warrantyExpireDate": "2023-12-04"
+            "warrantyExpireDate": "2023-12-04",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-33283952",
@@ -4200,12 +19121,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州富力医院",
             "channelName": "广州富力医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2024-06-28",
             "installDate": "2024-06-28",
-            "warrantyExpireDate": "2025-10-14"
+            "warrantyExpireDate": "2025-10-14",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-33283953",
@@ -4214,12 +19139,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州富力医院",
             "channelName": "广州富力医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2024-06-28",
             "installDate": "2024-06-28",
-            "warrantyExpireDate": "2025-10-14"
+            "warrantyExpireDate": "2025-10-14",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-33283954",
@@ -4228,12 +19157,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州富力医院",
             "channelName": "广州富力医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2024-06-28",
             "installDate": "2024-06-28",
-            "warrantyExpireDate": "2025-10-14"
+            "warrantyExpireDate": "2025-10-14",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-33740213",
@@ -4242,12 +19175,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "丽水",
+            "salesRegion": "",
             "terminalUser": "丽水市人民医院",
             "channelName": "丽水市人民医院",
             "salesName": "EAST-SW",
             "salesDate": "2024-11-26",
             "installDate": "2024-11-26",
-            "warrantyExpireDate": ""
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29372108",
@@ -4256,12 +19193,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "江苏省",
+            "installCity": "宜兴",
+            "salesRegion": "",
             "terminalUser": "宜兴市人民医院",
             "channelName": "宜兴市人民医院",
             "salesName": "EAST-SW",
             "salesDate": "2022-09-06",
             "installDate": "2022-09-29",
-            "warrantyExpireDate": "2025-09-03"
+            "warrantyExpireDate": "2025-09-03",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29334178",
@@ -4270,12 +19211,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "江西省",
+            "installCity": "九江",
+            "salesRegion": "",
             "terminalUser": "九江学院第二附属医院",
             "channelName": "九江学院第二附属医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2022-08-26",
             "installDate": "2022-10-12",
-            "warrantyExpireDate": "2024-10-11"
+            "warrantyExpireDate": "2024-10-11",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29311491",
@@ -4284,12 +19229,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州市胸科医院",
             "channelName": "广州市胸科医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2022-08-19",
             "installDate": "2022-12-13",
-            "warrantyExpireDate": "2025-08-14"
+            "warrantyExpireDate": "2025-08-14",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29311492",
@@ -4298,12 +19247,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州市胸科医院",
             "channelName": "广州市胸科医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2022-08-19",
             "installDate": "2022-12-13",
-            "warrantyExpireDate": "2025-08-14"
+            "warrantyExpireDate": "2025-08-14",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29488473",
@@ -4312,12 +19265,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
             "terminalUser": "四川泰康医院",
             "channelName": "四川泰康医院",
             "salesName": "WEST-SW",
             "salesDate": "2022-10-07",
             "installDate": "2022-12-19",
-            "warrantyExpireDate": "2025-09-22"
+            "warrantyExpireDate": "2025-09-22",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29488474",
@@ -4326,12 +19283,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
             "terminalUser": "四川泰康医院",
             "channelName": "四川泰康医院",
             "salesName": "WEST-SW",
             "salesDate": "2022-10-07",
             "installDate": "2022-12-19",
-            "warrantyExpireDate": "2025-09-22"
+            "warrantyExpireDate": "2025-09-22",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29488475",
@@ -4340,12 +19301,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
             "terminalUser": "四川泰康医院",
             "channelName": "四川泰康医院",
             "salesName": "WEST-SW",
             "salesDate": "2022-10-07",
             "installDate": "2022-12-19",
-            "warrantyExpireDate": "2025-09-22"
+            "warrantyExpireDate": "2025-09-22",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29488476",
@@ -4354,12 +19319,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
             "terminalUser": "四川泰康医院",
             "channelName": "四川泰康医院",
             "salesName": "WEST-SW",
             "salesDate": "2022-10-07",
             "installDate": "2022-12-19",
-            "warrantyExpireDate": "2025-09-22"
+            "warrantyExpireDate": "2025-09-22",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29488477",
@@ -4368,12 +19337,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
             "terminalUser": "四川泰康医院",
             "channelName": "四川泰康医院",
             "salesName": "WEST-SW",
             "salesDate": "2022-10-07",
             "installDate": "2022-12-19",
-            "warrantyExpireDate": "2025-09-22"
+            "warrantyExpireDate": "2025-09-22",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29520305",
@@ -4382,12 +19355,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "宁波",
+            "salesRegion": "",
             "terminalUser": "宁波市医疗中心李惠利医院",
             "channelName": "宁波市医疗中心李惠利医院",
             "salesName": "EAST-SW",
             "salesDate": "2022-10-14",
             "installDate": "2022-12-19",
-            "warrantyExpireDate": "2024-08-24"
+            "warrantyExpireDate": "2024-08-24",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29520306",
@@ -4396,12 +19373,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "宁波",
+            "salesRegion": "",
             "terminalUser": "宁波市医疗中心李惠利医院",
             "channelName": "宁波市医疗中心李惠利医院",
             "salesName": "EAST-SW",
             "salesDate": "2022-10-14",
             "installDate": "2022-12-19",
-            "warrantyExpireDate": "2028-08-24"
+            "warrantyExpireDate": "2028-08-24",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29520307",
@@ -4410,12 +19391,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "宁波",
+            "salesRegion": "",
             "terminalUser": "宁波市医疗中心李惠利医院",
             "channelName": "宁波市医疗中心李惠利医院",
             "salesName": "EAST-SW",
             "salesDate": "2022-10-14",
             "installDate": "2022-12-19",
-            "warrantyExpireDate": "2028-08-24"
+            "warrantyExpireDate": "2028-08-24",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29520308",
@@ -4424,12 +19409,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "宁波市医疗中心李惠利东部医院",
             "channelName": "宁波市医疗中心李惠利东部医院",
             "salesName": "EAST-SW",
             "salesDate": "2022-10-14",
             "installDate": "2022-12-19",
-            "warrantyExpireDate": "2028-11-30"
+            "warrantyExpireDate": "2028-11-30",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29520309",
@@ -4438,12 +19427,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "宁波市医疗中心李惠利东部医院",
             "channelName": "宁波市医疗中心李惠利东部医院",
             "salesName": "WEST-SW",
             "salesDate": "2022-10-14",
             "installDate": "2022-12-19",
-            "warrantyExpireDate": "2028-11-30"
+            "warrantyExpireDate": "2028-11-30",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29765725",
@@ -4452,12 +19445,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "山东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "山东省公共卫生临床中心",
             "channelName": "山东省公共卫生临床中心",
             "salesName": "NORTH-SW",
             "salesDate": "2022-12-20",
             "installDate": "2023-01-23",
-            "warrantyExpireDate": "2024-03-07"
+            "warrantyExpireDate": "2024-03-07",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-30168353",
@@ -4466,12 +19463,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "江苏省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "江苏省中西医结合医院",
             "channelName": "上海万淇生物科技有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2023-04-12",
             "installDate": "2023-04-28",
-            "warrantyExpireDate": "2026-10-10"
+            "warrantyExpireDate": "2026-10-10",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-30168354",
@@ -4480,12 +19481,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "江苏省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "江苏省中西医结合医院",
             "channelName": "上海万淇生物科技有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2023-04-12",
             "installDate": "2023-04-28",
-            "warrantyExpireDate": "2026-10-10"
+            "warrantyExpireDate": "2026-10-10",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-30168355",
@@ -4494,12 +19499,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "江苏省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "江苏省中西医结合医院",
             "channelName": "上海万淇生物科技有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2023-04-12",
             "installDate": "2023-04-28",
-            "warrantyExpireDate": "2026-10-10"
+            "warrantyExpireDate": "2026-10-10",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-30168356",
@@ -4508,12 +19517,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "江苏省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "江苏省中西医结合医院",
             "channelName": "上海万淇生物科技有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2023-04-12",
             "installDate": "2023-04-28",
-            "warrantyExpireDate": "2026-10-10"
+            "warrantyExpireDate": "2026-10-10",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-30345741",
@@ -4522,12 +19535,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "湖南省",
+            "installCity": "长沙",
+            "salesRegion": "",
             "terminalUser": "中南大学湘雅二医院",
             "channelName": "中南大学湘雅二医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2023-05-31",
             "installDate": "2023-06-14",
-            "warrantyExpireDate": "2025-08-18"
+            "warrantyExpireDate": "2025-08-18",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-30345742",
@@ -4536,12 +19553,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "湖南省",
+            "installCity": "长沙",
+            "salesRegion": "",
             "terminalUser": "中南大学湘雅二医院",
             "channelName": "中南大学湘雅二医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2023-05-31",
             "installDate": "2023-06-14",
-            "warrantyExpireDate": "2025-08-18"
+            "warrantyExpireDate": "2025-08-18",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-30345743",
@@ -4550,12 +19571,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "湖南省",
+            "installCity": "长沙",
+            "salesRegion": "",
             "terminalUser": "中南大学湘雅二医院",
             "channelName": "中南大学湘雅二医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2023-05-31",
             "installDate": "2023-06-14",
-            "warrantyExpireDate": "2025-08-18"
+            "warrantyExpireDate": "2025-08-18",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-30352522",
@@ -4564,12 +19589,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "湖南省",
+            "installCity": "长沙",
+            "salesRegion": "",
             "terminalUser": "中南大学湘雅二医院",
             "channelName": "中南大学湘雅二医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2023-06-01",
             "installDate": "2023-06-14",
-            "warrantyExpireDate": "2025-08-18"
+            "warrantyExpireDate": "2025-08-18",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-30428344",
@@ -4578,12 +19607,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州富力医院",
             "channelName": "广州富力医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2023-06-23",
             "installDate": "2023-07-11",
-            "warrantyExpireDate": "2025-10-14"
+            "warrantyExpireDate": "2025-10-14",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-30442870",
@@ -4592,12 +19625,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "宁波泰康脑科医院",
             "channelName": "宁波泰甬置业有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2023-06-28",
             "installDate": "2023-07-31",
-            "warrantyExpireDate": "2026-06-09"
+            "warrantyExpireDate": "2026-06-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-30442871",
@@ -4606,12 +19643,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "宁波泰康脑科医院",
             "channelName": "宁波泰甬置业有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2023-06-28",
             "installDate": "2023-07-31",
-            "warrantyExpireDate": "2026-06-09"
+            "warrantyExpireDate": "2026-06-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-30442872",
@@ -4620,12 +19661,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "宁波泰康脑科医院",
             "channelName": "宁波泰甬置业有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2023-06-28",
             "installDate": "2023-07-31",
-            "warrantyExpireDate": "2026-06-09"
+            "warrantyExpireDate": "2026-06-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-30578939",
@@ -4634,12 +19679,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "甘肃省",
+            "installCity": "兰州",
+            "salesRegion": "",
             "terminalUser": "甘肃省中医院",
             "channelName": "西安宏亚安正科技有限公司",
             "salesName": "WEST-SW",
             "salesDate": "2023-08-18",
             "installDate": "2023-09-05",
-            "warrantyExpireDate": "2026-03-14"
+            "warrantyExpireDate": "2026-03-14",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-30578940",
@@ -4648,12 +19697,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "甘肃省",
+            "installCity": "兰州",
+            "salesRegion": "",
             "terminalUser": "甘肃省中医院",
             "channelName": "西安宏亚安正科技有限公司",
             "salesName": "WEST-SW",
             "salesDate": "2023-08-18",
             "installDate": "2023-09-05",
-            "warrantyExpireDate": "2026-03-14"
+            "warrantyExpireDate": "2026-03-14",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-30578941",
@@ -4662,12 +19715,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "甘肃省",
+            "installCity": "兰州",
+            "salesRegion": "",
             "terminalUser": "甘肃省中医院",
             "channelName": "西安宏亚安正科技有限公司",
             "salesName": "WEST-SW",
             "salesDate": "2023-08-18",
             "installDate": "2023-09-05",
-            "warrantyExpireDate": "2026-03-14"
+            "warrantyExpireDate": "2026-03-14",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-31541534",
@@ -4676,12 +19733,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "江苏省",
+            "installCity": "无锡",
+            "salesRegion": "",
             "terminalUser": "无锡市人民医院",
             "channelName": "北京世纪凯盈科学仪器有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2023-09-27",
             "installDate": "2023-10-25",
-            "warrantyExpireDate": "2026-05-09"
+            "warrantyExpireDate": "2026-05-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-31541535",
@@ -4690,12 +19751,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "江苏省",
+            "installCity": "无锡",
+            "salesRegion": "",
             "terminalUser": "无锡市人民医院",
             "channelName": "北京世纪凯盈科学仪器有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2023-09-27",
             "installDate": "2023-10-25",
-            "warrantyExpireDate": "2026-05-09"
+            "warrantyExpireDate": "2026-05-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32390908",
@@ -4704,12 +19769,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "深圳前海泰康医院",
             "channelName": "深圳前海泰康医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2023-10-11",
             "installDate": "2023-11-16",
-            "warrantyExpireDate": "2026-07-09"
+            "warrantyExpireDate": "2026-07-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32390909",
@@ -4718,12 +19787,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "深圳前海泰康医院",
             "channelName": "深圳前海泰康医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2023-10-11",
             "installDate": "2023-11-16",
-            "warrantyExpireDate": "2026-07-09"
+            "warrantyExpireDate": "2026-07-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32390911",
@@ -4732,12 +19805,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "深圳前海泰康医院",
             "channelName": "深圳前海泰康医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2023-10-11",
             "installDate": "2023-11-16",
-            "warrantyExpireDate": "2026-07-09"
+            "warrantyExpireDate": "2026-07-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32394893",
@@ -4746,12 +19823,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "深圳前海泰康医院",
             "channelName": "深圳前海泰康医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2023-10-12",
             "installDate": "2023-11-16",
-            "warrantyExpireDate": "2026-07-09"
+            "warrantyExpireDate": "2026-07-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32444997",
@@ -4760,12 +19841,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "四川省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "绵阳市中医医院",
             "channelName": "成都裕康医疗设备有限公司",
             "salesName": "WEST-SW",
             "salesDate": "2023-10-26",
             "installDate": "2023-11-16",
-            "warrantyExpireDate": "2026-10-17"
+            "warrantyExpireDate": "2026-10-17",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32456858",
@@ -4774,12 +19859,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "深圳前海泰康医院",
             "channelName": "深圳前海泰康医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2023-10-30",
             "installDate": "2023-11-16",
-            "warrantyExpireDate": "2026-07-09"
+            "warrantyExpireDate": "2026-07-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32456859",
@@ -4788,12 +19877,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "深圳前海泰康医院",
             "channelName": "深圳前海泰康医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2023-10-30",
             "installDate": "2023-11-16",
-            "warrantyExpireDate": "2026-07-09"
+            "warrantyExpireDate": "2026-07-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32456860",
@@ -4802,12 +19895,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "深圳前海泰康医院",
             "channelName": "深圳前海泰康医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2023-10-30",
             "installDate": "2023-11-16",
-            "warrantyExpireDate": "2026-07-09"
+            "warrantyExpireDate": "2026-07-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32467892",
@@ -4816,12 +19913,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "浙江大学国际健康医学研究院",
             "channelName": "杭州星灿生物技术有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2023-11-02",
             "installDate": "2023-11-29",
-            "warrantyExpireDate": "2025-06-29"
+            "warrantyExpireDate": "2025-06-29",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32750263",
@@ -4830,12 +19931,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "杭州市临安区第一人民医院",
             "channelName": "杭州大沨医疗器械有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2024-01-24",
             "installDate": "2024-02-08",
-            "warrantyExpireDate": "2026-02-24"
+            "warrantyExpireDate": "2026-02-24",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32698997",
@@ -4844,12 +19949,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "珠海市人民医院医疗集团",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2024-01-12",
             "installDate": "2024-03-07",
-            "warrantyExpireDate": "2027-01-08"
+            "warrantyExpireDate": "2027-01-08",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32698998",
@@ -4858,12 +19967,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "珠海市人民医院医疗集团",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2024-01-12",
             "installDate": "2024-03-07",
-            "warrantyExpireDate": "2027-01-08"
+            "warrantyExpireDate": "2027-01-08",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32698999",
@@ -4872,12 +19985,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "珠海市人民医院医疗集团",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2024-01-12",
             "installDate": "2024-03-07",
-            "warrantyExpireDate": "2027-01-08"
+            "warrantyExpireDate": "2027-01-08",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32699000",
@@ -4886,12 +20003,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "珠海市人民医院医疗集团",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2024-01-12",
             "installDate": "2024-03-07",
-            "warrantyExpireDate": "2027-01-08"
+            "warrantyExpireDate": "2027-01-08",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32699001",
@@ -4900,12 +20021,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "珠海市人民医院医疗集团",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2024-01-12",
             "installDate": "2024-03-07",
-            "warrantyExpireDate": "2027-01-08"
+            "warrantyExpireDate": "2027-01-08",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32699002",
@@ -4914,12 +20039,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "珠海市人民医院医疗集团",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2024-01-12",
             "installDate": "2024-03-07",
-            "warrantyExpireDate": "2027-01-08"
+            "warrantyExpireDate": "2027-01-08",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32869159",
@@ -4928,12 +20057,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "东莞",
+            "salesRegion": "",
             "terminalUser": "东莞市人民医院",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2024-02-26",
             "installDate": "2024-03-14",
-            "warrantyExpireDate": "2026-08-31"
+            "warrantyExpireDate": "2026-08-31",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32869160",
@@ -4942,12 +20075,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "东莞",
+            "salesRegion": "",
             "terminalUser": "东莞市人民医院",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2024-02-26",
             "installDate": "2024-03-14",
-            "warrantyExpireDate": "2026-08-31"
+            "warrantyExpireDate": "2026-08-31",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32869161",
@@ -4956,12 +20093,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广东省人民医院南海医院",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2024-02-26",
             "installDate": "2024-03-19",
-            "warrantyExpireDate": "2026-05-11"
+            "warrantyExpireDate": "2026-05-11",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32869162",
@@ -4970,12 +20111,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广东省人民医院南海医院",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2024-02-26",
             "installDate": "2024-03-19",
-            "warrantyExpireDate": "2026-05-11"
+            "warrantyExpireDate": "2026-05-11",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32885897",
@@ -4984,12 +20129,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州市合众汇达医疗科技有限公司",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2024-03-01",
             "installDate": "2024-03-20",
-            "warrantyExpireDate": "2027-03-23"
+            "warrantyExpireDate": "2027-03-23",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32885898",
@@ -4998,12 +20147,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州市合众汇达医疗科技有限公司",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2024-03-01",
             "installDate": "2024-03-20",
-            "warrantyExpireDate": "2027-03-23"
+            "warrantyExpireDate": "2027-03-23",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32885899",
@@ -5012,12 +20165,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州市合众汇达医疗科技有限公司",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2024-03-01",
             "installDate": "2024-03-20",
-            "warrantyExpireDate": "2027-03-23"
+            "warrantyExpireDate": "2027-03-23",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32885900",
@@ -5026,12 +20183,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州市合众汇达医疗科技有限公司",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2024-03-01",
             "installDate": "2024-03-20",
-            "warrantyExpireDate": "2027-03-23"
+            "warrantyExpireDate": "2027-03-23",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32885901",
@@ -5040,12 +20201,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州市合众汇达医疗科技有限公司",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2024-03-01",
             "installDate": "2024-03-20",
-            "warrantyExpireDate": "2027-03-23"
+            "warrantyExpireDate": "2027-03-23",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-32885902",
@@ -5054,12 +20219,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州市合众汇达医疗科技有限公司",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2024-03-01",
             "installDate": "2024-03-20",
-            "warrantyExpireDate": "2027-03-23"
+            "warrantyExpireDate": "2027-03-23",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-33112964",
@@ -5068,12 +20237,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "杭州大沨医疗器械有限公司",
             "channelName": "杭州大沨医疗器械有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2024-05-07",
             "installDate": "2024-06-17",
-            "warrantyExpireDate": "2026-12-30"
+            "warrantyExpireDate": "2026-12-30",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-33112965",
@@ -5082,12 +20255,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "杭州大沨医疗器械有限公司",
             "channelName": "杭州大沨医疗器械有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2024-05-07",
             "installDate": "2024-06-17",
-            "warrantyExpireDate": "2026-12-30"
+            "warrantyExpireDate": "2026-12-30",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-33112966",
@@ -5096,12 +20273,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "杭州大沨医疗器械有限公司",
             "channelName": "杭州大沨医疗器械有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2024-05-07",
             "installDate": "2024-06-17",
-            "warrantyExpireDate": "2026-12-30"
+            "warrantyExpireDate": "2026-12-30",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-33338959",
@@ -5110,12 +20291,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "贵州省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海交通大学医学院附属上海儿童医学中心贵州医院",
             "channelName": "逸佰医疗科技发展（上海）有限公司",
             "salesName": "WEST-ACT",
             "salesDate": "2024-07-16",
             "installDate": "2024-09-10",
-            "warrantyExpireDate": "2027-02-17"
+            "warrantyExpireDate": "2027-02-17",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-33338960",
@@ -5124,12 +20309,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "贵州省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海交通大学医学院附属上海儿童医学中心贵州医院",
             "channelName": "逸佰医疗科技发展（上海）有限公司",
             "salesName": "WEST-ACT",
             "salesDate": "2024-07-16",
             "installDate": "2024-09-10",
-            "warrantyExpireDate": "2027-02-17"
+            "warrantyExpireDate": "2027-02-17",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-33338961",
@@ -5138,12 +20327,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "贵州省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海交通大学医学院附属上海儿童医学中心贵州医院",
             "channelName": "逸佰医疗科技发展（上海）有限公司",
             "salesName": "WEST-ACT",
             "salesDate": "2024-07-16",
             "installDate": "2024-09-10",
-            "warrantyExpireDate": "2027-02-17"
+            "warrantyExpireDate": "2027-02-17",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-33383726",
@@ -5152,12 +20345,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "Maquet (Shanghai) Medical Equipment Co",
             "channelName": "Maquet (Shanghai) Medical Equipment Co",
             "salesName": "未填写销售",
             "salesDate": "2024-08-01",
             "installDate": "2024-09-10",
-            "warrantyExpireDate": "2026-09-09"
+            "warrantyExpireDate": "2026-09-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-33383727",
@@ -5166,12 +20363,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "Maquet (Shanghai) Medical Equipment Co",
             "channelName": "Maquet (Shanghai) Medical Equipment Co",
             "salesName": "未填写销售",
             "salesDate": "2024-08-01",
             "installDate": "2024-09-10",
-            "warrantyExpireDate": "2026-09-09"
+            "warrantyExpireDate": "2026-09-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-34082739",
@@ -5180,12 +20381,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "新昌县人民医院",
             "channelName": "MAQUET (SHANGHAI)",
             "salesName": "EAST-SW",
             "salesDate": "2025-03-19",
             "installDate": "2025-05-28",
-            "warrantyExpireDate": "2026-11-30"
+            "warrantyExpireDate": "2026-11-30",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-34082740",
@@ -5194,12 +20399,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "新昌县人民医院",
             "channelName": "MAQUET (SHANGHAI)",
             "salesName": "EAST-SW",
             "salesDate": "2025-03-19",
             "installDate": "2025-05-28",
-            "warrantyExpireDate": "2026-11-30"
+            "warrantyExpireDate": "2026-11-30",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-34706989",
@@ -5208,12 +20417,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "温州",
+            "salesRegion": "",
             "terminalUser": "温州市人民医院娄桥院区",
             "channelName": "杭州大沨医疗器械有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2025-06-24",
             "installDate": "2025-07-17",
-            "warrantyExpireDate": "2026-10-09"
+            "warrantyExpireDate": "2026-10-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-34706990",
@@ -5222,12 +20435,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "温州",
+            "salesRegion": "",
             "terminalUser": "温州市人民医院娄桥院区",
             "channelName": "杭州大沨医疗器械有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2025-06-24",
             "installDate": "2025-07-17",
-            "warrantyExpireDate": "2026-10-09"
+            "warrantyExpireDate": "2026-10-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-34648412",
@@ -5236,12 +20453,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "江苏省",
+            "installCity": "无锡",
+            "salesRegion": "",
             "terminalUser": "江南大学附属医院",
             "channelName": "上药医疗器械（上海）有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2025-06-05",
             "installDate": "2025-08-06",
-            "warrantyExpireDate": "2027-12-01"
+            "warrantyExpireDate": "2027-12-01",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-34648548",
@@ -5250,12 +20471,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "北京市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "北京凯隆荣锐医疗设备有限公司",
             "channelName": "北京凯隆荣锐医疗设备有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2025-06-05",
             "installDate": "2025-08-06",
-            "warrantyExpireDate": "2027-05-23"
+            "warrantyExpireDate": "2027-05-23",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-34810285",
@@ -5264,12 +20489,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海市闵行区中心医院",
             "channelName": "上海理雄医疗器械有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2025-07-30",
             "installDate": "2025-09-04",
-            "warrantyExpireDate": "2027-11-23"
+            "warrantyExpireDate": "2027-11-23",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-34828725",
@@ -5278,12 +20507,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "杭州星灿生物技术有限公司",
             "channelName": "杭州星灿生物技术有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2025-08-08",
             "installDate": "2025-09-11",
-            "warrantyExpireDate": "2027-03-25"
+            "warrantyExpireDate": "2027-03-25",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-34828726",
@@ -5292,12 +20525,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "杭州星灿生物技术有限公司",
             "channelName": "杭州星灿生物技术有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2025-08-08",
             "installDate": "2025-09-11",
-            "warrantyExpireDate": "2027-03-25"
+            "warrantyExpireDate": "2027-03-25",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-35104331",
@@ -5306,12 +20543,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "北京市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "北京凯隆荣锐医疗设备有限公司",
             "channelName": "北京凯隆荣锐医疗设备有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2025-11-20",
             "installDate": "2025-12-08",
-            "warrantyExpireDate": "2027-06-17"
+            "warrantyExpireDate": "2027-06-17",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-35104332",
@@ -5320,12 +20561,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "北京市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "北京凯隆荣锐医疗设备有限公司",
             "channelName": "北京凯隆荣锐医疗设备有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2025-11-20",
             "installDate": "2025-12-08",
-            "warrantyExpireDate": "2027-06-17"
+            "warrantyExpireDate": "2027-06-17",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-35104333",
@@ -5334,12 +20579,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "TEGRIS BASE PC (HW2)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "杭州星灿生物技术有限公司",
             "channelName": "杭州星灿生物技术有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2025-11-20",
             "installDate": "2025-12-08",
-            "warrantyExpireDate": "2027-06-25"
+            "warrantyExpireDate": "2027-06-25",
+            "winRate": "",
+            "gforceSystemId": ""
           }
         ]
       },
@@ -5735,12 +20984,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "浙江省",
+            "installCity": "杭州",
+            "salesRegion": "",
             "terminalUser": "浙江大学医学院附属第一医院",
             "channelName": "浙江大学医学院附属第一医院",
             "salesName": "EAST-ACT",
             "salesDate": "2021-05-27",
             "installDate": "2021-05-27",
-            "warrantyExpireDate": ""
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-21914985",
@@ -5749,12 +21002,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "宁夏回族自治区",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "固原市人民医院",
             "channelName": "成都裕康医疗设备有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2015-09-10",
             "installDate": "2015-09-30",
-            "warrantyExpireDate": "2017-09-29"
+            "warrantyExpireDate": "2017-09-29",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22002919",
@@ -5763,12 +21020,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "云南省",
+            "installCity": "昆明",
+            "salesRegion": "",
             "terminalUser": "昆明医科大学第一附属医院",
             "channelName": "昆明医科大学第一附属医院",
             "salesName": "WEST-SW",
             "salesDate": "2015-10-14",
             "installDate": "2015-11-05",
-            "warrantyExpireDate": "2019-01-18"
+            "warrantyExpireDate": "2019-01-18",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22002920",
@@ -5777,12 +21038,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "云南省",
+            "installCity": "昆明",
+            "salesRegion": "",
             "terminalUser": "昆明医科大学第一附属医院",
             "channelName": "昆明医科大学第一附属医院",
             "salesName": "WEST-SW",
             "salesDate": "2015-10-14",
             "installDate": "2015-11-05",
-            "warrantyExpireDate": "2019-01-18"
+            "warrantyExpireDate": "2019-01-18",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22002921",
@@ -5791,12 +21056,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "云南省",
+            "installCity": "昆明",
+            "salesRegion": "",
             "terminalUser": "昆明医科大学第一附属医院",
             "channelName": "昆明医科大学第一附属医院",
             "salesName": "WEST-SW",
             "salesDate": "2015-10-14",
             "installDate": "2015-11-05",
-            "warrantyExpireDate": "2019-01-18"
+            "warrantyExpireDate": "2019-01-18",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22002922",
@@ -5805,12 +21074,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "云南省",
+            "installCity": "昆明",
+            "salesRegion": "",
             "terminalUser": "昆明医科大学第一附属医院",
             "channelName": "昆明医科大学第一附属医院",
             "salesName": "WEST-SW",
             "salesDate": "2015-10-14",
             "installDate": "2015-11-05",
-            "warrantyExpireDate": "2019-01-18"
+            "warrantyExpireDate": "2019-01-18",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22002923",
@@ -5819,12 +21092,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "云南省",
+            "installCity": "昆明",
+            "salesRegion": "",
             "terminalUser": "昆明医科大学第一附属医院",
             "channelName": "昆明医科大学第一附属医院",
             "salesName": "WEST-SW",
             "salesDate": "2015-10-14",
             "installDate": "2015-11-05",
-            "warrantyExpireDate": "2019-01-18"
+            "warrantyExpireDate": "2019-01-18",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22002924",
@@ -5833,12 +21110,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "云南省",
+            "installCity": "昆明",
+            "salesRegion": "",
             "terminalUser": "昆明医科大学第一附属医院",
             "channelName": "昆明医科大学第一附属医院",
             "salesName": "WEST-SW",
             "salesDate": "2015-10-14",
             "installDate": "2015-11-05",
-            "warrantyExpireDate": "2019-01-18"
+            "warrantyExpireDate": "2019-01-18",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22002925",
@@ -5847,12 +21128,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "云南省",
+            "installCity": "昆明",
+            "salesRegion": "",
             "terminalUser": "昆明医科大学第一附属医院",
             "channelName": "昆明医科大学第一附属医院",
             "salesName": "WEST-SW",
             "salesDate": "2015-10-14",
             "installDate": "2015-11-05",
-            "warrantyExpireDate": "2019-01-18"
+            "warrantyExpireDate": "2019-01-18",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22002926",
@@ -5861,12 +21146,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "云南省",
+            "installCity": "昆明",
+            "salesRegion": "",
             "terminalUser": "昆明医科大学第一附属医院",
             "channelName": "昆明医科大学第一附属医院",
             "salesName": "WEST-SW",
             "salesDate": "2015-10-14",
             "installDate": "2015-11-05",
-            "warrantyExpireDate": "2019-01-18"
+            "warrantyExpireDate": "2019-01-18",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22007135",
@@ -5875,12 +21164,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "山东省",
+            "installCity": "济南",
+            "salesRegion": "",
             "terminalUser": "山东省千佛山医院",
             "channelName": "山东省千佛山医院",
             "salesName": "NORTH-SW",
             "salesDate": "2015-10-15",
             "installDate": "2015-11-12",
-            "warrantyExpireDate": "2019-01-03"
+            "warrantyExpireDate": "2019-01-03",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22007136",
@@ -5889,12 +21182,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "山东省",
+            "installCity": "济南",
+            "salesRegion": "",
             "terminalUser": "山东省千佛山医院",
             "channelName": "山东省千佛山医院",
             "salesName": "NORTH-SW",
             "salesDate": "2015-10-15",
             "installDate": "2015-11-12",
-            "warrantyExpireDate": "2019-01-03"
+            "warrantyExpireDate": "2019-01-03",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22023347",
@@ -5903,12 +21200,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海百蔚医疗器械有限公司",
             "channelName": "上海百蔚医疗器械有限公司",
             "salesName": "EAST1",
             "salesDate": "2015-10-22",
             "installDate": "2015-11-19",
-            "warrantyExpireDate": "2017-11-18"
+            "warrantyExpireDate": "2017-11-18",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22097752",
@@ -5917,12 +21218,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "江门市中心医院",
             "channelName": "江门市中心医院",
             "salesName": "SOUTH",
             "salesDate": "2015-11-27",
             "installDate": "2015-12-10",
-            "warrantyExpireDate": "2018-07-23"
+            "warrantyExpireDate": "2018-07-23",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22098767",
@@ -5931,12 +21236,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "江门市中心医院",
             "channelName": "江门市中心医院",
             "salesName": "SOUTH",
             "salesDate": "2015-11-30",
             "installDate": "2015-12-10",
-            "warrantyExpireDate": "2018-07-23"
+            "warrantyExpireDate": "2018-07-23",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22377862",
@@ -5945,12 +21254,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "江苏省",
+            "installCity": "南京",
+            "salesRegion": "",
             "terminalUser": "南京市第一医院",
             "channelName": "广州浦天医疗设备有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2016-05-12",
             "installDate": "2016-05-31",
-            "warrantyExpireDate": "2022-08-30"
+            "warrantyExpireDate": "2022-08-30",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22407119",
@@ -5959,12 +21272,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "甘肃省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "解放军联勤保障部队940医院",
             "channelName": "解放军联勤保障部队940医院",
             "salesName": "NORTH-SW",
             "salesDate": "2016-05-31",
             "installDate": "2016-06-14",
-            "warrantyExpireDate": "2018-01-22"
+            "warrantyExpireDate": "2018-01-22",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22407120",
@@ -5973,12 +21290,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "甘肃省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "解放军联勤保障部队940医院",
             "channelName": "解放军联勤保障部队940医院",
             "salesName": "NORTH-SW",
             "salesDate": "2016-05-31",
             "installDate": "2016-06-14",
-            "warrantyExpireDate": "2018-01-22"
+            "warrantyExpireDate": "2018-01-22",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22407121",
@@ -5987,12 +21308,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "阳江市人民医院",
             "channelName": "阳江市人民医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2016-05-31",
             "installDate": "2016-06-14",
-            "warrantyExpireDate": "2020-04-11"
+            "warrantyExpireDate": "2020-04-11",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-21747965",
@@ -6001,12 +21326,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "北京市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "北京欧意蓝德科技发展有限公司",
             "channelName": "北京欧意蓝德科技发展有限公司",
             "salesName": "NORTH",
             "salesDate": "2015-05-30",
             "installDate": "2016-06-30",
-            "warrantyExpireDate": "2017-12-29"
+            "warrantyExpireDate": "2017-12-29",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22438726",
@@ -6015,12 +21344,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "山东省",
+            "installCity": "济南",
+            "salesRegion": "",
             "terminalUser": "山东省千佛山医院",
             "channelName": "山东省千佛山医院",
             "salesName": "NORTH",
             "salesDate": "2016-06-14",
             "installDate": "2016-07-07",
-            "warrantyExpireDate": "2018-07-06"
+            "warrantyExpireDate": "2018-07-06",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22438727",
@@ -6029,12 +21362,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "山东省",
+            "installCity": "济南",
+            "salesRegion": "",
             "terminalUser": "山东省千佛山医院",
             "channelName": "山东省千佛山医院",
             "salesName": "NORTH",
             "salesDate": "2016-06-14",
             "installDate": "2016-07-07",
-            "warrantyExpireDate": "2018-07-06"
+            "warrantyExpireDate": "2018-07-06",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-22947050",
@@ -6043,12 +21380,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海市静安区华东医院",
             "channelName": "上海市静安区华东医院",
             "salesName": "EAST1",
             "salesDate": "2016-08-23",
             "installDate": "2016-09-15",
-            "warrantyExpireDate": "2018-11-23"
+            "warrantyExpireDate": "2018-11-23",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-23037032",
@@ -6057,12 +21398,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "Final Customer China",
             "channelName": "Shanghai Dongsong Healthcare &",
             "salesName": "1G5",
             "salesDate": "2016-09-15",
             "installDate": "2016-09-30",
-            "warrantyExpireDate": "2017-09-29"
+            "warrantyExpireDate": "2017-09-29",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-23489318",
@@ -6071,12 +21416,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "北京市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "中国人民解放军总医院第七医学中心",
             "channelName": "中国人民解放军总医院第七医学中心",
             "salesName": "NORTH-SW",
             "salesDate": "2016-10-25",
             "installDate": "2016-11-10",
-            "warrantyExpireDate": "2020-05-05"
+            "warrantyExpireDate": "2020-05-05",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-23489319",
@@ -6085,12 +21434,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "北京市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "中国人民解放军总医院第七医学中心",
             "channelName": "中国人民解放军总医院第七医学中心",
             "salesName": "NORTH-SW",
             "salesDate": "2016-10-25",
             "installDate": "2016-11-10",
-            "warrantyExpireDate": "2020-05-05"
+            "warrantyExpireDate": "2020-05-05",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-23489329",
@@ -6099,12 +21452,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
             "terminalUser": "深圳市第三人民医院",
             "channelName": "深圳市第三人民医院",
             "salesName": "SOUTH-SW",
             "salesDate": "2016-10-25",
             "installDate": "2016-11-10",
-            "warrantyExpireDate": "2020-08-13"
+            "warrantyExpireDate": "2020-08-13",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-23489330",
@@ -6113,12 +21470,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "南方科技大学医院",
             "channelName": "南方科技大学医院",
             "salesName": "SOUTH",
             "salesDate": "2016-10-25",
             "installDate": "2016-11-10",
-            "warrantyExpireDate": "2018-11-09"
+            "warrantyExpireDate": "2018-11-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-23544085",
@@ -6127,12 +21488,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "贵州省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "盘州市人民医院",
             "channelName": "盘州市人民医院",
             "salesName": "WEST-SW",
             "salesDate": "2016-11-17",
             "installDate": "2016-11-30",
-            "warrantyExpireDate": "2020-09-04"
+            "warrantyExpireDate": "2020-09-04",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-23544086",
@@ -6141,12 +21506,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海交通大学医学院附属第九人民医院第三执业点",
             "channelName": "上海交通大学医学院附属第九人民医院第三执业点",
             "salesName": "EAST-SW",
             "salesDate": "2016-11-17",
             "installDate": "2016-11-30",
-            "warrantyExpireDate": "2018-11-29"
+            "warrantyExpireDate": "2018-11-29",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-23565860",
@@ -6155,12 +21524,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "山东省",
+            "installCity": "临沂",
+            "salesRegion": "",
             "terminalUser": "临沂金锣医院",
             "channelName": "Suzhou MAQUET",
             "salesName": "GDUMMY",
             "salesDate": "2016-11-28",
             "installDate": "2016-12-06",
-            "warrantyExpireDate": "2021-06-09"
+            "warrantyExpireDate": "2021-06-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-23859343",
@@ -6169,12 +21542,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "珠海市人民医院医疗集团",
             "channelName": "珠海市人民医院医疗集团",
             "salesName": "SOUTH-SW",
             "salesDate": "2017-03-07",
             "installDate": "2017-04-06",
-            "warrantyExpireDate": "2019-09-14"
+            "warrantyExpireDate": "2019-09-14",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-23956371",
@@ -6183,12 +21560,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "四川省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "成都市核工业四一六医院",
             "channelName": "成都市核工业四一六医院",
             "salesName": "WEST-SW",
             "salesDate": "2017-04-20",
             "installDate": "2017-04-28",
-            "warrantyExpireDate": "2019-08-01"
+            "warrantyExpireDate": "2019-08-01",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-24454195",
@@ -6197,12 +21578,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "山东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "青岛市市立医院",
             "channelName": "青岛市市立医院",
             "salesName": "NORTH-SW",
             "salesDate": "2017-10-27",
             "installDate": "2017-11-16",
-            "warrantyExpireDate": "2019-07-25"
+            "warrantyExpireDate": "2019-07-25",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-24454196",
@@ -6211,12 +21596,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "山东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "青岛市市立医院",
             "channelName": "青岛市市立医院",
             "salesName": "NORTH-SW",
             "salesDate": "2017-10-27",
             "installDate": "2017-11-16",
-            "warrantyExpireDate": "2019-07-25"
+            "warrantyExpireDate": "2019-07-25",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-24469097",
@@ -6225,12 +21614,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
             "terminalUser": "上海市东方医院",
             "channelName": "上海市东方医院",
             "salesName": "EAST-SW",
             "salesDate": "2017-11-02",
             "installDate": "2017-11-16",
-            "warrantyExpireDate": "2019-08-06"
+            "warrantyExpireDate": "2019-08-06",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-24476524",
@@ -6239,12 +21632,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
             "terminalUser": "上海市东方医院",
             "channelName": "上海市东方医院",
             "salesName": "EAST-SW",
             "salesDate": "2017-11-06",
             "installDate": "2017-11-16",
-            "warrantyExpireDate": "2019-08-06"
+            "warrantyExpireDate": "2019-08-06",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-24594199",
@@ -6253,12 +21650,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "杭州市丁桥医院",
             "channelName": "杭州市丁桥医院",
             "salesName": "EAST-SW",
             "salesDate": "2017-12-13",
             "installDate": "2018-01-25",
-            "warrantyExpireDate": "2020-08-08"
+            "warrantyExpireDate": "2020-08-08",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-24693227",
@@ -6267,12 +21668,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "浙江省",
+            "installCity": "衢州",
+            "salesRegion": "",
             "terminalUser": "衢州市人民医院",
             "channelName": "衢州市人民医院",
             "salesName": "EAST-SW",
             "salesDate": "2018-02-02",
             "installDate": "2018-02-22",
-            "warrantyExpireDate": "2021-07-31"
+            "warrantyExpireDate": "2021-07-31",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-24693228",
@@ -6281,12 +21686,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "浙江省",
+            "installCity": "衢州",
+            "salesRegion": "",
             "terminalUser": "衢州市人民医院",
             "channelName": "衢州市人民医院",
             "salesName": "EAST-SW",
             "salesDate": "2018-02-02",
             "installDate": "2018-02-22",
-            "warrantyExpireDate": "2021-07-31"
+            "warrantyExpireDate": "2021-07-31",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-24693229",
@@ -6295,12 +21704,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "北京市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "北京市朝阳区妇幼保健院",
             "channelName": "上海又诺贸易中心",
             "salesName": "NORTH-SW",
             "salesDate": "2018-02-02",
             "installDate": "2018-02-22",
-            "warrantyExpireDate": "2021-06-02"
+            "warrantyExpireDate": "2021-06-02",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-24693230",
@@ -6309,12 +21722,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "北京市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "北京市朝阳区妇幼保健院",
             "channelName": "上海又诺贸易中心",
             "salesName": "NORTH-SW",
             "salesDate": "2018-02-02",
             "installDate": "2018-02-22",
-            "warrantyExpireDate": "2021-06-02"
+            "warrantyExpireDate": "2021-06-02",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-24833281",
@@ -6323,12 +21740,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "中国医学科学院阜外医院深圳医院",
             "channelName": "广州圣佑贸易有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2018-04-04",
             "installDate": "2018-04-27",
-            "warrantyExpireDate": "2021-09-20"
+            "warrantyExpireDate": "2021-09-20",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25105312",
@@ -6337,12 +21758,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "福建省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "福建医科大学附属第二医院（东海院区）",
             "channelName": "福建医科大学附属第二医院（东海院区）",
             "salesName": "EAST-SW",
             "salesDate": "2018-08-14",
             "installDate": "2018-08-30",
-            "warrantyExpireDate": "2020-07-08"
+            "warrantyExpireDate": "2020-07-08",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-24957944",
@@ -6351,12 +21776,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "四川省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "成都鹰阁医院",
             "channelName": "成都鹰阁医院",
             "salesName": "WEST-SW",
             "salesDate": "2018-05-24",
             "installDate": "2018-10-31",
-            "warrantyExpireDate": "2020-11-20"
+            "warrantyExpireDate": "2020-11-20",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-24957945",
@@ -6365,12 +21794,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "四川省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "成都鹰阁医院",
             "channelName": "成都鹰阁医院",
             "salesName": "WEST-SW",
             "salesDate": "2018-05-24",
             "installDate": "2018-10-31",
-            "warrantyExpireDate": "2020-11-20"
+            "warrantyExpireDate": "2020-11-20",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25320310",
@@ -6379,12 +21812,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "贵州省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "盘州市人民医院",
             "channelName": "盘州市人民医院",
             "salesName": "WEST-SW",
             "salesDate": "2018-11-15",
             "installDate": "2018-12-04",
-            "warrantyExpireDate": "2020-09-04"
+            "warrantyExpireDate": "2020-09-04",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25429063",
@@ -6393,12 +21830,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海理雄医疗器械有限公司",
             "channelName": "上海理雄医疗器械有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2019-01-15",
             "installDate": "2019-02-12",
-            "warrantyExpireDate": "2021-03-28"
+            "warrantyExpireDate": "2021-03-28",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25589127",
@@ -6407,12 +21848,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "山东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "威海市中心医院",
             "channelName": "上海薇奋医疗设备有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2019-04-03",
             "installDate": "2019-04-18",
-            "warrantyExpireDate": "2021-05-12"
+            "warrantyExpireDate": "2021-05-12",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25589128",
@@ -6421,12 +21866,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "山东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "威海市中心医院",
             "channelName": "上海薇奋医疗设备有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2019-04-03",
             "installDate": "2019-04-30",
-            "warrantyExpireDate": "2021-05-12"
+            "warrantyExpireDate": "2021-05-12",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25602889",
@@ -6435,12 +21884,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州圣佑贸易有限公司",
             "channelName": "广州圣佑贸易有限公司",
             "salesName": "SOUTH",
             "salesDate": "2019-04-10",
             "installDate": "2019-04-30",
-            "warrantyExpireDate": "2020-11-15"
+            "warrantyExpireDate": "2020-11-15",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25824117",
@@ -6449,12 +21902,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "山西省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "太原市妇幼保健院",
             "channelName": "山西精准互联科技发展有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2019-08-08",
             "installDate": "2019-09-05",
-            "warrantyExpireDate": "2022-05-09"
+            "warrantyExpireDate": "2022-05-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25881972",
@@ -6463,12 +21920,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "湖北省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "荆州市智慧城市科技股份有限公司",
             "channelName": "荆州市智慧城市科技股份有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2019-09-11",
             "installDate": "2019-09-24",
-            "warrantyExpireDate": "2021-05-28"
+            "warrantyExpireDate": "2021-05-28",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25881973",
@@ -6477,12 +21938,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "湖北省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "荆州市智慧城市科技股份有限公司",
             "channelName": "荆州市智慧城市科技股份有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2019-09-11",
             "installDate": "2019-09-24",
-            "warrantyExpireDate": "2021-05-28"
+            "warrantyExpireDate": "2021-05-28",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25881974",
@@ -6491,12 +21956,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "湖北省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "荆州市智慧城市科技股份有限公司",
             "channelName": "荆州市智慧城市科技股份有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2019-09-11",
             "installDate": "2019-09-24",
-            "warrantyExpireDate": "2021-05-28"
+            "warrantyExpireDate": "2021-05-28",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25882112",
@@ -6505,12 +21974,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "江苏省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "常州市中医医院",
             "channelName": "上海鸿煊医药科技有限公司",
             "salesName": "EAST1",
             "salesDate": "2019-09-11",
             "installDate": "2019-10-10",
-            "warrantyExpireDate": "2021-05-11"
+            "warrantyExpireDate": "2021-05-11",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25925643",
@@ -6519,12 +21992,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "杭州市儿童医院",
             "channelName": "杭州首术科技有限公司",
             "salesName": "EAST2",
             "salesDate": "2019-10-01",
             "installDate": "2019-10-29",
-            "warrantyExpireDate": "2021-11-09"
+            "warrantyExpireDate": "2021-11-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25974372",
@@ -6533,12 +22010,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海理雄医疗器械有限公司",
             "channelName": "上海理雄医疗器械有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2019-10-22",
             "installDate": "2019-11-12",
-            "warrantyExpireDate": "2021-05-28"
+            "warrantyExpireDate": "2021-05-28",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-26012008",
@@ -6547,12 +22028,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "湖北省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "国药集团湖北省医疗器械有限公司",
             "channelName": "国药集团湖北省医疗器械有限公司",
             "salesName": "EAST2",
             "salesDate": "2019-11-05",
             "installDate": "2019-11-21",
-            "warrantyExpireDate": "2021-11-20"
+            "warrantyExpireDate": "2021-11-20",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25974371",
@@ -6561,12 +22046,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海理雄医疗器械有限公司",
             "channelName": "上海理雄医疗器械有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2019-10-22",
             "installDate": "2019-11-29",
-            "warrantyExpireDate": "2021-05-28"
+            "warrantyExpireDate": "2021-05-28",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-26074088",
@@ -6575,12 +22064,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海瑶革医疗设备有限公司",
             "channelName": "上海瑶革医疗设备有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2019-11-28",
             "installDate": "2019-12-27",
-            "warrantyExpireDate": "2021-12-17"
+            "warrantyExpireDate": "2021-12-17",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-26074089",
@@ -6589,12 +22082,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海瑶革医疗设备有限公司",
             "channelName": "上海瑶革医疗设备有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2019-11-28",
             "installDate": "2019-12-27",
-            "warrantyExpireDate": "2021-12-17"
+            "warrantyExpireDate": "2021-12-17",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25929175",
@@ -6603,12 +22100,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "江西省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "南昌大学第一附属医院象湖院区",
             "channelName": "江西利恒医药有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2019-10-02",
             "installDate": "2020-01-28",
-            "warrantyExpireDate": "2022-11-21"
+            "warrantyExpireDate": "2022-11-21",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25929176",
@@ -6617,12 +22118,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "江西省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "南昌大学第一附属医院象湖院区",
             "channelName": "江西利恒医药有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2019-10-02",
             "installDate": "2020-01-28",
-            "warrantyExpireDate": "2022-11-21"
+            "warrantyExpireDate": "2022-11-21",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-26151851",
@@ -6631,12 +22136,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "湖北省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "泰康同济（武汉）医院",
             "channelName": "成都裕康医疗设备有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2020-01-17",
             "installDate": "2020-02-18",
-            "warrantyExpireDate": "2021-10-20"
+            "warrantyExpireDate": "2021-10-20",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-26151856",
@@ -6645,12 +22154,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
             "terminalUser": "深圳市人民医院",
             "channelName": "广州圣佑贸易有限公司",
             "salesName": "SOUTH",
             "salesDate": "2020-01-17",
             "installDate": "2020-02-18",
-            "warrantyExpireDate": "2022-08-15"
+            "warrantyExpireDate": "2022-08-15",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-26259085",
@@ -6659,12 +22172,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "江苏省",
+            "installCity": "无锡",
+            "salesRegion": "",
             "terminalUser": "江南大学附属医院",
             "channelName": "上海加越医疗科技有限公司",
             "salesName": "EAST1",
             "salesDate": "2020-03-12",
             "installDate": "2020-04-09",
-            "warrantyExpireDate": "2021-10-29"
+            "warrantyExpireDate": "2021-10-29",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-26265673",
@@ -6673,12 +22190,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "海南省",
+            "installCity": "海口",
+            "salesRegion": "",
             "terminalUser": "海南省人民医院",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2020-03-16",
             "installDate": "2020-04-09",
-            "warrantyExpireDate": "2025-12-25"
+            "warrantyExpireDate": "2025-12-25",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-26574700",
@@ -6687,12 +22208,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "山西省",
+            "installCity": "太原",
+            "salesRegion": "",
             "terminalUser": "山西省人民医院",
             "channelName": "山西省人民医院",
             "salesName": "NORTH",
             "salesDate": "2020-07-07",
             "installDate": "2020-07-30",
-            "warrantyExpireDate": "2022-01-31"
+            "warrantyExpireDate": "2022-01-31",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-26574701",
@@ -6701,12 +22226,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "山西省",
+            "installCity": "太原",
+            "salesRegion": "",
             "terminalUser": "山西省人民医院",
             "channelName": "山西精准互联科技发展有限公司",
             "salesName": "NORTH",
             "salesDate": "2020-07-07",
             "installDate": "2020-07-30",
-            "warrantyExpireDate": "2022-01-31"
+            "warrantyExpireDate": "2022-01-31",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-26593348",
@@ -6715,12 +22244,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州市合众汇达医疗科技有限公司",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2020-07-10",
             "installDate": "2020-08-14",
-            "warrantyExpireDate": "2022-02-27"
+            "warrantyExpireDate": "2022-02-27",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25702974",
@@ -6729,12 +22262,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "江西省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "南昌大学第一附属医院象湖院区",
             "channelName": "江西利恒医药有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2019-06-05",
             "installDate": "2020-08-27",
-            "warrantyExpireDate": "2021-11-15"
+            "warrantyExpireDate": "2021-11-15",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27180049",
@@ -6743,12 +22280,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "浙江省",
+            "installCity": "杭州",
+            "salesRegion": "",
             "terminalUser": "浙江省人民医院",
             "channelName": "杭州大沨医疗器械有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2020-11-20",
             "installDate": "2020-12-03",
-            "warrantyExpireDate": "2023-12-30"
+            "warrantyExpireDate": "2023-12-30",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27189733",
@@ -6757,12 +22298,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
             "terminalUser": "成都京东方医院",
             "channelName": "江西腾步科技有限公司",
             "salesName": "WEST-ACT",
             "salesDate": "2020-11-24",
             "installDate": "2020-12-22",
-            "warrantyExpireDate": "2022-05-30"
+            "warrantyExpireDate": "2022-05-30",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27189734",
@@ -6771,12 +22316,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "四川省",
+            "installCity": "成都",
+            "salesRegion": "",
             "terminalUser": "成都京东方医院",
             "channelName": "江西腾步科技有限公司",
             "salesName": "WEST-ACT",
             "salesDate": "2020-11-24",
             "installDate": "2020-12-22",
-            "warrantyExpireDate": "2022-05-30"
+            "warrantyExpireDate": "2022-05-30",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-25702975",
@@ -6785,12 +22334,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "江苏省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "南京市浦口医院",
             "channelName": "厦门建发高科有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2019-06-05",
             "installDate": "2021-01-13",
-            "warrantyExpireDate": "2023-11-10"
+            "warrantyExpireDate": "2023-11-10",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27274143",
@@ -6799,12 +22352,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "浙江省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "浙江中医药大学附属第三医院",
             "channelName": "杭州首术科技有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2021-01-11",
             "installDate": "2021-01-29",
-            "warrantyExpireDate": "2022-12-28"
+            "warrantyExpireDate": "2022-12-28",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27347598",
@@ -6813,12 +22370,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "山西省",
+            "installCity": "太原",
+            "salesRegion": "",
             "terminalUser": "山西省心血管病医院",
             "channelName": "山西精准互联科技发展有限公司",
             "salesName": "NORTH-SW",
             "salesDate": "2021-02-02",
             "installDate": "2021-02-26",
-            "warrantyExpireDate": "2023-05-19"
+            "warrantyExpireDate": "2023-05-19",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27470142",
@@ -6827,12 +22388,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "上海市",
+            "installCity": "上海",
+            "salesRegion": "",
             "terminalUser": "上海交通大学医学院附属上海儿童医学中心",
             "channelName": "逸佰医疗科技发展（上海）有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2021-03-02",
             "installDate": "2021-03-26",
-            "warrantyExpireDate": "2023-07-13"
+            "warrantyExpireDate": "2023-07-13",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27559952",
@@ -6841,12 +22406,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州泰和肿瘤医院",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2021-03-23",
             "installDate": "2021-04-08",
-            "warrantyExpireDate": "2023-12-09"
+            "warrantyExpireDate": "2023-12-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27559953",
@@ -6855,12 +22424,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州泰和肿瘤医院",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2021-03-23",
             "installDate": "2021-04-08",
-            "warrantyExpireDate": "2023-12-09"
+            "warrantyExpireDate": "2023-12-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27559954",
@@ -6869,12 +22442,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州泰和肿瘤医院",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2021-03-23",
             "installDate": "2021-04-08",
-            "warrantyExpireDate": "2023-12-09"
+            "warrantyExpireDate": "2023-12-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27559955",
@@ -6883,12 +22460,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州泰和肿瘤医院",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2021-03-23",
             "installDate": "2021-04-08",
-            "warrantyExpireDate": "2023-12-09"
+            "warrantyExpireDate": "2023-12-09",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27579663",
@@ -6897,12 +22478,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "福建省",
+            "installCity": "晋江",
+            "salesRegion": "",
             "terminalUser": "晋江市医院",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2021-03-26",
             "installDate": "2021-04-19",
-            "warrantyExpireDate": "2023-12-26"
+            "warrantyExpireDate": "2023-12-26",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27579664",
@@ -6911,12 +22496,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "福建省",
+            "installCity": "晋江",
+            "salesRegion": "",
             "terminalUser": "晋江市医院",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2021-03-26",
             "installDate": "2021-04-19",
-            "warrantyExpireDate": "2023-12-26"
+            "warrantyExpireDate": "2023-12-26",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27702745",
@@ -6925,12 +22514,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "福建省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "福建医科大学附属协和医院旗山院区",
             "channelName": "厦门象屿速传供应链发展股份有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2021-04-28",
             "installDate": "2021-06-10",
-            "warrantyExpireDate": "2026-03-11"
+            "warrantyExpireDate": "2026-03-11",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27702746",
@@ -6939,12 +22532,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "福建省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "福建医科大学附属协和医院旗山院区",
             "channelName": "厦门象屿速传供应链发展股份有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2021-04-28",
             "installDate": "2021-06-10",
-            "warrantyExpireDate": "2026-03-11"
+            "warrantyExpireDate": "2026-03-11",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27717160",
@@ -6953,12 +22550,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "江西省",
+            "installCity": "萍乡",
+            "salesRegion": "",
             "terminalUser": "萍乡市人民医院",
             "channelName": "厦门象屿速传供应链发展股份有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2021-05-03",
             "installDate": "2021-06-21",
-            "warrantyExpireDate": "2023-10-19"
+            "warrantyExpireDate": "2023-10-19",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27915703",
@@ -6967,12 +22568,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 4 IN 4 OUT (HW)",
             "installProvince": "四川省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "邻水县人民医院",
             "channelName": "成都裕康医疗设备有限公司",
             "salesName": "WEST-SW",
             "salesDate": "2021-06-25",
             "installDate": "2021-07-23",
-            "warrantyExpireDate": "2026-10-07"
+            "warrantyExpireDate": "2026-10-07",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-27997264",
@@ -6981,12 +22586,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "北京市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "北京福鼎奕隆医疗设备有限公司",
             "channelName": "北京福鼎奕隆医疗设备有限公司",
             "salesName": "1G5",
             "salesDate": "2021-07-16",
             "installDate": "2021-08-03",
-            "warrantyExpireDate": "2023-02-17"
+            "warrantyExpireDate": "2023-02-17",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-28251447",
@@ -6995,12 +22604,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "山东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "青岛国林国际贸易有限公司",
             "channelName": "青岛国林国际贸易有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2021-10-08",
             "installDate": "2021-11-26",
-            "warrantyExpireDate": "2023-05-25"
+            "warrantyExpireDate": "2023-05-25",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-28380151",
@@ -7009,12 +22622,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "北京市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "北京智诚恒创科技发展有限公司",
             "channelName": "北京智诚恒创科技发展有限公司",
             "salesName": "NORTH",
             "salesDate": "2021-11-12",
             "installDate": "2021-12-01",
-            "warrantyExpireDate": "2023-06-22"
+            "warrantyExpireDate": "2023-06-22",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-28444966",
@@ -7023,12 +22640,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 6 IN 6 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "中山大学附属第七医院（深圳）",
             "channelName": "广东三鸿医药有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2021-11-30",
             "installDate": "2021-12-15",
-            "warrantyExpireDate": "2024-02-15"
+            "warrantyExpireDate": "2024-02-15",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-28429058",
@@ -7037,12 +22658,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海瑶革医疗设备有限公司",
             "channelName": "上海瑶革医疗设备有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2021-11-25",
             "installDate": "2021-12-17",
-            "warrantyExpireDate": "2023-09-28"
+            "warrantyExpireDate": "2023-09-28",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29240761",
@@ -7051,12 +22676,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海福吉科贸有限公司",
             "channelName": "上海福吉科贸有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2022-07-18",
             "installDate": "2022-09-29",
-            "warrantyExpireDate": "2024-04-23"
+            "warrantyExpireDate": "2024-04-23",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29240762",
@@ -7065,12 +22694,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "北京市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "北京映熹科技有限公司",
             "channelName": "北京映熹科技有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2022-07-18",
             "installDate": "2022-09-29",
-            "warrantyExpireDate": "2024-10-18"
+            "warrantyExpireDate": "2024-10-18",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29240763",
@@ -7079,12 +22712,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "天津市",
+            "installCity": "天津",
+            "salesRegion": "",
             "terminalUser": "天津康汇医院",
             "channelName": "天津世纪瀛海科技有限公司",
             "salesName": "NORTH-SW",
             "salesDate": "2022-07-18",
             "installDate": "2022-09-29",
-            "warrantyExpireDate": "2026-10-20"
+            "warrantyExpireDate": "2026-10-20",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29240764",
@@ -7093,12 +22730,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "中建投（广东）国际贸易有限公司",
             "channelName": "中建投（广东）国际贸易有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2022-07-18",
             "installDate": "2022-09-29",
-            "warrantyExpireDate": "2026-12-02"
+            "warrantyExpireDate": "2026-12-02",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29240765",
@@ -7107,12 +22748,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "湖北省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "华中科技大学同济医学院附属梨园医院",
             "channelName": "中建投（广东）国际贸易有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2022-07-18",
             "installDate": "2022-09-29",
-            "warrantyExpireDate": "2027-01-04"
+            "warrantyExpireDate": "2027-01-04",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29240897",
@@ -7121,12 +22766,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "四川省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "四川思芃商贸有限公司",
             "channelName": "四川思芃商贸有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2022-07-18",
             "installDate": "2022-12-15",
-            "warrantyExpireDate": "2027-06-26"
+            "warrantyExpireDate": "2027-06-26",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29240898",
@@ -7135,12 +22784,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "广州市合众汇达医疗科技有限公司",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2022-07-18",
             "installDate": "2022-12-15",
-            "warrantyExpireDate": "2027-06-29"
+            "warrantyExpireDate": "2027-06-29",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29262006",
@@ -7149,12 +22802,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "四川省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "四川思芃商贸有限公司",
             "channelName": "四川思芃商贸有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2022-07-22",
             "installDate": "2022-12-15",
-            "warrantyExpireDate": "2027-06-26"
+            "warrantyExpireDate": "2027-06-26",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29262007",
@@ -7163,12 +22820,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "四川省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "四川思芃商贸有限公司",
             "channelName": "四川思芃商贸有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2022-07-22",
             "installDate": "2022-12-15",
-            "warrantyExpireDate": "2027-06-26"
+            "warrantyExpireDate": "2027-06-26",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29262008",
@@ -7177,12 +22838,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "四川省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "四川思芃商贸有限公司",
             "channelName": "四川思芃商贸有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2022-07-22",
             "installDate": "2022-12-15",
-            "warrantyExpireDate": "2027-06-26"
+            "warrantyExpireDate": "2027-06-26",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29262009",
@@ -7191,12 +22856,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "四川省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "四川思芃商贸有限公司",
             "channelName": "四川思芃商贸有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2022-07-22",
             "installDate": "2022-12-15",
-            "warrantyExpireDate": "2027-06-26"
+            "warrantyExpireDate": "2027-06-26",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29262010",
@@ -7205,12 +22874,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "四川省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "四川思芃商贸有限公司",
             "channelName": "四川思芃商贸有限公司",
             "salesName": "GDUMMY",
             "salesDate": "2022-07-22",
             "installDate": "2022-12-15",
-            "warrantyExpireDate": "2027-06-26"
+            "warrantyExpireDate": "2027-06-26",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29649642",
@@ -7219,12 +22892,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
             "terminalUser": "华中科技大学协和深圳医院",
             "channelName": "广东三鸿医药有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2022-11-21",
             "installDate": "2022-12-29",
-            "warrantyExpireDate": "2025-12-15"
+            "warrantyExpireDate": "2025-12-15",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29649643",
@@ -7233,12 +22910,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
             "terminalUser": "华中科技大学协和深圳医院",
             "channelName": "广东三鸿医药有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2022-11-21",
             "installDate": "2022-12-29",
-            "warrantyExpireDate": "2025-12-15"
+            "warrantyExpireDate": "2025-12-15",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29649644",
@@ -7247,12 +22928,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "广东省",
+            "installCity": "深圳",
+            "salesRegion": "",
             "terminalUser": "华中科技大学协和深圳医院",
             "channelName": "广东三鸿医药有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2022-11-21",
             "installDate": "2022-12-29",
-            "warrantyExpireDate": "2025-12-15"
+            "warrantyExpireDate": "2025-12-15",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29649645",
@@ -7261,12 +22946,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "天津市",
+            "installCity": "天津",
+            "salesRegion": "",
             "terminalUser": "天津医科大学第二医院",
             "channelName": "广州市合众汇达医疗科技有限公司",
             "salesName": "NORTH-SW",
             "salesDate": "2022-11-21",
             "installDate": "2022-12-29",
-            "warrantyExpireDate": "2026-04-12"
+            "warrantyExpireDate": "2026-04-12",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29649646",
@@ -7275,12 +22964,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "上海市静安区华东医院",
             "channelName": "上海理雄医疗器械有限公司",
             "salesName": "EAST-SW",
             "salesDate": "2022-11-21",
             "installDate": "2022-12-29",
-            "warrantyExpireDate": "2026-03-11"
+            "warrantyExpireDate": "2026-03-11",
+            "winRate": "",
+            "gforceSystemId": ""
           },
           {
             "serialNo": "TEGRIS-29649647",
@@ -7289,12 +22982,16 @@ let dashboards = {
             "quantity": 1,
             "configDescription": "BASE SYSTEM 2 IN 2 OUT (HW)",
             "installProvince": "湖北省",
+            "installCity": "",
+            "salesRegion": "",
             "terminalUser": "武汉市青山区华润武钢总医院",
             "channelName": "中建投（广东）国际贸易有限公司",
             "salesName": "SOUTH-SW",
             "salesDate": "2022-11-21",
             "installDate": "2022-12-29",
-            "warrantyExpireDate": "2026-12-24"
+            "warrantyExpireDate": "2026-12-24",
+            "winRate": "",
+            "gforceSystemId": ""
           }
         ]
       },
@@ -7494,6 +23191,519 @@ let dashboards = {
         "sourceRecords": []
       }
     }
+  },
+  "magnus2026Funnel": {
+    "title": "Magnus 2026 Funnel",
+    "rankingTitle": "Magnus 2026 Funnel 客户排名",
+    "modalTitle": "Magnus 2026 Funnel 项目录入与更新",
+    "totalUnitsLabel": "台 1180 Magnus Funnel",
+    "visual": {
+      "type": "image",
+      "src": "assets/1180-magnus-hybrid-column.png",
+      "alt": "1180 Magnus operating table system"
+    },
+    "productModels": [
+      "20 Funnel",
+      "40 Funnel",
+      "60 Funnel",
+      "80 Funnel",
+      "100 Funnel"
+    ],
+    "lineTotalUnitsLabelTemplate": "台 {line} 项目",
+    "hideYearlyTrend": true,
+    "dateBasis": "order",
+    "productLineOptions": [
+      {
+        "value": "all",
+        "label": "全部"
+      },
+      {
+        "value": "funnel20",
+        "label": "20 Funnel"
+      },
+      {
+        "value": "funnel40",
+        "label": "40 Funnel"
+      },
+      {
+        "value": "funnel60",
+        "label": "60 Funnel"
+      },
+      {
+        "value": "funnel80",
+        "label": "80 Funnel"
+      },
+      {
+        "value": "funnel100",
+        "label": "100 Funnel"
+      }
+    ],
+    "provinceData": [],
+    "users": [],
+    "partners": [],
+    "updates": [],
+    "monthlyTrend": [
+      {
+        "month": "2026-01",
+        "installed": 0
+      },
+      {
+        "month": "2026-02",
+        "installed": 0
+      },
+      {
+        "month": "2026-03",
+        "installed": 0
+      },
+      {
+        "month": "2026-04",
+        "installed": 0
+      },
+      {
+        "month": "2026-05",
+        "installed": 0
+      },
+      {
+        "month": "2026-06",
+        "installed": 0
+      },
+      {
+        "month": "2026-07",
+        "installed": 0
+      },
+      {
+        "month": "2026-08",
+        "installed": 0
+      },
+      {
+        "month": "2026-09",
+        "installed": 0
+      },
+      {
+        "month": "2026-10",
+        "installed": 0
+      },
+      {
+        "month": "2026-11",
+        "installed": 0
+      },
+      {
+        "month": "2026-12",
+        "installed": 0
+      }
+    ],
+    "yearlyTrend": [],
+    "totalUnits": 0,
+    "quarterUnits": 0,
+    "sourceRecords": [],
+    "productLineData": {
+      "funnel20": {
+        "title": "Magnus 2026 Funnel",
+        "rankingTitle": "Magnus 2026 Funnel 客户排名",
+        "modalTitle": "Magnus 2026 Funnel 项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus Funnel",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "20 Funnel",
+          "40 Funnel",
+          "60 Funnel",
+          "80 Funnel",
+          "100 Funnel"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 项目",
+        "hideYearlyTrend": true,
+        "dateBasis": "order",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [
+          {
+            "month": "2026-01",
+            "installed": 0
+          },
+          {
+            "month": "2026-02",
+            "installed": 0
+          },
+          {
+            "month": "2026-03",
+            "installed": 0
+          },
+          {
+            "month": "2026-04",
+            "installed": 0
+          },
+          {
+            "month": "2026-05",
+            "installed": 0
+          },
+          {
+            "month": "2026-06",
+            "installed": 0
+          },
+          {
+            "month": "2026-07",
+            "installed": 0
+          },
+          {
+            "month": "2026-08",
+            "installed": 0
+          },
+          {
+            "month": "2026-09",
+            "installed": 0
+          },
+          {
+            "month": "2026-10",
+            "installed": 0
+          },
+          {
+            "month": "2026-11",
+            "installed": 0
+          },
+          {
+            "month": "2026-12",
+            "installed": 0
+          }
+        ],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": [],
+        "funnelTrendYear": 2026
+      },
+      "funnel40": {
+        "title": "Magnus 2026 Funnel",
+        "rankingTitle": "Magnus 2026 Funnel 客户排名",
+        "modalTitle": "Magnus 2026 Funnel 项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus Funnel",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "20 Funnel",
+          "40 Funnel",
+          "60 Funnel",
+          "80 Funnel",
+          "100 Funnel"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 项目",
+        "hideYearlyTrend": true,
+        "dateBasis": "order",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [
+          {
+            "month": "2026-01",
+            "installed": 0
+          },
+          {
+            "month": "2026-02",
+            "installed": 0
+          },
+          {
+            "month": "2026-03",
+            "installed": 0
+          },
+          {
+            "month": "2026-04",
+            "installed": 0
+          },
+          {
+            "month": "2026-05",
+            "installed": 0
+          },
+          {
+            "month": "2026-06",
+            "installed": 0
+          },
+          {
+            "month": "2026-07",
+            "installed": 0
+          },
+          {
+            "month": "2026-08",
+            "installed": 0
+          },
+          {
+            "month": "2026-09",
+            "installed": 0
+          },
+          {
+            "month": "2026-10",
+            "installed": 0
+          },
+          {
+            "month": "2026-11",
+            "installed": 0
+          },
+          {
+            "month": "2026-12",
+            "installed": 0
+          }
+        ],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": [],
+        "funnelTrendYear": 2026
+      },
+      "funnel60": {
+        "title": "Magnus 2026 Funnel",
+        "rankingTitle": "Magnus 2026 Funnel 客户排名",
+        "modalTitle": "Magnus 2026 Funnel 项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus Funnel",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "20 Funnel",
+          "40 Funnel",
+          "60 Funnel",
+          "80 Funnel",
+          "100 Funnel"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 项目",
+        "hideYearlyTrend": true,
+        "dateBasis": "order",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [
+          {
+            "month": "2026-01",
+            "installed": 0
+          },
+          {
+            "month": "2026-02",
+            "installed": 0
+          },
+          {
+            "month": "2026-03",
+            "installed": 0
+          },
+          {
+            "month": "2026-04",
+            "installed": 0
+          },
+          {
+            "month": "2026-05",
+            "installed": 0
+          },
+          {
+            "month": "2026-06",
+            "installed": 0
+          },
+          {
+            "month": "2026-07",
+            "installed": 0
+          },
+          {
+            "month": "2026-08",
+            "installed": 0
+          },
+          {
+            "month": "2026-09",
+            "installed": 0
+          },
+          {
+            "month": "2026-10",
+            "installed": 0
+          },
+          {
+            "month": "2026-11",
+            "installed": 0
+          },
+          {
+            "month": "2026-12",
+            "installed": 0
+          }
+        ],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": [],
+        "funnelTrendYear": 2026
+      },
+      "funnel80": {
+        "title": "Magnus 2026 Funnel",
+        "rankingTitle": "Magnus 2026 Funnel 客户排名",
+        "modalTitle": "Magnus 2026 Funnel 项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus Funnel",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "20 Funnel",
+          "40 Funnel",
+          "60 Funnel",
+          "80 Funnel",
+          "100 Funnel"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 项目",
+        "hideYearlyTrend": true,
+        "dateBasis": "order",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [
+          {
+            "month": "2026-01",
+            "installed": 0
+          },
+          {
+            "month": "2026-02",
+            "installed": 0
+          },
+          {
+            "month": "2026-03",
+            "installed": 0
+          },
+          {
+            "month": "2026-04",
+            "installed": 0
+          },
+          {
+            "month": "2026-05",
+            "installed": 0
+          },
+          {
+            "month": "2026-06",
+            "installed": 0
+          },
+          {
+            "month": "2026-07",
+            "installed": 0
+          },
+          {
+            "month": "2026-08",
+            "installed": 0
+          },
+          {
+            "month": "2026-09",
+            "installed": 0
+          },
+          {
+            "month": "2026-10",
+            "installed": 0
+          },
+          {
+            "month": "2026-11",
+            "installed": 0
+          },
+          {
+            "month": "2026-12",
+            "installed": 0
+          }
+        ],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": [],
+        "funnelTrendYear": 2026
+      },
+      "funnel100": {
+        "title": "Magnus 2026 Funnel",
+        "rankingTitle": "Magnus 2026 Funnel 客户排名",
+        "modalTitle": "Magnus 2026 Funnel 项目录入与更新",
+        "totalUnitsLabel": "台 1180 Magnus Funnel",
+        "visual": {
+          "type": "image",
+          "src": "assets/1180-magnus-hybrid-column.png",
+          "alt": "1180 Magnus operating table system"
+        },
+        "productModels": [
+          "20 Funnel",
+          "40 Funnel",
+          "60 Funnel",
+          "80 Funnel",
+          "100 Funnel"
+        ],
+        "lineTotalUnitsLabelTemplate": "台 {line} 项目",
+        "hideYearlyTrend": true,
+        "dateBasis": "order",
+        "productLineOptions": [],
+        "provinceData": [],
+        "users": [],
+        "partners": [],
+        "updates": [],
+        "monthlyTrend": [
+          {
+            "month": "2026-01",
+            "installed": 0
+          },
+          {
+            "month": "2026-02",
+            "installed": 0
+          },
+          {
+            "month": "2026-03",
+            "installed": 0
+          },
+          {
+            "month": "2026-04",
+            "installed": 0
+          },
+          {
+            "month": "2026-05",
+            "installed": 0
+          },
+          {
+            "month": "2026-06",
+            "installed": 0
+          },
+          {
+            "month": "2026-07",
+            "installed": 0
+          },
+          {
+            "month": "2026-08",
+            "installed": 0
+          },
+          {
+            "month": "2026-09",
+            "installed": 0
+          },
+          {
+            "month": "2026-10",
+            "installed": 0
+          },
+          {
+            "month": "2026-11",
+            "installed": 0
+          },
+          {
+            "month": "2026-12",
+            "installed": 0
+          }
+        ],
+        "yearlyTrend": [],
+        "totalUnits": 0,
+        "quarterUnits": 0,
+        "sourceRecords": [],
+        "funnelTrendYear": 2026
+      }
+    },
+    "funnelTrendYear": 2026
   }
 };
 
@@ -7928,6 +24138,12 @@ function normalizeProductKey(value) {
     "1180页面": "magnus1180",
     "magnus": "magnus1180",
     "magnus1180": "magnus1180",
+    "magnus funnel": "magnus2026Funnel",
+    "magnus 2026 funnel": "magnus2026Funnel",
+    "1180 magnus funnel": "magnus2026Funnel",
+    "2026 funnel": "magnus2026Funnel",
+    "funnel": "magnus2026Funnel",
+    "magnus2026funnel": "magnus2026Funnel",
     "tegris": "tegris",
     "tegris dashboard": "tegris",
     "tegris页面": "tegris",
@@ -7940,6 +24156,16 @@ function normalizeProductKey(value) {
     "icMic": "icMic"
   };
   return aliases[key.toLowerCase()] || key;
+}
+
+function normalizeWinRate(value) {
+  const match = String(value ?? "").match(/20|40|60|80|100/);
+  return match ? match[0] : "";
+}
+
+function funnelModelFromRate(value) {
+  const rate = normalizeWinRate(value);
+  return rate ? `${rate} Funnel` : "";
 }
 
 function normalizeLineKey(value) {
@@ -8014,13 +24240,21 @@ function yearKey(date) {
 }
 
 function dateSortValue(record) {
-  return (record.installDate || record.salesDate || new Date(0)).getTime();
+  return (record.primaryDate || record.installDate || record.salesDate || new Date(0)).getTime();
+}
+
+function recordPrimaryDate(record, dashboard = {}) {
+  if (dashboard.dateBasis === "order") {
+    return record.salesDate || record.installDate || null;
+  }
+  return record.installDate || record.salesDate || null;
 }
 
 function dashboardRowsFromSheet(workbook, sheetName, productKey) {
   return rowsFromSheet(workbook, sheetName)
     .map((row) => {
-      const productModel = String(sheetCell(row, ["型号选择", "型号", "productModel", "产品型号"])).trim();
+      const winRate = normalizeWinRate(sheetCell(row, ["赢率", "Funnel赢率", "Funnel_Win_Rate", "winRate"]));
+      const productModel = String(sheetCell(row, ["型号选择", "型号", "productModel", "产品型号"])).trim() || funnelModelFromRate(winRate);
       const installProvince = canonicalProvinceName(sheetCell(row, ["装机省份", "省份", "installProvince"]));
       const terminalUser = String(sheetCell(row, ["终端用户", "用户", "医院", "客户", "hospitalName"])).trim();
       const quantity = numberCell(row, ["数量", "装机量", "quantity", "value"]) || 1;
@@ -8037,12 +24271,16 @@ function dashboardRowsFromSheet(workbook, sheetName, productKey) {
         quantity,
         configDescription: String(sheetCell(row, ["配置描述", "配置", "描述", "configuration"])).trim(),
         installProvince,
+        installCity: String(sheetCell(row, ["城市", "市", "City", "installCity"])).trim(),
+        salesRegion: String(sheetCell(row, ["区域", "Region", "salesRegion"])).trim(),
         terminalUser,
         channelName: String(sheetCell(row, ["销售渠道", "渠道", "channelName"])).trim() || "未填写渠道",
         salesName: String(sheetCell(row, ["销售", "销售姓名", "salesName"])).trim() || "未填写销售",
         salesDate: excelDateValue(row, ["销售时间", "销售日期", "orderDate", "salesDate"]),
         installDate: excelDateValue(row, ["装机时间", "装机日期", "installDate"]),
-        warrantyExpireDate: excelDateValue(row, ["保修过期时间", "保修到期", "warrantyExpireDate"])
+        warrantyExpireDate: excelDateValue(row, ["保修过期时间", "保修到期", "warrantyExpireDate"]),
+        winRate,
+        gforceSystemId: String(sheetCell(row, ["Gforce系统编号", "Gforce 系统编号", "Gforce_System_ID", "gforceSystemId"])).trim()
       };
     })
     .filter(Boolean);
@@ -8052,7 +24290,8 @@ function dashboardRowsFromUnifiedSheet(workbook) {
   return rowsFromSheet(workbook, "装机数据")
     .map((row) => {
       const productKey = normalizeProductKey(sheetCell(row, ["产品", "产品页面", "product", "productKey"]));
-      const productModel = String(sheetCell(row, ["型号", "型号选择", "productModel", "产品型号"])).trim();
+      const winRate = normalizeWinRate(sheetCell(row, ["赢率", "Funnel赢率", "Funnel_Win_Rate", "winRate"]));
+      const productModel = String(sheetCell(row, ["型号", "型号选择", "productModel", "产品型号"])).trim() || funnelModelFromRate(winRate);
       const installProvince = canonicalProvinceName(sheetCell(row, ["省份", "装机省份", "installProvince"]));
       const terminalUser = String(sheetCell(row, ["最终客户", "终端用户", "用户", "医院", "客户", "hospitalName"])).trim();
       const quantity = numberCell(row, ["数量", "装机量", "quantity", "value"]) || 1;
@@ -8069,12 +24308,16 @@ function dashboardRowsFromUnifiedSheet(workbook) {
         quantity,
         configDescription: String(sheetCell(row, ["配置", "配置描述", "描述", "configuration"])).trim(),
         installProvince,
+        installCity: String(sheetCell(row, ["城市", "市", "City", "installCity"])).trim(),
+        salesRegion: String(sheetCell(row, ["区域", "Region", "salesRegion"])).trim(),
         terminalUser,
         channelName: String(sheetCell(row, ["销售渠道", "渠道", "channelName"])).trim() || "未填写渠道",
         salesName: String(sheetCell(row, ["销售", "销售姓名", "salesName"])).trim() || "未填写销售",
         salesDate: excelDateValue(row, ["订单时间", "销售时间", "销售日期", "orderDate", "salesDate"]),
         installDate: excelDateValue(row, ["装机时间", "装机日期", "installDate"]),
-        warrantyExpireDate: excelDateValue(row, ["保修过期时间", "保修到期", "warrantyExpireDate"])
+        warrantyExpireDate: excelDateValue(row, ["保修过期时间", "保修到期", "warrantyExpireDate"]),
+        winRate,
+        gforceSystemId: String(sheetCell(row, ["Gforce系统编号", "Gforce 系统编号", "Gforce_System_ID", "gforceSystemId"])).trim()
       };
     })
     .filter(Boolean);
@@ -8101,27 +24344,29 @@ function topGroupedRecords(records, keyGetter, provinceGetter) {
     .slice(0, 8);
 }
 
-function latestRecord(records) {
-  return [...records].sort((a, b) => dateSortValue(b) - dateSortValue(a))[0];
+function latestRecord(records, dashboard = {}) {
+  return [...records]
+    .sort((a, b) => dateSortValue({ ...b, primaryDate: recordPrimaryDate(b, dashboard) }) - dateSortValue({ ...a, primaryDate: recordPrimaryDate(a, dashboard) }))[0];
 }
 
-function generatedProvinceData(records) {
+function generatedProvinceData(records, dashboard = {}) {
   const map = new Map();
   records.forEach((record) => {
+    const primaryDate = recordPrimaryDate(record, dashboard);
     const item = map.get(record.installProvince) || {
       name: record.installProvince,
       value: 0,
       latestSite: record.terminalUser,
-      latestDate: isoDate(record.installDate || record.salesDate),
+      latestDate: isoDate(primaryDate),
       coord: provinceCoordinates[record.installProvince] || [104.2, 35.8],
       latestTime: 0
     };
     item.value += record.quantity;
 
-    const time = dateSortValue(record);
+    const time = dateSortValue({ ...record, primaryDate });
     if (time >= item.latestTime) {
       item.latestSite = record.terminalUser;
-      item.latestDate = isoDate(record.installDate || record.salesDate);
+      item.latestDate = isoDate(primaryDate);
       item.latestTime = time;
     }
     map.set(record.installProvince, item);
@@ -8132,34 +24377,39 @@ function generatedProvinceData(records) {
     .map(({ latestTime, ...item }) => item);
 }
 
-function generatedUpdates(records) {
+function generatedUpdates(records, dashboard = {}) {
   return [...records]
-    .sort((a, b) => dateSortValue(b) - dateSortValue(a))
+    .sort((a, b) => dateSortValue({ ...b, primaryDate: recordPrimaryDate(b, dashboard) }) - dateSortValue({ ...a, primaryDate: recordPrimaryDate(a, dashboard) }))
     .slice(0, 6)
     .map((record) => {
-      const date = record.installDate || record.salesDate;
+      const date = recordPrimaryDate(record, dashboard);
       const dateLabel = date ? isoDate(date).slice(5) : "--";
       const config = record.configDescription ? `（${record.configDescription}）` : "";
       return {
         date: dateLabel,
-        status: record.installDate ? "装机" : "签约",
+        status: dashboard.dateBasis === "order" ? "下单" : (record.installDate ? "装机" : "签约"),
         text: `${record.terminalUser} 完成 ${record.productModel}${config} ${record.quantity} 台`
       };
     });
 }
 
-function generatedMonthlyTrend(records) {
-  const datedRecords = records.filter((record) => record.installDate || record.salesDate);
-  const endDate = latestRecord(datedRecords)?.installDate || latestRecord(datedRecords)?.salesDate || new Date();
-  const months = [];
-  for (let index = 11; index >= 0; index -= 1) {
-    const date = new Date(endDate.getFullYear(), endDate.getMonth() - index, 1);
-    months.push(`${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`);
-  }
+function generatedMonthlyTrend(records, dashboard = {}) {
+  const datedRecords = records.filter((record) => recordPrimaryDate(record, dashboard));
+  const months = dashboard.funnelTrendYear
+    ? Array.from({ length: 12 }, (_, index) => `${dashboard.funnelTrendYear}-${String(index + 1).padStart(2, "0")}`)
+    : (() => {
+      const endDate = recordPrimaryDate(latestRecord(datedRecords, dashboard) || {}, dashboard) || new Date();
+      const rollingMonths = [];
+      for (let index = 11; index >= 0; index -= 1) {
+        const date = new Date(endDate.getFullYear(), endDate.getMonth() - index, 1);
+        rollingMonths.push(`${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`);
+      }
+      return rollingMonths;
+    })();
 
   const totals = new Map(months.map((month) => [month, 0]));
   datedRecords.forEach((record) => {
-    const key = monthKey(record.installDate || record.salesDate);
+    const key = monthKey(recordPrimaryDate(record, dashboard));
     if (totals.has(key)) {
       totals.set(key, totals.get(key) + record.quantity);
     }
@@ -8168,13 +24418,16 @@ function generatedMonthlyTrend(records) {
   return months.map((month) => ({ month, installed: totals.get(month) || 0 }));
 }
 
-function generatedYearlyTrend(records) {
-  const datedRecords = records.filter((record) => record.installDate || record.salesDate);
-  const endYear = Number(yearKey(latestRecord(datedRecords)?.installDate || latestRecord(datedRecords)?.salesDate)) || new Date().getFullYear();
+function generatedYearlyTrend(records, dashboard = {}) {
+  if (dashboard.hideYearlyTrend) {
+    return [];
+  }
+  const datedRecords = records.filter((record) => recordPrimaryDate(record, dashboard));
+  const endYear = Number(yearKey(recordPrimaryDate(latestRecord(datedRecords, dashboard) || {}, dashboard))) || new Date().getFullYear();
   const years = Array.from({ length: 5 }, (_, index) => String(endYear - 4 + index));
   const totals = new Map(years.map((year) => [year, 0]));
   datedRecords.forEach((record) => {
-    const key = yearKey(record.installDate || record.salesDate);
+    const key = yearKey(recordPrimaryDate(record, dashboard));
     if (totals.has(key)) {
       totals.set(key, totals.get(key) + record.quantity);
     }
@@ -8183,9 +24436,9 @@ function generatedYearlyTrend(records) {
   return years.map((year) => ({ year, installed: totals.get(year) || 0 }));
 }
 
-function generatedQuarterUnits(records) {
-  const datedRecords = records.filter((record) => record.installDate || record.salesDate);
-  const endDate = latestRecord(datedRecords)?.installDate || latestRecord(datedRecords)?.salesDate;
+function generatedQuarterUnits(records, dashboard = {}) {
+  const datedRecords = records.filter((record) => recordPrimaryDate(record, dashboard));
+  const endDate = recordPrimaryDate(latestRecord(datedRecords, dashboard) || {}, dashboard);
   if (!endDate) {
     return 0;
   }
@@ -8193,7 +24446,7 @@ function generatedQuarterUnits(records) {
   const quarter = Math.floor(endDate.getMonth() / 3);
   return datedRecords
     .filter((record) => {
-      const date = record.installDate || record.salesDate;
+      const date = recordPrimaryDate(record, dashboard);
       return date.getFullYear() === endDate.getFullYear() && Math.floor(date.getMonth() / 3) === quarter;
     })
     .reduce((sum, record) => sum + record.quantity, 0);
@@ -8202,14 +24455,14 @@ function generatedQuarterUnits(records) {
 function buildDashboardDataFromRecords(baseDashboard, records) {
   const dashboard = {
     ...baseDashboard,
-    provinceData: generatedProvinceData(records),
+    provinceData: generatedProvinceData(records, baseDashboard),
     users: topGroupedRecords(records, (record) => record.terminalUser, (record) => record.installProvince),
     partners: topGroupedRecords(records, (record) => record.channelName, (record) => record.installProvince),
-    updates: generatedUpdates(records),
-    monthlyTrend: generatedMonthlyTrend(records),
-    yearlyTrend: generatedYearlyTrend(records),
+    updates: generatedUpdates(records, baseDashboard),
+    monthlyTrend: generatedMonthlyTrend(records, baseDashboard),
+    yearlyTrend: generatedYearlyTrend(records, baseDashboard),
     totalUnits: sumRecords(records),
-    quarterUnits: generatedQuarterUnits(records),
+    quarterUnits: generatedQuarterUnits(records, baseDashboard),
     sourceRecords: records.map((record) => ({
       ...record,
       salesDate: isoDate(record.salesDate),
@@ -8246,6 +24499,7 @@ function importDashboardDataWorkbook(workbook) {
 
   const sheetMap = [
     ["magnus1180", "1180用户列表"],
+    ["magnus2026Funnel", "Magnus2026Funnel"],
     ["tegris", "Tegris用户列表"],
     ["icMic", "IC-MIC用户列表"]
   ];
@@ -8279,7 +24533,7 @@ async function importDashboardDataFromExcel(file) {
   renderDashboard();
   button.textContent = dashboardDataBackendAvailable ? "导入完成" : "已导入本页";
   setTimeout(() => {
-    button.textContent = "导入装机数据";
+    button.textContent = "更新数据";
   }, 1800);
 }
 
@@ -8349,7 +24603,7 @@ async function initializeAuth() {
       const button = document.querySelector("#dashboardExcelButton");
       button.textContent = "导入失败";
       setTimeout(() => {
-        button.textContent = "导入装机数据";
+        button.textContent = "更新数据";
       }, 1800);
     }).finally(() => {
       event.target.value = "";
@@ -8554,15 +24808,71 @@ function renderDashboardChrome() {
   }
 }
 
+function parseDateValue(value) {
+  if (value instanceof Date) {
+    return value;
+  }
+
+  const text = String(value ?? "").trim();
+  if (!text) {
+    return null;
+  }
+
+  const parsed = new Date(text.replace(/\//g, "-"));
+  return Number.isNaN(parsed.getTime()) ? null : parsed;
+}
+
+function isCurrentQuarterDate(value) {
+  const date = parseDateValue(value);
+  if (!date) {
+    return false;
+  }
+
+  const now = new Date();
+  return date.getFullYear() === now.getFullYear()
+    && Math.floor(date.getMonth() / 3) === Math.floor(now.getMonth() / 3);
+}
+
+function highWinRateFunnelRecords(records) {
+  return records.filter((record) => {
+    const rate = Number(normalizeWinRate(record.winRate || record.productModel));
+    return rate >= 60 && isCurrentQuarterDate(record.salesDate || record.installDate);
+  });
+}
+
 function renderKpis() {
   const dashboard = currentDashboardData();
   const totalUnits = dashboard.totalUnits ?? dashboard.provinceData.reduce((sum, item) => sum + item.value, 0);
   const quarterUnits = dashboard.quarterUnits ?? dashboard.updates.length + Math.round(totalUnits * 0.14);
+  const kpis = [...document.querySelectorAll(".kpi")];
+
+  kpis[0].querySelector("span").textContent = "总装机量";
+  kpis[0].querySelector("small").textContent = dashboard.totalUnitsLabel;
+  kpis[2].querySelector("span").textContent = "本季度新增";
+  kpis[2].querySelector("small").textContent = "装机 / 签约";
+  kpis[3].querySelector("span").textContent = "重点合作伙伴";
+  kpis[3].querySelector("small").textContent = "活跃渠道";
 
   document.querySelector("#totalUnits").textContent = formatNumber.format(totalUnits);
   document.querySelector("#coveredProvinces").textContent = dashboard.provinceData.length;
   document.querySelector("#quarterUnits").textContent = quarterUnits;
   document.querySelector("#partnerCount").textContent = dashboard.partners.length;
+
+  if (currentDashboardKey === "magnus2026Funnel") {
+    const highWinRateRecords = highWinRateFunnelRecords(dashboard.sourceRecords || []);
+    const weightedFunnelUnits = highWinRateRecords.reduce((sum, record) => sum + (Number(record.quantity) || 0), 0);
+    const activeSalesCount = new Set(highWinRateRecords.map((record) => String(record.salesName || "").trim()).filter(Boolean)).size;
+
+    kpis[0].querySelector("span").textContent = "2026 Funnel 总量";
+    kpis[0].querySelector("small").textContent = "台 Funnel";
+    kpis[2].querySelector("span").textContent = "本季度 Weighted Funnel";
+    kpis[2].querySelector("small").textContent = "高赢率数量";
+    kpis[3].querySelector("span").textContent = "活跃的销售";
+    kpis[3].querySelector("small").textContent = "本季度高赢率";
+
+    document.querySelector("#quarterUnits").textContent = formatNumber.format(weightedFunnelUnits);
+    document.querySelector("#partnerCount").textContent = formatNumber.format(activeSalesCount);
+  }
 }
 
 function renderRanking(targetId, items) {
@@ -8671,10 +24981,19 @@ function renderTicker() {
 }
 
 function renderTrendChart() {
-  const monthlyTrend = currentDashboardData().monthlyTrend || [];
+  const dashboard = currentDashboardData();
+  const trendHeading = document.querySelector(".trend-panel .panel-heading");
+  if (trendHeading) {
+    trendHeading.querySelector("p").textContent = dashboard.funnelTrendYear ? "2026 Funnel Trend" : "12-Month Trend";
+    trendHeading.querySelector("h2").textContent = dashboard.funnelTrendYear ? "2026 年 12 个月 Funnel 趋势" : "近 12 个月装机趋势";
+    trendHeading.querySelector(".metric-chip").textContent = dashboard.funnelTrendYear ? "Funnel / 月度" : "月度 / 趋势";
+  }
+
+  const monthlyTrend = dashboard.monthlyTrend || [];
   const chartTrend = monthlyTrend.length ? monthlyTrend : [{ month: "暂无", installed: 0 }];
   const target = document.querySelector("#installTrend");
   trendChart = trendChart || echarts.init(target);
+  const isFunnelTrend = Boolean(dashboard.funnelTrendYear);
   const trendLine = chartTrend.map((item, index, source) => {
     const windowItems = source.slice(Math.max(0, index - 2), index + 1);
     const average = windowItems.reduce((sum, current) => sum + current.installed, 0) / windowItems.length;
@@ -8718,7 +25037,7 @@ function renderTrendChart() {
       axisLabel: {
         color: brandColors.midnight,
         fontSize: 11,
-        interval: 1
+        interval: isFunnelTrend ? 0 : 1
       }
     },
     yAxis: {
@@ -8732,7 +25051,7 @@ function renderTrendChart() {
     },
     series: [
       {
-        name: "月度新增",
+        name: isFunnelTrend ? "月度 Funnel" : "月度新增",
         type: "bar",
         barWidth: 12,
         data: chartTrend.map((item) => item.installed),
@@ -8742,7 +25061,7 @@ function renderTrendChart() {
         }
       },
       {
-        name: "3月均线",
+        name: isFunnelTrend ? "Funnel 3月均线" : "3月均线",
         type: "line",
         smooth: true,
         symbol: "circle",
@@ -8776,6 +25095,13 @@ function renderTrendChart() {
 }
 
 function renderYearTrendChart() {
+  const panel = document.querySelector(".year-panel");
+  if (currentDashboardData().hideYearlyTrend) {
+    if (panel) panel.hidden = true;
+    yearTrendChart?.clear();
+    return;
+  }
+  if (panel) panel.hidden = false;
   const yearlyTrend = currentDashboardData().yearlyTrend || [];
   const chartTrend = yearlyTrend.length ? yearlyTrend : [{ year: "暂无", installed: 0 }];
   const target = document.querySelector("#yearInstallTrend");

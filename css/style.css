@@ -976,6 +976,102 @@ h2 {
   min-height: 420px;
 }
 
+@media (min-width: 1600px) {
+  .dashboard-shell {
+    padding: 20px;
+    gap: 14px;
+  }
+
+  .topbar {
+    min-height: 150px;
+    grid-template-columns: minmax(300px, 0.78fr) minmax(420px, 1.1fr) minmax(230px, 0.56fr) minmax(170px, 0.42fr);
+    gap: 18px;
+    padding: 16px 22px;
+  }
+
+  .logo-plate {
+    width: clamp(260px, 18vw, 360px);
+  }
+
+  .product-visual img,
+  .tegris-visual {
+    height: 132px;
+  }
+
+  .report-meta {
+    gap: 8px;
+  }
+
+  .kpi-strip {
+    gap: 12px;
+  }
+
+  .kpi {
+    min-height: 92px;
+    padding: 14px 18px;
+  }
+
+  .main-grid {
+    grid-template-columns: minmax(260px, 0.58fr) minmax(760px, 2.35fr) minmax(300px, 0.72fr);
+    gap: 14px;
+  }
+
+  .side-column {
+    grid-template-rows: minmax(210px, 0.9fr) minmax(190px, 0.76fr) minmax(230px, 1fr);
+    gap: 14px;
+  }
+
+  .panel,
+  .map-stage {
+    padding: 16px;
+  }
+
+  .map-stage {
+    min-height: 620px;
+    grid-template-rows: auto minmax(520px, 1fr);
+  }
+
+  .china-map {
+    min-height: 520px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .main-grid {
+    grid-template-columns: minmax(300px, 0.5fr) minmax(1080px, 2.7fr) minmax(340px, 0.68fr);
+  }
+
+  .map-stage {
+    min-height: 760px;
+    grid-template-rows: auto minmax(660px, 1fr);
+  }
+
+  .china-map {
+    min-height: 660px;
+  }
+}
+
+@media (min-width: 3400px) {
+  .dashboard-shell {
+    padding: 24px;
+    gap: 18px;
+  }
+
+  .main-grid {
+    grid-template-columns: minmax(360px, 0.46fr) minmax(1480px, 3fr) minmax(420px, 0.68fr);
+    gap: 18px;
+  }
+
+  .map-stage {
+    min-height: 1040px;
+    grid-template-rows: auto minmax(940px, 1fr);
+  }
+
+  .china-map {
+    min-height: 940px;
+  }
+}
+
 .footprint-overlay {
   position: fixed;
   inset: 0;
