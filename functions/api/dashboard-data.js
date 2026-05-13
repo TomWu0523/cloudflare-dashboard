@@ -117,6 +117,16 @@ async function baserowRows(env, tableId) {
   return rows;
 }
 
+async function baserowFieldNames(env, tableId) {
+  const fields = await baserowRequest(env, `/api/database/fields/table/${tableId}/`);
+  return new Set((fields || []).map((field) => field.name));
+}
+
+function payloadForFields(payload, fieldNames) {
+  if (!fieldNames?.size) return payload;
+  return Object.fromEntries(Object.entries(payload).filter(([key]) => fieldNames.has(key)));
+}
+
 async function baserowCreateRow(env, tableId, row) {
   return baserowRequest(env, `/api/database/rows/table/${tableId}/?user_field_names=true`, {
     method: "POST",
@@ -166,6 +176,7 @@ function selectedValue(value) {
 
 function productKeyFromText(...values) {
   const text = values.map((value) => normalizedText(value).toLowerCase()).join(" ");
+  if (/funnel|win.?rate|赢率/.test(text)) return "magnus2026Funnel";
   if (/tegris|tigers|voip|classic/.test(text)) return "tegris";
   if (/1180|magnus|\bb[0-5]\b/.test(text)) return "magnus1180";
   if (/ic|mic|s600|novito|s8666|sterilizer|steriliser/.test(text)) return "icMic";
@@ -174,6 +185,10 @@ function productKeyFromText(...values) {
 
 function lineKeyForRecord(record) {
   const model = normalizeModelKey(record.productModel);
+  if (record.productKey === "magnus2026Funnel") {
+    const rate = normalizedText(record.winRate || record.productModel).match(/20|40|60|80|100/)?.[0];
+    return rate ? `funnel${rate}` : "";
+  }
   if (record.productKey === "tegris") {
     if (model.includes("voip")) return "voip";
     if (model.includes("classic")) return "classic";
@@ -212,8 +227,14 @@ function serialForRecord(record) {
 
 function testDataMarker(productKey) {
   if (productKey === "magnus1180") return "TEST_DATA_1180";
+  if (productKey === "magnus2026Funnel") return "FUNNEL_2026_MAGNUS";
   if (productKey === "icMic") return "TEST_DATA_IC_MIC";
   return "";
+}
+
+function recordDate(record, dashboard = {}) {
+  if (dashboard.dateBasis === "order") return record.salesDate || record.installDate || "";
+  return record.installDate || record.salesDate || "";
 }
 
 async function masterMaps(env) {
@@ -250,11 +271,11 @@ function topGrouped(records, keyGetter, provinceGetter) {
   return [...map.values()].sort((a, b) => b.value - a.value).slice(0, 8);
 }
 
-function dateValue(record) {
-  return new Date(record.installDate || record.salesDate || "1970-01-01").getTime();
+function dateValue(record, dashboard = {}) {
+  return new Date(recordDate(record, dashboard) || "1970-01-01").getTime();
 }
 
-function provinceData(records) {
+function provinceData(records, dashboard = {}) {
   const map = new Map();
   records.forEach((record) => {
     const province = canonicalProvince(record.installProvince);
@@ -263,15 +284,15 @@ function provinceData(records) {
       name: province,
       value: 0,
       latestSite: record.terminalUser,
-      latestDate: record.installDate || record.salesDate || "",
+      latestDate: recordDate(record, dashboard),
       coord: provinceCoordinates[province] || [104.2, 35.8],
       latestTime: 0
     };
     item.value += Number(record.quantity) || 0;
-    const time = dateValue(record);
+    const time = dateValue(record, dashboard);
     if (time >= item.latestTime) {
       item.latestSite = record.terminalUser;
-      item.latestDate = record.installDate || record.salesDate || "";
+      item.latestDate = recordDate(record, dashboard);
       item.latestTime = time;
     }
     map.set(province, item);
@@ -279,37 +300,43 @@ function provinceData(records) {
   return [...map.values()].sort((a, b) => b.value - a.value).map(({ latestTime, ...item }) => item);
 }
 
-function latestUpdates(records) {
-  return [...records].sort((a, b) => dateValue(b) - dateValue(a)).slice(0, 6).map((record) => ({
-    date: (record.installDate || record.salesDate || "--").slice(5) || "--",
-    status: record.installDate ? "装机" : "签约",
+function latestUpdates(records, dashboard = {}) {
+  return [...records].sort((a, b) => dateValue(b, dashboard) - dateValue(a, dashboard)).slice(0, 6).map((record) => ({
+    date: (recordDate(record, dashboard) || "--").slice(5) || "--",
+    status: dashboard.dateBasis === "order" ? "下单" : (record.installDate ? "装机" : "签约"),
     text: `${record.terminalUser || "未填写终端用户"} 完成 ${record.productModel || "设备"} ${record.quantity || 1} 台`
   }));
 }
 
-function monthlyTrend(records) {
-  const dated = records.filter((record) => record.installDate || record.salesDate);
-  const end = dated.length ? new Date(Math.max(...dated.map(dateValue))) : new Date();
-  const months = [];
-  for (let index = 11; index >= 0; index -= 1) {
-    const date = new Date(end.getFullYear(), end.getMonth() - index, 1);
-    months.push(`${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`);
-  }
+function monthlyTrend(records, dashboard = {}) {
+  const dated = records.filter((record) => recordDate(record, dashboard));
+  const months = dashboard.funnelTrendYear
+    ? Array.from({ length: 12 }, (_, index) => `${dashboard.funnelTrendYear}-${String(index + 1).padStart(2, "0")}`)
+    : (() => {
+      const end = dated.length ? new Date(Math.max(...dated.map((record) => dateValue(record, dashboard)))) : new Date();
+      const rollingMonths = [];
+      for (let index = 11; index >= 0; index -= 1) {
+        const date = new Date(end.getFullYear(), end.getMonth() - index, 1);
+        rollingMonths.push(`${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`);
+      }
+      return rollingMonths;
+    })();
   const totals = new Map(months.map((month) => [month, 0]));
   dated.forEach((record) => {
-    const key = (record.installDate || record.salesDate).slice(0, 7);
+    const key = recordDate(record, dashboard).slice(0, 7);
     if (totals.has(key)) totals.set(key, totals.get(key) + (Number(record.quantity) || 0));
   });
   return months.map((month) => ({ month, installed: totals.get(month) || 0 }));
 }
 
-function yearlyTrend(records) {
-  const dated = records.filter((record) => record.installDate || record.salesDate);
-  const endYear = dated.length ? new Date(Math.max(...dated.map(dateValue))).getFullYear() : new Date().getFullYear();
+function yearlyTrend(records, dashboard = {}) {
+  if (dashboard.hideYearlyTrend) return [];
+  const dated = records.filter((record) => recordDate(record, dashboard));
+  const endYear = dated.length ? new Date(Math.max(...dated.map((record) => dateValue(record, dashboard)))).getFullYear() : new Date().getFullYear();
   const years = Array.from({ length: 5 }, (_, index) => String(endYear - 4 + index));
   const totals = new Map(years.map((year) => [year, 0]));
   dated.forEach((record) => {
-    const key = (record.installDate || record.salesDate).slice(0, 4);
+    const key = recordDate(record, dashboard).slice(0, 4);
     if (totals.has(key)) totals.set(key, totals.get(key) + (Number(record.quantity) || 0));
   });
   return years.map((year) => ({ year, installed: totals.get(year) || 0 }));
@@ -319,12 +346,12 @@ function dashboardFromRecords(baseDashboard, records) {
   const { productLineData, sourceRecords, ...dashboardBase } = baseDashboard;
   return {
     ...dashboardBase,
-    provinceData: provinceData(records),
+    provinceData: provinceData(records, dashboardBase),
     users: topGrouped(records, (record) => record.terminalUser, (record) => record.installProvince),
     partners: topGrouped(records, (record) => record.channelName, (record) => record.installProvince),
-    updates: latestUpdates(records),
-    monthlyTrend: monthlyTrend(records),
-    yearlyTrend: yearlyTrend(records),
+    updates: latestUpdates(records, dashboardBase),
+    monthlyTrend: monthlyTrend(records, dashboardBase),
+    yearlyTrend: yearlyTrend(records, dashboardBase),
     totalUnits: sumRecords(records),
     quarterUnits: 0,
     sourceRecords: records
@@ -376,12 +403,16 @@ async function dashboardsFromBaserow(request, env) {
       quantity: Number(row.Quantity) || 1,
       configDescription: row.Product_Config || product?.Standard_Config || "",
       installProvince: canonicalProvince(customer?.Province || selectedValue(row.Province)),
+      installCity: row.City || customer?.City || "",
+      salesRegion: selectedValue(row.Region),
       terminalUser: customer?.End_Customer || firstLinkedName(row.End_Customer) || "未填写终端用户",
       channelName: channel?.Name || firstLinkedName(row.Channel_Partner) || "未填写渠道",
       salesName: sales?.Name || firstLinkedName(row.Sales) || "未填写销售",
       salesDate: isoDate(row.Order_Date),
       installDate: isoDate(row.Installation_Date || row.Acceptance_Date),
-      warrantyExpireDate: isoDate(row.Warranty_Expiry_Date)
+      warrantyExpireDate: isoDate(row.Warranty_Expiry_Date),
+      winRate: row.Funnel_Win_Rate || "",
+      gforceSystemId: row.Gforce_System_ID || ""
     };
   }).filter(Boolean);
 
@@ -391,6 +422,7 @@ async function dashboardsFromBaserow(request, env) {
 function baserowProductDefaults(productKey, model) {
   if (productKey === "tegris") return { Product_Line: "OR Digital", Product_Family: "TEGRIS", Product_Model: model };
   if (productKey === "magnus1180") return { Product_Line: "SWP / OT", Product_Family: "Magnus", Product_Model: model };
+  if (productKey === "magnus2026Funnel") return { Product_Line: "SWP / OT", Product_Family: "Magnus Funnel", Product_Model: model };
   if (productKey === "icMic") return { Product_Line: "IC / MIC", Product_Family: "IC MIC", Product_Model: model };
   return { Product_Line: "", Product_Family: "", Product_Model: model };
 }
@@ -421,6 +453,7 @@ async function findOrCreateCustomer(env, record, maps) {
     Customer_ID: `AUTO-${Date.now()}`,
     End_Customer: record.terminalUser,
     Province: record.installProvince,
+    City: record.installCity || "",
     Remarks: dashboardImportSource
   });
   maps.customersByName.set(key, row);
@@ -451,9 +484,10 @@ async function syncDashboardsToBaserow(env, dashboards) {
   ));
   if (!records.length) return;
 
-  const [rows, maps] = await Promise.all([
+  const [rows, maps, installFieldNames] = await Promise.all([
     baserowRows(env, config.installBaseTableId),
-    masterMaps(env)
+    masterMaps(env),
+    baserowFieldNames(env, config.installBaseTableId).catch(() => new Set())
   ]);
   const rowsBySerial = new Map(rows.map((row) => [normalizedText(row.Serial_No), row]).filter(([serial]) => serial));
 
@@ -467,7 +501,7 @@ async function syncDashboardsToBaserow(env, dashboards) {
     const serialNo = serialForRecord(record);
     const marker = testDataMarker(record.productKey);
     const remarks = [record.configDescription, marker].filter(Boolean).join(" | ");
-    const payload = {
+    const payload = payloadForFields({
       Serial_No: serialNo,
       Product_Family: product.Product_Family || "",
       Product_Model: [product.id],
@@ -476,12 +510,17 @@ async function syncDashboardsToBaserow(env, dashboards) {
       Sales: [sales.id],
       End_Customer: [customer.id],
       Channel_Partner: [channel.id],
+      Region: record.salesRegion || null,
+      Province: record.installProvince || null,
+      City: record.installCity || null,
       Order_Date: record.salesDate || null,
       Installation_Date: record.installDate || null,
       Warranty_Expiry_Date: record.warrantyExpireDate || null,
+      Funnel_Win_Rate: record.winRate ? Number(String(record.winRate).match(/20|40|60|80|100/)?.[0] || record.winRate) : null,
+      Gforce_System_ID: record.gforceSystemId || null,
       Project_Source: dashboardImportSource,
       Remarks: remarks
-    };
+    }, installFieldNames);
     const existingRow = rowsBySerial.get(serialNo);
     if (existingRow) {
       await baserowUpdateRow(env, config.installBaseTableId, existingRow.id, payload);

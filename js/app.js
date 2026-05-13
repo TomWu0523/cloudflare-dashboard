@@ -23745,6 +23745,8 @@ const provinceNames = Object.keys(provinceCoordinates);
 
 let currentDashboardKey = "magnus1180";
 let currentProductLineKey = "all";
+let customerScrollSpeedKey = "medium";
+let compactRankingLimitKey = "5";
 let trendChart;
 let yearTrendChart;
 let mapChart;
@@ -24784,7 +24786,10 @@ function renderDashboardChrome() {
   const dashboard = currentDashboardData();
   document.title = `Getinge SW China ${dashboard.title}`;
   document.querySelector("#dashboardTitle").textContent = dashboard.title;
-  document.querySelector("#userRankingTitle").textContent = dashboard.rankingTitle;
+  document.querySelector("#userRankingTitle").textContent = "全部客户按省份循环";
+  document.querySelector("#userRankingChip").innerHTML = customerScrollSpeedControls();
+  document.querySelector("#compactRankingTitle").textContent = dashboard.rankingTitle;
+  document.querySelector("#compactRankingChip").innerHTML = compactRankingControls();
   document.querySelector("#projectModalTitle").textContent = dashboard.modalTitle;
   document.querySelector("#totalUnitsLabel").textContent = dashboard.totalUnitsLabel;
   document.querySelector("#productVisual").setAttribute("aria-label", dashboard.visual.alt);
@@ -24806,6 +24811,38 @@ function renderDashboardChrome() {
       </div>
     `;
   }
+}
+
+function segmentedButton(label, value, currentValue, group) {
+  return `<button class="segmented-chip__button${value === currentValue ? " is-active" : ""}" type="button" data-control-group="${group}" data-control-value="${value}">${label}</button>`;
+}
+
+function customerScrollSpeedControls() {
+  return `
+    <span class="segmented-chip" aria-label="客户循环速度">
+      ${segmentedButton("快速", "fast", customerScrollSpeedKey, "customer-speed")}
+      ${segmentedButton("中速", "medium", customerScrollSpeedKey, "customer-speed")}
+      ${segmentedButton("慢速", "slow", customerScrollSpeedKey, "customer-speed")}
+    </span>
+  `;
+}
+
+function compactRankingControls() {
+  return `
+    <span class="segmented-chip" aria-label="客户排名数量">
+      ${segmentedButton("前三", "3", compactRankingLimitKey, "ranking-limit")}
+      ${segmentedButton("前五", "5", compactRankingLimitKey, "ranking-limit")}
+      ${segmentedButton("前十", "10", compactRankingLimitKey, "ranking-limit")}
+    </span>
+  `;
+}
+
+function customerScrollDuration() {
+  return {
+    fast: "76s",
+    medium: "116s",
+    slow: "168s"
+  }[customerScrollSpeedKey] || "116s";
 }
 
 function parseDateValue(value) {
@@ -24875,17 +24912,22 @@ function renderKpis() {
   }
 }
 
-function renderRanking(targetId, items) {
-  const target = document.querySelector(targetId);
+function compactRankingLimit() {
+  return Number(compactRankingLimitKey) || 5;
+}
 
-  if (!items.length) {
+function renderRanking(targetId, items, limit = items.length) {
+  const target = document.querySelector(targetId);
+  const visibleItems = items.slice(0, limit);
+
+  if (!visibleItems.length) {
     target.innerHTML = `<div class="project-result__meta">暂无数据</div>`;
     return;
   }
 
-  const maxValue = Math.max(...items.map((item) => item.value));
+  const maxValue = Math.max(...visibleItems.map((item) => item.value));
 
-  target.innerHTML = items
+  target.innerHTML = visibleItems
     .map((item, index) => {
       const width = Math.max(8, Math.round((item.value / maxValue) * 100));
 
@@ -24908,11 +24950,56 @@ function renderRanking(targetId, items) {
     .join("");
 }
 
+function customerProvinceGroups() {
+  const dashboard = currentDashboardData();
+  const groups = new Map();
+  const addCustomer = (province, name, value = 0, flags = {}) => {
+    const normalizedProvince = String(province || "未填写省份").trim();
+    const normalizedName = String(name || "").trim();
+    if (!normalizedName || normalizedName === "未填写终端用户") return;
+    const provinceGroup = groups.get(normalizedProvince) || new Map();
+    const current = provinceGroup.get(normalizedName) || {
+      name: normalizedName,
+      province: normalizedProvince,
+      value: 0,
+      important: false,
+      regionalPeak: false
+    };
+    current.value = Math.max(current.value, Number(value) || 0);
+    current.important = current.important || Boolean(flags.important);
+    current.regionalPeak = current.regionalPeak || Boolean(flags.regionalPeak);
+    provinceGroup.set(normalizedName, current);
+    groups.set(normalizedProvince, provinceGroup);
+  };
+
+  const topCustomerNames = new Set((dashboard.users || []).slice(0, 10).map((item) => item.name));
+  const provinceLeaderNames = new Set((dashboard.provinceData || []).map((item) => item.latestSite));
+  (dashboard.sourceRecords || []).forEach((record) => {
+    addCustomer(record.installProvince, record.terminalUser, Number(record.quantity) || 1, {
+      important: topCustomerNames.has(record.terminalUser),
+      regionalPeak: provinceLeaderNames.has(record.terminalUser)
+    });
+  });
+  (dashboard.users || []).forEach((user) => {
+    addCustomer(user.province, user.name, user.value || 0, {
+      important: topCustomerNames.has(user.name),
+      regionalPeak: provinceLeaderNames.has(user.name)
+    });
+  });
+
+  return [...groups.entries()]
+    .map(([province, customers]) => ({
+      province,
+      total: [...customers.values()].reduce((sum, item) => sum + (Number(item.value) || 0), 0),
+      customers: [...customers.values()].sort((a, b) => (b.value || 0) - (a.value || 0) || a.name.localeCompare(b.name, "zh-Hans-CN"))
+    }))
+    .sort((a, b) => b.total - a.total || a.province.localeCompare(b.province, "zh-Hans-CN"));
+}
+
 function renderCustomerScrollWall(targetId) {
   const target = document.querySelector(targetId);
-  const customers = customerCloudEntries()
-    .sort((a, b) => (b.value || 0) - (a.value || 0) || a.name.localeCompare(b.name, "zh-Hans-CN"))
-    .map((item, index) => ({ ...item, rank: index + 1 }));
+  const groups = customerProvinceGroups();
+  const customers = groups.flatMap((group) => group.customers);
 
   if (!customers.length) {
     target.className = "ranking-list";
@@ -24921,26 +25008,35 @@ function renderCustomerScrollWall(targetId) {
   }
 
   const maxValue = Math.max(1, ...customers.map((item) => item.value || 0));
-  const rows = customers.map((item) => {
-    const intensity = Math.max(10, Math.round(((item.value || 0) / maxValue) * 100));
-    const flags = [
-      item.important ? "TOP" : "",
-      item.regionalPeak ? "区域峰值" : ""
-    ].filter(Boolean).join(" · ");
+  let rank = 0;
+  const rows = groups.map((group) => {
+    const customerRows = group.customers.map((item) => {
+      rank += 1;
+      const intensity = Math.max(10, Math.round(((item.value || 0) / maxValue) * 100));
+      const flags = [
+        item.important ? "TOP" : "",
+        item.regionalPeak ? "省内最新" : ""
+      ].filter(Boolean).join(" · ");
+      return `
+        <article class="customer-scroll-item${item.important ? " is-important" : ""}${item.regionalPeak ? " is-regional-peak" : ""}">
+          <span class="customer-scroll-rank">${String(rank).padStart(2, "0")}</span>
+          <span class="customer-scroll-body">
+            <strong title="${item.name}">${item.name}</strong>
+            <small>${flags || "客户装机记录"}</small>
+            <i style="--customer-width: ${intensity}%"></i>
+          </span>
+          <b>${item.value || 1}</b>
+        </article>
+      `;
+    }).join("");
     return `
-      <article class="customer-scroll-item${item.important ? " is-important" : ""}${item.regionalPeak ? " is-regional-peak" : ""}">
-        <span class="customer-scroll-rank">${String(item.rank).padStart(2, "0")}</span>
-        <span class="customer-scroll-body">
-          <strong title="${item.name}">${item.name}</strong>
-          <small>${flags || "客户装机记录"}</small>
-          <i style="--customer-width: ${intensity}%"></i>
-        </span>
-        <b>${item.value || 1}</b>
-      </article>
+      <div class="customer-scroll-province">${group.province}<span>${group.customers.length} 家 / ${group.total} 台</span></div>
+      ${customerRows}
     `;
   }).join("");
 
   target.className = "customer-scroll-list";
+  target.style.setProperty("--customer-scroll-duration", customerScrollDuration());
   target.innerHTML = `
     <div class="customer-scroll-window">
       <div class="customer-scroll-track">
@@ -26860,8 +26956,8 @@ function renderDashboard() {
   const dashboard = currentDashboardData();
   renderDashboardChrome();
   renderKpis();
-  renderRanking("#userRanking", dashboard.users);
-  renderCustomerScrollWall("#partnerRanking");
+  renderCustomerScrollWall("#userRanking");
+  renderRanking("#partnerRanking", dashboard.users, compactRankingLimit());
   renderTrendChart();
   renderYearTrendChart();
   renderTicker();
@@ -26884,6 +26980,22 @@ function initializeProductSwitcher() {
     renderDashboard();
   });
 
+  document.querySelector("#userRankingChip").addEventListener("click", (event) => {
+    const button = event.target.closest("[data-control-group='customer-speed']");
+    if (!button) return;
+    customerScrollSpeedKey = button.dataset.controlValue || "medium";
+    document.querySelector("#userRankingChip").innerHTML = customerScrollSpeedControls();
+    renderCustomerScrollWall("#userRanking");
+  });
+
+  document.querySelector("#compactRankingChip").addEventListener("click", (event) => {
+    const button = event.target.closest("[data-control-group='ranking-limit']");
+    if (!button) return;
+    compactRankingLimitKey = button.dataset.controlValue || "5";
+    document.querySelector("#compactRankingChip").innerHTML = compactRankingControls();
+    renderRanking("#partnerRanking", currentDashboardData().users || [], compactRankingLimit());
+  });
+
   document.querySelector("#openFootprintMap").addEventListener("click", openFootprintMap);
   document.querySelector("#footprintOverlay").addEventListener("click", closeFootprintMap);
 }
@@ -26893,6 +27005,7 @@ window.addEventListener("resize", () => {
   yearTrendChart?.resize();
   mapChart?.resize();
   footprintChart?.resize();
+  renderRanking("#partnerRanking", currentDashboardData().users || [], compactRankingLimit());
   renderMap();
   if (!document.querySelector("#footprintOverlay").hidden) {
     renderFootprintMap();

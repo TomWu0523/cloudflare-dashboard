@@ -752,6 +752,42 @@ h2 {
   font-weight: 700;
 }
 
+.segmented-chip {
+  display: inline-grid;
+  grid-auto-flow: column;
+  gap: 3px;
+  align-items: center;
+}
+
+.metric-chip:has(.segmented-chip) {
+  padding: 3px;
+  border-radius: 8px;
+}
+
+.segmented-chip__button {
+  min-height: 24px;
+  padding: 4px 7px;
+  color: var(--getinge-bluegray);
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 760;
+  white-space: nowrap;
+}
+
+.segmented-chip__button:hover,
+.segmented-chip__button:focus-visible {
+  outline: 0;
+  color: var(--getinge-navy);
+  background: rgba(49, 183, 188, 0.12);
+}
+
+.segmented-chip__button.is-active {
+  color: var(--white);
+  background: var(--getinge-navy);
+}
+
 .ranking-list {
   display: grid;
   gap: 12px;
@@ -826,6 +862,49 @@ h2 {
   text-align: right;
 }
 
+.ranking-panel .customer-scroll-list {
+  min-height: 0;
+  height: calc(100% - 66px);
+}
+
+.ranking-panel .customer-scroll-track {
+  animation-duration: var(--customer-scroll-duration, 116s);
+}
+
+.partner-panel .ranking-list {
+  gap: 10px;
+  overflow: hidden;
+}
+
+.partner-panel .ranking-item {
+  min-height: 46px;
+  grid-template-columns: 26px minmax(0, 1fr) 38px;
+  gap: 9px;
+}
+
+.partner-panel .rank-no {
+  width: 26px;
+  height: 26px;
+  font-size: 11px;
+}
+
+.partner-panel .ranking-name {
+  font-size: 13px;
+}
+
+.partner-panel .ranking-province {
+  font-size: 11px;
+}
+
+.partner-panel .bar-shell {
+  height: 6px;
+  margin-top: 7px;
+}
+
+.partner-panel .ranking-value {
+  font-size: 16px;
+}
+
 .customer-scroll-list {
   position: relative;
   min-height: 238px;
@@ -844,6 +923,33 @@ h2 {
   display: grid;
   gap: 10px;
   animation: customer-scroll-loop 68s linear infinite;
+}
+
+.customer-scroll-province {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 30px;
+  padding: 6px 10px;
+  color: var(--getinge-navy);
+  background:
+    linear-gradient(90deg, rgba(24, 39, 74, 0.1), rgba(49, 183, 188, 0.08)),
+    rgba(250, 248, 247, 0.96);
+  border: 1px solid rgba(49, 183, 188, 0.24);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 820;
+}
+
+.customer-scroll-province span {
+  flex: 0 0 auto;
+  color: var(--getinge-bluegray);
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .customer-scroll-item {
