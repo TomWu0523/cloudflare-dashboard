@@ -23760,6 +23760,7 @@ let footprintCamera;
 let footprintRoot;
 let footprintLabelEntries = [];
 let footprintAnimationHandle = 0;
+let dashboardViewMode = localStorage.getItem("getinge-dashboard-view-mode-v1") || "classic";
 
 const projectFields = [
   "partNumber",
@@ -23790,6 +23791,34 @@ const brandColors = {
   grass: "#94b654",
   white: "#ffffff"
 };
+
+function isTechDashboardView() {
+  return dashboardViewMode === "tech";
+}
+
+function applyDashboardViewMode() {
+  document.body.classList.toggle("dashboard-tech", isTechDashboardView());
+  const toggle = document.querySelector("#viewModeToggle");
+  if (toggle) {
+    toggle.textContent = isTechDashboardView() ? "经典版" : "科技版";
+    toggle.setAttribute("aria-pressed", String(isTechDashboardView()));
+    toggle.setAttribute("title", isTechDashboardView() ? "切换回经典页面" : "切换到科技感地图页面");
+  }
+}
+
+function setDashboardViewMode(mode) {
+  dashboardViewMode = mode === "tech" ? "tech" : "classic";
+  localStorage.setItem("getinge-dashboard-view-mode-v1", dashboardViewMode);
+  applyDashboardViewMode();
+  if (dashboardInitialized) {
+    renderDashboard();
+    setTimeout(() => {
+      trendChart?.resize();
+      yearTrendChart?.resize();
+      mapChart?.resize();
+    }, 0);
+  }
+}
 
 const importedUsersStorageKey = "getinge-dashboard-imported-users-v1";
 const authUsersApiEndpoint = "/api/users";
@@ -24540,7 +24569,12 @@ async function importDashboardDataFromExcel(file) {
 }
 
 async function initializeAuth() {
+  applyDashboardViewMode();
   document.querySelector("#currentDate").textContent = new Date().toISOString().slice(0, 10);
+  document.querySelector("#viewModeToggle")?.addEventListener("click", () => {
+    setDashboardViewMode(isTechDashboardView() ? "classic" : "tech");
+  });
+
   if (!isHttpMode) {
     setAuthClasses(false);
     renderUserProfile();
@@ -25076,6 +25110,44 @@ function renderTicker() {
   track.innerHTML = items;
 }
 
+function renderTechMapInsights() {
+  const target = document.querySelector("#techMapInsights");
+  if (!target) return;
+
+  const dashboard = currentDashboardData();
+  const provinces = [...(dashboard.provinceData || [])]
+    .sort((a, b) => (b.value || 0) - (a.value || 0))
+    .slice(0, 5);
+  const maxValue = Math.max(1, ...provinces.map((item) => item.value || 0));
+  const latest = [...(dashboard.provinceData || [])]
+    .sort((a, b) => String(b.latestDate || "").localeCompare(String(a.latestDate || "")))[0];
+
+  target.innerHTML = `
+    <section class="tech-insight-card">
+      <div class="panel-title">
+        <p>Province Ranking</p>
+        <h3>装机热力 Top 5</h3>
+      </div>
+      <div class="tech-bars">
+        ${provinces.map((item) => `
+          <div class="tech-bar">
+            <span>${item.name.replace(/省|市|壮族自治区|回族自治区|维吾尔自治区|自治区/g, "")}</span>
+            <i style="--tech-bar-width: ${Math.max(12, Math.round(((item.value || 0) / maxValue) * 100))}%"></i>
+            <b>${formatNumber.format(item.value || 0)}</b>
+          </div>
+        `).join("") || `<div class="project-result__meta">暂无省份数据</div>`}
+      </div>
+    </section>
+    <section class="tech-insight-card">
+      <div class="panel-title">
+        <p>Latest Site</p>
+        <h3>${latest?.latestSite || "暂无最新装机记录"}</h3>
+      </div>
+      <small>${latest?.name || "--"} ${latest?.latestDate || ""}</small>
+    </section>
+  `;
+}
+
 function renderTrendChart() {
   const dashboard = currentDashboardData();
   const trendHeading = document.querySelector(".trend-panel .panel-heading");
@@ -25090,6 +25162,10 @@ function renderTrendChart() {
   const target = document.querySelector("#installTrend");
   trendChart = trendChart || echarts.init(target);
   const isFunnelTrend = Boolean(dashboard.funnelTrendYear);
+  const tech = isTechDashboardView();
+  const axisColor = tech ? "rgba(255, 255, 255, 0.68)" : brandColors.midnight;
+  const splitColor = tech ? "rgba(255, 255, 255, 0.12)" : "#eee9e8";
+  const lineColor = tech ? "#a7f4f3" : brandColors.blue;
   const trendLine = chartTrend.map((item, index, source) => {
     const windowItems = source.slice(Math.max(0, index - 2), index + 1);
     const average = windowItems.reduce((sum, current) => sum + current.installed, 0) / windowItems.length;
@@ -25121,7 +25197,7 @@ function renderTrendChart() {
       itemWidth: 10,
       itemHeight: 8,
       textStyle: {
-        color: brandColors.midnight,
+        color: axisColor,
         fontSize: 11
       }
     },
@@ -25129,9 +25205,9 @@ function renderTrendChart() {
       type: "category",
       data: chartTrend.map((item) => item.month === "暂无" ? "暂无" : item.month.slice(5)),
       axisTick: { show: false },
-      axisLine: { lineStyle: { color: brandColors.oat } },
+      axisLine: { lineStyle: { color: tech ? "rgba(255, 255, 255, 0.2)" : brandColors.oat } },
       axisLabel: {
-        color: brandColors.midnight,
+        color: axisColor,
         fontSize: 11,
         interval: isFunnelTrend ? 0 : 1
       }
@@ -25139,9 +25215,9 @@ function renderTrendChart() {
     yAxis: {
       type: "value",
       minInterval: 1,
-      splitLine: { lineStyle: { color: "#eee9e8" } },
+      splitLine: { lineStyle: { color: splitColor } },
       axisLabel: {
-        color: brandColors.midnight,
+        color: axisColor,
         fontSize: 11
       }
     },
@@ -25152,7 +25228,7 @@ function renderTrendChart() {
         barWidth: 12,
         data: chartTrend.map((item) => item.installed),
         itemStyle: {
-          color: brandColors.ocean,
+          color: tech ? "#31b7bc" : brandColors.ocean,
           borderRadius: [4, 4, 0, 0]
         }
       },
@@ -25165,10 +25241,10 @@ function renderTrendChart() {
         data: trendLine,
         lineStyle: {
           width: 3,
-          color: brandColors.blue
+          color: lineColor
         },
         itemStyle: {
-          color: brandColors.blue,
+          color: lineColor,
           borderColor: brandColors.white,
           borderWidth: 2
         },
@@ -25180,8 +25256,8 @@ function renderTrendChart() {
             x2: 0,
             y2: 1,
             colorStops: [
-              { offset: 0, color: "rgba(24, 39, 74, 0.18)" },
-              { offset: 1, color: "rgba(24, 39, 74, 0.02)" }
+              { offset: 0, color: tech ? "rgba(49, 183, 188, 0.24)" : "rgba(24, 39, 74, 0.18)" },
+              { offset: 1, color: tech ? "rgba(49, 183, 188, 0.02)" : "rgba(24, 39, 74, 0.02)" }
             ]
           }
         }
@@ -25203,6 +25279,8 @@ function renderYearTrendChart() {
   const target = document.querySelector("#yearInstallTrend");
   yearTrendChart = yearTrendChart || echarts.init(target);
   const maxValue = Math.max(1, ...chartTrend.map((item) => item.installed));
+  const tech = isTechDashboardView();
+  const axisColor = tech ? "rgba(255, 255, 255, 0.68)" : brandColors.midnight;
 
   yearTrendChart.setOption({
     grid: {
@@ -25226,9 +25304,9 @@ function renderYearTrendChart() {
       type: "category",
       data: chartTrend.map((item) => item.year),
       axisTick: { show: false },
-      axisLine: { lineStyle: { color: brandColors.oat } },
+      axisLine: { lineStyle: { color: tech ? "rgba(255, 255, 255, 0.2)" : brandColors.oat } },
       axisLabel: {
-        color: brandColors.midnight,
+        color: axisColor,
         fontSize: 11
       }
     },
@@ -25236,9 +25314,9 @@ function renderYearTrendChart() {
       type: "value",
       minInterval: 1,
       max: Math.ceil(maxValue * 1.18),
-      splitLine: { lineStyle: { color: "#eee9e8" } },
+      splitLine: { lineStyle: { color: tech ? "rgba(255, 255, 255, 0.12)" : "#eee9e8" } },
       axisLabel: {
-        color: brandColors.midnight,
+        color: axisColor,
         fontSize: 11
       }
     },
@@ -25251,14 +25329,16 @@ function renderYearTrendChart() {
         itemStyle: {
           borderRadius: [5, 5, 0, 0],
           color(params) {
-            const colors = [brandColors.oat, brandColors.ocean, brandColors.grass, brandColors.sun, brandColors.blue];
+            const colors = tech
+              ? ["rgba(255,255,255,0.28)", brandColors.ocean, brandColors.grass, "#a7f4f3", "#ffffff"]
+              : [brandColors.oat, brandColors.ocean, brandColors.grass, brandColors.sun, brandColors.blue];
             return colors[Math.min(params.dataIndex, colors.length - 1)];
           }
         },
         label: {
           show: true,
           position: "top",
-          color: brandColors.blue,
+          color: tech ? "rgba(255,255,255,0.82)" : brandColors.blue,
           fontSize: 11,
           fontWeight: 700
         }
@@ -26825,6 +26905,7 @@ async function renderMap() {
   const provinceData = currentDashboardData().provinceData;
   mapChart = mapChart || echarts.init(document.querySelector("#chinaMap"));
   const compact = window.innerWidth < 900;
+  const tech = isTechDashboardView();
 
   mapChart.setOption({
     color: [brandColors.ocean, brandColors.sun],
@@ -26834,7 +26915,7 @@ async function renderMap() {
       backgroundColor: "rgba(16, 32, 61, 0.94)",
       textStyle: { color: "#fff" },
       formatter(params) {
-        if (params.seriesType === "scatter") {
+        if (params.seriesType === "scatter" || params.seriesType === "effectScatter") {
           return `
             <strong>${params.name}</strong><br/>
             省份：${params.data.province}<br/>
@@ -26859,14 +26940,14 @@ async function renderMap() {
     visualMap: {
       min: 0,
       max: Math.max(1, ...provinceData.map((item) => item.value)),
-      show: true,
-      left: 16,
-      bottom: 14,
+      show: !tech,
+      left: tech ? 22 : 16,
+      bottom: tech ? 24 : 14,
       itemWidth: 14,
       itemHeight: 118,
       text: ["高装机", "低装机"],
       textStyle: {
-        color: brandColors.midnight,
+        color: tech ? "rgba(255, 255, 255, 0.72)" : brandColors.midnight,
         fontSize: 11,
         fontWeight: 700
       },
@@ -26875,33 +26956,45 @@ async function renderMap() {
         return `${Math.round(value)} 台`;
       },
       inRange: {
-        color: [
-          brandColors.snow,
-          brandColors.oat,
-          brandColors.ocean,
-          brandColors.grass,
-          brandColors.sun,
-          brandColors.berry,
-          brandColors.blue
-        ]
+        color: tech
+          ? [
+            "rgba(43, 76, 105, 0.52)",
+            "#2d6981",
+            "#31b7bc",
+            "#75cdb5",
+            "#94b654"
+          ]
+          : [
+            brandColors.snow,
+            brandColors.oat,
+            brandColors.ocean,
+            brandColors.grass,
+            brandColors.sun,
+            brandColors.berry,
+            brandColors.blue
+          ]
       }
     },
     geo: {
       map: "china",
       roam: true,
-      zoom: 1.12,
-      top: 24,
-      bottom: 10,
+      zoom: tech ? (compact ? 1.2 : 1.26) : 1.12,
+      top: tech ? 8 : 24,
+      bottom: tech ? 0 : 10,
+      left: tech ? 0 : "auto",
+      right: tech ? 70 : "auto",
       itemStyle: {
-        areaColor: brandColors.snow,
-        borderColor: brandColors.white,
-        borderWidth: 1.25
+        areaColor: tech ? "rgba(45, 82, 112, 0.58)" : brandColors.snow,
+        borderColor: tech ? "rgba(126, 224, 230, 0.56)" : brandColors.white,
+        borderWidth: tech ? 1.1 : 1.25,
+        shadowBlur: tech ? 18 : 0,
+        shadowColor: tech ? "rgba(49, 183, 188, 0.18)" : "transparent"
       },
       emphasis: {
-        label: { color: brandColors.blue, fontWeight: 700 },
+        label: { color: tech ? "#ffffff" : brandColors.blue, fontWeight: 700 },
         itemStyle: {
-          areaColor: brandColors.sun,
-          borderColor: brandColors.blue,
+          areaColor: tech ? "rgba(49, 183, 188, 0.64)" : brandColors.sun,
+          borderColor: tech ? "#a7f4f3" : brandColors.blue,
           borderWidth: 1.4
         }
       }
@@ -26916,26 +27009,33 @@ async function renderMap() {
       },
       {
         name: "最新装机场地",
-        type: "scatter",
+        type: tech ? "effectScatter" : "scatter",
         coordinateSystem: "geo",
         symbolSize(value) {
-          return compact ? Math.max(8, Math.min(15, value[2] + 2)) : Math.max(9, Math.min(22, value[2] + 5));
+          return tech
+            ? (compact ? Math.max(10, Math.min(18, value[2] / 2.3)) : Math.max(12, Math.min(28, value[2] / 1.8)))
+            : (compact ? Math.max(8, Math.min(15, value[2] + 2)) : Math.max(9, Math.min(22, value[2] + 5)));
         },
+        rippleEffect: tech ? {
+          brushType: "stroke",
+          scale: 4
+        } : undefined,
         itemStyle: {
-          color: brandColors.sun,
-          borderColor: brandColors.white,
+          color: tech ? "#a7f4f3" : brandColors.sun,
+          borderColor: tech ? "rgba(148, 182, 84, 0.92)" : brandColors.white,
           borderWidth: 2,
-          shadowBlur: 12,
-          shadowColor: "rgba(243, 146, 0, 0.46)"
+          shadowBlur: tech ? 22 : 12,
+          shadowColor: tech ? "rgba(49, 183, 188, 0.72)" : "rgba(243, 146, 0, 0.46)"
         },
         label: {
-          show: !compact,
+          show: tech ? !compact : !compact,
           formatter: "{b}",
-          color: brandColors.blue,
-          fontSize: 10,
+          color: tech ? "#ffffff" : brandColors.blue,
+          fontSize: tech ? 11 : 10,
+          fontWeight: tech ? 800 : 400,
           position: "right",
-          backgroundColor: "rgba(255, 255, 255, 0.84)",
-          padding: [3, 5],
+          backgroundColor: tech ? "rgba(10, 24, 50, 0.54)" : "rgba(255, 255, 255, 0.84)",
+          padding: tech ? [4, 6] : [3, 5],
           borderRadius: 4
         },
         labelLayout: {
@@ -26961,6 +27061,7 @@ function renderDashboard() {
   renderTrendChart();
   renderYearTrendChart();
   renderTicker();
+  renderTechMapInsights();
   renderMap();
   populateProductModelOptions();
   setProjectFormData();
