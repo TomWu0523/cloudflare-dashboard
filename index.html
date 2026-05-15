@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Getinge SW China Installed Base Dashboard</title>
-    <link rel="stylesheet" href="css/style.css?v=footprint3d-v16" />
+    <link rel="stylesheet" href="css/style.css?v=hero-option-c-v3" />
   </head>
   <body class="auth-locked">
     <section class="login-screen" id="loginScreen" aria-labelledby="loginTitle">
@@ -34,11 +34,6 @@
       </main>
     </section>
 
-    <button class="project-entry-button" id="openProjectModal" type="button" aria-haspopup="dialog">
-      <span>+</span>
-      项目录入
-    </button>
-
     <button class="view-mode-toggle" id="viewModeToggle" type="button" aria-pressed="false">
       科技版
     </button>
@@ -66,6 +61,10 @@
           </div>
           <button class="logout-button" id="logoutButton" type="button">退出登录</button>
           <button class="logout-button" id="changePasswordButton" type="button">修改密码</button>
+          <button class="project-entry-button" id="openProjectModal" type="button" aria-haspopup="dialog">
+            <span>+</span>
+            项目录入
+          </button>
           <div class="admin-user-tools" id="adminUserTools" hidden>
             <label class="excel-import-button">
               <span>导入 Excel 用户</span>
@@ -73,6 +72,8 @@
             </label>
             <small id="userImportStatus">正在加载授权用户...</small>
           </div>
+        </div>
+        <div class="topbar-control-bar" aria-label="看板筛选与更新时间">
           <label class="product-switcher">
             <span>产品看板</span>
             <select id="productSwitcher" aria-label="切换产品看板">
@@ -88,8 +89,10 @@
           </label>
           <button class="data-import-button" id="dashboardExcelButton" type="button" title="导入 Excel 并同步到 Baserow">更新数据</button>
           <input id="dashboardExcelInput" type="file" accept=".xlsx,.xls" hidden />
-          <span>最新更新</span>
-          <strong id="currentDate">--</strong>
+          <div class="last-updated">
+            <span>最新更新</span>
+            <strong id="currentDate">--</strong>
+          </div>
         </div>
       </header>
 

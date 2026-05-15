@@ -270,34 +270,31 @@ button {
 
 .dashboard-shell {
   min-height: 100vh;
-  padding: 24px;
+  padding: 0 0 24px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
 .project-entry-button {
-  position: fixed;
-  top: 18px;
-  right: 18px;
-  z-index: 20;
-  min-height: 42px;
+  position: static;
+  min-height: 34px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 14px 8px 10px;
+  padding: 7px 12px 7px 8px;
   color: var(--white);
   background: rgba(24, 39, 74, 0.92);
   border: 1px solid rgba(255, 255, 255, 0.26);
-  border-radius: 999px;
-  box-shadow: 0 14px 30px rgba(16, 32, 61, 0.24);
-  font-size: 13px;
+  border-radius: 8px;
+  box-shadow: none;
+  font-size: 12px;
   font-weight: 760;
 }
 
 .project-entry-button span {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   display: grid;
   place-items: center;
   color: var(--getinge-navy);
@@ -334,19 +331,33 @@ button {
 }
 
 .topbar {
-  min-height: 180px;
+  position: relative;
+  min-height: 242px;
   display: grid;
-  grid-template-columns: minmax(340px, 0.95fr) minmax(330px, 0.95fr) minmax(280px, 0.75fr) minmax(150px, 0.42fr);
+  grid-template-columns: minmax(500px, 0.82fr) minmax(720px, 1.18fr) minmax(360px, 0.56fr);
   align-items: center;
-  gap: 22px;
-  padding: 20px 24px;
+  gap: 28px;
+  padding: 84px 28px 74px;
+  overflow: hidden;
   color: var(--white);
   background: linear-gradient(120deg, var(--getinge-navy), var(--getinge-midnight) 62%, var(--getinge-granite));
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
   box-shadow: var(--shadow);
 }
 
+.topbar::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 78% 36%, rgba(255, 255, 255, 0.16), transparent 27%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(16, 32, 61, 0.12));
+}
+
 .brand-lockup {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -354,7 +365,7 @@ button {
 }
 
 .logo-plate {
-  width: clamp(300px, 25vw, 430px);
+  width: clamp(330px, 27vw, 470px);
   height: auto;
   display: flex;
   align-items: center;
@@ -376,28 +387,33 @@ button {
 
 .brand-unit {
   color: rgba(255, 255, 255, 0.78);
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 1.25;
   text-transform: uppercase;
 }
 
 .product-visual {
-  position: relative;
-  min-width: 0;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 64px;
+  width: min(520px, 28vw);
   margin: 0;
-  align-self: stretch;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   overflow: visible;
+  pointer-events: none;
 }
 
 .product-visual::after {
   position: absolute;
-  right: 8%;
-  bottom: 14px;
-  left: 16%;
-  height: 18px;
+  right: 10%;
+  bottom: -6px;
+  left: 18%;
+  height: 24px;
   content: "";
   background: rgba(2, 10, 26, 0.28);
   filter: blur(14px);
@@ -408,15 +424,20 @@ button {
   position: relative;
   z-index: 1;
   display: block;
-  width: min(100%, 300px);
-  height: 160px;
+  width: min(100%, 440px);
+  height: 260px;
   object-fit: contain;
   object-position: center;
+  transform: scale(1.14);
+  transform-origin: center right;
   filter: drop-shadow(0 18px 24px rgba(4, 14, 34, 0.28));
 }
 
 .title-group,
-.report-meta {
+.report-meta,
+.topbar-control-bar {
+  position: relative;
+  z-index: 1;
   min-width: 0;
 }
 
@@ -438,9 +459,9 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(24px, 2.6vw, 40px);
+  font-size: clamp(34px, 3.15vw, 56px);
   line-height: 1.1;
-  font-weight: 680;
+  font-weight: 780;
 }
 
 h2 {
@@ -449,10 +470,14 @@ h2 {
 }
 
 .report-meta {
-  justify-self: end;
-  text-align: right;
-  display: grid;
-  gap: 8px;
+  position: absolute;
+  top: 22px;
+  left: 26px;
+  z-index: 3;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
   color: rgba(255, 255, 255, 0.72);
   font-size: 13px;
 }
@@ -490,7 +515,6 @@ h2 {
 
 .logout-button,
 .data-import-button {
-  justify-self: end;
   min-height: 34px;
   padding: 7px 12px;
   color: var(--white);
@@ -506,22 +530,50 @@ h2 {
   background: rgba(255, 255, 255, 0.18);
 }
 
+.report-meta .logout-button {
+  white-space: nowrap;
+}
+
+.topbar-control-bar {
+  position: absolute;
+  right: min(360px, 22vw);
+  bottom: 12px;
+  left: 28px;
+  z-index: 2;
+  min-height: 58px;
+  display: grid;
+  grid-template-columns: minmax(240px, 300px) minmax(180px, 220px) auto minmax(180px, 1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 10px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
 .product-switcher {
   display: grid;
-  gap: 6px;
-  justify-items: end;
+  gap: 0;
+  justify-items: stretch;
 }
 
 .product-switcher span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
   color: rgba(255, 255, 255, 0.72);
   font-size: 12px;
   font-weight: 760;
 }
 
 .product-switcher select {
-  width: min(220px, 100%);
-  min-height: 38px;
-  padding: 7px 34px 7px 10px;
+  width: 100%;
+  min-height: 34px;
+  padding: 7px 34px 7px 12px;
   color: var(--white);
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.28);
@@ -538,9 +590,43 @@ h2 {
   color: var(--getinge-ink);
 }
 
+.product-line-switcher {
+  grid-column: 2;
+}
+
+.topbar-control-bar .data-import-button {
+  grid-column: 3;
+  justify-self: start;
+  min-width: 112px;
+  color: var(--getinge-navy);
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.topbar-control-bar .data-import-button:hover {
+  background: var(--white);
+}
+
 .report-meta strong {
   color: var(--white);
   font-size: 20px;
+}
+
+.last-updated {
+  justify-self: end;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.last-updated strong {
+  color: var(--white);
+  font-size: clamp(22px, 1.8vw, 30px);
+  line-height: 1;
 }
 
 .product-visual--system::after {
@@ -651,14 +737,17 @@ h2 {
 }
 
 .kpi-strip {
+  position: relative;
+  z-index: 3;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+  gap: 12px;
+  margin: 14px 24px 0;
 }
 
 .kpi {
-  min-height: 106px;
-  padding: 18px 20px;
+  min-height: 86px;
+  padding: 14px 20px;
   display: grid;
   gap: 4px;
   background: rgba(255, 255, 255, 0.86);
@@ -675,7 +764,7 @@ h2 {
 
 .kpi strong {
   color: var(--getinge-navy);
-  font-size: clamp(30px, 3.2vw, 46px);
+  font-size: clamp(30px, 2.8vw, 42px);
   line-height: 1;
   font-weight: 720;
 }
@@ -686,6 +775,7 @@ h2 {
   display: grid;
   grid-template-columns: minmax(260px, 0.76fr) minmax(520px, 1.55fr) minmax(260px, 0.76fr);
   gap: 18px;
+  margin: 0 24px;
 }
 
 .panel,
@@ -1424,37 +1514,42 @@ h2 {
 
 @media (min-width: 1600px) {
   .dashboard-shell {
-    padding: 20px;
+    padding: 0 0 20px;
     gap: 14px;
   }
 
   .topbar {
-    min-height: 150px;
-    grid-template-columns: minmax(300px, 0.78fr) minmax(420px, 1.1fr) minmax(230px, 0.56fr) minmax(170px, 0.42fr);
-    gap: 18px;
-    padding: 16px 22px;
+    min-height: 242px;
+    grid-template-columns: minmax(520px, 0.78fr) minmax(780px, 1.22fr) minmax(420px, 0.54fr);
+    gap: 28px;
+    padding: 84px 28px 74px;
+  }
+
+  h1 {
+    font-size: clamp(38px, 2.55vw, 52px);
   }
 
   .logo-plate {
-    width: clamp(260px, 18vw, 360px);
+    width: clamp(330px, 22vw, 470px);
   }
 
   .product-visual img,
   .tegris-visual {
-    height: 132px;
+    height: 260px;
   }
 
   .report-meta {
-    gap: 8px;
+    gap: 10px;
   }
 
   .kpi-strip {
     gap: 12px;
+    margin: 14px 24px 0;
   }
 
   .kpi {
-    min-height: 92px;
-    padding: 14px 18px;
+    min-height: 86px;
+    padding: 14px 20px;
   }
 
   .main-grid {
@@ -1907,6 +2002,7 @@ body.footprint-open {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
   align-items: center;
+  margin: 0 24px;
   overflow: hidden;
 }
 
@@ -2319,13 +2415,32 @@ body.footprint-open {
     grid-template-columns: 1fr;
   }
 
+  .topbar {
+    min-height: auto;
+    padding: 82px 16px 16px;
+    gap: 18px;
+  }
+
+  .brand-lockup,
+  .title-group,
   .product-visual {
-    min-height: 178px;
+    justify-self: start;
+  }
+
+  .product-visual {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    min-height: 150px;
+    pointer-events: auto;
   }
 
   .product-visual img {
     width: min(100%, 360px);
     height: 174px;
+    transform: none;
   }
 
   .tegris-visual {
@@ -2334,17 +2449,39 @@ body.footprint-open {
   }
 
   .report-meta {
-    justify-self: start;
+    position: static;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     text-align: left;
   }
 
   .user-profile,
   .logout-button {
-    justify-self: start;
+    justify-self: end;
   }
 
-  .product-switcher {
-    justify-items: start;
+  .topbar-control-bar {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+    margin-top: 4px;
+  }
+
+  .product-line-switcher {
+    grid-column: auto;
+  }
+
+  .topbar-control-bar .data-import-button {
+    grid-column: auto;
+  }
+
+  .last-updated {
+    grid-column: 1 / -1;
+    justify-self: start;
+    text-align: left;
   }
 
   .main-grid {
@@ -2365,6 +2502,62 @@ body.footprint-open {
   .side-column {
     grid-area: right;
     grid-template-rows: 320px 280px auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    padding: 16px 14px;
+  }
+
+  .brand-lockup {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+
+  .logo-plate {
+    width: min(250px, 78vw);
+  }
+
+  .brand-divider {
+    display: none;
+  }
+
+  .brand-unit {
+    width: 100%;
+  }
+
+  .report-meta {
+    gap: 8px;
+  }
+
+  .user-profile {
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .topbar-control-bar {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .topbar-control-bar .data-import-button {
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .last-updated {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .last-updated strong {
+    font-size: 22px;
   }
 }
 
@@ -2452,9 +2645,9 @@ body.footprint-open {
   }
 
   .project-entry-button {
-    top: auto;
+    top: 76px;
     right: 14px;
-    bottom: 66px;
+    bottom: auto;
   }
 
   .view-mode-toggle {
