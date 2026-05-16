@@ -23761,6 +23761,7 @@ let footprintRoot;
 let footprintLabelEntries = [];
 let footprintAnimationHandle = 0;
 let dashboardViewMode = localStorage.getItem("getinge-dashboard-view-mode-v1") || "classic";
+const hiddenPriorityFilters = new Set();
 
 const projectFields = [
   "partNumber",
@@ -23790,6 +23791,47 @@ const brandColors = {
   sun: "#f39200",
   grass: "#94b654",
   white: "#ffffff"
+};
+
+const provincePriorityMap = {
+  "北京市": "P1",
+  "上海市": "P1",
+  "广东省": "P1",
+  "浙江省": "P1",
+  "江苏省": "P1",
+  "山东省": "P2",
+  "河南省": "P2",
+  "重庆市": "P2",
+  "四川省": "P2",
+  "河北省": "P2",
+  "陕西省": "P2",
+  "福建省": "P2",
+  "云南省": "P2",
+  "江西省": "P2",
+  "海南省": "P2",
+  "湖北省": "P3",
+  "湖南省": "P3",
+  "辽宁省": "P3",
+  "山西省": "P3",
+  "天津市": "P3",
+  "甘肃省": "P3",
+  "内蒙古自治区": "P3",
+  "宁夏回族自治区": "P3",
+  "青海省": "P3",
+  "安徽省": "P4",
+  "贵州省": "P4",
+  "广西壮族自治区": "P4",
+  "西藏自治区": "P4",
+  "黑龙江省": "P4",
+  "吉林省": "P4",
+  "新疆维吾尔自治区": "P4"
+};
+
+const priorityPalettes = {
+  P1: { name: "P1", label: "P1 高优先级", dark: "#0d5964", base: brandColors.ocean, light: "#f3fbfb", text: "#08383d" },
+  P2: { name: "P2", label: "P2 次高优先级", dark: "#4b6a1d", base: brandColors.grass, light: "#f6faf0", text: "#2f4317" },
+  P3: { name: "P3", label: "P3 中优先级", dark: "#a45500", base: brandColors.sun, light: "#fff7eb", text: "#5f3600" },
+  P4: { name: "P4", label: "P4 基础优先级", dark: "#903042", base: brandColors.berry, light: "#fff4f5", text: "#5a1d29" }
 };
 
 function isTechDashboardView() {
@@ -24873,9 +24915,9 @@ function compactRankingControls() {
 
 function customerScrollDuration() {
   return {
-    fast: "76s",
-    medium: "116s",
-    slow: "168s"
+    fast: "116s",
+    medium: "168s",
+    slow: "240s"
   }[customerScrollSpeedKey] || "116s";
 }
 
@@ -25348,12 +25390,14 @@ function renderYearTrendChart() {
 }
 
 function latestScatterData() {
-  return currentDashboardData().provinceData.map((item) => ({
-    name: item.latestSite,
-    value: [...item.coord, item.value],
-    province: item.name,
-    latestDate: item.latestDate
-  }));
+  return currentDashboardData().provinceData
+    .filter((item) => isPriorityVisible(provincePriority(item.name)))
+    .map((item) => ({
+      name: item.latestSite,
+      value: [...item.coord, item.value],
+      province: item.name,
+      latestDate: item.latestDate
+    }));
 }
 
 function getStoredProjects() {
@@ -26900,12 +26944,112 @@ function closeFootprintMap() {
   window.Footprint3D?.stop?.();
 }
 
+function hexToRgb(color) {
+  const hex = String(color || "").replace("#", "");
+  const normalized = hex.length === 3
+    ? hex.split("").map((part) => part + part).join("")
+    : hex.padEnd(6, "0").slice(0, 6);
+  return [
+    parseInt(normalized.slice(0, 2), 16),
+    parseInt(normalized.slice(2, 4), 16),
+    parseInt(normalized.slice(4, 6), 16)
+  ];
+}
+
+function mixHex(colorA, colorB, factor) {
+  const a = hexToRgb(colorA);
+  const b = hexToRgb(colorB);
+  const ratio = Math.max(0, Math.min(1, factor));
+  return `#${a.map((channel, index) => {
+    const mixed = Math.round(channel + (b[index] - channel) * ratio);
+    return mixed.toString(16).padStart(2, "0");
+  }).join("")}`;
+}
+
+function hexToRgba(color, alpha) {
+  const [red, green, blue] = hexToRgb(color);
+  return `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+}
+
+function provincePriority(name) {
+  return provincePriorityMap[name] || "";
+}
+
+function isPriorityVisible(priority) {
+  return !priority || !hiddenPriorityFilters.has(priority);
+}
+
+function provincePriorityColor(name, value, maxValue, tech = false) {
+  const priority = provincePriority(name);
+  const palette = priorityPalettes[priority];
+  if (!palette) {
+    return tech ? "rgba(45, 82, 112, 0.38)" : "#f3f0ef";
+  }
+
+  if (!isPriorityVisible(priority)) {
+    return tech ? "rgba(91, 109, 124, 0.34)" : "#e6e3e2";
+  }
+
+  const rawRatio = Math.max(0, value || 0) / Math.max(1, maxValue);
+  const ratio = tech ? Math.sqrt(rawRatio) : Math.pow(rawRatio, 0.34);
+  const color = ratio < 0.68
+    ? mixHex(palette.light, palette.base, ratio / 0.68)
+    : mixHex(palette.base, palette.dark, (ratio - 0.68) / 0.32);
+
+  return tech ? hexToRgba(color, 0.86) : color;
+}
+
+function mapProvinceRegions(provinceData, tech) {
+  const provinceValueMap = new Map((provinceData || []).map((item) => [item.name, item]));
+  const maxValue = Math.max(1, ...(provinceData || []).map((item) => item.value || 0));
+  const featureNames = (chinaGeoJson?.features || [])
+    .map((feature) => feature.properties?.name)
+    .filter(Boolean);
+
+  return featureNames.map((name) => {
+    const source = provinceValueMap.get(name);
+    const priority = provincePriority(name);
+    const priorityVisible = isPriorityVisible(priority);
+    const value = source?.value || 0;
+    return {
+      name,
+      value,
+      priority,
+      latestSite: source?.latestSite || "",
+      latestDate: source?.latestDate || "",
+      itemStyle: {
+        areaColor: provincePriorityColor(name, value, maxValue, tech),
+        borderColor: priorityVisible
+          ? (tech ? "rgba(222, 250, 252, 0.58)" : "rgba(255, 255, 255, 0.92)")
+          : (tech ? "rgba(174, 183, 190, 0.28)" : "#d5d0ce"),
+        borderWidth: priority ? (tech ? 1.15 : 1) : 0.7,
+        shadowBlur: tech && priority && priorityVisible ? 12 : 0,
+        shadowColor: tech && priority && priorityVisible ? "rgba(49, 183, 188, 0.18)" : "transparent"
+      },
+      emphasis: {
+        itemStyle: {
+          areaColor: priority && priorityVisible ? provincePriorityColor(name, Math.max(value, maxValue * 0.72), maxValue, tech) : undefined,
+          borderColor: tech ? "#dffcff" : brandColors.blue,
+          borderWidth: 1.4
+        },
+        label: {
+          color: tech ? "#ffffff" : brandColors.blue,
+          fontWeight: 700
+        }
+      }
+    };
+  });
+}
+
 async function renderMap() {
   await ensureChinaMap();
   const provinceData = currentDashboardData().provinceData;
   mapChart = mapChart || echarts.init(document.querySelector("#chinaMap"));
   const compact = window.innerWidth < 900;
   const tech = isTechDashboardView();
+  const mapRegions = mapProvinceRegions(provinceData, tech);
+  mapChart.clear();
+  mapChart.resize();
 
   mapChart.setOption({
     color: [brandColors.ocean, brandColors.sun],
@@ -26925,71 +27069,54 @@ async function renderMap() {
         }
 
         const province = provinceData.find((item) => item.name === params.name);
+        const priority = provincePriority(params.name);
+        const priorityLine = priority ? `<br/>区域级别：${priority}` : "";
         if (!province) {
-          return `${params.name}<br/>暂无装机记录`;
+          return `${params.name}${priorityLine}<br/>暂无装机记录`;
         }
 
         return `
           <strong>${params.name}</strong><br/>
+          区域级别：${priority || "未分级"}<br/>
           总装机量：${province.value} 台<br/>
           最新场地：${province.latestSite}<br/>
           最新日期：${province.latestDate}
         `;
       }
     },
-    visualMap: {
-      min: 0,
-      max: Math.max(1, ...provinceData.map((item) => item.value)),
-      show: !tech,
-      left: tech ? 22 : 16,
-      bottom: tech ? 24 : 14,
-      itemWidth: 14,
-      itemHeight: 118,
-      text: ["高装机", "低装机"],
-      textStyle: {
-        color: tech ? "rgba(255, 255, 255, 0.72)" : brandColors.midnight,
-        fontSize: 11,
-        fontWeight: 700
-      },
-      calculable: true,
-      formatter(value) {
-        return `${Math.round(value)} 台`;
-      },
-      inRange: {
-        color: tech
-          ? [
-            "rgba(43, 76, 105, 0.52)",
-            "#2d6981",
-            "#31b7bc",
-            "#75cdb5",
-            "#94b654"
-          ]
-          : [
-            brandColors.snow,
-            brandColors.oat,
-            brandColors.ocean,
-            brandColors.grass,
-            brandColors.sun,
-            brandColors.berry,
-            brandColors.blue
-          ]
-      }
-    },
     geo: {
       map: "china",
       roam: true,
-      zoom: tech ? (compact ? 1.2 : 1.26) : 1.12,
-      top: tech ? 8 : 24,
-      bottom: tech ? 0 : 10,
-      left: tech ? 0 : "auto",
-      right: tech ? 70 : "auto",
+      zoom: 1,
+      layoutCenter: tech ? ["50%", "54%"] : ["50%", "53%"],
+      layoutSize: tech ? (compact ? "105%" : "96%") : (compact ? "102%" : "92%"),
+      tooltip: {
+        show: true,
+        formatter(params) {
+          const province = provinceData.find((item) => item.name === params.name);
+          const priority = provincePriority(params.name);
+          const priorityLine = priority ? `<br/>区域级别：${priority}` : "";
+          if (!province) {
+            return `${params.name}${priorityLine}<br/>暂无装机记录`;
+          }
+
+          return `
+            <strong>${params.name}</strong><br/>
+            区域级别：${priority || "未分级"}<br/>
+            总装机量：${province.value} 台<br/>
+            最新场地：${province.latestSite}<br/>
+            最新日期：${province.latestDate}
+          `;
+        }
+      },
       itemStyle: {
-        areaColor: tech ? "rgba(45, 82, 112, 0.58)" : brandColors.snow,
+        areaColor: tech ? "rgba(45, 82, 112, 0.38)" : "#f3f0ef",
         borderColor: tech ? "rgba(126, 224, 230, 0.56)" : brandColors.white,
         borderWidth: tech ? 1.1 : 1.25,
-        shadowBlur: tech ? 18 : 0,
-        shadowColor: tech ? "rgba(49, 183, 188, 0.18)" : "transparent"
+        shadowBlur: 0,
+        shadowColor: "transparent"
       },
+      regions: mapRegions,
       emphasis: {
         label: { color: tech ? "#ffffff" : brandColors.blue, fontWeight: 700 },
         itemStyle: {
@@ -27000,13 +27127,6 @@ async function renderMap() {
       }
     },
     series: [
-      {
-        name: "总装机量",
-        type: "map",
-        map: "china",
-        geoIndex: 0,
-        data: provinceData.map(({ name, value }) => ({ name, value }))
-      },
       {
         name: "最新装机场地",
         type: tech ? "effectScatter" : "scatter",
@@ -27068,6 +27188,35 @@ function renderDashboard() {
   renderProjectResults();
 }
 
+function updatePriorityFilterButtons() {
+  document.querySelectorAll("[data-priority-filter]").forEach((button) => {
+    const priority = button.dataset.priorityFilter;
+    const active = isPriorityVisible(priority);
+    button.classList.toggle("is-active", active);
+    button.classList.toggle("is-muted", !active);
+    button.setAttribute("aria-pressed", String(active));
+    button.setAttribute("title", active ? `隐藏 ${priority} 省份` : `显示 ${priority} 省份`);
+  });
+}
+
+function initializePriorityFilters() {
+  document.querySelector(".legend")?.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-priority-filter]");
+    if (!button) return;
+
+    const priority = button.dataset.priorityFilter;
+    if (hiddenPriorityFilters.has(priority)) {
+      hiddenPriorityFilters.delete(priority);
+    } else {
+      hiddenPriorityFilters.add(priority);
+    }
+
+    updatePriorityFilterButtons();
+    renderMap();
+  });
+  updatePriorityFilterButtons();
+}
+
 function initializeProductSwitcher() {
   const switcher = document.querySelector("#productSwitcher");
   switcher.addEventListener("change", (event) => {
@@ -27099,6 +27248,7 @@ function initializeProductSwitcher() {
 
   document.querySelector("#openFootprintMap").addEventListener("click", openFootprintMap);
   document.querySelector("#footprintOverlay").addEventListener("click", closeFootprintMap);
+  initializePriorityFilters();
 }
 
 window.addEventListener("resize", () => {

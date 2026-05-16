@@ -1168,7 +1168,8 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 12px;
+  align-items: center;
+  gap: 8px 12px;
   color: var(--getinge-bluegray);
   font-size: 12px;
 }
@@ -1181,12 +1182,75 @@ h2 {
   border-radius: 50%;
 }
 
+.legend-swatch {
+  width: 26px;
+  height: 9px;
+  display: inline-block;
+  margin-right: 6px;
+  border-radius: 999px;
+  vertical-align: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+}
+
+.priority-filter {
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  padding: 3px 6px;
+  color: var(--getinge-bluegray);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 760;
+}
+
+.priority-filter:hover,
+.priority-filter:focus-visible {
+  color: var(--getinge-navy);
+  border-color: var(--getinge-oat);
+  outline: none;
+}
+
+.priority-filter.is-active {
+  color: var(--getinge-navy);
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(212, 202, 200, 0.72);
+}
+
+.priority-filter.is-muted {
+  color: var(--getinge-cliff);
+  background: rgba(230, 227, 226, 0.72);
+}
+
+.priority-filter.is-muted .legend-swatch {
+  filter: grayscale(1);
+  opacity: 0.38;
+}
+
 .legend-dot.latest {
   background: var(--warning);
 }
 
 .legend-dot.base {
   background: var(--getinge-cyan);
+}
+
+.legend-swatch.priority-p1 {
+  background: linear-gradient(90deg, #0d5964, #31b7bc, #f3fbfb);
+}
+
+.legend-swatch.priority-p2 {
+  background: linear-gradient(90deg, #4b6a1d, #94b654, #f6faf0);
+}
+
+.legend-swatch.priority-p3 {
+  background: linear-gradient(90deg, #a45500, #f39200, #fff7eb);
+}
+
+.legend-swatch.priority-p4 {
+  background: linear-gradient(90deg, #903042, #e56b78, #fff4f5);
 }
 
 .china-map {
@@ -1235,8 +1299,8 @@ h2 {
 
 .dashboard-tech .topbar {
   position: relative;
-  min-height: 142px;
-  grid-template-columns: minmax(300px, 0.85fr) minmax(360px, 1fr) minmax(250px, 0.6fr);
+  min-height: 244px;
+  grid-template-columns: minmax(360px, 0.9fr) minmax(470px, 1fr) minmax(360px, 0.7fr);
   color: var(--white);
   background: transparent;
   border: 0;
@@ -1252,21 +1316,56 @@ h2 {
 }
 
 .dashboard-tech .title-group {
-  max-width: 430px;
+  max-width: 540px;
+}
+
+.dashboard-tech .product-visual {
+  top: 6px;
+  right: 34px;
+  bottom: 68px;
+  width: min(560px, 30vw);
 }
 
 .dashboard-tech .product-visual img,
 .dashboard-tech .tegris-visual {
-  height: 132px;
+  height: 210px;
+  transform: scale(1.08);
   filter: drop-shadow(0 20px 28px rgba(0, 0, 0, 0.38));
 }
 
 .dashboard-tech .report-meta {
   position: absolute;
   top: 0;
+  left: 0;
+  right: auto;
+  width: auto;
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.dashboard-tech .project-entry-button {
+  min-width: 118px;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.dashboard-tech .project-entry-button span {
+  flex: 0 0 20px;
+}
+
+.dashboard-tech .topbar-control-bar {
+  left: 0;
   right: 0;
-  width: 170px;
-  gap: 7px;
+  bottom: 0;
+  grid-template-columns: minmax(320px, 1.25fr) minmax(220px, 0.9fr) minmax(112px, auto) minmax(260px, 1fr);
+  gap: 18px;
+  min-height: 64px;
+  padding: 10px 20px;
+}
+
+.dashboard-tech .topbar-control-bar .data-import-button {
+  justify-self: stretch;
 }
 
 .dashboard-tech .user-profile,
@@ -1282,19 +1381,19 @@ h2 {
 .dashboard-tech .kpi-strip {
   position: absolute;
   left: 34px;
-  top: 300px;
+  top: 358px;
   z-index: 4;
-  width: min(230px, calc(100vw - 68px));
+  width: 180px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 9px;
+  gap: 8px;
 }
 
 .dashboard-tech .kpi {
-  min-height: 66px;
+  min-height: 58px;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: end;
-  padding: 11px 13px;
+  padding: 9px 11px;
   color: var(--white);
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.18);
@@ -1305,7 +1404,7 @@ h2 {
 .dashboard-tech .kpi span,
 .dashboard-tech .kpi small {
   color: rgba(255, 255, 255, 0.72);
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .dashboard-tech .kpi strong {
@@ -1313,13 +1412,13 @@ h2 {
   grid-column: 2;
   align-self: center;
   color: var(--white);
-  font-size: clamp(28px, 2.3vw, 36px);
+  font-size: clamp(24px, 1.8vw, 31px);
 }
 
 .dashboard-tech .main-grid {
   flex: 1;
   min-height: 0;
-  margin-left: min(220px, 16vw);
+  margin-left: 222px;
   display: block;
 }
 
@@ -1343,20 +1442,20 @@ h2 {
 
 .dashboard-tech .map-stage::before {
   position: absolute;
-  inset: 66px 60px 8px 0;
+  inset: 68px 0 0 0;
   content: "";
   pointer-events: none;
-  border: 1px solid rgba(49, 183, 188, 0.34);
-  border-radius: 50%;
+  border: 1px solid rgba(49, 183, 188, 0.28);
+  border-radius: 8px;
   box-shadow:
-    0 0 42px rgba(49, 183, 188, 0.28),
-    inset 0 0 42px rgba(49, 183, 188, 0.14);
+    0 0 32px rgba(49, 183, 188, 0.16),
+    inset 0 0 32px rgba(49, 183, 188, 0.1);
 }
 
 .dashboard-tech .map-heading {
   position: relative;
   z-index: 3;
-  width: min(760px, calc(100% - 250px));
+  width: 100%;
   padding: 0 0 10px;
   border-bottom: 0;
 }
@@ -1369,11 +1468,16 @@ h2 {
 
 .dashboard-tech .map-heading h2 {
   color: var(--white);
-  font-size: clamp(24px, 2.3vw, 34px);
+  max-width: min(560px, 42vw);
+  font-size: clamp(24px, 2.1vw, 34px);
 }
 
 .dashboard-tech .map-actions {
-  align-items: flex-start;
+  min-width: min(660px, 52vw);
+  align-items: flex-end;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 14px;
 }
 
 .dashboard-tech .footprint-button {
@@ -1384,14 +1488,28 @@ h2 {
 }
 
 .dashboard-tech .legend {
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
   color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+}
+
+.dashboard-tech .priority-filter {
+  min-width: 68px;
+  justify-content: center;
+  padding: 3px 8px;
+  color: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .dashboard-tech .china-map {
   position: relative;
   z-index: 2;
   min-height: 560px;
-  filter: drop-shadow(0 22px 42px rgba(2, 10, 26, 0.16));
+  filter: drop-shadow(0 16px 30px rgba(2, 10, 26, 0.16));
 }
 
 .dashboard-tech .tech-map-insights {
