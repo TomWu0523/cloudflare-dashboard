@@ -200,7 +200,7 @@ function lineKeyForRecord(record) {
   }
   if (record.productKey === "magnus1180") {
     const match = model.match(/b[0-5]/);
-    return match ? match[0] : "";
+    return match ? match[0] : "other";
   }
   return "";
 }

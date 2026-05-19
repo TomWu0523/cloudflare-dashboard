@@ -15,7 +15,8 @@ let dashboards = {
       "B2",
       "B3",
       "B4",
-      "B5"
+      "B5",
+      "其他"
     ],
     "lineTotalUnitsLabelTemplate": "台 {line} 手术床",
     "productLineOptions": [
@@ -52,6 +53,10 @@ let dashboards = {
         "value": "b5",
         "label": "B5",
         "ratio": 0.16
+      },
+      {
+        "value": "other",
+        "label": "其他"
       }
     ],
     "provinceData": [

@@ -635,6 +635,21 @@ h2 {
 }
 
 @media (min-width: 1181px) {
+  .dashboard-shell[data-product="magnus1180"] .title-group {
+    max-width: clamp(330px, 29vw, 370px);
+  }
+
+  .product-visual[data-product="magnus1180"] {
+    right: 20px;
+    width: min(300px, 21vw);
+  }
+
+  .product-visual[data-product="magnus1180"] img {
+    width: min(100%, 320px);
+    height: 230px;
+    transform: none;
+  }
+
   .dashboard-shell[data-product="tegris"] .title-group,
   .dashboard-shell[data-product="icMic"] .title-group {
     max-width: clamp(320px, 28vw, 360px);
