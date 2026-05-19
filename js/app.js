@@ -1,6 +1,6 @@
 let dashboards = {
   "magnus1180": {
-    "title": "1180 Magnus OR Table 装机看板",
+    "title": "Magnus OR Table",
     "rankingTitle": "1180 Magnus 用户排名",
     "modalTitle": "1180 手术床项目录入与更新",
     "totalUnitsLabel": "台 1180 Magnus",
@@ -6573,7 +6573,7 @@ let dashboards = {
     ],
     "productLineData": {
       "b0": {
-        "title": "1180 Magnus OR Table 装机看板",
+        "title": "Magnus OR Table",
         "rankingTitle": "1180 Magnus 用户排名",
         "modalTitle": "1180 手术床项目录入与更新",
         "totalUnitsLabel": "台 1180 Magnus",
@@ -7094,7 +7094,7 @@ let dashboards = {
         ]
       },
       "b1": {
-        "title": "1180 Magnus OR Table 装机看板",
+        "title": "Magnus OR Table",
         "rankingTitle": "1180 Magnus 用户排名",
         "modalTitle": "1180 手术床项目录入与更新",
         "totalUnitsLabel": "台 1180 Magnus",
@@ -9537,7 +9537,7 @@ let dashboards = {
         ]
       },
       "b2": {
-        "title": "1180 Magnus OR Table 装机看板",
+        "title": "Magnus OR Table",
         "rankingTitle": "1180 Magnus 用户排名",
         "modalTitle": "1180 手术床项目录入与更新",
         "totalUnitsLabel": "台 1180 Magnus",
@@ -12102,7 +12102,7 @@ let dashboards = {
         ]
       },
       "b3": {
-        "title": "1180 Magnus OR Table 装机看板",
+        "title": "Magnus OR Table",
         "rankingTitle": "1180 Magnus 用户排名",
         "modalTitle": "1180 手术床项目录入与更新",
         "totalUnitsLabel": "台 1180 Magnus",
@@ -12542,7 +12542,7 @@ let dashboards = {
         ]
       },
       "b4": {
-        "title": "1180 Magnus OR Table 装机看板",
+        "title": "Magnus OR Table",
         "rankingTitle": "1180 Magnus 用户排名",
         "modalTitle": "1180 手术床项目录入与更新",
         "totalUnitsLabel": "台 1180 Magnus",
@@ -14163,7 +14163,7 @@ let dashboards = {
         ]
       },
       "b5": {
-        "title": "1180 Magnus OR Table 装机看板",
+        "title": "Magnus OR Table",
         "rankingTitle": "1180 Magnus 用户排名",
         "modalTitle": "1180 手术床项目录入与更新",
         "totalUnitsLabel": "台 1180 Magnus",

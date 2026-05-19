@@ -855,8 +855,6 @@ async function syncDashboardsToBaserow(dashboards) {
       Sales: [sales.id],
       End_Customer: [customer.id],
       Channel_Partner: [channel.id],
-      Region: record.salesRegion || null,
-      Province: record.installProvince || null,
       City: record.installCity || null,
       Order_Date: record.salesDate || null,
       Installation_Date: record.installDate || null,

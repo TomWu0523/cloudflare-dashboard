@@ -636,7 +636,11 @@ h2 {
 
 @media (min-width: 1181px) {
   .dashboard-shell[data-product="magnus1180"] .title-group {
-    max-width: clamp(330px, 29vw, 370px);
+    max-width: clamp(420px, 34vw, 560px);
+  }
+
+  .dashboard-shell[data-product="magnus1180"] #dashboardTitle {
+    white-space: nowrap;
   }
 
   .product-visual[data-product="magnus1180"] {
