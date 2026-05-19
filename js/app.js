@@ -24860,6 +24860,7 @@ function projectStorageKey() {
 
 function renderDashboardChrome() {
   const dashboard = currentDashboardData();
+  document.querySelector(".dashboard-shell").dataset.product = currentDashboardKey;
   document.title = `Getinge SW China ${dashboard.title}`;
   document.querySelector("#dashboardTitle").textContent = dashboard.title;
   document.querySelector("#userRankingTitle").textContent = "全部客户按省份循环";
@@ -24871,6 +24872,7 @@ function renderDashboardChrome() {
   document.querySelector("#productVisual").setAttribute("aria-label", dashboard.visual.alt);
 
   const visual = document.querySelector("#productVisual");
+  visual.dataset.product = currentDashboardKey;
   if (dashboard.visual.type === "image") {
     visual.classList.remove("product-visual--system");
     visual.innerHTML = `<img src="${dashboard.visual.src}" alt="${dashboard.visual.alt}" />`;

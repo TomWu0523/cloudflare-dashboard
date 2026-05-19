@@ -634,6 +634,58 @@ h2 {
   left: 12%;
 }
 
+@media (min-width: 1181px) {
+  .dashboard-shell[data-product="tegris"] .title-group,
+  .dashboard-shell[data-product="icMic"] .title-group {
+    max-width: clamp(320px, 28vw, 360px);
+  }
+
+  .dashboard-shell[data-product="tegris"] .topbar-control-bar,
+  .dashboard-shell[data-product="icMic"] .topbar-control-bar {
+    right: min(320px, 25vw);
+  }
+
+  .dashboard-shell[data-product="tegris"] .last-updated,
+  .dashboard-shell[data-product="icMic"] .last-updated {
+    white-space: nowrap;
+  }
+
+  .product-visual[data-product="tegris"],
+  .product-visual[data-product="icMic"] {
+    right: 28px;
+    bottom: auto;
+    width: min(330px, 24vw);
+    height: 178px;
+    align-items: stretch;
+    overflow: hidden;
+    border-bottom-left-radius: 8px;
+  }
+
+  .product-visual[data-product="tegris"]::after,
+  .product-visual[data-product="icMic"]::after {
+    right: 10%;
+    bottom: 8px;
+    left: 10%;
+    height: 18px;
+  }
+
+  .product-visual[data-product="tegris"] img,
+  .product-visual[data-product="icMic"] img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: none;
+  }
+
+  .product-visual[data-product="tegris"] img {
+    object-position: center;
+  }
+
+  .product-visual[data-product="icMic"] img {
+    object-position: center 42%;
+  }
+}
+
 .tegris-visual {
   position: relative;
   z-index: 1;
