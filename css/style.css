@@ -1218,6 +1218,10 @@ h2 {
   grid-template-rows: auto minmax(0, 1fr);
 }
 
+.year-panel[hidden] {
+  display: none;
+}
+
 .trend-chart,
 .year-chart {
   width: 100%;
