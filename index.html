@@ -139,7 +139,7 @@
             </div>
             <div class="map-actions">
               <button class="footprint-button" id="openFootprintMap" type="button" aria-haspopup="dialog">
-                全屏 Footprint
+                Heat Map
               </button>
               <div class="legend">
                 <span><i class="legend-dot latest"></i>最新装机 / 签约</span>
@@ -313,16 +313,18 @@
       <div class="footprint-customer-cloud" id="footprintCustomerCloud" aria-hidden="true"></div>
       <div class="footprint-scan" aria-hidden="true"></div>
       <header class="footprint-header">
-        <div>
-          <p>China Installed Base</p>
-          <h2 id="footprintTitle">Magnus China Footprint</h2>
+        <div class="footprint-title-card">
+          <p id="footprintTitleEyebrow">Getinge Magnus</p>
+          <h2 id="footprintTitle">China Installed Base Heat Map</h2>
         </div>
-        <span>点击任意位置返回</span>
       </header>
       <div class="footprint-map-shell">
         <div id="footprintMap" class="footprint-map"></div>
+        <div id="footprintRail" class="footprint-rail-overlay" aria-hidden="true"></div>
+        <div id="footprintPillars" class="footprint-pillar-overlay" aria-hidden="true"></div>
         <div id="footprintLabels" class="footprint-labels"></div>
       </div>
+      <button class="footprint-back-button" id="closeFootprintMapButton" type="button">Back</button>
     </section>
 
     <script src="assets/echarts.min.js"></script>

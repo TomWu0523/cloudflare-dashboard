@@ -107790,17 +107790,90 @@ async function ensureChinaMap() {
 }
 
 function footprintTitle() {
-  const title = currentDashboardData().title;
+  return "China Installed Base Heat Map";
+}
 
-  if (title.includes("Tegris")) {
-    return "Tegris China Footprint";
+function footprintEyebrowTitle() {
+  return {
+    magnus1180: "Getinge Magnus",
+    magnus2026Funnel: "Getinge Magnus Funnel",
+    tegris: "Getinge Tegris",
+    icMic: "Getinge IC MIC"
+  }[currentDashboardKey] || "Getinge Magnus";
+}
+
+function footprintRailEntries() {
+  const dashboard = currentDashboardData();
+  const topUsers = (dashboard.users || []).slice(0, 14).map((user, index) => ({
+    rank: index + 1,
+    name: user.name,
+    meta: `${user.province || "全国"} · 累计 ${formatNumber.format(user.value || 0)} 台`
+  }));
+
+  if (topUsers.length) {
+    return topUsers;
   }
 
-  if (title.includes("IC MIC")) {
-    return "IC MIC China Footprint";
+  return (dashboard.provinceData || []).slice(0, 14).map((province, index) => ({
+    rank: index + 1,
+    name: province.latestSite || province.name,
+    meta: `${province.name} · 累计 ${formatNumber.format(province.value || 0)} 台`
+  }));
+}
+
+function renderFootprintRailOverlay() {
+  const rail = document.querySelector("#footprintRail");
+  if (!rail) return;
+  const entries = footprintRailEntries();
+  if (!entries.length) {
+    rail.innerHTML = "";
+    return;
   }
 
-  return "Magnus China Footprint";
+  const doubled = [...entries, ...entries];
+  rail.style.setProperty("--rail-duration", `${Math.max(28, entries.length * 3.1)}s`);
+  rail.innerHTML = `
+    <div class="footprint-rail-track">
+      ${doubled.map((entry) => `
+        <article class="footprint-rail-item">
+          <div class="footprint-rail-rank">${String(entry.rank).padStart(2, "0")}</div>
+          <div class="footprint-rail-body">
+            <strong>${entry.name}</strong>
+            <span>${entry.meta}</span>
+          </div>
+        </article>
+      `).join("")}
+    </div>
+  `;
+}
+
+function renderFootprintPillarOverlay() {
+  const pillarLayer = document.querySelector("#footprintPillars");
+  if (!pillarLayer) return;
+
+  const glints = [
+    { x: 84.5, y: 55, height: 150, delay: -0.3 },
+    { x: 67.4, y: 80, height: 170, delay: -1.1 },
+    { x: 82.2, y: 27, height: 116, delay: -1.9 },
+    { x: 73.4, y: 41, height: 92, delay: -2.6 },
+    { x: 60.8, y: 59, height: 104, delay: -3.2 },
+    { x: 48.2, y: 74, height: 96, delay: -4.1 },
+    { x: 78.4, y: 67, height: 118, delay: -4.8 }
+  ];
+
+  pillarLayer.innerHTML = glints.map((glint) => {
+    return `
+      <span
+        class="footprint-glint"
+        style="
+          --x:${glint.x}%;
+          --y:${glint.y}%;
+          --h:${glint.height}px;
+          --delay:${glint.delay}s;
+        "
+      ></span>
+    `;
+  }).join("");
 }
 
 function footprintConeData() {
@@ -108860,24 +108933,24 @@ function renderFootprintTerrainScene() {
 
 async function renderFootprintMap() {
   await ensureChinaMap();
-  renderFootprintCustomerCloud();
-  if (window.Footprint3D?.render?.({
-    container: document.querySelector("#footprintMap"),
-    labelsContainer: document.querySelector("#footprintLabels"),
-    geoJson: chinaGeoJson,
-    provinceData: currentDashboardData().provinceData || []
-  })) {
-    document.querySelector("#footprintTitle").textContent = footprintTitle();
-    return;
-  }
-
+  const map = document.querySelector("#footprintMap");
+  const labels = document.querySelector("#footprintLabels");
+  document.querySelector("#footprintTitleEyebrow").textContent = footprintEyebrowTitle();
   document.querySelector("#footprintTitle").textContent = footprintTitle();
-  document.querySelector("#footprintMap").innerHTML = `
-    <div class="footprint-map-message">
-      新版 3D 地图模块未加载，请同步更新 js/footprint3d.js、js/app.js、css/style.css 和 index.html。
+  map.innerHTML = `
+    <div class="footprint-heatmap-image-shell" aria-hidden="true">
+      <div class="footprint-heatmap-title-mask"></div>
+      <div class="footprint-heatmap-left-mask"></div>
+      <img
+        class="footprint-heatmap-image"
+        src="assets/footprint-heat-map-concept.png"
+        alt="${footprintEyebrowTitle()} ${footprintTitle()}"
+      />
     </div>
   `;
-  document.querySelector("#footprintLabels").innerHTML = "";
+  labels.innerHTML = "";
+  renderFootprintRailOverlay();
+  renderFootprintPillarOverlay();
   return;
 
   const target = document.querySelector("#footprintMap");
@@ -109317,6 +109390,9 @@ function renderDashboard() {
   populateProductModelOptions();
   setProjectFormData();
   renderProjectResults();
+  if (!document.querySelector("#footprintOverlay").hidden) {
+    renderFootprintMap();
+  }
 }
 
 function updatePriorityFilterButtons() {
@@ -109378,7 +109454,10 @@ function initializeProductSwitcher() {
   });
 
   document.querySelector("#openFootprintMap").addEventListener("click", openFootprintMap);
-  document.querySelector("#footprintOverlay").addEventListener("click", closeFootprintMap);
+  document.querySelector("#closeFootprintMapButton").addEventListener("click", (event) => {
+    event.stopPropagation();
+    closeFootprintMap();
+  });
   initializePriorityFilters();
 }
 
