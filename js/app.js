@@ -107790,7 +107790,9 @@ async function ensureChinaMap() {
 }
 
 function footprintTitle() {
-  return "China Installed Base Heat Map";
+  return currentDashboardKey === "magnus2026Funnel"
+    ? "China Funnel Heat Map"
+    : "China Installed Base Heat Map";
 }
 
 function footprintEyebrowTitle() {
@@ -107851,25 +107853,25 @@ function renderFootprintPillarOverlay() {
   const pillarLayer = document.querySelector("#footprintPillars");
   if (!pillarLayer) return;
 
-  const glints = [
-    { x: 84.5, y: 55, height: 150, delay: -0.3 },
-    { x: 67.4, y: 80, height: 170, delay: -1.1 },
-    { x: 82.2, y: 27, height: 116, delay: -1.9 },
-    { x: 73.4, y: 41, height: 92, delay: -2.6 },
-    { x: 60.8, y: 59, height: 104, delay: -3.2 },
-    { x: 48.2, y: 74, height: 96, delay: -4.1 },
-    { x: 78.4, y: 67, height: 118, delay: -4.8 }
+  const glows = [
+    { x: 83.5, y: 55.5, size: 128, delay: -0.3 },
+    { x: 67.8, y: 79.4, size: 148, delay: -1.1 },
+    { x: 82.8, y: 28.5, size: 104, delay: -1.9 },
+    { x: 73.4, y: 42.8, size: 92, delay: -2.6 },
+    { x: 60.5, y: 61.4, size: 96, delay: -3.2 },
+    { x: 48.4, y: 75.5, size: 90, delay: -4.1 },
+    { x: 78.6, y: 68.2, size: 108, delay: -4.8 }
   ];
 
-  pillarLayer.innerHTML = glints.map((glint) => {
+  pillarLayer.innerHTML = glows.map((glow) => {
     return `
       <span
-        class="footprint-glint"
+        class="footprint-hotspot-glow"
         style="
-          --x:${glint.x}%;
-          --y:${glint.y}%;
-          --h:${glint.height}px;
-          --delay:${glint.delay}s;
+          --x:${glow.x}%;
+          --y:${glow.y}%;
+          --size:${glow.size}px;
+          --delay:${glow.delay}s;
         "
       ></span>
     `;
@@ -108933,8 +108935,10 @@ function renderFootprintTerrainScene() {
 
 async function renderFootprintMap() {
   await ensureChinaMap();
+  const overlay = document.querySelector("#footprintOverlay");
   const map = document.querySelector("#footprintMap");
   const labels = document.querySelector("#footprintLabels");
+  overlay.dataset.footprintTheme = currentDashboardKey === "magnus2026Funnel" ? "funnel" : "installed";
   document.querySelector("#footprintTitleEyebrow").textContent = footprintEyebrowTitle();
   document.querySelector("#footprintTitle").textContent = footprintTitle();
   map.innerHTML = `
