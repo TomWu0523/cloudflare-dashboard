@@ -107579,7 +107579,7 @@ function customerProvinceGroups() {
   const addCustomer = (province, name, value = 0, flags = {}) => {
     const normalizedProvince = String(province || "未填写省份").trim();
     const normalizedName = String(name || "").trim();
-    if (!normalizedName || normalizedName === "未填写终端用户") return;
+    if (!isRenderableFootprintCustomerName(normalizedName) || normalizedName === "未填写终端用户") return;
     const provinceGroup = groups.get(normalizedProvince) || new Map();
     const current = provinceGroup.get(normalizedName) || {
       name: normalizedName,
@@ -108279,18 +108279,27 @@ function footprintStaticShellClass() {
   return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean";
 }
 
-function footprintRailEntries() {
-  const dashboard = currentDashboardData();
-  const topUsers = (dashboard.users || []).slice(0, 14).map((user, index) => ({
-    rank: index + 1,
-    name: user.name,
-    meta: `${user.province || "全国"} · 累计 ${formatNumber.format(user.value || 0)} 台`
-  }));
+function isRenderableFootprintCustomerName(name) {
+  const normalized = String(name || "").trim();
+  if (!normalized) return false;
+  return !/^(?:n\/a|na|none|null|unknown|暂无|未知)$/i.test(normalized);
+}
 
-  if (topUsers.length) {
-    return topUsers;
+function footprintRailEntries() {
+  const groupedCustomers = customerProvinceGroups()
+    .flatMap((group) => group.customers)
+    .slice(0, 14)
+    .map((customer, index) => ({
+      rank: index + 1,
+      name: customer.name,
+      meta: `${customer.province || "全国"} · 累计 ${formatNumber.format(customer.value || 0)} 台`
+    }));
+
+  if (groupedCustomers.length) {
+    return groupedCustomers;
   }
 
+  const dashboard = currentDashboardData();
   return (dashboard.provinceData || []).slice(0, 14).map((province, index) => ({
     rank: index + 1,
     name: province.latestSite || province.name,
