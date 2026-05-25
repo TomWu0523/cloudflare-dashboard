@@ -108213,6 +108213,12 @@ function footprintTitle() {
   if (currentDashboardKey === "magnus1180") {
     return "China Magnus Install Bases Heat Map";
   }
+  if (currentDashboardKey === "tegris") {
+    return "China Tegris Install Base Heat Map";
+  }
+  if (currentDashboardKey === "icMic") {
+    return "China IC-MIC Install Base Heat Map";
+  }
   return "China Installed Base Heat Map";
 }
 
@@ -108226,13 +108232,18 @@ function footprintEyebrowTitle() {
 }
 
 function shouldUseStaticFootprintMap() {
-  return currentDashboardKey === "magnus1180" || currentDashboardKey === "magnus2026Funnel";
+  return currentDashboardKey === "magnus1180"
+    || currentDashboardKey === "magnus2026Funnel"
+    || currentDashboardKey === "tegris"
+    || currentDashboardKey === "icMic";
 }
 
 function footprintStaticImageSrc() {
   return {
     magnus1180: "assets/magnus-ib-pillars-static.png?v=1",
-    magnus2026Funnel: "assets/magnus-funnel-pillars-static.png?v=1"
+    magnus2026Funnel: "assets/magnus-funnel-pillars-static.png?v=1",
+    tegris: "assets/tegris-pillars-static.png?v=1",
+    icMic: "assets/ic-mic-pillars-static.png?v=1"
   }[currentDashboardKey] || "assets/footprint-heat-map-concept.png";
 }
 
@@ -108243,6 +108254,12 @@ function footprintStaticImageClass() {
   if (currentDashboardKey === "magnus2026Funnel") {
     return "footprint-heatmap-image footprint-heatmap-image--magnus-funnel";
   }
+  if (currentDashboardKey === "tegris") {
+    return "footprint-heatmap-image footprint-heatmap-image--tegris";
+  }
+  if (currentDashboardKey === "icMic") {
+    return "footprint-heatmap-image footprint-heatmap-image--ic-mic";
+  }
   return "footprint-heatmap-image";
 }
 
@@ -108252,6 +108269,12 @@ function footprintStaticShellClass() {
   }
   if (currentDashboardKey === "magnus2026Funnel") {
     return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean footprint-heatmap-image-shell--magnus-funnel";
+  }
+  if (currentDashboardKey === "tegris") {
+    return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean footprint-heatmap-image-shell--tegris";
+  }
+  if (currentDashboardKey === "icMic") {
+    return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean footprint-heatmap-image-shell--ic-mic";
   }
   return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean";
 }
@@ -108355,7 +108378,12 @@ function renderFootprintStatsOverlay() {
   const stats = document.querySelector("#footprintStats");
   if (!stats) return;
 
-  if (currentDashboardKey !== "magnus1180" && currentDashboardKey !== "magnus2026Funnel") {
+  if (
+    currentDashboardKey !== "magnus1180"
+    && currentDashboardKey !== "magnus2026Funnel"
+    && currentDashboardKey !== "tegris"
+    && currentDashboardKey !== "icMic"
+  ) {
     stats.innerHTML = "";
     stats.hidden = true;
     return;

@@ -1855,12 +1855,23 @@ h2 {
   display: none;
 }
 
+.footprint-overlay[data-dashboard-key="tegris"]::after,
+.footprint-overlay[data-dashboard-key="icMic"]::after {
+  display: none;
+}
+
 .footprint-overlay[data-dashboard-key="magnus1180"] {
   background:
     linear-gradient(180deg, #01050c 0%, #01050c 100%);
 }
 
 .footprint-overlay[data-dashboard-key="magnus2026Funnel"] {
+  background:
+    linear-gradient(180deg, #01050c 0%, #01050c 100%);
+}
+
+.footprint-overlay[data-dashboard-key="tegris"],
+.footprint-overlay[data-dashboard-key="icMic"] {
   background:
     linear-gradient(180deg, #01050c 0%, #01050c 100%);
 }
@@ -1885,6 +1896,18 @@ h2 {
   background-size: 46px 46px, 46px 46px, auto, auto;
   mask-image: none;
   opacity: 0.74;
+}
+
+.footprint-overlay[data-dashboard-key="tegris"]::before,
+.footprint-overlay[data-dashboard-key="icMic"]::before {
+  background:
+    linear-gradient(rgba(72, 224, 219, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(72, 224, 219, 0.026) 1px, transparent 1px),
+    radial-gradient(circle at 72% 58%, rgba(86, 245, 240, 0.06), transparent 18%),
+    radial-gradient(circle at 56% 74%, rgba(86, 245, 240, 0.045), transparent 20%);
+  background-size: 46px 46px, 46px 46px, auto, auto;
+  mask-image: none;
+  opacity: 0.72;
 }
 
 .footprint-overlay[data-footprint-theme="funnel"] {
@@ -2112,6 +2135,12 @@ h2 {
   background: linear-gradient(180deg, rgba(7, 16, 31, 0.16), rgba(7, 16, 31, 0.05));
 }
 
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-title-card,
+.footprint-overlay[data-dashboard-key="icMic"] .footprint-title-card {
+  max-width: min(760px, 58vw);
+  padding: 8px 16px 10px;
+}
+
 .footprint-header p {
   color: rgba(177, 239, 243, 0.72);
   font-size: 12px;
@@ -2138,6 +2167,12 @@ h2 {
   white-space: nowrap;
   font-size: clamp(18px, 1.68vw, 29px);
   text-shadow: 0 0 18px rgba(92, 175, 255, 0.24);
+}
+
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-header h2,
+.footprint-overlay[data-dashboard-key="icMic"] .footprint-header h2 {
+  white-space: nowrap;
+  font-size: clamp(18px, 1.72vw, 30px);
 }
 
 .footprint-map-shell {
@@ -2247,12 +2282,28 @@ h2 {
   pointer-events: none;
 }
 
+.footprint-heatmap-image-shell--tegris::before,
+.footprint-heatmap-image-shell--tegris::after,
+.footprint-heatmap-image-shell--ic-mic::before,
+.footprint-heatmap-image-shell--ic-mic::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
 .footprint-heatmap-image-shell--magnus-ib {
   background: rgb(1, 5, 12);
   mask-image: none;
 }
 
 .footprint-heatmap-image-shell--magnus-funnel {
+  background: rgb(1, 5, 12);
+  mask-image: none;
+}
+
+.footprint-heatmap-image-shell--tegris,
+.footprint-heatmap-image-shell--ic-mic {
   background: rgb(1, 5, 12);
   mask-image: none;
 }
@@ -2295,6 +2346,27 @@ h2 {
   animation: footprint-static-sweep 7.6s ease-in-out infinite;
 }
 
+.footprint-heatmap-image-shell--tegris::before,
+.footprint-heatmap-image-shell--ic-mic::before {
+  background:
+    radial-gradient(circle at 73% 50%, rgba(82, 255, 244, 0.14), transparent 18%),
+    radial-gradient(circle at 66% 64%, rgba(82, 255, 244, 0.09), transparent 20%),
+    linear-gradient(180deg, rgba(160, 255, 249, 0.06), transparent 18%, transparent 84%, rgba(160, 255, 249, 0.03));
+  mix-blend-mode: screen;
+  animation: footprint-static-breathe 4.8s ease-in-out infinite;
+}
+
+.footprint-heatmap-image-shell--tegris::after,
+.footprint-heatmap-image-shell--ic-mic::after {
+  inset: 8% 14% 8% 18%;
+  background:
+    linear-gradient(100deg, transparent 0%, transparent 44%, rgba(205, 255, 251, 0.12) 49%, rgba(86, 255, 244, 0.18) 50%, transparent 56%, transparent 100%);
+  mix-blend-mode: screen;
+  filter: blur(8px);
+  opacity: 0.64;
+  animation: footprint-static-sweep 7.4s ease-in-out infinite;
+}
+
 .footprint-overlay[data-footprint-theme="funnel"] .footprint-heatmap-image {
   filter: hue-rotate(92deg) saturate(1.16) contrast(1.05) brightness(0.95);
 }
@@ -2307,6 +2379,18 @@ h2 {
   object-position: 57% 51%;
   transform: scale(0.995);
   filter: saturate(1.12) contrast(1.05) brightness(1) hue-rotate(8deg);
+}
+
+.footprint-heatmap-image-shell--clean .footprint-heatmap-image--tegris {
+  object-position: 56.8% 50.8%;
+  transform: scale(0.995);
+  filter: saturate(1.08) contrast(1.05) brightness(0.99);
+}
+
+.footprint-heatmap-image-shell--clean .footprint-heatmap-image--ic-mic {
+  object-position: 56.8% 50.8%;
+  transform: scale(0.995);
+  filter: saturate(1.08) contrast(1.05) brightness(0.99);
 }
 
 .footprint-heatmap-title-mask {
@@ -2584,6 +2668,13 @@ h2 {
   width: min(16.4vw, 316px);
 }
 
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-stats-overlay,
+.footprint-overlay[data-dashboard-key="icMic"] .footprint-stats-overlay {
+  right: 2.1%;
+  top: 38.5%;
+  width: min(16.4vw, 316px);
+}
+
 .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-rail-overlay {
   left: 0.7%;
   top: 9.5%;
@@ -2591,6 +2682,8 @@ h2 {
   width: min(17.6vw, 344px);
 }
 
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-rail-overlay,
+.footprint-overlay[data-dashboard-key="icMic"] .footprint-rail-overlay,
 .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-rail-overlay {
   left: 0.7%;
   top: 9.5%;
@@ -2842,6 +2935,13 @@ h2 {
   backdrop-filter: none;
   background: rgba(7, 18, 35, 0.62);
   border-color: rgba(154, 221, 255, 0.24);
+  bottom: clamp(10px, 1.1vw, 16px);
+}
+
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-back-button,
+.footprint-overlay[data-dashboard-key="icMic"] .footprint-back-button {
+  backdrop-filter: none;
+  background: rgba(6, 16, 29, 0.62);
   bottom: clamp(10px, 1.1vw, 16px);
 }
 
