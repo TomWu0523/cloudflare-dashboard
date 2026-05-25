@@ -1847,6 +1847,46 @@ h2 {
   animation: footprint-light-sweep 5.8s ease-in-out infinite;
 }
 
+.footprint-overlay[data-dashboard-key="magnus1180"]::after {
+  display: none;
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"]::after {
+  display: none;
+}
+
+.footprint-overlay[data-dashboard-key="magnus1180"] {
+  background:
+    linear-gradient(180deg, #01050c 0%, #01050c 100%);
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] {
+  background:
+    linear-gradient(180deg, #01050c 0%, #01050c 100%);
+}
+
+.footprint-overlay[data-dashboard-key="magnus1180"]::before {
+  background:
+    linear-gradient(rgba(72, 224, 219, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(72, 224, 219, 0.024) 1px, transparent 1px),
+    radial-gradient(circle at 74% 60%, rgba(92, 255, 234, 0.05), transparent 16%),
+    radial-gradient(circle at 58% 72%, rgba(92, 255, 234, 0.04), transparent 18%);
+  background-size: 46px 46px, 46px 46px, auto, auto;
+  mask-image: none;
+  opacity: 0.72;
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"]::before {
+  background:
+    linear-gradient(rgba(95, 178, 255, 0.034) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95, 178, 255, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 72% 58%, rgba(102, 198, 255, 0.07), transparent 18%),
+    radial-gradient(circle at 56% 74%, rgba(102, 198, 255, 0.05), transparent 20%);
+  background-size: 46px 46px, 46px 46px, auto, auto;
+  mask-image: none;
+  opacity: 0.74;
+}
+
 .footprint-overlay[data-footprint-theme="funnel"] {
   background:
     radial-gradient(circle at 58% 58%, rgba(38, 112, 169, 0.3), transparent 38%),
@@ -2060,6 +2100,18 @@ h2 {
   text-align: right;
 }
 
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-title-card {
+  max-width: min(720px, 56vw);
+  padding: 8px 16px 10px;
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-title-card {
+  max-width: min(760px, 58vw);
+  padding: 8px 16px 10px;
+  border-color: rgba(92, 175, 255, 0.14);
+  background: linear-gradient(180deg, rgba(7, 16, 31, 0.16), rgba(7, 16, 31, 0.05));
+}
+
 .footprint-header p {
   color: rgba(177, 239, 243, 0.72);
   font-size: 12px;
@@ -2075,6 +2127,17 @@ h2 {
   line-height: 1.08;
   font-weight: 720;
   text-shadow: 0 0 18px rgba(49, 183, 188, 0.22);
+}
+
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-header h2 {
+  white-space: nowrap;
+  font-size: clamp(20px, 1.82vw, 31px);
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-header h2 {
+  white-space: nowrap;
+  font-size: clamp(18px, 1.68vw, 29px);
+  text-shadow: 0 0 18px rgba(92, 175, 255, 0.24);
 }
 
 .footprint-map-shell {
@@ -2133,6 +2196,16 @@ h2 {
   pointer-events: none;
 }
 
+.footprint-heatmap-image-shell--clean {
+  inset: 0;
+  opacity: 1;
+  mask-image: none;
+}
+
+.footprint-heatmap-image-shell--clean::after {
+  display: none;
+}
+
 .footprint-heatmap-image {
   display: block;
   width: 100%;
@@ -2144,8 +2217,96 @@ h2 {
   filter: saturate(1.12) contrast(1.04) brightness(0.96);
 }
 
+.footprint-heatmap-image-shell--clean .footprint-heatmap-image {
+  object-fit: contain;
+  object-position: center center;
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+.footprint-heatmap-image-shell--clean .footprint-heatmap-image--magnus-ib {
+  object-position: 57.5% 50%;
+  transform: scale(0.992);
+  filter: saturate(1.06) contrast(1.05) brightness(0.98);
+}
+
+.footprint-heatmap-image-shell--magnus-ib::before,
+.footprint-heatmap-image-shell--magnus-ib::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.footprint-heatmap-image-shell--magnus-funnel::before,
+.footprint-heatmap-image-shell--magnus-funnel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.footprint-heatmap-image-shell--magnus-ib {
+  background: rgb(1, 5, 12);
+  mask-image: none;
+}
+
+.footprint-heatmap-image-shell--magnus-funnel {
+  background: rgb(1, 5, 12);
+  mask-image: none;
+}
+
+.footprint-heatmap-image-shell--magnus-ib::before {
+  background:
+    radial-gradient(circle at 74% 52%, rgba(74, 255, 230, 0.14), transparent 17%),
+    radial-gradient(circle at 66% 65%, rgba(74, 255, 230, 0.09), transparent 19%),
+    linear-gradient(180deg, rgba(120, 255, 240, 0.06), transparent 18%, transparent 84%, rgba(120, 255, 240, 0.03));
+  mix-blend-mode: screen;
+  animation: footprint-static-breathe 4.6s ease-in-out infinite;
+}
+
+.footprint-heatmap-image-shell--magnus-ib::after {
+  inset: 8% 14% 8% 18%;
+  background:
+    linear-gradient(100deg, transparent 0%, transparent 44%, rgba(200, 255, 250, 0.14) 49%, rgba(86, 255, 220, 0.2) 50%, transparent 56%, transparent 100%);
+  mix-blend-mode: screen;
+  filter: blur(8px);
+  opacity: 0.66;
+  animation: footprint-static-sweep 7.2s ease-in-out infinite;
+}
+
+.footprint-heatmap-image-shell--magnus-funnel::before {
+  background:
+    radial-gradient(circle at 73% 50%, rgba(110, 201, 255, 0.16), transparent 18%),
+    radial-gradient(circle at 66% 64%, rgba(110, 201, 255, 0.1), transparent 20%),
+    linear-gradient(180deg, rgba(160, 220, 255, 0.07), transparent 18%, transparent 84%, rgba(160, 220, 255, 0.03));
+  mix-blend-mode: screen;
+  animation: footprint-static-breathe 4.8s ease-in-out infinite;
+}
+
+.footprint-heatmap-image-shell--magnus-funnel::after {
+  inset: 8% 14% 8% 18%;
+  background:
+    linear-gradient(100deg, transparent 0%, transparent 44%, rgba(210, 241, 255, 0.12) 49%, rgba(104, 186, 255, 0.2) 50%, transparent 56%, transparent 100%);
+  mix-blend-mode: screen;
+  filter: blur(8px);
+  opacity: 0.64;
+  animation: footprint-static-sweep 7.6s ease-in-out infinite;
+}
+
 .footprint-overlay[data-footprint-theme="funnel"] .footprint-heatmap-image {
   filter: hue-rotate(92deg) saturate(1.16) contrast(1.05) brightness(0.95);
+}
+
+.footprint-overlay[data-footprint-theme="funnel"] .footprint-heatmap-image-shell--clean .footprint-heatmap-image {
+  filter: hue-rotate(92deg) saturate(1.14) contrast(1.03) brightness(0.98);
+}
+
+.footprint-heatmap-image-shell--clean .footprint-heatmap-image--magnus-funnel {
+  object-position: 57% 51%;
+  transform: scale(0.995);
+  filter: saturate(1.12) contrast(1.05) brightness(1) hue-rotate(8deg);
 }
 
 .footprint-heatmap-title-mask {
@@ -2184,7 +2345,169 @@ h2 {
   mask-composite: intersect;
 }
 
+.footprint-vector-map-shell {
+  position: absolute;
+  inset: -2% -1% -3%;
+  overflow: hidden;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  mask-image: radial-gradient(ellipse at 54% 57%, black 0%, rgba(0, 0, 0, 0.92) 58%, rgba(0, 0, 0, 0.36) 79%, transparent 100%);
+}
+
+.footprint-vector-pillars {
+  position: absolute;
+  inset: -2% -1% -3%;
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  transform: scale(1.03) translateY(-2.2%);
+  filter:
+    drop-shadow(0 0 12px rgba(236, 255, 245, 0.5))
+    drop-shadow(0 0 28px rgba(78, 241, 182, 0.5))
+    drop-shadow(0 0 60px rgba(78, 241, 182, 0.24));
+  mix-blend-mode: screen;
+}
+
+.footprint-svg-pillar {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: footprint-svg-pillar-breathe 4.2s ease-in-out var(--delay, 0s) infinite;
+}
+
+.footprint-svg-pillar-base {
+  fill: url("#footprintPillarBase");
+  opacity: 0.88;
+  animation: footprint-svg-pillar-pulse 4.2s ease-in-out var(--delay, 0s) infinite;
+}
+
+.footprint-svg-pillar-beam {
+  fill: url("#footprintPillarBeam");
+  opacity: 0.96;
+}
+
+.footprint-svg-pillar-core {
+  fill: rgba(255, 255, 255, 0.82);
+  opacity: 0.8;
+}
+
+.footprint-svg-pillar-cap {
+  fill: rgba(245, 255, 250, 0.98);
+  opacity: 0.92;
+}
+
+.footprint-overlay[data-footprint-theme="funnel"] .footprint-vector-pillars {
+  filter:
+    drop-shadow(0 0 12px rgba(238, 250, 255, 0.52))
+    drop-shadow(0 0 28px rgba(100, 184, 255, 0.52))
+    drop-shadow(0 0 60px rgba(100, 184, 255, 0.24));
+}
+
+.footprint-overlay[data-footprint-theme="funnel"] .footprint-svg-pillar-base {
+  fill: rgba(100, 184, 255, 0.42);
+}
+
+.footprint-overlay[data-footprint-theme="funnel"] .footprint-svg-pillar-beam {
+  fill: rgba(100, 184, 255, 0.82);
+}
+
+.footprint-vector-map-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 72% 66%, rgba(78, 255, 183, 0.18), transparent 22%),
+    radial-gradient(circle at 44% 51%, rgba(115, 235, 221, 0.11), transparent 34%),
+    linear-gradient(115deg, transparent 0 42%, rgba(255, 255, 255, 0.035) 45%, transparent 48% 100%),
+    repeating-linear-gradient(90deg, rgba(86, 228, 219, 0.05) 0 1px, transparent 1px 74px),
+    repeating-linear-gradient(0deg, rgba(86, 228, 219, 0.035) 0 1px, transparent 1px 58px);
+  opacity: 0.86;
+  pointer-events: none;
+}
+
+.footprint-vector-map-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 54% 60%, transparent 0%, rgba(2, 8, 14, 0.1) 64%, rgba(2, 8, 14, 0.5) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 18%, transparent 82%, rgba(255, 255, 255, 0.015));
+  pointer-events: none;
+}
+
+.footprint-vector-map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.96;
+  transform: scale(1.03) translateY(-2.2%);
+  filter: saturate(1.08) contrast(1.18) brightness(0.94) drop-shadow(0 24px 18px rgba(0, 0, 0, 0.28));
+}
+
+.footprint-vector-region {
+  vector-effect: non-scaling-stroke;
+  fill: url("#footprintRegionFill");
+  stroke: rgba(177, 245, 229, 0.48);
+  stroke-width: 0.11;
+}
+
+.footprint-vector-region-extrude .footprint-vector-region {
+  fill: rgba(5, 33, 27, 0.72);
+  stroke: rgba(48, 209, 169, 0.18);
+  stroke-width: 0.18;
+  transform: translateY(1.45px);
+  opacity: 0.58;
+}
+
+.footprint-vector-region-glow .footprint-vector-region {
+  fill: url("#footprintRegionGlow");
+  stroke: rgba(78, 241, 182, 0.26);
+  stroke-width: 0.2;
+  opacity: 0.88;
+}
+
+.footprint-vector-region-layer .footprint-vector-region {
+  mix-blend-mode: screen;
+}
+
+.footprint-vector-region-texture .footprint-vector-region {
+  fill: rgba(118, 255, 211, 0.1);
+  stroke: transparent;
+  opacity: 0.46;
+  mix-blend-mode: screen;
+}
+
+.footprint-overlay[data-footprint-theme="funnel"] .footprint-vector-map-shell::before {
+  background:
+    radial-gradient(circle at 72% 66%, rgba(100, 184, 255, 0.18), transparent 22%),
+    radial-gradient(circle at 44% 51%, rgba(90, 198, 255, 0.11), transparent 34%),
+    linear-gradient(115deg, transparent 0 42%, rgba(255, 255, 255, 0.035) 45%, transparent 48% 100%),
+    repeating-linear-gradient(90deg, rgba(92, 175, 255, 0.05) 0 1px, transparent 1px 74px),
+    repeating-linear-gradient(0deg, rgba(92, 175, 255, 0.035) 0 1px, transparent 1px 58px);
+}
+
+.footprint-overlay[data-footprint-theme="funnel"] .footprint-vector-region {
+  stroke: rgba(155, 221, 255, 0.5);
+}
+
+.footprint-overlay[data-footprint-theme="funnel"] .footprint-vector-region-extrude .footprint-vector-region {
+  fill: rgba(4, 27, 52, 0.74);
+  stroke: rgba(87, 172, 255, 0.2);
+}
+
+.footprint-overlay[data-footprint-theme="funnel"] .footprint-vector-region-glow .footprint-vector-region {
+  fill: rgba(100, 184, 255, 0.12);
+  stroke: rgba(100, 184, 255, 0.28);
+}
+
+.footprint-overlay[data-footprint-theme="funnel"] .footprint-vector-region-texture .footprint-vector-region {
+  fill: rgba(120, 210, 255, 0.1);
+}
+
 .footprint-rail-overlay,
+.footprint-stats-overlay,
 .footprint-pillar-overlay {
   position: absolute;
   z-index: 2;
@@ -2208,12 +2531,97 @@ h2 {
   overflow: hidden;
 }
 
+.footprint-stats-overlay {
+  z-index: 4;
+  right: 1.8%;
+  top: 39%;
+  width: min(15.5vw, 300px);
+  display: grid;
+  gap: 12px;
+}
+
+.footprint-stat-card {
+  padding: 14px 16px 15px;
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(8, 19, 30, 0.7), rgba(8, 19, 30, 0.5)),
+    linear-gradient(135deg, rgba(78, 241, 182, 0.06), transparent 72%);
+  box-shadow:
+    inset 0 0 0 1px rgba(124, 245, 255, 0.08),
+    0 18px 34px rgba(0, 0, 0, 0.14);
+  backdrop-filter: blur(10px);
+}
+
+.footprint-stat-card span {
+  display: block;
+  color: rgba(166, 232, 237, 0.76);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.footprint-stat-card strong {
+  display: block;
+  margin-top: 8px;
+  color: rgba(241, 253, 255, 0.96);
+  font-size: clamp(24px, 2.2vw, 38px);
+  line-height: 1;
+  font-weight: 760;
+  text-shadow: 0 0 18px rgba(78, 241, 182, 0.14);
+}
+
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-stats-overlay {
+  right: 2.1%;
+  top: 38.5%;
+  width: min(16.4vw, 316px);
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-stats-overlay {
+  right: 2.1%;
+  top: 38.5%;
+  width: min(16.4vw, 316px);
+}
+
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-rail-overlay {
+  left: 0.7%;
+  top: 9.5%;
+  bottom: 8.5%;
+  width: min(17.6vw, 344px);
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-rail-overlay {
+  left: 0.7%;
+  top: 9.5%;
+  bottom: 8.5%;
+  width: min(17.6vw, 344px);
+}
+
 .footprint-rail-overlay::before {
-  content: none;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 52px;
+  z-index: 2;
+  background:
+    linear-gradient(180deg, rgba(6, 16, 26, 0.88), rgba(6, 16, 26, 0.74) 62%, rgba(6, 16, 26, 0));
+  pointer-events: none;
 }
 
 .footprint-rail-overlay::after {
-  content: none;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 28px;
+  z-index: 2;
+  background:
+    linear-gradient(0deg, rgba(6, 16, 26, 0.88), rgba(6, 16, 26, 0.64) 58%, rgba(6, 16, 26, 0));
+  pointer-events: none;
 }
 
 .footprint-rail-track {
@@ -2221,7 +2629,7 @@ h2 {
   gap: 8px;
   padding-top: 6px;
   animation: footprint-rail-scroll var(--rail-duration, 38s) linear infinite;
-  mask-image: linear-gradient(180deg, transparent 0%, black 7%, black 93%, transparent 100%);
+  mask-image: none;
 }
 
 .footprint-rail-item {
@@ -2284,69 +2692,115 @@ h2 {
 
 .footprint-pillar-overlay {
   inset: 0;
-  z-index: 3;
+  z-index: 5;
   overflow: hidden;
+  filter: drop-shadow(0 0 18px rgba(78, 241, 182, 0.28));
 }
 
 .footprint-pillar-overlay::before {
   content: "";
   position: absolute;
-  left: 18%;
-  right: 10%;
-  top: 18%;
-  bottom: 12%;
-  background: radial-gradient(circle at 58% 58%, rgba(78, 241, 182, 0.08), transparent 26%);
-  filter: blur(32px);
-  opacity: 0.8;
+  left: 16%;
+  right: 7%;
+  top: 16%;
+  bottom: 8%;
+  background:
+    radial-gradient(circle at 71% 66%, rgba(78, 241, 182, 0.18), transparent 19%),
+    radial-gradient(circle at 52% 58%, rgba(78, 241, 182, 0.12), transparent 28%);
+  filter: blur(28px);
+  opacity: 0.92;
 }
 
-.footprint-hotspot-glow {
+.footprint-data-column {
   position: absolute;
   left: var(--x);
   top: var(--y);
-  width: var(--size);
-  height: var(--size);
+  width: var(--w);
+  height: var(--h);
+  border-radius: 999px 999px 2px 2px;
+  background:
+    radial-gradient(circle at 50% 3%, rgba(255, 255, 255, 1) 0 18%, rgba(184, 255, 219, 0.9) 19% 32%, transparent 34%),
+    linear-gradient(90deg, transparent 0%, rgba(245, 255, 250, 0.86) 46%, rgba(255, 255, 255, 0.98) 52%, rgba(117, 255, 191, 0.6) 62%, transparent 100%),
+    linear-gradient(180deg, rgba(246, 255, 250, 0.98), rgba(132, 255, 200, 0.95) 12%, rgba(39, 246, 139, 0.74) 50%, rgba(39, 246, 139, 0.1) 100%);
+  box-shadow:
+    0 0 18px rgba(212, 255, 236, 0.82),
+    0 0 42px rgba(78, 241, 182, 0.58),
+    0 0 86px rgba(78, 241, 182, 0.28);
+  opacity: var(--o, 0.72);
+  transform: translate(-50%, -100%) scaleY(0.96);
+  transform-origin: 50% 100%;
+  animation: footprint-data-column-breathe 4.6s ease-in-out var(--delay, 0s) infinite;
+  mix-blend-mode: screen;
+}
+
+.footprint-data-column::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: var(--glow);
+  height: calc(var(--glow) * 0.42);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(226, 255, 240, 0.72) 0 7%, rgba(78, 241, 182, 0.44) 18%, rgba(78, 241, 182, 0.15) 54%, transparent 76%);
+  filter: blur(1px);
+  transform: translate(-50%, 42%);
+}
+
+.footprint-data-column::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 8%;
+  width: var(--core);
+  height: 82%;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(229, 255, 240, 0.34) 0 6%, rgba(78, 241, 182, 0.2) 18%, rgba(78, 241, 182, 0.08) 42%, transparent 72%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(232, 255, 244, 0.5), transparent);
   box-shadow:
-    0 0 20px rgba(78, 241, 182, 0.16),
-    0 0 44px rgba(78, 241, 182, 0.08);
-  opacity: 0.16;
-  transform: translate(-50%, -50%) scale(0.86);
-  animation: footprint-hotspot-breathe 4.8s ease-in-out var(--delay, 0s) infinite;
+    0 0 16px rgba(255, 255, 255, 0.48),
+    0 0 32px rgba(78, 241, 182, 0.36);
+  transform: translateX(-50%);
+  opacity: 0.86;
 }
 
-.footprint-hotspot-glow::before {
-  content: "";
-  position: absolute;
-  inset: 36%;
-  border-radius: inherit;
-  background: rgba(230, 255, 244, 0.28);
-  box-shadow: 0 0 18px rgba(185, 255, 220, 0.26);
-}
-
-.footprint-hotspot-glow::after {
-  content: "";
-  position: absolute;
-  inset: 18%;
-  border-radius: inherit;
-  border: 1px solid rgba(126, 255, 194, 0.12);
-}
-
-.footprint-overlay[data-footprint-theme="funnel"] .footprint-hotspot-glow {
-  background: radial-gradient(circle, rgba(230, 247, 255, 0.34) 0 6%, rgba(100, 184, 255, 0.2) 18%, rgba(100, 184, 255, 0.08) 42%, transparent 72%);
+.footprint-overlay[data-footprint-theme="funnel"] .footprint-data-column {
+  background:
+    radial-gradient(circle at 50% 3%, rgba(255, 255, 255, 1) 0 18%, rgba(206, 238, 255, 0.9) 19% 32%, transparent 34%),
+    linear-gradient(90deg, transparent 0%, rgba(245, 252, 255, 0.88) 46%, rgba(255, 255, 255, 0.98) 52%, rgba(112, 194, 255, 0.62) 62%, transparent 100%),
+    linear-gradient(180deg, rgba(245, 252, 255, 0.98), rgba(159, 218, 255, 0.95) 12%, rgba(87, 172, 255, 0.76) 50%, rgba(87, 172, 255, 0.1) 100%);
   box-shadow:
-    0 0 20px rgba(100, 184, 255, 0.18),
-    0 0 44px rgba(100, 184, 255, 0.1);
+    0 0 18px rgba(232, 248, 255, 0.82),
+    0 0 42px rgba(100, 184, 255, 0.58),
+    0 0 86px rgba(100, 184, 255, 0.28);
 }
 
-.footprint-overlay[data-footprint-theme="funnel"] .footprint-hotspot-glow::before {
-  background: rgba(230, 247, 255, 0.3);
-  box-shadow: 0 0 18px rgba(178, 224, 255, 0.28);
+.footprint-overlay[data-footprint-theme="funnel"] .footprint-data-column::before {
+  background:
+    radial-gradient(circle, rgba(238, 250, 255, 0.72) 0 7%, rgba(100, 184, 255, 0.46) 18%, rgba(100, 184, 255, 0.15) 54%, transparent 76%);
 }
 
-.footprint-overlay[data-footprint-theme="funnel"] .footprint-hotspot-glow::after {
-  border-color: rgba(132, 203, 255, 0.14);
+.footprint-overlay[data-footprint-theme="funnel"] .footprint-data-column::after {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(235, 248, 255, 0.5), transparent);
+  box-shadow:
+    0 0 16px rgba(255, 255, 255, 0.5),
+    0 0 32px rgba(100, 184, 255, 0.38);
+}
+
+.footprint-overlay[data-footprint-theme="funnel"] .footprint-stat-card {
+  background:
+    linear-gradient(180deg, rgba(8, 18, 34, 0.72), rgba(8, 18, 34, 0.52)),
+    linear-gradient(135deg, rgba(92, 175, 255, 0.08), transparent 72%);
+  box-shadow:
+    inset 0 0 0 1px rgba(154, 221, 255, 0.09),
+    0 18px 34px rgba(0, 0, 0, 0.14);
+}
+
+.footprint-overlay[data-footprint-theme="funnel"] .footprint-stat-card span {
+  color: rgba(186, 225, 255, 0.78);
+}
+
+.footprint-overlay[data-footprint-theme="funnel"] .footprint-stat-card strong {
+  text-shadow: 0 0 18px rgba(100, 184, 255, 0.18);
 }
 
 .footprint-back-button {
@@ -2376,6 +2830,19 @@ h2 {
   border-color: rgba(124, 245, 255, 0.44);
   background: rgba(8, 25, 40, 0.5);
   outline: none;
+}
+
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-back-button {
+  backdrop-filter: none;
+  background: rgba(6, 16, 29, 0.62);
+  bottom: clamp(10px, 1.1vw, 16px);
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-back-button {
+  backdrop-filter: none;
+  background: rgba(7, 18, 35, 0.62);
+  border-color: rgba(154, 221, 255, 0.24);
+  bottom: clamp(10px, 1.1vw, 16px);
 }
 
 .footprint-labels {
@@ -2533,26 +3000,85 @@ body.footprint-open {
   to { transform: translateY(104vh); }
 }
 
+@keyframes footprint-static-breathe {
+  0%, 100% {
+    opacity: 0.52;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.92;
+    transform: scale(1.018);
+  }
+}
+
+@keyframes footprint-static-sweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-16%) skewX(-4deg);
+  }
+  18% {
+    opacity: 0.58;
+  }
+  50% {
+    opacity: 0.72;
+    transform: translateX(12%) skewX(-4deg);
+  }
+  82% {
+    opacity: 0.18;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(28%) skewX(-4deg);
+  }
+}
+
 @keyframes footprint-rail-scroll {
   from { transform: translateY(0); }
   to { transform: translateY(-50%); }
 }
 
-@keyframes footprint-hotspot-breathe {
+@keyframes footprint-data-column-breathe {
   0%, 100% {
-    opacity: 0.1;
-    filter: brightness(0.82) blur(0.2px);
-    transform: translate(-50%, -50%) scale(0.84);
+    filter: brightness(0.94) saturate(1);
+    transform: translate(-50%, -100%) scaleY(0.94);
   }
   45% {
-    opacity: 0.34;
-    filter: brightness(1.12) blur(0);
-    transform: translate(-50%, -50%) scale(1.03);
+    filter: brightness(1.5) saturate(1.22);
+    transform: translate(-50%, -100%) scaleY(1.12);
   }
   72% {
-    opacity: 0.16;
-    filter: brightness(0.94) blur(0.1px);
-    transform: translate(-50%, -50%) scale(0.92);
+    filter: brightness(1.08) saturate(1.08);
+    transform: translate(-50%, -100%) scaleY(1.02);
+  }
+}
+
+@keyframes footprint-svg-pillar-breathe {
+  0%, 100% {
+    opacity: 0.78;
+    transform: scaleY(0.92);
+  }
+  46% {
+    opacity: 1;
+    transform: scaleY(1.14);
+  }
+  72% {
+    opacity: 0.9;
+    transform: scaleY(1.02);
+  }
+}
+
+@keyframes footprint-svg-pillar-pulse {
+  0%, 100% {
+    transform: scale(0.82);
+    opacity: 0.52;
+  }
+  46% {
+    transform: scale(1.18);
+    opacity: 0.95;
+  }
+  72% {
+    transform: scale(0.98);
+    opacity: 0.7;
   }
 }
 

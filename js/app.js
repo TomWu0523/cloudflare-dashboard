@@ -105835,7 +105835,372 @@ const provinceCoordinates = {
   "新疆维吾尔自治区": [87.62, 43.82]
 };
 
+const cityCoordinates = {
+  "北京市": [116.41, 39.9],
+  "上海市": [121.47, 31.23],
+  "天津市": [117.2, 39.12],
+  "重庆市": [106.55, 29.56],
+  "广州市": [113.27, 23.13],
+  "深圳市": [114.06, 22.54],
+  "珠海市": [113.58, 22.27],
+  "佛山市": [113.12, 23.02],
+  "东莞市": [113.75, 23.02],
+  "中山市": [113.39, 22.52],
+  "江门市": [113.08, 22.58],
+  "惠州市": [114.42, 23.11],
+  "汕头市": [116.68, 23.35],
+  "揭阳市": [116.37, 23.55],
+  "湛江市": [110.36, 21.27],
+  "茂名市": [110.93, 21.66],
+  "高州市": [110.85, 21.92],
+  "清远市": [113.06, 23.68],
+  "河源市": [114.7, 23.74],
+  "云浮市": [112.04, 22.92],
+  "韶关市": [113.6, 24.81],
+  "杭州市": [120.15, 30.28],
+  "宁波市": [121.55, 29.87],
+  "温州市": [120.7, 28.0],
+  "瑞安市": [120.65, 27.78],
+  "绍兴市": [120.58, 30.03],
+  "湖州市": [120.09, 30.89],
+  "嘉兴市": [120.76, 30.75],
+  "金华市": [119.65, 29.08],
+  "义乌市": [120.07, 29.31],
+  "永康市": [120.04, 28.9],
+  "衢州市": [118.87, 28.94],
+  "丽水市": [119.92, 28.45],
+  "台州市": [121.42, 28.66],
+  "舟山市": [122.21, 29.99],
+  "余姚市": [121.15, 30.04],
+  "嵊州市": [120.83, 29.59],
+  "南京市": [118.8, 32.06],
+  "苏州市": [120.62, 31.3],
+  "昆山市": [120.98, 31.39],
+  "常熟市": [120.75, 31.65],
+  "太仓市": [121.13, 31.45],
+  "无锡市": [120.31, 31.49],
+  "常州市": [119.95, 31.78],
+  "溧阳市": [119.48, 31.42],
+  "徐州市": [117.29, 34.2],
+  "南通市": [120.86, 32.01],
+  "盐城市": [120.16, 33.35],
+  "扬州市": [119.42, 32.39],
+  "镇江市": [119.45, 32.2],
+  "淮安市": [119.02, 33.61],
+  "泰州市": [119.92, 32.46],
+  "泰兴市": [120.02, 32.17],
+  "兴化市": [119.85, 32.91],
+  "宜兴市": [119.82, 31.34],
+  "张家港市": [120.55, 31.87],
+  "济南市": [117.0, 36.65],
+  "青岛市": [120.38, 36.07],
+  "烟台市": [121.45, 37.46],
+  "潍坊市": [119.16, 36.71],
+  "淄博市": [118.05, 36.81],
+  "济宁市": [116.59, 35.42],
+  "泰安市": [117.09, 36.2],
+  "威海市": [122.12, 37.51],
+  "临沂市": [118.35, 35.05],
+  "菏泽市": [115.48, 35.23],
+  "聊城市": [115.98, 36.45],
+  "滨州市": [117.97, 37.38],
+  "德州市": [116.36, 37.44],
+  "东营市": [118.67, 37.43],
+  "招远市": [120.43, 37.36],
+  "郑州市": [113.62, 34.75],
+  "洛阳市": [112.45, 34.62],
+  "开封市": [114.31, 34.8],
+  "新乡市": [113.93, 35.3],
+  "焦作市": [113.24, 35.22],
+  "濮阳市": [115.03, 35.76],
+  "许昌市": [113.85, 34.04],
+  "漯河市": [114.02, 33.58],
+  "三门峡市": [111.2, 34.77],
+  "南阳市": [112.53, 32.99],
+  "信阳市": [114.09, 32.15],
+  "周口市": [114.65, 33.62],
+  "驻马店市": [114.02, 33.01],
+  "武汉市": [114.3, 30.59],
+  "黄石市": [115.04, 30.2],
+  "十堰市": [110.8, 32.63],
+  "宜昌市": [111.29, 30.7],
+  "襄阳市": [112.12, 32.01],
+  "荆州市": [112.24, 30.34],
+  "荆门市": [112.2, 31.04],
+  "孝感市": [113.92, 30.93],
+  "黄冈市": [114.87, 30.45],
+  "咸宁市": [114.32, 29.84],
+  "随州市": [113.38, 31.72],
+  "长沙市": [112.98, 28.19],
+  "株洲市": [113.13, 27.83],
+  "湘潭市": [112.94, 27.83],
+  "衡阳市": [112.57, 26.89],
+  "岳阳市": [113.12, 29.37],
+  "常德市": [111.69, 29.04],
+  "娄底市": [112.01, 27.73],
+  "湘乡市": [112.53, 27.73],
+  "南昌市": [115.86, 28.68],
+  "赣州市": [114.94, 25.83],
+  "九江市": [116.0, 29.7],
+  "萍乡市": [113.85, 27.62],
+  "福州市": [119.3, 26.08],
+  "厦门市": [118.09, 24.48],
+  "泉州市": [118.68, 24.87],
+  "晋江市": [118.58, 24.82],
+  "漳州市": [117.65, 24.51],
+  "龙岩市": [117.02, 25.08],
+  "莆田市": [119.0, 25.45],
+  "南平市": [118.18, 26.64],
+  "合肥市": [117.28, 31.86],
+  "芜湖市": [118.38, 31.33],
+  "淮南市": [117.0, 32.63],
+  "宿州市": [116.98, 33.63],
+  "池州市": [117.49, 30.66],
+  "成都市": [104.06, 30.67],
+  "绵阳市": [104.73, 31.47],
+  "德阳市": [104.4, 31.13],
+  "广元市": [105.84, 32.44],
+  "自贡市": [104.78, 29.34],
+  "西昌市": [102.26, 27.89],
+  "贵阳市": [106.71, 26.58],
+  "遵义市": [106.94, 27.7],
+  "凯里市": [107.98, 26.58],
+  "昆明市": [102.71, 25.04],
+  "曲靖市": [103.8, 25.49],
+  "玉溪市": [102.55, 24.35],
+  "蒙自市": [103.36, 23.36],
+  "文山市": [104.24, 23.37],
+  "大理市": [100.23, 25.6],
+  "盘州市": [104.47, 25.71],
+  "南宁市": [108.32, 22.82],
+  "桂林市": [110.29, 25.27],
+  "柳州市": [109.42, 24.33],
+  "海口市": [110.35, 20.02],
+  "三亚市": [109.51, 18.25],
+  "东方市": [108.65, 19.1],
+  "石家庄市": [114.48, 38.03],
+  "唐山市": [118.18, 39.63],
+  "秦皇岛市": [119.6, 39.94],
+  "邯郸市": [114.54, 36.63],
+  "邢台市": [114.5, 37.07],
+  "保定市": [115.46, 38.87],
+  "张家口市": [114.89, 40.77],
+  "承德市": [117.96, 40.95],
+  "沧州市": [116.84, 38.31],
+  "廊坊市": [116.68, 39.54],
+  "平泉市": [118.7, 41.02],
+  "武安市": [114.2, 36.7],
+  "太原市": [112.53, 37.87],
+  "大同市": [113.3, 40.08],
+  "长治市": [113.11, 36.19],
+  "吕梁市": [111.13, 37.52],
+  "运城市": [111.0, 35.03],
+  "平凉市": [106.66, 35.54],
+  "兰州市": [103.82, 36.06],
+  "西安市": [108.94, 34.34],
+  "宝鸡市": [107.15, 34.37],
+  "咸阳市": [108.71, 34.33],
+  "延安市": [109.49, 36.59],
+  "汉中市": [107.02, 33.07],
+  "榆林市": [109.73, 38.29],
+  "神木市": [110.5, 38.84],
+  "沈阳市": [123.43, 41.8],
+  "大连市": [121.62, 38.92],
+  "盘锦市": [122.07, 41.12],
+  "长春市": [125.32, 43.9],
+  "吉林市": [126.55, 43.84],
+  "延吉市": [129.51, 42.89],
+  "哈尔滨市": [126.63, 45.75],
+  "齐齐哈尔市": [123.97, 47.33],
+  "呼和浩特市": [111.67, 40.82],
+  "包头市": [109.84, 40.66],
+  "赤峰市": [118.89, 42.26],
+  "通辽市": [122.26, 43.62],
+  "鄂尔多斯市": [109.78, 39.61],
+  "银川市": [106.27, 38.47],
+  "吴忠市": [106.2, 37.98],
+  "石嘴山市": [106.38, 39.02],
+  "西宁市": [101.78, 36.62],
+  "乌鲁木齐市": [87.62, 43.82],
+  "克拉玛依市": [84.87, 45.6],
+  "阿坝县": [101.700985, 32.904223],
+  "阿克苏地区": [80.265068, 41.170712],
+  "安庆市": [117.043551, 30.50883],
+  "安溪县": [118.186014, 25.056824],
+  "安阳市": [114.352482, 36.103442],
+  "蚌埠市": [117.363228, 32.939667],
+  "滨海县": [119.828434, 33.989888],
+  "博尔塔拉蒙古自治州": [82.074778, 44.903258],
+  "成武县": [115.897349, 34.947366],
+  "崇礼区": [115.281652, 40.971302],
+  "磁县": [114.38208, 36.367673],
+  "大庆市": [125.11272, 46.590734],
+  "德江县": [108.117317, 28.26094],
+  "东阿县": [116.248855, 36.336004],
+  "东港市": [124.149437, 39.883467],
+  "东阳市": [120.23334, 29.262546],
+  "恩施市": [109.486761, 30.282406],
+  "汾阳市": [111.785273, 37.267742],
+  "凤冈县": [107.722021, 27.960858],
+  "福清市": [119.376992, 25.720402],
+  "阜阳市": [115.819729, 32.896969],
+  "固原市": [106.285241, 36.004561],
+  "灌云县": [119.255741, 34.298436],
+  "广南县": [105.056684, 24.050272],
+  "和田地区": [79.92533, 37.110687],
+  "惠民县": [117.508941, 37.483876],
+  "即墨区": [120.447352, 36.390847],
+  "佳木斯市": [130.361634, 46.809606],
+  "嘉善县": [120.921871, 30.841352],
+  "建德市": [119.279089, 29.472284],
+  "江阴市": [120.275891, 31.910984],
+  "晋城市": [112.851274, 35.497553],
+  "靖江市": [120.26825, 32.018168],
+  "巨野县": [116.089341, 35.390999],
+  "宽城区": [125.342828, 43.903823],
+  "兰陵县": [118.049968, 34.855573],
+  "凉山彝族自治州": [102.258746, 27.886762],
+  "邻水县": [106.934968, 30.334323],
+  "六合区": [118.85065, 32.340655],
+  "泸州市": [105.443348, 28.889138],
+  "罗定市": [111.578201, 22.765415],
+  "南安市": [118.387031, 24.959494],
+  "南充市": [106.082974, 30.795281],
+  "南皮县": [116.709171, 38.042439],
+  "宁海县": [121.432606, 29.299836],
+  "平江县": [113.593751, 28.701523],
+  "平潭县": [119.791197, 25.503672],
+  "齐河县": [116.758394, 36.795497],
+  "沁阳市": [112.934538, 35.08901],
+  "确山县": [114.026679, 32.801538],
+  "瑞金市": [116.034854, 25.875278],
+  "三门县": [121.376429, 29.118955],
+  "邵阳市": [111.46923, 27.237842],
+  "涉县": [113.673297, 36.563143],
+  "沭阳县": [118.775889, 34.129097],
+  "朔州市": [112.433387, 39.331261],
+  "绥阳县": [107.191024, 27.951342],
+  "遂溪县": [110.255321, 21.376915],
+  "天台县": [121.031227, 29.141126],
+  "桐庐县": [119.685045, 29.797437],
+  "桐梓县": [106.826591, 28.131559],
+  "铜川市": [108.979608, 34.916582],
+  "铜仁市": [109.191555, 27.718346],
+  "乌审旗": [108.842454, 38.596611],
+  "西双版纳傣族自治州": [100.797941, 22.001724],
+  "夏邑县": [116.13989, 34.240894],
+  "仙游县": [118.694331, 25.356529],
+  "新昌县": [120.905665, 29.501205],
+  "新兴县": [112.23083, 22.703204],
+  "兴安盟": [122.070317, 46.076268],
+  "延边朝鲜族自治州": [129.513228, 42.904823],
+  "盐津县": [104.23506, 28.106923],
+  "砚山县": [104.343989, 23.612301],
+  "阳江市": [111.975107, 21.859222],
+  "伊犁哈萨克自治州": [81.317946, 43.92186],
+  "宜阳县": [112.179989, 34.516478],
+  "永嘉县": [120.690968, 28.153886],
+  "张北县": [114.715951, 41.151713],
+  "长兴县": [119.910122, 31.00475],
+  "肇庆市": [112.472529, 23.051546],
+  "邹平市": [117.736807, 36.87803],
+  "拉萨市": [91.13, 29.65]
+};
+
+const cityAliases = {
+  "哈尔滨": "哈尔滨市",
+  "福州": "福州市",
+  "武汉": "武汉市",
+  "常州": "常州市",
+  "青岛市市": "青岛市",
+  "上海市杨浦区市": "上海市",
+  "山西省运城市": "运城市",
+  "广州医科大学附属市": "广州市",
+  "荆州市智慧城市": "荆州市"
+};
+
+const customerCityRules = [
+  ["浙江大学医学院附属第一医院", "杭州市"],
+  ["浙江大学医学院附属第二医院", "杭州市"],
+  ["浙江大学医学院附属邵逸夫医院", "杭州市"],
+  ["浙江省人民医院", "杭州市"],
+  ["浙江省立同德医院", "杭州市"],
+  ["浙江医院", "杭州市"],
+  ["浙江中医药大学", "杭州市"],
+  ["烟台毓璜顶医院", "烟台市"],
+  ["中国医科大学附属第一医院", "沈阳市"],
+  ["中国医科大学附属盛京医院", "沈阳市"],
+  ["中国医科大学附属第四医院", "沈阳市"],
+  ["华中科技大学同济医学院附属同济医院", "武汉市"],
+  ["华中科技大学同济医学院附属协和医院", "武汉市"],
+  ["中国人民解放军中部战区总医院", "武汉市"],
+  ["福建省立医院", "福州市"],
+  ["福建省立金山医院", "福州市"],
+  ["福建医科大学附属协和医院", "福州市"],
+  ["福建医科大学附属第一医院", "福州市"],
+  ["广西壮族自治区人民医院", "南宁市"],
+  ["广西医科大学", "南宁市"],
+  ["承德医学院附属医院", "承德市"],
+  ["昆明医科大学", "昆明市"],
+  ["云南省第一人民医院", "昆明市"],
+  ["云南省肿瘤医院", "昆明市"],
+  ["宁夏医科大学总医院", "银川市"],
+  ["华北石油管理局总医院", "沧州市"],
+  ["中山大学附属第三医院", "广州市"],
+  ["中山大学附属第六医院", "广州市"],
+  ["中山大学附属口腔医院", "广州市"],
+  ["中山大学孙逸仙纪念医院", "广州市"],
+  ["中山大学附属第五医院", "珠海市"],
+  ["山东省千佛山医院", "济南市"],
+  ["山东大学齐鲁医院", "济南市"],
+  ["山东第一医科大学", "济南市"],
+  ["郑州大学第一附属医院", "郑州市"],
+  ["郑州大学第二附属医院", "郑州市"],
+  ["河南省肿瘤医院", "郑州市"],
+  ["西安交通大学第二附属医院", "西安市"],
+  ["西安交通大学第一附属医院", "西安市"],
+  ["陕西省人民医院", "西安市"],
+  ["温州医科大学", "温州市"],
+  ["新疆维吾尔自治区中医医院", "乌鲁木齐市"],
+  ["新疆维吾尔自治区肿瘤医院", "乌鲁木齐市"],
+  ["中南大学湘雅", "长沙市"],
+  ["海南医学院第一附属医院", "海口市"],
+  ["吉林大学第二医院", "长春市"],
+  ["吉林大学中日联谊医院", "长春市"],
+  ["苏州大学附属", "苏州市"],
+  ["广州医科大学", "广州市"],
+  ["广东省中医院", "广州市"],
+  ["暨南大学附属第一医院", "广州市"],
+  ["南方医科大学", "广州市"],
+  ["香港大学深圳医院", "深圳市"],
+  ["深圳前海泰康医院", "深圳市"],
+  ["深圳大学总医院", "深圳市"],
+  ["唐山中心医院", "唐山市"],
+  ["江南大学附属医院", "无锡市"],
+  ["徐州医科大学附属医院", "徐州市"],
+  ["河北北方学院附属第一医院", "张家口市"],
+  ["山西医科大学", "太原市"],
+  ["山西省人民医院", "太原市"],
+  ["山西白求恩医院", "太原市"],
+  ["兰州大学", "兰州市"],
+  ["甘肃省中医院", "兰州市"],
+  ["大连医科大学", "大连市"],
+  ["汕头大学", "汕头市"],
+  ["南昌大学", "南昌市"],
+  ["青海大学附属医院", "西宁市"],
+  ["安徽医科大学", "合肥市"],
+  ["江苏省人民医院", "南京市"],
+  ["江苏省中西医结合医院", "南京市"],
+  ["江苏省苏北人民医院", "扬州市"],
+  ["同济大学附属东方医院胶州医院", "青岛市"],
+  ["青岛山大齐鲁医院", "青岛市"],
+  ["安特速医疗服务（青岛）", "青岛市"],
+  ["中国人民解放军联勤保障部队第九一〇医院", "泉州市"],
+  ["中国人民解放军联勤保障部队第九〇九医院", "漳州市"]
+];
+
 const provinceNames = Object.keys(provinceCoordinates);
+const cityNames = Object.keys(cityCoordinates);
 
 let currentDashboardKey = "magnus1180";
 let currentProductLineKey = "all";
@@ -106392,6 +106757,58 @@ function canonicalProvinceName(value) {
     || provinceNames.find((province) => province.replace(/省|市|壮族自治区|回族自治区|维吾尔自治区|自治区/g, "") === raw)
     || provinceNames.find((province) => province.includes(raw) || raw.includes(province.replace(/省|市|壮族自治区|回族自治区|维吾尔自治区|自治区/g, "")))
     || raw;
+}
+
+function canonicalCityName(value) {
+  const raw = String(value ?? "").trim();
+  if (!raw) {
+    return "";
+  }
+
+  if (cityAliases[raw]) return cityAliases[raw];
+  const normalized = raw
+    .replace(/^(中国|中华人民共和国)/, "")
+    .replace(/(城区|市辖区|新区|自治州|地区|盟|特别行政区)$/g, "")
+    .trim();
+  if (cityAliases[normalized]) return cityAliases[normalized];
+  if (cityCoordinates[normalized]) return normalized;
+  if (cityCoordinates[`${normalized}市`]) return `${normalized}市`;
+
+  const cityMatch = raw.match(/([\u4e00-\u9fa5]{2,8}市)/);
+  if (cityMatch) {
+    const matched = cityAliases[cityMatch[1]] || cityMatch[1];
+    if (cityCoordinates[matched]) return matched;
+  }
+
+  return cityNames.find((city) => raw.includes(city) || city.includes(raw)) || "";
+}
+
+function inferCityName(...values) {
+  for (const value of values) {
+    const direct = canonicalCityName(value);
+    if (direct) {
+      return direct;
+    }
+  }
+
+  const combined = values.map((value) => String(value || "")).join(" ");
+  return cityNames.find((city) => combined.includes(city))
+    || customerCityRules.find(([pattern]) => combined.includes(pattern))?.[1]
+    || Object.entries(cityAliases).find(([alias]) => combined.includes(alias))?.[1]
+    || "";
+}
+
+function cityCoordinateForRecord(record) {
+  const city = inferCityName(record.installCity, record.terminalUser, record.installProvince, record.channelName, record.configDescription);
+  if (city && cityCoordinates[city]) {
+    return { city, coord: cityCoordinates[city] };
+  }
+
+  const province = canonicalProvinceName(record.installProvince);
+  return {
+    city: province || record.installProvince || "",
+    coord: provinceCoordinates[province] || [104.2, 35.8]
+  };
 }
 
 function numberCell(row, aliases) {
@@ -107790,9 +108207,13 @@ async function ensureChinaMap() {
 }
 
 function footprintTitle() {
-  return currentDashboardKey === "magnus2026Funnel"
-    ? "China Funnel Heat Map"
-    : "China Installed Base Heat Map";
+  if (currentDashboardKey === "magnus2026Funnel") {
+    return "China Magnus Funnel ≥60 Heat Map";
+  }
+  if (currentDashboardKey === "magnus1180") {
+    return "China Magnus Install Bases Heat Map";
+  }
+  return "China Installed Base Heat Map";
 }
 
 function footprintEyebrowTitle() {
@@ -107802,6 +108223,37 @@ function footprintEyebrowTitle() {
     tegris: "Getinge Tegris",
     icMic: "Getinge IC MIC"
   }[currentDashboardKey] || "Getinge Magnus";
+}
+
+function shouldUseStaticFootprintMap() {
+  return currentDashboardKey === "magnus1180" || currentDashboardKey === "magnus2026Funnel";
+}
+
+function footprintStaticImageSrc() {
+  return {
+    magnus1180: "assets/magnus-ib-pillars-static.png?v=1",
+    magnus2026Funnel: "assets/magnus-funnel-pillars-static.png?v=1"
+  }[currentDashboardKey] || "assets/footprint-heat-map-concept.png";
+}
+
+function footprintStaticImageClass() {
+  if (currentDashboardKey === "magnus1180") {
+    return "footprint-heatmap-image footprint-heatmap-image--magnus-ib";
+  }
+  if (currentDashboardKey === "magnus2026Funnel") {
+    return "footprint-heatmap-image footprint-heatmap-image--magnus-funnel";
+  }
+  return "footprint-heatmap-image";
+}
+
+function footprintStaticShellClass() {
+  if (currentDashboardKey === "magnus1180") {
+    return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean footprint-heatmap-image-shell--magnus-ib";
+  }
+  if (currentDashboardKey === "magnus2026Funnel") {
+    return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean footprint-heatmap-image-shell--magnus-funnel";
+  }
+  return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean";
 }
 
 function footprintRailEntries() {
@@ -107849,33 +108301,291 @@ function renderFootprintRailOverlay() {
   `;
 }
 
+function footprintStatsSummary() {
+  const dashboard = currentDashboardData();
+  const records = dashboard.sourceRecords || [];
+
+  if (currentDashboardKey === "magnus2026Funnel") {
+    const allFunnels = records.reduce((sum, record) => sum + Number(record.quantity || 1), 0);
+    const coveredProvince = new Set(
+      records
+        .map((record) => String(record.installProvince || "").trim())
+        .filter(Boolean)
+    ).size;
+    const ge60Funnels = records.reduce((sum, record) => {
+      const modelText = String(record.productModel || "").trim();
+      const modelValue = Number((modelText.match(/^(\d+)/) || [])[1] || 0);
+      return modelValue >= 60
+        ? sum + Number(record.quantity || 1)
+        : sum;
+    }, 0);
+
+    return [
+      { label: "All Funnels", value: formatNumber.format(allFunnels) },
+      { label: "Covered Province", value: formatNumber.format(coveredProvince) },
+      { label: "≥60 Funnels", value: formatNumber.format(ge60Funnels) }
+    ];
+  }
+
+  const currentYear = new Date().getFullYear();
+  const previousYear = currentYear - 1;
+
+  const totalInstalls = records.reduce((sum, record) => sum + Number(record.quantity || 1), 0);
+  const provincesCovered = new Set(
+    records
+      .map((record) => String(record.installProvince || "").trim())
+      .filter(Boolean)
+  ).size;
+
+  const installsPreviousYear = records.reduce((sum, record) => {
+    const dateValue = String(record.installDate || record.salesDate || "").trim();
+    return dateValue.startsWith(String(previousYear))
+      ? sum + Number(record.quantity || 1)
+      : sum;
+  }, 0);
+
+  return [
+    { label: "Total Installs", value: formatNumber.format(totalInstalls) },
+    { label: "Provinces Covered", value: formatNumber.format(provincesCovered) },
+    { label: `${previousYear} Installs`, value: formatNumber.format(installsPreviousYear) }
+  ];
+}
+
+function renderFootprintStatsOverlay() {
+  const stats = document.querySelector("#footprintStats");
+  if (!stats) return;
+
+  if (currentDashboardKey !== "magnus1180" && currentDashboardKey !== "magnus2026Funnel") {
+    stats.innerHTML = "";
+    stats.hidden = true;
+    return;
+  }
+
+  const items = footprintStatsSummary();
+  stats.hidden = false;
+  stats.innerHTML = items.map((item) => `
+    <article class="footprint-stat-card">
+      <span>${item.label}</span>
+      <strong>${item.value}</strong>
+    </article>
+  `).join("");
+}
+
+function footprintStaticMapSpot(coord, intensity = 0) {
+  const point = footprintProjectedPoint(coord);
+  if (!point) {
+    return null;
+  }
+
+  return {
+    x: `${Math.max(10, Math.min(92, point.x))}%`,
+    y: `${Math.max(18, Math.min(90, point.y - intensity * 2))}%`
+  };
+}
+
+function footprintProjectedPoint(coord) {
+  if (!chinaLngLatBounds || !Array.isArray(coord) || coord.length !== 2) {
+    return null;
+  }
+
+  const [lng, lat] = coord;
+  const lngRatio = (lng - chinaLngLatBounds.minLng) / Math.max(1e-6, chinaLngLatBounds.maxLng - chinaLngLatBounds.minLng);
+  const latRatio = (lat - chinaLngLatBounds.minLat) / Math.max(1e-6, chinaLngLatBounds.maxLat - chinaLngLatBounds.minLat);
+  const x = 7 + lngRatio * 91 + (latRatio - 0.5) * 7;
+  const y = 90 - latRatio * 64 + (lngRatio - 0.5) * 8;
+
+  return {
+    x: Math.max(4, Math.min(98, x)),
+    y: Math.max(7, Math.min(96, y))
+  };
+}
+
+function footprintMapPathData(feature) {
+  const geometry = feature?.geometry;
+  if (!geometry?.coordinates?.length) {
+    return "";
+  }
+
+  const polygons = geometry.type === "MultiPolygon"
+    ? geometry.coordinates
+    : [geometry.coordinates];
+
+  return polygons.map((polygon) => polygon.map((ring) => {
+    const points = ring.map((coord) => footprintProjectedPoint(coord)).filter(Boolean);
+    if (points.length < 3) {
+      return "";
+    }
+
+    const [first, ...rest] = points;
+    return `M ${first.x.toFixed(3)} ${first.y.toFixed(3)} ${rest.map((point) => `L ${point.x.toFixed(3)} ${point.y.toFixed(3)}`).join(" ")} Z`;
+  }).join(" ")).join(" ");
+}
+
+function renderFootprintVectorMap() {
+  const paths = (chinaGeoJson?.features || [])
+    .map((feature) => {
+      const d = footprintMapPathData(feature);
+      if (!d) return "";
+      return `<path class="footprint-vector-region" d="${d}"></path>`;
+    })
+    .join("");
+  const pillars = renderFootprintSvgPillars();
+
+  return `
+    <div class="footprint-vector-map-shell" aria-hidden="true">
+      <svg class="footprint-vector-map" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="footprintRegionFill" x1="18%" y1="8%" x2="82%" y2="92%">
+            <stop offset="0%" stop-color="#18333d" stop-opacity="0.9"></stop>
+            <stop offset="54%" stop-color="#0c2028" stop-opacity="0.8"></stop>
+            <stop offset="100%" stop-color="#06131b" stop-opacity="0.92"></stop>
+          </linearGradient>
+          <radialGradient id="footprintRegionGlow" cx="68%" cy="68%" r="42%">
+            <stop offset="0%" stop-color="#4ef1b6" stop-opacity="0.15"></stop>
+            <stop offset="62%" stop-color="#4ef1b6" stop-opacity="0.03"></stop>
+            <stop offset="100%" stop-color="#4ef1b6" stop-opacity="0"></stop>
+          </radialGradient>
+          <filter id="footprintRegionRelief" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="-1.2" stdDeviation="0.9" flood-color="#b8fff0" flood-opacity="0.18"></feDropShadow>
+            <feDropShadow dx="0" dy="2.6" stdDeviation="1.8" flood-color="#34e8bd" flood-opacity="0.18"></feDropShadow>
+            <feDropShadow dx="0" dy="12" stdDeviation="5.5" flood-color="#00090f" flood-opacity="0.72"></feDropShadow>
+          </filter>
+          <filter id="footprintRegionTexture" x="-10%" y="-10%" width="120%" height="120%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.016 0.04" numOctaves="3" seed="18" result="noise"></feTurbulence>
+            <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0.18 0 0 0 0 0.52 0 0 0 0 0.47 0 0 0 .18 0" result="texture"></feColorMatrix>
+            <feBlend in="SourceGraphic" in2="texture" mode="screen"></feBlend>
+          </filter>
+        </defs>
+        <g class="footprint-vector-region-extrude">${paths}</g>
+        <g class="footprint-vector-region-glow">${paths}</g>
+        <g class="footprint-vector-region-layer" filter="url(#footprintRegionRelief)">${paths}</g>
+        <g class="footprint-vector-region-texture" filter="url(#footprintRegionTexture)">${paths}</g>
+      </svg>
+    </div>
+    ${pillars}
+  `;
+}
+
+function renderFootprintSvgPillars() {
+  const items = footprintHeatPointData()
+    .sort((a, b) => (b.value || 0) - (a.value || 0))
+    .slice(0, 42);
+
+  if (!items.length) {
+    return "";
+  }
+
+  const maxValue = Math.max(1, ...items.map((item) => item.value || 0));
+  const nodes = items.map((item, index) => {
+    const ratio = Math.sqrt((item.value || 0) / maxValue);
+    const point = footprintProjectedPoint(item.coord);
+    if (!point) return "";
+    const height = 5.5 + ratio * 24;
+    const width = 0.52 + ratio * 1.05;
+    const glow = 2.4 + ratio * 5.8;
+    const y = Math.max(16, point.y - ratio * 1.8);
+    const delay = (-index * 0.16).toFixed(2);
+    return `
+      <g
+        class="footprint-svg-pillar"
+        style="--delay:${delay}s"
+        transform="translate(${point.x.toFixed(3)} ${y.toFixed(3)})"
+      >
+        <ellipse class="footprint-svg-pillar-base" cx="0" cy="0" rx="${glow.toFixed(3)}" ry="${(glow * 0.36).toFixed(3)}"></ellipse>
+        <rect class="footprint-svg-pillar-beam" x="${(-width / 2).toFixed(3)}" y="${(-height).toFixed(3)}" width="${width.toFixed(3)}" height="${height.toFixed(3)}" rx="${(width / 2).toFixed(3)}"></rect>
+        <rect class="footprint-svg-pillar-core" x="${(-width * 0.15).toFixed(3)}" y="${(-height * 0.92).toFixed(3)}" width="${(width * 0.3).toFixed(3)}" height="${(height * 0.78).toFixed(3)}" rx="${(width * 0.15).toFixed(3)}"></rect>
+        <circle class="footprint-svg-pillar-cap" cx="0" cy="${(-height).toFixed(3)}" r="${(width * 0.72).toFixed(3)}"></circle>
+      </g>
+    `;
+  }).join("");
+
+  return `
+    <svg class="footprint-vector-pillars" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="footprintPillarBeam" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#f7fff9" stop-opacity="0.98"></stop>
+          <stop offset="22%" stop-color="#95ffd0" stop-opacity="0.9"></stop>
+          <stop offset="72%" stop-color="#28f68c" stop-opacity="0.58"></stop>
+          <stop offset="100%" stop-color="#28f68c" stop-opacity="0"></stop>
+        </linearGradient>
+        <radialGradient id="footprintPillarBase" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#effff6" stop-opacity="0.78"></stop>
+          <stop offset="28%" stop-color="#4ef1b6" stop-opacity="0.46"></stop>
+          <stop offset="100%" stop-color="#4ef1b6" stop-opacity="0"></stop>
+        </radialGradient>
+      </defs>
+      ${nodes}
+    </svg>
+  `;
+}
+
 function renderFootprintPillarOverlay() {
   const pillarLayer = document.querySelector("#footprintPillars");
   if (!pillarLayer) return;
+  const items = footprintHeatPointData()
+    .sort((a, b) => (b.value || 0) - (a.value || 0))
+    .slice(0, 36);
 
-  const glows = [
-    { x: 83.5, y: 55.5, size: 128, delay: -0.3 },
-    { x: 67.8, y: 79.4, size: 148, delay: -1.1 },
-    { x: 82.8, y: 28.5, size: 104, delay: -1.9 },
-    { x: 73.4, y: 42.8, size: 92, delay: -2.6 },
-    { x: 60.5, y: 61.4, size: 96, delay: -3.2 },
-    { x: 48.4, y: 75.5, size: 90, delay: -4.1 },
-    { x: 78.6, y: 68.2, size: 108, delay: -4.8 }
-  ];
+  if (!items.length) {
+    pillarLayer.innerHTML = "";
+    return;
+  }
 
-  pillarLayer.innerHTML = glows.map((glow) => {
+  const maxValue = Math.max(1, ...items.map((item) => item.value || 0));
+  pillarLayer.innerHTML = items.map((item, index) => {
+    const ratio = Math.sqrt((item.value || 0) / maxValue);
+    const spot = footprintStaticMapSpot(item.coord, ratio);
+    if (!spot) return "";
+    const height = 78 + ratio * 230;
+    const width = 8 + ratio * 15;
+    const glow = 72 + ratio * 150;
+    const core = 2.2 + ratio * 4.6;
+    const opacity = 0.68 + ratio * 0.32;
     return `
       <span
-        class="footprint-hotspot-glow"
+        class="footprint-data-column"
         style="
-          --x:${glow.x}%;
-          --y:${glow.y}%;
-          --size:${glow.size}px;
-          --delay:${glow.delay}s;
+          --x:${spot.x};
+          --y:${spot.y};
+          --h:${height.toFixed(1)}px;
+          --w:${width.toFixed(1)}px;
+          --glow:${glow.toFixed(1)}px;
+          --core:${core.toFixed(1)}px;
+          --o:${opacity.toFixed(2)};
+          --delay:${(-index * 0.18).toFixed(2)}s;
         "
+        title="${item.name} · ${formatNumber.format(item.value || 0)}"
       ></span>
     `;
   }).join("");
+}
+
+function footprintHeatPointData() {
+  const dashboard = currentDashboardData();
+  const records = dashboard.sourceRecords || [];
+  if (records.length) {
+    const cityMap = new Map();
+    records.forEach((record) => {
+      const cityPoint = cityCoordinateForRecord(record);
+      const key = cityPoint.city || record.installProvince || record.terminalUser;
+      if (!key) return;
+      const current = cityMap.get(key) || {
+        name: key,
+        value: 0,
+        coord: cityPoint.coord,
+        latestSite: record.terminalUser,
+        latestDate: isoDate(recordPrimaryDate(record, dashboard))
+      };
+      current.value += Number(record.quantity) || 1;
+      current.latestSite = record.terminalUser || current.latestSite;
+      current.latestDate = isoDate(recordPrimaryDate(record, dashboard)) || current.latestDate;
+      cityMap.set(key, current);
+    });
+    return [...cityMap.values()].filter((item) => Array.isArray(item.coord) && item.coord.length === 2 && item.value > 0);
+  }
+
+  return (dashboard.provinceData || [])
+    .filter((item) => Array.isArray(item.coord) && item.coord.length === 2 && (item.value || 0) > 0);
 }
 
 function footprintConeData() {
@@ -108938,24 +109648,32 @@ async function renderFootprintMap() {
   const overlay = document.querySelector("#footprintOverlay");
   const map = document.querySelector("#footprintMap");
   const labels = document.querySelector("#footprintLabels");
+  const pillarLayer = document.querySelector("#footprintPillars");
   overlay.dataset.footprintTheme = currentDashboardKey === "magnus2026Funnel" ? "funnel" : "installed";
+  overlay.dataset.dashboardKey = currentDashboardKey;
   document.querySelector("#footprintTitleEyebrow").textContent = footprintEyebrowTitle();
   document.querySelector("#footprintTitle").textContent = footprintTitle();
-  map.innerHTML = `
-    <div class="footprint-heatmap-image-shell" aria-hidden="true">
-      <div class="footprint-heatmap-title-mask"></div>
-      <div class="footprint-heatmap-left-mask"></div>
-      <img
-        class="footprint-heatmap-image"
-        src="assets/footprint-heat-map-concept.png"
-        alt="${footprintEyebrowTitle()} ${footprintTitle()}"
-      />
-    </div>
-  `;
   labels.innerHTML = "";
   renderFootprintRailOverlay();
-  renderFootprintPillarOverlay();
-  return;
+  renderFootprintStatsOverlay();
+  if (shouldUseStaticFootprintMap()) {
+    footprintChart?.dispose();
+    footprintChart = null;
+    map.innerHTML = `
+      <div class="${footprintStaticShellClass()}" aria-hidden="true">
+        <img
+          class="${footprintStaticImageClass()}"
+          src="${footprintStaticImageSrc()}"
+          alt="${footprintEyebrowTitle()} ${footprintTitle()}"
+        />
+      </div>
+    `;
+    pillarLayer.innerHTML = "";
+    return;
+  }
+
+  map.innerHTML = "";
+  pillarLayer.innerHTML = "";
 
   const target = document.querySelector("#footprintMap");
   const dashboard = currentDashboardData();
