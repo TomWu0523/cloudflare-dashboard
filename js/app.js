@@ -108240,7 +108240,7 @@ function shouldUseStaticFootprintMap() {
 
 function footprintStaticImageSrc() {
   return {
-    magnus1180: "assets/magnus-ib-pillars-static.png?v=1",
+    magnus1180: "assets/magnus-ib-pillars-static.png?v=2",
     magnus2026Funnel: "assets/magnus-funnel-pillars-static.png?v=1",
     tegris: "assets/tegris-pillars-static.png?v=1",
     icMic: "assets/ic-mic-pillars-static.png?v=1"
