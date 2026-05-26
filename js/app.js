@@ -108208,7 +108208,7 @@ async function ensureChinaMap() {
 
 function footprintTitle() {
   if (currentDashboardKey === "magnus2026Funnel") {
-    return "China Magnus Funnel ≥60 Heat Map";
+    return "2026 Magnus in the pipeline";
   }
   if (currentDashboardKey === "magnus1180") {
     return "China Magnus Install Bases Heat Map";
@@ -108240,7 +108240,7 @@ function shouldUseStaticFootprintMap() {
 
 function footprintStaticImageSrc() {
   return {
-    magnus1180: "assets/magnus-ib-pillars-static.png?v=3",
+    magnus1180: "assets/magnus-ib-pillars-static.png?v=4",
     magnus2026Funnel: "assets/magnus-funnel-pillars-static.png?v=2",
     tegris: "assets/tegris-pillars-static.png?v=2",
     icMic: "assets/ic-mic-pillars-static.png?v=2"
@@ -108286,6 +108286,18 @@ function isRenderableFootprintCustomerName(name) {
 }
 
 function footprintRailEntries() {
+  if (currentDashboardKey === "magnus2026Funnel") {
+    return (currentDashboardData().provinceData || [])
+      .slice(0, 14)
+      .map((province, index) => ({
+        rank: index + 1,
+        name: String(province.name || "")
+          .replace(/维吾尔自治区|壮族自治区|回族自治区|特别行政区|自治区|省|市/g, "")
+          .trim() || province.name,
+        meta: `进行中 ${formatNumber.format(province.value || 0)} 台`
+      }));
+  }
+
   const groupedCustomers = customerProvinceGroups()
     .flatMap((group) => group.customers)
     .slice(0, 14)
@@ -108338,7 +108350,6 @@ function footprintStatsSummary() {
   const records = dashboard.sourceRecords || [];
 
   if (currentDashboardKey === "magnus2026Funnel") {
-    const allFunnels = records.reduce((sum, record) => sum + Number(record.quantity || 1), 0);
     const coveredProvince = new Set(
       records
         .map((record) => String(record.installProvince || "").trim())
@@ -108353,9 +108364,8 @@ function footprintStatsSummary() {
     }, 0);
 
     return [
-      { label: "All Funnels", value: formatNumber.format(allFunnels) },
       { label: "Covered Province", value: formatNumber.format(coveredProvince) },
-      { label: "≥60 Funnels", value: formatNumber.format(ge60Funnels) }
+      { label: "In Progress", value: formatNumber.format(ge60Funnels) }
     ];
   }
 
@@ -109813,6 +109823,9 @@ async function renderFootprintMap() {
 
 function customerCloudEntries() {
   const dashboard = currentDashboardData();
+  if (currentDashboardKey === "magnus2026Funnel") {
+    return [];
+  }
   const entries = new Map();
   const provinceLeaders = new Set(
     (dashboard.provinceData || [])

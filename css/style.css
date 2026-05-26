@@ -2703,9 +2703,9 @@ h2 {
 }
 
 .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-stats-overlay {
-  right: 2.1%;
-  top: 38.5%;
-  width: min(16.4vw, 316px);
+  right: 2.2%;
+  top: 43%;
+  width: min(14.6vw, 272px);
 }
 
 .footprint-overlay[data-dashboard-key="tegris"] .footprint-stats-overlay,
@@ -2735,6 +2735,13 @@ h2 {
   top: 9.5%;
   bottom: 8.5%;
   width: min(17.6vw, 344px);
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-rail-overlay {
+  left: 1.1%;
+  top: 13%;
+  bottom: 12%;
+  width: min(13.6vw, 264px);
 }
 
 .footprint-rail-overlay::before {
@@ -2948,6 +2955,36 @@ h2 {
 
 .footprint-overlay[data-footprint-theme="funnel"] .footprint-stat-card strong {
   text-shadow: 0 0 18px rgba(100, 184, 255, 0.18);
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-stats-overlay {
+  display: grid;
+  gap: 14px;
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-stat-card {
+  min-height: 102px;
+  padding: 16px 18px 18px;
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-stat-card strong {
+  font-size: clamp(30px, 2.45vw, 46px);
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-rail-item {
+  grid-template-columns: 28px 1fr;
+  gap: 7px;
+  padding: 10px 10px 11px;
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-rail-body strong {
+  font-size: 15px;
+  line-height: 1.18;
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-rail-body span {
+  margin-top: 4px;
+  font-size: 11px;
 }
 
 .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-stat-card {
