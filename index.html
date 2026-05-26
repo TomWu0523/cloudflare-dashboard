@@ -152,6 +152,17 @@
             </div>
           </div>
           <div id="chinaMap" class="china-map"></div>
+          <div class="map-nav-overlay" id="mapNavControls" aria-label="Map navigation controls">
+            <button class="map-nav-button" type="button" data-map-nav="zoom-in" aria-label="Zoom in">+</button>
+            <button class="map-nav-button" type="button" data-map-nav="up" aria-label="Move up">↑</button>
+            <button class="map-nav-button" type="button" data-map-nav="zoom-out" aria-label="Zoom out">−</button>
+            <button class="map-nav-button" type="button" data-map-nav="left" aria-label="Move left">←</button>
+            <button class="map-nav-button map-nav-button--reset" type="button" data-map-nav="reset" aria-label="Reset view">R</button>
+            <button class="map-nav-button" type="button" data-map-nav="right" aria-label="Move right">→</button>
+            <span class="map-nav-spacer" aria-hidden="true"></span>
+            <button class="map-nav-button" type="button" data-map-nav="down" aria-label="Move down">↓</button>
+            <span class="map-nav-spacer" aria-hidden="true"></span>
+          </div>
           <aside class="tech-map-insights" id="techMapInsights" aria-label="科技版地图信息"></aside>
         </section>
 
@@ -332,6 +343,6 @@
     <script src="assets/three.min.js"></script>
     <script src="assets/xlsx.full.min.js"></script>
     <script src="js/footprint3d.js?v=footprint3d-v16"></script>
-    <script src="js/app.js?v=vector-heatmap-v6"></script>
+    <script src="js/app.js?v=vector-heatmap-v8"></script>
   </body>
 </html>

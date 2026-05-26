@@ -656,17 +656,47 @@ h2 {
 
   .dashboard-shell[data-product="tegris"] .title-group,
   .dashboard-shell[data-product="icMic"] .title-group {
-    max-width: clamp(320px, 28vw, 360px);
+    max-width: clamp(280px, 24vw, 320px);
+  }
+
+  .dashboard-shell[data-product="tegris"] #dashboardTitle,
+  .dashboard-shell[data-product="icMic"] #dashboardTitle {
+    white-space: nowrap;
+    font-size: clamp(28px, 2.4vw, 38px);
   }
 
   .dashboard-shell[data-product="tegris"] .topbar-control-bar,
   .dashboard-shell[data-product="icMic"] .topbar-control-bar {
-    right: min(320px, 25vw);
+    right: min(338px, 25vw);
+    left: 24px;
+    min-height: 52px;
+    grid-template-columns: minmax(210px, 260px) minmax(156px, 196px) auto minmax(148px, 0.9fr);
+    gap: 12px;
+    padding: 6px 14px;
   }
 
   .dashboard-shell[data-product="tegris"] .last-updated,
   .dashboard-shell[data-product="icMic"] .last-updated {
     white-space: nowrap;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .dashboard-shell[data-product="tegris"] .last-updated strong,
+  .dashboard-shell[data-product="icMic"] .last-updated strong {
+    font-size: clamp(18px, 1.5vw, 24px);
+  }
+
+  .dashboard-shell[data-product="tegris"] .product-switcher select,
+  .dashboard-shell[data-product="tegris"] .data-import-button,
+  .dashboard-shell[data-product="tegris"] .logout-button,
+  .dashboard-shell[data-product="icMic"] .product-switcher select,
+  .dashboard-shell[data-product="icMic"] .data-import-button,
+  .dashboard-shell[data-product="icMic"] .logout-button {
+    min-height: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 11px;
   }
 
   .product-visual[data-product="tegris"],
@@ -1334,6 +1364,59 @@ h2 {
   min-height: 420px;
 }
 
+.map-nav-overlay {
+  position: absolute;
+  left: 18px;
+  top: 166px;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: repeat(3, 34px);
+  gap: 6px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.map-nav-button,
+.map-nav-spacer {
+  width: 34px;
+  height: 34px;
+}
+
+.map-nav-button {
+  border: 1px solid rgba(18, 58, 89, 0.1);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.22);
+  color: rgba(17, 36, 68, 0.88);
+  font: 800 21px/1 "Inter", "Segoe UI Symbol", "Segoe UI", sans-serif;
+  cursor: pointer;
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.map-nav-button:hover,
+.map-nav-button:focus-visible {
+  outline: none;
+  background: rgba(255, 255, 255, 0.34);
+  border-color: rgba(18, 58, 89, 0.14);
+  transform: translateY(-1px);
+}
+
+.map-nav-button:active {
+  transform: translateY(0);
+}
+
+.map-nav-button--reset {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.map-nav-spacer {
+  visibility: hidden;
+}
+
 .tech-map-insights {
   display: none;
 }
@@ -1585,6 +1668,23 @@ h2 {
   z-index: 2;
   min-height: 560px;
   filter: drop-shadow(0 16px 30px rgba(2, 10, 26, 0.16));
+}
+
+.dashboard-tech .map-nav-overlay {
+  background: transparent;
+  box-shadow: none;
+}
+
+.dashboard-tech .map-nav-button {
+  background: rgba(11, 27, 49, 0.18);
+  border-color: rgba(132, 220, 232, 0.1);
+  color: rgba(233, 251, 255, 0.86);
+}
+
+.dashboard-tech .map-nav-button:hover,
+.dashboard-tech .map-nav-button:focus-visible {
+  background: rgba(16, 38, 66, 0.3);
+  border-color: rgba(132, 220, 232, 0.18);
 }
 
 .dashboard-tech .tech-map-insights {

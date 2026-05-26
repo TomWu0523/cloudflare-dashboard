@@ -17914,7 +17914,7 @@ let dashboards = {
     }
   },
   "tegris": {
-    "title": "Tegris Dashboard 装机看板",
+    "title": "Tegris Dashboard",
     "rankingTitle": "Tegris 用户排名",
     "modalTitle": "Tegris 一体化手术室项目录入与更新",
     "totalUnitsLabel": "套 Tegris 系统",
@@ -26754,7 +26754,7 @@ let dashboards = {
     }
   },
   "icMic": {
-    "title": "IC MIC Dashboard 装机看板",
+    "title": "IC MIC Dashboard",
     "rankingTitle": "IC MIC 用户排名",
     "modalTitle": "IC MIC 项目录入与更新",
     "totalUnitsLabel": "台 IC MIC 设备",
@@ -106206,6 +106206,7 @@ let currentDashboardKey = "magnus1180";
 let currentProductLineKey = "all";
 let customerScrollSpeedKey = "medium";
 let compactRankingLimitKey = "5";
+let mapViewState = { zoom: 1, centerX: 50, centerY: 53 };
 let trendChart;
 let yearTrendChart;
 let mapChart;
@@ -110024,6 +110025,7 @@ async function renderMap() {
   const compact = window.innerWidth < 900;
   const tech = isTechDashboardView();
   const mapRegions = mapProvinceRegions(provinceData, tech);
+  const layoutCenter = [`${mapViewState.centerX}%`, `${mapViewState.centerY}%`];
   mapChart.clear();
   mapChart.resize();
 
@@ -110063,8 +110065,8 @@ async function renderMap() {
     geo: {
       map: "china",
       roam: true,
-      zoom: 1,
-      layoutCenter: tech ? ["50%", "54%"] : ["50%", "53%"],
+      zoom: mapViewState.zoom,
+      layoutCenter,
       layoutSize: tech ? (compact ? "105%" : "96%") : (compact ? "102%" : "92%"),
       tooltip: {
         show: true,
@@ -110147,6 +110149,38 @@ async function renderMap() {
   }, true);
 }
 
+function resetMainMapView() {
+  mapViewState = {
+    zoom: 1,
+    centerX: 50,
+    centerY: isTechDashboardView() ? 54 : 53
+  };
+}
+
+function stepMainMapView(action) {
+  const next = { ...mapViewState };
+  if (action === "zoom-in") {
+    next.zoom = Math.min(2.4, next.zoom + 0.12);
+  } else if (action === "zoom-out") {
+    next.zoom = Math.max(0.82, next.zoom - 0.12);
+  } else if (action === "left") {
+    next.centerX = Math.min(62, next.centerX + 1.8);
+  } else if (action === "right") {
+    next.centerX = Math.max(38, next.centerX - 1.8);
+  } else if (action === "up") {
+    next.centerY = Math.min(66, next.centerY + 1.8);
+  } else if (action === "down") {
+    next.centerY = Math.max(40, next.centerY - 1.8);
+  } else if (action === "reset") {
+    resetMainMapView();
+    renderMap();
+    return;
+  }
+
+  mapViewState = next;
+  renderMap();
+}
+
 function renderDashboard() {
   renderProductLineSwitcher();
   const dashboard = currentDashboardData();
@@ -110201,11 +110235,13 @@ function initializeProductSwitcher() {
   switcher.addEventListener("change", (event) => {
     currentDashboardKey = event.target.value;
     currentProductLineKey = "all";
+    resetMainMapView();
     renderDashboard();
   });
 
   document.querySelector("#productLineSwitcher").addEventListener("change", (event) => {
     currentProductLineKey = event.target.value;
+    resetMainMapView();
     renderDashboard();
   });
 
@@ -110230,7 +110266,19 @@ function initializeProductSwitcher() {
     event.stopPropagation();
     closeFootprintMap();
   });
+  initializeMainMapNavControls();
   initializePriorityFilters();
+}
+
+function initializeMainMapNavControls() {
+  const controls = document.querySelector("#mapNavControls");
+  if (!controls) return;
+
+  controls.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-map-nav]");
+    if (!button) return;
+    stepMainMapView(button.dataset.mapNav);
+  });
 }
 
 window.addEventListener("resize", () => {
