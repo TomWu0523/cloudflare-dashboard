@@ -2456,43 +2456,47 @@ h2 {
 }
 
 .footprint-heatmap-image-shell--magnus-funnel::before {
+  z-index: 1;
   background:
-    radial-gradient(circle at 73% 50%, rgba(110, 201, 255, 0.16), transparent 18%),
-    radial-gradient(circle at 66% 64%, rgba(110, 201, 255, 0.1), transparent 20%),
-    linear-gradient(180deg, rgba(160, 220, 255, 0.07), transparent 18%, transparent 84%, rgba(160, 220, 255, 0.03));
+    radial-gradient(circle at 74% 52%, rgba(128, 205, 255, 0.26), transparent 18%),
+    radial-gradient(circle at 66% 65%, rgba(86, 168, 255, 0.22), transparent 21%),
+    linear-gradient(130deg, rgba(11, 42, 104, 0.52), rgba(28, 102, 188, 0.48) 52%, rgba(7, 28, 86, 0.5));
+  opacity: 0.88;
   mix-blend-mode: screen;
-  animation: footprint-static-breathe 4.8s ease-in-out infinite;
+  animation: footprint-static-breathe 4.6s ease-in-out infinite;
 }
 
 .footprint-heatmap-image-shell--magnus-funnel::after {
-  inset: 8% 14% 8% 18%;
+  inset: 7% 12% 7% 16%;
   background:
-    linear-gradient(100deg, transparent 0%, transparent 44%, rgba(210, 241, 255, 0.12) 49%, rgba(104, 186, 255, 0.2) 50%, transparent 56%, transparent 100%);
+    linear-gradient(100deg, transparent 0%, transparent 43%, rgba(222, 244, 255, 0.16) 49%, rgba(88, 174, 255, 0.24) 50%, transparent 57%, transparent 100%);
   mix-blend-mode: screen;
-  filter: blur(8px);
-  opacity: 0.64;
-  animation: footprint-static-sweep 7.6s ease-in-out infinite;
+  filter: blur(9px);
+  opacity: 0.68;
+  animation: footprint-static-sweep 7.2s ease-in-out infinite;
 }
 
 .footprint-heatmap-image-shell--tegris::before,
 .footprint-heatmap-image-shell--ic-mic::before {
+  z-index: 1;
   background:
-    radial-gradient(circle at 73% 50%, rgba(82, 255, 244, 0.14), transparent 18%),
-    radial-gradient(circle at 66% 64%, rgba(82, 255, 244, 0.09), transparent 20%),
-    linear-gradient(180deg, rgba(160, 255, 249, 0.06), transparent 18%, transparent 84%, rgba(160, 255, 249, 0.03));
+    radial-gradient(circle at 74% 52%, rgba(116, 255, 248, 0.24), transparent 18%),
+    radial-gradient(circle at 66% 65%, rgba(62, 239, 229, 0.2), transparent 21%),
+    linear-gradient(130deg, rgba(8, 64, 87, 0.48), rgba(24, 138, 168, 0.42) 52%, rgba(5, 45, 64, 0.48));
+  opacity: 0.88;
   mix-blend-mode: screen;
-  animation: footprint-static-breathe 4.8s ease-in-out infinite;
+  animation: footprint-static-breathe 4.6s ease-in-out infinite;
 }
 
 .footprint-heatmap-image-shell--tegris::after,
 .footprint-heatmap-image-shell--ic-mic::after {
-  inset: 8% 14% 8% 18%;
+  inset: 7% 12% 7% 16%;
   background:
-    linear-gradient(100deg, transparent 0%, transparent 44%, rgba(205, 255, 251, 0.12) 49%, rgba(86, 255, 244, 0.18) 50%, transparent 56%, transparent 100%);
+    linear-gradient(100deg, transparent 0%, transparent 43%, rgba(214, 255, 252, 0.16) 49%, rgba(74, 248, 237, 0.22) 50%, transparent 57%, transparent 100%);
   mix-blend-mode: screen;
-  filter: blur(8px);
-  opacity: 0.64;
-  animation: footprint-static-sweep 7.4s ease-in-out infinite;
+  filter: blur(9px);
+  opacity: 0.68;
+  animation: footprint-static-sweep 7.2s ease-in-out infinite;
 }
 
 .footprint-overlay[data-footprint-theme="funnel"] .footprint-heatmap-image {
