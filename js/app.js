@@ -108289,7 +108289,6 @@ function isRenderableFootprintCustomerName(name) {
 function footprintRailEntries() {
   if (currentDashboardKey === "magnus2026Funnel") {
     return (currentDashboardData().provinceData || [])
-      .slice(0, 14)
       .map((province, index) => ({
         rank: index + 1,
         name: String(province.name || "")
@@ -108301,7 +108300,6 @@ function footprintRailEntries() {
 
   const groupedCustomers = customerProvinceGroups()
     .flatMap((group) => group.customers)
-    .slice(0, 14)
     .map((customer, index) => ({
       rank: index + 1,
       name: customer.name,
@@ -108313,7 +108311,7 @@ function footprintRailEntries() {
   }
 
   const dashboard = currentDashboardData();
-  return (dashboard.provinceData || []).slice(0, 14).map((province, index) => ({
+  return (dashboard.provinceData || []).map((province, index) => ({
     rank: index + 1,
     name: province.latestSite || province.name,
     meta: `${province.name} · 累计 ${formatNumber.format(province.value || 0)} 台`
@@ -108330,7 +108328,7 @@ function renderFootprintRailOverlay() {
   }
 
   const doubled = [...entries, ...entries];
-  rail.style.setProperty("--rail-duration", `${Math.max(28, entries.length * 3.1)}s`);
+  rail.style.setProperty("--rail-duration", "480s");
   rail.innerHTML = `
     <div class="footprint-rail-track">
       ${doubled.map((entry) => `
