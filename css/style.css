@@ -1136,7 +1136,10 @@ h2 {
 .customer-scroll-track {
   display: grid;
   gap: 10px;
-  animation: customer-scroll-loop 68s linear infinite;
+  animation: customer-scroll-loop var(--customer-scroll-duration, 168s) linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
 }
 
 .customer-scroll-province {
@@ -2880,6 +2883,9 @@ h2 {
   padding-top: 6px;
   animation: footprint-rail-scroll var(--rail-duration, 38s) linear infinite;
   mask-image: none;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
 }
 
 .footprint-rail-item {
@@ -3347,8 +3353,8 @@ body.footprint-open {
 }
 
 @keyframes footprint-rail-scroll {
-  from { transform: translateY(0); }
-  to { transform: translateY(-50%); }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, -50%, 0); }
 }
 
 @keyframes footprint-data-column-breathe {
@@ -3397,8 +3403,8 @@ body.footprint-open {
 }
 
 @keyframes customer-scroll-loop {
-  from { transform: translateY(0); }
-  to { transform: translateY(-50%); }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, -50%, 0); }
 }
 
 .ticker-panel {

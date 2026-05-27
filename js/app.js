@@ -107463,10 +107463,10 @@ function compactRankingControls() {
 
 function customerScrollDuration() {
   return {
-    fast: "116s",
-    medium: "168s",
-    slow: "240s"
-  }[customerScrollSpeedKey] || "116s";
+    fast: 15,
+    medium: 12,
+    slow: 9
+  }[customerScrollSpeedKey] || 12;
 }
 
 function parseDateValue(value) {
@@ -107660,7 +107660,6 @@ function renderCustomerScrollWall(targetId) {
   }).join("");
 
   target.className = "customer-scroll-list";
-  target.style.setProperty("--customer-scroll-duration", customerScrollDuration());
   target.innerHTML = `
     <div class="customer-scroll-window">
       <div class="customer-scroll-track">
@@ -107669,6 +107668,20 @@ function renderCustomerScrollWall(targetId) {
       </div>
     </div>
   `;
+
+  requestAnimationFrame(() => {
+    const track = target.querySelector(".customer-scroll-track");
+    if (!track) return;
+    const uniqueHeight = track.scrollHeight / 2;
+    const pixelsPerSecond = customerScrollDuration();
+    const minDuration = 90;
+    const maxDuration = 900;
+    const computedDuration = uniqueHeight > 0
+      ? uniqueHeight / pixelsPerSecond
+      : customers.length * 4.5;
+    const durationSeconds = Math.max(minDuration, Math.min(maxDuration, computedDuration));
+    target.style.setProperty("--customer-scroll-duration", `${durationSeconds.toFixed(1)}s`);
+  });
 }
 
 function renderTicker() {
@@ -108328,7 +108341,6 @@ function renderFootprintRailOverlay() {
   }
 
   const doubled = [...entries, ...entries];
-  rail.style.setProperty("--rail-duration", "480s");
   rail.innerHTML = `
     <div class="footprint-rail-track">
       ${doubled.map((entry) => `
@@ -108342,6 +108354,20 @@ function renderFootprintRailOverlay() {
       `).join("")}
     </div>
   `;
+
+  requestAnimationFrame(() => {
+    const track = rail.querySelector(".footprint-rail-track");
+    if (!track) return;
+    const uniqueHeight = track.scrollHeight / 2;
+    const pixelsPerSecond = 12;
+    const minDuration = 120;
+    const maxDuration = 900;
+    const computedDuration = uniqueHeight > 0
+      ? uniqueHeight / pixelsPerSecond
+      : entries.length * 5.5;
+    const durationSeconds = Math.max(minDuration, Math.min(maxDuration, computedDuration));
+    rail.style.setProperty("--rail-duration", `${durationSeconds.toFixed(1)}s`);
+  });
 }
 
 function footprintStatsSummary() {
