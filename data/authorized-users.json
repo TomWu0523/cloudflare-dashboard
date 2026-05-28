@@ -70,5 +70,11 @@
     "passwordHash": "pbkdf2$175c55a60bcaeb56f0827651c7fb282a$fa579e6248ba221d16400816e5ac7bc51eae3f813dcbc71c2ecb544cff368087466822c46ae08c533250e28e520750233c85d225ce75488836c6e8cdffbe1b02",
     "displayName": "Leah Zheng",
     "role": "Sr.Product manager"
+  },
+  {
+    "username": "Test",
+    "passwordHash": "pbkdf2$0f3722fc12579d891ae74416959028c0$8ee90355e47a6df8911cb247ebed13f51de12a1aadae5c9892a9b02dad5524e1b96893087c2a9f8ed5b353adcdacec065b954513961bb3eda1f0b434c2d59523",
+    "displayName": "Test",
+    "role": "Test User"
   }
 ]

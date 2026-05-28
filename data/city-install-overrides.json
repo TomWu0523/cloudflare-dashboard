@@ -1,0 +1,2882 @@
+[
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "N/A",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "南京市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "宁波大学附属妇女儿童医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "宁波市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "新合力（苏州）医疗灭菌有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "苏州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "福建省",
+    "terminalUser": "厦门大学附属第一医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "厦门市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "天台县人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "天台县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "四川省",
+    "terminalUser": "四川国药老肯医疗灭菌有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "内蒙古自治区",
+    "terminalUser": "赤峰松山医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "赤峰市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "新兴县人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "新兴县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "山西省",
+    "terminalUser": "晋城大医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "晋城市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "四川省",
+    "terminalUser": "四川思芃商贸有限公司",
+    "channelName": "四川思芃商贸有限公司",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "四川省",
+    "terminalUser": "西南医科大学附属医院康健中心院区",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "泸州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "宁波大学附属第一医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "宁波市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "宁波大学附属人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "宁波市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "浙江国洁达医疗消毒服务有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "广东和祐国际医院管理集团有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "海南省",
+    "terminalUser": "三亚中心医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "三亚市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "海南省",
+    "terminalUser": "海南西部中心医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "海口市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "新合力（苏州）医疗灭菌有限公司南京分公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "苏州市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "四川省",
+    "terminalUser": "四川泰康医院",
+    "channelName": "四川泰康医院",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "福建省",
+    "terminalUser": "平潭综合实验区医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "平潭县"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "广东省",
+    "terminalUser": "广州富力医院",
+    "channelName": "广州富力医院",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "东莞东华医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "东莞市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "洁诺（广东）医疗服务有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "贵州省",
+    "terminalUser": "德江县人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "德江县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河北省",
+    "terminalUser": "河北医科大学第三医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "石家庄市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河北省",
+    "terminalUser": "河北省儿童医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "石家庄市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河北省",
+    "terminalUser": "河北中石油中心医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "石家庄市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "黑龙江省",
+    "terminalUser": "佳木斯大学附属第一医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "佳木斯市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "吉林省",
+    "terminalUser": "吉林大学口腔医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "长春市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "江苏康缘医药商业有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "南京市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "南京宝利康医疗科技有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "南京市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "苏州九龙医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "苏州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "南京医科大学附属口腔医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "南京市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "陕西省",
+    "terminalUser": "陕西省核工业二一五医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "西安市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "陕西省",
+    "terminalUser": "西安一四一医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "西安市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "陕西省",
+    "terminalUser": "西安洁尔康医疗科技有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "西安市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "新疆维吾尔自治区",
+    "terminalUser": "阿克苏地区第一人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "阿克苏地区"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "云南省",
+    "terminalUser": "西双版纳傣族自治州人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "西双版纳傣族自治州"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "绍兴第二医院医共体总院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "绍兴市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "台州恩泽医疗中心（集团）路桥医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "台州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "安徽省",
+    "terminalUser": "安徽省儿童医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "合肥市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "福建省",
+    "terminalUser": "福建省肿瘤医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "福州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "广东省",
+    "terminalUser": "华中科技大学协和深圳医院",
+    "channelName": "广东三鸿医药有限公司",
+    "currentInstallCity": "",
+    "city": "深圳市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "广东省",
+    "terminalUser": "华中科技大学协和深圳医院",
+    "channelName": "广东三鸿医药有限公司",
+    "currentInstallCity": "",
+    "city": "深圳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "肇庆市第一人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "肇庆市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "东莞康华医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "东莞市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广西壮族自治区",
+    "terminalUser": "中山大学附属第一医院广西医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "南宁市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "贵州省",
+    "terminalUser": "上海交通大学医学院附属上海儿童医学中心贵州医院",
+    "channelName": "逸佰医疗科技发展（上海）有限公司",
+    "currentInstallCity": "",
+    "city": "贵阳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "贵州省",
+    "terminalUser": "贵州水矿控股集团有限责任公司总医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "贵阳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "贵州省",
+    "terminalUser": "绥阳县人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "绥阳县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "海南省",
+    "terminalUser": "海南省肿瘤医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "海口市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河北省",
+    "terminalUser": "张北县医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "张北县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河北省",
+    "terminalUser": "宽城满族自治县医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "宽城区"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河南省",
+    "terminalUser": "河南洁菲医疗科技有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "郑州市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "河南省",
+    "terminalUser": "阜外华中心血管病医院",
+    "channelName": "Jia Kaihua",
+    "currentInstallCity": "",
+    "city": "郑州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "灌云县人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "灌云县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "安特速医疗服务无锡有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "无锡市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "常熟荣瑞消毒服务有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "常熟市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "辽宁省",
+    "terminalUser": "盘锦辽油宝石花医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "盘锦市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "内蒙古自治区",
+    "terminalUser": "赤峰学院附属医院红山院区",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "赤峰市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "内蒙古自治区",
+    "terminalUser": "兴安盟人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "兴安盟"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "四川省",
+    "terminalUser": "凉山彝族自治州第一人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "凉山彝族自治州"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "四川省",
+    "terminalUser": "四川大学华西第二医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "新疆维吾尔自治区",
+    "terminalUser": "博尔塔拉蒙古自治州人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "博尔塔拉蒙古自治州"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "云南省",
+    "terminalUser": "云南省滇南中心医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "昆明市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "浙江省",
+    "terminalUser": "宁波泰康脑科医院",
+    "channelName": "宁波泰甬置业有限公司",
+    "currentInstallCity": "",
+    "city": "宁波市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "浙江省",
+    "terminalUser": "杭州大沨医疗器械有限公司",
+    "channelName": "杭州大沨医疗器械有限公司",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "浙江省",
+    "terminalUser": "杭州星灿生物技术有限公司",
+    "channelName": "杭州星灿生物技术有限公司",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "浙江大学医学院附属第四医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "杭州师范大学附属医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "浙江省台州医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "台州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "长兴县人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "长兴县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "宁波鄞州美康中医医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "宁波市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "杭州赛科医疗器械有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "宁波海高优服医疗科技有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "宁波市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "三门县人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "三门县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "桐庐县第一人民医院未来城院区",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "桐庐县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "安徽省",
+    "terminalUser": "安徽省立医院（南区）",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "合肥市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "安徽省",
+    "terminalUser": "合肥鲸弘医疗科技有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "合肥市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "福建省",
+    "terminalUser": "厦门弘爱医院",
+    "channelName": "厦门弘爱医院",
+    "currentInstallCity": "",
+    "city": "厦门市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "福建省",
+    "terminalUser": "漳州正兴医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "漳州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "福建省",
+    "terminalUser": "福建医科大学附属第二医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "福州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "福建省",
+    "terminalUser": "厦门大学附属厦门眼科中心",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "厦门市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "福建省",
+    "terminalUser": "福建医科大学孟超肝胆医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "福州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "福建省",
+    "terminalUser": "厦门大学附属中山医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "厦门市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "福建省",
+    "terminalUser": "福建医科大学附属口腔医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "福州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "福建省",
+    "terminalUser": "复旦大学附属肿瘤医院厦门医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "厦门市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "甘肃省",
+    "terminalUser": "解放军联勤保障部队940医院",
+    "channelName": "解放军联勤保障部队940医院",
+    "currentInstallCity": "",
+    "city": "兰州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "广州开发区医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "罗定市人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "罗定市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "广州中医药大学顺德医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "广州中医药大学第三附属医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "中国医学科学院肿瘤医院深圳医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "深圳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "新兴县妇幼保健院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "新兴县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "广州泰和肿瘤医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "东莞鲸弘医疗科技有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "东莞市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "中山大学附属第七医院（深圳）",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "深圳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广西壮族自治区",
+    "terminalUser": "右江民族医学院附属医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "南宁市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "贵州省",
+    "terminalUser": "贵州中医药大学第二附属医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "贵阳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "贵州省",
+    "terminalUser": "贵黔国际医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "贵阳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "贵州省",
+    "terminalUser": "凤冈县人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "凤冈县"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "河北省",
+    "terminalUser": "北京大学第三医院崇礼院区",
+    "channelName": "上海又诺贸易中心",
+    "currentInstallCity": "",
+    "city": "崇礼区"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "河北省",
+    "terminalUser": "河北医科大学第一医院",
+    "channelName": "北京智诚恒创科技发展有限公司",
+    "currentInstallCity": "",
+    "city": "石家庄市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河北省",
+    "terminalUser": "河北医科大学第二医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "石家庄市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河北省",
+    "terminalUser": "磁县人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "磁县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河北省",
+    "terminalUser": "中国人民解放军陆军军医大学士官学校附属医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "石家庄市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河北省",
+    "terminalUser": "邢台医学高等专科学校第一附属医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "邢台市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河北省",
+    "terminalUser": "华北理工大学附属医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "唐山市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河北省",
+    "terminalUser": "保定愈泰医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "保定市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河北省",
+    "terminalUser": "洁诺石家庄医疗消毒供应中心有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "石家庄市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河北省",
+    "terminalUser": "河北省第八人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "石家庄市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河南省",
+    "terminalUser": "河南弘大心血管病医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "郑州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河南省",
+    "terminalUser": "河南鲸弘医疗消毒供应中心有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "郑州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "湖北省",
+    "terminalUser": "湖北鲸弘医疗科技有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "武汉市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "湖南省",
+    "terminalUser": "长沙中核康复医院",
+    "channelName": "Xia Sherya",
+    "currentInstallCity": "",
+    "city": "长沙市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "张家港澳洋医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "张家港市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "迪哲（江苏）医药股份有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "南京市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "南京医科大学附属逸夫医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "南京市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "江阴市中医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "江阴市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "南京鲸弘医疗消毒供应中心有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "南京市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江西省",
+    "terminalUser": "中国人民解放军联勤保障部队第九〇八医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "南昌市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江西省",
+    "terminalUser": "江西省肿瘤医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "南昌市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "辽宁省",
+    "terminalUser": "中国医科大学附属口腔医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "沈阳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "辽宁省",
+    "terminalUser": "沈阳鲸弘医疗消毒供应中心有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "沈阳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "辽宁省",
+    "terminalUser": "辽宁省金秋医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "沈阳市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "辽宁省",
+    "terminalUser": "辽宁方大医院（有限公司）",
+    "channelName": "Ji Zhenye",
+    "currentInstallCity": "",
+    "city": "沈阳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "内蒙古自治区",
+    "terminalUser": "乌审旗人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "乌审旗"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "山东省",
+    "terminalUser": "滨州医学院附属医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "滨州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "山东省",
+    "terminalUser": "山东鲸弘医疗科技有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "济南市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "山东省",
+    "terminalUser": "齐鲁医院（即墨蓝谷院区）",
+    "channelName": "Yang Jun",
+    "currentInstallCity": "",
+    "city": "即墨区"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "山西省",
+    "terminalUser": "国药同煤总医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "太原市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "陕西省",
+    "terminalUser": "西安国际医学中心医院",
+    "channelName": "西安国际医学中心医院",
+    "currentInstallCity": "",
+    "city": "西安市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "陕西省",
+    "terminalUser": "中国人民解放军空军军医大学第一附属医院",
+    "channelName": "上海钦洋医疗器械有限公司",
+    "currentInstallCity": "",
+    "city": "西安市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "陕西省",
+    "terminalUser": "西安高新医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "西安市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "陕西省",
+    "terminalUser": "陕西省中医医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "西安市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "陕西省",
+    "terminalUser": "中国人民解放军空军第九八六医院北区",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "西安市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "陕西省",
+    "terminalUser": "铜川市人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "铜川市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "陕西省",
+    "terminalUser": "西安交通大学口腔医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "西安市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "四川省",
+    "terminalUser": "四川大学华西医院",
+    "channelName": "中建投（广东）国际贸易有限公司",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "四川省",
+    "terminalUser": "成都鹰阁医院",
+    "channelName": "成都鹰阁医院",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "四川省",
+    "terminalUser": "成都京东方医院",
+    "channelName": "江西腾步科技有限公司",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "四川省",
+    "terminalUser": "西南医科大学附属医院",
+    "channelName": "Pu Dongfang",
+    "currentInstallCity": "泸州",
+    "city": "泸州市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "四川省",
+    "terminalUser": "四川大学华西天府医院",
+    "channelName": "Pu Dongfang",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "新疆维吾尔自治区",
+    "terminalUser": "伊犁哈萨克自治州中医医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "伊犁哈萨克自治州"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "新疆维吾尔自治区",
+    "terminalUser": "新疆生产建设兵团医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "乌鲁木齐市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "新疆维吾尔自治区",
+    "terminalUser": "新疆国际医疗中心（新疆国际医院）",
+    "channelName": "Yuan Tony",
+    "currentInstallCity": "",
+    "city": "乌鲁木齐市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "云南省",
+    "terminalUser": "广南县人民医院",
+    "channelName": "Li Luke",
+    "currentInstallCity": "",
+    "city": "广南县"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "浙江省",
+    "terminalUser": "杭州首术科技有限公司",
+    "channelName": "杭州首术科技有限公司",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "浙江省",
+    "terminalUser": "新昌县人民医院",
+    "channelName": "MAQUET (SHANGHAI)",
+    "currentInstallCity": "",
+    "city": "新昌县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "宁波明州医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "宁波市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "永嘉县中医医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "永嘉县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "浙江大学医学院附属妇产科医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "宁海县第一医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "宁海县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "浙江大学医学院附属口腔医院紫金港院区",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "杭州康复医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "浙江鲸弘医疗科技服务有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "安徽省",
+    "terminalUser": "安徽省立医院",
+    "channelName": "安徽省立医院",
+    "currentInstallCity": "",
+    "city": "合肥市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "安徽省",
+    "terminalUser": "合肥京东方医院",
+    "channelName": "合肥京东方医院",
+    "currentInstallCity": "",
+    "city": "合肥市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "安徽省",
+    "terminalUser": "安徽省胸科医院",
+    "channelName": "上海楷诗医疗科技有限公司",
+    "currentInstallCity": "",
+    "city": "合肥市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "安徽省",
+    "terminalUser": "淮南东方医院集团总医院",
+    "channelName": "上海楷诗医疗科技有限公司",
+    "currentInstallCity": "",
+    "city": "淮南市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "安徽省",
+    "terminalUser": "安庆市立医院",
+    "channelName": "Liu Yan",
+    "currentInstallCity": "",
+    "city": "安庆市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "安徽省",
+    "terminalUser": "阜阳市传染病医院",
+    "channelName": "Liu Yan",
+    "currentInstallCity": "",
+    "city": "阜阳市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "安徽省",
+    "terminalUser": "蚌埠医学院第一附属医院",
+    "channelName": "Liu Yan",
+    "currentInstallCity": "",
+    "city": "蚌埠市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "安徽省",
+    "terminalUser": "安徽省立医院",
+    "channelName": "Liu Yan",
+    "currentInstallCity": "",
+    "city": "合肥市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "福建省",
+    "terminalUser": "福建省儿童医院",
+    "channelName": "建发(北京)有限公司",
+    "currentInstallCity": "",
+    "city": "福州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "福建省",
+    "terminalUser": "福建省儿童医院",
+    "channelName": "上饶市瑞华医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "福州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "福建省",
+    "terminalUser": "福建省妇产医院",
+    "channelName": "厦门象屿速传供应链发展股份有限公司",
+    "currentInstallCity": "",
+    "city": "福州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "福建省",
+    "terminalUser": "安溪县医院",
+    "channelName": "厦门象屿医疗设备有限责任公司",
+    "currentInstallCity": "",
+    "city": "安溪县"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "福建省",
+    "terminalUser": "南安市医院",
+    "channelName": "厦门象屿医疗设备有限责任公司",
+    "currentInstallCity": "",
+    "city": "南安市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "福建省",
+    "terminalUser": "厦门大学附属心血管病医院",
+    "channelName": "厦门象屿医疗设备有限责任公司",
+    "currentInstallCity": "",
+    "city": "厦门市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "福建省",
+    "terminalUser": "福建医科大学附属第二医院（东海院区）",
+    "channelName": "福建医科大学附属第二医院（东海院区）",
+    "currentInstallCity": "",
+    "city": "福州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "福建省",
+    "terminalUser": "福建中医药大学附属第二人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "福州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "福建省",
+    "terminalUser": "泉州玛珂迩妇产医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "泉州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "福建省",
+    "terminalUser": "福建省仙游县总医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "仙游县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "福建省",
+    "terminalUser": "福建上元利丰医疗科技有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "福州市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "福建省",
+    "terminalUser": "厦门大学附属心血管病医院",
+    "channelName": "Ou Zhaohui",
+    "currentInstallCity": "",
+    "city": "厦门市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "福建省",
+    "terminalUser": "福建省福清市医院",
+    "channelName": "Ou Zhaohui",
+    "currentInstallCity": "",
+    "city": "福清市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "福建省",
+    "terminalUser": "龙岩人民医院",
+    "channelName": "Ou Zhaohui",
+    "currentInstallCity": "",
+    "city": "龙岩市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "甘肃省",
+    "terminalUser": "甘肃省人民医院",
+    "channelName": "上海瑶革医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "兰州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "甘肃省",
+    "terminalUser": "甘肃省食品检验研究院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "兰州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "广东省",
+    "terminalUser": "中国医学科学院阜外医院深圳医院",
+    "channelName": "中国医学科学院阜外医院深圳医院",
+    "currentInstallCity": "",
+    "city": "深圳市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "广东省",
+    "terminalUser": "广东省人民医院",
+    "channelName": "广东省人民医院",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "广东省",
+    "terminalUser": "华中科技大学协和深圳医院",
+    "channelName": "华中科技大学协和深圳医院",
+    "currentInstallCity": "",
+    "city": "深圳市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "广东省",
+    "terminalUser": "广州和睦家医院",
+    "channelName": "广州和睦家医院",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "广东省",
+    "terminalUser": "华中科技大学协和深圳医院",
+    "channelName": "广州圣佑贸易有限公司",
+    "currentInstallCity": "",
+    "city": "深圳市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "广东省",
+    "terminalUser": "深圳新风和睦家医院",
+    "channelName": "北京福鼎奕隆医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "深圳市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "广东省",
+    "terminalUser": "湛江中心人民医院",
+    "channelName": "广州铭丰源医疗器械有限公司",
+    "currentInstallCity": "",
+    "city": "湛江市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "广东省",
+    "terminalUser": "华中科技大学协和深圳医院",
+    "channelName": "华中科技大学协和深圳医院",
+    "currentInstallCity": "",
+    "city": "深圳市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "广东省",
+    "terminalUser": "阳江市人民医院",
+    "channelName": "阳江市人民医院",
+    "currentInstallCity": "",
+    "city": "阳江市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "广东省",
+    "terminalUser": "南方科技大学医院",
+    "channelName": "南方科技大学医院",
+    "currentInstallCity": "",
+    "city": "深圳市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "广东省",
+    "terminalUser": "中国医学科学院阜外医院深圳医院",
+    "channelName": "广州圣佑贸易有限公司",
+    "currentInstallCity": "",
+    "city": "深圳市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "广东省",
+    "terminalUser": "广州圣佑贸易有限公司",
+    "channelName": "广州圣佑贸易有限公司",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "广东省",
+    "terminalUser": "中山大学附属第七医院（深圳）",
+    "channelName": "广东三鸿医药有限公司",
+    "currentInstallCity": "",
+    "city": "深圳市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "广东省",
+    "terminalUser": "中建投（广东）国际贸易有限公司",
+    "channelName": "中建投（广东）国际贸易有限公司",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "广东白马医疗器械有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "广州万益特医疗用品有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "安利（中国）日用品有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "遂溪县人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "遂溪县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "广州新海医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "广东省第二人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "广东省人民医院南海医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "新兴县中医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "新兴县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "深圳新风和睦家医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "深圳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广东省",
+    "terminalUser": "香港中文大学（深圳）医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "深圳市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "广东省",
+    "terminalUser": "广东省第二中医院",
+    "channelName": "Yin Wujun",
+    "currentInstallCity": "",
+    "city": "广州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "广西壮族自治区",
+    "terminalUser": "广西壮族自治区妇幼保健院",
+    "channelName": "广西天高不凡科技有限公司",
+    "currentInstallCity": "",
+    "city": "南宁市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广西壮族自治区",
+    "terminalUser": "中国人民解放军联勤保障部队第九二三医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "南宁市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "广西壮族自治区",
+    "terminalUser": "广西壮族自治区民族医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "南宁市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "贵州省",
+    "terminalUser": "贵黔国际医院",
+    "channelName": "贵黔国际医院",
+    "currentInstallCity": "",
+    "city": "贵阳市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "贵州省",
+    "terminalUser": "上海交通大学医学院附属上海儿童医学中心贵州医院",
+    "channelName": "逸佰医疗科技发展（上海）有限公司",
+    "currentInstallCity": "",
+    "city": "贵阳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "贵州省",
+    "terminalUser": "遵义医科大学附属医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "遵义市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "贵州省",
+    "terminalUser": "贵州省骨科医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "贵阳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "贵州省",
+    "terminalUser": "铜仁市第二人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "铜仁市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "贵州省",
+    "terminalUser": "桐梓县中医医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "桐梓县"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "贵州省",
+    "terminalUser": "贵州医科大学第二附属医院",
+    "channelName": "Li Luke",
+    "currentInstallCity": "",
+    "city": "贵阳市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "海南省",
+    "terminalUser": "三亚中心医院",
+    "channelName": "中建投（广东）国际贸易有限公司",
+    "currentInstallCity": "",
+    "city": "三亚市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "海南省",
+    "terminalUser": "上海交通大学医学院附属瑞金医院海南医院",
+    "channelName": "中建投（广东）国际贸易有限公司",
+    "currentInstallCity": "",
+    "city": "海口市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "海南省",
+    "terminalUser": "海南省人民医院",
+    "channelName": "中建投（广东）国际贸易有限公司",
+    "currentInstallCity": "",
+    "city": "海口市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "海南省",
+    "terminalUser": "上海交通大学医学院附属瑞金医院海南医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "海口市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "河北省",
+    "terminalUser": "南皮县人民医院",
+    "channelName": "北京智诚恒创科技发展有限公司",
+    "currentInstallCity": "",
+    "city": "南皮县"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "河北省",
+    "terminalUser": "北京大学第三医院秦皇岛医院",
+    "channelName": "北京福鼎奕隆医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "秦皇岛市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "河北省",
+    "terminalUser": "唐山南湖医院",
+    "channelName": "唐山南湖医院",
+    "currentInstallCity": "",
+    "city": "唐山市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河北省",
+    "terminalUser": "涉县中医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "涉县"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河北省",
+    "terminalUser": "国药乐仁堂医疗服务石家庄有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "石家庄市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "河南省",
+    "terminalUser": "河南省人民医院",
+    "channelName": "河南省人民医院",
+    "currentInstallCity": "",
+    "city": "郑州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "河南省",
+    "terminalUser": "宜阳县人民医院",
+    "channelName": "上海瑶革医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "宜阳县"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "河南省",
+    "terminalUser": "河南省儿童医院东院区",
+    "channelName": "上海瑶革医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "郑州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河南省",
+    "terminalUser": "河南宏力医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "郑州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "河南省",
+    "terminalUser": "确山县人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "确山县"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "河南省",
+    "terminalUser": "沁阳市人民医院",
+    "channelName": "Jia Kaihua",
+    "currentInstallCity": "",
+    "city": "沁阳市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "河南省",
+    "terminalUser": "夏邑县人民医院",
+    "channelName": "Jia Kaihua",
+    "currentInstallCity": "",
+    "city": "夏邑县"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "河南省",
+    "terminalUser": "安阳市肿瘤医院",
+    "channelName": "Jia Kaihua",
+    "currentInstallCity": "",
+    "city": "安阳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "黑龙江省",
+    "terminalUser": "大庆油田总医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "大庆市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "湖北省",
+    "terminalUser": "国药集团湖北省医疗器械有限公司",
+    "channelName": "国药集团湖北省医疗器械有限公司",
+    "currentInstallCity": "",
+    "city": "武汉市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "湖北省",
+    "terminalUser": "华中科技大学同济医学院附属梨园医院",
+    "channelName": "中建投（广东）国际贸易有限公司",
+    "currentInstallCity": "",
+    "city": "武汉市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "湖北省",
+    "terminalUser": "恩施土家族苗族自治州中心医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "恩施市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "湖北省",
+    "terminalUser": "国药控股湖北有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "武汉市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "湖北省",
+    "terminalUser": "湖北省第三人民医院",
+    "channelName": "Xia Sherya",
+    "currentInstallCity": "",
+    "city": "武汉市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "湖北省",
+    "terminalUser": "湖北省妇幼保健院",
+    "channelName": "Xia Sherya",
+    "currentInstallCity": "",
+    "city": "武汉市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "湖北省",
+    "terminalUser": "湖北省中医院光谷院区",
+    "channelName": "Xia Sherya",
+    "currentInstallCity": "",
+    "city": "武汉市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "湖南省",
+    "terminalUser": "岳阳县第二人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "岳阳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "湖南省",
+    "terminalUser": "湖南省儿童医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "长沙市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "湖南省",
+    "terminalUser": "湖南航天医院",
+    "channelName": "Xia Sherya",
+    "currentInstallCity": "",
+    "city": "长沙市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "湖南省",
+    "terminalUser": "邵阳市第二人民医院",
+    "channelName": "Xia Sherya",
+    "currentInstallCity": "",
+    "city": "邵阳市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "湖南省",
+    "terminalUser": "平江县第一人民医院",
+    "channelName": "Xia Sherya",
+    "currentInstallCity": "",
+    "city": "平江县"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "吉林省",
+    "terminalUser": "吉林省肿瘤医院",
+    "channelName": "吉林省肿瘤医院",
+    "currentInstallCity": "",
+    "city": "长春市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "吉林省",
+    "terminalUser": "延边大学附属医院",
+    "channelName": "北京凯隆金阳医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "延边朝鲜族自治州"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "吉林省",
+    "terminalUser": "吉林省地方病第一防治研究所附属医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "长春市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "吉林省",
+    "terminalUser": "吉林大学第一医院",
+    "channelName": "Ji Zhenye",
+    "currentInstallCity": "",
+    "city": "长春市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "江苏省",
+    "terminalUser": "南京鼓楼医院江北国际医院",
+    "channelName": "南京鼓楼医院江北国际医院",
+    "currentInstallCity": "",
+    "city": "南京市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "江苏省",
+    "terminalUser": "南京医科大学第二附属医院",
+    "channelName": "上海加越医疗科技有限公司",
+    "currentInstallCity": "",
+    "city": "南京市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "江苏省",
+    "terminalUser": "飞利浦医疗（苏州）有限公司",
+    "channelName": "飞利浦医疗（苏州）有限公司",
+    "currentInstallCity": "",
+    "city": "苏州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "江苏省",
+    "terminalUser": "沭阳县中医院",
+    "channelName": "上海楷诗医疗科技有限公司",
+    "currentInstallCity": "",
+    "city": "沭阳县"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "江苏省",
+    "terminalUser": "南京鼓楼医院",
+    "channelName": "上海万淇生物科技有限公司",
+    "currentInstallCity": "",
+    "city": "南京市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "江苏省",
+    "terminalUser": "南京鼓楼医院",
+    "channelName": "上药医疗器械（上海）有限公司",
+    "currentInstallCity": "",
+    "city": "南京市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "江苏省",
+    "terminalUser": "飞利浦医疗（苏州）有限公司",
+    "channelName": "上药医疗器械（上海）有限公司",
+    "currentInstallCity": "",
+    "city": "苏州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "苏州永萃新材料科技有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "苏州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "六合县人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "六合区"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "讯卓包装科技（苏州）有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "苏州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江苏省",
+    "terminalUser": "江苏省医疗器械检验所",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "南京市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "江苏省",
+    "terminalUser": "江苏省肿瘤医院",
+    "channelName": "Xu Lulu",
+    "currentInstallCity": "",
+    "city": "南京市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "江苏省",
+    "terminalUser": "江苏省第二中医院",
+    "channelName": "Xu Lulu",
+    "currentInstallCity": "",
+    "city": "南京市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "江苏省",
+    "terminalUser": "滨海县人民医院",
+    "channelName": "Xu Lulu",
+    "currentInstallCity": "",
+    "city": "滨海县"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "江苏省",
+    "terminalUser": "靖江市人民医院",
+    "channelName": "Xu Lulu",
+    "currentInstallCity": "",
+    "city": "靖江市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "江苏省",
+    "terminalUser": "江苏大学附属医院",
+    "channelName": "Xu Lulu",
+    "currentInstallCity": "",
+    "city": "镇江市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "江西省",
+    "terminalUser": "九江学院第二附属医院",
+    "channelName": "厦门象屿医疗设备有限责任公司",
+    "currentInstallCity": "",
+    "city": "九江市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "江西省",
+    "terminalUser": "江西省人民医院红谷滩院区",
+    "channelName": "江西梦兹医疗器械有限公司",
+    "currentInstallCity": "",
+    "city": "南昌市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "江西省",
+    "terminalUser": "广东省人民医院赣州医院",
+    "channelName": "江西梦兹医疗器械有限公司",
+    "currentInstallCity": "",
+    "city": "赣州市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "江西省",
+    "terminalUser": "九江学院第二附属医院",
+    "channelName": "九江学院第二附属医院",
+    "currentInstallCity": "",
+    "city": "九江市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "江西省",
+    "terminalUser": "瑞金市君瑞医疗器械有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "瑞金市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "江西省",
+    "terminalUser": "赣南医学院第一附属医院",
+    "channelName": "Ou Zhaohui",
+    "currentInstallCity": "",
+    "city": "赣州市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "辽宁省",
+    "terminalUser": "大连维特奥康复咨询有限公司",
+    "channelName": "大连维特奥康复咨询有限公司",
+    "currentInstallCity": "",
+    "city": "大连市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "辽宁省",
+    "terminalUser": "大连维特奥康复咨询有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "大连市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "辽宁省",
+    "terminalUser": "辉瑞制药有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "沈阳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "辽宁省",
+    "terminalUser": "鞍钢集团公司总医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "沈阳市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "辽宁省",
+    "terminalUser": "东港市口腔病医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "东港市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "宁夏回族自治区",
+    "terminalUser": "宁夏回族自治区人民医院",
+    "channelName": "上海瑶革医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "银川市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "宁夏回族自治区",
+    "terminalUser": "宁夏回族自治区人民医院",
+    "channelName": "西安宏亚安正科技有限公司",
+    "currentInstallCity": "",
+    "city": "银川市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "宁夏回族自治区",
+    "terminalUser": "固原市人民医院",
+    "channelName": "成都裕康医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "固原市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "宁夏回族自治区",
+    "terminalUser": "宁夏回族自治区人民医院",
+    "channelName": "Yuan Tony",
+    "currentInstallCity": "",
+    "city": "银川市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "宁夏回族自治区",
+    "terminalUser": "宁夏回族自治区第五人民医院",
+    "channelName": "Yuan Tony",
+    "currentInstallCity": "",
+    "city": "银川市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "青海省",
+    "terminalUser": "青海省人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "西宁市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "山东省中西医结合医院",
+    "channelName": "中国仪器进出口集团有限公司",
+    "currentInstallCity": "",
+    "city": "济南市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "临沂金锣医院",
+    "channelName": "临沂金锣医院",
+    "currentInstallCity": "",
+    "city": "临沂市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "泰安八十八医院",
+    "channelName": "泰安八十八医院",
+    "currentInstallCity": "",
+    "city": "泰安市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "济宁医学院附属医院",
+    "channelName": "济宁医学院附属医院",
+    "currentInstallCity": "",
+    "city": "济宁市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "青岛大学附属医院东院区",
+    "channelName": "青岛大学附属医院东院区",
+    "currentInstallCity": "",
+    "city": "青岛市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "滨州医学院附属医院",
+    "channelName": "滨州医学院附属医院",
+    "currentInstallCity": "",
+    "city": "滨州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "山东省立第三医院",
+    "channelName": "山东省立第三医院",
+    "currentInstallCity": "",
+    "city": "济南市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "成武县人民医院中心院区",
+    "channelName": "上海瑶革医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "成武县"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "巨野县人民医院",
+    "channelName": "上海瑶革医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "巨野县"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "威海高区利民医院",
+    "channelName": "上海瑶革医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "威海市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "齐河县人民医院",
+    "channelName": "上海钦洋医疗器械有限公司",
+    "currentInstallCity": "",
+    "city": "齐河县"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "山东省立医院",
+    "channelName": "上海瑶革医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "济南市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "兰陵县人民医院",
+    "channelName": "上海瑶革医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "兰陵县"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "山东省公共卫生临床中心",
+    "channelName": "上海瑶革医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "济南市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "邹平市人民医院",
+    "channelName": "上海万淇生物科技有限公司",
+    "currentInstallCity": "",
+    "city": "邹平市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山东省",
+    "terminalUser": "山东省立医院",
+    "channelName": "山东海欣医疗科技有限公司",
+    "currentInstallCity": "",
+    "city": "济南市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "山东省",
+    "terminalUser": "临沂金锣医院",
+    "channelName": "Suzhou MAQUET",
+    "currentInstallCity": "",
+    "city": "临沂市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "山东省",
+    "terminalUser": "青岛国林国际贸易有限公司",
+    "channelName": "青岛国林国际贸易有限公司",
+    "currentInstallCity": "",
+    "city": "青岛市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "山东省",
+    "terminalUser": "山东省公共卫生临床中心",
+    "channelName": "山东省公共卫生临床中心",
+    "currentInstallCity": "",
+    "city": "济南市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "山东省",
+    "terminalUser": "山东省第二康复医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "济南市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "山东省",
+    "terminalUser": "山东省第二人民医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "济南市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "山东省",
+    "terminalUser": "青岛大学附属医院",
+    "channelName": "Yang Jun",
+    "currentInstallCity": "",
+    "city": "青岛市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "山东省",
+    "terminalUser": "惠民县人民医院",
+    "channelName": "Yang Jun",
+    "currentInstallCity": "",
+    "city": "惠民县"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "山东省",
+    "terminalUser": "东阿县人民医院",
+    "channelName": "Yang Jun",
+    "currentInstallCity": "",
+    "city": "东阿县"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "山东省",
+    "terminalUser": "山东省肿瘤医院质子中心",
+    "channelName": "Yang Jun",
+    "currentInstallCity": "",
+    "city": "济南市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山西省",
+    "terminalUser": "北京大学第一医院太原医院",
+    "channelName": "山西精准互联科技发展有限公司",
+    "currentInstallCity": "",
+    "city": "太原市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山西省",
+    "terminalUser": "山西省心血管病医院",
+    "channelName": "山西精准互联科技发展有限公司",
+    "currentInstallCity": "",
+    "city": "太原市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山西省",
+    "terminalUser": "长治医学院附属和平医院",
+    "channelName": "山西精准互联科技发展有限公司",
+    "currentInstallCity": "",
+    "city": "长治市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山西省",
+    "terminalUser": "朔州市大医院",
+    "channelName": "上海福吉科贸有限公司",
+    "currentInstallCity": "",
+    "city": "朔州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "山西省",
+    "terminalUser": "山西省肿瘤医院",
+    "channelName": "上海福吉科贸有限公司",
+    "currentInstallCity": "",
+    "city": "太原市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "山西省",
+    "terminalUser": "山西省心血管病医院",
+    "channelName": "山西精准互联科技发展有限公司",
+    "currentInstallCity": "",
+    "city": "太原市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "山西省",
+    "terminalUser": "山西省汾阳医院",
+    "channelName": "Jia Kaihua",
+    "currentInstallCity": "",
+    "city": "汾阳市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "陕西省",
+    "terminalUser": "中国人民解放军空军军医大学第一附属医院",
+    "channelName": "上海薇奋医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "西安市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "陕西省",
+    "terminalUser": "延安大学附属医院",
+    "channelName": "上海瑶革医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "延安市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "陕西省",
+    "terminalUser": "延安大学附属医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "延安市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "陕西省",
+    "terminalUser": "第四军医大学口腔医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "西安市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "陕西省",
+    "terminalUser": "西安运医医疗设备有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "西安市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "陕西省",
+    "terminalUser": "西安医学院第二附属医院",
+    "channelName": "Yuan Tony",
+    "currentInstallCity": "",
+    "city": "西安市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "陕西省",
+    "terminalUser": "汉中三二〇一医院",
+    "channelName": "Yuan Tony",
+    "currentInstallCity": "",
+    "city": "汉中市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "陕西省",
+    "terminalUser": "中国人民解放军空军第九八六医院北区",
+    "channelName": "Yuan Tony",
+    "currentInstallCity": "",
+    "city": "西安市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "陕西省",
+    "terminalUser": "中国人民解放军联勤保障部队第九八七医院",
+    "channelName": "Yuan Tony",
+    "currentInstallCity": "",
+    "city": "西安市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "四川省",
+    "terminalUser": "西南医科大学附属医院康健中心院区",
+    "channelName": "西南医科大学附属医院康健中心院区",
+    "currentInstallCity": "",
+    "city": "泸州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "四川省",
+    "terminalUser": "西南医科大学附属医院康健中心院区",
+    "channelName": "Sichuan Chinabase Import and Export Co.,",
+    "currentInstallCity": "",
+    "city": "泸州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "四川省",
+    "terminalUser": "川北医学院附属医院",
+    "channelName": "成都裕康医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "南充市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "四川省",
+    "terminalUser": "成都京东方医院",
+    "channelName": "江西腾步科技有限公司",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "四川省",
+    "terminalUser": "川北医学院附属医院",
+    "channelName": "德阳建投医疗有限公司",
+    "currentInstallCity": "",
+    "city": "南充市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "四川省",
+    "terminalUser": "四川大学华西天府医院",
+    "channelName": "江西腾步科技有限公司",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "四川省",
+    "terminalUser": "成都大学附属医院",
+    "channelName": "江西腾步科技有限公司",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "四川省",
+    "terminalUser": "四川蓝生脑科医院",
+    "channelName": "四川蓝生脑科医院",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "四川省",
+    "terminalUser": "四川泰康医院",
+    "channelName": "四川泰康医院",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "四川省",
+    "terminalUser": "四川大学华西医院",
+    "channelName": "成都裕康医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "四川省",
+    "terminalUser": "四川省肿瘤医院",
+    "channelName": "四川思芃商贸有限公司",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "四川省",
+    "terminalUser": "邻水县人民医院",
+    "channelName": "成都裕康医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "邻水县"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "四川省",
+    "terminalUser": "四川绵阳四0四医院",
+    "channelName": "Pu Dongfang",
+    "currentInstallCity": "",
+    "city": "绵阳市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "四川省",
+    "terminalUser": "四川省医学科学院·四川省人民医院",
+    "channelName": "Pu Dongfang",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "四川省",
+    "terminalUser": "四川天府新区人民医院",
+    "channelName": "Pu Dongfang",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "四川省",
+    "terminalUser": "阿坝藏族羌族自治州人民医院",
+    "channelName": "Pu Dongfang",
+    "currentInstallCity": "",
+    "city": "阿坝县"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "四川省",
+    "terminalUser": "四川省肿瘤医院",
+    "channelName": "Pu Dongfang",
+    "currentInstallCity": "",
+    "city": "成都市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "四川省",
+    "terminalUser": "凉山骨科医院",
+    "channelName": "Pu Dongfang",
+    "currentInstallCity": "",
+    "city": "凉山彝族自治州"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "新疆维吾尔自治区",
+    "terminalUser": "新疆心脑血管病医院",
+    "channelName": "中建投（广东）国际贸易有限公司",
+    "currentInstallCity": "",
+    "city": "乌鲁木齐市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "新疆维吾尔自治区",
+    "terminalUser": "和田地区传染病专科医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "和田地区"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "云南省",
+    "terminalUser": "云南省阜外心血管病医院",
+    "channelName": "江西腾步科技有限公司",
+    "currentInstallCity": "",
+    "city": "昆明市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "云南省",
+    "terminalUser": "文山壮族苗族自治州人民医院开化院区",
+    "channelName": "成都裕康医疗设备有限公司",
+    "currentInstallCity": "",
+    "city": "文山市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "云南省",
+    "terminalUser": "滇虹药业集团股份有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "昆明市"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "云南省",
+    "terminalUser": "盐津县人民医院",
+    "channelName": "Li Luke",
+    "currentInstallCity": "",
+    "city": "盐津县"
+  },
+  {
+    "dashboardKey": "magnus2026Funnel",
+    "province": "云南省",
+    "terminalUser": "砚山县人民医院",
+    "channelName": "Li Luke",
+    "currentInstallCity": "",
+    "city": "砚山县"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "浙江省",
+    "terminalUser": "浙江省台州医院",
+    "channelName": "杭州大沨医疗器械有限公司",
+    "currentInstallCity": "",
+    "city": "台州市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "浙江省",
+    "terminalUser": "东阳市人民医院",
+    "channelName": "东阳市人民医院",
+    "currentInstallCity": "",
+    "city": "东阳市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "浙江省",
+    "terminalUser": "建德市第一人民医院",
+    "channelName": "杭州星灿生物技术有限公司",
+    "currentInstallCity": "",
+    "city": "建德市"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "浙江省",
+    "terminalUser": "浙江省嘉善县第一人民医院",
+    "channelName": "杭州大沨医疗器械有限公司",
+    "currentInstallCity": "",
+    "city": "嘉善县"
+  },
+  {
+    "dashboardKey": "magnus1180",
+    "province": "浙江省",
+    "terminalUser": "浙江省中医院（钱塘院区）",
+    "channelName": "杭州星灿生物技术有限公司",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "tegris",
+    "province": "浙江省",
+    "terminalUser": "浙江大学国际健康医学研究院",
+    "channelName": "杭州星灿生物技术有限公司",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "浙江大学医学院附属口腔医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "温州老年病医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "温州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "杭州中美华东制药有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "宁波卫联消毒科技有限公司",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "宁波市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "浙江广济眼科医院",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  },
+  {
+    "dashboardKey": "icMic",
+    "province": "浙江省",
+    "terminalUser": "浙江大学医学院附属口腔医院华家池院区",
+    "channelName": "未填写渠道",
+    "currentInstallCity": "",
+    "city": "杭州市"
+  }
+]

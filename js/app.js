@@ -106361,6 +106361,7 @@ const authUsersApiEndpoint = "/api/users";
 const dashboardDataApiEndpoint = "/api/dashboard-data";
 const sessionApiEndpoint = "/api/session";
 const sessionPasswordApiEndpoint = "/api/session/password";
+const testDashboardKey = "testMagnusIb";
 const isHttpMode = window.location.protocol.startsWith("http");
 let importedUsersCache = [];
 let authUsersBackendAvailable = false;
@@ -106378,6 +106379,63 @@ function getImportedUsers() {
 
 function getAuthenticatedUser() {
   return currentSessionUser;
+}
+
+function isTestUser(user = getAuthenticatedUser()) {
+  return normalizeCredential(user?.username).toLowerCase() === "test";
+}
+
+function effectiveDashboardKey(key = currentDashboardKey) {
+  return key === testDashboardKey ? "magnus1180" : key;
+}
+
+function createTestDashboardVariant(sourceDashboard) {
+  const clone = cloneDashboardData(sourceDashboard);
+  clone.title = "TEST Magnus IB Dashboard";
+  clone.rankingTitle = "TEST Magnus IB 用户排名";
+  clone.modalTitle = "TEST Magnus IB 项目录入与更新";
+  return clone;
+}
+
+function syncTestDashboardVariant() {
+  if (!dashboards?.magnus1180) return;
+  dashboards[testDashboardKey] = createTestDashboardVariant(dashboards.magnus1180);
+}
+
+function visibleDashboardOptions() {
+  const options = [
+    { value: "magnus1180", label: "Magnus Dashboard" },
+    { value: "magnus2026Funnel", label: "Magnus 2026 Funnel" },
+    { value: "tegris", label: "Tegris Dashboard" },
+    { value: "icMic", label: "IC MIC Dashboard" }
+  ];
+
+  if (isTestUser()) {
+    options.unshift({ value: testDashboardKey, label: "TEST Magnus IB" });
+  }
+
+  return options;
+}
+
+function renderProductSwitcherOptions() {
+  syncTestDashboardVariant();
+  const switcher = document.querySelector("#productSwitcher");
+  if (!switcher) return;
+
+  const options = visibleDashboardOptions();
+  switcher.innerHTML = options.map((option) => (
+    `<option value="${option.value}">${option.label}</option>`
+  )).join("");
+
+  if (!isTestUser() && currentDashboardKey === testDashboardKey) {
+    currentDashboardKey = "magnus1180";
+  }
+
+  if (!options.some((option) => option.value === currentDashboardKey)) {
+    currentDashboardKey = options[0]?.value || "magnus1180";
+  }
+
+  switcher.value = currentDashboardKey;
 }
 
 function getLocalImportedUsers() {
@@ -107299,6 +107357,9 @@ async function initializeAuth() {
 }
 
 function currentDashboard() {
+  if (currentDashboardKey === testDashboardKey) {
+    syncTestDashboardVariant();
+  }
   return dashboards[currentDashboardKey];
 }
 
@@ -107405,8 +107466,10 @@ function projectStorageKey() {
 }
 
 function renderDashboardChrome() {
+  renderProductSwitcherOptions();
   const dashboard = currentDashboardData();
-  document.querySelector(".dashboard-shell").dataset.product = currentDashboardKey;
+  const resolvedKey = effectiveDashboardKey();
+  document.querySelector(".dashboard-shell").dataset.product = resolvedKey;
   document.title = `Getinge SW China ${dashboard.title}`;
   document.querySelector("#dashboardTitle").textContent = dashboard.title;
   document.querySelector("#userRankingTitle").textContent = "全部客户按省份循环";
@@ -107418,7 +107481,7 @@ function renderDashboardChrome() {
   document.querySelector("#productVisual").setAttribute("aria-label", dashboard.visual.alt);
 
   const visual = document.querySelector("#productVisual");
-  visual.dataset.product = currentDashboardKey;
+  visual.dataset.product = resolvedKey;
   if (dashboard.visual.type === "image") {
     visual.classList.remove("product-visual--system");
     visual.innerHTML = `<img src="${dashboard.visual.src}" alt="${dashboard.visual.alt}" />`;
@@ -107503,6 +107566,7 @@ function highWinRateFunnelRecords(records) {
 
 function renderKpis() {
   const dashboard = currentDashboardData();
+  const resolvedKey = effectiveDashboardKey();
   const totalUnits = dashboard.totalUnits ?? dashboard.provinceData.reduce((sum, item) => sum + item.value, 0);
   const quarterUnits = dashboard.quarterUnits ?? dashboard.updates.length + Math.round(totalUnits * 0.14);
   const kpis = [...document.querySelectorAll(".kpi")];
@@ -107519,7 +107583,7 @@ function renderKpis() {
   document.querySelector("#quarterUnits").textContent = quarterUnits;
   document.querySelector("#partnerCount").textContent = dashboard.partners.length;
 
-  if (currentDashboardKey === "magnus2026Funnel") {
+  if (resolvedKey === "magnus2026Funnel") {
     const highWinRateRecords = highWinRateFunnelRecords(dashboard.sourceRecords || []);
     const weightedFunnelUnits = highWinRateRecords.reduce((sum, record) => sum + (Number(record.quantity) || 0), 0);
     const activeSalesCount = new Set(highWinRateRecords.map((record) => String(record.salesName || "").trim()).filter(Boolean)).size;
@@ -108221,73 +108285,79 @@ async function ensureChinaMap() {
 }
 
 function footprintTitle() {
-  if (currentDashboardKey === "magnus2026Funnel") {
+  const resolvedKey = effectiveDashboardKey();
+  if (resolvedKey === "magnus2026Funnel") {
     return "2026 Magnus in the pipeline";
   }
-  if (currentDashboardKey === "magnus1180") {
+  if (resolvedKey === "magnus1180") {
     return "China Magnus Install Bases Heat Map";
   }
-  if (currentDashboardKey === "tegris") {
+  if (resolvedKey === "tegris") {
     return "China Tegris Install Base Heat Map";
   }
-  if (currentDashboardKey === "icMic") {
+  if (resolvedKey === "icMic") {
     return "China IC-MIC Install Base Heat Map";
   }
   return "China Installed Base Heat Map";
 }
 
 function footprintEyebrowTitle() {
+  const resolvedKey = effectiveDashboardKey();
   return {
     magnus1180: "Getinge Magnus",
     magnus2026Funnel: "Getinge Magnus Funnel",
     tegris: "Getinge Tegris",
     icMic: "Getinge IC MIC"
-  }[currentDashboardKey] || "Getinge Magnus";
+  }[resolvedKey] || "Getinge Magnus";
 }
 
 function shouldUseStaticFootprintMap() {
-  return currentDashboardKey === "magnus1180"
-    || currentDashboardKey === "magnus2026Funnel"
-    || currentDashboardKey === "tegris"
-    || currentDashboardKey === "icMic";
+  const resolvedKey = effectiveDashboardKey();
+  return resolvedKey === "magnus1180"
+    || resolvedKey === "magnus2026Funnel"
+    || resolvedKey === "tegris"
+    || resolvedKey === "icMic";
 }
 
 function footprintStaticImageSrc() {
+  const resolvedKey = effectiveDashboardKey();
   return {
     magnus1180: "assets/magnus-ib-pillars-static.png?v=4",
     magnus2026Funnel: "assets/magnus-funnel-pillars-static.png?v=2",
     tegris: "assets/tegris-pillars-static.png?v=2",
     icMic: "assets/ic-mic-pillars-static.png?v=2"
-  }[currentDashboardKey] || "assets/footprint-heat-map-concept.png";
+  }[resolvedKey] || "assets/footprint-heat-map-concept.png";
 }
 
 function footprintStaticImageClass() {
-  if (currentDashboardKey === "magnus1180") {
+  const resolvedKey = effectiveDashboardKey();
+  if (resolvedKey === "magnus1180") {
     return "footprint-heatmap-image footprint-heatmap-image--magnus-ib";
   }
-  if (currentDashboardKey === "magnus2026Funnel") {
+  if (resolvedKey === "magnus2026Funnel") {
     return "footprint-heatmap-image footprint-heatmap-image--magnus-funnel";
   }
-  if (currentDashboardKey === "tegris") {
+  if (resolvedKey === "tegris") {
     return "footprint-heatmap-image footprint-heatmap-image--tegris";
   }
-  if (currentDashboardKey === "icMic") {
+  if (resolvedKey === "icMic") {
     return "footprint-heatmap-image footprint-heatmap-image--ic-mic";
   }
   return "footprint-heatmap-image";
 }
 
 function footprintStaticShellClass() {
-  if (currentDashboardKey === "magnus1180") {
+  const resolvedKey = effectiveDashboardKey();
+  if (resolvedKey === "magnus1180") {
     return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean footprint-heatmap-image-shell--magnus-ib";
   }
-  if (currentDashboardKey === "magnus2026Funnel") {
+  if (resolvedKey === "magnus2026Funnel") {
     return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean footprint-heatmap-image-shell--magnus-funnel";
   }
-  if (currentDashboardKey === "tegris") {
+  if (resolvedKey === "tegris") {
     return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean footprint-heatmap-image-shell--tegris";
   }
-  if (currentDashboardKey === "icMic") {
+  if (resolvedKey === "icMic") {
     return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean footprint-heatmap-image-shell--ic-mic";
   }
   return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean";
@@ -108300,7 +108370,7 @@ function isRenderableFootprintCustomerName(name) {
 }
 
 function footprintRailEntries() {
-  if (currentDashboardKey === "magnus2026Funnel") {
+  if (effectiveDashboardKey() === "magnus2026Funnel") {
     return (currentDashboardData().provinceData || [])
       .map((province, index) => ({
         rank: index + 1,
@@ -108374,7 +108444,7 @@ function footprintStatsSummary() {
   const dashboard = currentDashboardData();
   const records = dashboard.sourceRecords || [];
 
-  if (currentDashboardKey === "magnus2026Funnel") {
+  if (effectiveDashboardKey() === "magnus2026Funnel") {
     const coveredProvince = new Set(
       records
         .map((record) => String(record.installProvince || "").trim())
@@ -108422,11 +108492,12 @@ function renderFootprintStatsOverlay() {
   const stats = document.querySelector("#footprintStats");
   if (!stats) return;
 
+  const resolvedKey = effectiveDashboardKey();
   if (
-    currentDashboardKey !== "magnus1180"
-    && currentDashboardKey !== "magnus2026Funnel"
-    && currentDashboardKey !== "tegris"
-    && currentDashboardKey !== "icMic"
+    resolvedKey !== "magnus1180"
+    && resolvedKey !== "magnus2026Funnel"
+    && resolvedKey !== "tegris"
+    && resolvedKey !== "icMic"
   ) {
     stats.innerHTML = "";
     stats.hidden = true;
@@ -109721,8 +109792,9 @@ async function renderFootprintMap() {
   const map = document.querySelector("#footprintMap");
   const labels = document.querySelector("#footprintLabels");
   const pillarLayer = document.querySelector("#footprintPillars");
-  overlay.dataset.footprintTheme = currentDashboardKey === "magnus2026Funnel" ? "funnel" : "installed";
-  overlay.dataset.dashboardKey = currentDashboardKey;
+  const resolvedKey = effectiveDashboardKey();
+  overlay.dataset.footprintTheme = resolvedKey === "magnus2026Funnel" ? "funnel" : "installed";
+  overlay.dataset.dashboardKey = resolvedKey;
   document.querySelector("#footprintTitleEyebrow").textContent = footprintEyebrowTitle();
   document.querySelector("#footprintTitle").textContent = footprintTitle();
   labels.innerHTML = "";
@@ -109848,7 +109920,7 @@ async function renderFootprintMap() {
 
 function customerCloudEntries() {
   const dashboard = currentDashboardData();
-  if (currentDashboardKey === "magnus2026Funnel") {
+  if (effectiveDashboardKey() === "magnus2026Funnel") {
     return [];
   }
   const entries = new Map();
@@ -109972,7 +110044,7 @@ function hexToRgba(color, alpha) {
 }
 
 function provincePriority(name) {
-  const map = currentDashboardKey === "icMic" ? icProvincePriorityMap : provincePriorityMap;
+  const map = effectiveDashboardKey() === "icMic" ? icProvincePriorityMap : provincePriorityMap;
   return map[name] || "";
 }
 
@@ -110319,10 +110391,12 @@ window.addEventListener("resize", () => {
 
 function initializeDashboardApp() {
   if (dashboardInitialized) {
+    renderProductSwitcherOptions();
     setTimeout(() => {
       trendChart?.resize();
       yearTrendChart?.resize();
       mapChart?.resize();
+      renderDashboard();
       renderMap();
     }, 0);
     return;
@@ -110331,6 +110405,7 @@ function initializeDashboardApp() {
   dashboardInitialized = true;
   initializeProjectRegistry();
   initializeProductSwitcher();
+  renderProductSwitcherOptions();
   renderDashboard();
 }
 
