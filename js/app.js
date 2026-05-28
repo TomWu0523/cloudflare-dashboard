@@ -106362,6 +106362,10 @@ const dashboardDataApiEndpoint = "/api/dashboard-data";
 const sessionApiEndpoint = "/api/session";
 const sessionPasswordApiEndpoint = "/api/session/password";
 const testDashboardKey = "testMagnusIb";
+const testPageAssets = {
+  magnusIbMainVisual: "assets/test-pages/test-magnus-ib-main-visual-v1.png",
+  magnusIbHeatMap: "assets/test-pages/test-magnus-ib-heatmap-v2.png"
+};
 const isHttpMode = window.location.protocol.startsWith("http");
 let importedUsersCache = [];
 let authUsersBackendAvailable = false;
@@ -106396,7 +106400,7 @@ function createTestDashboardVariant(sourceDashboard) {
   clone.modalTitle = "TEST Magnus IB 项目录入与更新";
   clone.visual = {
     ...clone.visual,
-    src: "assets/test-1180-magnus-hybrid-column.png",
+    src: testPageAssets.magnusIbMainVisual,
     alt: "TEST 1180 Magnus operating table system"
   };
   return clone;
@@ -108330,7 +108334,7 @@ function footprintStaticImageSrc() {
   const resolvedKey = effectiveDashboardKey();
   return {
     magnus1180: "assets/magnus-ib-pillars-static.png?v=4",
-    testMagnusIb: "assets/test-magnus-ib-pillars-static.png?v=1",
+    testMagnusIb: `${testPageAssets.magnusIbHeatMap}?v=1`,
     magnus2026Funnel: "assets/magnus-funnel-pillars-static.png?v=2",
     tegris: "assets/tegris-pillars-static.png?v=2",
     icMic: "assets/ic-mic-pillars-static.png?v=2"
