@@ -106386,7 +106386,7 @@ function isTestUser(user = getAuthenticatedUser()) {
 }
 
 function effectiveDashboardKey(key = currentDashboardKey) {
-  return key === testDashboardKey ? "magnus1180" : key;
+  return key;
 }
 
 function createTestDashboardVariant(sourceDashboard) {
@@ -106394,6 +106394,11 @@ function createTestDashboardVariant(sourceDashboard) {
   clone.title = "TEST Magnus IB Dashboard";
   clone.rankingTitle = "TEST Magnus IB 用户排名";
   clone.modalTitle = "TEST Magnus IB 项目录入与更新";
+  clone.visual = {
+    ...clone.visual,
+    src: "assets/test-1180-magnus-hybrid-column.png",
+    alt: "TEST 1180 Magnus operating table system"
+  };
   return clone;
 }
 
@@ -108289,7 +108294,7 @@ function footprintTitle() {
   if (resolvedKey === "magnus2026Funnel") {
     return "2026 Magnus in the pipeline";
   }
-  if (resolvedKey === "magnus1180") {
+  if (resolvedKey === "magnus1180" || resolvedKey === testDashboardKey) {
     return "China Magnus Install Bases Heat Map";
   }
   if (resolvedKey === "tegris") {
@@ -108305,6 +108310,7 @@ function footprintEyebrowTitle() {
   const resolvedKey = effectiveDashboardKey();
   return {
     magnus1180: "Getinge Magnus",
+    testMagnusIb: "Getinge Magnus",
     magnus2026Funnel: "Getinge Magnus Funnel",
     tegris: "Getinge Tegris",
     icMic: "Getinge IC MIC"
@@ -108314,6 +108320,7 @@ function footprintEyebrowTitle() {
 function shouldUseStaticFootprintMap() {
   const resolvedKey = effectiveDashboardKey();
   return resolvedKey === "magnus1180"
+    || resolvedKey === testDashboardKey
     || resolvedKey === "magnus2026Funnel"
     || resolvedKey === "tegris"
     || resolvedKey === "icMic";
@@ -108323,6 +108330,7 @@ function footprintStaticImageSrc() {
   const resolvedKey = effectiveDashboardKey();
   return {
     magnus1180: "assets/magnus-ib-pillars-static.png?v=4",
+    testMagnusIb: "assets/test-magnus-ib-pillars-static.png?v=1",
     magnus2026Funnel: "assets/magnus-funnel-pillars-static.png?v=2",
     tegris: "assets/tegris-pillars-static.png?v=2",
     icMic: "assets/ic-mic-pillars-static.png?v=2"
@@ -108333,6 +108341,9 @@ function footprintStaticImageClass() {
   const resolvedKey = effectiveDashboardKey();
   if (resolvedKey === "magnus1180") {
     return "footprint-heatmap-image footprint-heatmap-image--magnus-ib";
+  }
+  if (resolvedKey === testDashboardKey) {
+    return "footprint-heatmap-image footprint-heatmap-image--test-magnus-ib";
   }
   if (resolvedKey === "magnus2026Funnel") {
     return "footprint-heatmap-image footprint-heatmap-image--magnus-funnel";
@@ -108350,6 +108361,9 @@ function footprintStaticShellClass() {
   const resolvedKey = effectiveDashboardKey();
   if (resolvedKey === "magnus1180") {
     return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean footprint-heatmap-image-shell--magnus-ib";
+  }
+  if (resolvedKey === testDashboardKey) {
+    return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean footprint-heatmap-image-shell--test-magnus-ib";
   }
   if (resolvedKey === "magnus2026Funnel") {
     return "footprint-heatmap-image-shell footprint-heatmap-image-shell--clean footprint-heatmap-image-shell--magnus-funnel";
@@ -108495,6 +108509,7 @@ function renderFootprintStatsOverlay() {
   const resolvedKey = effectiveDashboardKey();
   if (
     resolvedKey !== "magnus1180"
+    && resolvedKey !== testDashboardKey
     && resolvedKey !== "magnus2026Funnel"
     && resolvedKey !== "tegris"
     && resolvedKey !== "icMic"

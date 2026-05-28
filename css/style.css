@@ -635,20 +635,24 @@ h2 {
 }
 
 @media (min-width: 1181px) {
-  .dashboard-shell[data-product="magnus1180"] .title-group {
+  .dashboard-shell[data-product="magnus1180"] .title-group,
+  .dashboard-shell[data-product="testMagnusIb"] .title-group {
     max-width: clamp(420px, 34vw, 560px);
   }
 
-  .dashboard-shell[data-product="magnus1180"] #dashboardTitle {
+  .dashboard-shell[data-product="magnus1180"] #dashboardTitle,
+  .dashboard-shell[data-product="testMagnusIb"] #dashboardTitle {
     white-space: nowrap;
   }
 
-  .product-visual[data-product="magnus1180"] {
+  .product-visual[data-product="magnus1180"],
+  .product-visual[data-product="testMagnusIb"] {
     right: 20px;
     width: min(300px, 21vw);
   }
 
-  .product-visual[data-product="magnus1180"] img {
+  .product-visual[data-product="magnus1180"] img,
+  .product-visual[data-product="testMagnusIb"] img {
     width: min(100%, 320px);
     height: 230px;
     transform: none;
@@ -1950,7 +1954,8 @@ h2 {
   animation: footprint-light-sweep 5.8s ease-in-out infinite;
 }
 
-.footprint-overlay[data-dashboard-key="magnus1180"]::after {
+.footprint-overlay[data-dashboard-key="magnus1180"]::after,
+.footprint-overlay[data-dashboard-key="testMagnusIb"]::after {
   display: none;
 }
 
@@ -1963,7 +1968,8 @@ h2 {
   display: none;
 }
 
-.footprint-overlay[data-dashboard-key="magnus1180"] {
+.footprint-overlay[data-dashboard-key="magnus1180"],
+.footprint-overlay[data-dashboard-key="testMagnusIb"] {
   background:
     radial-gradient(circle at 68% 58%, rgba(25, 106, 206, 0.22), transparent 30%),
     radial-gradient(circle at 45% 44%, rgba(23, 82, 163, 0.16), transparent 36%),
@@ -1981,7 +1987,8 @@ h2 {
     linear-gradient(180deg, #01050c 0%, #01050c 100%);
 }
 
-.footprint-overlay[data-dashboard-key="magnus1180"]::before {
+.footprint-overlay[data-dashboard-key="magnus1180"]::before,
+.footprint-overlay[data-dashboard-key="testMagnusIb"]::before {
   background:
     linear-gradient(rgba(71, 156, 255, 0.044) 1px, transparent 1px),
     linear-gradient(90deg, rgba(71, 156, 255, 0.038) 1px, transparent 1px),
@@ -2083,7 +2090,8 @@ h2 {
   background-size: 760px 1px, 1px 520px;
 }
 
-.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-orbit {
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-orbit,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-orbit {
   background:
     linear-gradient(105deg, transparent 4%, rgba(69, 155, 255, 0.12) 5%, transparent 8%),
     linear-gradient(72deg, transparent 15%, rgba(69, 155, 255, 0.08) 16%, transparent 19%),
@@ -2095,7 +2103,8 @@ h2 {
     inset 0 0 200px rgba(0, 0, 0, 0.36);
 }
 
-.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-orbit::before {
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-orbit::before,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-orbit::before {
   background:
     linear-gradient(90deg, transparent 0%, rgba(79, 164, 255, 0.2) 46%, transparent 51%),
     linear-gradient(180deg, transparent 0%, rgba(79, 164, 255, 0.16) 52%, transparent 56%);
@@ -2247,7 +2256,8 @@ h2 {
   text-align: right;
 }
 
-.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-title-card {
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-title-card,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-title-card {
   max-width: min(720px, 56vw);
   padding: 8px 16px 10px;
   border-color: rgba(91, 178, 255, 0.2);
@@ -2287,7 +2297,8 @@ h2 {
   text-shadow: 0 0 18px rgba(49, 183, 188, 0.22);
 }
 
-.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-header h2 {
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-header h2,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-header h2 {
   white-space: nowrap;
   font-size: clamp(20px, 1.82vw, 31px);
   text-shadow: 0 0 22px rgba(68, 156, 255, 0.32);
@@ -2390,14 +2401,17 @@ h2 {
   filter: none;
 }
 
-.footprint-heatmap-image-shell--clean .footprint-heatmap-image--magnus-ib {
+.footprint-heatmap-image-shell--clean .footprint-heatmap-image--magnus-ib,
+.footprint-heatmap-image-shell--clean .footprint-heatmap-image--test-magnus-ib {
   object-position: 57.5% 50%;
   transform: scale(0.992);
   filter: saturate(1.08) contrast(1.06) brightness(1.01);
 }
 
 .footprint-heatmap-image-shell--magnus-ib::before,
-.footprint-heatmap-image-shell--magnus-ib::after {
+.footprint-heatmap-image-shell--magnus-ib::after,
+.footprint-heatmap-image-shell--test-magnus-ib::before,
+.footprint-heatmap-image-shell--test-magnus-ib::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -2422,7 +2436,8 @@ h2 {
   pointer-events: none;
 }
 
-.footprint-heatmap-image-shell--magnus-ib {
+.footprint-heatmap-image-shell--magnus-ib,
+.footprint-heatmap-image-shell--test-magnus-ib {
   background: rgb(1, 5, 12);
   mask-image: none;
 }
@@ -2438,7 +2453,8 @@ h2 {
   mask-image: none;
 }
 
-.footprint-heatmap-image-shell--magnus-ib::before {
+.footprint-heatmap-image-shell--magnus-ib::before,
+.footprint-heatmap-image-shell--test-magnus-ib::before {
   z-index: 1;
   background:
     radial-gradient(circle at 74% 52%, rgba(94, 184, 255, 0.28), transparent 18%),
@@ -2448,7 +2464,8 @@ h2 {
   animation: footprint-static-breathe 4.6s ease-in-out infinite;
 }
 
-.footprint-heatmap-image-shell--magnus-ib::after {
+.footprint-heatmap-image-shell--magnus-ib::after,
+.footprint-heatmap-image-shell--test-magnus-ib::after {
   inset: 8% 14% 8% 18%;
   background:
     linear-gradient(100deg, transparent 0%, transparent 44%, rgba(203, 235, 255, 0.16) 49%, rgba(65, 154, 255, 0.24) 50%, transparent 56%, transparent 100%);
@@ -2530,6 +2547,7 @@ h2 {
 
 @media (min-width: 1181px) {
   .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-map-shell,
+  .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-map-shell,
   .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-map-shell,
   .footprint-overlay[data-dashboard-key="tegris"] .footprint-map-shell,
   .footprint-overlay[data-dashboard-key="icMic"] .footprint-map-shell {
@@ -2803,7 +2821,8 @@ h2 {
   text-shadow: 0 0 18px rgba(78, 241, 182, 0.14);
 }
 
-.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-stats-overlay {
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-stats-overlay,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-stats-overlay {
   right: 2.1%;
   top: 38.5%;
   width: min(16.4vw, 316px);
@@ -2822,7 +2841,8 @@ h2 {
   width: min(16.4vw, 316px);
 }
 
-.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-rail-overlay {
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-rail-overlay,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-rail-overlay {
   left: 0.7%;
   top: 9.5%;
   bottom: 8.5%;
@@ -2921,7 +2941,8 @@ h2 {
     0 0 26px rgba(100, 184, 255, 0.14);
 }
 
-.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-rail-rank {
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-rail-rank,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-rail-rank {
   color: rgba(3, 15, 35, 0.94);
   background: linear-gradient(180deg, #deefff, #459dff);
   box-shadow:
@@ -3097,7 +3118,8 @@ h2 {
   font-size: 11px;
 }
 
-.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-stat-card {
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-stat-card,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-stat-card {
   background:
     linear-gradient(180deg, rgba(5, 18, 42, 0.78), rgba(5, 14, 33, 0.58)),
     linear-gradient(135deg, rgba(60, 145, 255, 0.12), transparent 72%);
@@ -3106,11 +3128,13 @@ h2 {
     0 20px 40px rgba(4, 29, 76, 0.22);
 }
 
-.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-stat-card span {
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-stat-card span,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-stat-card span {
   color: rgba(172, 217, 255, 0.84);
 }
 
-.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-stat-card strong {
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-stat-card strong,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-stat-card strong {
   text-shadow: 0 0 22px rgba(69, 157, 255, 0.3);
 }
 
@@ -3143,7 +3167,8 @@ h2 {
   outline: none;
 }
 
-.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-back-button {
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-back-button,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-back-button {
   backdrop-filter: none;
   color: rgba(204, 232, 255, 0.9);
   background: rgba(5, 18, 43, 0.72);
