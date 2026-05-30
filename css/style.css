@@ -2266,7 +2266,7 @@ h2 {
   left: 50%;
   top: clamp(8px, 1vw, 18px);
   z-index: 7;
-  width: min(34vw, 640px);
+  width: min(30vw, 560px);
   transform: translateX(-50%);
   pointer-events: none;
 }
@@ -2276,6 +2276,11 @@ h2 {
   width: 100%;
   height: auto;
   filter: drop-shadow(0 12px 34px rgba(2, 16, 48, 0.3));
+}
+
+.footprint-anniversary-badge--ic-mic {
+  width: min(36vw, 680px);
+  top: clamp(10px, 1.05vw, 18px);
 }
 
 .footprint-top-banner::after {
@@ -2359,8 +2364,10 @@ h2 {
 }
 
 .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-header,
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-header,
 .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-header,
-.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-header {
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-header,
+.footprint-overlay[data-dashboard-key="icMic"] .footprint-header {
   justify-content: flex-end;
   top: clamp(12px, 1.2vw, 20px);
   left: clamp(16px, 1.6vw, 28px);
@@ -2369,24 +2376,38 @@ h2 {
 }
 
 .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-title-card,
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-title-card,
 .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-title-card,
-.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-title-card {
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-title-card,
+.footprint-overlay[data-dashboard-key="icMic"] .footprint-title-card {
   display: none;
 }
 
 .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-top-banner,
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-top-banner,
 .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-top-banner,
-.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-top-banner {
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-top-banner,
+.footprint-overlay[data-dashboard-key="icMic"] .footprint-top-banner {
   display: block;
 }
 
-.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-anniversary-badge,
-.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-anniversary-badge,
-.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-anniversary-badge {
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-anniversary-badge--default,
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-anniversary-badge--default,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-anniversary-badge--default,
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-anniversary-badge--default {
+  display: block;
+}
+
+.footprint-overlay[data-dashboard-key="icMic"] .footprint-anniversary-badge--default {
+  display: none;
+}
+
+.footprint-overlay[data-dashboard-key="icMic"] .footprint-anniversary-badge--ic-mic {
   display: block;
 }
 
 .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-map-shell,
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-map-shell,
 .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-map-shell {
   z-index: 2;
   top: 66.5%;
@@ -2397,6 +2418,12 @@ h2 {
   z-index: 2;
   top: 66%;
   height: min(830px, 73vh);
+}
+
+.footprint-overlay[data-dashboard-key="icMic"] .footprint-map-shell {
+  z-index: 2;
+  top: 65.5%;
+  height: min(820px, 72vh);
 }
 
 .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-heatmap-image-shell--test-magnus-ib {
@@ -2414,8 +2441,10 @@ h2 {
 }
 
 .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-brandmark,
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-brandmark,
 .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-brandmark,
-.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-brandmark {
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-brandmark,
+.footprint-overlay[data-dashboard-key="icMic"] .footprint-brandmark {
   display: inline-flex;
   position: relative;
   z-index: 7;
@@ -2423,30 +2452,43 @@ h2 {
 
 @media (max-width: 1440px) {
   .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-anniversary-badge,
+  .footprint-overlay[data-dashboard-key="tegris"] .footprint-anniversary-badge,
   .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-anniversary-badge {
-    width: min(35vw, 580px);
+    width: min(31vw, 500px);
     top: clamp(8px, 1vw, 16px);
   }
 
   .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-anniversary-badge {
-    width: min(35vw, 580px);
+    width: min(31vw, 500px);
     top: clamp(8px, 1vw, 16px);
+  }
+
+  .footprint-overlay[data-dashboard-key="icMic"] .footprint-anniversary-badge--ic-mic {
+    width: min(34vw, 600px);
+    top: clamp(10px, 1vw, 16px);
   }
 }
 
 @media (max-width: 1180px) {
   .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-anniversary-badge,
+  .footprint-overlay[data-dashboard-key="tegris"] .footprint-anniversary-badge,
   .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-anniversary-badge {
-    width: min(38vw, 460px);
+    width: min(34vw, 400px);
     top: clamp(8px, 1.5vw, 16px);
   }
 
   .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-anniversary-badge {
-    width: min(38vw, 460px);
+    width: min(34vw, 400px);
     top: clamp(8px, 1.5vw, 16px);
   }
 
+  .footprint-overlay[data-dashboard-key="icMic"] .footprint-anniversary-badge--ic-mic {
+    width: min(39vw, 500px);
+    top: clamp(10px, 1.3vw, 16px);
+  }
+
   .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-map-shell,
+  .footprint-overlay[data-dashboard-key="tegris"] .footprint-map-shell,
   .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-map-shell {
     top: 64%;
     height: min(800px, 72vh);
@@ -2455,6 +2497,11 @@ h2 {
   .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-map-shell {
     top: 63.5%;
     height: min(790px, 71vh);
+  }
+
+  .footprint-overlay[data-dashboard-key="icMic"] .footprint-map-shell {
+    top: 63.5%;
+    height: min(780px, 70vh);
   }
 }
 
@@ -3023,6 +3070,7 @@ h2 {
 }
 
 .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-stats-overlay,
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-stats-overlay,
 .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-stats-overlay {
   right: 2.1%;
   top: 38.5%;
@@ -3035,14 +3083,20 @@ h2 {
   width: min(15.2vw, 286px);
 }
 
-.footprint-overlay[data-dashboard-key="tegris"] .footprint-stats-overlay,
 .footprint-overlay[data-dashboard-key="icMic"] .footprint-stats-overlay {
   right: 2.1%;
   top: 38.5%;
   width: min(16.4vw, 316px);
 }
 
+.footprint-overlay[data-dashboard-key="icMic"] .footprint-stats-overlay {
+  right: 2%;
+  top: 37.5%;
+  width: min(15.2vw, 288px);
+}
+
 .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-rail-overlay,
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-rail-overlay,
 .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-rail-overlay {
   left: 0.7%;
   top: 9.5%;
@@ -3063,13 +3117,19 @@ h2 {
   width: min(17.6vw, 344px);
 }
 
-.footprint-overlay[data-dashboard-key="tegris"] .footprint-rail-overlay,
 .footprint-overlay[data-dashboard-key="icMic"] .footprint-rail-overlay,
 .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-rail-overlay {
   left: 0.7%;
   top: 9.5%;
   bottom: 8.5%;
   width: min(17.6vw, 344px);
+}
+
+.footprint-overlay[data-dashboard-key="icMic"] .footprint-rail-overlay {
+  left: 0.7%;
+  top: 9.5%;
+  bottom: 8.5%;
+  width: min(15.2vw, 292px);
 }
 
 .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-rail-overlay {
@@ -3327,6 +3387,7 @@ h2 {
 }
 
 .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-stat-card,
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-stat-card,
 .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-stat-card {
   background:
     linear-gradient(180deg, rgba(5, 18, 42, 0.78), rgba(5, 14, 33, 0.58)),
@@ -3337,11 +3398,13 @@ h2 {
 }
 
 .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-stat-card span,
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-stat-card span,
 .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-stat-card span {
   color: rgba(172, 217, 255, 0.84);
 }
 
 .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-stat-card strong,
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-stat-card strong,
 .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-stat-card strong {
   text-shadow: 0 0 22px rgba(69, 157, 255, 0.3);
 }
@@ -3376,6 +3439,7 @@ h2 {
 }
 
 .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-back-button,
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-back-button,
 .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-back-button {
   backdrop-filter: none;
   color: rgba(204, 232, 255, 0.9);
@@ -3396,7 +3460,6 @@ h2 {
   bottom: clamp(10px, 1.1vw, 16px);
 }
 
-.footprint-overlay[data-dashboard-key="tegris"] .footprint-back-button,
 .footprint-overlay[data-dashboard-key="icMic"] .footprint-back-button {
   backdrop-filter: none;
   background: rgba(6, 16, 29, 0.62);

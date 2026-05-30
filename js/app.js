@@ -108334,11 +108334,11 @@ function shouldUseStaticFootprintMap() {
 function footprintStaticImageSrc() {
   const resolvedKey = effectiveDashboardKey();
   return {
-    magnus1180: "assets/magnus-ib-pillars-static.png?v=4",
+    magnus1180: "assets/magnus-ib-rev4-4k.png?v=1",
     testMagnusIb: `${testPageAssets.magnusIbHeatMap}?v=1`,
-    magnus2026Funnel: "assets/magnus-funnel-pillars-static.png?v=2",
-    tegris: "assets/tegris-pillars-static.png?v=2",
-    icMic: "assets/ic-mic-pillars-static.png?v=2"
+    magnus2026Funnel: "assets/magnus-funnel-rev4-4k.png?v=1",
+    tegris: "assets/tegris-rev4-4k.png?v=1",
+    icMic: "assets/ic-mic-rev4-4k.png?v=1"
   }[resolvedKey] || "assets/footprint-heat-map-concept.png";
 }
 
