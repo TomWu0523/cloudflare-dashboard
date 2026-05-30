@@ -2241,6 +2241,97 @@ h2 {
   pointer-events: none;
 }
 
+.footprint-top-banner {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: clamp(168px, 20vh, 270px);
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 76% 18%, rgba(88, 191, 255, 0.26), transparent 30%),
+    linear-gradient(180deg, rgba(4, 32, 82, 0.82) 0%, rgba(3, 19, 48, 0.5) 60%, rgba(2, 11, 27, 0) 100%);
+}
+
+.footprint-top-banner img {
+  display: none;
+}
+
+.footprint-anniversary-badge {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: clamp(8px, 1vw, 18px);
+  z-index: 7;
+  width: min(34vw, 640px);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.footprint-anniversary-badge img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 12px 34px rgba(2, 16, 48, 0.3));
+}
+
+.footprint-top-banner::after {
+  content: "";
+  position: absolute;
+  left: -12%;
+  right: -12%;
+  top: -10%;
+  height: 92%;
+  background:
+    linear-gradient(104deg, transparent 0%, rgba(82, 220, 255, 0.08) 12%, rgba(95, 207, 255, 0.54) 31%, rgba(32, 121, 255, 0.36) 46%, rgba(71, 235, 222, 0.28) 58%, transparent 79%),
+    radial-gradient(ellipse at 68% 34%, rgba(122, 224, 255, 0.44), transparent 34%),
+    radial-gradient(ellipse at 38% 44%, rgba(70, 154, 255, 0.26), transparent 36%),
+    repeating-linear-gradient(100deg, transparent 0 46px, rgba(170, 241, 255, 0.08) 58px, transparent 84px);
+  filter: blur(12px) saturate(1.34);
+  opacity: 0.96;
+  transform: translate3d(-5%, 0, 0) skewY(-3deg);
+  animation: footprint-aurora-drift 8.8s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.footprint-top-banner::before {
+  content: "";
+  position: absolute;
+  left: -5%;
+  right: -5%;
+  top: 24%;
+  height: 36%;
+  background:
+    linear-gradient(92deg, transparent 4%, rgba(122, 232, 255, 0.18) 22%, rgba(83, 185, 255, 0.5) 42%, rgba(27, 110, 255, 0.32) 63%, transparent 88%);
+  filter: blur(7px);
+  opacity: 0.78;
+  transform: translate3d(4%, 0, 0) skewY(2deg);
+  animation: footprint-aurora-ribbon 6.4s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.footprint-brandmark {
+  display: none;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.footprint-brandmark img {
+  display: block;
+  width: clamp(176px, 12vw, 260px);
+  height: auto;
+  opacity: 0.98;
+}
+
 .footprint-title-card {
   margin-left: auto;
   position: relative;
@@ -2266,6 +2357,107 @@ h2 {
     inset 0 1px 0 rgba(158, 218, 255, 0.06),
     0 12px 30px rgba(18, 71, 156, 0.12);
 }
+
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-header,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-header,
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-header {
+  justify-content: flex-end;
+  top: clamp(12px, 1.2vw, 20px);
+  left: clamp(16px, 1.6vw, 28px);
+  right: clamp(18px, 1.8vw, 30px);
+  z-index: 6;
+}
+
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-title-card,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-title-card,
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-title-card {
+  display: none;
+}
+
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-top-banner,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-top-banner,
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-top-banner {
+  display: block;
+}
+
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-anniversary-badge,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-anniversary-badge,
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-anniversary-badge {
+  display: block;
+}
+
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-map-shell,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-map-shell {
+  z-index: 2;
+  top: 66.5%;
+  height: min(840px, 74vh);
+}
+
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-map-shell {
+  z-index: 2;
+  top: 66%;
+  height: min(830px, 73vh);
+}
+
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-heatmap-image-shell--test-magnus-ib {
+  background: transparent;
+}
+
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-heatmap-image-shell--test-magnus-ib::before {
+  opacity: 0.52;
+  mix-blend-mode: screen;
+}
+
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-heatmap-image--test-magnus-ib {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 5.5%, black 94.5%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, black 5.5%, black 94.5%, transparent 100%);
+}
+
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-brandmark,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-brandmark,
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-brandmark {
+  display: inline-flex;
+  position: relative;
+  z-index: 7;
+}
+
+@media (max-width: 1440px) {
+  .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-anniversary-badge,
+  .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-anniversary-badge {
+    width: min(35vw, 580px);
+    top: clamp(8px, 1vw, 16px);
+  }
+
+  .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-anniversary-badge {
+    width: min(35vw, 580px);
+    top: clamp(8px, 1vw, 16px);
+  }
+}
+
+@media (max-width: 1180px) {
+  .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-anniversary-badge,
+  .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-anniversary-badge {
+    width: min(38vw, 460px);
+    top: clamp(8px, 1.5vw, 16px);
+  }
+
+  .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-anniversary-badge {
+    width: min(38vw, 460px);
+    top: clamp(8px, 1.5vw, 16px);
+  }
+
+  .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-map-shell,
+  .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-map-shell {
+    top: 64%;
+    height: min(800px, 72vh);
+  }
+
+  .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-map-shell {
+    top: 63.5%;
+    height: min(790px, 71vh);
+  }
+}
+
 
 .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-title-card {
   max-width: min(760px, 58vw);
@@ -2442,6 +2634,10 @@ h2 {
   mask-image: none;
 }
 
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-heatmap-image-shell--test-magnus-ib {
+  background: transparent;
+}
+
 .footprint-heatmap-image-shell--magnus-funnel {
   background: rgb(1, 5, 12);
   mask-image: none;
@@ -2462,6 +2658,11 @@ h2 {
     linear-gradient(130deg, rgba(9, 45, 130, 0.56), rgba(24, 101, 215, 0.5) 52%, rgba(5, 30, 94, 0.54));
   opacity: 0.9;
   animation: footprint-static-breathe 4.6s ease-in-out infinite;
+}
+
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-heatmap-image-shell--test-magnus-ib::before {
+  opacity: 0.52;
+  mix-blend-mode: screen;
 }
 
 .footprint-heatmap-image-shell--magnus-ib::after,
@@ -2829,9 +3030,9 @@ h2 {
 }
 
 .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-stats-overlay {
-  right: 2.2%;
-  top: 43%;
-  width: min(14.6vw, 272px);
+  right: 2.1%;
+  top: 38.5%;
+  width: min(15.2vw, 286px);
 }
 
 .footprint-overlay[data-dashboard-key="tegris"] .footprint-stats-overlay,
@@ -2855,6 +3056,13 @@ h2 {
     0 18px 38px rgba(5, 35, 89, 0.2);
 }
 
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-rail-overlay {
+  left: 0.7%;
+  top: 9.5%;
+  bottom: 8.5%;
+  width: min(17.6vw, 344px);
+}
+
 .footprint-overlay[data-dashboard-key="tegris"] .footprint-rail-overlay,
 .footprint-overlay[data-dashboard-key="icMic"] .footprint-rail-overlay,
 .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-rail-overlay {
@@ -2865,10 +3073,10 @@ h2 {
 }
 
 .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-rail-overlay {
-  left: 1.1%;
-  top: 13%;
-  bottom: 12%;
-  width: min(13.6vw, 264px);
+  left: 0.7%;
+  top: 9.5%;
+  bottom: 8.5%;
+  width: min(15vw, 288px);
 }
 
 .footprint-rail-overlay::before {
@@ -3176,6 +3384,11 @@ h2 {
   bottom: clamp(10px, 1.1vw, 16px);
 }
 
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-back-button {
+  padding: 7px 12px;
+  font-size: 11px;
+}
+
 .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-back-button {
   backdrop-filter: none;
   background: rgba(7, 18, 35, 0.62);
@@ -3283,6 +3496,34 @@ body.footprint-open {
   0%, 26% { transform: translateX(-56%); opacity: 0; }
   42% { opacity: 0.8; }
   72%, 100% { transform: translateX(56%); opacity: 0; }
+}
+
+@keyframes footprint-aurora-drift {
+  0% {
+    opacity: 0.58;
+    transform: translate3d(-8%, -8px, 0) skewY(-4deg) scaleX(0.98);
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.74;
+    transform: translate3d(8%, 8px, 0) skewY(3deg) scaleX(1.05);
+  }
+}
+
+@keyframes footprint-aurora-ribbon {
+  0% {
+    opacity: 0.42;
+    transform: translate3d(5%, -2px, 0) skewY(3deg) scaleX(0.96);
+  }
+  50% {
+    opacity: 0.88;
+  }
+  100% {
+    opacity: 0.56;
+    transform: translate3d(-6%, 5px, 0) skewY(-2deg) scaleX(1.06);
+  }
 }
 
 @keyframes footprint-orbit-pulse {

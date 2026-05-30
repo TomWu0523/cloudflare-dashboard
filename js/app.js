@@ -106364,7 +106364,8 @@ const sessionPasswordApiEndpoint = "/api/session/password";
 const testDashboardKey = "testMagnusIb";
 const testPageAssets = {
   magnusIbMainVisual: "assets/test-pages/test-magnus-ib-main-visual-v1.png",
-  magnusIbHeatMap: "assets/test-pages/test-magnus-ib-heatmap-v2.png"
+  magnusIbHeatMap: "assets/test-pages/test-magnus-ib-heatmap-v2.png",
+  magnusIbBanner: "assets/test-pages/test-magnus-ib-banner-v1.jpg"
 };
 const isHttpMode = window.location.protocol.startsWith("http");
 let importedUsersCache = [];
