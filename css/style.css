@@ -2398,6 +2398,15 @@ h2 {
   display: block;
 }
 
+.footprint-overlay[data-dashboard-key="magnus1180"] .footprint-anniversary-badge--default,
+.footprint-overlay[data-dashboard-key="tegris"] .footprint-anniversary-badge--default,
+.footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-anniversary-badge--default,
+.footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-anniversary-badge--default,
+.footprint-overlay[data-dashboard-key="icMic"] .footprint-anniversary-badge--ic-mic {
+  top: auto;
+  bottom: clamp(78px, 7vh, 118px);
+}
+
 .footprint-overlay[data-dashboard-key="icMic"] .footprint-anniversary-badge--default {
   display: none;
 }
@@ -2467,6 +2476,15 @@ h2 {
     width: min(34vw, 600px);
     top: clamp(10px, 1vw, 16px);
   }
+
+  .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-anniversary-badge--default,
+  .footprint-overlay[data-dashboard-key="tegris"] .footprint-anniversary-badge--default,
+  .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-anniversary-badge--default,
+  .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-anniversary-badge--default,
+  .footprint-overlay[data-dashboard-key="icMic"] .footprint-anniversary-badge--ic-mic {
+    top: auto;
+    bottom: clamp(68px, 6vh, 96px);
+  }
 }
 
 @media (max-width: 1180px) {
@@ -2485,6 +2503,15 @@ h2 {
   .footprint-overlay[data-dashboard-key="icMic"] .footprint-anniversary-badge--ic-mic {
     width: min(39vw, 500px);
     top: clamp(10px, 1.3vw, 16px);
+  }
+
+  .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-anniversary-badge--default,
+  .footprint-overlay[data-dashboard-key="tegris"] .footprint-anniversary-badge--default,
+  .footprint-overlay[data-dashboard-key="testMagnusIb"] .footprint-anniversary-badge--default,
+  .footprint-overlay[data-dashboard-key="magnus2026Funnel"] .footprint-anniversary-badge--default,
+  .footprint-overlay[data-dashboard-key="icMic"] .footprint-anniversary-badge--ic-mic {
+    top: auto;
+    bottom: clamp(62px, 5.4vh, 84px);
   }
 
   .footprint-overlay[data-dashboard-key="magnus1180"] .footprint-map-shell,
