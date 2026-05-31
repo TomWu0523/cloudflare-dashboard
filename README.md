@@ -1,10 +1,63 @@
 # Getinge SW China Installed Base Dashboard
 
-本目录是一个静态网页原型，用于展示 SW China installed base，并支持在 1180 Magnus OR Table、Tegris Dashboard 与 IC MIC Dashboard 之间切换。
+这是一个面向 Getinge SW China 的装机与项目看板。页面包含登录、产品看板切换、装机数据导入、项目录入、趋势图、客户排名、省份地图，以及全屏 Heat Map 展示。
+
+当前前端入口是 `index.html`，主要交互逻辑在 `js/app.js`，样式在 `css/style.css`。本地 Node 后台是 `server.mjs`，Cloudflare Pages Functions 在 `functions/api/`。
+
+## 当前页面结构
+
+首页登录后进入 dashboard 主界面，顶部可切换产品看板：
+
+- `Magnus Dashboard`：1180 Magnus IB 正式看板
+- `Magnus 2026 Funnel`：Magnus Funnel 正式看板
+- `Tegris Dashboard`：Tegris 正式看板
+- `IC MIC Dashboard`：IC-MIC 正式看板
+- `TEST Magnus IB`：仅 `Test` 用户可见的测试页面
+
+主界面包含：
+
+- 顶部品牌区、用户信息、退出登录、修改密码、项目录入与数据更新入口
+- KPI 区：总量、覆盖省份、本季度新增、合作伙伴等
+- 排名区：医院/客户排名与合作伙伴排名
+- 中国省份地图：支持优先级筛选与地图导航
+- 趋势图：近 12 个月与近五年趋势
+- 底部动态：最新装机/签约信息滚动展示
+- `Heat Map`：打开全屏产品热力图
+
+## Heat Map 页面
+
+5 个 Heat Map 页面共用 `footprint-overlay` 结构：
+
+- 全屏浮层：`#footprintOverlay`
+- 顶部极光氛围层：`.footprint-top-banner`
+- 顶部/下部产品纪念图层：`.footprint-anniversary-badge`
+- 右上 Getinge logo：`.footprint-brandmark`
+- 中央静态地图：`#footprintMap`
+- 左侧列表：`#footprintRail`
+- 右侧统计卡：`#footprintStats`
+- 返回按钮：`#closeFootprintMapButton`
+
+当前正式 Heat Map 使用静态 4K 底图：
+
+- `Magnus IB`：`assets/magnus-ib-rev4-4k.png`
+- `Magnus Funnel`：`assets/magnus-funnel-rev4-4k.png`
+- `Tegris`：`assets/tegris-rev4-4k.png`
+- `IC-MIC`：`assets/ic-mic-rev4-4k.png`
+
+测试 Heat Map 使用：
+
+- `Test Magnus IB`：`assets/test-pages/test-magnus-ib-heatmap-v2.png`
+
+Heat Map 中部/下部纪念图层：
+
+- Magnus / Tegris / Funnel / Test 通用图：`assets/test-pages/test-hybrid-or-30th-anniversary-badge.png`
+- IC-MIC 专用图：`assets/test-pages/ic-mic-cycle-for-life-badge.png`
+
+Heat Map 静态图映射位于 `js/app.js` 的 `footprintStaticImageSrc()`。版式、极光、标题图位置、左右信息框和返回按钮样式位于 `css/style.css` 的 `footprint-*` 样式段。
 
 ## 本地运行
 
-推荐使用内置 Node 后台运行，这样 Excel 授权用户导入后会保存到 `data/authorized-users.json`，下次打开无需重新导入：
+推荐使用内置 Node 后台运行。这样登录、改密、用户导入、装机数据导入和 Baserow 同步都能走完整接口：
 
 ```bash
 node server.mjs
@@ -16,136 +69,154 @@ node server.mjs
 http://localhost:8080
 ```
 
-注意：请不要直接用 `file://.../index.html` 打开。当前版本的登录、改密、用户导入和装机数据同步都依赖 `/api/session`、`/api/users`、`/api/dashboard-data` 这些后端接口，必须通过 `http://localhost:8080` 或线上域名访问。
+不要直接用 `file://.../index.html` 打开。当前版本依赖这些接口：
 
-## 共享给其他设备
+- `/api/session`
+- `/api/session/password`
+- `/api/users`
+- `/api/dashboard-data`
 
-如果希望你导入用户名、密码和装机数据后，其他电脑、iPad 或手机也能直接登录和浏览，请固定使用一台电脑作为“迷你后台服务器”：
-
-1. 在这台主电脑上运行：
-
-```bash
-node server.mjs
-```
-
-2. 终端会显示类似下面的局域网地址：
-
-```text
-LAN access: http://192.168.1.23:8080
-```
-
-3. 其他设备必须访问这个局域网地址，而不是访问自己的 `localhost:8080`。
-
-```text
-http://192.168.1.23:8080
-```
-
-4. 以后只需要在这台主电脑提供的页面里导入授权用户和装机数据，所有访问同一个地址的设备都会读取同一份 `data/authorized-users.json` 和 `data/dashboard-data.json`。
-
-注意：主电脑需要保持开机，并和其他设备在同一个 Wi-Fi / 局域网内。如果其他设备打不开，请检查 macOS 防火墙是否允许 Node.js 接收传入连接。
-
-仅静态预览也可以使用下面的命令，但授权用户只能保存在当前浏览器缓存中：
+如果只是静态预览，也可以临时运行：
 
 ```bash
 python3 -m http.server 8080
 ```
 
-然后访问：
+但这种方式不适合验证登录、改密、用户导入和装机数据同步。
 
-```text
-http://localhost:8080
-```
+## 局域网共享
 
-## 数据替换
+如果希望其他电脑、iPad 或手机访问同一份数据，请固定使用一台电脑作为本地后台服务器。
 
-当前测试数据写在 `js/app.js` 的 `dashboards` 配置中，每个产品看板包含：
-
-- `provinceData`：各省总装机量、最新装机场地、日期和地图坐标
-- `users`：用户排名
-- `partners`：合作伙伴销售排名
-- `updates`：底部滚动动态
-- `monthlyTrend`：近 12 个月趋势
-- `yearlyTrend`：近五年装机趋势
-- `productModels`：项目录入中的产品型号选项
-- `productLineOptions`：可选的二级产品线筛选项，例如 1180 下的 B0-B5、IC MIC 下的 S600 与 Novito
-
-后续可以改成读取 CSV、Excel 或接口数据。
-
-## 后台数据与 Excel 导入
-
-- 授权用户保存于 `data/authorized-users.json`
-- 1180、Tegris、IC MIC 装机看板数据保存于 `data/dashboard-data.json`
-- 装机数据 Excel 模版：`outputs/dashboard-data-template/dashboard-data-import-template.xlsx`
-
-在每个 dashboard 页面右上角点击“导入装机数据”即可导入该模版格式的 `.xlsx` / `.xls` 文件。模版只需要维护 `装机数据` 一张明细表，字段包括产品、型号、数量、配置、销售、销售渠道、最终客户、省份、订单时间、装机时间、保修过期时间；导入后会写入 Baserow，地图、省份汇总、用户排名、合作伙伴排名、最新动态、月度趋势与年度趋势会按明细自动生成。
-
-## Baserow 云端后台
-
-项目根目录的 `.env` 保存 Baserow API URL、token 和 table ID。启动 `node server.mjs` 后：
-
-- `Authorization User` 用于云端授权用户。当前表没有单独的用户名/密码字段，因此服务器会把用户名、密码和职位保存到 `Notes` 的内部 JSON 中，`Name` 用于显示名，`Active` 控制启用状态。
-- `Install_Base` 用于云端装机明细。页面读取它并结合 `Product_Master`、`Customer_Master`、`Sales_Partner_Master` 自动生成前台 dashboard。
-- 导入装机 Excel 后，服务器会按 `装机编号` 增量写入 Baserow：编号已存在则更新，编号不存在则新增，Excel 中没出现的旧记录会保留。若 `装机编号` 留空，系统会按产品、型号、客户、日期和渠道自动生成稳定编号。
-- 1180 与 IC MIC 的导入记录会在 `Remarks` 中自动标记 `TEST_DATA_1180` / `TEST_DATA_IC_MIC`，便于测试结束后批量删除；Tegris 不会加测试标记。
-
-`.env` 内含 token，请不要分享或提交到代码仓库。
-
-## GitHub 与 Cloudflare Pages 部署指南
-
-### 1. 本地部署前检查
-
-先在本地确认当前版本正常：
+1. 在主电脑运行：
 
 ```bash
 node server.mjs
 ```
 
-打开：
+2. 终端会显示类似：
 
 ```text
-http://localhost:8080
+LAN access: http://192.168.1.23:8080
 ```
 
-至少验证下面几项：
+3. 其他设备访问这个局域网地址：
 
-- 管理员可登录：`Maquet / 123win`
-- 普通用户可登录
-- 看板数据正常显示
-- 修改密码正常
-- 用户 Excel 导入正常
-- 装机数据 Excel 导入正常
-
-### 2. 推送到 GitHub
-
-如果当前目录还不是 Git 仓库：
-
-```bash
-git init
-git branch -M main
+```text
+http://192.168.1.23:8080
 ```
 
-提交前先检查：
+主电脑需要保持开机，并和其他设备在同一个 Wi-Fi / 局域网内。如果其他设备打不开，请检查 macOS 防火墙是否允许 Node.js 接收传入连接。
 
-```bash
-git status --short
+## 登录与权限
+
+本地后台会读取 `data/authorized-users.json`，也支持从 Baserow 读取授权用户。默认内置了一组 bootstrap 用户，便于首次登录和初始化。
+
+常用管理员账号：
+
+```text
+Maquet / 123win
 ```
 
-以下文件不应该进入仓库：
+管理员可使用页面中的用户导入功能更新授权用户。普通用户只可浏览看板和 Heat Map。
+
+`TEST Magnus IB` 仅用户名为 `Test` 的用户可见，用于测试 Heat Map 新版设计，不影响正式产品页。
+
+## 数据与导入
+
+后台数据主要来自两处：
+
+- 本地缓存：`data/dashboard-data.json`
+- 云端后台：Baserow
+
+页面右上角的 `更新数据` 支持导入 `.xlsx` / `.xls`。导入后服务器会生成或更新 dashboard 数据，并在配置了 Baserow 时同步到云端。
+
+装机数据模板：
+
+```text
+outputs/dashboard-data-template/dashboard-data-import-template.xlsx
+```
+
+Dashboard 数据结构包含：
+
+- `provinceData`：省份总量、最新客户、日期、地图坐标
+- `users`：医院/客户排名
+- `partners`：合作伙伴排名
+- `updates`：最新动态
+- `monthlyTrend`：近 12 个月趋势
+- `yearlyTrend`：近五年趋势
+- `productModels`：项目录入产品型号
+- `productLineOptions`：二级产品线筛选，例如 1180 的 B0-B5、IC-MIC 的 S600 / Novito
+
+## Baserow 配置
+
+本地 `.env` 可配置 Baserow API。`.env` 不应提交到 GitHub。
+
+```text
+BASEROW_API_URL=https://api.baserow.io
+BASEROW_TOKEN=<你的 Baserow Token>
+BASEROW_AUTH_USERS_TABLE_ID=955652
+BASEROW_INSTALL_BASE_TABLE_ID=951860
+BASEROW_PRODUCT_TABLE_ID=951856
+BASEROW_CUSTOMER_TABLE_ID=951857
+BASEROW_SALES_PARTNER_TABLE_ID=951858
+SESSION_SECRET=<随机长字符串>
+```
+
+Baserow 表用途：
+
+- `Authorization User`：授权用户
+- `Install_Base`：装机明细
+- `Product_Master`：产品主数据
+- `Customer_Master`：客户主数据
+- `Sales_Partner_Master`：渠道/合作伙伴主数据
+
+导入装机 Excel 后，服务器会按 `装机编号` 增量写入 Baserow。编号已存在则更新，编号不存在则新增。旧记录不会因为 Excel 未出现而自动删除。
+
+## 目录说明
+
+```text
+index.html                 页面结构与主要 DOM
+css/style.css              全站样式、Heat Map 版式、极光与标题图样式
+js/app.js                  dashboard 数据、交互、图表、Heat Map 静态图映射
+js/footprint3d.js          旧版/实验性 3D footprint 渲染逻辑
+server.mjs                 本地 Node 后台与 API
+functions/api/             Cloudflare Pages Functions
+assets/                    正式图片、库文件、logo、Heat Map 静态图
+assets/test-pages/         Test 页与 Heat Map 顶部纪念图资源
+data/                      本地授权用户与 dashboard 数据缓存
+outputs/                   生成物、模板、同步记录、QA 截图
+image backup/              原始备份图片，不直接作为页面引用
+scripts/                   数据同步与模板生成脚本
+```
+
+## GitHub 更新清单
+
+如果只修改最近的 Heat Map 版式或极光效果，通常需要提交：
+
+- `index.html`
+- `css/style.css`
+
+如果替换 Heat Map 静态图或顶部纪念图，还需要提交相关资源，例如：
+
+- `assets/magnus-ib-rev4-4k.png`
+- `assets/magnus-funnel-rev4-4k.png`
+- `assets/tegris-rev4-4k.png`
+- `assets/ic-mic-rev4-4k.png`
+- `assets/test-pages/test-hybrid-or-30th-anniversary-badge.png`
+- `assets/test-pages/ic-mic-cycle-for-life-badge.png`
+
+如果修改静态图映射或页面交互，还需要提交：
+
+- `js/app.js`
+
+不要提交：
 
 - `.env`
 - `data/authorized-users.json`
 - `.DS_Store`
 
-然后提交并推送：
-
-```bash
-git add .
-git commit -m "Deploy dashboard with secure auth"
-git remote add origin <你的 GitHub 仓库地址>
-git push -u origin main
-```
-
-### 3. 创建 Cloudflare Pages 项目
+## Cloudflare Pages 部署
 
 在 Cloudflare Dashboard 中：
 
@@ -155,21 +226,24 @@ git push -u origin main
 4. 选择 `Connect to Git`
 5. 连接 GitHub 仓库
 
-构建配置建议如下：
+构建配置：
 
-- Framework preset: `None`
-- Root directory: 仓库根目录
-- Build command: 留空
-- 如果界面强制要求命令，可填 `exit 0`
-- Build output directory: `/`
+```text
+Framework preset: None
+Root directory: 仓库根目录
+Build command: 留空
+Build output directory: /
+```
 
-### 4. Cloudflare 必填变量
+如果界面强制要求命令，可填：
 
-进入：
+```bash
+exit 0
+```
 
-`Settings -> Variables and Secrets`
+Cloudflare Pages 必须同时部署 `functions/api/`，否则线上登录、改密、用户导入和装机数据导入不会正常工作。
 
-在 **Production** 环境中配置：
+需要在 `Settings -> Variables and Secrets` 的 Production 环境配置：
 
 ```text
 BASEROW_API_URL=https://api.baserow.io
@@ -182,31 +256,9 @@ BASEROW_TOKEN=<你的 Baserow Token>
 SESSION_SECRET=<随机长字符串>
 ```
 
-注意：
+`BASEROW_TOKEN` 和 `SESSION_SECRET` 应配置为 Secret。
 
-- `BASEROW_TOKEN` 使用 Secret
-- `SESSION_SECRET` 使用 Secret
-- 一定要确认是配置在 **Production**，不是只配置在 Preview
-
-### 5. 当前版本依赖的 Pages Functions
-
-当前项目不能只部署静态文件，还需要同时部署整个 `functions/api/` 目录，关键接口包括：
-
-- `functions/api/session.js`
-- `functions/api/session/password.js`
-- `functions/api/users.js`
-- `functions/api/dashboard-data.js`
-
-这些接口分别负责：
-
-- 登录与登录态校验
-- 修改密码
-- 授权用户导入
-- 装机数据读取与写入
-
-### 6. 首次部署后的验证
-
-先检查接口，再检查页面。
+## 部署后验证
 
 未登录访问：
 
@@ -214,101 +266,42 @@ SESSION_SECRET=<随机长字符串>
 https://你的域名/api/session
 ```
 
-预期：返回 `401`
+预期返回 `401`。
 
-然后打开首页：
-
-```text
-https://你的域名
-```
-
-用管理员账号登录：
-
-```text
-Maquet / 123win
-```
-
-登录后建议依次验证：
+登录后建议验证：
 
 - `/api/session` 返回当前用户
 - 修改密码正常
 - 用户 Excel 导入正常
 - 装机数据导入正常
-- 普通用户可登录并浏览 dashboard
+- 4 个正式产品页可切换
+- `Test` 用户可看到 `TEST Magnus IB`
+- 5 个 Heat Map 页面能打开、返回、显示正确静态图和顶部纪念图
 
-### 7. 日常更新流程
-
-以后更新页面只需要：
-
-```bash
-git add .
-git commit -m "Update dashboard"
-git push
-```
-
-Cloudflare Pages 会自动重新部署，部署完成后直接在线验证。
-
-### 8. 常见问题排查
+## 常见问题
 
 `Failed to fetch`
-: 通常是使用了 `file://` 打开页面。请改用 `http://localhost:8080` 或线上域名。
+: 通常是通过 `file://` 打开页面。请改用 `http://localhost:8080` 或线上域名。
 
 `用户名或密码不正确`
-: 先检查 Cloudflare Production 的 `BASEROW_API_URL`、`BASEROW_AUTH_USERS_TABLE_ID`、`BASEROW_TOKEN` 是否与本地一致。
+: 检查本地 `data/authorized-users.json` 或 Cloudflare Production 的 Baserow 配置。
 
 `error 1101`
-: 通常是 Cloudflare Pages Function 运行时异常。请查看 Functions 日志或最近代码变更。
+: 通常是 Cloudflare Pages Function 运行时异常。请查看 Functions 日志和最近代码变更。
 
-改密码接口 404
-: 说明缺少 `functions/api/session/password.js`，当前版本已经包含该文件。
+改密码接口 `404`
+: 检查是否部署了 `functions/api/session/password.js`。
 
-### 9. 安全建议
+Heat Map 图片没有更新
+: 检查 `js/app.js` 的 `footprintStaticImageSrc()`，以及 `index.html` 中 CSS/JS 的 cache version。
+
+Heat Map 样式没有更新
+: 优先检查 `index.html` 中 `css/style.css?v=...` 是否已经递增，并清理浏览器缓存后刷新。
+
+## 安全建议
 
 - 不要提交 `.env`
 - 不要提交 `data/authorized-users.json`
-- 如果曾经暴露过 `BASEROW_TOKEN`，请尽快在 Baserow 中轮换
-- `SESSION_SECRET` 应使用随机长字符串，并妥善保存
-
-### Cloudflare Pages 配置
-
-如果部署在 Cloudflare Pages，不能只上传静态文件；需要同时部署整个 `functions/api/` 目录。当前登录、改密、用户导入和装机数据同步分别依赖：
-
-- `functions/api/session.js`
-- `functions/api/session/password.js`
-- `functions/api/users.js`
-- `functions/api/dashboard-data.js`
-
-这样线上登录、修改密码、用户 Excel 导入和装机 Excel 导入才会走 Cloudflare Pages Functions，而不是只停留在当前浏览器。
-
-在 Cloudflare Pages 的 Settings -> Environment variables 中配置：
-
-```text
-BASEROW_API_URL=https://api.baserow.io
-BASEROW_TOKEN=你的 Baserow token
-BASEROW_AUTH_USERS_TABLE_ID=955652
-BASEROW_INSTALL_BASE_TABLE_ID=951860
-BASEROW_PRODUCT_TABLE_ID=951856
-BASEROW_CUSTOMER_TABLE_ID=951857
-BASEROW_SALES_PARTNER_TABLE_ID=951858
-SESSION_SECRET=一段随机且足够长的会话签名密钥
-```
-
-配置后重新部署。线上页面访问 `/api/users` 和 `/api/dashboard-data` 都返回 200 时，用户列表和装机数据导入才会跨设备同步。
-
-Cloudflare Pages 推荐步骤：
-
-1. 新建 GitHub 仓库，把本目录里除 `.env` 以外的文件推送上去。
-2. Cloudflare Dashboard -> Workers & Pages -> Create application -> Pages -> Connect to Git。
-3. 选择仓库，Framework preset 选 `None`，Build command 留空，Build output directory 填 `/`。
-4. 部署后进入项目 Settings -> Variables and Secrets，添加上面 7 个变量。`BASEROW_TOKEN` 和 `SESSION_SECRET` 都选择 Secret。
-5. 回到 Deployments，点击 Retry deployment 或重新触发一次部署。
-6. 打开线上地址测试：
-
-```text
-https://你的域名/api/session
-https://你的域名/api/users
-https://你的域名/api/dashboard-data
-```
-
-7. 其中 `/api/session` 未登录时应返回 401，登录后再访问应返回当前用户；`/api/users` 需要管理员登录后访问；`/api/dashboard-data` 需要登录后访问。
-8. 这三个接口都正常后，同事就可以在 Cloudflare 页面右上角导入装机 Excel；数据会增量写入 Baserow，其他设备刷新即可读取最新 dashboard。
+- 不要把 `BASEROW_TOKEN` 发给无关人员
+- 如果 token 曾经暴露，请在 Baserow 中轮换
+- `SESSION_SECRET` 使用随机长字符串，并妥善保存
