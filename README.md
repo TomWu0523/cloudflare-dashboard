@@ -42,7 +42,7 @@
 - `Magnus IB`：`assets/magnus-ib-rev4-4k.png`
 - `Magnus Funnel`：`assets/magnus-funnel-rev4-4k.png`
 - `Tegris`：`assets/tegris-rev4-4k.png`
-- `IC-MIC`：`assets/ic-mic-rev4-4k.png`
+- `IC-MIC`：`assets/ic-mic-rev4-4k.png`（REV5 光柱版）
 
 测试 Heat Map 使用：
 

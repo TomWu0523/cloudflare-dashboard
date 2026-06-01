@@ -67780,7 +67780,7 @@ function footprintStaticImageSrc() {
     testMagnusIb: `${testPageAssets.magnusIbHeatMap}?v=1`,
     magnus2026Funnel: "assets/magnus-funnel-rev4-4k.png?v=1",
     tegris: "assets/tegris-rev4-4k.png?v=1",
-    icMic: "assets/ic-mic-rev4-4k.png?v=1"
+    icMic: "assets/ic-mic-rev4-4k.png?v=2"
   }[resolvedKey] || "assets/footprint-heat-map-concept.png";
 }
 
