@@ -174,6 +174,12 @@ function selectedValue(value) {
   return value?.value || value || "";
 }
 
+function funnelLineKey(record) {
+  const rate = Number(normalizedText(record.winRate || record.productModel).match(/20|40|60|80|100/)?.[0] || 0);
+  if (!rate) return "";
+  return rate < 60 ? "funnelLt60" : "funnelGe60";
+}
+
 function productKeyFromText(...values) {
   const text = values.map((value) => normalizedText(value).toLowerCase()).join(" ");
   if (/funnel|win.?rate|赢率/.test(text)) return "magnus2026Funnel";
@@ -186,8 +192,7 @@ function productKeyFromText(...values) {
 function lineKeyForRecord(record) {
   const model = normalizeModelKey(record.productModel);
   if (record.productKey === "magnus2026Funnel") {
-    const rate = normalizedText(record.winRate || record.productModel).match(/20|40|60|80|100/)?.[0];
-    return rate ? `funnel${rate}` : "";
+    return funnelLineKey(record);
   }
   if (record.productKey === "tegris") {
     if (model.includes("voip")) return "voip";

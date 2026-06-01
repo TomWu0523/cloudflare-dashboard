@@ -146,7 +146,7 @@ Dashboard 数据结构包含：
 - `monthlyTrend`：近 12 个月趋势
 - `yearlyTrend`：近五年趋势
 - `productModels`：项目录入产品型号
-- `productLineOptions`：二级产品线筛选，例如 1180 的 B0-B5、IC-MIC 的 S600 / Novito
+- `productLineOptions`：二级产品线筛选，例如 1180 的 B0-B5、Magnus Funnel 的 `<60` / `≧60`、IC-MIC 的 WD500 / HS66 / CSS600 / Novito
 
 ## Baserow 配置
 

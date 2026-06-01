@@ -387,11 +387,16 @@ function recordDate(record, dashboard = {}) {
   return record.installDate || record.salesDate || "";
 }
 
+function funnelLineKey(record) {
+  const rate = Number(normalizedText(record.winRate || record.productModel).match(/20|40|60|80|100/)?.[0] || 0);
+  if (!rate) return "";
+  return rate < 60 ? "funnelLt60" : "funnelGe60";
+}
+
 function lineKeyForRecord(record) {
   const model = normalizeModelKey(record.productModel);
   if (record.productKey === "magnus2026Funnel") {
-    const rate = normalizedText(record.winRate || record.productModel).match(/20|40|60|80|100/)?.[0];
-    return rate ? `funnel${rate}` : "";
+    return funnelLineKey(record);
   }
   if (record.productKey === "tegris") {
     if (model.includes("voip")) return "voip";

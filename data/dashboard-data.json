@@ -57941,27 +57941,15 @@
     "productLineOptions": [
       {
         "value": "all",
-        "label": "全部"
+        "label": "ALL"
       },
       {
-        "value": "funnel20",
-        "label": "20 Funnel"
+        "value": "funnelLt60",
+        "label": "<60"
       },
       {
-        "value": "funnel40",
-        "label": "40 Funnel"
-      },
-      {
-        "value": "funnel60",
-        "label": "60 Funnel"
-      },
-      {
-        "value": "funnel80",
-        "label": "80 Funnel"
-      },
-      {
-        "value": "funnel100",
-        "label": "100 Funnel"
+        "value": "funnelGe60",
+        "label": "≧60"
       }
     ],
     "provinceData": [
@@ -61107,7 +61095,7 @@
       }
     ],
     "productLineData": {
-      "funnel20": {
+      "funnelLt60": {
         "title": "Magnus 2026 Funnel",
         "rankingTitle": "Magnus 2026 Funnel 客户排名",
         "modalTitle": "Magnus 2026 Funnel 项目录入与更新",
@@ -61131,7 +61119,7 @@
         "provinceData": [
           {
             "name": "广东省",
-            "value": 8,
+            "value": 18,
             "latestSite": "深圳市龙岗区人民医院",
             "latestDate": "2026-11-30",
             "coord": [
@@ -61141,27 +61129,67 @@
           },
           {
             "name": "四川省",
-            "value": 4,
-            "latestSite": "阿坝藏族羌族自治州人民医院",
-            "latestDate": "2026-10-30",
+            "value": 12,
+            "latestSite": "凉山骨科医院",
+            "latestDate": "2026-12-30",
             "coord": [
               104.06,
               30.67
             ]
           },
           {
+            "name": "河南省",
+            "value": 12,
+            "latestSite": "河南省肿瘤医院",
+            "latestDate": "2026-12-31",
+            "coord": [
+              113.62,
+              34.75
+            ]
+          },
+          {
+            "name": "湖北省",
+            "value": 10,
+            "latestSite": "武汉市中心医院杨春湖院区",
+            "latestDate": "2026-12-31",
+            "coord": [
+              114.3,
+              30.59
+            ]
+          },
+          {
             "name": "辽宁省",
-            "value": 3,
-            "latestSite": "中国医科大学附属盛京医院",
-            "latestDate": "2026-06-30",
+            "value": 7,
+            "latestSite": "辽宁方大医院（有限公司）",
+            "latestDate": "2026-08-31",
             "coord": [
               123.43,
               41.8
             ]
           },
           {
+            "name": "北京市",
+            "value": 6,
+            "latestSite": "中国医学科学院北京协和医院",
+            "latestDate": "2026-12-31",
+            "coord": [
+              116.41,
+              39.9
+            ]
+          },
+          {
+            "name": "安徽省",
+            "value": 5,
+            "latestSite": "安徽省立医院",
+            "latestDate": "2026-12-31",
+            "coord": [
+              117.28,
+              31.86
+            ]
+          },
+          {
             "name": "江苏省",
-            "value": 3,
+            "value": 5,
             "latestSite": "江苏大学附属医院",
             "latestDate": "2026-12-17",
             "coord": [
@@ -61170,18 +61198,58 @@
             ]
           },
           {
-            "name": "安徽省",
-            "value": 2,
-            "latestSite": "阜阳市传染病医院",
+            "name": "湖南省",
+            "value": 4,
+            "latestSite": "湘乡市人民医院",
+            "latestDate": "2026-12-30",
+            "coord": [
+              112.98,
+              28.19
+            ]
+          },
+          {
+            "name": "陕西省",
+            "value": 4,
+            "latestSite": "中国人民解放军联勤保障部队第九八七医院",
+            "latestDate": "2026-12-31",
+            "coord": [
+              108.94,
+              34.34
+            ]
+          },
+          {
+            "name": "云南省",
+            "value": 3,
+            "latestSite": "玉溪市人民医院",
+            "latestDate": "2026-06-30",
+            "coord": [
+              102.71,
+              25.04
+            ]
+          },
+          {
+            "name": "河北省",
+            "value": 3,
+            "latestSite": "张家口市第一医院",
+            "latestDate": "2026-11-30",
+            "coord": [
+              114.48,
+              38.03
+            ]
+          },
+          {
+            "name": "天津市",
+            "value": 3,
+            "latestSite": "天津市第五中心医院",
             "latestDate": "2026-09-30",
             "coord": [
-              117.28,
-              31.86
+              117.2,
+              39.12
             ]
           },
           {
             "name": "广西壮族自治区",
-            "value": 2,
+            "value": 3,
             "latestSite": "广西壮族自治区人民医院",
             "latestDate": "2026-10-31",
             "coord": [
@@ -61190,33 +61258,43 @@
             ]
           },
           {
-            "name": "湖北省",
-            "value": 2,
-            "latestSite": "武汉科技大学附属天佑医院",
+            "name": "上海市",
+            "value": 3,
+            "latestSite": "上海交通大学医学院附属第九人民医院",
             "latestDate": "2026-12-31",
             "coord": [
-              114.3,
-              30.59
+              121.47,
+              31.23
             ]
           },
           {
-            "name": "河南省",
+            "name": "福建省",
             "value": 2,
-            "latestSite": "周口市中医院",
-            "latestDate": "2026-11-30",
+            "latestSite": "龙岩人民医院",
+            "latestDate": "2026-09-16",
             "coord": [
-              113.62,
-              34.75
+              119.3,
+              26.08
             ]
           },
           {
-            "name": "北京市",
-            "value": 1,
-            "latestSite": "北京市民航总医院",
-            "latestDate": "2026-03-31",
+            "name": "重庆市",
+            "value": 2,
+            "latestSite": "华中科技大学同济医学院附属协和医院重庆医院",
+            "latestDate": "2026-09-30",
             "coord": [
-              116.41,
-              39.9
+              106.55,
+              29.56
+            ]
+          },
+          {
+            "name": "宁夏回族自治区",
+            "value": 2,
+            "latestSite": "石嘴山市第一人民医院",
+            "latestDate": "2026-12-31",
+            "coord": [
+              106.27,
+              38.47
             ]
           },
           {
@@ -61230,16 +61308,6 @@
             ]
           },
           {
-            "name": "上海市",
-            "value": 1,
-            "latestSite": "复旦大学附属儿科医院",
-            "latestDate": "2026-07-31",
-            "coord": [
-              121.47,
-              31.23
-            ]
-          },
-          {
             "name": "山东省",
             "value": 1,
             "latestSite": "济南市儿童医院",
@@ -61247,6 +61315,16 @@
             "coord": [
               117,
               36.65
+            ]
+          },
+          {
+            "name": "海南省",
+            "value": 1,
+            "latestSite": "三亚中心医院",
+            "latestDate": "2026-08-31",
+            "coord": [
+              110.35,
+              20.02
             ]
           },
           {
@@ -61260,23 +61338,23 @@
             ]
           },
           {
-            "name": "天津市",
+            "name": "新疆维吾尔自治区",
             "value": 1,
-            "latestSite": "天津市第五中心医院",
+            "latestSite": "新疆维吾尔自治区肿瘤医院",
             "latestDate": "2026-09-30",
             "coord": [
-              117.2,
-              39.12
+              87.62,
+              43.82
             ]
           },
           {
-            "name": "湖南省",
+            "name": "江西省",
             "value": 1,
-            "latestSite": "湘乡市人民医院",
-            "latestDate": "2026-12-30",
+            "latestSite": "赣南医学院第一附属医院",
+            "latestDate": "2026-10-14",
             "coord": [
-              112.98,
-              28.19
+              115.86,
+              28.68
             ]
           },
           {
@@ -61288,110 +61366,90 @@
               125.32,
               43.9
             ]
-          },
-          {
-            "name": "陕西省",
-            "value": 1,
-            "latestSite": "中国人民解放军联勤保障部队第九八七医院",
-            "latestDate": "2026-12-31",
-            "coord": [
-              108.94,
-              34.34
-            ]
-          },
-          {
-            "name": "宁夏回族自治区",
-            "value": 1,
-            "latestSite": "石嘴山市第一人民医院",
-            "latestDate": "2026-12-31",
-            "coord": [
-              106.27,
-              38.47
-            ]
           }
         ],
         "users": [
+          {
+            "name": "广南县人民医院",
+            "province": "云南省",
+            "value": 2
+          },
           {
             "name": "中国医科大学附属盛京医院",
             "province": "辽宁省",
             "value": 2
           },
           {
-            "name": "北京市民航总医院",
+            "name": "北京安贞医院通州院区",
             "province": "北京市",
-            "value": 1
+            "value": 2
           },
           {
-            "name": "盘州市人民医院",
-            "province": "贵州省",
-            "value": 1
-          },
-          {
-            "name": "四川绵阳四0四医院",
-            "province": "四川省",
-            "value": 1
-          },
-          {
-            "name": "大连医科大学附属第二医院",
+            "name": "大连市中西医结合医院",
             "province": "辽宁省",
-            "value": 1
+            "value": 2
           },
           {
-            "name": "安庆市立医院",
-            "province": "安徽省",
-            "value": 1
+            "name": "辽宁方大医院（有限公司）",
+            "province": "辽宁省",
+            "value": 2
           },
           {
-            "name": "广东省第二中医院",
+            "name": "南阳市中心医院",
+            "province": "河南省",
+            "value": 2
+          },
+          {
+            "name": "广州医科大学附属妇女儿童医疗中心",
             "province": "广东省",
-            "value": 1
+            "value": 2
           },
           {
-            "name": "韶关市武江区粤北人民医院",
-            "province": "广东省",
-            "value": 1
+            "name": "西南医科大学附属医院",
+            "province": "四川省",
+            "value": 2
           }
         ],
         "partners": [
           {
             "name": "Yin Wujun",
-            "province": "广东省",
-            "value": 10
+            "province": "广西壮族自治区",
+            "value": 22
           },
           {
             "name": "Ji Zhenye",
             "province": "北京市",
-            "value": 5
+            "value": 14
           },
           {
             "name": "Pu Dongfang",
             "province": "四川省",
-            "value": 4
-          },
-          {
-            "name": "Liu Yan",
-            "province": "安徽省",
-            "value": 3
-          },
-          {
-            "name": "Jia Kaihua",
-            "province": "山西省",
-            "value": 3
-          },
-          {
-            "name": "Xu Lulu",
-            "province": "江苏省",
-            "value": 3
+            "value": 14
           },
           {
             "name": "Xia Sherya",
             "province": "湖北省",
-            "value": 3
+            "value": 14
+          },
+          {
+            "name": "Jia Kaihua",
+            "province": "河南省",
+            "value": 13
+          },
+          {
+            "name": "Liu Yan",
+            "province": "安徽省",
+            "value": 8
           },
           {
             "name": "Yuan Tony",
-            "province": "陕西省",
-            "value": 2
+            "province": "新疆维吾尔自治区",
+            "value": 7
+          },
+          {
+            "name": "Wang Jingsen",
+            "province": "河北省",
+            "value": 6
           }
         ],
         "updates": [
@@ -61399,6 +61457,16 @@
             "date": "12-31",
             "status": "下单",
             "text": "吉林大学第一医院 完成 20 Funnel 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "下单",
+            "text": "中国医学科学院北京协和医院 完成 40 Funnel 1 台"
+          },
+          {
+            "date": "12-31",
+            "status": "下单",
+            "text": "河南省肿瘤医院 完成 40 Funnel 2 台"
           },
           {
             "date": "12-31",
@@ -61414,16 +61482,6 @@
             "date": "12-31",
             "status": "下单",
             "text": "武汉科技大学附属天佑医院 完成 20 Funnel 1 台"
-          },
-          {
-            "date": "12-30",
-            "status": "下单",
-            "text": "湘乡市人民医院 完成 20 Funnel 1 台"
-          },
-          {
-            "date": "12-17",
-            "status": "下单",
-            "text": "江苏大学附属医院 完成 20 Funnel 1 台"
           }
         ],
         "monthlyTrend": [
@@ -61433,11 +61491,11 @@
           },
           {
             "month": "2026-02",
-            "installed": 0
+            "installed": 1
           },
           {
             "month": "2026-03",
-            "installed": 1
+            "installed": 2
           },
           {
             "month": "2026-04",
@@ -61449,38 +61507,56 @@
           },
           {
             "month": "2026-06",
-            "installed": 5
+            "installed": 12
           },
           {
             "month": "2026-07",
-            "installed": 3
+            "installed": 8
           },
           {
             "month": "2026-08",
-            "installed": 3
+            "installed": 17
           },
           {
             "month": "2026-09",
-            "installed": 5
+            "installed": 18
           },
           {
             "month": "2026-10",
-            "installed": 7
+            "installed": 19
           },
           {
             "month": "2026-11",
-            "installed": 4
+            "installed": 14
           },
           {
             "month": "2026-12",
-            "installed": 7
+            "installed": 19
           }
         ],
         "yearlyTrend": [],
-        "totalUnits": 36,
-        "quarterUnits": 6,
+        "totalUnits": 111,
+        "quarterUnits": 13,
         "funnelTrendYear": 2026,
         "sourceRecords": [
+          {
+            "serialNo": "O-429112",
+            "productKey": "magnus2026Funnel",
+            "productModel": "40 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1 | 1180 Columns | Opportunity O-429112 | Total Price 400000 | Stage Qualifying",
+            "installProvince": "北京市",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "北京积水潭医院",
+            "channelName": "Ji Zhenye",
+            "salesName": "Ji Zhenye",
+            "salesDate": "2026-02-28",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
           {
             "serialNo": "O-231517",
             "productKey": "magnus2026Funnel",
@@ -61491,6 +61567,24 @@
             "installCity": "",
             "salesRegion": "",
             "terminalUser": "北京市民航总医院",
+            "channelName": "Ji Zhenye",
+            "salesName": "Ji Zhenye",
+            "salesDate": "2026-03-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-436585",
+            "productKey": "magnus2026Funnel",
+            "productModel": "40 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1 | 1180 Columns | Opportunity O-436585 | Total Price 500000 | Stage Qualifying",
+            "installProvince": "北京市",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "中国人民解放军总医院",
             "channelName": "Ji Zhenye",
             "salesName": "Ji Zhenye",
             "salesDate": "2026-03-31",
@@ -61536,6 +61630,24 @@
             "gforceSystemId": ""
           },
           {
+            "serialNo": "O-474083",
+            "productKey": "magnus2026Funnel",
+            "productModel": "40 Funnel",
+            "quantity": 2,
+            "configDescription": "SW-21*OR;2*HOR广南县人民医院--昆明国药 | 1180 Columns | Opportunity O-474083 | Total Price 1200000 | Stage Qualifying",
+            "installProvince": "云南省",
+            "installCity": "广南县",
+            "salesRegion": "",
+            "terminalUser": "广南县人民医院",
+            "channelName": "Li Luke",
+            "salesName": "Li Luke",
+            "salesDate": "2026-06-10",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
             "serialNo": "O-242749",
             "productKey": "magnus2026Funnel",
             "productModel": "20 Funnel",
@@ -61566,1006 +61678,6 @@
             "channelName": "Ji Zhenye",
             "salesName": "Ji Zhenye",
             "salesDate": "2026-06-30",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-481281",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-Tegris*1,1180*1,vcs440*1,modueco*2 | 1180 Columns | Opportunity O-481281 | Total Price 650000 | Stage Qualifying",
-            "installProvince": "安徽省",
-            "installCity": "安庆市",
-            "salesRegion": "",
-            "terminalUser": "安庆市立医院",
-            "channelName": "Liu Yan",
-            "salesName": "Liu Yan",
-            "salesDate": "2026-06-30",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-472872",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1 | 1180 Columns | Opportunity O-472872 | Total Price 1200000 | Stage Qualifying",
-            "installProvince": "广东省",
-            "installCity": "广州市",
-            "salesRegion": "",
-            "terminalUser": "广东省第二中医院",
-            "channelName": "Yin Wujun",
-            "salesName": "Yin Wujun",
-            "salesDate": "2026-07-31",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-473024",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1粤北人民-广州市合众汇达 | 1180 Columns | Opportunity O-473024 | Total Price 1200000 | Stage Qualifying",
-            "installProvince": "广东省",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "韶关市武江区粤北人民医院",
-            "channelName": "Yin Wujun",
-            "salesName": "Yin Wujun",
-            "salesDate": "2026-07-31",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-232000",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1，MODUEVO*2 | 1180 Columns | Opportunity O-232000 | Total Price 500000 | Stage Qualifying",
-            "installProvince": "上海市",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "复旦大学附属儿科医院",
-            "channelName": "Liu Yan",
-            "salesName": "Liu Yan",
-            "salesDate": "2026-07-31",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-430713",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-光华院区新建-成都五院-思芃 | 1180 Columns | Opportunity O-430713 | Total Price 600000 | Stage Qualifying",
-            "installProvince": "四川省",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "成都市第五人民医院",
-            "channelName": "Pu Dongfang",
-            "salesName": "Pu Dongfang",
-            "salesDate": "2026-08-20",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-363032",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1*1180+1*Tegris+1*VCS+2*Modueco | 1180 Columns | Opportunity O-363032 | Total Price 700000 | Stage Qualifying",
-            "installProvince": "山东省",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "济南市儿童医院",
-            "channelName": "Yang Jun",
-            "salesName": "Yang Jun",
-            "salesDate": "2026-08-31",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-474232",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1广州妇儿-广州市合众汇达 | 1180 Columns | Opportunity O-474232 | Total Price 1200000 | Stage Qualifying",
-            "installProvince": "广东省",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "广州市妇女儿童医疗中心白云院区",
-            "channelName": "Yin Wujun",
-            "salesName": "Yin Wujun",
-            "salesDate": "2026-08-31",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-475375",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1 | 1180 Columns | Opportunity O-475375 | Total Price 700000 | Stage Qualifying",
-            "installProvince": "山西省",
-            "installCity": "汾阳市",
-            "salesRegion": "",
-            "terminalUser": "山西省汾阳医院",
-            "channelName": "Jia Kaihua",
-            "salesName": "Jia Kaihua",
-            "salesDate": "2026-09-30",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-471997",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1 | 1180 Columns | Opportunity O-471997 | Total Price 600000 | Stage Qualifying",
-            "installProvince": "天津市",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "天津市第五中心医院",
-            "channelName": "Wang Jingsen",
-            "salesName": "Wang Jingsen",
-            "salesDate": "2026-09-30",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-472873",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1；MODUECO*32；VCS*16；LYRA*15 | 1180 Columns | Opportunity O-472873 | Total Price 1200000 | Stage Qualifying",
-            "installProvince": "广东省",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "深圳市光明区妇幼保健院",
-            "channelName": "Yin Wujun",
-            "salesName": "Yin Wujun",
-            "salesDate": "2026-09-30",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-474559",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1深圳南方科技大学医院-广州市合众汇达 | 1180 Columns | Opportunity O-474559 | Total Price 1200000 | Stage Qualifying",
-            "installProvince": "广东省",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "南方科技大学医院",
-            "channelName": "Yin Wujun",
-            "salesName": "Yin Wujun",
-            "salesDate": "2026-09-30",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-309703",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1,VCS64*1，modueco*2 | 1180 Columns | Opportunity O-309703 | Total Price 500000 | Stage Qualifying",
-            "installProvince": "安徽省",
-            "installCity": "阜阳市",
-            "salesRegion": "",
-            "terminalUser": "阜阳市传染病医院",
-            "channelName": "Liu Yan",
-            "salesName": "Liu Yan",
-            "salesDate": "2026-09-30",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-429316",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1×1180；1×VCS，2×Modueco | 1180 Columns | Opportunity O-429316 | Total Price 1900000 | Stage Qualifying",
-            "installProvince": "江苏省",
-            "installCity": "滨海县",
-            "salesRegion": "",
-            "terminalUser": "滨海县人民医院",
-            "channelName": "Xu Lulu",
-            "salesName": "Xu Lulu",
-            "salesDate": "2026-10-06",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-475115",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-HOR*1-天府新区人民-思芃 | 1180 Columns | Opportunity O-475115 | Total Price 600000 | Stage Qualifying",
-            "installProvince": "四川省",
-            "installCity": "成都市",
-            "salesRegion": "",
-            "terminalUser": "四川天府新区人民医院",
-            "channelName": "Pu Dongfang",
-            "salesName": "Pu Dongfang",
-            "salesDate": "2026-10-30",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-537008",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-HOR*1-阿坝州人民-思芃 | 1180 Columns | Opportunity O-537008 | Total Price 600000 | Stage Qualifying",
-            "installProvince": "四川省",
-            "installCity": "阿坝县",
-            "salesRegion": "",
-            "terminalUser": "阿坝藏族羌族自治州人民医院",
-            "channelName": "Pu Dongfang",
-            "salesName": "Pu Dongfang",
-            "salesDate": "2026-10-30",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-468503",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1广西医科大肿瘤 | 1180 Columns | Opportunity O-468503 | Total Price 1200000 | Stage Qualifying",
-            "installProvince": "广西壮族自治区",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "广西医科大学附属肿瘤医院",
-            "channelName": "Yin Wujun",
-            "salesName": "Yin Wujun",
-            "salesDate": "2026-10-31",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-473023",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1 | 1180 Columns | Opportunity O-473023 | Total Price 1200000 | Stage Qualifying",
-            "installProvince": "广东省",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "珠海市人民医院医疗集团",
-            "channelName": "Yin Wujun",
-            "salesName": "Yin Wujun",
-            "salesDate": "2026-10-31",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-475252",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1广西区人民 | 1180 Columns | Opportunity O-475252 | Total Price 600000 | Stage Qualifying",
-            "installProvince": "广西壮族自治区",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "广西壮族自治区人民医院",
-            "channelName": "Yin Wujun",
-            "salesName": "Yin Wujun",
-            "salesDate": "2026-10-31",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-535460",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1龙岗中心-广州市合众汇达 | 1180 Columns | Opportunity O-535460 | Total Price 1200000 | Stage Qualifying",
-            "installProvince": "广东省",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "深圳市龙岗中心医院",
-            "channelName": "Yin Wujun",
-            "salesName": "Yin Wujun",
-            "salesDate": "2026-10-31",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-402559",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-Lyra*12，1180*1武汉市中心医院后湖院区-中建投 | 1180 Columns | Opportunity O-402559 | Total Price 800000 | Stage Qualifying",
-            "installProvince": "湖北省",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "武汉市中心医院后湖院区",
-            "channelName": "Xia Sherya",
-            "salesName": "Xia Sherya",
-            "salesDate": "2026-11-01",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-428754",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1，VCSⅡ*1，tegris*1 | 1180 Columns | Opportunity O-428754 | Total Price 600000 | Stage Qualifying",
-            "installProvince": "河南省",
-            "installCity": "沁阳市",
-            "salesRegion": "",
-            "terminalUser": "沁阳市人民医院",
-            "channelName": "Jia Kaihua",
-            "salesName": "Jia Kaihua",
-            "salesDate": "2026-11-13",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-443205",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-lyra*10，SW-VST*10，modueco*60，1180*1 | 1180 Columns | Opportunity O-443205 | Total Price 700000 | Stage Qualifying",
-            "installProvince": "河南省",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "周口市中医院",
-            "channelName": "Jia Kaihua",
-            "salesName": "Jia Kaihua",
-            "salesDate": "2026-11-30",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-535461",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1龙岗人民-广州市合众汇达 | 1180 Columns | Opportunity O-535461 | Total Price 1200000 | Stage Qualifying",
-            "installProvince": "广东省",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "深圳市龙岗区人民医院",
-            "channelName": "Yin Wujun",
-            "salesName": "Yin Wujun",
-            "salesDate": "2026-11-30",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-443285",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1×1180 | 1180 Columns | Opportunity O-443285 | Total Price 1500000 | Stage Qualifying",
-            "installProvince": "江苏省",
-            "installCity": "靖江市",
-            "salesRegion": "",
-            "terminalUser": "靖江市人民医院",
-            "channelName": "Xu Lulu",
-            "salesName": "Xu Lulu",
-            "salesDate": "2026-12-01",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-535469",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-4×1118.10，4×VCS,1×1180 | 1180 Columns | Opportunity O-535469 | Total Price 1600000 | Stage Qualifying",
-            "installProvince": "江苏省",
-            "installCity": "镇江市",
-            "salesRegion": "",
-            "terminalUser": "江苏大学附属医院",
-            "channelName": "Xu Lulu",
-            "salesName": "Xu Lulu",
-            "salesDate": "2026-12-17",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-474483",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-OR*30湘乡市人民-博悦汇 | 1180 Columns | Opportunity O-474483 | Total Price 600000 | Stage Qualifying",
-            "installProvince": "湖南省",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "湘乡市人民医院",
-            "channelName": "Xia Sherya",
-            "salesName": "Xia Sherya",
-            "salesDate": "2026-12-30",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-352831",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1+MODUECO*3+VCS II*1 | 1180 Columns | Opportunity O-352831 | Total Price 1200000 | Stage Qualifying",
-            "installProvince": "吉林省",
-            "installCity": "长春市",
-            "salesRegion": "",
-            "terminalUser": "吉林大学第一医院",
-            "channelName": "Ji Zhenye",
-            "salesName": "Ji Zhenye",
-            "salesDate": "2026-12-31",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-343127",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1*1180 宝鸡987医院 | 1180 Columns | Opportunity O-343127 | Total Price 600000 | Stage Qualifying",
-            "installProvince": "陕西省",
-            "installCity": "西安市",
-            "salesRegion": "",
-            "terminalUser": "中国人民解放军联勤保障部队第九八七医院",
-            "channelName": "Yuan Tony",
-            "salesName": "Yuan Tony",
-            "salesDate": "2026-12-31",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-435038",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1*1180-石嘴山市一 | 1180 Columns | Opportunity O-435038 | Total Price 600000 | Stage Qualifying",
-            "installProvince": "宁夏回族自治区",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "石嘴山市第一人民医院",
-            "channelName": "Yuan Tony",
-            "salesName": "Yuan Tony",
-            "salesDate": "2026-12-31",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-474451",
-            "productKey": "magnus2026Funnel",
-            "productModel": "20 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1；Tegris*1；Moduevo*2；VCSⅡ*1天佑医院-中建投 | 1180 Columns | Opportunity O-474451 | Total Price 600000 | Stage Qualifying",
-            "installProvince": "湖北省",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "武汉科技大学附属天佑医院",
-            "channelName": "Xia Sherya",
-            "salesName": "Xia Sherya",
-            "salesDate": "2026-12-31",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          }
-        ]
-      },
-      "funnel40": {
-        "title": "Magnus 2026 Funnel",
-        "rankingTitle": "Magnus 2026 Funnel 客户排名",
-        "modalTitle": "Magnus 2026 Funnel 项目录入与更新",
-        "totalUnitsLabel": "台 1180 Magnus Funnel",
-        "visual": {
-          "type": "image",
-          "src": "assets/1180-magnus-hybrid-column.png",
-          "alt": "1180 Magnus operating table system"
-        },
-        "productModels": [
-          "20 Funnel",
-          "40 Funnel",
-          "60 Funnel",
-          "80 Funnel",
-          "100 Funnel"
-        ],
-        "lineTotalUnitsLabelTemplate": "台 {line} 项目",
-        "hideYearlyTrend": true,
-        "dateBasis": "order",
-        "productLineOptions": [],
-        "provinceData": [
-          {
-            "name": "广东省",
-            "value": 10,
-            "latestSite": "中山大学孙逸仙纪念医院",
-            "latestDate": "2026-10-31",
-            "coord": [
-              113.27,
-              23.13
-            ]
-          },
-          {
-            "name": "河南省",
-            "value": 10,
-            "latestSite": "河南省肿瘤医院",
-            "latestDate": "2026-12-31",
-            "coord": [
-              113.62,
-              34.75
-            ]
-          },
-          {
-            "name": "湖北省",
-            "value": 8,
-            "latestSite": "武汉市中心医院杨春湖院区",
-            "latestDate": "2026-12-31",
-            "coord": [
-              114.3,
-              30.59
-            ]
-          },
-          {
-            "name": "四川省",
-            "value": 8,
-            "latestSite": "凉山骨科医院",
-            "latestDate": "2026-12-30",
-            "coord": [
-              104.06,
-              30.67
-            ]
-          },
-          {
-            "name": "北京市",
-            "value": 5,
-            "latestSite": "中国医学科学院北京协和医院",
-            "latestDate": "2026-12-31",
-            "coord": [
-              116.41,
-              39.9
-            ]
-          },
-          {
-            "name": "辽宁省",
-            "value": 4,
-            "latestSite": "辽宁方大医院（有限公司）",
-            "latestDate": "2026-08-31",
-            "coord": [
-              123.43,
-              41.8
-            ]
-          },
-          {
-            "name": "云南省",
-            "value": 3,
-            "latestSite": "玉溪市人民医院",
-            "latestDate": "2026-06-30",
-            "coord": [
-              102.71,
-              25.04
-            ]
-          },
-          {
-            "name": "河北省",
-            "value": 3,
-            "latestSite": "张家口市第一医院",
-            "latestDate": "2026-11-30",
-            "coord": [
-              114.48,
-              38.03
-            ]
-          },
-          {
-            "name": "湖南省",
-            "value": 3,
-            "latestSite": "平江县第一人民医院",
-            "latestDate": "2026-11-30",
-            "coord": [
-              112.98,
-              28.19
-            ]
-          },
-          {
-            "name": "陕西省",
-            "value": 3,
-            "latestSite": "神木市医院",
-            "latestDate": "2026-12-30",
-            "coord": [
-              108.94,
-              34.34
-            ]
-          },
-          {
-            "name": "安徽省",
-            "value": 3,
-            "latestSite": "安徽省立医院",
-            "latestDate": "2026-12-31",
-            "coord": [
-              117.28,
-              31.86
-            ]
-          },
-          {
-            "name": "天津市",
-            "value": 2,
-            "latestSite": "天津市人民医院",
-            "latestDate": "2026-07-31",
-            "coord": [
-              117.2,
-              39.12
-            ]
-          },
-          {
-            "name": "福建省",
-            "value": 2,
-            "latestSite": "龙岩人民医院",
-            "latestDate": "2026-09-16",
-            "coord": [
-              119.3,
-              26.08
-            ]
-          },
-          {
-            "name": "江苏省",
-            "value": 2,
-            "latestSite": "张家港市第一人民医院",
-            "latestDate": "2026-09-09",
-            "coord": [
-              118.76,
-              32.06
-            ]
-          },
-          {
-            "name": "重庆市",
-            "value": 2,
-            "latestSite": "华中科技大学同济医学院附属协和医院重庆医院",
-            "latestDate": "2026-09-30",
-            "coord": [
-              106.55,
-              29.56
-            ]
-          },
-          {
-            "name": "上海市",
-            "value": 2,
-            "latestSite": "上海交通大学医学院附属第九人民医院",
-            "latestDate": "2026-12-31",
-            "coord": [
-              121.47,
-              31.23
-            ]
-          },
-          {
-            "name": "广西壮族自治区",
-            "value": 1,
-            "latestSite": "中南大学湘雅二医院桂林医院",
-            "latestDate": "2026-07-31",
-            "coord": [
-              108.32,
-              22.82
-            ]
-          },
-          {
-            "name": "海南省",
-            "value": 1,
-            "latestSite": "三亚中心医院",
-            "latestDate": "2026-08-31",
-            "coord": [
-              110.35,
-              20.02
-            ]
-          },
-          {
-            "name": "新疆维吾尔自治区",
-            "value": 1,
-            "latestSite": "新疆维吾尔自治区肿瘤医院",
-            "latestDate": "2026-09-30",
-            "coord": [
-              87.62,
-              43.82
-            ]
-          },
-          {
-            "name": "江西省",
-            "value": 1,
-            "latestSite": "赣南医学院第一附属医院",
-            "latestDate": "2026-10-14",
-            "coord": [
-              115.86,
-              28.68
-            ]
-          },
-          {
-            "name": "宁夏回族自治区",
-            "value": 1,
-            "latestSite": "宁夏回族自治区第五人民医院",
-            "latestDate": "2026-12-30",
-            "coord": [
-              106.27,
-              38.47
-            ]
-          }
-        ],
-        "users": [
-          {
-            "name": "广南县人民医院",
-            "province": "云南省",
-            "value": 2
-          },
-          {
-            "name": "北京安贞医院通州院区",
-            "province": "北京市",
-            "value": 2
-          },
-          {
-            "name": "大连市中西医结合医院",
-            "province": "辽宁省",
-            "value": 2
-          },
-          {
-            "name": "辽宁方大医院（有限公司）",
-            "province": "辽宁省",
-            "value": 2
-          },
-          {
-            "name": "南阳市中心医院",
-            "province": "河南省",
-            "value": 2
-          },
-          {
-            "name": "广州医科大学附属妇女儿童医疗中心",
-            "province": "广东省",
-            "value": 2
-          },
-          {
-            "name": "西南医科大学附属医院",
-            "province": "四川省",
-            "value": 2
-          },
-          {
-            "name": "四川大学华西天府医院",
-            "province": "四川省",
-            "value": 2
-          }
-        ],
-        "partners": [
-          {
-            "name": "Yin Wujun",
-            "province": "广西壮族自治区",
-            "value": 12
-          },
-          {
-            "name": "Xia Sherya",
-            "province": "湖北省",
-            "value": 11
-          },
-          {
-            "name": "Jia Kaihua",
-            "province": "河南省",
-            "value": 10
-          },
-          {
-            "name": "Pu Dongfang",
-            "province": "四川省",
-            "value": 10
-          },
-          {
-            "name": "Ji Zhenye",
-            "province": "北京市",
-            "value": 9
-          },
-          {
-            "name": "Wang Jingsen",
-            "province": "河北省",
-            "value": 5
-          },
-          {
-            "name": "Yuan Tony",
-            "province": "新疆维吾尔自治区",
-            "value": 5
-          },
-          {
-            "name": "Liu Yan",
-            "province": "上海市",
-            "value": 5
-          }
-        ],
-        "updates": [
-          {
-            "date": "12-31",
-            "status": "下单",
-            "text": "中国医学科学院北京协和医院 完成 40 Funnel 1 台"
-          },
-          {
-            "date": "12-31",
-            "status": "下单",
-            "text": "河南省肿瘤医院 完成 40 Funnel 2 台"
-          },
-          {
-            "date": "12-31",
-            "status": "下单",
-            "text": "武汉大学人民医院光谷院区 完成 40 Funnel 1 台"
-          },
-          {
-            "date": "12-31",
-            "status": "下单",
-            "text": "武汉市中心医院杨春湖院区 完成 40 Funnel 1 台"
-          },
-          {
-            "date": "12-31",
-            "status": "下单",
-            "text": "安徽省立医院 完成 40 Funnel 1 台"
-          },
-          {
-            "date": "12-31",
-            "status": "下单",
-            "text": "上海交通大学医学院附属第九人民医院 完成 40 Funnel 1 台"
-          }
-        ],
-        "monthlyTrend": [
-          {
-            "month": "2026-01",
-            "installed": 0
-          },
-          {
-            "month": "2026-02",
-            "installed": 1
-          },
-          {
-            "month": "2026-03",
-            "installed": 1
-          },
-          {
-            "month": "2026-04",
-            "installed": 0
-          },
-          {
-            "month": "2026-05",
-            "installed": 0
-          },
-          {
-            "month": "2026-06",
-            "installed": 7
-          },
-          {
-            "month": "2026-07",
-            "installed": 5
-          },
-          {
-            "month": "2026-08",
-            "installed": 14
-          },
-          {
-            "month": "2026-09",
-            "installed": 13
-          },
-          {
-            "month": "2026-10",
-            "installed": 12
-          },
-          {
-            "month": "2026-11",
-            "installed": 10
-          },
-          {
-            "month": "2026-12",
-            "installed": 12
-          }
-        ],
-        "yearlyTrend": [],
-        "totalUnits": 75,
-        "quarterUnits": 7,
-        "funnelTrendYear": 2026,
-        "sourceRecords": [
-          {
-            "serialNo": "O-429112",
-            "productKey": "magnus2026Funnel",
-            "productModel": "40 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1 | 1180 Columns | Opportunity O-429112 | Total Price 400000 | Stage Qualifying",
-            "installProvince": "北京市",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "北京积水潭医院",
-            "channelName": "Ji Zhenye",
-            "salesName": "Ji Zhenye",
-            "salesDate": "2026-02-28",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-436585",
-            "productKey": "magnus2026Funnel",
-            "productModel": "40 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1 | 1180 Columns | Opportunity O-436585 | Total Price 500000 | Stage Qualifying",
-            "installProvince": "北京市",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "中国人民解放军总医院",
-            "channelName": "Ji Zhenye",
-            "salesName": "Ji Zhenye",
-            "salesDate": "2026-03-31",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-474083",
-            "productKey": "magnus2026Funnel",
-            "productModel": "40 Funnel",
-            "quantity": 2,
-            "configDescription": "SW-21*OR;2*HOR广南县人民医院--昆明国药 | 1180 Columns | Opportunity O-474083 | Total Price 1200000 | Stage Qualifying",
-            "installProvince": "云南省",
-            "installCity": "广南县",
-            "salesRegion": "",
-            "terminalUser": "广南县人民医院",
-            "channelName": "Li Luke",
-            "salesName": "Li Luke",
-            "salesDate": "2026-06-10",
             "installDate": "",
             "warrantyExpireDate": "",
             "winRate": "",
@@ -62644,6 +61756,24 @@
             "gforceSystemId": ""
           },
           {
+            "serialNo": "O-481281",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-Tegris*1,1180*1,vcs440*1,modueco*2 | 1180 Columns | Opportunity O-481281 | Total Price 650000 | Stage Qualifying",
+            "installProvince": "安徽省",
+            "installCity": "安庆市",
+            "salesRegion": "",
+            "terminalUser": "安庆市立医院",
+            "channelName": "Liu Yan",
+            "salesName": "Liu Yan",
+            "salesDate": "2026-06-30",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
             "serialNo": "O-394198",
             "productKey": "magnus2026Funnel",
             "productModel": "40 Funnel",
@@ -62698,6 +61828,42 @@
             "gforceSystemId": ""
           },
           {
+            "serialNo": "O-472872",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1 | 1180 Columns | Opportunity O-472872 | Total Price 1200000 | Stage Qualifying",
+            "installProvince": "广东省",
+            "installCity": "广州市",
+            "salesRegion": "",
+            "terminalUser": "广东省第二中医院",
+            "channelName": "Yin Wujun",
+            "salesName": "Yin Wujun",
+            "salesDate": "2026-07-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-473024",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1粤北人民-广州市合众汇达 | 1180 Columns | Opportunity O-473024 | Total Price 1200000 | Stage Qualifying",
+            "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "韶关市武江区粤北人民医院",
+            "channelName": "Yin Wujun",
+            "salesName": "Yin Wujun",
+            "salesDate": "2026-07-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
             "serialNo": "O-541177",
             "productKey": "magnus2026Funnel",
             "productModel": "40 Funnel",
@@ -62728,6 +61894,42 @@
             "channelName": "Xia Sherya",
             "salesName": "Xia Sherya",
             "salesDate": "2026-07-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-232000",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1，MODUEVO*2 | 1180 Columns | Opportunity O-232000 | Total Price 500000 | Stage Qualifying",
+            "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "复旦大学附属儿科医院",
+            "channelName": "Liu Yan",
+            "salesName": "Liu Yan",
+            "salesDate": "2026-07-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-430713",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-光华院区新建-成都五院-思芃 | 1180 Columns | Opportunity O-430713 | Total Price 600000 | Stage Qualifying",
+            "installProvince": "四川省",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "成都市第五人民医院",
+            "channelName": "Pu Dongfang",
+            "salesName": "Pu Dongfang",
+            "salesDate": "2026-08-20",
             "installDate": "",
             "warrantyExpireDate": "",
             "winRate": "",
@@ -62860,6 +62062,24 @@
             "gforceSystemId": ""
           },
           {
+            "serialNo": "O-363032",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1*1180+1*Tegris+1*VCS+2*Modueco | 1180 Columns | Opportunity O-363032 | Total Price 700000 | Stage Qualifying",
+            "installProvince": "山东省",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "济南市儿童医院",
+            "channelName": "Yang Jun",
+            "salesName": "Yang Jun",
+            "salesDate": "2026-08-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
             "serialNo": "O-410997",
             "productKey": "magnus2026Funnel",
             "productModel": "40 Funnel",
@@ -62887,6 +62107,24 @@
             "installCity": "",
             "salesRegion": "",
             "terminalUser": "三亚中心医院",
+            "channelName": "Yin Wujun",
+            "salesName": "Yin Wujun",
+            "salesDate": "2026-08-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-474232",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1广州妇儿-广州市合众汇达 | 1180 Columns | Opportunity O-474232 | Total Price 1200000 | Stage Qualifying",
+            "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "广州市妇女儿童医疗中心白云院区",
             "channelName": "Yin Wujun",
             "salesName": "Yin Wujun",
             "salesDate": "2026-08-31",
@@ -63022,6 +62260,24 @@
             "gforceSystemId": ""
           },
           {
+            "serialNo": "O-475375",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1 | 1180 Columns | Opportunity O-475375 | Total Price 700000 | Stage Qualifying",
+            "installProvince": "山西省",
+            "installCity": "汾阳市",
+            "salesRegion": "",
+            "terminalUser": "山西省汾阳医院",
+            "channelName": "Jia Kaihua",
+            "salesName": "Jia Kaihua",
+            "salesDate": "2026-09-30",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
             "serialNo": "O-535479",
             "productKey": "magnus2026Funnel",
             "productModel": "40 Funnel",
@@ -63033,6 +62289,24 @@
             "terminalUser": "新疆维吾尔自治区肿瘤医院",
             "channelName": "Yuan Tony",
             "salesName": "Yuan Tony",
+            "salesDate": "2026-09-30",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-471997",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1 | 1180 Columns | Opportunity O-471997 | Total Price 600000 | Stage Qualifying",
+            "installProvince": "天津市",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "天津市第五中心医院",
+            "channelName": "Wang Jingsen",
+            "salesName": "Wang Jingsen",
             "salesDate": "2026-09-30",
             "installDate": "",
             "warrantyExpireDate": "",
@@ -63112,6 +62386,42 @@
             "gforceSystemId": ""
           },
           {
+            "serialNo": "O-472873",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1；MODUECO*32；VCS*16；LYRA*15 | 1180 Columns | Opportunity O-472873 | Total Price 1200000 | Stage Qualifying",
+            "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "深圳市光明区妇幼保健院",
+            "channelName": "Yin Wujun",
+            "salesName": "Yin Wujun",
+            "salesDate": "2026-09-30",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-474559",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1深圳南方科技大学医院-广州市合众汇达 | 1180 Columns | Opportunity O-474559 | Total Price 1200000 | Stage Qualifying",
+            "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "南方科技大学医院",
+            "channelName": "Yin Wujun",
+            "salesName": "Yin Wujun",
+            "salesDate": "2026-09-30",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
             "serialNo": "O-429456",
             "productKey": "magnus2026Funnel",
             "productModel": "40 Funnel",
@@ -63142,6 +62452,42 @@
             "channelName": "Xia Sherya",
             "salesName": "Xia Sherya",
             "salesDate": "2026-09-30",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-309703",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1,VCS64*1，modueco*2 | 1180 Columns | Opportunity O-309703 | Total Price 500000 | Stage Qualifying",
+            "installProvince": "安徽省",
+            "installCity": "阜阳市",
+            "salesRegion": "",
+            "terminalUser": "阜阳市传染病医院",
+            "channelName": "Liu Yan",
+            "salesName": "Liu Yan",
+            "salesDate": "2026-09-30",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-429316",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1×1180；1×VCS，2×Modueco | 1180 Columns | Opportunity O-429316 | Total Price 1900000 | Stage Qualifying",
+            "installProvince": "江苏省",
+            "installCity": "滨海县",
+            "salesRegion": "",
+            "terminalUser": "滨海县人民医院",
+            "channelName": "Xu Lulu",
+            "salesName": "Xu Lulu",
+            "salesDate": "2026-10-06",
             "installDate": "",
             "warrantyExpireDate": "",
             "winRate": "",
@@ -63220,6 +62566,42 @@
             "gforceSystemId": ""
           },
           {
+            "serialNo": "O-475115",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-HOR*1-天府新区人民-思芃 | 1180 Columns | Opportunity O-475115 | Total Price 600000 | Stage Qualifying",
+            "installProvince": "四川省",
+            "installCity": "成都市",
+            "salesRegion": "",
+            "terminalUser": "四川天府新区人民医院",
+            "channelName": "Pu Dongfang",
+            "salesName": "Pu Dongfang",
+            "salesDate": "2026-10-30",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-537008",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-HOR*1-阿坝州人民-思芃 | 1180 Columns | Opportunity O-537008 | Total Price 600000 | Stage Qualifying",
+            "installProvince": "四川省",
+            "installCity": "阿坝县",
+            "salesRegion": "",
+            "terminalUser": "阿坝藏族羌族自治州人民医院",
+            "channelName": "Pu Dongfang",
+            "salesName": "Pu Dongfang",
+            "salesDate": "2026-10-30",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
             "serialNo": "O-231984",
             "productKey": "magnus2026Funnel",
             "productModel": "40 Funnel",
@@ -63247,6 +62629,78 @@
             "installCity": "",
             "salesRegion": "",
             "terminalUser": "中山大学孙逸仙纪念医院",
+            "channelName": "Yin Wujun",
+            "salesName": "Yin Wujun",
+            "salesDate": "2026-10-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-468503",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1广西医科大肿瘤 | 1180 Columns | Opportunity O-468503 | Total Price 1200000 | Stage Qualifying",
+            "installProvince": "广西壮族自治区",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "广西医科大学附属肿瘤医院",
+            "channelName": "Yin Wujun",
+            "salesName": "Yin Wujun",
+            "salesDate": "2026-10-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-473023",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1 | 1180 Columns | Opportunity O-473023 | Total Price 1200000 | Stage Qualifying",
+            "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "珠海市人民医院医疗集团",
+            "channelName": "Yin Wujun",
+            "salesName": "Yin Wujun",
+            "salesDate": "2026-10-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-475252",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1广西区人民 | 1180 Columns | Opportunity O-475252 | Total Price 600000 | Stage Qualifying",
+            "installProvince": "广西壮族自治区",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "广西壮族自治区人民医院",
+            "channelName": "Yin Wujun",
+            "salesName": "Yin Wujun",
+            "salesDate": "2026-10-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-535460",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1龙岗中心-广州市合众汇达 | 1180 Columns | Opportunity O-535460 | Total Price 1200000 | Stage Qualifying",
+            "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "深圳市龙岗中心医院",
             "channelName": "Yin Wujun",
             "salesName": "Yin Wujun",
             "salesDate": "2026-10-31",
@@ -63310,6 +62764,42 @@
             "gforceSystemId": ""
           },
           {
+            "serialNo": "O-402559",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-Lyra*12，1180*1武汉市中心医院后湖院区-中建投 | 1180 Columns | Opportunity O-402559 | Total Price 800000 | Stage Qualifying",
+            "installProvince": "湖北省",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "武汉市中心医院后湖院区",
+            "channelName": "Xia Sherya",
+            "salesName": "Xia Sherya",
+            "salesDate": "2026-11-01",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-428754",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1，VCSⅡ*1，tegris*1 | 1180 Columns | Opportunity O-428754 | Total Price 600000 | Stage Qualifying",
+            "installProvince": "河南省",
+            "installCity": "沁阳市",
+            "salesRegion": "",
+            "terminalUser": "沁阳市人民医院",
+            "channelName": "Jia Kaihua",
+            "salesName": "Jia Kaihua",
+            "salesDate": "2026-11-13",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
             "serialNo": "O-465714",
             "productKey": "magnus2026Funnel",
             "productModel": "40 Funnel",
@@ -63364,6 +62854,24 @@
             "gforceSystemId": ""
           },
           {
+            "serialNo": "O-443205",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-lyra*10，SW-VST*10，modueco*60，1180*1 | 1180 Columns | Opportunity O-443205 | Total Price 700000 | Stage Qualifying",
+            "installProvince": "河南省",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "周口市中医院",
+            "channelName": "Jia Kaihua",
+            "salesName": "Jia Kaihua",
+            "salesDate": "2026-11-30",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
             "serialNo": "O-448007",
             "productKey": "magnus2026Funnel",
             "productModel": "40 Funnel",
@@ -63393,6 +62901,24 @@
             "terminalUser": "张家口市第一医院",
             "channelName": "Wang Jingsen",
             "salesName": "Wang Jingsen",
+            "salesDate": "2026-11-30",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-535461",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1龙岗人民-广州市合众汇达 | 1180 Columns | Opportunity O-535461 | Total Price 1200000 | Stage Qualifying",
+            "installProvince": "广东省",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "深圳市龙岗区人民医院",
+            "channelName": "Yin Wujun",
+            "salesName": "Yin Wujun",
             "salesDate": "2026-11-30",
             "installDate": "",
             "warrantyExpireDate": "",
@@ -63472,6 +62998,24 @@
             "gforceSystemId": ""
           },
           {
+            "serialNo": "O-443285",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1×1180 | 1180 Columns | Opportunity O-443285 | Total Price 1500000 | Stage Qualifying",
+            "installProvince": "江苏省",
+            "installCity": "靖江市",
+            "salesRegion": "",
+            "terminalUser": "靖江市人民医院",
+            "channelName": "Xu Lulu",
+            "salesName": "Xu Lulu",
+            "salesDate": "2026-12-01",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
             "serialNo": "O-443248",
             "productKey": "magnus2026Funnel",
             "productModel": "40 Funnel",
@@ -63484,6 +63028,24 @@
             "channelName": "Pu Dongfang",
             "salesName": "Pu Dongfang",
             "salesDate": "2026-12-10",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-535469",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-4×1118.10，4×VCS,1×1180 | 1180 Columns | Opportunity O-535469 | Total Price 1600000 | Stage Qualifying",
+            "installProvince": "江苏省",
+            "installCity": "镇江市",
+            "salesRegion": "",
+            "terminalUser": "江苏大学附属医院",
+            "channelName": "Xu Lulu",
+            "salesName": "Xu Lulu",
+            "salesDate": "2026-12-17",
             "installDate": "",
             "warrantyExpireDate": "",
             "winRate": "",
@@ -63562,6 +63124,42 @@
             "gforceSystemId": ""
           },
           {
+            "serialNo": "O-474483",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-OR*30湘乡市人民-博悦汇 | 1180 Columns | Opportunity O-474483 | Total Price 600000 | Stage Qualifying",
+            "installProvince": "湖南省",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "湘乡市人民医院",
+            "channelName": "Xia Sherya",
+            "salesName": "Xia Sherya",
+            "salesDate": "2026-12-30",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-352831",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1+MODUECO*3+VCS II*1 | 1180 Columns | Opportunity O-352831 | Total Price 1200000 | Stage Qualifying",
+            "installProvince": "吉林省",
+            "installCity": "长春市",
+            "salesRegion": "",
+            "terminalUser": "吉林大学第一医院",
+            "channelName": "Ji Zhenye",
+            "salesName": "Ji Zhenye",
+            "salesDate": "2026-12-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
             "serialNo": "O-421775",
             "productKey": "magnus2026Funnel",
             "productModel": "40 Funnel",
@@ -63591,6 +63189,60 @@
             "terminalUser": "河南省肿瘤医院",
             "channelName": "Jia Kaihua",
             "salesName": "Jia Kaihua",
+            "salesDate": "2026-12-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-343127",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1*1180 宝鸡987医院 | 1180 Columns | Opportunity O-343127 | Total Price 600000 | Stage Qualifying",
+            "installProvince": "陕西省",
+            "installCity": "西安市",
+            "salesRegion": "",
+            "terminalUser": "中国人民解放军联勤保障部队第九八七医院",
+            "channelName": "Yuan Tony",
+            "salesName": "Yuan Tony",
+            "salesDate": "2026-12-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-435038",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1*1180-石嘴山市一 | 1180 Columns | Opportunity O-435038 | Total Price 600000 | Stage Qualifying",
+            "installProvince": "宁夏回族自治区",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "石嘴山市第一人民医院",
+            "channelName": "Yuan Tony",
+            "salesName": "Yuan Tony",
+            "salesDate": "2026-12-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-474451",
+            "productKey": "magnus2026Funnel",
+            "productModel": "20 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1；Tegris*1；Moduevo*2；VCSⅡ*1天佑医院-中建投 | 1180 Columns | Opportunity O-474451 | Total Price 600000 | Stage Qualifying",
+            "installProvince": "湖北省",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "武汉科技大学附属天佑医院",
+            "channelName": "Xia Sherya",
+            "salesName": "Xia Sherya",
             "salesDate": "2026-12-31",
             "installDate": "",
             "warrantyExpireDate": "",
@@ -63669,9 +63321,10 @@
             "winRate": "",
             "gforceSystemId": ""
           }
-        ]
+        ],
+        "productLineData": {}
       },
-      "funnel60": {
+      "funnelGe60": {
         "title": "Magnus 2026 Funnel",
         "rankingTitle": "Magnus 2026 Funnel 客户排名",
         "modalTitle": "Magnus 2026 Funnel 项目录入与更新",
@@ -63705,12 +63358,22 @@
           },
           {
             "name": "河南省",
-            "value": 6,
+            "value": 8,
             "latestSite": "开封市中心医院",
             "latestDate": "2026-09-10",
             "coord": [
               113.62,
               34.75
+            ]
+          },
+          {
+            "name": "上海市",
+            "value": 5,
+            "latestSite": "上海交通大学医学院附属仁济医院南院",
+            "latestDate": "2026-11-30",
+            "coord": [
+              121.47,
+              31.23
             ]
           },
           {
@@ -63721,6 +63384,16 @@
             "coord": [
               114.3,
               30.59
+            ]
+          },
+          {
+            "name": "江苏省",
+            "value": 4,
+            "latestSite": "镇江市第一人民医院",
+            "latestDate": "2026-10-23",
+            "coord": [
+              118.76,
+              32.06
             ]
           },
           {
@@ -63754,6 +63427,16 @@
             ]
           },
           {
+            "name": "新疆维吾尔自治区",
+            "value": 3,
+            "latestSite": "新疆国际医疗中心（新疆国际医院）",
+            "latestDate": "2026-08-25",
+            "coord": [
+              87.62,
+              43.82
+            ]
+          },
+          {
             "name": "广东省",
             "value": 3,
             "latestSite": "南方医科大学南方医院",
@@ -63774,16 +63457,6 @@
             ]
           },
           {
-            "name": "江苏省",
-            "value": 3,
-            "latestSite": "镇江市第一人民医院",
-            "latestDate": "2026-10-23",
-            "coord": [
-              118.76,
-              32.06
-            ]
-          },
-          {
             "name": "北京市",
             "value": 3,
             "latestSite": "中国人民解放军总医院第二医学中心",
@@ -63801,26 +63474,6 @@
             "coord": [
               106.55,
               29.56
-            ]
-          },
-          {
-            "name": "上海市",
-            "value": 2,
-            "latestSite": "上海交通大学医学院附属仁济医院南院",
-            "latestDate": "2026-11-30",
-            "coord": [
-              121.47,
-              31.23
-            ]
-          },
-          {
-            "name": "新疆维吾尔自治区",
-            "value": 2,
-            "latestSite": "新疆国际医疗中心（新疆国际医院）",
-            "latestDate": "2026-08-25",
-            "coord": [
-              87.62,
-              43.82
             ]
           },
           {
@@ -63866,6 +63519,11 @@
         ],
         "users": [
           {
+            "name": "GE Healthcare (Shanghai) Co Ltd",
+            "province": "上海市",
+            "value": 3
+          },
+          {
             "name": "阜外华中心血管病医院",
             "province": "河南省",
             "value": 3
@@ -63873,6 +63531,11 @@
           {
             "name": "华中科技大学同济医学院附属同济医院",
             "province": "湖北省",
+            "value": 2
+          },
+          {
+            "name": "漯河市第一人民医院",
+            "province": "河南省",
             "value": 2
           },
           {
@@ -63894,16 +63557,6 @@
             "name": "长治市人民医院",
             "province": "山西省",
             "value": 2
-          },
-          {
-            "name": "福建省立医院",
-            "province": "福建省",
-            "value": 2
-          },
-          {
-            "name": "齐鲁医院（即墨蓝谷院区）",
-            "province": "山东省",
-            "value": 2
           }
         ],
         "partners": [
@@ -63915,16 +63568,16 @@
           {
             "name": "Jia Kaihua",
             "province": "河南省",
+            "value": 10
+          },
+          {
+            "name": "Yuan Tony",
+            "province": "新疆维吾尔自治区",
             "value": 8
           },
           {
             "name": "Xia Sherya",
             "province": "湖北省",
-            "value": 7
-          },
-          {
-            "name": "Yuan Tony",
-            "province": "新疆维吾尔自治区",
             "value": 7
           },
           {
@@ -63938,13 +63591,13 @@
             "value": 5
           },
           {
-            "name": "Yin Wujun",
-            "province": "广东省",
-            "value": 3
+            "name": "Xu Lulu",
+            "province": "江苏省",
+            "value": 4
           },
           {
-            "name": "Pu Dongfang",
-            "province": "重庆市",
+            "name": "YuWang Zhang",
+            "province": "上海市",
             "value": 3
           }
         ],
@@ -63991,7 +63644,7 @@
           },
           {
             "month": "2026-03",
-            "installed": 0
+            "installed": 3
           },
           {
             "month": "2026-04",
@@ -63999,11 +63652,11 @@
           },
           {
             "month": "2026-05",
-            "installed": 0
+            "installed": 2
           },
           {
             "month": "2026-06",
-            "installed": 6
+            "installed": 8
           },
           {
             "month": "2026-07",
@@ -64031,10 +63684,28 @@
           }
         ],
         "yearlyTrend": [],
-        "totalUnits": 56,
-        "quarterUnits": 8,
+        "totalUnits": 63,
+        "quarterUnits": 12,
         "funnelTrendYear": 2026,
         "sourceRecords": [
+          {
+            "serialNo": "O-391598",
+            "productKey": "magnus2026Funnel",
+            "productModel": "80 Funnel",
+            "quantity": 3,
+            "configDescription": "SW-1180（双台面）*4-总后集采 | 1180 Columns | Opportunity O-391598 | Total Price 1500000 | Stage Negotiating",
+            "installProvince": "上海市",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "GE Healthcare (Shanghai) Co Ltd",
+            "channelName": "YuWang Zhang",
+            "salesName": "YuWang Zhang",
+            "salesDate": "2026-03-31",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
           {
             "serialNo": "O-471801",
             "productKey": "magnus2026Funnel",
@@ -64048,6 +63719,60 @@
             "channelName": "Xia Sherya",
             "salesName": "Xia Sherya",
             "salesDate": "2026-04-30",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-429251",
+            "productKey": "magnus2026Funnel",
+            "productModel": "80 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1×1180；5×Moduevo;1×VCS； | 1180 Columns | Opportunity O-429251 | Total Price 1850000 | Stage Quoting",
+            "installProvince": "江苏省",
+            "installCity": "南京市",
+            "salesRegion": "",
+            "terminalUser": "江苏省肿瘤医院",
+            "channelName": "Xu Lulu",
+            "salesName": "Xu Lulu",
+            "salesDate": "2026-05-23",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-450081",
+            "productKey": "magnus2026Funnel",
+            "productModel": "80 Funnel",
+            "quantity": 1,
+            "configDescription": "SW-1180*1乌鲁木齐友谊医院 | 1180 Columns | Opportunity O-450081 | Total Price 600000 | Stage Analyzing",
+            "installProvince": "新疆维吾尔自治区",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "乌鲁木齐市友谊医院",
+            "channelName": "Yuan Tony",
+            "salesName": "Yuan Tony",
+            "salesDate": "2026-05-25",
+            "installDate": "",
+            "warrantyExpireDate": "",
+            "winRate": "",
+            "gforceSystemId": ""
+          },
+          {
+            "serialNo": "O-443203",
+            "productKey": "magnus2026Funnel",
+            "productModel": "80 Funnel",
+            "quantity": 2,
+            "configDescription": "SW-VCSⅡ*2 Lyra*8，modueco*4，1180*2 | 1180 Columns | Opportunity O-443203 | Total Price 1400000 | Stage Negotiating",
+            "installProvince": "河南省",
+            "installCity": "",
+            "salesRegion": "",
+            "terminalUser": "漯河市第一人民医院",
+            "channelName": "Jia Kaihua",
+            "salesName": "Jia Kaihua",
+            "salesDate": "2026-06-19",
             "installDate": "",
             "warrantyExpireDate": "",
             "winRate": "",
@@ -64899,346 +64624,8 @@
             "winRate": "",
             "gforceSystemId": ""
           }
-        ]
-      },
-      "funnel80": {
-        "title": "Magnus 2026 Funnel",
-        "rankingTitle": "Magnus 2026 Funnel 客户排名",
-        "modalTitle": "Magnus 2026 Funnel 项目录入与更新",
-        "totalUnitsLabel": "台 1180 Magnus Funnel",
-        "visual": {
-          "type": "image",
-          "src": "assets/1180-magnus-hybrid-column.png",
-          "alt": "1180 Magnus operating table system"
-        },
-        "productModels": [
-          "20 Funnel",
-          "40 Funnel",
-          "60 Funnel",
-          "80 Funnel",
-          "100 Funnel"
         ],
-        "lineTotalUnitsLabelTemplate": "台 {line} 项目",
-        "hideYearlyTrend": true,
-        "dateBasis": "order",
-        "productLineOptions": [],
-        "provinceData": [
-          {
-            "name": "上海市",
-            "value": 3,
-            "latestSite": "GE Healthcare (Shanghai) Co Ltd",
-            "latestDate": "2026-03-31",
-            "coord": [
-              121.47,
-              31.23
-            ]
-          },
-          {
-            "name": "河南省",
-            "value": 2,
-            "latestSite": "漯河市第一人民医院",
-            "latestDate": "2026-06-19",
-            "coord": [
-              113.62,
-              34.75
-            ]
-          },
-          {
-            "name": "江苏省",
-            "value": 1,
-            "latestSite": "江苏省肿瘤医院",
-            "latestDate": "2026-05-23",
-            "coord": [
-              118.76,
-              32.06
-            ]
-          },
-          {
-            "name": "新疆维吾尔自治区",
-            "value": 1,
-            "latestSite": "乌鲁木齐市友谊医院",
-            "latestDate": "2026-05-25",
-            "coord": [
-              87.62,
-              43.82
-            ]
-          }
-        ],
-        "users": [
-          {
-            "name": "GE Healthcare (Shanghai) Co Ltd",
-            "province": "上海市",
-            "value": 3
-          },
-          {
-            "name": "漯河市第一人民医院",
-            "province": "河南省",
-            "value": 2
-          },
-          {
-            "name": "江苏省肿瘤医院",
-            "province": "江苏省",
-            "value": 1
-          },
-          {
-            "name": "乌鲁木齐市友谊医院",
-            "province": "新疆维吾尔自治区",
-            "value": 1
-          }
-        ],
-        "partners": [
-          {
-            "name": "YuWang Zhang",
-            "province": "上海市",
-            "value": 3
-          },
-          {
-            "name": "Jia Kaihua",
-            "province": "河南省",
-            "value": 2
-          },
-          {
-            "name": "Xu Lulu",
-            "province": "江苏省",
-            "value": 1
-          },
-          {
-            "name": "Yuan Tony",
-            "province": "新疆维吾尔自治区",
-            "value": 1
-          }
-        ],
-        "updates": [
-          {
-            "date": "06-19",
-            "status": "下单",
-            "text": "漯河市第一人民医院 完成 80 Funnel 2 台"
-          },
-          {
-            "date": "05-25",
-            "status": "下单",
-            "text": "乌鲁木齐市友谊医院 完成 80 Funnel 1 台"
-          },
-          {
-            "date": "05-23",
-            "status": "下单",
-            "text": "江苏省肿瘤医院 完成 80 Funnel 1 台"
-          },
-          {
-            "date": "03-31",
-            "status": "下单",
-            "text": "GE Healthcare (Shanghai) Co Ltd 完成 80 Funnel 3 台"
-          }
-        ],
-        "monthlyTrend": [
-          {
-            "month": "2026-01",
-            "installed": 0
-          },
-          {
-            "month": "2026-02",
-            "installed": 0
-          },
-          {
-            "month": "2026-03",
-            "installed": 3
-          },
-          {
-            "month": "2026-04",
-            "installed": 0
-          },
-          {
-            "month": "2026-05",
-            "installed": 2
-          },
-          {
-            "month": "2026-06",
-            "installed": 2
-          },
-          {
-            "month": "2026-07",
-            "installed": 0
-          },
-          {
-            "month": "2026-08",
-            "installed": 0
-          },
-          {
-            "month": "2026-09",
-            "installed": 0
-          },
-          {
-            "month": "2026-10",
-            "installed": 0
-          },
-          {
-            "month": "2026-11",
-            "installed": 0
-          },
-          {
-            "month": "2026-12",
-            "installed": 0
-          }
-        ],
-        "yearlyTrend": [],
-        "totalUnits": 7,
-        "quarterUnits": 4,
-        "funnelTrendYear": 2026,
-        "sourceRecords": [
-          {
-            "serialNo": "O-391598",
-            "productKey": "magnus2026Funnel",
-            "productModel": "80 Funnel",
-            "quantity": 3,
-            "configDescription": "SW-1180（双台面）*4-总后集采 | 1180 Columns | Opportunity O-391598 | Total Price 1500000 | Stage Negotiating",
-            "installProvince": "上海市",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "GE Healthcare (Shanghai) Co Ltd",
-            "channelName": "YuWang Zhang",
-            "salesName": "YuWang Zhang",
-            "salesDate": "2026-03-31",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-429251",
-            "productKey": "magnus2026Funnel",
-            "productModel": "80 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1×1180；5×Moduevo;1×VCS； | 1180 Columns | Opportunity O-429251 | Total Price 1850000 | Stage Quoting",
-            "installProvince": "江苏省",
-            "installCity": "南京市",
-            "salesRegion": "",
-            "terminalUser": "江苏省肿瘤医院",
-            "channelName": "Xu Lulu",
-            "salesName": "Xu Lulu",
-            "salesDate": "2026-05-23",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-450081",
-            "productKey": "magnus2026Funnel",
-            "productModel": "80 Funnel",
-            "quantity": 1,
-            "configDescription": "SW-1180*1乌鲁木齐友谊医院 | 1180 Columns | Opportunity O-450081 | Total Price 600000 | Stage Analyzing",
-            "installProvince": "新疆维吾尔自治区",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "乌鲁木齐市友谊医院",
-            "channelName": "Yuan Tony",
-            "salesName": "Yuan Tony",
-            "salesDate": "2026-05-25",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          },
-          {
-            "serialNo": "O-443203",
-            "productKey": "magnus2026Funnel",
-            "productModel": "80 Funnel",
-            "quantity": 2,
-            "configDescription": "SW-VCSⅡ*2 Lyra*8，modueco*4，1180*2 | 1180 Columns | Opportunity O-443203 | Total Price 1400000 | Stage Negotiating",
-            "installProvince": "河南省",
-            "installCity": "",
-            "salesRegion": "",
-            "terminalUser": "漯河市第一人民医院",
-            "channelName": "Jia Kaihua",
-            "salesName": "Jia Kaihua",
-            "salesDate": "2026-06-19",
-            "installDate": "",
-            "warrantyExpireDate": "",
-            "winRate": "",
-            "gforceSystemId": ""
-          }
-        ]
-      },
-      "funnel100": {
-        "title": "Magnus 2026 Funnel",
-        "rankingTitle": "Magnus 2026 Funnel 客户排名",
-        "modalTitle": "Magnus 2026 Funnel 项目录入与更新",
-        "totalUnitsLabel": "台 1180 Magnus Funnel",
-        "visual": {
-          "type": "image",
-          "src": "assets/1180-magnus-hybrid-column.png",
-          "alt": "1180 Magnus operating table system"
-        },
-        "productModels": [
-          "20 Funnel",
-          "40 Funnel",
-          "60 Funnel",
-          "80 Funnel",
-          "100 Funnel"
-        ],
-        "lineTotalUnitsLabelTemplate": "台 {line} 项目",
-        "hideYearlyTrend": true,
-        "dateBasis": "order",
-        "productLineOptions": [],
-        "provinceData": [],
-        "users": [],
-        "partners": [],
-        "updates": [],
-        "monthlyTrend": [
-          {
-            "month": "2026-01",
-            "installed": 0
-          },
-          {
-            "month": "2026-02",
-            "installed": 0
-          },
-          {
-            "month": "2026-03",
-            "installed": 0
-          },
-          {
-            "month": "2026-04",
-            "installed": 0
-          },
-          {
-            "month": "2026-05",
-            "installed": 0
-          },
-          {
-            "month": "2026-06",
-            "installed": 0
-          },
-          {
-            "month": "2026-07",
-            "installed": 0
-          },
-          {
-            "month": "2026-08",
-            "installed": 0
-          },
-          {
-            "month": "2026-09",
-            "installed": 0
-          },
-          {
-            "month": "2026-10",
-            "installed": 0
-          },
-          {
-            "month": "2026-11",
-            "installed": 0
-          },
-          {
-            "month": "2026-12",
-            "installed": 0
-          }
-        ],
-        "yearlyTrend": [],
-        "totalUnits": 0,
-        "quarterUnits": 0,
-        "funnelTrendYear": 2026,
-        "sourceRecords": []
+        "productLineData": {}
       }
     }
   }
