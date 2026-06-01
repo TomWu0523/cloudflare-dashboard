@@ -179,7 +179,7 @@ function productKeyFromText(...values) {
   if (/funnel|win.?rate|赢率/.test(text)) return "magnus2026Funnel";
   if (/tegris|tigers|voip|classic/.test(text)) return "tegris";
   if (/1180|magnus|\bb[0-5]\b/.test(text)) return "magnus1180";
-  if (/ic|mic|hs66|s600|novito|s8666|sterilizer|steriliser/.test(text)) return "icMic";
+  if (/ic|mic|wd500|css600|css66|hs66|s600|novito|s8666|sterilizer|steriliser/.test(text)) return "icMic";
   return "";
 }
 
@@ -195,8 +195,10 @@ function lineKeyForRecord(record) {
     if (model.includes("tiger")) return "tigers";
   }
   if (record.productKey === "icMic") {
+    if (model.includes("wd500")) return "wd500";
     if (model.includes("hs66")) return "hs66";
-    if (model.includes("s600")) return "s600";
+    if (model.includes("css600") || model.includes("css66")) return "css600";
+    if (model.includes("s600")) return "css600";
     if (model.includes("novito")) return "novito";
   }
   if (record.productKey === "magnus1180") {

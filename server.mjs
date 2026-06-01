@@ -9,6 +9,7 @@ const rootDir = fileURLToPath(new URL(".", import.meta.url));
 const dataDir = join(rootDir, "data");
 const usersFile = join(dataDir, "authorized-users.json");
 const dashboardDataFile = join(dataDir, "dashboard-data.json");
+const cityInstallOverridesFile = join(dataDir, "city-install-overrides.json");
 const host = process.env.HOST || "0.0.0.0";
 const port = Number(process.env.PORT || 8080);
 
@@ -398,8 +399,10 @@ function lineKeyForRecord(record) {
     if (model.includes("tiger")) return "tigers";
   }
   if (record.productKey === "icMic") {
+    if (model.includes("wd500")) return "wd500";
     if (model.includes("hs66")) return "hs66";
-    if (model.includes("s600")) return "s600";
+    if (model.includes("css600") || model.includes("css66")) return "css600";
+    if (model.includes("s600")) return "css600";
     if (model.includes("novito")) return "novito";
   }
   if (record.productKey === "magnus1180") {
@@ -414,7 +417,7 @@ function productKeyFromText(...values) {
   if (/funnel|win.?rate|赢率/.test(text)) return "magnus2026Funnel";
   if (/tegris|tigers|voip|classic/.test(text)) return "tegris";
   if (/1180|magnus|\bb[0-5]\b/.test(text)) return "magnus1180";
-  if (/ic|mic|hs66|s600|novito|s8666|sterilizer|steriliser/.test(text)) return "icMic";
+  if (/ic|mic|wd500|css600|css66|hs66|s600|novito|s8666|sterilizer|steriliser/.test(text)) return "icMic";
   return "";
 }
 
@@ -545,7 +548,7 @@ async function updateUserPassword(username, password) {
 async function readDashboardData() {
   if (hasBaserow && baserow.installBaseTableId) {
     try {
-      const dashboards = await buildDashboardsFromBaserow();
+      const dashboards = await applyCityInstallOverrides(await buildDashboardsFromBaserow());
       await saveLocalDashboardData(dashboards);
       return dashboards;
     } catch (error) {
@@ -555,12 +558,59 @@ async function readDashboardData() {
 
   const raw = await readFile(dashboardDataFile, "utf8");
   const parsed = JSON.parse(raw);
-  return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+  return parsed && typeof parsed === "object" && !Array.isArray(parsed)
+    ? applyCityInstallOverrides(parsed)
+    : {};
 }
 
 async function saveLocalDashboardData(dashboards) {
   await mkdir(dataDir, { recursive: true });
   await writeFile(dashboardDataFile, `${JSON.stringify(dashboards, null, 2)}\n`, "utf8");
+}
+
+async function readCityInstallOverrides() {
+  try {
+    const raw = await readFile(cityInstallOverridesFile, "utf8");
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (error) {
+    return [];
+  }
+}
+
+function normalizeOverrideText(value) {
+  return String(value || "").trim();
+}
+
+function cityOverrideMatchesRecord(override, record) {
+  const expectedCity = normalizeOverrideText(override.currentInstallCity);
+  const currentCity = normalizeOverrideText(record.installCity);
+  const currentCityMatches = !expectedCity
+    || currentCity === expectedCity
+    || (expectedCity === "N/A" && !currentCity);
+
+  return normalizeOverrideText(record.installProvince) === normalizeOverrideText(override.province)
+    && normalizeOverrideText(record.terminalUser) === normalizeOverrideText(override.terminalUser)
+    && normalizeOverrideText(record.channelName) === normalizeOverrideText(override.channelName)
+    && currentCityMatches;
+}
+
+async function applyCityInstallOverrides(dashboards) {
+  const overrides = await readCityInstallOverrides();
+  if (!overrides.length) {
+    return dashboards;
+  }
+
+  overrides.forEach((override) => {
+    const records = dashboards?.[override.dashboardKey]?.sourceRecords || [];
+    records.forEach((record) => {
+      if (cityOverrideMatchesRecord(override, record)) {
+        record.installCity = override.city;
+      }
+    });
+  });
+
+  return dashboards;
 }
 
 async function saveDashboardData(dashboards) {
