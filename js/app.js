@@ -66435,7 +66435,7 @@ function renderKpis() {
   kpis[3].querySelector("small").textContent = "活跃渠道";
 
   document.querySelector("#totalUnits").textContent = formatNumber.format(totalUnits);
-  document.querySelector("#coveredProvinces").textContent = dashboard.provinceData.length;
+  document.querySelector("#coveredProvinces").textContent = countCoveredProvinces(dashboard);
   document.querySelector("#quarterUnits").textContent = quarterUnits;
   document.querySelector("#partnerCount").textContent = dashboard.partners.length;
 
@@ -67310,11 +67310,7 @@ function footprintStatsSummary() {
   const records = dashboard.sourceRecords || [];
 
   if (effectiveDashboardKey() === "magnus2026Funnel") {
-    const coveredProvince = new Set(
-      records
-        .map((record) => String(record.installProvince || "").trim())
-        .filter(Boolean)
-    ).size;
+    const coveredProvince = countCoveredProvincesFromRecords(records);
     const ge60Funnels = records.reduce((sum, record) => {
       const modelText = String(record.productModel || "").trim();
       const modelValue = Number((modelText.match(/^(\d+)/) || [])[1] || 0);
@@ -67333,11 +67329,7 @@ function footprintStatsSummary() {
   const previousYear = currentYear - 1;
 
   const totalInstalls = records.reduce((sum, record) => sum + Number(record.quantity || 1), 0);
-  const provincesCovered = new Set(
-    records
-      .map((record) => String(record.installProvince || "").trim())
-      .filter(Boolean)
-  ).size;
+  const provincesCovered = countCoveredProvincesFromRecords(records);
 
   const installsPreviousYear = records.reduce((sum, record) => {
     const dateValue = String(record.installDate || record.salesDate || "").trim();
@@ -67351,6 +67343,31 @@ function footprintStatsSummary() {
     { label: "Provinces Covered", value: formatNumber.format(provincesCovered) },
     { label: `${previousYear} Installs`, value: formatNumber.format(installsPreviousYear) }
   ];
+}
+
+const excludedCoverageRegions = new Set(["海外"]);
+
+function isCoveredProvinceName(name) {
+  const normalizedName = String(name || "").trim();
+  return Boolean(normalizedName) && !excludedCoverageRegions.has(normalizedName);
+}
+
+function countCoveredProvincesFromRecords(records) {
+  return new Set(
+    (records || [])
+      .map((record) => String(record.installProvince || "").trim())
+      .filter(isCoveredProvinceName)
+  ).size;
+}
+
+function countCoveredProvinces(dashboard) {
+  const provinceData = dashboard?.provinceData || [];
+  const coveredFromProvinceData = provinceData.filter((item) => isCoveredProvinceName(item.name)).length;
+  if (coveredFromProvinceData > 0 || !(dashboard?.sourceRecords || []).length) {
+    return coveredFromProvinceData;
+  }
+
+  return countCoveredProvincesFromRecords(dashboard.sourceRecords);
 }
 
 function renderFootprintStatsOverlay() {
